@@ -25,7 +25,10 @@ Welcome to the **ultimate DayZ resource**! This repository documents **EVERYTHIN
 
 ## 📌 Repository Structure
 
-**This repository follows a single-branch policy:** All documentation, examples, and resources are maintained exclusively in the `main` branch. This ensures:
+**This repository follows a single-branch policy:**
+
+All documentation, examples, and resources are maintained exclusively in the `main` branch. This ensures:
+
 - ✅ **Single Source of Truth**: All information is in one place, making it easy to find and reference
 - ✅ **Simplified Navigation**: No need to search across multiple branches for content
 - ✅ **Complete Documentation**: Every feature, guide, and resource is immediately accessible from main

@@ -105,9 +105,9 @@ The repository follows this structure:
 │   ├── json-configs/
 │   ├── webhooks-discord/
 │   ├── resources/
-│   └── ...
+│   └── ECOSYSTEM.md, QUICKSTART.md, etc.
 ├── examples/          - Code examples and implementations
-├── templates/         - Reusable templates and boilerplates
+│   └── killfeed/
 ├── README.md          - Main repository documentation
 └── CONTRIBUTING.md    - This file
 ```
