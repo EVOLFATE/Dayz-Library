@@ -96,19 +96,20 @@ We welcome contributions in the following areas:
 The repository follows this structure:
 
 ```
-/docs/           - All documentation files
-  /getting-started/
-  /killfeed/
-  /interactive-maps/
-  /xml-configs/
-  /json-configs/
-  /webhooks-discord/
-  /resources/
-  ...
-/examples/       - Code examples and implementations
-/templates/      - Reusable templates and boilerplates
-README.md        - Main repository documentation
-CONTRIBUTING.md  - This file
+/
+├── docs/              - All documentation files
+│   ├── getting-started/
+│   ├── killfeed/
+│   ├── interactive-maps/
+│   ├── xml-configs/
+│   ├── json-configs/
+│   ├── webhooks-discord/
+│   ├── resources/
+│   └── ...
+├── examples/          - Code examples and implementations
+├── templates/         - Reusable templates and boilerplates
+├── README.md          - Main repository documentation
+└── CONTRIBUTING.md    - This file
 ```
 
 ## 🔍 Quality Guidelines
