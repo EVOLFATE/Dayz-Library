@@ -23,6 +23,16 @@ Welcome to the **ultimate DayZ resource**! This repository documents **EVERYTHIN
 
 **🌟 NEW: [Complete Ecosystem Index](docs/ECOSYSTEM.md) - Browse all DayZ tools, mods, and services in one place!**
 
+## 📌 Repository Structure
+
+**This repository follows a single-branch policy:** All documentation, examples, and resources are maintained exclusively in the `main` branch. This ensures:
+- ✅ **Single Source of Truth**: All information is in one place, making it easy to find and reference
+- ✅ **Simplified Navigation**: No need to search across multiple branches for content
+- ✅ **Complete Documentation**: Every feature, guide, and resource is immediately accessible from main
+- ✅ **Easy Contributions**: Contributors always know where to find and update content
+
+**All content is version-controlled in the main branch.** There are no separate development or feature branches containing documentation that isn't in main.
+
 ## ✨ What Makes This Library Unique
 
 - 🗺️ **Interactive Maps & Live Tracking**: Real-time location sharing with iZurvive, coordinate systems, DayZ Editor integration
@@ -417,6 +427,18 @@ This documentation is provided for educational purposes. DayZ and all related co
 - [Bohemia Interactive Wiki](https://community.bistudio.com/wiki/DayZ)
 - [Steam Workshop](https://steamcommunity.com/app/221100/workshop/)
 - [DayZ Reddit Community](https://reddit.com/r/dayz)
+
+## 🤝 Contributing
+
+Want to contribute to this library? Check out our [Contributing Guide](CONTRIBUTING.md) to learn how!
+
+We welcome:
+- Documentation improvements and corrections
+- New code examples and implementations
+- Resource links and community tools
+- Bug fixes and updates
+
+**Remember:** All contributions are maintained in the `main` branch to keep everything in one place.
 
 ## 🏆 Featured Mods Using This Library
 
