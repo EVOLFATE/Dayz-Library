@@ -38,6 +38,7 @@ All documentation, examples, and resources are maintained exclusively in the `ma
 
 ## ✨ What Makes This Library Unique
 
+- 🔧 **Complete Troubleshooting**: Every common issue documented with solutions - from Workbench to BattlEye
 - 🗺️ **Interactive Maps & Live Tracking**: Real-time location sharing with iZurvive, coordinate systems, DayZ Editor integration
 - 💰 **Complete Trader Systems**: Expansion mod, TraderPlus, TravelingTrader with X,Y,Z JSON configuration
 - 💬 **Discord & Webhooks**: CFTools bot, Universal API, killfeed notifications, admin commands
@@ -51,6 +52,7 @@ All documentation, examples, and resources are maintained exclusively in the `ma
 - 🎯 **Killfeed Mastery**: Multiple implementations with full customization and Discord integration
 - 📦 **Working Implementations**: Full, tested code examples you can use immediately
 - 🚀 **Complete Ecosystem**: Every tool, mod, service, and resource connected to DayZ documented
+- 🩺 **Problem Solving**: In-depth guides for crashes, errors, performance, and configuration issues
 
 ## 📚 Table of Contents
 
@@ -59,6 +61,18 @@ All documentation, examples, and resources are maintained exclusively in the `ma
 - [Required Tools & Setup](docs/getting-started/tools-setup.md)
 - [DayZ Workbench Guide](docs/getting-started/workbench-guide.md)
 - [Your First Mod](docs/getting-started/first-mod.md)
+
+### 🔧 Troubleshooting & Common Issues ⭐ **NEW**
+- [Complete Troubleshooting Guide](docs/troubleshooting/README.md) - Start here for any problem
+- [DayZ Workbench Issues](docs/troubleshooting/workbench-issues.md) - P: drive, building, debugging
+- [Addon Builder & PBO Packaging](docs/troubleshooting/addon-builder-issues.md) - Build failures, signing
+- [Scripting & EnScript Errors](docs/troubleshooting/scripting-errors.md) - Syntax, runtime errors
+- [Server Crashes & Startup](docs/troubleshooting/server-crashes.md) - Won't start, crashes
+- [Mod Installation Issues](docs/troubleshooting/mod-installation-issues.md) - Loading, conflicts
+- [BattlEye & Anti-Cheat](docs/troubleshooting/battleye-issues.md) - Kicks, bans, filters
+- [Server Configuration Errors](docs/troubleshooting/server-config-errors.md) - XML/JSON issues
+- [Performance & Optimization](docs/troubleshooting/performance-issues.md) - FPS, lag, TPS
+- [Third-Party Tools Issues](docs/troubleshooting/third-party-tools.md) - CFTools, Editor, API
 
 ### 🎯 Killfeed Documentation (Complete System)
 - [Killfeed Basics](docs/killfeed/basics.md)
