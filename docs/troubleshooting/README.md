@@ -42,8 +42,8 @@ This comprehensive troubleshooting guide covers **every common issue** that DayZ
 
 ### Workshop & Distribution
 - [Steam Workshop Upload Issues](workshop-issues.md)
-- [Mod Compatibility Problems](compatibility-issues.md)
-- [Version Control Issues](version-control-issues.md)
+- [Quick Reference Guide](quick-reference.md)
+- [Hosting Provider Issues](hosting-issues.md)
 
 ---
 
@@ -60,6 +60,8 @@ Check -mod= parameter in startup
 # 3. Test without mods
 Start with vanilla configuration
 ```
+
+**⚡ NEW: [Quick Reference Guide](quick-reference.md) - Fast lookup for common errors!**
 
 ### Mod Not Loading
 1. **Verify mod is in correct folder**
