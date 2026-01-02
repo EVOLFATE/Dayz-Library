@@ -1,0 +1,84 @@
+name: Bug Report
+description: Report an error or issue in the documentation
+title: "[BUG] "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report an issue! Please fill out the sections below.
+        
+  - type: dropdown
+    id: bug-type
+    attributes:
+      label: Type of Issue
+      description: What kind of problem did you find?
+      options:
+        - Documentation error (incorrect information)
+        - Broken link
+        - Code example doesn't work
+        - Configuration example has errors
+        - Tool/script error
+        - Missing information
+        - Typo or formatting issue
+    validations:
+      required: true
+      
+  - type: input
+    id: location
+    attributes:
+      label: Location
+      description: "Where is the issue? (e.g., docs/events/helicrash.md, line 45)"
+      placeholder: "docs/path/to/file.md"
+    validations:
+      required: true
+      
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Please describe the issue clearly
+      placeholder: "The XML example is missing a closing tag..."
+    validations:
+      required: true
+      
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What did you expect to see or happen?
+      placeholder: "The configuration should work without errors..."
+      
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behavior
+      description: What actually happened?
+      placeholder: "Got an error: ..."
+      
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to Reproduce
+      description: If applicable, how can we reproduce this issue?
+      placeholder: |
+        1. Go to file X
+        2. Copy the example
+        3. Try to use it...
+        
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Suggested Fix
+      description: If you know how to fix this, please share!
+      placeholder: "Change line 45 to..."
+      
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: I have searched existing issues to avoid duplicates
+          required: true
+        - label: I have checked the latest version of the documentation
+          required: true
