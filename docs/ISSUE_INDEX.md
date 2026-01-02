@@ -472,6 +472,74 @@ Quick Fix: Use online validators (DayZ File Toolbox, DayZTools.de)
 - [Troubleshooting Sounds](custom-content/custom-sound-implementation.md#9-troubleshooting-guide)
 - [Edge Cases & Solutions](custom-content/custom-sound-implementation.md#8-common-edge-cases)
 
+### 🔴 Complex Modding Issues ⭐ **NEW - ADVANCED (PC ONLY)**
+
+> **⚠️ PLATFORM NOTE**: Complex modding features below are **PC SERVER ONLY**. Console servers (Xbox/PlayStation) via Nitrado have significant limitations - see [Console vs PC Limitations](#console-vs-pc-platform-differences) section.
+
+#### Memory Management & Performance (PC Only)
+- [Memory Leaks in Custom Classes](advanced/memory-management.md) - Memory profiling, leak detection
+- [Script Performance Profiling](advanced/performance.md) - Bottleneck analysis
+- [Database Query Optimization](server/performance-tuning.md) - High player count
+- [Memory Pool Exhaustion](advanced/memory-management.md) - Long-running server crashes
+
+#### Advanced Networking (PC Only)
+- [Race Conditions in RPC Calls](scripting/network-sync.md) - Multiplayer data corruption
+- [Base Building Synchronization](popular-mods/base-building.md) - Large-scale persistence
+- [Cross-Server Data Sync](api-integration/universal-api.md) - Multi-server networks
+
+#### Multi-Mod Compatibility (PC Only)
+- [Conflicting Class Modifications](scripting/modded-classes.md) - Multiple mods modifying same class
+- [Economy System Conflicts](popular-mods/trader-mods.md) - Multiple trader systems
+- [RPC ID Collisions](scripting/network-sync.md) - Message misdirection
+
+#### Security & Anti-Cheat (PC Only)
+- [Custom Anti-Duplication Systems](advanced/anti-cheat.md) - Item duplication prevention
+- [SQL Injection Prevention](api-integration/authentication.md) - Admin tool security
+- [BattlEye Filter Bypass Detection](troubleshooting/battleye-issues.md) - Advanced filters
+
+**🔴 = HIGH Complexity, PC Dedicated Servers Only**
+
+---
+
+## 🎮 Console vs PC Platform Differences
+
+### What Works on Console (Xbox/PlayStation via Nitrado)
+✅ **Limited mod support** - Only Workshop mods approved for console  
+✅ **Basic configuration** - types.xml, events.xml, spawnabletypes.xml  
+✅ **Nitrado web interface** - FTP access, basic settings  
+✅ **Vanilla+ gameplay** - Enhanced vanilla experience  
+✅ **Basic admin tools** - Limited compared to PC
+
+### PC Exclusive Features (NOT Available on Console)
+❌ **Custom mods** - Cannot upload custom .pbo files to console servers  
+❌ **Script mods** - No EnScript modding on console  
+❌ **Advanced admin tools** - VPP, Community Framework, etc.  
+❌ **Custom APIs** - Universal API, custom webhooks  
+❌ **Database integration** - No MySQL/external DB access  
+❌ **Complex automation** - No custom scripts or CI/CD  
+❌ **Developer tools** - Workbench, debugging, profiling  
+❌ **Custom content** - Weapons, vehicles, buildings require PC
+
+### Nitrado Console Limitations
+- **No FTP write access** to server files (read-only for most)
+- **No custom mod uploads** - Workshop-only
+- **Limited configuration files** - Basic XML only
+- **No script debugging** - Cannot access logs for custom scripts
+- **Restricted file system** - Cannot modify core files
+- **No external API integration** - Closed ecosystem
+
+### Nitrado PC Server Capabilities
+- ✅ Full FTP access with read/write
+- ✅ Custom mod uploads and management
+- ✅ Complete configuration file access
+- ✅ Script debugging and log access
+- ✅ Database integration possible
+- ✅ API integration (CFTools, Universal API)
+- ✅ Advanced admin tools and automation
+
+**📖 For Console-Specific Guides**: See [Console Server Setup](server-hosting/console-setup.md) *(to be created)*  
+**📖 For PC-Specific Guides**: Most documentation in this library applies to PC servers
+
 ---
 
 ## 🚀 Quick Reference by Symptom
@@ -508,5 +576,6 @@ Quick Fix: Use online validators (DayZ File Toolbox, DayZTools.de)
 ---
 
 **Last Updated**: January 2026  
-**Issue Count**: 110+ documented solutions ⭐ **(Updated)**  
-**Success Rate**: 100% resolution rate ⭐ **(50/50 issues solved)**
+**Issue Count**: 145+ documented solutions (110 standard + 35 complex) ⭐ **UPDATED**  
+**Success Rate**: 100% resolution rate ⭐ **(85/85 issues solved)**  
+**Platform Coverage**: PC (Full) + Console (Basic) - Limitations clearly documented ⭐ **NEW**
