@@ -29,6 +29,8 @@ Welcome to the **ultimate DayZ resource**! This repository documents **EVERYTHIN
 
 **🔬 VALIDATED: [External Source Validation](EXTERNAL_SOURCE_VALIDATION.md) - Superior to 30+ sources including Bohemia, all major mods, and community forums!** ⭐ **NEW**
 
+**📊 RESEARCH: [Research Findings Summary](RESEARCH_FINDINGS_SUMMARY.md) - Executive summary of validation findings and key insights!** ⭐ **NEW**
+
 **🔴 COMPLEX ISSUES: [Advanced Modding Guide](docs/COMPLEX_ISSUES_SUMMARY.md) - 35 professional-grade test cases for advanced developers!** ⭐ **NEW**
 
 **🎮 PLATFORM CLARITY: [Console vs PC Guide](docs/ISSUE_INDEX.md#-console-vs-pc-platform-differences) - Clear limitations for Xbox/PlayStation servers!** ⭐ **NEW**
