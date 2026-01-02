@@ -27,6 +27,8 @@ Welcome to the **ultimate DayZ resource**! This repository documents **EVERYTHIN
 
 **✅ VERIFIED: [Verification Report](docs/VERIFICATION_REPORT.md) - 100% success rate solving real-world issues (85/85 including complex cases)!** ⭐ **PERFECT SCORE**
 
+**🔴 COMPLEX ISSUES: [Advanced Modding Guide](docs/COMPLEX_ISSUES_SUMMARY.md) - 35 professional-grade test cases for advanced developers!** ⭐ **NEW**
+
 **🎮 PLATFORM CLARITY: [Console vs PC Guide](docs/ISSUE_INDEX.md#console-vs-pc-platform-differences) - Clear limitations for Xbox/PlayStation servers!** ⭐ **NEW**
 
 ## 📌 Repository Structure
@@ -68,9 +70,10 @@ All documentation, examples, and resources are maintained exclusively in the `ma
 - [DayZ Workbench Guide](docs/getting-started/workbench-guide.md)
 - [Your First Mod](docs/getting-started/first-mod.md)
 
-### 🔧 Troubleshooting & Common Issues ⭐ **NEW**
-- **[🔍 Issue Index](docs/ISSUE_INDEX.md)** - Quick alphabetical lookup (110+ solutions) ⭐ **UPDATED**
-- **[✅ Verification Report](docs/VERIFICATION_REPORT.md)** - Tested against 50 real issues (100% success) ⭐ **PERFECT SCORE**
+### 🔧 Troubleshooting & Common Issues ⭐ **UPDATED**
+- **[🔍 Issue Index](docs/ISSUE_INDEX.md)** - Quick alphabetical lookup (145+ solutions: 110 standard + 35 complex) ⭐ **UPDATED**
+- **[✅ Verification Report](docs/VERIFICATION_REPORT.md)** - Tested against 85 real issues (100% success) ⭐ **PERFECT SCORE**
+- **[🔴 Complex Issues Guide](docs/COMPLEX_ISSUES_SUMMARY.md)** - 35 advanced test cases for professional developers ⭐ **NEW**
 - [Complete Troubleshooting Guide](docs/troubleshooting/README.md) - Start here for any problem
 - [DayZ Workbench Issues](docs/troubleshooting/workbench-issues.md) - P: drive, building, debugging
 - [Addon Builder & PBO Packaging](docs/troubleshooting/addon-builder-issues.md) - Build failures, signing
