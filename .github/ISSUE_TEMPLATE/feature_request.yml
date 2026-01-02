@@ -1,0 +1,71 @@
+name: Feature Request
+description: Suggest new documentation, examples, or tools
+title: "[FEATURE] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting an improvement! Please describe what you'd like to see added.
+        
+  - type: dropdown
+    id: feature-type
+    attributes:
+      label: Type of Feature
+      description: What would you like to see added?
+      options:
+        - New documentation topic
+        - New code example
+        - New tool or script
+        - New template
+        - Enhancement to existing content
+        - New interactive feature
+        - Better organization/navigation
+    validations:
+      required: true
+      
+  - type: textarea
+    id: description
+    attributes:
+      label: Feature Description
+      description: Describe what you'd like to see
+      placeholder: "I would like documentation about..."
+    validations:
+      required: true
+      
+  - type: textarea
+    id: use-case
+    attributes:
+      label: Use Case
+      description: Why is this feature needed? Who would benefit?
+      placeholder: "This would help server administrators who..."
+    validations:
+      required: true
+      
+  - type: textarea
+    id: examples
+    attributes:
+      label: Examples or References
+      description: Are there examples elsewhere we could reference?
+      placeholder: "Similar to what X mod does..."
+      
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: How important is this to you?
+      options:
+        - High - Critical need
+        - Medium - Would be very helpful
+        - Low - Nice to have
+    validations:
+      required: true
+      
+  - type: checkboxes
+    id: contribution
+    attributes:
+      label: Contribution
+      options:
+        - label: I would be willing to contribute this feature myself
+        - label: I can provide examples or references
+        - label: I can help test this feature

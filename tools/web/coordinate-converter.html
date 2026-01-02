@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DayZ Coordinate Converter</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #434343 0%, #000000 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 30px;
+        }
+        
+        .converter-section {
+            margin-bottom: 30px;
+            padding: 25px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .converter-section h2 {
+            color: #434343;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+        
+        .input-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+            font-weight: 600;
+        }
+        
+        input, select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        
+        input:focus, select:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        
+        .coordinate-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 15px;
+        }
+        
+        button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            width: 100%;
+            margin-top: 10px;
+        }
+        
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        button:active {
+            transform: translateY(0);
+        }
+        
+        .result {
+            margin-top: 20px;
+            padding: 20px;
+            background: #e8f5e9;
+            border-radius: 6px;
+            border-left: 4px solid #4caf50;
+        }
+        
+        .result h3 {
+            color: #2e7d32;
+            margin-bottom: 10px;
+        }
+        
+        .result code {
+            display: block;
+            background: white;
+            padding: 15px;
+            border-radius: 6px;
+            font-family: 'Courier New', monospace;
+            margin-top: 10px;
+            word-break: break-all;
+        }
+        
+        .info-box {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 6px;
+        }
+        
+        .info-box h4 {
+            color: #856404;
+            margin-bottom: 8px;
+        }
+        
+        .info-box p {
+            color: #856404;
+            line-height: 1.6;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .copy-btn {
+            background: #4caf50;
+            padding: 8px 20px;
+            font-size: 14px;
+            margin-top: 10px;
+            width: auto;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🗺️ DayZ Coordinate Converter</h1>
+            <p>Convert between iZurvive, DayZ Editor, and In-Game coordinates</p>
+        </div>
+        
+        <div class="content">
+            <div class="info-box">
+                <h4>📍 Coordinate Systems Explained</h4>
+                <p><strong>iZurvive:</strong> Web map coordinates (varies by map)<br>
+                <strong>DayZ Editor:</strong> 3D world coordinates (X, Y, Z)<br>
+                <strong>In-Game:</strong> Vector coordinates used in scripts</p>
+            </div>
+            
+            <div class="converter-section">
+                <h2>Select Map</h2>
+                <div class="input-group">
+                    <label for="mapSelect">Map</label>
+                    <select id="mapSelect">
+                        <option value="chernarus">Chernarus+</option>
+                        <option value="livonia">Livonia</option>
+                        <option value="sakhal">Sakhal</option>
+                        <option value="namalsk">Namalsk</option>
+                        <option value="deerisle">DeerIsle</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="converter-section">
+                <h2>iZurvive to DayZ Coordinates</h2>
+                <div class="coordinate-grid">
+                    <div class="input-group">
+                        <label for="izurvive-x">iZurvive X</label>
+                        <input type="number" id="izurvive-x" placeholder="e.g., 145">
+                    </div>
+                    <div class="input-group">
+                        <label for="izurvive-y">iZurvive Y</label>
+                        <input type="number" id="izurvive-y" placeholder="e.g., 89">
+                    </div>
+                </div>
+                <button onclick="convertFromIzurvive()">Convert to DayZ Coordinates</button>
+                <div id="izurvive-result" style="display:none;" class="result"></div>
+            </div>
+            
+            <div class="converter-section">
+                <h2>DayZ to iZurvive Coordinates</h2>
+                <div class="coordinate-grid">
+                    <div class="input-group">
+                        <label for="dayz-x">X Coordinate</label>
+                        <input type="number" id="dayz-x" placeholder="e.g., 7500">
+                    </div>
+                    <div class="input-group">
+                        <label for="dayz-z">Z Coordinate</label>
+                        <input type="number" id="dayz-z" placeholder="e.g., 5500">
+                    </div>
+                </div>
+                <button onclick="convertToIzurvive()">Convert to iZurvive</button>
+                <div id="dayz-result" style="display:none;" class="result"></div>
+            </div>
+            
+            <div class="converter-section">
+                <h2>Generate Script Code</h2>
+                <div class="coordinate-grid">
+                    <div class="input-group">
+                        <label for="script-x">X</label>
+                        <input type="number" id="script-x" placeholder="7500">
+                    </div>
+                    <div class="input-group">
+                        <label for="script-z">Z</label>
+                        <input type="number" id="script-z" placeholder="5500">
+                    </div>
+                    <div class="input-group">
+                        <label for="script-y">Y (height)</label>
+                        <input type="number" id="script-y" placeholder="0" value="0">
+                    </div>
+                </div>
+                <button onclick="generateScript()">Generate EnScript Code</button>
+                <div id="script-result" style="display:none;" class="result"></div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            Part of the DayZ Library Project | <a href="https://github.com/EVOLFATE/Dayz-Library" style="color:#667eea;">GitHub</a>
+        </div>
+    </div>
+    
+    <script>
+        // Map-specific scaling factors (approximate conversions)
+        const mapData = {
+            chernarus: { scale: 100, offset: { x: 0, y: 0 }, size: 15360 },
+            livonia: { scale: 100, offset: { x: 0, y: 0 }, size: 12800 },
+            sakhal: { scale: 100, offset: { x: 0, y: 0 }, size: 12800 },
+            namalsk: { scale: 100, offset: { x: 0, y: 0 }, size: 12032 },
+            deerisle: { scale: 100, offset: { x: 0, y: 0 }, size: 16384 }
+        };
+        
+        function convertFromIzurvive() {
+            const map = document.getElementById('mapSelect').value;
+            const izX = parseFloat(document.getElementById('izurvive-x').value);
+            const izY = parseFloat(document.getElementById('izurvive-y').value);
+            
+            if (isNaN(izX) || isNaN(izY)) {
+                alert('Please enter valid coordinates');
+                return;
+            }
+            
+            const mapInfo = mapData[map];
+            const dayzX = (izX * mapInfo.scale) + mapInfo.offset.x;
+            const dayzZ = (izY * mapInfo.scale) + mapInfo.offset.y;
+            
+            const resultDiv = document.getElementById('izurvive-result');
+            resultDiv.style.display = 'block';
+            resultDiv.innerHTML = `
+                <h3>✅ DayZ Coordinates</h3>
+                <p><strong>X:</strong> ${dayzX.toFixed(1)} | <strong>Z:</strong> ${dayzZ.toFixed(1)}</p>
+                <code>vector pos = "${dayzX.toFixed(1)} 0 ${dayzZ.toFixed(1)}";</code>
+                <button class="copy-btn" onclick="copyToClipboard('${dayzX.toFixed(1)} 0 ${dayzZ.toFixed(1)}')">📋 Copy</button>
+            `;
+        }
+        
+        function convertToIzurvive() {
+            const map = document.getElementById('mapSelect').value;
+            const dayzX = parseFloat(document.getElementById('dayz-x').value);
+            const dayzZ = parseFloat(document.getElementById('dayz-z').value);
+            
+            if (isNaN(dayzX) || isNaN(dayzZ)) {
+                alert('Please enter valid coordinates');
+                return;
+            }
+            
+            const mapInfo = mapData[map];
+            const izX = ((dayzX - mapInfo.offset.x) / mapInfo.scale).toFixed(1);
+            const izY = ((dayzZ - mapInfo.offset.y) / mapInfo.scale).toFixed(1);
+            
+            const resultDiv = document.getElementById('dayz-result');
+            resultDiv.style.display = 'block';
+            resultDiv.innerHTML = `
+                <h3>✅ iZurvive Coordinates</h3>
+                <p><strong>X:</strong> ${izX} | <strong>Y:</strong> ${izY}</p>
+                <p>Open iZurvive and search for: <code>${izX}, ${izY}</code></p>
+                <button class="copy-btn" onclick="copyToClipboard('${izX}, ${izY}')">📋 Copy</button>
+            `;
+        }
+        
+        function generateScript() {
+            const x = parseFloat(document.getElementById('script-x').value);
+            const z = parseFloat(document.getElementById('script-z').value);
+            const y = parseFloat(document.getElementById('script-y').value) || 0;
+            
+            if (isNaN(x) || isNaN(z)) {
+                alert('Please enter valid X and Z coordinates');
+                return;
+            }
+            
+            const scripts = [
+                `// Spawn object at location\nvector pos = "${x} ${y} ${z}";\nGetGame().CreateObject("YourObjectClass", pos);`,
+                `// Teleport player\nvector pos = "${x} ${y} ${z}";\nplayer.SetPosition(pos);`,
+                `// XML event spawn\n<pos x="${x}" z="${z}" a="0"/>`,
+                `// Get surface Y (ground level)\nvector pos = "${x} 0 ${z}";\npos[1] = GetGame().SurfaceY(pos[0], pos[2]);`
+            ];
+            
+            const resultDiv = document.getElementById('script-result');
+            resultDiv.style.display = 'block';
+            resultDiv.innerHTML = `
+                <h3>✅ EnScript Code Examples</h3>
+                ${scripts.map((s, i) => `
+                    <div style="margin-top:15px;">
+                        <code>${s.replace(/\n/g, '<br>')}</code>
+                        <button class="copy-btn" onclick="copyToClipboard(\`${s.replace(/`/g, '\\`')}\`)">📋 Copy</button>
+                    </div>
+                `).join('')}
+            `;
+        }
+        
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                const btn = event.target;
+                const originalText = btn.textContent;
+                btn.textContent = '✅ Copied!';
+                setTimeout(() => {
+                    btn.textContent = originalText;
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>

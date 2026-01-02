@@ -1,0 +1,58 @@
+name: Documentation Question
+description: Ask a question about using the library or DayZ modding
+title: "[QUESTION] "
+labels: ["question"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Have a question? We're here to help!
+        
+        **Before asking:**
+        - Check the [Issue Index](../../docs/ISSUE_INDEX.md) for common problems
+        - Review the [Quick Start Guide](../../docs/QUICKSTART.md)
+        - Search existing issues and discussions
+        
+  - type: dropdown
+    id: category
+    attributes:
+      label: Question Category
+      description: What is your question about?
+      options:
+        - Server configuration
+        - Modding/scripting
+        - Troubleshooting
+        - Tools/utilities
+        - Interactive maps
+        - Discord integration
+        - API usage
+        - General question
+    validations:
+      required: true
+      
+  - type: textarea
+    id: question
+    attributes:
+      label: Your Question
+      description: What do you need help with?
+      placeholder: "How do I..."
+    validations:
+      required: true
+      
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Provide any relevant details about your setup or situation
+      placeholder: |
+        - Server type: Vanilla/Modded
+        - Platform: PC/Console
+        - What you've tried...
+        
+  - type: textarea
+    id: errors
+    attributes:
+      label: Error Messages
+      description: If you're getting errors, paste them here
+      placeholder: "Paste any error messages or logs..."
+      render: shell
