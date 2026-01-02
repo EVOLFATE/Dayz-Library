@@ -29,7 +29,7 @@ Welcome to the **ultimate DayZ resource**! This repository documents **EVERYTHIN
 
 **🔴 COMPLEX ISSUES: [Advanced Modding Guide](docs/COMPLEX_ISSUES_SUMMARY.md) - 35 professional-grade test cases for advanced developers!** ⭐ **NEW**
 
-**🎮 PLATFORM CLARITY: [Console vs PC Guide](docs/ISSUE_INDEX.md#console-vs-pc-platform-differences) - Clear limitations for Xbox/PlayStation servers!** ⭐ **NEW**
+**🎮 PLATFORM CLARITY: [Console vs PC Guide](docs/ISSUE_INDEX.md#-console-vs-pc-platform-differences) - Clear limitations for Xbox/PlayStation servers!** ⭐ **NEW**
 
 ## 📌 Repository Structure
 
