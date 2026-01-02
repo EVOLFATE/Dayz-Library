@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- 
+    DayZ Types.xml Template
+    This template provides a basic structure for adding custom items to the loot economy.
+    
+    Usage:
+    1. Copy this template
+    2. Replace placeholder values with your item data
+    3. Add to your mission's db/types.xml file
+-->
+<types>
+    <!-- Example: Custom Weapon -->
+    <type name="YourCustomWeapon">
+        <nominal>10</nominal>              <!-- Target amount of items in the world -->
+        <lifetime>3600</lifetime>           <!-- Time in seconds before cleanup -->
+        <restock>1800</restock>             <!-- Time in seconds before new spawn attempt -->
+        <min>5</min>                        <!-- Minimum guaranteed items -->
+        <quantmin>-1</quantmin>             <!-- Minimum quantity/durability (-1 = random) -->
+        <quantmax>-1</quantmax>             <!-- Maximum quantity/durability (-1 = random) -->
+        <cost>100</cost>                    <!-- Spawn priority (higher = rarer) -->
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="weapons"/>          <!-- Item category -->
+        <usage name="Military"/>            <!-- Spawn location type -->
+        <value name="Tier2"/>               <!-- Loot tier -->
+    </type>
+
+    <!-- Example: Custom Clothing -->
+    <type name="YourCustomJacket">
+        <nominal>20</nominal>
+        <lifetime>14400</lifetime>
+        <restock>7200</restock>
+        <min>10</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="clothes"/>
+        <usage name="Town"/>
+        <usage name="Village"/>
+        <value name="Tier1"/>
+    </type>
+
+    <!-- Example: Custom Food Item -->
+    <type name="YourCustomFood">
+        <nominal>30</nominal>
+        <lifetime>28800</lifetime>
+        <restock>3600</restock>
+        <min>15</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="food"/>
+        <usage name="Town"/>
+        <usage name="Village"/>
+        <usage name="Farm"/>
+        <value name="Tier1"/>
+    </type>
+
+    <!-- Example: Custom Tool -->
+    <type name="YourCustomTool">
+        <nominal>15</nominal>
+        <lifetime>7200</lifetime>
+        <restock>3600</restock>
+        <min>8</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="tools"/>
+        <usage name="Industrial"/>
+        <usage name="Farm"/>
+        <value name="Tier2"/>
+    </type>
+</types>
+
+<!-- 
+    Common Usage Types:
+    - Military: Military buildings and bases
+    - Police: Police stations
+    - Medic: Hospitals and medical facilities
+    - Firefighter: Fire stations
+    - Town: Urban areas
+    - Village: Small settlements
+    - Farm: Agricultural buildings
+    - Hunting: Hunting locations
+    - Coast: Coastal areas
+    - Industrial: Factories and industrial zones
+    - School: Schools and educational buildings
+    - Office: Office buildings
+    
+    Common Value Tiers:
+    - Tier1: Common items
+    - Tier2: Uncommon items
+    - Tier3: Rare items
+    - Tier4: Very rare items
+    
+    Common Categories:
+    - weapons: Firearms, melee weapons
+    - ammunition: Bullets, magazines
+    - clothes: Clothing items
+    - food: Food and drinks
+    - tools: Tools and equipment
+    - containers: Storage items
+    - vehiclesparts: Vehicle components
+-->

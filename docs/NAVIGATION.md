@@ -36,23 +36,23 @@
 1. [Live Location Tracking](interactive-maps/live-tracking.md) - iZurvive, coordinates, real-time sync
 2. [DayZ Editor Integration](interactive-maps/dayz-editor-integration.md) - 3D building and base planning
 3. [Chernarus+ Map](interactive-maps/chernarus.md) - Complete location guide
-4. 📝 [Livonia Map](interactive-maps/livonia.md) - Coming soon
-5. 📝 [Sakhal Map](interactive-maps/sakhal.md) - Coming soon
+4. [Livonia Map](interactive-maps/livonia.md) - Interactive maps and navigation
+5. [Sakhal Map](interactive-maps/sakhal.md) - Interactive maps and navigation
 
 ### 💰 Traders & Economy
 **For setting up trading systems**
 
 1. [Online Traders Complete](json-configs/online-traders.md) - Expansion, TraderPlus, TravelingTrader
 2. [Types.xml Guide](xml-configs/types-xml.md) - Loot economy configuration
-3. 📝 [Trader Config](json-configs/trader-config.md) - Coming soon
-4. 📝 [Economy Overview](economy/overview.md) - Coming soon
+3. [Trader Config](json-configs/trader-config.md) - Configuration files for traders
+4. [Economy Overview](economy/overview.md) - Central economy system overview
 
 ### 💬 Discord & Webhooks
 **For Discord integration**
 
 1. [Discord Integration Complete](webhooks-discord/discord-integration-complete.md) - Bots, webhooks, notifications
-2. 📝 [CFTools Discord Bot](webhooks-discord/cftools-bot.md) - Coming soon
-3. 📝 [Killfeed Notifications](webhooks-discord/killfeed-notifications.md) - Coming soon
+2. [CFTools Discord Bot](webhooks-discord/cftools-bot.md) - CFTools bot integration
+3. [Killfeed Notifications](webhooks-discord/killfeed-notifications.md) - Discord webhook notifications
 
 ### 🎯 Killfeed Systems
 **For death notifications**
@@ -60,8 +60,8 @@
 1. [Killfeed Basics](killfeed/basics.md) - Introduction to killfeeds
 2. [Killfeed Architecture](killfeed/architecture.md) - System design
 3. [Leading Systems](killfeed/leading-systems.md) - Best implementations
-4. 📝 [Implementation Guide](killfeed/implementation.md) - Coming soon
-5. 📝 [UI Customization](killfeed/ui-customization.md) - Coming soon
+4. [Implementation Guide](killfeed/implementation.md) - Step-by-step implementation
+5. [UI Customization](killfeed/ui-customization.md) - Customizing killfeed UI
 
 ### 📋 Configuration Files
 **For XML and JSON configs**
@@ -70,12 +70,12 @@
 1. [Types.xml](xml-configs/types-xml.md) - Central economy loot configuration
 2. [Events.xml](xml-configs/events-xml.md) - Dynamic events (helicrash, etc.)
 3. [MapGroupPos.xml](xml-configs/mapgrouppos-xml.md) - Spawn position groups
-4. 📝 [SpawnableTypes.xml](xml-configs/spawnabletypes-xml.md) - Coming soon
+4. [SpawnableTypes.xml](xml-configs/spawnabletypes-xml.md) - Spawnable types configuration
 
 #### JSON Files
 1. [Online Traders](json-configs/online-traders.md) - Trader system configuration
-2. 📝 [ServerDZ.cfg](json-configs/serverdz-cfg.md) - Coming soon
-3. 📝 [Economy.json](json-configs/economy-json.md) - Coming soon
+2. [ServerDZ.cfg](json-configs/serverdz-cfg.md) - Server configuration file
+3. [Economy.json](json-configs/economy-json.md) - Economy JSON configuration
 
 ### 🛠️ Development & Modding
 **For creating mods**
@@ -83,8 +83,8 @@
 1. [Introduction to Modding](getting-started/introduction.md) - Start here
 2. [Custom Sound Implementation](custom-content/custom-sound-implementation.md) - Audio guide
 3. [Namalsk Environmental Scripting](advanced/namalsk-environmental-scripting.md) - Advanced scripting
-4. 📝 [EnScript Fundamentals](scripting/enscript-fundamentals.md) - Coming soon
-5. 📝 [First Mod Tutorial](getting-started/first-mod.md) - Coming soon
+4. [EnScript Fundamentals](scripting/enscript-fundamentals.md) - EnScript language basics
+5. [First Mod Tutorial](getting-started/first-mod.md) - Create your first mod
 
 ### 🌐 Tools & Resources
 **For external tools and services**
@@ -153,8 +153,8 @@ Use your browser's search (Ctrl+F or Cmd+F):
 
 ### "I want to create a mod"
 1. [Introduction to Modding](getting-started/introduction.md) - Start here
-2. 📝 [Tools Setup](getting-started/tools-setup.md) - Coming soon
-3. 📝 [First Mod](getting-started/first-mod.md) - Coming soon
+2. [Tools Setup](getting-started/tools-setup.md) - Required tools setup
+3. [First Mod](getting-started/first-mod.md) - Your first mod tutorial
 4. [Custom Sound](custom-content/custom-sound-implementation.md) - Example guide
 
 ### "I want to track my location in-game"
