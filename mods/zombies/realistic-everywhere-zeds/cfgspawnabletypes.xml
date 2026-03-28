@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    cfgspawnabletypes.xml — Realistic Everywhere Zeds Companion Configuration
+    Repository: EVOLFATE/Dayz-Library
+    Mod: realistic-everywhere-zeds
+
+    PURPOSE:
+    This file tunes what infected types are spawned from each territory zone defined
+    in zombie_territories.xml. It controls:
+      - Which specific zombie skins/variants are selected
+      - How rare each variant is (chance weights)
+      - What loot they carry
+
+    DEPLOY:
+    Place in your mission's db/ folder alongside your other cfgspawnabletypes entries:
+        mpmissions/<mission>/db/cfgspawnabletypes.xml
+
+    If you already have a cfgspawnabletypes.xml, merge the <type> blocks below into it.
+
+    KEY TUNING NOTES:
+    - InfectedMummy: kept at very low chance values so mummies remain rare encounters
+    - InfectedSolitude: uses wanderer variants for the isolated wilderness feel
+    - Horde zones (InfectedCity/InfectedVillage at color=666013337) pull from the
+      same pools but at higher dmin/dmax territory values, making them feel like swarms
+-->
+<cfgspawnabletypes>
+
+    <!-- ============================================================ -->
+    <!-- URBAN CIVILIAN INFECTED                                      -->
+    <!-- Used in city/village territories and horde zones             -->
+    <!-- ============================================================ -->
+    <type name="InfectedCity">
+        <cargo chance="0.20">
+            <item name="Rag" chance="0.60"/>
+            <item name="BandageDressing" chance="0.30"/>
+            <item name="Purse" chance="0.20"/>
+            <item name="Wallet" chance="0.20"/>
+            <item name="KeysItemBase" chance="0.10"/>
+        </cargo>
+        <attachments chance="0.10">
+            <item name="CivilianBelt" chance="0.50"/>
+            <item name="Backpack_Base" chance="0.30"/>
+        </attachments>
+    </type>
+
+    <type name="InfectedCityTier1">
+        <cargo chance="0.25">
+            <item name="Rag" chance="0.70"/>
+            <item name="BandageDressing" chance="0.40"/>
+            <item name="FoodCanBakedBeans" chance="0.20"/>
+            <item name="PlasticBottle" chance="0.15"/>
+            <item name="KeysItemBase" chance="0.10"/>
+        </cargo>
+        <attachments chance="0.10">
+            <item name="CivilianBelt" chance="0.40"/>
+        </attachments>
+    </type>
+
+    <type name="InfectedVillage">
+        <cargo chance="0.20">
+            <item name="Rag" chance="0.70"/>
+            <item name="BandageDressing" chance="0.25"/>
+            <item name="FoodCanBakedBeans" chance="0.20"/>
+            <item name="FruitApple" chance="0.15"/>
+            <item name="KitchenKnife" chance="0.10"/>
+        </cargo>
+        <attachments chance="0.08">
+            <item name="WorkingGloves_Beige" chance="0.50"/>
+            <item name="CowboyHat" chance="0.30"/>
+        </attachments>
+    </type>
+
+    <type name="InfectedVillageTier1">
+        <cargo chance="0.20">
+            <item name="Rag" chance="0.70"/>
+            <item name="FoodCanBakedBeans" chance="0.25"/>
+            <item name="FruitApple" chance="0.20"/>
+            <item name="KitchenKnife" chance="0.15"/>
+        </cargo>
+        <attachments chance="0.08">
+            <item name="WorkingGloves_Beige" chance="0.40"/>
+        </attachments>
+    </type>
+
+    <!-- ============================================================ -->
+    <!-- WILDERNESS INFECTED                                          -->
+    <!-- Used for forest grid and road corridors                      -->
+    <!-- Deliberately sparse — these are lone wanderers              -->
+    <!-- ============================================================ -->
+    <type name="InfectedSolitude">
+        <!-- Wilderness wanderers carry minimal loot — they are alone, not scavenging -->
+        <cargo chance="0.10">
+            <item name="Rag" chance="0.80"/>
+            <item name="BandageDressing" chance="0.20"/>
+            <item name="Matches" chance="0.10"/>
+            <item name="CannedFoodOpenedTuna" chance="0.08"/>
+        </cargo>
+        <attachments chance="0.05">
+            <item name="HuntingVest" chance="0.30"/>
+            <item name="BaseballCap" chance="0.40"/>
+            <item name="WorkingGloves_Beige" chance="0.30"/>
+        </attachments>
+    </type>
+
+    <!-- ============================================================ -->
+    <!-- MILITARY INFECTED                                            -->
+    <!-- ============================================================ -->
+    <type name="InfectedArmy">
+        <cargo chance="0.35">
+            <item name="Rag" chance="0.60"/>
+            <item name="BandageDressing" chance="0.40"/>
+            <item name="Morphine" chance="0.15"/>
+            <item name="Epinephrine" chance="0.10"/>
+            <item name="MagazineMilitary" chance="0.20"/>
+            <item name="GrenadeHandBase" chance="0.08"/>
+        </cargo>
+        <attachments chance="0.25">
+            <item name="MilitaryBelt" chance="0.60"/>
+            <item name="MilitaryBoots_Green" chance="0.50"/>
+            <item name="SmershVest" chance="0.20"/>
+        </attachments>
+    </type>
+
+    <type name="InfectedArmyHard">
+        <!-- Elite military — higher loot potential, harder to kill -->
+        <cargo chance="0.45">
+            <item name="Rag" chance="0.60"/>
+            <item name="BandageDressing" chance="0.50"/>
+            <item name="Morphine" chance="0.25"/>
+            <item name="Epinephrine" chance="0.20"/>
+            <item name="MagazineMilitary" chance="0.35"/>
+            <item name="GrenadeHandBase" chance="0.15"/>
+            <item name="Splint" chance="0.10"/>
+        </cargo>
+        <attachments chance="0.40">
+            <item name="MilitaryBelt" chance="0.70"/>
+            <item name="TacticalShirt_Olive" chance="0.50"/>
+            <item name="BoonieHat_Olive" chance="0.40"/>
+            <item name="SmershBag" chance="0.25"/>
+        </attachments>
+    </type>
+
+    <!-- ============================================================ -->
+    <!-- INDUSTRIAL INFECTED                                          -->
+    <!-- ============================================================ -->
+    <type name="InfectedIndustrial">
+        <cargo chance="0.25">
+            <item name="Rag" chance="0.70"/>
+            <item name="BandageDressing" chance="0.30"/>
+            <item name="Screwdriver" chance="0.20"/>
+            <item name="PliersTool" chance="0.15"/>
+            <item name="WireBase" chance="0.10"/>
+        </cargo>
+        <attachments chance="0.20">
+            <item name="WorkingGloves_Grey" chance="0.60"/>
+            <item name="HardHat_Yellow" chance="0.50"/>
+            <item name="SafetyVest" chance="0.30"/>
+        </attachments>
+    </type>
+
+    <!-- ============================================================ -->
+    <!-- MEDICAL INFECTED                                             -->
+    <!-- ============================================================ -->
+    <type name="InfectedMedic">
+        <cargo chance="0.40">
+            <item name="Rag" chance="0.60"/>
+            <item name="BandageDressing" chance="0.60"/>
+            <item name="Morphine" chance="0.30"/>
+            <item name="Tetracycline" chance="0.25"/>
+            <item name="Amoxicillin" chance="0.20"/>
+            <item name="Epinephrine" chance="0.15"/>
+            <item name="BloodTestKit" chance="0.10"/>
+            <item name="IV_Saline" chance="0.10"/>
+        </cargo>
+        <attachments chance="0.15">
+            <item name="MedicalGloves" chance="0.70"/>
+        </attachments>
+    </type>
+
+    <!-- ============================================================ -->
+    <!-- POLICE INFECTED                                              -->
+    <!-- ============================================================ -->
+    <type name="InfectedPolice">
+        <cargo chance="0.35">
+            <item name="Rag" chance="0.60"/>
+            <item name="BandageDressing" chance="0.40"/>
+            <item name="HandcuffsLocked" chance="0.15"/>
+            <item name="MagazineHandgunBase" chance="0.25"/>
+        </cargo>
+        <attachments chance="0.30">
+            <item name="PoliceBelt" chance="0.60"/>
+            <item name="PoliceVest" chance="0.35"/>
+            <item name="PoliceBoots" chance="0.40"/>
+        </attachments>
+    </type>
+
+    <!-- ============================================================ -->
+    <!-- FIREFIGHTER INFECTED                                         -->
+    <!-- ============================================================ -->
+    <type name="InfectedFirefighter">
+        <cargo chance="0.20">
+            <item name="Rag" chance="0.70"/>
+            <item name="BandageDressing" chance="0.30"/>
+            <item name="Axe_Firefighter" chance="0.15"/>
+        </cargo>
+        <attachments chance="0.25">
+            <item name="FirefighterGloves" chance="0.60"/>
+            <item name="FirefighterHelmet" chance="0.50"/>
+        </attachments>
+    </type>
+
+    <!-- ============================================================ -->
+    <!-- NBC / HAZMAT INFECTED                                        -->
+    <!-- ============================================================ -->
+    <type name="InfectedNBC">
+        <!-- These carry contamination zone loot -->
+        <cargo chance="0.30">
+            <item name="Rag" chance="0.60"/>
+            <item name="BandageDressing" chance="0.35"/>
+            <item name="Tetracycline" chance="0.20"/>
+            <item name="AtropinePenInjector" chance="0.15"/>
+            <item name="GasMask" chance="0.10"/>
+        </cargo>
+        <attachments chance="0.20">
+            <item name="NBCGloves" chance="0.70"/>
+        </attachments>
+    </type>
+
+    <!-- ============================================================ -->
+    <!-- RELIGIOUS INFECTED                                           -->
+    <!-- ============================================================ -->
+    <type name="InfectedReligious">
+        <cargo chance="0.15">
+            <item name="Rag" chance="0.80"/>
+            <item name="BandageDressing" chance="0.20"/>
+            <item name="ChristmasOrnamentBall" chance="0.05"/>
+        </cargo>
+        <attachments chance="0.05">
+            <item name="CowlMonk" chance="0.60"/>
+        </attachments>
+    </type>
+
+    <!-- ============================================================ -->
+    <!-- PRISONER INFECTED                                            -->
+    <!-- ============================================================ -->
+    <type name="InfectedPrisoner">
+        <cargo chance="0.15">
+            <item name="Rag" chance="0.80"/>
+            <item name="BandageDressing" chance="0.25"/>
+            <item name="Rope" chance="0.10"/>
+            <item name="TattooKitBase" chance="0.08"/>
+        </cargo>
+        <attachments chance="0.05">
+            <item name="OrangeJumpsuit" chance="0.80"/>
+        </attachments>
+    </type>
+
+    <!-- ============================================================ -->
+    <!-- MUMMY INFECTED — RARE ANCIENT ENCOUNTERS                     -->
+    <!-- DELIBERATELY LOW CARGO CHANCE — rarity is the feature       -->
+    <!--                                                              -->
+    <!-- Mummies appear in the InfectedMummy territory (color=        -->
+    <!-- 4201337042) at smin=0/smax=1/dmin=1/dmax=3 so only 1-3      -->
+    <!-- spawn per zone when a player is very nearby. This ensures    -->
+    <!-- they are rare, memorable encounters rather than spam.        -->
+    <!-- ============================================================ -->
+    <type name="InfectedMummy">
+        <!-- Ancient infected — mostly decayed, occasionally carries a relic -->
+        <cargo chance="0.08">
+            <!-- Very rare finds — ancient artifacts and pre-outbreak items -->
+            <item name="GoldBar" chance="0.05"/>
+            <item name="Rag" chance="0.70"/>
+            <item name="BandageDressing" chance="0.15"/>
+            <item name="OldKey" chance="0.08"/>
+            <item name="TreasureMap" chance="0.03"/>
+        </cargo>
+        <!-- Mummies carry no standard attachments — they are ancient -->
+        <attachments chance="0.02">
+            <item name="SkullMask" chance="0.50"/>
+            <item name="BurlapSackMask" chance="0.50"/>
+        </attachments>
+    </type>
+
+</cfgspawnabletypes>
