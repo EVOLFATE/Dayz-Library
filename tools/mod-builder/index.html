@@ -547,6 +547,7 @@
         </div>
         <div class="control-group">
           <label>Map</label>
+          <!-- Values match DayZ mission folder names: dayzOffline.chernarusplus etc. -->
           <select id="heliMap" onchange="updateEventsXml()">
             <option value="chernarusplus">Chernarus</option>
             <option value="enoch">Livonia</option>
@@ -1067,7 +1068,7 @@ function buildAnimalCards() {
         <span>nominal: <span class="nv">${a.vanillaNominal}</span></span>
         <span>min:${Math.floor(a.vanillaNominal*.5)} / max:${Math.floor(a.vanillaNominal*1.5)}</span>
       </div>
-      <div id="aWarn${i}" class="warn-box" style="display:none;">⚠️ Multiplier &gt;4x may cause client lag / server performance issues</div>`;
+      <div id="aWarn${i}" class="warn-box" style="display:none;">⚠️ Multiplier &gt;4x may cause server/client performance issues and rubber-banding</div>`;
     c.appendChild(d);
   });
 }
@@ -1743,6 +1744,8 @@ function copyXml(id) {
 }
 
 function fallbackCopy(txt) {
+  // execCommand is deprecated but kept as a fallback for non-HTTPS contexts
+  // where navigator.clipboard is unavailable (e.g. file://, older browsers).
   const ta = document.createElement('textarea');
   ta.value = txt;
   ta.style.cssText = 'position:fixed;opacity:0;top:0;left:0;';
