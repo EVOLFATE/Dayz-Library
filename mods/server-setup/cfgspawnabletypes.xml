@@ -918,10 +918,13 @@
     <!-- RELIGIOUS INFECTED                                           -->
     <!-- ============================================================ -->
     <type name="InfectedReligious">
+        <!-- Priests and church-goers — sparse personal effects, spiritual items -->
         <cargo chance="0.15">
             <item name="Rag" chance="0.80"/>
             <item name="BandageDressing" chance="0.20"/>
-            <item name="ChristmasOrnamentBall" chance="0.05"/>
+            <item name="Candle" chance="0.12"/>
+            <item name="Paper" chance="0.10"/>
+            <item name="Pen_Blue" chance="0.05"/>
         </cargo>
         <attachments chance="0.05">
             <item name="CowlMonk" chance="0.60"/>
@@ -966,6 +969,30 @@
         <attachments chance="0.02">
             <item name="SkullMask" chance="0.50"/>
             <item name="BurlapSackMask" chance="0.50"/>
+        </attachments>
+    </type>
+
+    <!-- ============================================================ -->
+    <!-- InfectedPoliceHard                                           -->
+    <!-- Heavy tactical police — spawned by StaticPoliceCar and      -->
+    <!-- StaticPoliceSituation static world events. Armed with        -->
+    <!-- heavier gear than regular police (PolicemanSpecForce model). -->
+    <!-- ============================================================ -->
+    <type name="InfectedPoliceHard">
+        <cargo chance="0.50">
+            <item name="Rag" chance="0.50" />
+            <item name="BandageDressing" chance="0.50" />
+        </cargo>
+        <cargo chance="0.40">
+            <item name="HandcuffsLocked" chance="0.35" />
+            <item name="MagazineHandgunBase" chance="0.35" />
+            <item name="Mag_Pistol_15Rnd" chance="0.30" />
+        </cargo>
+        <attachments chance="0.45">
+            <item name="PoliceBelt" chance="0.70" />
+            <item name="PoliceVest" chance="0.55" />
+            <item name="PoliceBoots" chance="0.50" />
+            <item name="TacticalGloves_Black" chance="0.25" />
         </attachments>
     </type>
 

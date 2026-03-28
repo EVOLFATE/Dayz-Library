@@ -1,46 +1,41 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!--
-    events.xml — SERVER SETUP MERGED
-    ==================================
-    Full merged events.xml combining ALL animal spawn events and ALL vehicle
-    spawn events for DayZ Chernarus+ (dayzOffline.chernarusplus).
-
-    Sources merged:
-      1. animals/realistic-wildlife-overhaul/events.xml
-         - 13 animal events (AnimalHare through AnimalBear)
-      2. vehicles/realistic-vehicle-overhaul/events.xml
-         - 7 vehicle events (VehicleCivilianParking through VehicleHighway)
+    events.xml — SERVER SETUP MERGED (COMPLETE)
+    =============================================
+    Full merged events.xml for DayZ Chernarus+ combining:
+      1. Wildlife Overhaul animal events (13 custom territory-based events)
+      2. ALL vanilla infected events with complete skin variant children
+         (17 Infected* events with every ZmbM_*/ZmbF_* child class)
+      3. InfectedMummy — custom event for mummy zones in zombie_territories.xml
+      4. ALL vanilla static world events (helicrash, contaminated areas, etc.)
+      5. ALL vanilla trajectory events (foraging: fruits, mushrooms, stones)
+      6. Vanilla utility events (ItemPlanks, Loot)
+      7. Vanilla vehicle events NOT covered by overhaul (Boat, Hatchback_02, Offroad_02)
+      8. Vehicle Overhaul scenario events (7 events with fixed spawn coordinates)
 
     INSTALL PATH: mpmissions/dayzOffline.chernarusplus/db/events.xml
     This is a FULL REPLACEMENT file — replace the original entirely.
 
-    ANIMAL NOMINAL COUNTS (active on map at any time):
-      Hare         80  — most common, everywhere
-      Roe Deer     50  — very common, rural/forest
-      Red Deer     35  — common, inland/meadows
-      Wild Boar    30  — moderately common, woodlands
-      Hen          60  — common, settlements/farms
-      Cattle       25  — farms and open fields
-      Sheep/Goat   20  — farms and hillsides
-      Pig          20  — mostly farms
-      DomAnimals   25  — mixed, near villages
-      Fox          30  — forest edges and farms
-      Wolf         20  — predator, spread entire map
-      Bear         15  — predator, rivers/forests/food sources
+    CRITICAL: This file must match cfgspawnabletypes.xml and zombie_territories.xml
+    - Infected events define which Zmb* skin models each zone type spawns
+    - Static events trigger world events (helicrash, contaminated zones)
+    - Trajectory events enable foraging (fruits, mushrooms, stones)
+    - Animal events work with env/<animal>_territories.xml territory files
+    - Vehicle events work with cfgeventspawns.xml coordinate entries
 
-    VEHICLE NOMINAL COUNTS (active on map at any time per event type):
-      VehicleCivilianParking    20
-      VehicleRoadsideBreakdown  18
-      VehicleGasStation         12
-      VehicleIndustrial         10
-      VehiclePoliceCheckpoint    8
-      VehicleRuralFarm          14
-      VehicleHighway            16
+    Sources:
+      Infected events: BohemiaInteractive/DayZ-Central-Economy (official)
+      Static events: BohemiaInteractive/DayZ-Central-Economy (official)
+      Trajectory events: BohemiaInteractive/DayZ-Central-Economy (official)
+      Animal events: mods/animals/realistic-wildlife-overhaul/events.xml
+      Vehicle events: mods/vehicles/realistic-vehicle-overhaul/events.xml
 -->
 <events>
+
     <!-- ============================================================ -->
-    <!-- SECTION 1: ANIMAL EVENTS                                     -->
+    <!-- SECTION 1: WILDLIFE OVERHAUL ANIMAL EVENTS                   -->
     <!-- Source: animals/realistic-wildlife-overhaul/events.xml       -->
+    <!-- Territory-based, uses env/<animal>_territories.xml files     -->
     <!-- ============================================================ -->
 
 
@@ -352,8 +347,979 @@
 
 
     <!-- ============================================================ -->
-    <!-- SECTION 2: VEHICLE EVENTS                                    -->
+    <!-- SECTION 2: VANILLA INFECTED EVENTS (with all skin variants)  -->
+    <!-- Source: BohemiaInteractive/DayZ-Central-Economy (official)   -->
+    <!-- position=player — spawn near players in territory zones      -->
+    <!-- Each event lists EVERY Zmb* skin model variant to randomize  -->
+    <!-- ============================================================ -->
+    <event name="InfectedArmy">
+            <nominal>75</nominal>
+            <min>20</min>
+            <max>200</max>
+            <lifetime>3</lifetime>
+            <restock>0</restock>
+            <saferadius>100</saferadius>
+            <distanceradius>50</distanceradius>
+            <cleanupradius>100</cleanupradius>
+            <flags deletable="0" init_random="0" remove_damaged="1" />
+            <position>player</position>
+            <limit>custom</limit>
+            <active>1</active>
+            <children>
+                <child lootmax="5" lootmin="0" max="0" min="30" type="ZmbM_PatrolNormal_Autumn" />
+                <child lootmax="5" lootmin="0" max="0" min="10" type="ZmbM_PatrolNormal_Flat" />
+                <child lootmax="5" lootmin="0" max="0" min="20" type="ZmbM_PatrolNormal_PautRev" />
+                <child lootmax="5" lootmin="0" max="0" min="10" type="ZmbM_PatrolNormal_Summer" />
+                <child lootmax="5" lootmin="0" max="0" min="20" type="ZmbM_SoldierNormal" />
+                <child lootmax="5" lootmin="0" max="0" min="5" type="ZmbM_usSoldier_normal_Desert" />
+                <child lootmax="5" lootmin="0" max="0" min="5" type="ZmbM_usSoldier_normal_Woodland" />
+            </children>
+        </event>
+    
+    <event name="InfectedArmyHard">
+            <nominal>20</nominal>
+            <min>5</min>
+            <max>50</max>
+            <lifetime>3</lifetime>
+            <restock>0</restock>
+            <saferadius>100</saferadius>
+            <distanceradius>50</distanceradius>
+            <cleanupradius>100</cleanupradius>
+            <flags deletable="0" init_random="0" remove_damaged="1" />
+            <position>player</position>
+            <limit>custom</limit>
+            <active>1</active>
+            <children>
+                <child lootmax="5" lootmin="0" max="0" min="20" type="ZmbM_PatrolNormal_Autumn" />
+                <child lootmax="5" lootmin="0" max="0" min="10" type="ZmbM_PatrolNormal_Flat" />
+                <child lootmax="5" lootmin="0" max="0" min="20" type="ZmbM_PatrolNormal_PautRev" />
+                <child lootmax="5" lootmin="0" max="0" min="10" type="ZmbM_PatrolNormal_Summer" />
+                <child lootmax="5" lootmin="0" max="0" min="20" type="ZmbM_SoldierNormal" />
+                <child lootmax="5" lootmin="0" max="0" min="5" type="ZmbM_usSoldier_Heavy_Woodland" />
+                <child lootmax="5" lootmin="0" max="0" min="5" type="ZmbM_usSoldier_Officer_Desert" />
+                <child lootmax="5" lootmin="0" max="0" min="5" type="ZmbM_usSoldier_normal_Desert" />
+                <child lootmax="5" lootmin="0" max="0" min="5" type="ZmbM_usSoldier_normal_Woodland" />
+            </children>
+        </event>
+    
+    <event name="InfectedCity">
+            <nominal>150</nominal>
+            <min>30</min>
+            <max>300</max>
+            <lifetime>3</lifetime>
+            <restock>0</restock>
+            <saferadius>100</saferadius>
+            <distanceradius>50</distanceradius>
+            <cleanupradius>100</cleanupradius>
+            <flags deletable="0" init_random="0" remove_damaged="1" />
+            <position>player</position>
+            <limit>custom</limit>
+            <active>1</active>
+            <children>
+                <child lootmax="5" lootmin="0" max="0" min="7" type="ZmbF_BlueCollarFat_White" />
+                <child lootmax="5" lootmin="0" max="0" min="3" type="ZmbF_CitizenANormal_Beige" />
+                <child lootmax="5" lootmin="0" max="0" min="3" type="ZmbF_CitizenANormal_Blue" />
+                <child lootmax="5" lootmin="0" max="0" min="7" type="ZmbF_CitizenBSkinny" />
+                <child lootmax="5" lootmin="0" max="0" min="2" type="ZmbF_Clerk_Normal_Blue" />
+                <child lootmax="5" lootmin="0" max="0" min="2" type="ZmbF_Clerk_Normal_Red" />
+                <child lootmax="5" lootmin="0" max="0" min="2" type="ZmbF_Clerk_Normal_White" />
+                <child lootmax="5" lootmin="0" max="0" min="2" type="ZmbF_JournalistNormal_Blue" />
+                <child lootmax="5" lootmin="0" max="0" min="2" type="ZmbF_JournalistNormal_Green" />
+                <child lootmax="5" lootmin="0" max="0" min="2" type="ZmbF_JournalistNormal_Red" />
+                <child lootmax="5" lootmin="0" max="0" min="2" type="ZmbF_ShortSkirt_beige" />
+                <child lootmax="5" lootmin="0" max="0" min="2" type="ZmbF_ShortSkirt_brown" />
+                <child lootmax="5" lootmin="0" max="0" min="2" type="ZmbF_ShortSkirt_checks" />
+                <child lootmax="5" lootmin="0" max="0" min="2" type="ZmbF_ShortSkirt_green" />
+                <child lootmax="5" lootmin="0" max="0" min="2" type="ZmbF_ShortSkirt_grey" />
+                <child lootmax="5" lootmin="0" max="0" min="2" type="ZmbF_ShortSkirt_white" />
+                <child lootmax="5" lootmin="0" max="0" min="2" type="ZmbF_ShortSkirt_yellow" />
+                <child lootmax="5" lootmin="0" max="0" min="2" type="ZmbF_SkaterYoung_Brown" />
+                <child lootmax="5" lootmin="0" max="0" min="2" type="ZmbF_SkaterYoung_Striped" />
+                <child lootmax="5" lootmin="0" max="0" min="2" type="ZmbF_SkaterYoung_Violet" />
+                <child lootmax="5" lootmin="0" max="0" min="2" type="ZmbF_SurvivorNormal_Blue" />
+                <child lootmax="5" lootmin="0" max="0" min="2" type="ZmbF_SurvivorNormal_Red" />
+                <child lootmax="5" lootmin="0" max="0" min="2" type="ZmbF_SurvivorNormal_White" />
+                <child lootmax="5" lootmin="0" max="0" min="2" type="ZmbM_CitizenASkinny_Blue" />
+                <child lootmax="5" lootmin="0" max="0" min="2" type="ZmbM_CitizenASkinny_Grey" />
+                <child lootmax="5" lootmin="0" max="0" min="2" type="ZmbM_CitizenASkinny_Red" />
+                <child lootmax="5" lootmin="0" max="0" min="2" type="ZmbM_CitizenBFat_Blue" />
+                <child lootmax="5" lootmin="0" max="0" min="2" type="ZmbM_CitizenBFat_Green" />
+                <child lootmax="5" lootmin="0" max="0" min="2" type="ZmbM_CitizenBFat_Red" />
+                <child lootmax="5" lootmin="0" max="0" min="2" type="ZmbM_ClerkFat_Grey" />
+                <child lootmax="5" lootmin="0" max="0" min="2" type="ZmbM_ClerkFat_Khaki" />
+                <child lootmax="5" lootmin="0" max="0" min="2" type="ZmbM_ClerkFat_White" />
+                <child lootmax="5" lootmin="0" max="0" min="2" type="ZmbM_CommercialPilotOld_Blue" />
+                <child lootmax="5" lootmin="0" max="0" min="2" type="ZmbM_CommercialPilotOld_Brown" />
+                <child lootmax="5" lootmin="0" max="0" min="2" type="ZmbM_CommercialPilotOld_Olive" />
+                <child lootmax="5" lootmin="0" max="0" min="2" type="ZmbM_Gamedev_Black" />
+                <child lootmax="5" lootmin="0" max="0" min="2" type="ZmbM_Gamedev_Blue" />
+                <child lootmax="5" lootmin="0" max="0" min="2" type="ZmbM_Gamedev_Gray" />
+                <child lootmax="5" lootmin="0" max="0" min="6" type="ZmbM_JournalistSkinny" />
+                <child lootmax="5" lootmin="0" max="0" min="6" type="ZmbM_MotobikerFat_Beige" />
+                <child lootmax="5" lootmin="0" max="0" min="2" type="ZmbM_SkaterYoung_Brown" />
+                <child lootmax="5" lootmin="0" max="0" min="2" type="ZmbM_SkaterYoung_Green" />
+                <child lootmax="5" lootmin="0" max="0" min="2" type="ZmbM_SkaterYoung_Grey" />
+            </children>
+        </event>
+    
+    <event name="InfectedCityTier1">
+            <nominal>75</nominal>
+            <min>15</min>
+            <max>150</max>
+            <lifetime>3</lifetime>
+            <restock>0</restock>
+            <saferadius>100</saferadius>
+            <distanceradius>50</distanceradius>
+            <cleanupradius>100</cleanupradius>
+            <flags deletable="0" init_random="0" remove_damaged="1" />
+            <position>player</position>
+            <limit>custom</limit>
+            <active>1</active>
+            <children>
+                <child lootmax="5" lootmin="0" max="0" min="8" type="ZmbF_CitizenANormal_Brown" />
+                <child lootmax="5" lootmin="0" max="0" min="8" type="ZmbF_Clerk_Normal_Green" />
+                <child lootmax="5" lootmin="0" max="0" min="8" type="ZmbF_JournalistNormal_White" />
+                <child lootmax="5" lootmin="0" max="0" min="8" type="ZmbF_ShortSkirt_black" />
+                <child lootmax="5" lootmin="0" max="0" min="8" type="ZmbF_ShortSkirt_red" />
+                <child lootmax="5" lootmin="0" max="0" min="8" type="ZmbF_ShortSkirt_stripes" />
+                <child lootmax="5" lootmin="0" max="0" min="8" type="ZmbF_SurvivorNormal_Orange" />
+                <child lootmax="5" lootmin="0" max="0" min="10" type="ZmbM_CitizenASkinny_Brown" />
+                <child lootmax="5" lootmin="0" max="0" min="10" type="ZmbM_ClerkFat_Brown" />
+                <child lootmax="5" lootmin="0" max="0" min="8" type="ZmbM_CommercialPilotOld_Grey" />
+                <child lootmax="5" lootmin="0" max="0" min="8" type="ZmbM_MotobikerFat_Black" />
+                <child lootmax="5" lootmin="0" max="0" min="8" type="ZmbM_SkaterYoung_Blue" />
+            </children>
+        </event>
+    
+    <event name="InfectedFirefighter">
+            <nominal>10</nominal>
+            <min>3</min>
+            <max>25</max>
+            <lifetime>3</lifetime>
+            <restock>0</restock>
+            <saferadius>100</saferadius>
+            <distanceradius>50</distanceradius>
+            <cleanupradius>100</cleanupradius>
+            <flags deletable="0" init_random="0" remove_damaged="1" />
+            <position>player</position>
+            <limit>custom</limit>
+            <active>1</active>
+            <children>
+                <child lootmax="5" lootmin="0" max="0" min="90" type="ZmbM_FirefighterNormal" />
+                <child lootmax="5" lootmin="0" max="0" min="10" type="ZmbM_NBC_Yellow" />
+            </children>
+        </event>
+    
+    <event name="InfectedIndustrial">
+            <nominal>50</nominal>
+            <min>15</min>
+            <max>120</max>
+            <lifetime>3</lifetime>
+            <restock>0</restock>
+            <saferadius>100</saferadius>
+            <distanceradius>50</distanceradius>
+            <cleanupradius>100</cleanupradius>
+            <flags deletable="0" init_random="0" remove_damaged="1" />
+            <position>player</position>
+            <limit>custom</limit>
+            <active>1</active>
+            <children>
+                <child lootmax="5" lootmin="0" max="0" min="4" type="ZmbF_BlueCollarFat_Blue" />
+                <child lootmax="5" lootmin="0" max="0" min="4" type="ZmbF_BlueCollarFat_Green" />
+                <child lootmax="5" lootmin="0" max="0" min="4" type="ZmbF_BlueCollarFat_Red" />
+                <child lootmax="5" lootmin="0" max="0" min="4" type="ZmbF_BlueCollarFat_White" />
+                <child lootmax="5" lootmin="0" max="0" min="4" type="ZmbF_MechanicNormal_Beige" />
+                <child lootmax="5" lootmin="0" max="0" min="4" type="ZmbF_MechanicNormal_Green" />
+                <child lootmax="5" lootmin="0" max="0" min="4" type="ZmbF_MechanicNormal_Grey" />
+                <child lootmax="5" lootmin="0" max="0" min="4" type="ZmbF_MechanicNormal_Orange" />
+                <child lootmax="5" lootmin="0" max="0" min="4" type="ZmbM_ConstrWorkerNormal_Beige" />
+                <child lootmax="5" lootmin="0" max="0" min="4" type="ZmbM_ConstrWorkerNormal_Black" />
+                <child lootmax="5" lootmin="0" max="0" min="4" type="ZmbM_ConstrWorkerNormal_Green" />
+                <child lootmax="5" lootmin="0" max="0" min="4" type="ZmbM_ConstrWorkerNormal_Grey" />
+                <child lootmax="5" lootmin="0" max="0" min="4" type="ZmbM_HandymanNormal_Beige" />
+                <child lootmax="5" lootmin="0" max="0" min="4" type="ZmbM_HandymanNormal_Blue" />
+                <child lootmax="5" lootmin="0" max="0" min="4" type="ZmbM_HandymanNormal_Green" />
+                <child lootmax="5" lootmin="0" max="0" min="4" type="ZmbM_HandymanNormal_Grey" />
+                <child lootmax="5" lootmin="0" max="0" min="4" type="ZmbM_HandymanNormal_White" />
+                <child lootmax="5" lootmin="0" max="0" min="4" type="ZmbM_HeavyIndustryWorker" />
+                <child lootmax="5" lootmin="0" max="0" min="4" type="ZmbM_MechanicSkinny_Blue" />
+                <child lootmax="5" lootmin="0" max="0" min="4" type="ZmbM_MechanicSkinny_Green" />
+                <child lootmax="5" lootmin="0" max="0" min="4" type="ZmbM_MechanicSkinny_Grey" />
+                <child lootmax="5" lootmin="0" max="0" min="4" type="ZmbM_MechanicSkinny_Red" />
+                <child lootmax="5" lootmin="0" max="0" min="3" type="ZmbM_OffshoreWorker_Green" />
+                <child lootmax="5" lootmin="0" max="0" min="3" type="ZmbM_OffshoreWorker_Orange" />
+                <child lootmax="5" lootmin="0" max="0" min="3" type="ZmbM_OffshoreWorker_Red" />
+                <child lootmax="5" lootmin="0" max="0" min="3" type="ZmbM_OffshoreWorker_Yellow" />
+            </children>
+        </event>
+    
+    <event name="InfectedMedic">
+            <nominal>20</nominal>
+            <min>5</min>
+            <max>50</max>
+            <lifetime>3</lifetime>
+            <restock>0</restock>
+            <saferadius>100</saferadius>
+            <distanceradius>50</distanceradius>
+            <cleanupradius>100</cleanupradius>
+            <flags deletable="0" init_random="0" remove_damaged="1" />
+            <position>player</position>
+            <limit>custom</limit>
+            <active>1</active>
+            <children>
+                <child lootmax="5" lootmin="0" max="0" min="10" type="ZmbF_DoctorSkinny" />
+                <child lootmax="5" lootmin="0" max="0" min="7" type="ZmbF_NurseFat" />
+                <child lootmax="5" lootmin="0" max="0" min="7" type="ZmbF_ParamedicNormal_Blue" />
+                <child lootmax="5" lootmin="0" max="0" min="7" type="ZmbF_ParamedicNormal_Green" />
+                <child lootmax="5" lootmin="0" max="0" min="7" type="ZmbF_ParamedicNormal_Red" />
+                <child lootmax="5" lootmin="0" max="0" min="7" type="ZmbF_PatientOld" />
+                <child lootmax="5" lootmin="0" max="0" min="10" type="ZmbM_DoctorFat" />
+                <child lootmax="5" lootmin="0" max="0" min="10" type="ZmbM_NBC_Yellow" />
+                <child lootmax="5" lootmin="0" max="0" min="7" type="ZmbM_ParamedicNormal_Black" />
+                <child lootmax="5" lootmin="0" max="0" min="7" type="ZmbM_ParamedicNormal_Blue" />
+                <child lootmax="5" lootmin="0" max="0" min="7" type="ZmbM_ParamedicNormal_Green" />
+                <child lootmax="5" lootmin="0" max="0" min="7" type="ZmbM_ParamedicNormal_Red" />
+                <child lootmax="5" lootmin="0" max="0" min="7" type="ZmbM_PatientSkinny" />
+            </children>
+        </event>
+    
+    <event name="InfectedNBC">
+            <nominal>10</nominal>
+            <min>3</min>
+            <max>25</max>
+            <lifetime>3</lifetime>
+            <restock>0</restock>
+            <saferadius>100</saferadius>
+            <distanceradius>50</distanceradius>
+            <cleanupradius>100</cleanupradius>
+            <flags deletable="0" init_random="0" remove_damaged="1" />
+            <position>player</position>
+            <limit>custom</limit>
+            <active>1</active>
+            <children>
+                <child lootmax="5" lootmin="0" max="0" min="100" type="ZmbM_NBC_Grey" />
+            </children>
+        </event>
+    
+    <event name="InfectedNBCYellow">
+            <nominal>50</nominal>
+            <min>25</min>
+            <max>250</max>
+            <lifetime>3</lifetime>
+            <restock>0</restock>
+            <saferadius>100</saferadius>
+            <distanceradius>50</distanceradius>
+            <cleanupradius>100</cleanupradius>
+            <flags deletable="0" init_random="0" remove_damaged="1" />
+            <position>player</position>
+            <limit>custom</limit>
+            <active>0</active>
+            <children>
+                <child lootmax="3" lootmin="0" max="0" min="10" type="ZmbM_NBC_Yellow" />
+            </children>
+        </event>
+    
+    <event name="InfectedPolice">
+            <nominal>25</nominal>
+            <min>8</min>
+            <max>60</max>
+            <lifetime>3</lifetime>
+            <restock>0</restock>
+            <saferadius>100</saferadius>
+            <distanceradius>50</distanceradius>
+            <cleanupradius>100</cleanupradius>
+            <flags deletable="0" init_random="0" remove_damaged="1" />
+            <position>player</position>
+            <limit>custom</limit>
+            <active>1</active>
+            <children>
+                <child lootmax="5" lootmin="0" max="0" min="40" type="ZmbF_PoliceWomanNormal" />
+                <child lootmax="5" lootmin="0" max="0" min="40" type="ZmbM_PolicemanFat" />
+                <child lootmax="5" lootmin="0" max="20" min="0" type="ZmbM_PolicemanSpecForce" />
+                <child lootmax="5" lootmin="0" max="20" min="0" type="ZmbM_PolicemanSpecForce_Heavy" />
+            </children>
+        </event>
+    
+    <event name="InfectedPoliceHard">
+            <nominal>15</nominal>
+            <min>3</min>
+            <max>40</max>
+            <lifetime>3</lifetime>
+            <restock>0</restock>
+            <saferadius>100</saferadius>
+            <distanceradius>50</distanceradius>
+            <cleanupradius>100</cleanupradius>
+            <flags deletable="0" init_random="0" remove_damaged="1" />
+            <position>player</position>
+            <limit>custom</limit>
+            <active>1</active>
+            <children>
+                <child lootmax="5" lootmin="0" max="100" min="90" type="ZmbM_PolicemanSpecForce_Heavy" />
+                <child lootmax="5" lootmin="0" max="10" min="0" type="ZmbM_PrisonerSkinny" />
+            </children>
+        </event>
+    
+    <event name="InfectedPrisoner">
+            <nominal>10</nominal>
+            <min>3</min>
+            <max>25</max>
+            <lifetime>3</lifetime>
+            <restock>0</restock>
+            <saferadius>100</saferadius>
+            <distanceradius>50</distanceradius>
+            <cleanupradius>100</cleanupradius>
+            <flags deletable="0" init_random="0" remove_damaged="1" />
+            <position>player</position>
+            <limit>custom</limit>
+            <active>1</active>
+            <children>
+                <child lootmax="5" lootmin="0" max="0" min="100" type="ZmbM_PrisonerSkinny" />
+            </children>
+        </event>
+    
+    <event name="InfectedReligious">
+            <nominal>15</nominal>
+            <min>3</min>
+            <max>40</max>
+            <lifetime>3</lifetime>
+            <restock>0</restock>
+            <saferadius>100</saferadius>
+            <distanceradius>50</distanceradius>
+            <cleanupradius>100</cleanupradius>
+            <flags deletable="0" init_random="0" remove_damaged="1" />
+            <position>player</position>
+            <limit>custom</limit>
+            <active>1</active>
+            <children>
+                <child lootmax="5" lootmin="0" max="0" min="100" type="ZmbM_priestPopSkinny" />
+            </children>
+        </event>
+    
+    <event name="InfectedSanta">
+            <nominal>50</nominal>
+            <min>25</min>
+            <max>250</max>
+            <lifetime>3</lifetime>
+            <restock>0</restock>
+            <saferadius>100</saferadius>
+            <distanceradius>50</distanceradius>
+            <cleanupradius>100</cleanupradius>
+            <flags deletable="0" init_random="0" remove_damaged="1" />
+            <position>player</position>
+            <limit>custom</limit>
+            <active>1</active>
+            <children>
+                <child lootmax="5" lootmin="0" max="0" min="100" type="ZmbM_Santa" />
+            </children>
+        </event>
+    
+    <event name="InfectedSolitude">
+            <nominal>250</nominal>
+            <min>50</min>
+            <max>500</max>
+            <lifetime>3</lifetime>
+            <restock>0</restock>
+            <saferadius>100</saferadius>
+            <distanceradius>50</distanceradius>
+            <cleanupradius>100</cleanupradius>
+            <flags deletable="0" init_random="0" remove_damaged="1" />
+            <position>player</position>
+            <limit>custom</limit>
+            <active>1</active>
+            <children>
+                <child lootmax="5" lootmin="0" max="0" min="5" type="ZmbF_HikerSkinny_Blue" />
+                <child lootmax="5" lootmin="0" max="0" min="5" type="ZmbF_HikerSkinny_Green" />
+                <child lootmax="5" lootmin="0" max="0" min="5" type="ZmbF_HikerSkinny_Grey" />
+                <child lootmax="5" lootmin="0" max="0" min="5" type="ZmbF_HikerSkinny_Red" />
+                <child lootmax="5" lootmin="0" max="0" min="5" type="ZmbM_FishermanOld_Blue" />
+                <child lootmax="5" lootmin="0" max="0" min="5" type="ZmbM_FishermanOld_Green" />
+                <child lootmax="5" lootmin="0" max="0" min="5" type="ZmbM_FishermanOld_Grey" />
+                <child lootmax="5" lootmin="0" max="0" min="5" type="ZmbM_FishermanOld_Red" />
+                <child lootmax="5" lootmin="0" max="0" min="5" type="ZmbM_HermitSkinny_Beige" />
+                <child lootmax="5" lootmin="0" max="0" min="5" type="ZmbM_HermitSkinny_Black" />
+                <child lootmax="5" lootmin="0" max="0" min="5" type="ZmbM_HermitSkinny_Green" />
+                <child lootmax="5" lootmin="0" max="0" min="5" type="ZmbM_HermitSkinny_Red" />
+                <child lootmax="5" lootmin="0" max="0" min="5" type="ZmbM_HikerSkinny_Blue" />
+                <child lootmax="5" lootmin="0" max="0" min="5" type="ZmbM_HikerSkinny_Green" />
+                <child lootmax="5" lootmin="0" max="0" min="5" type="ZmbM_HikerSkinny_Yellow" />
+                <child lootmax="5" lootmin="0" max="0" min="10" type="ZmbM_HunterOld_Autumn" />
+                <child lootmax="5" lootmin="0" max="0" min="5" type="ZmbM_HunterOld_Spring" />
+                <child lootmax="5" lootmin="0" max="0" min="5" type="ZmbM_HunterOld_Summer" />
+                <child lootmax="5" lootmin="0" max="0" min="5" type="ZmbM_HunterOld_Winter" />
+            </children>
+        </event>
+    
+    <event name="InfectedVillage">
+            <nominal>150</nominal>
+            <min>40</min>
+            <max>300</max>
+            <lifetime>3</lifetime>
+            <restock>0</restock>
+            <saferadius>100</saferadius>
+            <distanceradius>50</distanceradius>
+            <cleanupradius>100</cleanupradius>
+            <flags deletable="0" init_random="0" remove_damaged="1" />
+            <position>player</position>
+            <limit>custom</limit>
+            <active>1</active>
+            <children>
+                <child lootmax="5" lootmin="0" max="0" min="7" type="ZmbF_JoggerSkinny_Blue" />
+                <child lootmax="5" lootmin="0" max="0" min="6" type="ZmbF_JoggerSkinny_Brown" />
+                <child lootmax="5" lootmin="0" max="0" min="7" type="ZmbF_JoggerSkinny_Green" />
+                <child lootmax="5" lootmin="0" max="0" min="2" type="ZmbF_MilkMaidOld_Beige" />
+                <child lootmax="5" lootmin="0" max="0" min="2" type="ZmbF_MilkMaidOld_Black" />
+                <child lootmax="5" lootmin="0" max="0" min="2" type="ZmbF_MilkMaidOld_Grey" />
+                <child lootmax="5" lootmin="0" max="0" min="2" type="ZmbF_VillagerOld_Green" />
+                <child lootmax="5" lootmin="0" max="0" min="2" type="ZmbF_VillagerOld_Red" />
+                <child lootmax="5" lootmin="0" max="0" min="2" type="ZmbF_VillagerOld_White" />
+                <child lootmax="5" lootmin="0" max="0" min="2" type="ZmbM_FarmerFat_Blue" />
+                <child lootmax="5" lootmin="0" max="0" min="2" type="ZmbM_FarmerFat_Brown" />
+                <child lootmax="5" lootmin="0" max="0" min="2" type="ZmbM_FarmerFat_Green" />
+                <child lootmax="5" lootmin="0" max="0" min="6" type="ZmbM_Jacket_beige" />
+                <child lootmax="5" lootmin="0" max="0" min="6" type="ZmbM_Jacket_black" />
+                <child lootmax="5" lootmin="0" max="0" min="6" type="ZmbM_Jacket_blue" />
+                <child lootmax="5" lootmin="0" max="0" min="6" type="ZmbM_Jacket_brown" />
+                <child lootmax="5" lootmin="0" max="0" min="6" type="ZmbM_Jacket_greenchecks" />
+                <child lootmax="5" lootmin="0" max="0" min="6" type="ZmbM_Jacket_grey" />
+                <child lootmax="5" lootmin="0" max="0" min="6" type="ZmbM_Jacket_khaki" />
+                <child lootmax="5" lootmin="0" max="0" min="6" type="ZmbM_Jacket_stripes" />
+                <child lootmax="5" lootmin="0" max="0" min="5" type="ZmbM_JoggerSkinny_Blue" />
+                <child lootmax="5" lootmin="0" max="0" min="5" type="ZmbM_JoggerSkinny_Green" />
+                <child lootmax="5" lootmin="0" max="0" min="2" type="ZmbM_VillagerOld_Blue" />
+                <child lootmax="5" lootmin="0" max="0" min="2" type="ZmbM_VillagerOld_White" />
+            </children>
+        </event>
+    
+    <event name="InfectedVillageTier1">
+            <nominal>75</nominal>
+            <min>20</min>
+            <max>150</max>
+            <lifetime>3</lifetime>
+            <restock>0</restock>
+            <saferadius>100</saferadius>
+            <distanceradius>50</distanceradius>
+            <cleanupradius>100</cleanupradius>
+            <flags deletable="0" init_random="0" remove_damaged="1" />
+            <position>player</position>
+            <limit>custom</limit>
+            <active>1</active>
+            <children>
+                <child lootmax="5" lootmin="0" max="0" min="17" type="ZmbF_JoggerSkinny_Red" />
+                <child lootmax="5" lootmin="0" max="0" min="5" type="ZmbF_MilkMaidOld_Green" />
+                <child lootmax="5" lootmin="0" max="0" min="17" type="ZmbF_VillagerOld_Blue" />
+                <child lootmax="5" lootmin="0" max="0" min="5" type="ZmbM_FarmerFat_Beige" />
+                <child lootmax="5" lootmin="0" max="0" min="17" type="ZmbM_Jacket_bluechecks" />
+                <child lootmax="5" lootmin="0" max="0" min="17" type="ZmbM_Jacket_magenta" />
+                <child lootmax="5" lootmin="0" max="0" min="17" type="ZmbM_JoggerSkinny_Red" />
+                <child lootmax="5" lootmin="0" max="0" min="5" type="ZmbM_VillagerOld_Green" />
+            </children>
+        </event>
+    
+
+    <event name="InfectedMummy">
+        <nominal>15</nominal>
+        <min>3</min>
+        <max>30</max>
+        <lifetime>3</lifetime>
+        <restock>0</restock>
+        <saferadius>100</saferadius>
+        <distanceradius>50</distanceradius>
+        <cleanupradius>100</cleanupradius>
+        <flags deletable="0" init_random="0" remove_damaged="1"/>
+        <position>player</position>
+        <limit>custom</limit>
+        <active>1</active>
+        <children>
+            <child lootmax="5" lootmin="0" max="0" min="100" type="ZmbM_Mummy"/>
+        </children>
+    </event>
+
+    <!-- ============================================================ -->
+    <!-- SECTION 3: VANILLA STATIC WORLD EVENTS                       -->
+    <!-- Source: BohemiaInteractive/DayZ-Central-Economy (official)   -->
+    <!-- Helicrash sites, contaminated zones, military convoys, etc.  -->
+    <!-- ============================================================ -->
+    <event name="StaticAirplaneCrate">
+            <nominal>9</nominal>
+            <min>0</min>
+            <max>0</max>
+            <lifetime>1800</lifetime>
+            <restock>0</restock>
+            <saferadius>1000</saferadius>
+            <distanceradius>1</distanceradius>
+            <cleanupradius>1000</cleanupradius>
+            <flags deletable="1" init_random="0" remove_damaged="0" />
+            <position>fixed</position>
+            <limit>child</limit>
+            <active>1</active>
+            <children>
+                <child lootmax="8" lootmin="4" max="4" min="2" type="StaticObj_Misc_SupplyBox1_DE" />
+                <child lootmax="8" lootmin="4" max="4" min="2" type="StaticObj_Misc_SupplyBox2_DE" />
+                <child lootmax="8" lootmin="4" max="4" min="2" type="StaticObj_Misc_SupplyBox3_DE" />
+            </children>
+        </event>
+    
+    <event name="StaticBonfire">
+            <nominal>20</nominal>
+            <min>0</min>
+            <max>0</max>
+            <lifetime>86400</lifetime>
+            <restock>0</restock>
+            <saferadius>100</saferadius>
+            <distanceradius>5</distanceradius>
+            <cleanupradius>2500</cleanupradius>
+            <secondary>InfectedFirefighter</secondary>
+            <flags deletable="0" init_random="0" remove_damaged="1" />
+            <position>fixed</position>
+            <limit>child</limit>
+            <active>0</active>
+            <children>
+                <child lootmax="8" lootmin="4" max="20" min="20" type="Bonfire" />
+            </children>
+        </event>
+    
+    <event name="StaticChristmasTree">
+            <nominal>13</nominal>
+            <min>0</min>
+            <max>0</max>
+            <lifetime>43200</lifetime>
+            <restock>0</restock>
+            <saferadius>1000</saferadius>
+            <distanceradius>1000</distanceradius>
+            <cleanupradius>1000</cleanupradius>
+            <flags deletable="0" init_random="0" remove_damaged="1" />
+            <position>uniform</position>
+            <limit>child</limit>
+            <active>0</active>
+            <children>
+                <child lootmax="15" lootmin="10" max="13" min="13" type="ChristmasTree" />
+            </children>
+        </event>
+    
+    <event name="StaticContaminatedArea">
+            <nominal>0</nominal>
+            <min>2</min>
+            <max>4</max>
+            <lifetime>2100</lifetime>
+            <restock>0</restock>
+            <saferadius>0</saferadius>
+            <distanceradius>120</distanceradius>
+            <cleanupradius>0</cleanupradius>
+            <flags deletable="1" init_random="1" remove_damaged="0" />
+            <position>fixed</position>
+            <limit>parent</limit>
+            <active>1</active>
+            <children>
+                <child lootmax="0" lootmin="0" max="4" min="2" type="ContaminatedArea_Dynamic" />
+            </children>
+        </event>
+    
+    <event name="StaticFridgeTest">
+            <nominal>0</nominal>
+            <min>0</min>
+            <max>0</max>
+            <lifetime>0</lifetime>
+            <restock>0</restock>
+            <saferadius>500</saferadius>
+            <distanceradius>500</distanceradius>
+            <cleanupradius>0</cleanupradius>
+            <flags deletable="1" init_random="0" remove_damaged="0" />
+            <position>fixed</position>
+            <limit>mixed</limit>
+            <active>0</active>
+            <children />
+        </event>
+    
+    <event name="StaticHeliCrash">
+            <nominal>3</nominal>
+            <min>0</min>
+            <max>0</max>
+            <lifetime>2100</lifetime>
+            <restock>0</restock>
+            <saferadius>1000</saferadius>
+            <distanceradius>1000</distanceradius>
+            <cleanupradius>1000</cleanupradius>
+            <secondary>InfectedArmy</secondary>
+            <flags deletable="1" init_random="0" remove_damaged="0" />
+            <position>fixed</position>
+            <limit>child</limit>
+            <active>1</active>
+            <children>
+                <child lootmax="15" lootmin="10" max="3" min="1" type="Wreck_UH1Y" />
+            </children>
+        </event>
+    
+    <event name="StaticMilitaryConvoy">
+            <nominal>5</nominal>
+            <min>0</min>
+            <max>0</max>
+            <lifetime>1800</lifetime>
+            <restock>0</restock>
+            <saferadius>1000</saferadius>
+            <distanceradius>1000</distanceradius>
+            <cleanupradius>1000</cleanupradius>
+            <secondary>InfectedArmy</secondary>
+            <flags deletable="1" init_random="0" remove_damaged="0" />
+            <position>fixed</position>
+            <limit>child</limit>
+            <active>1</active>
+            <children />
+        </event>
+    
+    <event name="StaticPoliceCar">
+            <nominal>10</nominal>
+            <min>0</min>
+            <max>0</max>
+            <lifetime>2500</lifetime>
+            <restock>0</restock>
+            <saferadius>500</saferadius>
+            <distanceradius>500</distanceradius>
+            <cleanupradius>200</cleanupradius>
+            <secondary>InfectedPoliceHard</secondary>
+            <flags deletable="1" init_random="0" remove_damaged="0" />
+            <position>fixed</position>
+            <limit>child</limit>
+            <active>0</active>
+            <children>
+                <child lootmax="5" lootmin="3" max="5" min="5" type="Land_Wreck_sed01_aban1_police" />
+                <child lootmax="5" lootmin="3" max="5" min="5" type="Land_Wreck_sed01_aban2_police" />
+            </children>
+        </event>
+    
+    <event name="StaticPoliceSituation">
+            <nominal>5</nominal>
+            <min>0</min>
+            <max>0</max>
+            <lifetime>1800</lifetime>
+            <restock>0</restock>
+            <saferadius>500</saferadius>
+            <distanceradius>1000</distanceradius>
+            <cleanupradius>1000</cleanupradius>
+            <secondary>InfectedPoliceHard</secondary>
+            <flags deletable="1" init_random="0" remove_damaged="0" />
+            <position>fixed</position>
+            <limit>child</limit>
+            <active>1</active>
+            <children />
+        </event>
+    
+    <event name="StaticSantaCrash">
+            <nominal>3</nominal>
+            <min>0</min>
+            <max>0</max>
+            <lifetime>2100</lifetime>
+            <restock>0</restock>
+            <saferadius>1000</saferadius>
+            <distanceradius>1000</distanceradius>
+            <cleanupradius>1000</cleanupradius>
+            <secondary>InfectedSanta</secondary>
+            <flags deletable="1" init_random="0" remove_damaged="0" />
+            <position>fixed</position>
+            <limit>child</limit>
+            <active>0</active>
+            <children>
+                <child lootmax="15" lootmin="10" max="3" min="1" type="Wreck_SantasSleigh" />
+            </children>
+        </event>
+    
+    <event name="StaticTrain">
+            <nominal>3</nominal>
+            <min>1</min>
+            <max>0</max>
+            <lifetime>5400</lifetime>
+            <restock>0</restock>
+            <saferadius>500</saferadius>
+            <distanceradius>1000</distanceradius>
+            <cleanupradius>1000</cleanupradius>
+            <secondary>InfectedIndustrial</secondary>
+            <flags deletable="1" init_random="0" remove_damaged="0" />
+            <position>fixed</position>
+            <limit>child</limit>
+            <active>1</active>
+            <children />
+        </event>
+    
+
+    <!-- ============================================================ -->
+    <!-- SECTION 4: TRAJECTORY / FORAGING EVENTS                      -->
+    <!-- Source: BohemiaInteractive/DayZ-Central-Economy (official)   -->
+    <!-- Enables fruit trees, mushroom spawning, stone gathering      -->
+    <!-- ============================================================ -->
+    <event name="TrajectoryApple">
+            <nominal>140</nominal>
+            <min>2</min>
+            <max>4</max>
+            <lifetime>180</lifetime>
+            <restock>0</restock>
+            <saferadius>25</saferadius>
+            <distanceradius>100</distanceradius>
+            <cleanupradius>25</cleanupradius>
+            <flags deletable="0" init_random="0" remove_damaged="0" />
+            <position>player</position>
+            <limit>mixed</limit>
+            <active>1</active>
+            <children>
+                <child lootmax="0" lootmin="0" max="0" min="0" type="Apple" />
+            </children>
+        </event>
+    
+    <event name="TrajectoryCanina">
+            <nominal>140</nominal>
+            <min>2</min>
+            <max>4</max>
+            <lifetime>180</lifetime>
+            <restock>0</restock>
+            <saferadius>25</saferadius>
+            <distanceradius>100</distanceradius>
+            <cleanupradius>25</cleanupradius>
+            <flags deletable="0" init_random="0" remove_damaged="0" />
+            <position>player</position>
+            <limit>mixed</limit>
+            <active>0</active>
+            <children>
+                <child lootmax="0" lootmin="0" max="0" min="0" type="CaninaBerry" />
+            </children>
+        </event>
+    
+    <event name="TrajectoryConiferous">
+            <nominal>140</nominal>
+            <min>2</min>
+            <max>4</max>
+            <lifetime>180</lifetime>
+            <restock>0</restock>
+            <saferadius>25</saferadius>
+            <distanceradius>100</distanceradius>
+            <cleanupradius>25</cleanupradius>
+            <flags deletable="0" init_random="0" remove_damaged="0" />
+            <position>player</position>
+            <limit>mixed</limit>
+            <active>1</active>
+            <children>
+                <child lootmax="0" lootmin="0" max="0" min="0" type="BoletusMushroom" />
+                <child lootmax="0" lootmin="0" max="0" min="0" type="MacrolepiotaMushroom" />
+            </children>
+        </event>
+    
+    <event name="TrajectoryDeciduous">
+            <nominal>140</nominal>
+            <min>2</min>
+            <max>4</max>
+            <lifetime>180</lifetime>
+            <restock>0</restock>
+            <saferadius>25</saferadius>
+            <distanceradius>100</distanceradius>
+            <cleanupradius>25</cleanupradius>
+            <flags deletable="0" init_random="0" remove_damaged="0" />
+            <position>player</position>
+            <limit>mixed</limit>
+            <active>1</active>
+            <children>
+                <child lootmax="0" lootmin="0" max="0" min="0" type="LactariusMushroom" />
+            </children>
+        </event>
+    
+    <event name="TrajectoryHumus">
+            <nominal>140</nominal>
+            <min>2</min>
+            <max>4</max>
+            <lifetime>180</lifetime>
+            <restock>0</restock>
+            <saferadius>25</saferadius>
+            <distanceradius>100</distanceradius>
+            <cleanupradius>25</cleanupradius>
+            <flags deletable="0" init_random="0" remove_damaged="0" />
+            <position>player</position>
+            <limit>mixed</limit>
+            <active>1</active>
+            <children>
+                <child lootmax="0" lootmin="0" max="0" min="0" type="AgaricusMushroom" />
+                <child lootmax="0" lootmin="0" max="0" min="0" type="PleurotusMushroom" />
+            </children>
+        </event>
+    
+    <event name="TrajectoryPear">
+            <nominal>140</nominal>
+            <min>2</min>
+            <max>4</max>
+            <lifetime>180</lifetime>
+            <restock>0</restock>
+            <saferadius>25</saferadius>
+            <distanceradius>100</distanceradius>
+            <cleanupradius>25</cleanupradius>
+            <flags deletable="0" init_random="0" remove_damaged="0" />
+            <position>player</position>
+            <limit>mixed</limit>
+            <active>1</active>
+            <children>
+                <child lootmax="0" lootmin="0" max="0" min="0" type="Pear" />
+            </children>
+        </event>
+    
+    <event name="TrajectoryPlum">
+            <nominal>140</nominal>
+            <min>2</min>
+            <max>4</max>
+            <lifetime>180</lifetime>
+            <restock>0</restock>
+            <saferadius>25</saferadius>
+            <distanceradius>100</distanceradius>
+            <cleanupradius>25</cleanupradius>
+            <flags deletable="0" init_random="0" remove_damaged="0" />
+            <position>player</position>
+            <limit>mixed</limit>
+            <active>1</active>
+            <children>
+                <child lootmax="0" lootmin="0" max="0" min="0" type="Plum" />
+            </children>
+        </event>
+    
+    <event name="TrajectorySambucus">
+            <nominal>140</nominal>
+            <min>2</min>
+            <max>4</max>
+            <lifetime>180</lifetime>
+            <restock>0</restock>
+            <saferadius>25</saferadius>
+            <distanceradius>100</distanceradius>
+            <cleanupradius>25</cleanupradius>
+            <flags deletable="0" init_random="0" remove_damaged="0" />
+            <position>player</position>
+            <limit>mixed</limit>
+            <active>0</active>
+            <children>
+                <child lootmax="0" lootmin="0" max="0" min="0" type="SambucusBerry" />
+            </children>
+        </event>
+    
+    <event name="TrajectoryStones">
+            <nominal>100</nominal>
+            <min>1</min>
+            <max>2</max>
+            <lifetime>180</lifetime>
+            <restock>0</restock>
+            <saferadius>25</saferadius>
+            <distanceradius>100</distanceradius>
+            <cleanupradius>25</cleanupradius>
+            <flags deletable="0" init_random="0" remove_damaged="0" />
+            <position>player</position>
+            <limit>mixed</limit>
+            <active>1</active>
+            <children>
+                <child lootmax="0" lootmin="0" max="0" min="0" type="SmallStone" />
+            </children>
+        </event>
+    
+
+    <!-- ============================================================ -->
+    <!-- SECTION 5: UTILITY EVENTS                                    -->
+    <!-- Source: BohemiaInteractive/DayZ-Central-Economy (official)   -->
+    <!-- ============================================================ -->
+    <event name="ItemPlanks">
+            <nominal>50</nominal>
+            <min>40</min>
+            <max>50</max>
+            <lifetime>7200</lifetime>
+            <restock>0</restock>
+            <saferadius>250</saferadius>
+            <distanceradius>20</distanceradius>
+            <cleanupradius>100</cleanupradius>
+            <flags deletable="0" init_random="0" remove_damaged="0" />
+            <position>fixed</position>
+            <limit>mixed</limit>
+            <active>1</active>
+            <children>
+                <child lootmax="0" lootmin="0" max="50" min="30" type="PileOfWoodenPlanks" />
+            </children>
+        </event>
+    
+    <event name="Loot">
+            <nominal>0</nominal>
+            <min>0</min>
+            <max>0</max>
+            <lifetime>0</lifetime>
+            <restock>0</restock>
+            <saferadius>0</saferadius>
+            <distanceradius>0</distanceradius>
+            <cleanupradius>50</cleanupradius>
+            <flags deletable="0" init_random="0" remove_damaged="0" />
+            <position>fixed</position>
+            <limit>custom</limit>
+            <active>1</active>
+            <children />
+        </event>
+    
+
+    <!-- ============================================================ -->
+    <!-- SECTION 6: VANILLA VEHICLE EVENTS (not in overhaul)          -->
+    <!-- Source: BohemiaInteractive/DayZ-Central-Economy (official)   -->
+    <!-- Vehicles NOT covered by the Vehicle Overhaul mod:            -->
+    <!-- Boat_01, Hatchback_02 (Olga), Offroad_02 (Lada)             -->
+    <!-- ============================================================ -->
+    <event name="VehicleBoat">
+            <nominal>22</nominal>
+            <min>18</min>
+            <max>24</max>
+            <lifetime>600</lifetime>
+            <restock>0</restock>
+            <saferadius>500</saferadius>
+            <distanceradius>500</distanceradius>
+            <cleanupradius>200</cleanupradius>
+            <flags deletable="0" init_random="0" remove_damaged="1" />
+            <position>fixed</position>
+            <limit>mixed</limit>
+            <active>1</active>
+            <children>
+                <child lootmax="0" lootmin="0" max="10" min="6" type="Boat_01_Black" />
+                <child lootmax="0" lootmin="0" max="10" min="6" type="Boat_01_Blue" />
+                <child lootmax="0" lootmin="0" max="0" min="0" type="Boat_01_Camo" />
+                <child lootmax="0" lootmin="0" max="10" min="6" type="Boat_01_Orange" />
+            </children>
+        </event>
+    
+    <event name="VehicleHatchback02">
+            <nominal>8</nominal>
+            <min>5</min>
+            <max>11</max>
+            <lifetime>300</lifetime>
+            <restock>0</restock>
+            <saferadius>500</saferadius>
+            <distanceradius>500</distanceradius>
+            <cleanupradius>200</cleanupradius>
+            <flags deletable="0" init_random="0" remove_damaged="1" />
+            <position>fixed</position>
+            <limit>mixed</limit>
+            <active>1</active>
+            <children>
+                <child lootmax="0" lootmin="0" max="5" min="3" type="Hatchback_02" />
+                <child lootmax="0" lootmin="0" max="5" min="3" type="Hatchback_02_Black" />
+                <child lootmax="0" lootmin="0" max="5" min="3" type="Hatchback_02_Blue" />
+            </children>
+        </event>
+    
+    <event name="VehicleOffroad02">
+            <nominal>3</nominal>
+            <min>2</min>
+            <max>3</max>
+            <lifetime>300</lifetime>
+            <restock>0</restock>
+            <saferadius>500</saferadius>
+            <distanceradius>500</distanceradius>
+            <cleanupradius>200</cleanupradius>
+            <flags deletable="0" init_random="0" remove_damaged="1" />
+            <position>fixed</position>
+            <limit>mixed</limit>
+            <active>1</active>
+            <children>
+                <child lootmax="0" lootmin="0" max="3" min="2" type="Offroad_02" />
+            </children>
+        </event>
+    
+
+    <!-- ============================================================ -->
+    <!-- SECTION 7: VEHICLE OVERHAUL SCENARIO EVENTS                  -->
     <!-- Source: vehicles/realistic-vehicle-overhaul/events.xml       -->
+    <!-- Scenario-based: parking lots, roadsides, gas stations, etc.  -->
+    <!-- Coordinates defined in db/cfgeventspawns.xml                 -->
     <!-- ============================================================ -->
 
 
