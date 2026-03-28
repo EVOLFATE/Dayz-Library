@@ -17,11 +17,11 @@ A **full replacement** zombie territory configuration mod for DayZ Chernarus. Th
 
 ## File Inventory
 
-| File | Purpose |
-|---|---|
-| `zombie_territories.xml` | **Full replacement** territory file — place as `env/zombie_territories.xml` |
-| `cfgspawnabletypes.xml` | Companion spawnable types — merge into `db/cfgspawnabletypes.xml` |
-| `README.md` | This documentation |
+| File | Purpose | Install Path |
+|------|---------|--------------|
+| `zombie_territories.xml` | **Full replacement** territory file | `env/zombie_territories.xml` |
+| `cfgspawnabletypes.xml` | Companion spawnable types — merge into existing | `db/cfgspawnabletypes.xml` |
+| `README.md` | This documentation | — |
 
 ---
 
@@ -43,39 +43,53 @@ A **full replacement** zombie territory configuration mod for DayZ Chernarus. Th
 
 ## How to Install
 
-### Step 1 — Territory File (Full Replacement)
+> ⚠️ **`zombie_territories.xml` is a full replacement file.** It completely replaces your existing `zombie_territories.xml`. Do not merge — replace.
 
-Copy `zombie_territories.xml` to your mission's environment folder:
+### Console Server Admins (PS4/Xbox/Console)
+
+On console servers using the DayZ server management interface:
+
+1. Navigate to your mission file manager
+2. Open `mpmissions/dayzOffline.chernarusplus/env/`
+3. Upload `zombie_territories.xml` from this mod — this replaces the vanilla file
+4. Open `mpmissions/dayzOffline.chernarusplus/db/`
+5. Open `cfgspawnabletypes.xml` and merge the `<type>` blocks from this mod's file (or replace if you have no custom entries)
+6. Restart your server — changes take effect on the next server start
+
+> **Note for console:** If your server manager requires you to edit files one at a time, copy the XML content from each file and paste it into your server's file editor for that path.
+
+### PC/Steam Server Admins
 
 ```
-mpmissions/dayzOffline.chernarusplus/env/zombie_territories.xml
+YourServerFolder/
+└── mpmissions/
+    └── dayzOffline.chernarusplus/
+        ├── db/
+        │   └── cfgspawnabletypes.xml   ← merge mod's <type> blocks into existing
+        └── env/
+            └── zombie_territories.xml  ← replace with mod's file
 ```
-
-For custom missions:
-```
-mpmissions/<your_mission>/env/zombie_territories.xml
-```
-
-> ⚠️ **This is a full replacement file.** It completely replaces your existing `zombie_territories.xml`. Do not merge — replace.
-
-### Step 2 — Spawnable Types (Companion File)
 
 The `cfgspawnabletypes.xml` controls which specific zombie variants are chosen for each zone and what loot they carry.
 
-**If you do not have an existing `cfgspawnabletypes.xml`:**
+**If you do not have an existing `cfgspawnabletypes.xml`:** copy the file directly.
 
-Copy the file directly:
-```
-mpmissions/<your_mission>/db/cfgspawnabletypes.xml
-```
+**If you already have a `cfgspawnabletypes.xml`:** open both files and merge the `<type>` blocks from this mod's file into your existing file. Add them inside the root `<cfgspawnabletypes>` element. Do not duplicate entries — if you already have a `<type name="InfectedCity">` block, use yours or selectively merge loot tables.
 
-**If you already have a `cfgspawnabletypes.xml`:**
+### Custom Mission Name
 
-Open both files and merge the `<type>` blocks from this mod's file into your existing file. Add them inside the root `<cfgspawnabletypes>` element. Do not duplicate entries — if you already have a `<type name="InfectedCity">` block, use yours or selectively merge loot tables.
+If your mission folder is not `dayzOffline.chernarusplus`, replace it with your
+mission folder name (e.g., `mpmissions/MyCustomMission.chernarusplus/`).
 
-### Step 3 — Restart Server
+---
 
-Restart your server. Territory changes take effect on the next server start. No client-side mod is needed.
+## Compatibility
+
+- **Map:** Chernarus+ (`dayzOffline.chernarusplus`)
+- **Compatible with console:** Yes — all files are standard vanilla XML formats
+- **Compatible with:** DayZ 1.23+ (territory file format unchanged since 1.0)
+- **Conflicts with:** Any other mod that replaces `zombie_territories.xml` or
+  `cfgspawnabletypes.xml` infected type entries. Use one zombie territory mod at a time.
 
 ---
 
@@ -159,6 +173,27 @@ Edit `zombie_territories.xml`, find the `<territory color="1910952871">` block, 
 | `InfectedReligious` | Churches |
 | `InfectedPrisoner` | Prison island, holding cells |
 | `InfectedMummy` | Ancient ruins, forgotten places (rare) |
+
+---
+
+## Design Philosophy
+
+This mod was built around a single conviction: **the zombie apocalypse did not
+stay in the cities.** The infection spread everywhere, and the world should
+reflect that.
+
+1. **The world ended — act like it:** Zombies aren't confined to towns. The
+   infection spread everywhere. Forests, roads, fields — nowhere is truly safe.
+2. **Density matches location:** Cities have the highest concentrations. Wilderness
+   has sparse wanderers. Military zones have hardened infected. This makes each
+   area feel distinct.
+3. **Hordes create memorable moments:** 80 random horde pockets scattered across
+   the map ensure players can never fully "learn the safe routes." Every patrol
+   is a gamble.
+4. **Mummies reward exploration:** 25 rare ancient infected hidden at forgotten
+   locations reward players who venture off the beaten path with unique encounters.
+5. **Performance by design:** Wilderness zones use `smin="0" smax="0"` — zero
+   permanent zombies. The server only loads what players are near.
 
 ---
 
