@@ -31,31 +31,33 @@ This package is tuned to deliver that experience consistently across every file.
 
 ## Files in This Package
 
-| File | Install Path | What It Is |
-|------|-------------|------------|
-| `events.xml` | `db/events.xml` | **63 events** — animals, ALL infected (with tuned nominals), static world events, foraging |
-| `cfgeventspawns.xml` | `db/cfgeventspawns.xml` | Territory refs — 13 animal territory files + 7 vehicle coordinate sets |
-| `cfgeventspawns_world.xml` | *(mission root)* `cfgeventspawns.xml` | Fixed map coordinates — helicrash, convoys, contaminated zones, boats, Olga, Lada, bus |
-| `cfgspawnabletypes.xml` | `db/cfgspawnabletypes.xml` | **24 types** — 8 vehicle loot configs + 16 zombie loot types (post-apoc tuned) |
-| `types.xml` | `db/types.xml` | **1,390 items** — complete DayZ loot economy with vehicle overhaul values |
-| `cfgweather.xml` | *(mission root)* `cfgweather.xml` | Extreme weather — fog walls, storm cycles, rare clear days |
-| `env/` | `env/` | **13 territory files** — 12 animal + zombie_territories.xml (1,037 zones) |
+| File | What It Is |
+|------|------------|
+| `cfgeventspawns.xml` | Fixed map coordinates — helicrash, convoys, contaminated zones, boats, Olga, Lada, bus *(mission root)* |
+| `cfgweather.xml` | Extreme weather — fog walls, storm cycles, rare clear days *(mission root)* |
+| `db/cfgeventspawns.xml` | Territory refs — 13 animal territory files + 7 vehicle coordinate sets |
+| `db/cfgspawnabletypes.xml` | **24 types** — 8 vehicle loot configs + 16 zombie loot types (post-apoc tuned) |
+| `db/events.xml` | **63 events** — animals, ALL infected (with tuned nominals), static world events, foraging |
+| `db/types.xml` | **1,390 items** — complete DayZ loot economy with vehicle overhaul values |
+| `env/` | **13 territory files** — 12 animal + zombie_territories.xml (1,037 zones) |
 
 ---
 
 ## Server Install Path
 
+Copy the contents of `server-setup/` directly into your mission folder. Done.
+
 ```
 mpmissions/dayzOffline.chernarusplus/
 │
 ├── cfgweather.xml                ← server-setup/cfgweather.xml
-├── cfgeventspawns.xml            ← server-setup/cfgeventspawns_world.xml  ← RENAME THIS
+├── cfgeventspawns.xml            ← server-setup/cfgeventspawns.xml
 │
 ├── db/
-│   ├── events.xml                ← server-setup/events.xml
-│   ├── cfgeventspawns.xml        ← server-setup/cfgeventspawns.xml
-│   ├── cfgspawnabletypes.xml     ← server-setup/cfgspawnabletypes.xml
-│   └── types.xml                 ← server-setup/types.xml
+│   ├── events.xml                ← server-setup/db/events.xml
+│   ├── cfgeventspawns.xml        ← server-setup/db/cfgeventspawns.xml
+│   ├── cfgspawnabletypes.xml     ← server-setup/db/cfgspawnabletypes.xml
+│   └── types.xml                 ← server-setup/db/types.xml
 │
 └── env/
     ├── bear_territories.xml
@@ -73,22 +75,16 @@ mpmissions/dayzOffline.chernarusplus/
     └── zombie_territories.xml
 ```
 
-> ⚠️ `cfgeventspawns_world.xml` must be **renamed** to `cfgeventspawns.xml`
-> when placed in the **mission root** (not in db/). This file handles fixed
-> map-coordinate spawn positions for static world events (helicrash, contaminated
-> zones, military convoys, etc.) and vanilla vehicles not covered by the overhaul.
-> It uses the DayZ `<eventposdef>` format and is separate from `db/cfgeventspawns.xml`.
-
 ---
 
 ## Why Two `cfgeventspawns` Files?
 
-DayZ uses two separate spawn position systems:
+DayZ uses two separate spawn position systems, and this package mirrors the real server structure — both files are already in the correct locations:
 
 | File | Location | Format | Purpose |
 |------|----------|--------|---------|
-| `cfgeventspawns.xml` | `db/` | `<cfgeventspawns>` | Links events to territory XML files (animals + vehicle scenarios) |
-| `cfgeventspawns.xml` | mission root | `<eventposdef>` | Fixed map coordinates for static events (helicrash, convoys, boats, etc.) |
+| `cfgeventspawns.xml` | mission root (top level) | `<eventposdef>` | Fixed map coordinates for static events (helicrash, convoys, boats, etc.) |
+| `db/cfgeventspawns.xml` | `db/` | `<cfgeventspawns>` | Links events to territory XML files (animals + vehicle scenarios) |
 
 Both are needed. The `db/` version handles all territory-based spawning. The root version handles fixed-point world events.
 
