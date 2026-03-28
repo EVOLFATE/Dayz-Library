@@ -547,7 +547,7 @@
         </div>
         <div class="control-group">
           <label>Map</label>
-          <!-- Values match DayZ mission folder names: dayzOffline.chernarusplus etc. -->
+          <!-- Values are the map sub-folder names used inside the DayZ mission folder (e.g. dayzOffline.chernarusplus) -->
           <select id="heliMap" onchange="updateEventsXml()">
             <option value="chernarusplus">Chernarus</option>
             <option value="enoch">Livonia</option>
@@ -1098,7 +1098,10 @@ function updateAnimalXml() {
     lines.push('');
     if (coastal)
       lines.push(`<!-- NOTE: Set spawn coordinates to Tier1/coastal areas in cfgeventspawns.xml -->`);
-    lines.push(`<!-- ${a.name.replace(/\p{Emoji}/gu,'').trim()} ${lbl} -->`);
+    // Strip leading emoji — Unicode property escapes (\p{Emoji}) have broad support
+    // (Chrome 64+, Firefox 78+, Safari 11.1+); a simple ASCII fallback covers the rest.
+    const strippedName = a.name.replace(/\p{Emoji}/gu, '').trim() || a.name.replace(/[^\x20-\x7E]/g, '').trim();
+    lines.push(`<!-- ${strippedName} ${lbl} -->`);
     lines.push(`<event name="${a.eventName}">`);
     lines.push(`    <nominal>${nom}</nominal>`);
     lines.push(`    <min>${mn}</min>`);
@@ -1744,8 +1747,10 @@ function copyXml(id) {
 }
 
 function fallbackCopy(txt) {
-  // execCommand is deprecated but kept as a fallback for non-HTTPS contexts
-  // where navigator.clipboard is unavailable (e.g. file://, older browsers).
+  // TODO: Remove once navigator.clipboard has universal support for file:// origins.
+  // execCommand('copy') is deprecated (WHATWG) but intentionally kept here as a
+  // last-resort fallback for non-HTTPS / file:// contexts where the Clipboard API
+  // is unavailable. Do NOT remove this without providing an equivalent fallback.
   const ta = document.createElement('textarea');
   ta.value = txt;
   ta.style.cssText = 'position:fixed;opacity:0;top:0;left:0;';
