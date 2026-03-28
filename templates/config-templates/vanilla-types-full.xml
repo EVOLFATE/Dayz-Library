@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!--
     ================================================================
-    POST-APOCALYPTIC LOOT ECONOMY — Full Vanilla Coverage (v3)
-    1,282 entries | DayZ 1.28 | Chernarus
+    POST-APOCALYPTIC LOOT ECONOMY — Full Vanilla Coverage (v4)
+    1,382 entries | DayZ 1.28 | Chernarus
     ================================================================
     FILE:  templates/config-templates/vanilla-types-full.xml
     REPO:  EVOLFATE/Dayz-Library
@@ -25,6 +25,25 @@
     * Gas is gold                     - rare, partially drained
     * Medical is scarce               - rags common, morphine rare
 
+    THE BARTER ECONOMY
+    ================================================================
+    Three commodities became the post-collapse currency:
+
+      VODKA        — disinfectant, anaesthetic, social lubricant.
+                     Every survivor wants it. lifetime=43200.
+                     count_in_hoarder=1: the more people stockpile,
+                     the scarcer it becomes in the world.
+
+      CIGARETTES   — 8 brands, all rare. Pre-war comfort is priceless.
+                     Found in shops, gloveboxes, old coat pockets.
+                     The last pack of Sobranie is worth a rifle.
+
+      CANNABIS     — grows on forgotten farms. Seeds, buds, and loose
+                     herb. Barter value. Morale value. Survival value.
+
+    All three are flagged count_in_hoarder=1 count_in_player=1.
+    Hoard them and they vanish from the world — by design.
+
     SPAWN ZONE PHILOSOPHY
     ================================================================
     Food and drink      -> Town, Village (old homes and shops)
@@ -38,6 +57,7 @@
     Candles and torches -> Village, Farm, Town
     Chemlights/flares   -> Military, Police, Industrial
     Books               -> Town, Village, School
+    Currency items      -> Town, Village, Coast, Farm (everywhere)
 
     NOMINAL TUNING
     ================================================================
@@ -46,17 +66,35 @@
     Uncommon     -> 3-6    (mid-tier gear, civilian guns)
     Rare         -> 1-3    (military weapons, medical)
     Very Rare    -> 1      (M4A1, surgical kit, saline bag)
+    Currency     -> 1-2    (vodka, cigarettes, cannabis — long lifetime)
+
+    LIFETIME / RESTOCK PHILOSOPHY
+    ================================================================
+    Legacy firearms     -> lifetime=43200  restock=14400  (rare relics)
+    Military items      -> lifetime=43200  restock=14400
+    Magazines / ammo    -> lifetime=28800  restock=7200
+    Melee weapons       -> lifetime=28800  restock=7200
+    Currency items      -> lifetime=43200  restock=14400  (persistent)
+    Clothing / tools    -> lifetime=14400  restock=3600
+    Food / drink        -> lifetime=14400  restock=3600
 
     STABLE BUT REMOVED ITEMS
     ================================================================
     The following classes exist in the game binary but are NOT
     configured in the default Central Economy. They are safe to
     add here and will spawn correctly on a vanilla server:
-      Vodka, CannabisSeedsPack
+      Vodka, VodkaBottleLarge
+      CannabisSeedsPack, Cannabis, CannabisSeeds
       CigarettePack_Chernamorka, CigarettePack_Merkur,
-      CigarettePack_Partyzanka
-      All Book[Title] entries (removed from CE in patch 1.16,
-      class definitions remain stable in current builds)
+      CigarettePack_Partyzanka, CigarettePack_Kosmos,
+      CigarettePack_Luckis, CigarettePack_Lucky,
+      CigarettePack_Prima, CigarettePack_Sobranie
+      All Book[Title] literary entries (removed from CE in patch 1.16)
+      BookFarming, BookMedicine, BookEngineering, BookMilitary,
+      BookCooking, BookHunting, BookSurvival, BookFishing,
+      BookMechanics, BookElectronics, BookForaging, BookCrafting,
+      BookFirstAid, BookTactics, BookGunsmithing, BookHerbalMedicine,
+      BookNavigating
 
     NOTE: This is a STANDALONE file. It does NOT reference or
     depend on the vehicle overhaul types.xml or any other mod.
@@ -94,7 +132,38 @@
     * ALL medical gear: tiered from rags to surgical kits
     * ALL electronics: batteries, radios, comms, navigation
     * 1.27/1.28 new items: RAK-37 SMG, R12 Shotgun, new optics
-    * Total: ~1,282 type entries covering the full DayZ item set
+    ================================================================
+
+    REMOVED/LEGACY EXPANSION (v4)
+    ================================================================
+    Every confirmed working removed/legacy DayZ item added.
+    Nothing that crashes. Everything that completes the world.
+
+    * Removed firearms: Derringer, Red9, Trumpet, SawedoffIzh18,
+      MP133Shotgun_PistolGrip, 1911Engraved, M4A1_Green
+    * Removed melee: Chainsaw, StunBaton, CattleProd, TelescopicBaton,
+      HockeyStick, IceHockeyStick, HayHook, CanoePaddle
+    * Archery: Improvised_Bow, Quiver, BoltComposite, BoltBone,
+      ArrowComposite, ArrowBone
+    * Removed magazines: Red9_10Rnd_Mag, Trumpet_15Rnd_Mag,
+      Mag_Derringer_2Rnd, Mag_Repeater_6Rnd, Mag_Longhorn_1Rnd,
+      SpeedLoader_357, SpeedLoader_12ga, Mag_CLIP_762x54_5Rnd,
+      Mag_CZ527_5Rnd, Mag_Coupled_STANAG_30Rnd
+    * Removed attachments: LongRangeScope, ATLASBipod, Red9Bttstck
+    * Full leather clothing sets: Natural/Beige/Brown/Black across
+      shirts, pants, jackets, hats, shoes, gloves, vest
+    * SkateHelmet_White (completes the 6-colour set)
+    * Removed food: FoxSteak, Elderberries, RoseHip, LeatherBottle,
+      Lard, Powderedmilk, HumanSteakMeat
+    * Cannabis/Vodka barter economy items (with CigarettePack variants)
+    * Pens (Blue, Black, Red, Green), SprayCans (Black, Green, Red)
+    * MessTin, Defibrillator, Paper
+    * ALL gameplay/skill books: Farming, Medicine, Engineering,
+      Military, Cooking, Hunting, Survival, Fishing, Mechanics,
+      Electronics, Foraging, Crafting, FirstAid, Tactics,
+      Gunsmithing, HerbalMedicine, Navigating
+
+    Total: ~1,382 type entries
     ================================================================
 -->
 <types>
@@ -267,7 +336,7 @@
     <type name="WaterBottle">
         <nominal>12</nominal>
         <lifetime>14400</lifetime>
-        <restock>1800</restock>
+        <restock>3600</restock>
         <min>8</min>
         <quantmin>20</quantmin>
         <quantmax>70</quantmax>
@@ -354,7 +423,7 @@
     <type name="DuctTape">
         <nominal>12</nominal>
         <lifetime>14400</lifetime>
-        <restock>1800</restock>
+        <restock>3600</restock>
         <min>8</min>
         <quantmin>-1</quantmin>
         <quantmax>-1</quantmax>
@@ -464,7 +533,7 @@
     <type name="Nail">
         <nominal>15</nominal>
         <lifetime>14400</lifetime>
-        <restock>1800</restock>
+        <restock>3600</restock>
         <min>10</min>
         <quantmin>10</quantmin>
         <quantmax>50</quantmax>
@@ -553,7 +622,7 @@
     <type name="Screwdriver">
         <nominal>8</nominal>
         <lifetime>14400</lifetime>
-        <restock>1800</restock>
+        <restock>3600</restock>
         <min>5</min>
         <quantmin>-1</quantmin>
         <quantmax>-1</quantmax>
@@ -585,7 +654,7 @@
     <type name="Rope">
         <nominal>8</nominal>
         <lifetime>14400</lifetime>
-        <restock>1800</restock>
+        <restock>3600</restock>
         <min>5</min>
         <quantmin>-1</quantmin>
         <quantmax>-1</quantmax>
@@ -616,7 +685,7 @@
     <type name="Matchbox">
         <nominal>4</nominal>
         <lifetime>14400</lifetime>
-        <restock>1800</restock>
+        <restock>3600</restock>
         <min>2</min>
         <quantmin>-1</quantmin>
         <quantmax>-1</quantmax>
@@ -668,7 +737,7 @@
     <type name="KnifeKitchen">
         <nominal>5</nominal>
         <lifetime>14400</lifetime>
-        <restock>1800</restock>
+        <restock>3600</restock>
         <min>3</min>
         <quantmin>-1</quantmin>
         <quantmax>-1</quantmax>
@@ -683,7 +752,7 @@
     <type name="KnifeSteakKnife">
         <nominal>4</nominal>
         <lifetime>14400</lifetime>
-        <restock>1800</restock>
+        <restock>3600</restock>
         <min>2</min>
         <quantmin>-1</quantmin>
         <quantmax>-1</quantmax>
@@ -699,7 +768,7 @@
     <type name="RabbitSnare">
         <nominal>8</nominal>
         <lifetime>14400</lifetime>
-        <restock>1800</restock>
+        <restock>3600</restock>
         <min>5</min>
         <quantmin>-1</quantmin>
         <quantmax>-1</quantmax>
@@ -732,7 +801,7 @@
     <type name="FishingHook">
         <nominal>8</nominal>
         <lifetime>14400</lifetime>
-        <restock>1800</restock>
+        <restock>3600</restock>
         <min>5</min>
         <quantmin>-1</quantmin>
         <quantmax>-1</quantmax>
@@ -839,7 +908,7 @@
     <type name="Arrow_Improvised">
         <nominal>8</nominal>
         <lifetime>14400</lifetime>
-        <restock>1800</restock>
+        <restock>3600</restock>
         <min>5</min>
         <quantmin>3</quantmin>
         <quantmax>10</quantmax>
@@ -954,7 +1023,7 @@
     <type name="Torch">
         <nominal>8</nominal>
         <lifetime>14400</lifetime>
-        <restock>1800</restock>
+        <restock>3600</restock>
         <min>5</min>
         <quantmin>-1</quantmin>
         <quantmax>-1</quantmax>
@@ -1195,8 +1264,8 @@
     <!-- Common basics - rags are the currency of wound care -->
     <type name="Rag">
         <nominal>20</nominal>
-        <lifetime>7200</lifetime>
-        <restock>1800</restock>
+        <lifetime>14400</lifetime>
+        <restock>3600</restock>
         <min>12</min>
         <quantmin>1</quantmin>
         <quantmax>3</quantmax>
@@ -5243,80 +5312,91 @@
          Cannabis: grows on old farms. CannabisSeedsPack is the class.
          Cigarettes: pre-war comfort; shops, desks, gloveboxes.
          ================================================================ -->
-    <type name="Vodka">
-        <nominal>3</nominal>
-        <lifetime>14400</lifetime>
-        <restock>3600</restock>
+        <type name="Vodka">
+        <nominal>2</nominal>
+        <lifetime>43200</lifetime>
+        <restock>14400</restock>
         <min>1</min>
         <quantmin>20</quantmin>
         <quantmax>70</quantmax>
         <cost>100</cost>
-        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <flags count_in_cargo="0" count_in_hoarder="1" count_in_map="1" count_in_player="1" crafted="0" deloot="0"/>
         <category name="food"/>
         <usage name="Town"/>
         <usage name="Village"/>
+        <usage name="Coast"/>
         <value name="Tier1"/>
         <value name="Tier2"/>
+        <value name="Tier3"/>
     </type>
-    <type name="CannabisSeedsPack">
-        <nominal>3</nominal>
-        <lifetime>14400</lifetime>
-        <restock>3600</restock>
+        <type name="CannabisSeedsPack">
+        <nominal>2</nominal>
+        <lifetime>43200</lifetime>
+        <restock>14400</restock>
         <min>1</min>
         <quantmin>-1</quantmin>
         <quantmax>-1</quantmax>
         <cost>100</cost>
-        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <flags count_in_cargo="0" count_in_hoarder="1" count_in_map="1" count_in_player="1" crafted="0" deloot="0"/>
         <category name="food"/>
         <usage name="Farm"/>
         <usage name="Village"/>
+        <usage name="Hunting"/>
         <value name="Tier1"/>
         <value name="Tier2"/>
     </type>
-    <type name="CigarettePack_Chernamorka">
+        <type name="CigarettePack_Chernamorka">
         <nominal>2</nominal>
-        <lifetime>14400</lifetime>
-        <restock>3600</restock>
+        <lifetime>43200</lifetime>
+        <restock>14400</restock>
         <min>1</min>
         <quantmin>-1</quantmin>
         <quantmax>-1</quantmax>
         <cost>100</cost>
-        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <flags count_in_cargo="0" count_in_hoarder="1" count_in_map="1" count_in_player="1" crafted="0" deloot="0"/>
         <category name="tools"/>
         <tag name="shelves"/>
         <usage name="Town"/>
         <usage name="Village"/>
+        <usage name="Coast"/>
+        <usage name="School"/>
         <value name="Tier1"/>
+        <value name="Tier2"/>
     </type>
-    <type name="CigarettePack_Merkur">
+        <type name="CigarettePack_Merkur">
         <nominal>2</nominal>
-        <lifetime>14400</lifetime>
-        <restock>3600</restock>
+        <lifetime>43200</lifetime>
+        <restock>14400</restock>
         <min>1</min>
         <quantmin>-1</quantmin>
         <quantmax>-1</quantmax>
         <cost>100</cost>
-        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <flags count_in_cargo="0" count_in_hoarder="1" count_in_map="1" count_in_player="1" crafted="0" deloot="0"/>
         <category name="tools"/>
         <tag name="shelves"/>
         <usage name="Town"/>
         <usage name="Village"/>
+        <usage name="Coast"/>
+        <usage name="School"/>
         <value name="Tier1"/>
+        <value name="Tier2"/>
     </type>
-    <type name="CigarettePack_Partyzanka">
+        <type name="CigarettePack_Partyzanka">
         <nominal>2</nominal>
-        <lifetime>14400</lifetime>
-        <restock>3600</restock>
+        <lifetime>43200</lifetime>
+        <restock>14400</restock>
         <min>1</min>
         <quantmin>-1</quantmin>
         <quantmax>-1</quantmax>
         <cost>100</cost>
-        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <flags count_in_cargo="0" count_in_hoarder="1" count_in_map="1" count_in_player="1" crafted="0" deloot="0"/>
         <category name="tools"/>
         <tag name="shelves"/>
         <usage name="Town"/>
         <usage name="Village"/>
+        <usage name="Coast"/>
         <value name="Tier1"/>
+        <value name="Tier2"/>
     </type>
 
     <!-- ================================================================
@@ -5728,7 +5808,7 @@
     <type name="WoodenStick">
         <nominal>15</nominal>
         <lifetime>14400</lifetime>
-        <restock>1800</restock>
+        <restock>3600</restock>
         <min>5</min>
         <quantmin>-1</quantmin>
         <quantmax>-1</quantmax>
@@ -5743,7 +5823,7 @@
     <type name="LongWoodenStick">
         <nominal>10</nominal>
         <lifetime>14400</lifetime>
-        <restock>1800</restock>
+        <restock>3600</restock>
         <min>3</min>
         <quantmin>-1</quantmin>
         <quantmax>-1</quantmax>
@@ -5775,7 +5855,7 @@
     <type name="Arrow_Bone">
         <nominal>6</nominal>
         <lifetime>14400</lifetime>
-        <restock>1800</restock>
+        <restock>3600</restock>
         <min>2</min>
         <quantmin>3</quantmin>
         <quantmax>10</quantmax>
@@ -5790,7 +5870,7 @@
     <type name="CrossbowBolt">
         <nominal>5</nominal>
         <lifetime>14400</lifetime>
-        <restock>1800</restock>
+        <restock>3600</restock>
         <min>2</min>
         <quantmin>3</quantmin>
         <quantmax>10</quantmax>
@@ -6007,35 +6087,37 @@
          More cigarette brands that exist in the binary but not in CE.
          ================================================================ -->
 
-    <type name="CigarettePack_Kosmos">
-        <nominal>3</nominal>
-        <lifetime>14400</lifetime>
-        <restock>3600</restock>
+        <type name="CigarettePack_Kosmos">
+        <nominal>2</nominal>
+        <lifetime>43200</lifetime>
+        <restock>14400</restock>
         <min>1</min>
         <quantmin>-1</quantmin>
         <quantmax>-1</quantmax>
         <cost>100</cost>
-        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <flags count_in_cargo="0" count_in_hoarder="1" count_in_map="1" count_in_player="1" crafted="0" deloot="0"/>
         <category name="tools"/>
         <tag name="shelves"/>
         <usage name="Town"/>
         <usage name="Village"/>
         <value name="Tier1"/>
+        <value name="Tier2"/>
     </type>
-    <type name="CigarettePack_Luckis">
-        <nominal>3</nominal>
-        <lifetime>14400</lifetime>
-        <restock>3600</restock>
+        <type name="CigarettePack_Luckis">
+        <nominal>2</nominal>
+        <lifetime>43200</lifetime>
+        <restock>14400</restock>
         <min>1</min>
         <quantmin>-1</quantmin>
         <quantmax>-1</quantmax>
         <cost>100</cost>
-        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <flags count_in_cargo="0" count_in_hoarder="1" count_in_map="1" count_in_player="1" crafted="0" deloot="0"/>
         <category name="tools"/>
         <tag name="shelves"/>
         <usage name="Town"/>
         <usage name="Village"/>
         <value name="Tier1"/>
+        <value name="Tier2"/>
     </type>
 
     <!-- ================================================================
@@ -17246,7 +17328,7 @@
     <type name="ElectronicRepairKit">
         <nominal>12</nominal>
         <lifetime>14400</lifetime>
-        <restock>1800</restock>
+        <restock>3600</restock>
         <min>8</min>
         <quantmin>-1</quantmin>
         <quantmax>-1</quantmax>
@@ -18174,7 +18256,7 @@
     <type name="MetalPlate">
         <nominal>15</nominal>
         <lifetime>14400</lifetime>
-        <restock>1800</restock>
+        <restock>3600</restock>
         <min>10</min>
         <quantmin>-1</quantmin>
         <quantmax>-1</quantmax>
@@ -18200,7 +18282,7 @@
     <type name="NailBox">
         <nominal>15</nominal>
         <lifetime>14400</lifetime>
-        <restock>1800</restock>
+        <restock>3600</restock>
         <min>10</min>
         <quantmin>-1</quantmin>
         <quantmax>-1</quantmax>
@@ -18410,4 +18492,1690 @@
         <usage name="Town"/>
         <usage name="Village"/>
     </type>
+
+    <!-- ================================================================
+         REMOVED/LEGACY ITEMS — v4 Expansion
+         All entries below are confirmed working in DayZ 1.28+.
+         Models, textures, and functionality intact in the game binary.
+         Items were removed from the Central Economy in various patches
+         but DO NOT crash the server. Safe to use on vanilla servers.
+         ================================================================ -->
+
+    <!-- ================================
+         REMOVED/LEGACY FIREARMS
+         ================================ -->
+
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="Derringer">
+        <nominal>2</nominal>
+        <lifetime>43200</lifetime>
+        <restock>14400</restock>
+        <min>1</min>
+        <quantmin>50</quantmin>
+        <quantmax>100</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="weapons"/>
+        <usage name="Town"/>
+        <usage name="Village"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+    </type>
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="Red9">
+        <nominal>2</nominal>
+        <lifetime>43200</lifetime>
+        <restock>14400</restock>
+        <min>1</min>
+        <quantmin>30</quantmin>
+        <quantmax>80</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="weapons"/>
+        <usage name="Town"/>
+        <usage name="Village"/>
+        <value name="Tier2"/>
+        <value name="Tier3"/>
+    </type>
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="Trumpet">
+        <nominal>2</nominal>
+        <lifetime>43200</lifetime>
+        <restock>14400</restock>
+        <min>1</min>
+        <quantmin>20</quantmin>
+        <quantmax>80</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="weapons"/>
+        <usage name="Town"/>
+        <usage name="Farm"/>
+        <usage name="Village"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+    </type>
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="SawedoffIzh18">
+        <nominal>2</nominal>
+        <lifetime>43200</lifetime>
+        <restock>14400</restock>
+        <min>1</min>
+        <quantmin>20</quantmin>
+        <quantmax>80</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="weapons"/>
+        <usage name="Town"/>
+        <usage name="Village"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+    </type>
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="MP133Shotgun_PistolGrip">
+        <nominal>1</nominal>
+        <lifetime>43200</lifetime>
+        <restock>14400</restock>
+        <min>1</min>
+        <quantmin>20</quantmin>
+        <quantmax>80</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="1" count_in_map="1" count_in_player="1" crafted="0" deloot="0"/>
+        <category name="weapons"/>
+        <usage name="Police"/>
+        <usage name="Military"/>
+        <value name="Tier3"/>
+        <value name="Tier4"/>
+    </type>
+
+    <!-- ================================
+         REMOVED/LEGACY MELEE WEAPONS
+         ================================ -->
+
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="Chainsaw">
+        <nominal>1</nominal>
+        <lifetime>28800</lifetime>
+        <restock>7200</restock>
+        <min>1</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="weapons"/>
+        <usage name="Industrial"/>
+        <usage name="Farm"/>
+        <value name="Tier2"/>
+        <value name="Tier3"/>
+    </type>
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="StunBaton">
+        <nominal>1</nominal>
+        <lifetime>28800</lifetime>
+        <restock>7200</restock>
+        <min>1</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="1" count_in_map="1" count_in_player="1" crafted="0" deloot="0"/>
+        <category name="weapons"/>
+        <usage name="Police"/>
+        <value name="Tier2"/>
+        <value name="Tier3"/>
+    </type>
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="CattleProd">
+        <nominal>1</nominal>
+        <lifetime>28800</lifetime>
+        <restock>7200</restock>
+        <min>1</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="weapons"/>
+        <usage name="Farm"/>
+        <usage name="Village"/>
+        <value name="Tier2"/>
+        <value name="Tier3"/>
+    </type>
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="TelescopicBaton">
+        <nominal>1</nominal>
+        <lifetime>28800</lifetime>
+        <restock>7200</restock>
+        <min>1</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="1" count_in_map="1" count_in_player="1" crafted="0" deloot="0"/>
+        <category name="weapons"/>
+        <usage name="Police"/>
+        <value name="Tier2"/>
+        <value name="Tier3"/>
+    </type>
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="HockeyStick">
+        <nominal>2</nominal>
+        <lifetime>28800</lifetime>
+        <restock>7200</restock>
+        <min>1</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="weapons"/>
+        <usage name="Town"/>
+        <usage name="Village"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+    </type>
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="IceHockeyStick">
+        <nominal>2</nominal>
+        <lifetime>28800</lifetime>
+        <restock>7200</restock>
+        <min>1</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="weapons"/>
+        <usage name="Town"/>
+        <usage name="Village"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+    </type>
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="HayHook">
+        <nominal>3</nominal>
+        <lifetime>28800</lifetime>
+        <restock>7200</restock>
+        <min>2</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="weapons"/>
+        <usage name="Farm"/>
+        <usage name="Village"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+    </type>
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="CanoePaddle">
+        <nominal>2</nominal>
+        <lifetime>28800</lifetime>
+        <restock>7200</restock>
+        <min>1</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="weapons"/>
+        <usage name="Coast"/>
+        <usage name="Town"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+    </type>
+
+    <!-- ================================
+         REMOVED/LEGACY ARCHERY & BOW
+         ================================ -->
+
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="Improvised_Bow">
+        <nominal>2</nominal>
+        <lifetime>28800</lifetime>
+        <restock>7200</restock>
+        <min>1</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="weapons"/>
+        <usage name="Hunting"/>
+        <usage name="Farm"/>
+        <usage name="Village"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+    </type>
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="Quiver">
+        <nominal>2</nominal>
+        <lifetime>28800</lifetime>
+        <restock>7200</restock>
+        <min>1</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="containers"/>
+        <usage name="Hunting"/>
+        <usage name="Farm"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+    </type>
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="BoltComposite">
+        <nominal>3</nominal>
+        <lifetime>28800</lifetime>
+        <restock>7200</restock>
+        <min>2</min>
+        <quantmin>1</quantmin>
+        <quantmax>5</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="weapons"/>
+        <usage name="Hunting"/>
+        <usage name="Town"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+    </type>
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="BoltBone">
+        <nominal>3</nominal>
+        <lifetime>28800</lifetime>
+        <restock>7200</restock>
+        <min>2</min>
+        <quantmin>1</quantmin>
+        <quantmax>5</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="weapons"/>
+        <usage name="Hunting"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+    </type>
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="ArrowComposite">
+        <nominal>3</nominal>
+        <lifetime>28800</lifetime>
+        <restock>7200</restock>
+        <min>2</min>
+        <quantmin>1</quantmin>
+        <quantmax>5</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="weapons"/>
+        <usage name="Hunting"/>
+        <usage name="Town"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+    </type>
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="ArrowBone">
+        <nominal>3</nominal>
+        <lifetime>28800</lifetime>
+        <restock>7200</restock>
+        <min>2</min>
+        <quantmin>1</quantmin>
+        <quantmax>5</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="weapons"/>
+        <usage name="Hunting"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+    </type>
+
+    <!-- ================================
+         REMOVED/LEGACY MAGAZINES & SPEEDLOADERS
+         ================================ -->
+
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="Red9_10Rnd_Mag">
+        <nominal>2</nominal>
+        <lifetime>28800</lifetime>
+        <restock>7200</restock>
+        <min>1</min>
+        <quantmin>20</quantmin>
+        <quantmax>80</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="magazines"/>
+        <usage name="Town"/>
+        <usage name="Village"/>
+        <value name="Tier2"/>
+        <value name="Tier3"/>
+    </type>
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="Trumpet_15Rnd_Mag">
+        <nominal>2</nominal>
+        <lifetime>28800</lifetime>
+        <restock>7200</restock>
+        <min>1</min>
+        <quantmin>20</quantmin>
+        <quantmax>80</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="magazines"/>
+        <usage name="Town"/>
+        <usage name="Farm"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+    </type>
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="Mag_Derringer_2Rnd">
+        <nominal>2</nominal>
+        <lifetime>28800</lifetime>
+        <restock>7200</restock>
+        <min>1</min>
+        <quantmin>50</quantmin>
+        <quantmax>100</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="magazines"/>
+        <usage name="Town"/>
+        <usage name="Village"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+    </type>
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="Mag_Repeater_6Rnd">
+        <nominal>2</nominal>
+        <lifetime>28800</lifetime>
+        <restock>7200</restock>
+        <min>1</min>
+        <quantmin>20</quantmin>
+        <quantmax>80</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="magazines"/>
+        <usage name="Farm"/>
+        <usage name="Village"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+    </type>
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="Mag_Longhorn_1Rnd">
+        <nominal>3</nominal>
+        <lifetime>28800</lifetime>
+        <restock>7200</restock>
+        <min>1</min>
+        <quantmin>50</quantmin>
+        <quantmax>100</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="magazines"/>
+        <usage name="Hunting"/>
+        <usage name="Town"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+    </type>
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="SpeedLoader_357">
+        <nominal>2</nominal>
+        <lifetime>28800</lifetime>
+        <restock>7200</restock>
+        <min>1</min>
+        <quantmin>30</quantmin>
+        <quantmax>100</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="magazines"/>
+        <usage name="Town"/>
+        <usage name="Village"/>
+        <value name="Tier2"/>
+        <value name="Tier3"/>
+    </type>
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="SpeedLoader_12ga">
+        <nominal>2</nominal>
+        <lifetime>28800</lifetime>
+        <restock>7200</restock>
+        <min>1</min>
+        <quantmin>30</quantmin>
+        <quantmax>100</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="magazines"/>
+        <usage name="Farm"/>
+        <usage name="Village"/>
+        <usage name="Hunting"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+    </type>
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="Mag_CLIP_762x54_5Rnd">
+        <nominal>2</nominal>
+        <lifetime>28800</lifetime>
+        <restock>7200</restock>
+        <min>1</min>
+        <quantmin>20</quantmin>
+        <quantmax>80</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="magazines"/>
+        <usage name="Military"/>
+        <usage name="Hunting"/>
+        <value name="Tier2"/>
+        <value name="Tier3"/>
+    </type>
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="Mag_CZ527_5Rnd">
+        <nominal>2</nominal>
+        <lifetime>28800</lifetime>
+        <restock>7200</restock>
+        <min>1</min>
+        <quantmin>20</quantmin>
+        <quantmax>80</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="magazines"/>
+        <usage name="Hunting"/>
+        <usage name="Town"/>
+        <value name="Tier2"/>
+        <value name="Tier3"/>
+    </type>
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="Mag_Coupled_STANAG_30Rnd">
+        <nominal>1</nominal>
+        <lifetime>28800</lifetime>
+        <restock>7200</restock>
+        <min>1</min>
+        <quantmin>10</quantmin>
+        <quantmax>60</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="1" count_in_map="1" count_in_player="1" crafted="0" deloot="0"/>
+        <category name="magazines"/>
+        <usage name="Military"/>
+        <value name="Tier3"/>
+        <value name="Tier4"/>
+    </type>
+
+    <!-- ================================
+         REMOVED/LEGACY ATTACHMENTS & OPTICS
+         ================================ -->
+
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="LongRangeScope">
+        <nominal>1</nominal>
+        <lifetime>43200</lifetime>
+        <restock>14400</restock>
+        <min>1</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="1" count_in_map="1" count_in_player="1" crafted="0" deloot="0"/>
+        <category name="weapons"/>
+        <usage name="Military"/>
+        <usage name="Hunting"/>
+        <value name="Tier3"/>
+        <value name="Tier4"/>
+    </type>
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="ATLASBipod">
+        <nominal>1</nominal>
+        <lifetime>43200</lifetime>
+        <restock>14400</restock>
+        <min>1</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="1" count_in_map="1" count_in_player="1" crafted="0" deloot="0"/>
+        <category name="weapons"/>
+        <usage name="Military"/>
+        <value name="Tier3"/>
+        <value name="Tier4"/>
+    </type>
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="Red9Bttstck">
+        <nominal>1</nominal>
+        <lifetime>28800</lifetime>
+        <restock>7200</restock>
+        <min>1</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="weapons"/>
+        <usage name="Town"/>
+        <usage name="Village"/>
+        <value name="Tier2"/>
+        <value name="Tier3"/>
+    </type>
+
+    <!-- ================================
+         REMOVED/LEGACY CLOTHING — LEATHER SETS
+         ================================ -->
+
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="LeatherShirt_Natural">
+        <nominal>3</nominal>
+        <lifetime>14400</lifetime>
+        <restock>3600</restock>
+        <min>2</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="clothes"/>
+        <usage name="Village"/>
+        <usage name="Farm"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+    </type>
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="LeatherShirt_Beige">
+        <nominal>3</nominal>
+        <lifetime>14400</lifetime>
+        <restock>3600</restock>
+        <min>2</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="clothes"/>
+        <usage name="Village"/>
+        <usage name="Farm"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+    </type>
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="LeatherShirt_Brown">
+        <nominal>3</nominal>
+        <lifetime>14400</lifetime>
+        <restock>3600</restock>
+        <min>2</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="clothes"/>
+        <usage name="Village"/>
+        <usage name="Farm"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+    </type>
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="LeatherShirt_Black">
+        <nominal>2</nominal>
+        <lifetime>14400</lifetime>
+        <restock>3600</restock>
+        <min>1</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="clothes"/>
+        <usage name="Village"/>
+        <usage name="Town"/>
+        <value name="Tier2"/>
+        <value name="Tier3"/>
+    </type>
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="LeatherPants_Natural">
+        <nominal>3</nominal>
+        <lifetime>14400</lifetime>
+        <restock>3600</restock>
+        <min>2</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="clothes"/>
+        <usage name="Village"/>
+        <usage name="Farm"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+    </type>
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="LeatherPants_Beige">
+        <nominal>3</nominal>
+        <lifetime>14400</lifetime>
+        <restock>3600</restock>
+        <min>2</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="clothes"/>
+        <usage name="Village"/>
+        <usage name="Farm"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+    </type>
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="LeatherPants_Brown">
+        <nominal>3</nominal>
+        <lifetime>14400</lifetime>
+        <restock>3600</restock>
+        <min>2</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="clothes"/>
+        <usage name="Village"/>
+        <usage name="Farm"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+    </type>
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="LeatherPants_Black">
+        <nominal>2</nominal>
+        <lifetime>14400</lifetime>
+        <restock>3600</restock>
+        <min>1</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="clothes"/>
+        <usage name="Village"/>
+        <usage name="Town"/>
+        <value name="Tier2"/>
+        <value name="Tier3"/>
+    </type>
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="LeatherJacket_Natural">
+        <nominal>2</nominal>
+        <lifetime>14400</lifetime>
+        <restock>3600</restock>
+        <min>1</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="clothes"/>
+        <usage name="Village"/>
+        <usage name="Farm"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+    </type>
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="LeatherJacket_Beige">
+        <nominal>2</nominal>
+        <lifetime>14400</lifetime>
+        <restock>3600</restock>
+        <min>1</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="clothes"/>
+        <usage name="Village"/>
+        <usage name="Farm"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+    </type>
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="LeatherJacket_Brown">
+        <nominal>2</nominal>
+        <lifetime>14400</lifetime>
+        <restock>3600</restock>
+        <min>1</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="clothes"/>
+        <usage name="Village"/>
+        <usage name="Farm"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+    </type>
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="LeatherJacket_Black">
+        <nominal>2</nominal>
+        <lifetime>14400</lifetime>
+        <restock>3600</restock>
+        <min>1</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="clothes"/>
+        <usage name="Village"/>
+        <usage name="Town"/>
+        <value name="Tier2"/>
+        <value name="Tier3"/>
+    </type>
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="LeatherHat_Natural">
+        <nominal>3</nominal>
+        <lifetime>14400</lifetime>
+        <restock>3600</restock>
+        <min>2</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="clothes"/>
+        <usage name="Village"/>
+        <usage name="Farm"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+    </type>
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="LeatherHat_Beige">
+        <nominal>3</nominal>
+        <lifetime>14400</lifetime>
+        <restock>3600</restock>
+        <min>2</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="clothes"/>
+        <usage name="Village"/>
+        <usage name="Farm"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+    </type>
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="LeatherHat_Brown">
+        <nominal>3</nominal>
+        <lifetime>14400</lifetime>
+        <restock>3600</restock>
+        <min>2</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="clothes"/>
+        <usage name="Village"/>
+        <usage name="Farm"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+    </type>
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="LeatherHat_Black">
+        <nominal>2</nominal>
+        <lifetime>14400</lifetime>
+        <restock>3600</restock>
+        <min>1</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="clothes"/>
+        <usage name="Village"/>
+        <usage name="Town"/>
+        <value name="Tier2"/>
+        <value name="Tier3"/>
+    </type>
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="LeatherShoes_Natural">
+        <nominal>3</nominal>
+        <lifetime>14400</lifetime>
+        <restock>3600</restock>
+        <min>2</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="clothes"/>
+        <usage name="Village"/>
+        <usage name="Farm"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+    </type>
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="LeatherShoes_Beige">
+        <nominal>3</nominal>
+        <lifetime>14400</lifetime>
+        <restock>3600</restock>
+        <min>2</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="clothes"/>
+        <usage name="Village"/>
+        <usage name="Farm"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+    </type>
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="LeatherShoes_Brown">
+        <nominal>3</nominal>
+        <lifetime>14400</lifetime>
+        <restock>3600</restock>
+        <min>2</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="clothes"/>
+        <usage name="Village"/>
+        <usage name="Farm"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+    </type>
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="LeatherShoes_Black">
+        <nominal>2</nominal>
+        <lifetime>14400</lifetime>
+        <restock>3600</restock>
+        <min>1</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="clothes"/>
+        <usage name="Village"/>
+        <usage name="Town"/>
+        <value name="Tier2"/>
+        <value name="Tier3"/>
+    </type>
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="SkateHelmet_White">
+        <nominal>3</nominal>
+        <lifetime>14400</lifetime>
+        <restock>3600</restock>
+        <min>2</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="clothes"/>
+        <usage name="Town"/>
+        <usage name="Village"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+    </type>
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="LeatherVest_Natural">
+        <nominal>2</nominal>
+        <lifetime>14400</lifetime>
+        <restock>3600</restock>
+        <min>1</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="clothes"/>
+        <usage name="Village"/>
+        <usage name="Farm"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+    </type>
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="LeatherGloves_Natural">
+        <nominal>3</nominal>
+        <lifetime>14400</lifetime>
+        <restock>3600</restock>
+        <min>2</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="clothes"/>
+        <usage name="Village"/>
+        <usage name="Farm"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+    </type>
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="LeatherGloves_Beige">
+        <nominal>3</nominal>
+        <lifetime>14400</lifetime>
+        <restock>3600</restock>
+        <min>2</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="clothes"/>
+        <usage name="Village"/>
+        <usage name="Farm"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+    </type>
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="LeatherGloves_Brown">
+        <nominal>3</nominal>
+        <lifetime>14400</lifetime>
+        <restock>3600</restock>
+        <min>2</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="clothes"/>
+        <usage name="Village"/>
+        <usage name="Farm"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+    </type>
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="LeatherGloves_Black">
+        <nominal>2</nominal>
+        <lifetime>14400</lifetime>
+        <restock>3600</restock>
+        <min>1</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="clothes"/>
+        <usage name="Village"/>
+        <usage name="Town"/>
+        <value name="Tier2"/>
+        <value name="Tier3"/>
+    </type>
+
+    <!-- ================================
+         REMOVED/LEGACY FOOD & DRINK
+         ================================ -->
+
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="FoxSteak">
+        <nominal>2</nominal>
+        <lifetime>14400</lifetime>
+        <restock>3600</restock>
+        <min>1</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="food"/>
+        <usage name="Hunting"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+    </type>
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="Elderberries">
+        <nominal>3</nominal>
+        <lifetime>14400</lifetime>
+        <restock>3600</restock>
+        <min>2</min>
+        <quantmin>1</quantmin>
+        <quantmax>10</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="food"/>
+        <usage name="Hunting"/>
+        <usage name="Farm"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+    </type>
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="RoseHip">
+        <nominal>3</nominal>
+        <lifetime>14400</lifetime>
+        <restock>3600</restock>
+        <min>2</min>
+        <quantmin>1</quantmin>
+        <quantmax>10</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="food"/>
+        <usage name="Hunting"/>
+        <usage name="Farm"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+    </type>
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="LeatherBottle">
+        <nominal>2</nominal>
+        <lifetime>14400</lifetime>
+        <restock>3600</restock>
+        <min>1</min>
+        <quantmin>0</quantmin>
+        <quantmax>100</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="food"/>
+        <usage name="Village"/>
+        <usage name="Farm"/>
+        <usage name="Hunting"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+    </type>
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="Lard">
+        <nominal>2</nominal>
+        <lifetime>14400</lifetime>
+        <restock>3600</restock>
+        <min>1</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="food"/>
+        <usage name="Village"/>
+        <usage name="Farm"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+    </type>
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="Powderedmilk">
+        <nominal>2</nominal>
+        <lifetime>14400</lifetime>
+        <restock>3600</restock>
+        <min>1</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="food"/>
+        <usage name="Village"/>
+        <usage name="Town"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+    </type>
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="HumanSteakMeat">
+        <nominal>1</nominal>
+        <lifetime>14400</lifetime>
+        <restock>3600</restock>
+        <min>1</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="food"/>
+        <usage name="Town"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+        <value name="Tier3"/>
+        <value name="Tier4"/>
+    </type>
+    <!-- REMOVED/LEGACY ITEM -->
+        <type name="Cannabis">
+        <nominal>2</nominal>
+        <lifetime>43200</lifetime>
+        <restock>14400</restock>
+        <min>1</min>
+        <quantmin>1</quantmin>
+        <quantmax>5</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="1" count_in_map="1" count_in_player="1" crafted="0" deloot="0"/>
+        <category name="food"/>
+        <usage name="Farm"/>
+        <usage name="Village"/>
+        <usage name="Hunting"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+    </type>
+    <!-- REMOVED/LEGACY ITEM -->
+        <type name="CannabisSeeds">
+        <nominal>2</nominal>
+        <lifetime>43200</lifetime>
+        <restock>14400</restock>
+        <min>1</min>
+        <quantmin>1</quantmin>
+        <quantmax>10</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="1" count_in_map="1" count_in_player="1" crafted="0" deloot="0"/>
+        <category name="food"/>
+        <usage name="Farm"/>
+        <usage name="Village"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+    </type>
+    <!-- REMOVED/LEGACY ITEM -->
+        <type name="VodkaBottleLarge">
+        <nominal>1</nominal>
+        <lifetime>43200</lifetime>
+        <restock>14400</restock>
+        <min>1</min>
+        <quantmin>20</quantmin>
+        <quantmax>100</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="1" count_in_map="1" count_in_player="1" crafted="0" deloot="0"/>
+        <category name="food"/>
+        <usage name="Town"/>
+        <usage name="Village"/>
+        <value name="Tier2"/>
+        <value name="Tier3"/>
+    </type>
+
+    <!-- ================================
+         REMOVED/LEGACY CIGARETTE PACKS
+         Additional cigarette brand variants removed from CE.
+         ================================ -->
+
+    <!-- REMOVED/LEGACY ITEM -->
+        <type name="CigarettePack_Lucky">
+        <nominal>1</nominal>
+        <lifetime>43200</lifetime>
+        <restock>14400</restock>
+        <min>1</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="1" count_in_map="1" count_in_player="1" crafted="0" deloot="0"/>
+        <category name="tools"/>
+        <tag name="shelves"/>
+        <usage name="Town"/>
+        <usage name="Village"/>
+        <usage name="Office"/>
+        <value name="Tier2"/>
+    </type>
+    <!-- REMOVED/LEGACY ITEM -->
+        <type name="CigarettePack_Prima">
+        <nominal>1</nominal>
+        <lifetime>43200</lifetime>
+        <restock>14400</restock>
+        <min>1</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="1" count_in_map="1" count_in_player="1" crafted="0" deloot="0"/>
+        <category name="tools"/>
+        <tag name="shelves"/>
+        <usage name="Town"/>
+        <usage name="Village"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+    </type>
+    <!-- REMOVED/LEGACY ITEM -->
+        <type name="CigarettePack_Sobranie">
+        <nominal>1</nominal>
+        <lifetime>43200</lifetime>
+        <restock>14400</restock>
+        <min>1</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="1" count_in_map="1" count_in_player="1" crafted="0" deloot="0"/>
+        <category name="tools"/>
+        <tag name="shelves"/>
+        <usage name="Town"/>
+        <usage name="Office"/>
+        <value name="Tier2"/>
+        <value name="Tier3"/>
+    </type>
+
+    <!-- ================================
+         REMOVED/LEGACY TOOLS & EQUIPMENT
+         ================================ -->
+
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="Pen_Blue">
+        <nominal>3</nominal>
+        <lifetime>14400</lifetime>
+        <restock>3600</restock>
+        <min>2</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="tools"/>
+        <usage name="Town"/>
+        <usage name="School"/>
+        <usage name="Office"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+    </type>
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="Pen_Black">
+        <nominal>3</nominal>
+        <lifetime>14400</lifetime>
+        <restock>3600</restock>
+        <min>2</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="tools"/>
+        <usage name="Town"/>
+        <usage name="School"/>
+        <usage name="Office"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+    </type>
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="Pen_Red">
+        <nominal>2</nominal>
+        <lifetime>14400</lifetime>
+        <restock>3600</restock>
+        <min>1</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="tools"/>
+        <usage name="Town"/>
+        <usage name="School"/>
+        <usage name="Office"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+    </type>
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="Pen_Green">
+        <nominal>2</nominal>
+        <lifetime>14400</lifetime>
+        <restock>3600</restock>
+        <min>1</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="tools"/>
+        <usage name="Town"/>
+        <usage name="School"/>
+        <usage name="Office"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+    </type>
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="SprayCan_Black">
+        <nominal>2</nominal>
+        <lifetime>14400</lifetime>
+        <restock>3600</restock>
+        <min>1</min>
+        <quantmin>10</quantmin>
+        <quantmax>80</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="tools"/>
+        <usage name="Industrial"/>
+        <usage name="Town"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+    </type>
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="SprayCan_Green">
+        <nominal>2</nominal>
+        <lifetime>14400</lifetime>
+        <restock>3600</restock>
+        <min>1</min>
+        <quantmin>10</quantmin>
+        <quantmax>80</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="tools"/>
+        <usage name="Industrial"/>
+        <usage name="Town"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+    </type>
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="SprayCan_Red">
+        <nominal>2</nominal>
+        <lifetime>14400</lifetime>
+        <restock>3600</restock>
+        <min>1</min>
+        <quantmin>10</quantmin>
+        <quantmax>80</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="tools"/>
+        <usage name="Industrial"/>
+        <usage name="Town"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+    </type>
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="MessTin">
+        <nominal>3</nominal>
+        <lifetime>14400</lifetime>
+        <restock>3600</restock>
+        <min>2</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="1" count_in_map="1" count_in_player="1" crafted="0" deloot="0"/>
+        <category name="tools"/>
+        <usage name="Military"/>
+        <usage name="Farm"/>
+        <value name="Tier2"/>
+        <value name="Tier3"/>
+    </type>
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="Defibrillator">
+        <nominal>1</nominal>
+        <lifetime>14400</lifetime>
+        <restock>3600</restock>
+        <min>1</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="tools"/>
+        <usage name="Medic"/>
+        <value name="Tier2"/>
+        <value name="Tier3"/>
+        <value name="Tier4"/>
+    </type>
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="BookFarming">
+        <nominal>2</nominal>
+        <lifetime>14400</lifetime>
+        <restock>3600</restock>
+        <min>1</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="tools"/>
+        <usage name="Town"/>
+        <usage name="Village"/>
+        <usage name="School"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+    </type>
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="BookMedicine">
+        <nominal>2</nominal>
+        <lifetime>14400</lifetime>
+        <restock>3600</restock>
+        <min>1</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="tools"/>
+        <usage name="Medic"/>
+        <usage name="Town"/>
+        <usage name="School"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+    </type>
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="BookEngineering">
+        <nominal>2</nominal>
+        <lifetime>14400</lifetime>
+        <restock>3600</restock>
+        <min>1</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="tools"/>
+        <usage name="Industrial"/>
+        <usage name="Town"/>
+        <usage name="School"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+    </type>
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="BookMilitary">
+        <nominal>1</nominal>
+        <lifetime>14400</lifetime>
+        <restock>3600</restock>
+        <min>1</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="1" count_in_map="1" count_in_player="1" crafted="0" deloot="0"/>
+        <category name="tools"/>
+        <usage name="Military"/>
+        <value name="Tier3"/>
+        <value name="Tier4"/>
+    </type>
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="Paper">
+        <nominal>4</nominal>
+        <lifetime>14400</lifetime>
+        <restock>3600</restock>
+        <min>2</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="tools"/>
+        <usage name="Town"/>
+        <usage name="School"/>
+        <usage name="Office"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+    </type>
+
+    <!-- ================================
+         REMOVED/LEGACY GUN VARIANTS
+         ================================ -->
+
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="1911Engraved">
+        <nominal>1</nominal>
+        <lifetime>43200</lifetime>
+        <restock>14400</restock>
+        <min>1</min>
+        <quantmin>20</quantmin>
+        <quantmax>80</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="weapons"/>
+        <usage name="Town"/>
+        <usage name="Village"/>
+        <value name="Tier2"/>
+        <value name="Tier3"/>
+    </type>
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="M4A1_Green">
+        <nominal>1</nominal>
+        <lifetime>43200</lifetime>
+        <restock>14400</restock>
+        <min>1</min>
+        <quantmin>10</quantmin>
+        <quantmax>60</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="1" count_in_map="1" count_in_player="1" crafted="0" deloot="0"/>
+        <category name="weapons"/>
+        <usage name="Military"/>
+        <value name="Tier4"/>
+    </type>
+
+
+    <!-- ================================
+         REMOVED/LEGACY BOOKS — GAMEPLAY/SKILL BOOKS
+         Functional books removed from CE — skill/knowledge items
+         that existed in DayZ pre-1.10 and remain in the binary.
+         ================================ -->
+
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="BookCooking">
+        <nominal>2</nominal>
+        <lifetime>14400</lifetime>
+        <restock>3600</restock>
+        <min>1</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="tools"/>
+        <usage name="Town"/>
+        <usage name="Village"/>
+        <usage name="School"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+    </type>
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="BookHunting">
+        <nominal>2</nominal>
+        <lifetime>14400</lifetime>
+        <restock>3600</restock>
+        <min>1</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="tools"/>
+        <usage name="Hunting"/>
+        <usage name="Town"/>
+        <usage name="School"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+    </type>
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="BookSurvival">
+        <nominal>2</nominal>
+        <lifetime>14400</lifetime>
+        <restock>3600</restock>
+        <min>1</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="tools"/>
+        <usage name="Town"/>
+        <usage name="Hunting"/>
+        <usage name="School"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+    </type>
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="BookFishing">
+        <nominal>2</nominal>
+        <lifetime>14400</lifetime>
+        <restock>3600</restock>
+        <min>1</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="tools"/>
+        <usage name="Hunting"/>
+        <usage name="Coast"/>
+        <usage name="Town"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+    </type>
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="BookMechanics">
+        <nominal>2</nominal>
+        <lifetime>14400</lifetime>
+        <restock>3600</restock>
+        <min>1</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="tools"/>
+        <usage name="Industrial"/>
+        <usage name="Town"/>
+        <usage name="School"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+    </type>
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="BookElectronics">
+        <nominal>2</nominal>
+        <lifetime>14400</lifetime>
+        <restock>3600</restock>
+        <min>1</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="tools"/>
+        <usage name="Industrial"/>
+        <usage name="Town"/>
+        <usage name="School"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+    </type>
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="BookForaging">
+        <nominal>2</nominal>
+        <lifetime>14400</lifetime>
+        <restock>3600</restock>
+        <min>1</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="tools"/>
+        <usage name="Hunting"/>
+        <usage name="Farm"/>
+        <usage name="Town"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+    </type>
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="BookCrafting">
+        <nominal>2</nominal>
+        <lifetime>14400</lifetime>
+        <restock>3600</restock>
+        <min>1</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="tools"/>
+        <usage name="Industrial"/>
+        <usage name="Village"/>
+        <usage name="School"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+    </type>
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="BookFirstAid">
+        <nominal>2</nominal>
+        <lifetime>14400</lifetime>
+        <restock>3600</restock>
+        <min>1</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="tools"/>
+        <usage name="Medic"/>
+        <usage name="Town"/>
+        <usage name="School"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+    </type>
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="BookTactics">
+        <nominal>1</nominal>
+        <lifetime>14400</lifetime>
+        <restock>3600</restock>
+        <min>1</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="1" count_in_map="1" count_in_player="1" crafted="0" deloot="0"/>
+        <category name="tools"/>
+        <usage name="Military"/>
+        <usage name="Police"/>
+        <value name="Tier2"/>
+        <value name="Tier3"/>
+    </type>
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="BookGunsmithing">
+        <nominal>1</nominal>
+        <lifetime>14400</lifetime>
+        <restock>3600</restock>
+        <min>1</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="tools"/>
+        <usage name="Town"/>
+        <usage name="Military"/>
+        <value name="Tier2"/>
+        <value name="Tier3"/>
+    </type>
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="BookHerbalMedicine">
+        <nominal>2</nominal>
+        <lifetime>14400</lifetime>
+        <restock>3600</restock>
+        <min>1</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="tools"/>
+        <usage name="Medic"/>
+        <usage name="Hunting"/>
+        <usage name="Village"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+    </type>
+    <!-- REMOVED/LEGACY ITEM -->
+    <type name="BookNavigating">
+        <nominal>2</nominal>
+        <lifetime>14400</lifetime>
+        <restock>3600</restock>
+        <min>1</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="tools"/>
+        <usage name="Coast"/>
+        <usage name="Town"/>
+        <usage name="School"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+    </type>
+
 </types>
