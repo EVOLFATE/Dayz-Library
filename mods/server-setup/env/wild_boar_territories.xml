@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Wild Boar Territory Definitions - Realistic Wildlife Overhaul -->
+<territory-type>
+    <!-- TERRITORY: WILD BOAR TERRITORIES -->
+    <!-- color=4280887296 - Wild boars inhabit thick forests, forest floors and areas near water sources -->
+    <territory color="4280887296">
+
+        <!-- === SOUTH FORESTS === -->
+        <!-- South west forest - dense woodland near Kamenka -->
+        <zone name="Water" smin="0" smax="0" dmin="0" dmax="0" x="1000.00" z="3500.00" r="65"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="1050.00" z="3560.00" r="190"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="900.00" z="3500.00" r="190"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="1000.00" z="3750.00" r="220"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="1200.00" z="3380.00" r="220"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="800.00" z="3850.00" r="220"/>
+
+        <!-- South forest - Pavlovo woodland -->
+        <zone name="Water" smin="0" smax="0" dmin="0" dmax="0" x="3000.00" z="4500.00" r="65"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="3050.00" z="4560.00" r="190"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="2900.00" z="4500.00" r="190"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="3000.00" z="4750.00" r="220"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="3200.00" z="4380.00" r="220"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="2800.00" z="4850.00" r="220"/>
+
+        <!-- South forest - dense wood Gorka -->
+        <zone name="Water" smin="0" smax="0" dmin="0" dmax="0" x="5500.00" z="4800.00" r="65"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="5550.00" z="4860.00" r="190"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="5400.00" z="4800.00" r="190"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="5500.00" z="5050.00" r="220"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="5700.00" z="4680.00" r="220"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="5300.00" z="5150.00" r="220"/>
+
+        <!-- South forest east - woodland near Berezino -->
+        <zone name="Water" smin="0" smax="0" dmin="0" dmax="0" x="8500.00" z="5000.00" r="65"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="8550.00" z="5060.00" r="190"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="8400.00" z="5000.00" r="190"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="8500.00" z="5250.00" r="220"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="8700.00" z="4880.00" r="220"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="8300.00" z="5350.00" r="220"/>
+
+        <!-- South forest far east -->
+        <zone name="Water" smin="0" smax="0" dmin="0" dmax="0" x="12000.00" z="5500.00" r="65"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="12050.00" z="5560.00" r="190"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="11900.00" z="5500.00" r="190"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="12000.00" z="5750.00" r="220"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="12200.00" z="5380.00" r="220"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="11800.00" z="5850.00" r="220"/>
+
+        <!-- === CENTRAL FORESTS === -->
+        <!-- Central west - river forest near Zelenogorsk -->
+        <zone name="Water" smin="0" smax="0" dmin="0" dmax="0" x="1500.00" z="7000.00" r="65"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="1550.00" z="7060.00" r="190"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="1400.00" z="7000.00" r="190"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="1500.00" z="7250.00" r="220"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="1700.00" z="6880.00" r="220"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="1300.00" z="7350.00" r="220"/>
+
+        <!-- Central - dense forest near Novy Sobor -->
+        <zone name="Water" smin="0" smax="0" dmin="0" dmax="0" x="4000.00" z="8000.00" r="65"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="4050.00" z="8060.00" r="190"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="3900.00" z="8000.00" r="190"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="4000.00" z="8250.00" r="220"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="4200.00" z="7880.00" r="220"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="3800.00" z="8350.00" r="220"/>
+
+        <!-- Central - thick woodland near Stary Sobor -->
+        <zone name="Water" smin="0" smax="0" dmin="0" dmax="0" x="6500.00" z="8500.00" r="65"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="6550.00" z="8560.00" r="190"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="6400.00" z="8500.00" r="190"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="6500.00" z="8750.00" r="220"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="6700.00" z="8380.00" r="220"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="6300.00" z="8850.00" r="220"/>
+
+        <!-- Central east - forest near Kabanino -->
+        <zone name="Water" smin="0" smax="0" dmin="0" dmax="0" x="9500.00" z="8000.00" r="65"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="9550.00" z="8060.00" r="190"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="9400.00" z="8000.00" r="190"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="9500.00" z="8250.00" r="220"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="9700.00" z="7880.00" r="220"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="9300.00" z="8350.00" r="220"/>
+
+        <!-- Central far east - dense eastern forest -->
+        <zone name="Water" smin="0" smax="0" dmin="0" dmax="0" x="13000.00" z="8500.00" r="65"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="13050.00" z="8560.00" r="190"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="12900.00" z="8500.00" r="190"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="13000.00" z="8750.00" r="220"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="13200.00" z="8380.00" r="220"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="12800.00" z="8850.00" r="220"/>
+
+        <!-- === NORTH FORESTS === -->
+        <!-- North central west - forest near Vybor -->
+        <zone name="Water" smin="0" smax="0" dmin="0" dmax="0" x="2500.00" z="10500.00" r="65"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="2550.00" z="10560.00" r="190"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="2400.00" z="10500.00" r="190"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="2500.00" z="10750.00" r="220"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="2700.00" z="10380.00" r="220"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="2300.00" z="10850.00" r="220"/>
+
+        <!-- North central - dense forest near Lopatino -->
+        <zone name="Water" smin="0" smax="0" dmin="0" dmax="0" x="5000.00" z="11000.00" r="65"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="5050.00" z="11060.00" r="190"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="4900.00" z="11000.00" r="190"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="5000.00" z="11250.00" r="220"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="5200.00" z="10880.00" r="220"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="4800.00" z="11350.00" r="220"/>
+
+        <!-- North central - Sinistok forest -->
+        <zone name="Water" smin="0" smax="0" dmin="0" dmax="0" x="7500.00" z="10800.00" r="65"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="7550.00" z="10860.00" r="190"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="7400.00" z="10800.00" r="190"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="7500.00" z="11050.00" r="220"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="7700.00" z="10680.00" r="220"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="7300.00" z="11150.00" r="220"/>
+
+        <!-- North central east - forest near Tisy -->
+        <zone name="Water" smin="0" smax="0" dmin="0" dmax="0" x="10500.00" z="10500.00" r="65"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="10550.00" z="10560.00" r="190"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="10400.00" z="10500.00" r="190"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="10500.00" z="10750.00" r="220"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="10700.00" z="10380.00" r="220"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="10300.00" z="10850.00" r="220"/>
+
+        <!-- North east - dense eastern forest -->
+        <zone name="Water" smin="0" smax="0" dmin="0" dmax="0" x="13500.00" z="11000.00" r="65"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="13550.00" z="11060.00" r="190"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="13400.00" z="11000.00" r="190"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="13500.00" z="11250.00" r="220"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="13700.00" z="10880.00" r="220"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="13300.00" z="11350.00" r="220"/>
+
+        <!-- === FAR NORTH FORESTS === -->
+        <!-- Far north west - northern forest -->
+        <zone name="Water" smin="0" smax="0" dmin="0" dmax="0" x="3000.00" z="13000.00" r="65"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="3050.00" z="13060.00" r="190"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="2900.00" z="13000.00" r="190"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="3000.00" z="13250.00" r="220"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="3200.00" z="12880.00" r="220"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="2800.00" z="13350.00" r="220"/>
+
+        <!-- Far north central - dense northern forest -->
+        <zone name="Water" smin="0" smax="0" dmin="0" dmax="0" x="8000.00" z="13500.00" r="65"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="8050.00" z="13560.00" r="190"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="7900.00" z="13500.00" r="190"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="8000.00" z="13750.00" r="220"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="8200.00" z="13380.00" r="220"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="7800.00" z="13850.00" r="220"/>
+
+    </territory>
+</territory-type>

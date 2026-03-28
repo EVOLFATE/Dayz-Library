@@ -1,0 +1,1000 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    cfgspawnabletypes.xml — SERVER SETUP MERGED
+    =============================================
+    Full merged cfgspawnabletypes.xml combining ALL vehicle spawn type
+    definitions and ALL zombie spawn type definitions for DayZ Chernarus+.
+
+    Sources merged:
+      1. vehicles/realistic-vehicle-overhaul/cfgspawnabletypes.xml
+         - 8 vehicle types with attachments and cargo
+           (CivilianSedan, CivilianSedan_Police, OffroadHatchback,
+            OffroadHatchback_Police, HatchbackSedan, Sedan_02,
+            Sedan_02_Police, Truck_01_02)
+      2. zombies/realistic-everywhere-zeds/cfgspawnabletypes.xml
+         - 15 zombie/infected types with loot and attachments
+           (InfectedCity, InfectedCityTier1, InfectedVillage,
+            InfectedVillageTier1, InfectedSolitude, InfectedArmy,
+            InfectedArmyHard, InfectedIndustrial, InfectedMedic,
+            InfectedPolice, InfectedFirefighter, InfectedNBC,
+            InfectedReligious, InfectedPrisoner, InfectedMummy)
+
+    INSTALL PATH: mpmissions/dayzOffline.chernarusplus/db/cfgspawnabletypes.xml
+    This is a FULL REPLACEMENT file — replace the original entirely.
+
+    No conflicts between sections — vehicle types and zombie types use
+    completely different type names.
+-->
+<cfgspawnabletypes>
+
+    <!-- ============================================================ -->
+    <!-- SECTION 1: VEHICLE SPAWN TYPES                               -->
+    <!-- Source: vehicles/realistic-vehicle-overhaul/cfgspawnabletypes.xml -->
+    <!-- Controls what parts/cargo spawn on each vehicle type         -->
+    <!-- ============================================================ -->
+
+
+    <!-- ============================================================ -->
+    <!-- CIVILIAN SEDAN                                               -->
+    <!-- Profile: family car — food, clothing, everyday carry items   -->
+    <!-- Occasional pistol; vehicle parts as rare scavenge reward     -->
+    <!-- ============================================================ -->
+    <type name="CivilianSedan">
+
+        <!-- Wheel slots — 4 independent chances, each at 0.25 -->
+        <attachments chance="0.25">
+            <item name="CarWheel" chance="1.00"/>
+        </attachments>
+        <attachments chance="0.25">
+            <item name="CarWheel" chance="1.00"/>
+        </attachments>
+        <attachments chance="0.25">
+            <item name="CarWheel" chance="1.00"/>
+        </attachments>
+        <attachments chance="0.25">
+            <item name="CarWheel" chance="1.00"/>
+        </attachments>
+
+        <!-- Engine / mechanical parts -->
+        <attachments chance="0.15">
+            <item name="CarBattery" chance="1.00"/>
+        </attachments>
+        <attachments chance="0.12">
+            <item name="SparkPlug" chance="1.00"/>
+        </attachments>
+        <attachments chance="0.20">
+            <item name="CarRadiator" chance="1.00"/>
+        </attachments>
+        <attachments chance="0.30">
+            <item name="HeadlightH7Bulb" chance="1.00"/>
+        </attachments>
+
+        <!-- Cargo — civilian loot pool -->
+        <cargo chance="0.80">
+            <!-- Common junk (0.30-0.50) -->
+            <item name="Rag" chance="0.50"/>
+            <item name="Paper" chance="0.40"/>
+            <item name="Pen" chance="0.35"/>
+            <item name="DuctTape" chance="0.35"/>
+            <item name="BrokenBottle" chance="0.30"/>
+            <!-- Rotten food (0.25-0.40) -->
+            <item name="RottenApple" chance="0.40"/>
+            <item name="RottenPear" chance="0.35"/>
+            <item name="RottenTomato" chance="0.35"/>
+            <item name="RottenBanana" chance="0.30"/>
+            <item name="RottenKiwi" chance="0.25"/>
+            <!-- Uncommon food (0.10-0.20) -->
+            <item name="FoodCanBakedBeans" chance="0.20"/>
+            <item name="FoodCanPeach" chance="0.18"/>
+            <item name="FoodCanSardines" chance="0.15"/>
+            <item name="FoodCanTuna" chance="0.15"/>
+            <item name="SodaCan_Cola" chance="0.18"/>
+            <item name="SodaCan_Spite" chance="0.15"/>
+            <item name="SodaCan_Pipsi" chance="0.15"/>
+            <item name="PlasticBottle" chance="0.12"/>
+            <!-- Uncommon clothing/gear (0.08-0.15) -->
+            <item name="Jeans_Blue" chance="0.15"/>
+            <item name="RainCoat" chance="0.12"/>
+            <item name="BaseballCap" chance="0.12"/>
+            <item name="WorkingGloves_Beige" chance="0.10"/>
+            <item name="WorkingBoots" chance="0.10"/>
+            <!-- Uncommon survival (0.08-0.15) -->
+            <item name="Matches" chance="0.15"/>
+            <item name="Lighter" chance="0.12"/>
+            <item name="Rope" chance="0.10"/>
+            <item name="BandageDressing" chance="0.12"/>
+            <item name="Painkiller" chance="0.08"/>
+            <!-- Rare items (0.03-0.07) -->
+            <item name="Glock19" chance="0.05"/>
+            <item name="KitchenKnife" chance="0.07"/>
+            <item name="SteakKnife" chance="0.06"/>
+            <item name="FlashlightEveready" chance="0.07"/>
+            <item name="Compass" chance="0.05"/>
+            <item name="Map" chance="0.05"/>
+            <!-- Vehicle parts as cargo (scavenge loop) -->
+            <item name="SparkPlug" chance="0.06"/>
+            <item name="CarBattery" chance="0.04"/>
+            <item name="CarWheel" chance="0.05"/>
+            <item name="CarRadiator" chance="0.04"/>
+            <item name="CanisterGasoline" chance="0.06"/>
+        </cargo>
+
+    </type>
+
+    <!-- ============================================================ -->
+    <!-- CIVILIAN SEDAN — POLICE VARIANT                              -->
+    <!-- Profile: police patrol car — higher pistol/ammo, police gear -->
+    <!-- ============================================================ -->
+    <type name="CivilianSedan_Police">
+
+        <attachments chance="0.25">
+            <item name="CarWheel" chance="1.00"/>
+        </attachments>
+        <attachments chance="0.25">
+            <item name="CarWheel" chance="1.00"/>
+        </attachments>
+        <attachments chance="0.25">
+            <item name="CarWheel" chance="1.00"/>
+        </attachments>
+        <attachments chance="0.25">
+            <item name="CarWheel" chance="1.00"/>
+        </attachments>
+        <attachments chance="0.15">
+            <item name="CarBattery" chance="1.00"/>
+        </attachments>
+        <attachments chance="0.12">
+            <item name="SparkPlug" chance="1.00"/>
+        </attachments>
+        <attachments chance="0.20">
+            <item name="CarRadiator" chance="1.00"/>
+        </attachments>
+        <attachments chance="0.30">
+            <item name="HeadlightH7Bulb" chance="1.00"/>
+        </attachments>
+
+        <cargo chance="0.85">
+            <!-- Common junk -->
+            <item name="Rag" chance="0.45"/>
+            <item name="Paper" chance="0.35"/>
+            <item name="BrokenBottle" chance="0.25"/>
+            <!-- Rotten food -->
+            <item name="RottenApple" chance="0.30"/>
+            <item name="RottenTomato" chance="0.25"/>
+            <!-- Food/drink -->
+            <item name="FoodCanBakedBeans" chance="0.18"/>
+            <item name="SodaCan_Cola" chance="0.15"/>
+            <!-- Police gear — higher chance -->
+            <item name="Glock19" chance="0.18"/>
+            <item name="FX45" chance="0.12"/>
+            <item name="CZ75" chance="0.10"/>
+            <item name="Deagle" chance="0.05"/>
+            <!-- Ammo (rare — matching pistol calibres) -->
+            <item name="Ammo_45ACP" chance="0.08"/>
+            <item name="Ammo_9x19" chance="0.10"/>
+            <item name="Ammo_357" chance="0.06"/>
+            <!-- Police clothing -->
+            <item name="PoliceJacket_Blue" chance="0.15"/>
+            <item name="PolicePants_Blue" chance="0.12"/>
+            <item name="PoliceCap" chance="0.12"/>
+            <!-- Handcuffs -->
+            <item name="Handcuffs" chance="0.20"/>
+            <!-- Medical -->
+            <item name="BandageDressing" chance="0.18"/>
+            <item name="Painkiller" chance="0.12"/>
+            <!-- Lights/tools -->
+            <item name="FlashlightEveready" chance="0.18"/>
+            <item name="Battery9V" chance="0.15"/>
+            <item name="Walkie_Talkie" chance="0.10"/>
+            <!-- Melee -->
+            <item name="PoliceBaton" chance="0.12"/>
+            <!-- Vehicle parts as cargo -->
+            <item name="SparkPlug" chance="0.05"/>
+            <item name="CarBattery" chance="0.04"/>
+            <item name="CarWheel" chance="0.04"/>
+            <item name="CanisterGasoline" chance="0.06"/>
+        </cargo>
+
+    </type>
+
+    <!-- ============================================================ -->
+    <!-- OFFROAD HATCHBACK                                            -->
+    <!-- Profile: utility/adventure car — tools, outdoor gear, rope  -->
+    <!-- ============================================================ -->
+    <type name="OffroadHatchback">
+
+        <attachments chance="0.25">
+            <item name="CarWheel" chance="1.00"/>
+        </attachments>
+        <attachments chance="0.25">
+            <item name="CarWheel" chance="1.00"/>
+        </attachments>
+        <attachments chance="0.25">
+            <item name="CarWheel" chance="1.00"/>
+        </attachments>
+        <attachments chance="0.25">
+            <item name="CarWheel" chance="1.00"/>
+        </attachments>
+        <attachments chance="0.15">
+            <item name="CarBattery" chance="1.00"/>
+        </attachments>
+        <attachments chance="0.12">
+            <item name="SparkPlug" chance="1.00"/>
+        </attachments>
+        <attachments chance="0.20">
+            <item name="CarRadiator" chance="1.00"/>
+        </attachments>
+        <attachments chance="0.30">
+            <item name="HeadlightH7Bulb" chance="1.00"/>
+        </attachments>
+
+        <cargo chance="0.85">
+            <!-- Common junk -->
+            <item name="Rag" chance="0.45"/>
+            <item name="DuctTape" chance="0.40"/>
+            <item name="Rope" chance="0.35"/>
+            <item name="Paper" chance="0.30"/>
+            <!-- Rotten food -->
+            <item name="RottenApple" chance="0.35"/>
+            <item name="RottenPear" chance="0.30"/>
+            <item name="RottenBanana" chance="0.28"/>
+            <!-- Tools — higher chance for offroad profile -->
+            <item name="Wrench" chance="0.22"/>
+            <item name="Pliers" chance="0.20"/>
+            <item name="Screwdriver" chance="0.20"/>
+            <item name="LugWrench" chance="0.18"/>
+            <item name="Hammer" chance="0.18"/>
+            <item name="Hacksaw" chance="0.15"/>
+            <item name="Handsaw" chance="0.14"/>
+            <item name="TireRepairKit" chance="0.15"/>
+            <item name="EpoxyPutty" chance="0.12"/>
+            <!-- Food (uncommon) -->
+            <item name="FoodCanBakedBeans" chance="0.18"/>
+            <item name="FoodCanSardines" chance="0.15"/>
+            <item name="SodaCan_Cola" chance="0.14"/>
+            <!-- Outdoor/camping gear -->
+            <item name="Matches" chance="0.18"/>
+            <item name="Lighter" chance="0.15"/>
+            <item name="BoonieHat" chance="0.12"/>
+            <item name="HikingJacket" chance="0.12"/>
+            <item name="HuntingBag" chance="0.08"/>
+            <item name="TaloonBag" chance="0.08"/>
+            <!-- Building supplies -->
+            <item name="Nail" chance="0.18"/>
+            <item name="WoodenPlank" chance="0.15"/>
+            <!-- Medical (uncommon) -->
+            <item name="BandageDressing" chance="0.15"/>
+            <item name="Painkiller" chance="0.10"/>
+            <!-- Melee weapons (uncommon) -->
+            <item name="Machete" chance="0.10"/>
+            <item name="KitchenKnife" chance="0.09"/>
+            <item name="Crowbar" chance="0.10"/>
+            <item name="BaseballBat" chance="0.08"/>
+            <item name="PipeWrench" chance="0.09"/>
+            <!-- Rare items -->
+            <item name="Glock19" chance="0.05"/>
+            <item name="Izh18" chance="0.04"/>
+            <item name="FlashlightEveready" chance="0.10"/>
+            <item name="Compass" chance="0.07"/>
+            <item name="Map" chance="0.06"/>
+            <!-- Vehicle parts as cargo -->
+            <item name="SparkPlug" chance="0.08"/>
+            <item name="CarBattery" chance="0.06"/>
+            <item name="CarWheel" chance="0.07"/>
+            <item name="CarRadiator" chance="0.06"/>
+            <item name="CanisterGasoline" chance="0.08"/>
+        </cargo>
+
+    </type>
+
+    <!-- ============================================================ -->
+    <!-- OFFROAD HATCHBACK — POLICE VARIANT                           -->
+    <!-- Profile: rural police — pistol, police gear, radio           -->
+    <!-- ============================================================ -->
+    <type name="OffroadHatchback_Police">
+
+        <attachments chance="0.25">
+            <item name="CarWheel" chance="1.00"/>
+        </attachments>
+        <attachments chance="0.25">
+            <item name="CarWheel" chance="1.00"/>
+        </attachments>
+        <attachments chance="0.25">
+            <item name="CarWheel" chance="1.00"/>
+        </attachments>
+        <attachments chance="0.25">
+            <item name="CarWheel" chance="1.00"/>
+        </attachments>
+        <attachments chance="0.15">
+            <item name="CarBattery" chance="1.00"/>
+        </attachments>
+        <attachments chance="0.12">
+            <item name="SparkPlug" chance="1.00"/>
+        </attachments>
+        <attachments chance="0.20">
+            <item name="CarRadiator" chance="1.00"/>
+        </attachments>
+        <attachments chance="0.30">
+            <item name="HeadlightH7Bulb" chance="1.00"/>
+        </attachments>
+
+        <cargo chance="0.85">
+            <!-- Common junk -->
+            <item name="Rag" chance="0.40"/>
+            <item name="Paper" chance="0.32"/>
+            <item name="DuctTape" chance="0.30"/>
+            <!-- Rotten food -->
+            <item name="RottenApple" chance="0.30"/>
+            <item name="RottenTomato" chance="0.25"/>
+            <!-- Food -->
+            <item name="FoodCanBakedBeans" chance="0.16"/>
+            <item name="SodaCan_Cola" chance="0.14"/>
+            <!-- Police weapons — higher chance -->
+            <item name="Glock19" chance="0.18"/>
+            <item name="FX45" chance="0.10"/>
+            <item name="CZ75" chance="0.10"/>
+            <!-- Ammo -->
+            <item name="Ammo_9x19" chance="0.10"/>
+            <item name="Ammo_45ACP" chance="0.08"/>
+            <!-- Police clothing -->
+            <item name="PoliceJacket_Blue" chance="0.14"/>
+            <item name="PolicePants_Blue" chance="0.12"/>
+            <item name="PoliceCap" chance="0.12"/>
+            <!-- Tools -->
+            <item name="Wrench" chance="0.15"/>
+            <item name="LugWrench" chance="0.14"/>
+            <!-- Survival -->
+            <item name="BandageDressing" chance="0.15"/>
+            <item name="FlashlightEveready" chance="0.18"/>
+            <item name="Walkie_Talkie" chance="0.12"/>
+            <item name="Handcuffs" chance="0.18"/>
+            <item name="PoliceBaton" chance="0.12"/>
+            <item name="Rope" chance="0.14"/>
+            <!-- Vehicle parts as cargo -->
+            <item name="SparkPlug" chance="0.05"/>
+            <item name="CarBattery" chance="0.04"/>
+            <item name="CarWheel" chance="0.04"/>
+            <item name="CanisterGasoline" chance="0.06"/>
+        </cargo>
+
+    </type>
+
+    <!-- ============================================================ -->
+    <!-- HATCHBACK SEDAN                                              -->
+    <!-- Profile: compact civilian — food, clothing, small items      -->
+    <!-- ============================================================ -->
+    <type name="HatchbackSedan">
+
+        <attachments chance="0.25">
+            <item name="CarWheel" chance="1.00"/>
+        </attachments>
+        <attachments chance="0.25">
+            <item name="CarWheel" chance="1.00"/>
+        </attachments>
+        <attachments chance="0.25">
+            <item name="CarWheel" chance="1.00"/>
+        </attachments>
+        <attachments chance="0.25">
+            <item name="CarWheel" chance="1.00"/>
+        </attachments>
+        <attachments chance="0.15">
+            <item name="CarBattery" chance="1.00"/>
+        </attachments>
+        <attachments chance="0.12">
+            <item name="SparkPlug" chance="1.00"/>
+        </attachments>
+        <attachments chance="0.20">
+            <item name="CarRadiator" chance="1.00"/>
+        </attachments>
+        <attachments chance="0.30">
+            <item name="HeadlightH7Bulb" chance="1.00"/>
+        </attachments>
+
+        <cargo chance="0.80">
+            <!-- Common junk -->
+            <item name="Rag" chance="0.50"/>
+            <item name="Paper" chance="0.42"/>
+            <item name="Pen" chance="0.38"/>
+            <item name="BrokenBottle" chance="0.28"/>
+            <!-- Rotten food — very common in this car type -->
+            <item name="RottenApple" chance="0.45"/>
+            <item name="RottenPear" chance="0.40"/>
+            <item name="RottenTomato" chance="0.38"/>
+            <item name="RottenBanana" chance="0.35"/>
+            <item name="RottenKiwi" chance="0.30"/>
+            <!-- Good food (uncommon) -->
+            <item name="FoodCanBakedBeans" chance="0.18"/>
+            <item name="FoodCanPeach" chance="0.16"/>
+            <item name="FoodCanBacon" chance="0.14"/>
+            <item name="FoodCanSpaghetti" chance="0.14"/>
+            <item name="SodaCan_Cola" chance="0.16"/>
+            <item name="SodaCan_Kvass" chance="0.14"/>
+            <item name="PlasticBottle" chance="0.14"/>
+            <!-- Clothing (uncommon) -->
+            <item name="Jeans_Blue" chance="0.14"/>
+            <item name="TShirt_Black" chance="0.14"/>
+            <item name="RainCoat" chance="0.10"/>
+            <item name="BaseballCap" chance="0.12"/>
+            <item name="WorkingBoots" chance="0.10"/>
+            <!-- Survival basics -->
+            <item name="Matches" chance="0.16"/>
+            <item name="Lighter" chance="0.12"/>
+            <item name="BandageDressing" chance="0.12"/>
+            <item name="Painkiller" chance="0.08"/>
+            <!-- Rare finds -->
+            <item name="KitchenKnife" chance="0.08"/>
+            <item name="IJ70" chance="0.04"/>
+            <item name="MK2" chance="0.04"/>
+            <item name="FlashlightEveready" chance="0.08"/>
+            <item name="Compass" chance="0.05"/>
+            <item name="SmallProtectorCase" chance="0.06"/>
+            <!-- Vehicle parts as cargo -->
+            <item name="SparkPlug" chance="0.06"/>
+            <item name="CarBattery" chance="0.04"/>
+            <item name="CarWheel" chance="0.05"/>
+            <item name="CarRadiator" chance="0.04"/>
+            <item name="CanisterGasoline" chance="0.05"/>
+        </cargo>
+
+    </type>
+
+    <!-- ============================================================ -->
+    <!-- SEDAN 02                                                     -->
+    <!-- Profile: mid-size civilian — balanced mixed loot             -->
+    <!-- ============================================================ -->
+    <type name="Sedan_02">
+
+        <attachments chance="0.25">
+            <item name="CarWheel" chance="1.00"/>
+        </attachments>
+        <attachments chance="0.25">
+            <item name="CarWheel" chance="1.00"/>
+        </attachments>
+        <attachments chance="0.25">
+            <item name="CarWheel" chance="1.00"/>
+        </attachments>
+        <attachments chance="0.25">
+            <item name="CarWheel" chance="1.00"/>
+        </attachments>
+        <attachments chance="0.15">
+            <item name="CarBattery" chance="1.00"/>
+        </attachments>
+        <attachments chance="0.12">
+            <item name="SparkPlug" chance="1.00"/>
+        </attachments>
+        <attachments chance="0.20">
+            <item name="CarRadiator" chance="1.00"/>
+        </attachments>
+        <attachments chance="0.30">
+            <item name="HeadlightH7Bulb" chance="1.00"/>
+        </attachments>
+
+        <cargo chance="0.80">
+            <!-- Common junk -->
+            <item name="Rag" chance="0.48"/>
+            <item name="Paper" chance="0.38"/>
+            <item name="Pen" chance="0.34"/>
+            <item name="DuctTape" chance="0.32"/>
+            <!-- Rotten food -->
+            <item name="RottenApple" chance="0.38"/>
+            <item name="RottenPear" chance="0.32"/>
+            <item name="RottenTomato" chance="0.30"/>
+            <item name="RottenBanana" chance="0.28"/>
+            <!-- Good food -->
+            <item name="FoodCanBakedBeans" chance="0.20"/>
+            <item name="FoodCanPeach" chance="0.18"/>
+            <item name="FoodCanSardines" chance="0.16"/>
+            <item name="FoodCanTuna" chance="0.16"/>
+            <item name="SodaCan_Cola" chance="0.18"/>
+            <item name="SodaCan_Spite" chance="0.16"/>
+            <item name="PlasticBottle" chance="0.14"/>
+            <!-- Clothing -->
+            <item name="Jeans_Blue" chance="0.14"/>
+            <item name="RainCoat" chance="0.12"/>
+            <item name="M65Jacket" chance="0.10"/>
+            <item name="BoonieHat" chance="0.10"/>
+            <item name="WorkingGloves_Beige" chance="0.10"/>
+            <!-- Survival -->
+            <item name="Matches" chance="0.16"/>
+            <item name="Rope" chance="0.12"/>
+            <item name="BandageDressing" chance="0.14"/>
+            <item name="Painkiller" chance="0.10"/>
+            <item name="Tetracycline" chance="0.06"/>
+            <!-- Tools -->
+            <item name="Screwdriver" chance="0.14"/>
+            <item name="Wrench" chance="0.12"/>
+            <!-- Rare finds -->
+            <item name="Glock19" chance="0.05"/>
+            <item name="CZ75" chance="0.04"/>
+            <item name="KitchenKnife" chance="0.08"/>
+            <item name="Crowbar" chance="0.07"/>
+            <item name="FlashlightEveready" chance="0.08"/>
+            <item name="Map" chance="0.06"/>
+            <item name="Compass" chance="0.06"/>
+            <item name="DryBag_Black" chance="0.06"/>
+            <!-- Vehicle parts as cargo -->
+            <item name="SparkPlug" chance="0.07"/>
+            <item name="CarBattery" chance="0.05"/>
+            <item name="CarWheel" chance="0.06"/>
+            <item name="CarRadiator" chance="0.05"/>
+            <item name="HeadlightH7Bulb" chance="0.08"/>
+            <item name="CanisterGasoline" chance="0.06"/>
+        </cargo>
+
+    </type>
+
+    <!-- ============================================================ -->
+    <!-- SEDAN 02 — POLICE VARIANT                                    -->
+    <!-- Profile: urban police — pistols, ammo, police clothing       -->
+    <!-- ============================================================ -->
+    <type name="Sedan_02_Police">
+
+        <attachments chance="0.25">
+            <item name="CarWheel" chance="1.00"/>
+        </attachments>
+        <attachments chance="0.25">
+            <item name="CarWheel" chance="1.00"/>
+        </attachments>
+        <attachments chance="0.25">
+            <item name="CarWheel" chance="1.00"/>
+        </attachments>
+        <attachments chance="0.25">
+            <item name="CarWheel" chance="1.00"/>
+        </attachments>
+        <attachments chance="0.15">
+            <item name="CarBattery" chance="1.00"/>
+        </attachments>
+        <attachments chance="0.12">
+            <item name="SparkPlug" chance="1.00"/>
+        </attachments>
+        <attachments chance="0.20">
+            <item name="CarRadiator" chance="1.00"/>
+        </attachments>
+        <attachments chance="0.30">
+            <item name="HeadlightH7Bulb" chance="1.00"/>
+        </attachments>
+
+        <cargo chance="0.85">
+            <!-- Common junk -->
+            <item name="Rag" chance="0.40"/>
+            <item name="Paper" chance="0.35"/>
+            <item name="BrokenBottle" chance="0.22"/>
+            <!-- Rotten food -->
+            <item name="RottenApple" chance="0.28"/>
+            <item name="RottenTomato" chance="0.22"/>
+            <!-- Food -->
+            <item name="FoodCanBakedBeans" chance="0.16"/>
+            <item name="SodaCan_Cola" chance="0.14"/>
+            <!-- Police weapons — higher chance -->
+            <item name="Glock19" chance="0.20"/>
+            <item name="FX45" chance="0.14"/>
+            <item name="CZ75" chance="0.12"/>
+            <item name="IJ70" chance="0.08"/>
+            <!-- Ammo -->
+            <item name="Ammo_9x19" chance="0.12"/>
+            <item name="Ammo_45ACP" chance="0.10"/>
+            <!-- Police clothing -->
+            <item name="PoliceJacket_Blue" chance="0.16"/>
+            <item name="PolicePants_Blue" chance="0.14"/>
+            <item name="PoliceCap" chance="0.14"/>
+            <!-- Equipment -->
+            <item name="Handcuffs" chance="0.20"/>
+            <item name="PoliceBaton" chance="0.14"/>
+            <item name="FlashlightEveready" chance="0.18"/>
+            <item name="Battery9V" chance="0.15"/>
+            <item name="Walkie_Talkie" chance="0.12"/>
+            <!-- Medical -->
+            <item name="BandageDressing" chance="0.16"/>
+            <item name="Painkiller" chance="0.12"/>
+            <!-- Vehicle parts as cargo -->
+            <item name="SparkPlug" chance="0.05"/>
+            <item name="CarBattery" chance="0.04"/>
+            <item name="CarWheel" chance="0.04"/>
+            <item name="CanisterGasoline" chance="0.06"/>
+        </cargo>
+
+    </type>
+
+    <!-- ============================================================ -->
+    <!-- V3S TRUCK (Truck_01_02)                                      -->
+    <!-- Profile: utility truck — industrial tools, building supplies -->
+    <!-- Larger cargo capacity = more items, occasional rifle         -->
+    <!-- ============================================================ -->
+    <type name="Truck_01_02">
+
+        <!-- Trucks have 6 wheel slots -->
+        <attachments chance="0.25">
+            <item name="CarWheel" chance="1.00"/>
+        </attachments>
+        <attachments chance="0.25">
+            <item name="CarWheel" chance="1.00"/>
+        </attachments>
+        <attachments chance="0.25">
+            <item name="CarWheel" chance="1.00"/>
+        </attachments>
+        <attachments chance="0.25">
+            <item name="CarWheel" chance="1.00"/>
+        </attachments>
+        <attachments chance="0.25">
+            <item name="CarWheel" chance="1.00"/>
+        </attachments>
+        <attachments chance="0.25">
+            <item name="CarWheel" chance="1.00"/>
+        </attachments>
+        <attachments chance="0.15">
+            <item name="CarBattery" chance="1.00"/>
+        </attachments>
+        <attachments chance="0.12">
+            <item name="SparkPlug" chance="1.00"/>
+        </attachments>
+        <attachments chance="0.20">
+            <item name="CarRadiator" chance="1.00"/>
+        </attachments>
+        <attachments chance="0.30">
+            <item name="HeadlightH7Bulb" chance="1.00"/>
+        </attachments>
+
+        <cargo chance="0.90">
+            <!-- Common junk/industrial -->
+            <item name="Rag" chance="0.45"/>
+            <item name="DuctTape" chance="0.40"/>
+            <item name="Rope" chance="0.38"/>
+            <item name="Nail" chance="0.38"/>
+            <item name="WoodenPlank" chance="0.35"/>
+            <item name="Paper" chance="0.28"/>
+            <!-- Tools — trucks carry more tools -->
+            <item name="Wrench" chance="0.28"/>
+            <item name="Pliers" chance="0.25"/>
+            <item name="Screwdriver" chance="0.25"/>
+            <item name="LugWrench" chance="0.22"/>
+            <item name="Hammer" chance="0.22"/>
+            <item name="SledgeHammer" chance="0.18"/>
+            <item name="Hacksaw" chance="0.20"/>
+            <item name="Handsaw" chance="0.18"/>
+            <item name="Crowbar" chance="0.20"/>
+            <item name="TireRepairKit" chance="0.18"/>
+            <item name="EpoxyPutty" chance="0.15"/>
+            <!-- Rotten food -->
+            <item name="RottenApple" chance="0.30"/>
+            <item name="RottenTomato" chance="0.25"/>
+            <!-- Food/drink (uncommon) -->
+            <item name="FoodCanBakedBeans" chance="0.20"/>
+            <item name="FoodCanSardines" chance="0.18"/>
+            <item name="FoodCanBacon" chance="0.16"/>
+            <item name="SodaCan_Cola" chance="0.16"/>
+            <item name="SodaCan_Kvass" chance="0.14"/>
+            <item name="PlasticBottle" chance="0.16"/>
+            <!-- Clothing (work gear) -->
+            <item name="WorkingGloves_Beige" chance="0.18"/>
+            <item name="WorkingBoots" chance="0.15"/>
+            <item name="HikingJacket" chance="0.12"/>
+            <item name="BoonieHat" chance="0.10"/>
+            <!-- Medical (uncommon) -->
+            <item name="BandageDressing" chance="0.18"/>
+            <item name="Painkiller" chance="0.12"/>
+            <item name="EpinephrineAutoInjector" chance="0.05"/>
+            <!-- Melee (uncommon) -->
+            <item name="Machete" chance="0.12"/>
+            <item name="BaseballBat" chance="0.10"/>
+            <item name="PipeWrench" chance="0.12"/>
+            <!-- Firearms (rare) -->
+            <item name="Glock19" chance="0.05"/>
+            <item name="KA74" chance="0.03"/>
+            <item name="Mosin9130" chance="0.04"/>
+            <item name="CZ527" chance="0.03"/>
+            <item name="BK18" chance="0.05"/>
+            <!-- Ammo (rare) -->
+            <item name="Ammo_9x19" chance="0.06"/>
+            <item name="Ammo_762x54" chance="0.05"/>
+            <item name="Ammo_762x39" chance="0.05"/>
+            <!-- Misc survival -->
+            <item name="Matches" chance="0.18"/>
+            <item name="Lighter" chance="0.14"/>
+            <item name="FlashlightEveready" chance="0.12"/>
+            <item name="Map" chance="0.08"/>
+            <item name="Compass" chance="0.07"/>
+            <item name="TaloonBag" chance="0.10"/>
+            <item name="HuntingBag" chance="0.08"/>
+            <!-- Vehicle parts as cargo — trucks often have spares -->
+            <item name="SparkPlug" chance="0.10"/>
+            <item name="CarBattery" chance="0.08"/>
+            <item name="CarWheel" chance="0.10"/>
+            <item name="CarRadiator" chance="0.08"/>
+            <item name="HeadlightH7Bulb" chance="0.12"/>
+            <item name="CanisterGasoline" chance="0.12"/>
+        </cargo>
+
+    </type>
+
+
+    <!-- ============================================================ -->
+    <!-- SECTION 2: ZOMBIE / INFECTED SPAWN TYPES                     -->
+    <!-- Source: zombies/realistic-everywhere-zeds/cfgspawnabletypes.xml -->
+    <!-- Controls what loot/gear each zombie type carries             -->
+    <!-- ============================================================ -->
+
+
+    <!-- ============================================================ -->
+    <!-- URBAN CIVILIAN INFECTED                                      -->
+    <!-- Used in city/village territories and horde zones             -->
+    <!-- ============================================================ -->
+    <type name="InfectedCity">
+        <cargo chance="0.20">
+            <item name="Rag" chance="0.60"/>
+            <item name="BandageDressing" chance="0.30"/>
+            <item name="Purse" chance="0.20"/>
+            <item name="Wallet" chance="0.20"/>
+            <item name="KeysItemBase" chance="0.10"/>
+        </cargo>
+        <attachments chance="0.10">
+            <item name="CivilianBelt" chance="0.50"/>
+            <item name="Backpack_Base" chance="0.30"/>
+        </attachments>
+    </type>
+
+    <type name="InfectedCityTier1">
+        <cargo chance="0.25">
+            <item name="Rag" chance="0.70"/>
+            <item name="BandageDressing" chance="0.40"/>
+            <item name="FoodCanBakedBeans" chance="0.20"/>
+            <item name="PlasticBottle" chance="0.15"/>
+            <item name="KeysItemBase" chance="0.10"/>
+        </cargo>
+        <attachments chance="0.10">
+            <item name="CivilianBelt" chance="0.40"/>
+        </attachments>
+    </type>
+
+    <type name="InfectedVillage">
+        <cargo chance="0.20">
+            <item name="Rag" chance="0.70"/>
+            <item name="BandageDressing" chance="0.25"/>
+            <item name="FoodCanBakedBeans" chance="0.20"/>
+            <item name="FruitApple" chance="0.15"/>
+            <item name="KitchenKnife" chance="0.10"/>
+        </cargo>
+        <attachments chance="0.08">
+            <item name="WorkingGloves_Beige" chance="0.50"/>
+            <item name="CowboyHat" chance="0.30"/>
+        </attachments>
+    </type>
+
+    <type name="InfectedVillageTier1">
+        <cargo chance="0.20">
+            <item name="Rag" chance="0.70"/>
+            <item name="FoodCanBakedBeans" chance="0.25"/>
+            <item name="FruitApple" chance="0.20"/>
+            <item name="KitchenKnife" chance="0.15"/>
+        </cargo>
+        <attachments chance="0.08">
+            <item name="WorkingGloves_Beige" chance="0.40"/>
+        </attachments>
+    </type>
+
+    <!-- ============================================================ -->
+    <!-- WILDERNESS INFECTED                                          -->
+    <!-- Used for forest grid and road corridors                      -->
+    <!-- Deliberately sparse — these are lone wanderers              -->
+    <!-- ============================================================ -->
+    <type name="InfectedSolitude">
+        <!-- Wilderness wanderers carry minimal loot — they are alone, not scavenging -->
+        <cargo chance="0.10">
+            <item name="Rag" chance="0.80"/>
+            <item name="BandageDressing" chance="0.20"/>
+            <item name="Matches" chance="0.10"/>
+            <item name="CannedFoodOpenedTuna" chance="0.08"/>
+        </cargo>
+        <attachments chance="0.05">
+            <item name="HuntingVest" chance="0.30"/>
+            <item name="BaseballCap" chance="0.40"/>
+            <item name="WorkingGloves_Beige" chance="0.30"/>
+        </attachments>
+    </type>
+
+    <!-- ============================================================ -->
+    <!-- MILITARY INFECTED                                            -->
+    <!-- ============================================================ -->
+    <type name="InfectedArmy">
+        <cargo chance="0.35">
+            <item name="Rag" chance="0.60"/>
+            <item name="BandageDressing" chance="0.40"/>
+            <item name="Morphine" chance="0.15"/>
+            <item name="Epinephrine" chance="0.10"/>
+            <item name="MagazineMilitary" chance="0.20"/>
+            <item name="GrenadeHandBase" chance="0.08"/>
+        </cargo>
+        <attachments chance="0.25">
+            <item name="MilitaryBelt" chance="0.60"/>
+            <item name="MilitaryBoots_Green" chance="0.50"/>
+            <item name="SmershVest" chance="0.20"/>
+        </attachments>
+    </type>
+
+    <type name="InfectedArmyHard">
+        <!-- Elite military — higher loot potential, harder to kill -->
+        <cargo chance="0.45">
+            <item name="Rag" chance="0.60"/>
+            <item name="BandageDressing" chance="0.50"/>
+            <item name="Morphine" chance="0.25"/>
+            <item name="Epinephrine" chance="0.20"/>
+            <item name="MagazineMilitary" chance="0.35"/>
+            <item name="GrenadeHandBase" chance="0.15"/>
+            <item name="Splint" chance="0.10"/>
+        </cargo>
+        <attachments chance="0.40">
+            <item name="MilitaryBelt" chance="0.70"/>
+            <item name="TacticalShirt_Olive" chance="0.50"/>
+            <item name="BoonieHat_Olive" chance="0.40"/>
+            <item name="SmershBag" chance="0.25"/>
+        </attachments>
+    </type>
+
+    <!-- ============================================================ -->
+    <!-- INDUSTRIAL INFECTED                                          -->
+    <!-- ============================================================ -->
+    <type name="InfectedIndustrial">
+        <cargo chance="0.25">
+            <item name="Rag" chance="0.70"/>
+            <item name="BandageDressing" chance="0.30"/>
+            <item name="Screwdriver" chance="0.20"/>
+            <item name="PliersTool" chance="0.15"/>
+            <item name="WireBase" chance="0.10"/>
+        </cargo>
+        <attachments chance="0.20">
+            <item name="WorkingGloves_Grey" chance="0.60"/>
+            <item name="HardHat_Yellow" chance="0.50"/>
+            <item name="SafetyVest" chance="0.30"/>
+        </attachments>
+    </type>
+
+    <!-- ============================================================ -->
+    <!-- MEDICAL INFECTED                                             -->
+    <!-- ============================================================ -->
+    <type name="InfectedMedic">
+        <cargo chance="0.40">
+            <item name="Rag" chance="0.60"/>
+            <item name="BandageDressing" chance="0.60"/>
+            <item name="Morphine" chance="0.30"/>
+            <item name="Tetracycline" chance="0.25"/>
+            <item name="Amoxicillin" chance="0.20"/>
+            <item name="Epinephrine" chance="0.15"/>
+            <item name="BloodTestKit" chance="0.10"/>
+            <item name="IV_Saline" chance="0.10"/>
+        </cargo>
+        <attachments chance="0.15">
+            <item name="MedicalGloves" chance="0.70"/>
+        </attachments>
+    </type>
+
+    <!-- ============================================================ -->
+    <!-- POLICE INFECTED                                              -->
+    <!-- ============================================================ -->
+    <type name="InfectedPolice">
+        <cargo chance="0.35">
+            <item name="Rag" chance="0.60"/>
+            <item name="BandageDressing" chance="0.40"/>
+            <item name="HandcuffsLocked" chance="0.15"/>
+            <item name="MagazineHandgunBase" chance="0.25"/>
+        </cargo>
+        <attachments chance="0.30">
+            <item name="PoliceBelt" chance="0.60"/>
+            <item name="PoliceVest" chance="0.35"/>
+            <item name="PoliceBoots" chance="0.40"/>
+        </attachments>
+    </type>
+
+    <!-- ============================================================ -->
+    <!-- FIREFIGHTER INFECTED                                         -->
+    <!-- ============================================================ -->
+    <type name="InfectedFirefighter">
+        <cargo chance="0.20">
+            <item name="Rag" chance="0.70"/>
+            <item name="BandageDressing" chance="0.30"/>
+            <item name="Axe_Firefighter" chance="0.15"/>
+        </cargo>
+        <attachments chance="0.25">
+            <item name="FirefighterGloves" chance="0.60"/>
+            <item name="FirefighterHelmet" chance="0.50"/>
+        </attachments>
+    </type>
+
+    <!-- ============================================================ -->
+    <!-- NBC / HAZMAT INFECTED                                        -->
+    <!-- ============================================================ -->
+    <type name="InfectedNBC">
+        <!-- These carry contamination zone loot -->
+        <cargo chance="0.30">
+            <item name="Rag" chance="0.60"/>
+            <item name="BandageDressing" chance="0.35"/>
+            <item name="Tetracycline" chance="0.20"/>
+            <item name="AtropinePenInjector" chance="0.15"/>
+            <item name="GasMask" chance="0.10"/>
+        </cargo>
+        <attachments chance="0.20">
+            <item name="NBCGloves" chance="0.70"/>
+        </attachments>
+    </type>
+
+    <!-- ============================================================ -->
+    <!-- RELIGIOUS INFECTED                                           -->
+    <!-- ============================================================ -->
+    <type name="InfectedReligious">
+        <!-- Priests and church-goers — sparse personal effects, spiritual items -->
+        <cargo chance="0.15">
+            <item name="Rag" chance="0.80"/>
+            <item name="BandageDressing" chance="0.20"/>
+            <item name="Candle" chance="0.12"/>
+            <item name="Paper" chance="0.10"/>
+            <item name="Pen_Blue" chance="0.05"/>
+        </cargo>
+        <attachments chance="0.05">
+            <item name="CowlMonk" chance="0.60"/>
+        </attachments>
+    </type>
+
+    <!-- ============================================================ -->
+    <!-- PRISONER INFECTED                                            -->
+    <!-- ============================================================ -->
+    <type name="InfectedPrisoner">
+        <cargo chance="0.15">
+            <item name="Rag" chance="0.80"/>
+            <item name="BandageDressing" chance="0.25"/>
+            <item name="Rope" chance="0.10"/>
+            <item name="TattooKitBase" chance="0.08"/>
+        </cargo>
+        <attachments chance="0.05">
+            <item name="OrangeJumpsuit" chance="0.80"/>
+        </attachments>
+    </type>
+
+    <!-- ============================================================ -->
+    <!-- MUMMY INFECTED — RARE ANCIENT ENCOUNTERS                     -->
+    <!-- DELIBERATELY LOW CARGO CHANCE — rarity is the feature       -->
+    <!--                                                              -->
+    <!-- Mummies appear in the InfectedMummy territory (color=        -->
+    <!-- 4201337042) at smin=0/smax=1/dmin=1/dmax=3 so only 1-3      -->
+    <!-- spawn per zone when a player is very nearby. This ensures    -->
+    <!-- they are rare, memorable encounters rather than spam.        -->
+    <!-- ============================================================ -->
+    <type name="InfectedMummy">
+        <!-- Ancient infected — mostly decayed, occasionally carries a relic -->
+        <cargo chance="0.08">
+            <!-- Very rare finds — ancient artifacts and pre-outbreak items -->
+            <item name="GoldBar" chance="0.05"/>
+            <item name="Rag" chance="0.70"/>
+            <item name="BandageDressing" chance="0.15"/>
+            <item name="OldKey" chance="0.08"/>
+            <item name="TreasureMap" chance="0.03"/>
+        </cargo>
+        <!-- Mummies carry no standard attachments — they are ancient -->
+        <attachments chance="0.02">
+            <item name="SkullMask" chance="0.50"/>
+            <item name="BurlapSackMask" chance="0.50"/>
+        </attachments>
+    </type>
+
+    <!-- ============================================================ -->
+    <!-- InfectedPoliceHard                                           -->
+    <!-- Heavy tactical police — spawned by StaticPoliceCar and      -->
+    <!-- StaticPoliceSituation static world events. Armed with        -->
+    <!-- heavier gear than regular police (PolicemanSpecForce model). -->
+    <!-- ============================================================ -->
+    <type name="InfectedPoliceHard">
+        <cargo chance="0.50">
+            <item name="Rag" chance="0.50" />
+            <item name="BandageDressing" chance="0.50" />
+        </cargo>
+        <cargo chance="0.40">
+            <item name="HandcuffsLocked" chance="0.35" />
+            <item name="MagazineHandgunBase" chance="0.35" />
+            <item name="Mag_Pistol_15Rnd" chance="0.30" />
+        </cargo>
+        <attachments chance="0.45">
+            <item name="PoliceBelt" chance="0.70" />
+            <item name="PoliceVest" chance="0.55" />
+            <item name="PoliceBoots" chance="0.50" />
+            <item name="TacticalGloves_Black" chance="0.25" />
+        </attachments>
+    </type>
+
+
+</cfgspawnabletypes>

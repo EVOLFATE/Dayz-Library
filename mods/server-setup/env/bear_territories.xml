@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Bear Territory Definitions - Realistic Wildlife Overhaul -->
+<territory-type>
+    <!-- TERRITORY: BEAR TERRITORIES -->
+    <!-- color=4282085376 - Bears inhabit river areas, dense forests with food sources, ranging from south forests to far north -->
+    <territory color="4282085376">
+
+        <!-- === SOUTH FOREST AND RIVER === -->
+        <!-- South west - river forest near Kamenka, bears near water -->
+        <zone name="Water" smin="0" smax="0" dmin="0" dmax="0" x="1200.00" z="3800.00" r="80"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="1300.00" z="3900.00" r="230"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="1050.00" z="3800.00" r="230"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="1200.00" z="4150.00" r="290"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="1550.00" z="3650.00" r="290"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="950.00" z="4250.00" r="290"/>
+
+        <!-- South - Pavlovo river valley bear -->
+        <zone name="Water" smin="0" smax="0" dmin="0" dmax="0" x="3800.00" z="4000.00" r="80"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="3900.00" z="4100.00" r="230"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="3650.00" z="4000.00" r="230"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="3800.00" z="4350.00" r="290"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="4150.00" z="3850.00" r="290"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="3550.00" z="4450.00" r="290"/>
+
+        <!-- South central - dense forest near Gorka -->
+        <zone name="Water" smin="0" smax="0" dmin="0" dmax="0" x="6500.00" z="4500.00" r="80"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="6600.00" z="4600.00" r="230"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="6350.00" z="4500.00" r="230"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="6500.00" z="4850.00" r="290"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="6850.00" z="4350.00" r="290"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="6250.00" z="4950.00" r="290"/>
+
+        <!-- South east - forested hills near Berezino -->
+        <zone name="Water" smin="0" smax="0" dmin="0" dmax="0" x="9500.00" z="4800.00" r="80"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="9600.00" z="4900.00" r="230"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="9350.00" z="4800.00" r="230"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="9500.00" z="5150.00" r="290"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="9850.00" z="4650.00" r="290"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="9250.00" z="5250.00" r="290"/>
+
+        <!-- South far east - forest with food sources -->
+        <zone name="Water" smin="0" smax="0" dmin="0" dmax="0" x="12500.00" z="5500.00" r="80"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="12600.00" z="5600.00" r="230"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="12350.00" z="5500.00" r="230"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="12500.00" z="5850.00" r="290"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="12850.00" z="5350.00" r="290"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="12250.00" z="5950.00" r="290"/>
+
+        <!-- === CENTRAL FOREST === -->
+        <!-- Central west - Zelenogorsk river forest bear -->
+        <zone name="Water" smin="0" smax="0" dmin="0" dmax="0" x="2500.00" z="7000.00" r="80"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="2600.00" z="7100.00" r="230"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="2350.00" z="7000.00" r="230"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="2500.00" z="7350.00" r="290"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="2850.00" z="6850.00" r="290"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="2250.00" z="7450.00" r="290"/>
+
+        <!-- Central - Novy Sobor forest bear territory -->
+        <zone name="Water" smin="0" smax="0" dmin="0" dmax="0" x="5000.00" z="7800.00" r="80"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="5100.00" z="7900.00" r="230"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="4850.00" z="7800.00" r="230"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="5000.00" z="8150.00" r="290"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="5350.00" z="7650.00" r="290"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="4750.00" z="8250.00" r="290"/>
+
+        <!-- Central east - Kabanino forest bear -->
+        <zone name="Water" smin="0" smax="0" dmin="0" dmax="0" x="7800.00" z="7500.00" r="80"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="7900.00" z="7600.00" r="230"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="7650.00" z="7500.00" r="230"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="7800.00" z="7850.00" r="290"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="8150.00" z="7350.00" r="290"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="7550.00" z="7950.00" r="290"/>
+
+        <!-- Central far east - eastern forest bear -->
+        <zone name="Water" smin="0" smax="0" dmin="0" dmax="0" x="11000.00" z="7500.00" r="80"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="11100.00" z="7600.00" r="230"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="10850.00" z="7500.00" r="230"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="11000.00" z="7850.00" r="290"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="11350.00" z="7350.00" r="290"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="10750.00" z="7950.00" r="290"/>
+
+        <!-- === NORTH FOREST AND RIVER === -->
+        <!-- North central west - Vybor river valley bear -->
+        <zone name="Water" smin="0" smax="0" dmin="0" dmax="0" x="1800.00" z="9500.00" r="80"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="1900.00" z="9600.00" r="230"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="1650.00" z="9500.00" r="230"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="1800.00" z="9850.00" r="290"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="2150.00" z="9350.00" r="290"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="1550.00" z="9950.00" r="290"/>
+
+        <!-- North central - Lopatino deep forest bear -->
+        <zone name="Water" smin="0" smax="0" dmin="0" dmax="0" x="4200.00" z="10000.00" r="80"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="4300.00" z="10100.00" r="230"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="4050.00" z="10000.00" r="230"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="4200.00" z="10350.00" r="290"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="4550.00" z="9850.00" r="290"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="3950.00" z="10450.00" r="290"/>
+
+        <!-- North central - forest bear territory -->
+        <zone name="Water" smin="0" smax="0" dmin="0" dmax="0" x="7000.00" z="10500.00" r="80"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="7100.00" z="10600.00" r="230"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="6850.00" z="10500.00" r="230"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="7000.00" z="10850.00" r="290"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="7350.00" z="10350.00" r="290"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="6750.00" z="10950.00" r="290"/>
+
+        <!-- North central east - Tisy area bear -->
+        <zone name="Water" smin="0" smax="0" dmin="0" dmax="0" x="10000.00" z="10000.00" r="80"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="10100.00" z="10100.00" r="230"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="9850.00" z="10000.00" r="230"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="10000.00" z="10350.00" r="290"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="10350.00" z="9850.00" r="290"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="9750.00" z="10450.00" r="290"/>
+
+        <!-- North east - far east forest bear -->
+        <zone name="Water" smin="0" smax="0" dmin="0" dmax="0" x="13000.00" z="10500.00" r="80"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="13100.00" z="10600.00" r="230"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="12850.00" z="10500.00" r="230"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="13000.00" z="10850.00" r="290"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="13350.00" z="10350.00" r="290"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="12750.00" z="10950.00" r="290"/>
+
+        <!-- === FAR NORTH === -->
+        <!-- Far north west - Severograd wilderness bear -->
+        <zone name="Water" smin="0" smax="0" dmin="0" dmax="0" x="2500.00" z="12500.00" r="80"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="2600.00" z="12600.00" r="230"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="2350.00" z="12500.00" r="230"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="2500.00" z="12850.00" r="290"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="2850.00" z="12350.00" r="290"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="2250.00" z="12950.00" r="290"/>
+
+        <!-- Far north central - large northern bear territory -->
+        <zone name="Water" smin="0" smax="0" dmin="0" dmax="0" x="6500.00" z="13000.00" r="80"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="6600.00" z="13100.00" r="230"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="6350.00" z="13000.00" r="230"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="6500.00" z="13350.00" r="290"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="6850.00" z="12850.00" r="290"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="6250.00" z="13450.00" r="290"/>
+
+        <!-- Far north east - wilderness bear near Kamensk -->
+        <zone name="Water" smin="0" smax="0" dmin="0" dmax="0" x="10500.00" z="13500.00" r="80"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="10600.00" z="13600.00" r="230"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="10350.00" z="13500.00" r="230"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="10500.00" z="13850.00" r="290"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="10850.00" z="13350.00" r="290"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="10250.00" z="13950.00" r="290"/>
+
+    </territory>
+</territory-type>
