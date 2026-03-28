@@ -13,24 +13,31 @@ mods/
 │       ├── zombie_territories.xml   # Full replacement territory file
 │       ├── cfgspawnabletypes.xml    # Companion spawnable types config
 │       └── README.md                # Installation and tuning guide
-└── animals/                    # Animal spawn and behavior mods
-    └── realistic-wildlife-overhaul/ # Full replacement wildlife mod
-        ├── events.xml               # All animal events (counts, pack sizes)
-        ├── cfgeventspawns.xml       # Links events to territory files
-        ├── README.md                # Installation and tuning guide
-        └── env/                     # Territory files (one per species)
-            ├── hare_territories.xml
-            ├── roe_deer_territories.xml
-            ├── red_deer_territories.xml
-            ├── wild_boar_territories.xml
-            ├── hen_territories.xml
-            ├── cattle_territories.xml
-            ├── sheep_goat_territories.xml
-            ├── pig_territories.xml
-            ├── domestic_animals_territories.xml
-            ├── fox_territories.xml
-            ├── wolf_territories.xml
-            └── bear_territories.xml
+├── animals/                    # Animal spawn and behavior mods
+│   └── realistic-wildlife-overhaul/ # Full replacement wildlife mod
+│       ├── events.xml               # All animal events (counts, pack sizes)
+│       ├── cfgeventspawns.xml       # Links events to territory files
+│       ├── README.md                # Installation and tuning guide
+│       └── env/                     # Territory files (one per species)
+│           ├── hare_territories.xml
+│           ├── roe_deer_territories.xml
+│           ├── red_deer_territories.xml
+│           ├── wild_boar_territories.xml
+│           ├── hen_territories.xml
+│           ├── cattle_territories.xml
+│           ├── sheep_goat_territories.xml
+│           ├── pig_territories.xml
+│           ├── domestic_animals_territories.xml
+│           ├── fox_territories.xml
+│           ├── wolf_territories.xml
+│           └── bear_territories.xml
+└── vehicles/                   # Vehicle spawn and loot mods
+    └── realistic-vehicle-overhaul/ # Full replacement vehicle mod
+        ├── types.xml                # Spawn counts, lifetimes, zone usage
+        ├── cfgspawnabletypes.xml    # Part attachment chances and cargo pools
+        ├── events.xml               # Named events for fixed-location spawns
+        ├── cfgeventspawns.xml       # Map coordinates for each event
+        └── README.md                # Installation and tuning guide
 ```
 
 ---
@@ -48,6 +55,12 @@ mods/
 | Mod | Description | Files |
 |---|---|---|
 | [realistic-wildlife-overhaul](animals/realistic-wildlife-overhaul/) | Full replacement wildlife mod for Chernarus+. Prey animals everywhere, wolves across the entire map (not just far north), bears near rivers and farms, foxes hunting hens. Designed for hunting-as-survival servers. | 14 |
+
+### Vehicles
+
+| Mod | Description | Files |
+|---|---|---|
+| [realistic-vehicle-overhaul](vehicles/realistic-vehicle-overhaul/) | Full replacement vehicle mod for Chernarus+. High spawn counts for all vanilla vehicle types but very low part-attachment chances — most cars are broken wrecks. Every vehicle carries randomised cargo (food, weapons, tools, clothing, spare parts) so checking each one is always worthwhile. | 4 |
 
 ---
 
