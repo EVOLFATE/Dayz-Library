@@ -1,0 +1,1889 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🎮 DayZ Mod Builder</title>
+  <style>
+    :root {
+      --bg-primary: #1a1a2e;
+      --bg-secondary: #16213e;
+      --bg-card: #0f3460;
+      --bg-input: #111128;
+      --accent: #00ff88;
+      --accent-secondary: #00cc6a;
+      --text-primary: #e0e0e0;
+      --text-secondary: #8a8aaa;
+      --border: #2a2a4e;
+      --warning-bg: rgba(255,170,0,0.1);
+      --warning: #ffaa00;
+      --danger: #ff4d4d;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      min-height: 100vh;
+      font-size: 15px;
+    }
+    /* ── Header ── */
+    .header {
+      background: linear-gradient(135deg, #0f3460 0%, #16213e 100%);
+      border-bottom: 2px solid var(--accent);
+      padding: 22px 24px 18px;
+      text-align: center;
+    }
+    .header h1 { font-size: 2rem; color: var(--accent); text-shadow: 0 0 24px rgba(0,255,136,.45); letter-spacing: .5px; }
+    .header p  { color: var(--text-secondary); margin-top: 6px; font-size: .9rem; }
+    /* ── Presets bar ── */
+    .presets-bar {
+      background: var(--bg-secondary);
+      padding: 10px 20px;
+      display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+      border-bottom: 1px solid var(--border);
+    }
+    .presets-bar label { color: var(--text-secondary); font-size: .82rem; white-space: nowrap; }
+    /* ── Tabs nav ── */
+    .tabs-nav {
+      background: var(--bg-secondary);
+      display: flex; overflow-x: auto;
+      border-bottom: 2px solid var(--border);
+      scrollbar-width: thin;
+    }
+    .tab-btn {
+      background: none; border: none; color: var(--text-secondary);
+      padding: 13px 18px; cursor: pointer; font-size: .82rem;
+      white-space: nowrap; border-bottom: 3px solid transparent;
+      transition: all .2s; flex-shrink: 0;
+    }
+    .tab-btn:hover  { color: var(--text-primary); background: rgba(255,255,255,.04); }
+    .tab-btn.active { color: var(--accent); border-bottom-color: var(--accent); background: rgba(0,255,136,.05); }
+    /* ── Tab panes ── */
+    .tab-pane         { display: none; }
+    .tab-pane.active  { display: block; }
+    .tab-content { padding: 20px; max-width: 1200px; margin: 0 auto; }
+    /* ── Generic cards ── */
+    .card {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: 10px; padding: 16px; margin-bottom: 12px;
+    }
+    .card-title { font-size: 1rem; font-weight: 600; color: var(--accent); margin-bottom: 12px; }
+    .cards-grid { display: grid; grid-template-columns: repeat(auto-fill,minmax(270px,1fr)); gap: 12px; }
+    /* ── Section header ── */
+    .section-header {
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 8px;
+      margin-bottom: 16px; padding-bottom: 10px; border-bottom: 1px solid var(--border);
+    }
+    .section-title { font-size: 1.1rem; font-weight: 600; }
+    /* ── Badges ── */
+    .badge {
+      font-size: .7rem; padding: 3px 9px; border-radius: 12px;
+      background: rgba(0,255,136,.12); color: var(--accent);
+      border: 1px solid rgba(0,255,136,.28);
+    }
+    .badge-warn { background: rgba(255,170,0,.12); color: var(--warning); border-color: rgba(255,170,0,.3); }
+    /* ── Inputs ── */
+    select, input[type="number"], input[type="text"] {
+      background: var(--bg-card); color: var(--text-primary);
+      border: 1px solid var(--border); border-radius: 6px;
+      padding: 7px 10px; font-size: .88rem;
+    }
+    select { cursor: pointer; }
+    select:focus, input[type="number"]:focus, input[type="text"]:focus {
+      outline: none; border-color: var(--accent);
+    }
+    input[type="checkbox"] { accent-color: var(--accent); width: 15px; height: 15px; cursor: pointer; flex-shrink: 0; }
+    input[type="range"]    { accent-color: var(--accent); cursor: pointer; width: 100%; }
+    /* ── Controls row ── */
+    .global-controls {
+      background: var(--bg-secondary); border: 1px solid var(--border);
+      border-radius: 10px; padding: 14px 16px; margin-bottom: 14px;
+    }
+    .controls-row { display: flex; gap: 16px; flex-wrap: wrap; }
+    .control-group { flex: 1; min-width: 180px; }
+    .control-group label { display: block; font-size: .78rem; color: var(--text-secondary); margin-bottom: 5px; }
+    .control-group select,
+    .control-group input[type="number"],
+    .control-group input[type="text"] { width: 100%; }
+    /* ── Range labels ── */
+    .range-labels {
+      display: flex; justify-content: space-between;
+      font-size: .68rem; color: var(--text-secondary); margin-top: 2px;
+    }
+    .slider-row { display: flex; align-items: center; gap: 8px; }
+    .slider-val { color: var(--accent); font-weight: 600; font-size: .88rem; min-width: 34px; text-align: right; }
+    /* ── Checkbox group ── */
+    .checkbox-group { display: flex; align-items: center; gap: 7px; margin-top: 7px; }
+    .checkbox-group label { font-size: .83rem; cursor: pointer; }
+    /* ── Warning ── */
+    .warn-box {
+      background: var(--warning-bg); border: 1px solid var(--warning);
+      border-radius: 6px; padding: 7px 11px; font-size: .78rem;
+      color: var(--warning); margin-top: 6px;
+    }
+    /* ── Animal card ── */
+    .animal-card {
+      background: var(--bg-secondary); border: 1px solid var(--border);
+      border-radius: 10px; padding: 14px; transition: border-color .2s;
+    }
+    .animal-card:hover { border-color: rgba(0,255,136,.35); }
+    .animal-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 9px; }
+    .animal-name  { font-size: .96rem; font-weight: 600; }
+    .vanilla-ref  {
+      font-size: .72rem; color: var(--accent);
+      background: rgba(0,255,136,.08); padding: 2px 7px; border-radius: 4px;
+    }
+    .nominal-display {
+      display: flex; justify-content: space-between; align-items: center;
+      margin-top: 8px; padding: 5px 9px;
+      background: rgba(0,255,136,.05); border-radius: 6px; font-size: .78rem;
+    }
+    .nominal-display .nv { color: var(--accent); font-weight: 600; }
+    /* ── Category toggles ── */
+    .cat-toggles { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 6px; }
+    .toggle-btn {
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: 20px; padding: 4px 13px;
+      font-size: .78rem; cursor: pointer; color: var(--text-secondary); transition: all .2s;
+    }
+    .toggle-btn.active { background: rgba(0,255,136,.14); border-color: var(--accent); color: var(--accent); }
+    /* ── Weapons list ── */
+    .weapons-list { display: grid; grid-template-columns: repeat(auto-fill,minmax(240px,1fr)); gap: 8px; margin-bottom: 8px; }
+    .weapon-item {
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: 8px; padding: 9px 11px;
+      display: flex; align-items: center; justify-content: space-between; gap: 8px;
+      transition: border-color .15s;
+    }
+    .weapon-item:hover  { border-color: rgba(0,255,136,.3); }
+    .weapon-item.hidden { display: none; }
+    .weapon-name { font-size: .83rem; font-weight: 500; }
+    .weapon-meta { font-size: .68rem; color: var(--text-secondary); margin-top: 2px; }
+    .weapon-nominal { font-size: .78rem; color: var(--accent); white-space: nowrap; font-weight: 600; }
+    /* ── Ammo grid ── */
+    .ammo-grid { display: grid; grid-template-columns: repeat(auto-fill,minmax(195px,1fr)); gap: 8px; margin-bottom: 8px; }
+    .ammo-item {
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: 8px; padding: 9px 11px;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .ammo-info { flex: 1; }
+    .ammo-name    { font-size: .82rem; font-weight: 500; }
+    .ammo-nominal { font-size: .72rem; color: var(--accent); margin-top: 2px; }
+    /* ── Subsection (tab 3) ── */
+    .subsection { margin-bottom: 22px; }
+    .subsection-header {
+      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px;
+      padding: 9px 13px; background: var(--bg-secondary);
+      border: 1px solid var(--border); border-radius: 8px; margin-bottom: 10px;
+    }
+    .subsection-title { font-size: .92rem; font-weight: 600; }
+    .items-grid { display: grid; grid-template-columns: repeat(auto-fill,minmax(235px,1fr)); gap: 8px; }
+    .item-card {
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: 8px; padding: 9px 11px;
+      display: flex; align-items: center; justify-content: space-between; gap: 8px;
+    }
+    .item-name { font-size: .83rem; font-weight: 500; }
+    .item-meta { font-size: .7rem; color: var(--text-secondary); margin-top: 2px; }
+    /* ── Events builder ── */
+    .event-section {
+      background: var(--bg-secondary); border: 1px solid var(--border);
+      border-radius: 10px; padding: 15px; margin-bottom: 14px;
+    }
+    .coords-list { display: grid; grid-template-columns: repeat(auto-fill,minmax(340px,1fr)); gap: 8px; margin-top: 10px; }
+    .coord-row {
+      display: grid; grid-template-columns: 22px 1fr 90px 90px;
+      gap: 7px; align-items: center;
+      padding: 7px 9px; background: var(--bg-card);
+      border-radius: 6px; border: 1px solid var(--border);
+    }
+    .coord-row input { padding: 5px 7px; font-size: .78rem; }
+    .coord-num { color: var(--accent); font-size: .78rem; font-weight: 600; text-align: center; }
+    /* ── Zombie zones ── */
+    .zone-grid { display: grid; grid-template-columns: repeat(auto-fill,minmax(270px,1fr)); gap: 12px; }
+    .zone-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 10px; padding: 14px; }
+    .zone-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+    .zone-name   { font-weight: 600; font-size: .88rem; }
+    .zone-vals   { font-size: .75rem; color: var(--accent); font-weight: 600; }
+    /* ── Spawn hub ── */
+    .hub-config {
+      background: var(--bg-secondary); border: 1px solid var(--border);
+      border-radius: 10px; padding: 15px; margin-bottom: 14px;
+    }
+    .dest-rows { display: flex; flex-direction: column; gap: 7px; margin-top: 10px; }
+    .dest-row {
+      display: grid; grid-template-columns: 22px 1fr 80px 80px 1fr 28px;
+      gap: 7px; align-items: center;
+      padding: 7px 9px; background: var(--bg-card);
+      border-radius: 6px; border: 1px solid var(--border);
+    }
+    .dest-row input { padding: 5px 7px; font-size: .78rem; }
+    /* ── XML panel ── */
+    .xml-panel {
+      background: var(--bg-secondary); border: 1px solid var(--border);
+      border-radius: 10px; margin-top: 18px; overflow: hidden;
+    }
+    .xml-panel-header {
+      background: var(--bg-card); padding: 10px 14px;
+      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px;
+    }
+    .xml-panel-title { font-size: .88rem; color: var(--accent); font-weight: 600; }
+    .xml-panel-actions { display: flex; gap: 7px; align-items: center; flex-wrap: wrap; }
+    .file-target {
+      font-size: .72rem; color: var(--text-secondary);
+      padding: 3px 9px; background: rgba(0,0,0,.3); border-radius: 4px;
+    }
+    pre {
+      padding: 14px 16px; overflow-x: auto; overflow-y: auto;
+      font-family: 'Courier New', Consolas, monospace;
+      font-size: .76rem; line-height: 1.65; color: #b0c4de;
+      max-height: 420px; background: #090914;
+      white-space: pre;
+    }
+    /* ── Buttons ── */
+    .btn {
+      background: var(--bg-card); color: var(--text-primary);
+      border: 1px solid var(--border); border-radius: 6px;
+      padding: 6px 13px; cursor: pointer; font-size: .82rem;
+      transition: all .18s; white-space: nowrap;
+    }
+    .btn:hover    { border-color: var(--accent); color: var(--accent); }
+    .btn-primary  { background: var(--accent); color: #000; border-color: var(--accent); font-weight: 600; }
+    .btn-primary:hover { background: var(--accent-secondary); border-color: var(--accent-secondary); color: #000; }
+    .btn:disabled { opacity: .4; cursor: not-allowed; }
+    .btn-sm { padding: 4px 8px; font-size: .74rem; }
+    /* ── Divider ── */
+    .divider { height: 1px; background: var(--border); margin: 18px 0; }
+    /* ── Summary panel ── */
+    .summary-panel {
+      background: var(--bg-secondary); border: 1px solid var(--border);
+      border-radius: 10px; margin: 18px 20px 24px; overflow: hidden;
+    }
+    .summary-header {
+      background: var(--bg-card); padding: 11px 15px;
+      display: flex; align-items: center; justify-content: space-between;
+      cursor: pointer; user-select: none;
+    }
+    .summary-header:hover { background: rgba(0,255,136,.05); }
+    .summary-header span  { font-size: .88rem; }
+    .summary-content { padding: 14px 16px; display: none; }
+    .summary-content.open { display: block; }
+    .summary-grid { display: grid; grid-template-columns: repeat(auto-fill,minmax(240px,1fr)); gap: 14px; }
+    .summary-section h4 { font-size: .82rem; color: var(--accent); margin-bottom: 7px; }
+    .summary-section li { font-size: .78rem; color: var(--text-secondary); padding: 1px 0; list-style: none; }
+    /* ── Toast ── */
+    .toast {
+      position: fixed; bottom: 28px; right: 28px;
+      background: var(--accent); color: #000;
+      padding: 11px 18px; border-radius: 8px;
+      font-weight: 600; font-size: .88rem;
+      opacity: 0; transform: translateY(14px);
+      transition: all .3s; z-index: 9999; pointer-events: none;
+    }
+    .toast.show { opacity: 1; transform: translateY(0); }
+    /* ── Inline helpers ── */
+    .inline-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 10px; }
+    .inline-row label { font-size: .84rem; color: var(--text-secondary); }
+    h3 { font-size: .98rem; margin-bottom: 10px; color: var(--text-primary); }
+    /* ── Scrollbar ── */
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: var(--bg-primary); }
+    ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+    /* ── Responsive ── */
+    @media (max-width: 640px) {
+      .header h1 { font-size: 1.45rem; }
+      .tab-btn   { padding: 11px 11px; font-size: .75rem; }
+      .coord-row { grid-template-columns: 18px 1fr 70px 70px; }
+      .dest-row  { grid-template-columns: 18px 1fr 65px 65px 1fr 24px; }
+      .controls-row { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     HEADER
+════════════════════════════════════════════════════════════════ -->
+<div class="header">
+  <h1>🎮 DayZ Mod Builder</h1>
+  <p>Build server mods with zero coding — just click and generate</p>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     PRESETS BAR
+════════════════════════════════════════════════════════════════ -->
+<div class="presets-bar">
+  <label>⚡ Quick Preset:</label>
+  <select id="presetSelect" onchange="applyPreset(this.value)" style="min-width:220px;">
+    <option value="custom">⚪ Custom (default)</option>
+    <option value="vanilla">🟢 Vanilla — all 1x</option>
+    <option value="casual">🔵 Casual PvE</option>
+    <option value="hardcore">🟡 Survival Hardcore</option>
+    <option value="pvp">🔴 PvP Loot Fest</option>
+    <option value="hunter">🟣 Hunter's Paradise</option>
+  </select>
+  <span id="presetDesc" style="font-size:.78rem;color:var(--text-secondary);font-style:italic;"></span>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     TAB NAVIGATION
+════════════════════════════════════════════════════════════════ -->
+<div class="tabs-nav">
+  <button class="tab-btn active" onclick="switchTab(0,this)">🐺 Animal Spawns</button>
+  <button class="tab-btn"        onclick="switchTab(1,this)">🔫 Weapons &amp; Ammo</button>
+  <button class="tab-btn"        onclick="switchTab(2,this)">🏕️ Hunting &amp; Survival</button>
+  <button class="tab-btn"        onclick="switchTab(3,this)">🚁 Events Builder</button>
+  <button class="tab-btn"        onclick="switchTab(4,this)">🧟 Zombie Density</button>
+  <button class="tab-btn"        onclick="switchTab(5,this)">🏠 Spawn Hub</button>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     TAB 1 — ANIMAL SPAWNS
+════════════════════════════════════════════════════════════════ -->
+<div class="tab-pane active" id="tab-0">
+  <div class="tab-content">
+    <div class="section-header">
+      <span class="section-title">🐺 Animal Spawn Configuration</span>
+      <span class="badge">✅ Console Compatible</span>
+    </div>
+    <div class="cards-grid" id="animalCards"></div>
+    <div class="xml-panel">
+      <div class="xml-panel-header">
+        <span class="xml-panel-title">📄 Generated XML — events.xml</span>
+        <div class="xml-panel-actions">
+          <span class="file-target">📁 /mpmissions/…/db/events.xml</span>
+          <span class="badge">✅ Console Compatible</span>
+          <button class="btn" onclick="copyXml('xml-tab0')">📋 Copy XML</button>
+          <button class="btn btn-primary" onclick="downloadXml('xml-tab0','events.xml')">💾 Download events.xml</button>
+        </div>
+      </div>
+      <pre id="xml-tab0"><!-- Configure animals above to generate XML --></pre>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     TAB 2 — WEAPONS & AMMO
+════════════════════════════════════════════════════════════════ -->
+<div class="tab-pane" id="tab-1">
+  <div class="tab-content">
+    <div class="section-header">
+      <span class="section-title">🔫 Weapons Configuration</span>
+      <span class="badge">✅ Console Compatible</span>
+    </div>
+    <div class="global-controls">
+      <div class="controls-row">
+        <div class="control-group">
+          <label>Global Weapon Multiplier</label>
+          <select id="weaponMultiplier" onchange="updateWeaponsXml()">
+            <option value="0.5">0.5x — Half vanilla</option>
+            <option value="1" selected>1x — Vanilla</option>
+            <option value="1.5">1.5x</option>
+            <option value="2">2x — Double</option>
+            <option value="3">3x — Triple</option>
+          </select>
+        </div>
+        <div class="control-group">
+          <label>Show / hide categories</label>
+          <div class="cat-toggles">
+            <button class="toggle-btn active" data-cat="assault" onclick="toggleCat('assault',this)">Assault Rifles</button>
+            <button class="toggle-btn active" data-cat="sniper"  onclick="toggleCat('sniper',this)">Sniper Rifles</button>
+            <button class="toggle-btn active" data-cat="shotgun" onclick="toggleCat('shotgun',this)">Shotguns</button>
+            <button class="toggle-btn active" data-cat="pistol"  onclick="toggleCat('pistol',this)">Pistols</button>
+            <button class="toggle-btn active" data-cat="smg"     onclick="toggleCat('smg',this)">SMGs</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="weaponsList" class="weapons-list"></div>
+    <div class="divider"></div>
+
+    <div class="section-header" style="margin-top:4px;">
+      <span class="section-title">🔶 Ammunition</span>
+    </div>
+    <div class="global-controls">
+      <div class="controls-row">
+        <div class="control-group">
+          <label>Ammo Multiplier: <span id="ammoMultVal" style="color:var(--accent);font-weight:600;">1x</span></label>
+          <div class="slider-row">
+            <input type="range" id="ammoMultiplier" min="1" max="5" step="0.5" value="1"
+              oninput="document.getElementById('ammoMultVal').textContent=this.value+'x';updateWeaponsXml()">
+          </div>
+          <div class="range-labels"><span>1x</span><span>2x</span><span>3x</span><span>4x</span><span>5x</span></div>
+        </div>
+        <div class="control-group">
+          <label>Magazine Multiplier: <span id="magMultVal" style="color:var(--accent);font-weight:600;">1x</span></label>
+          <div class="slider-row">
+            <input type="range" id="magMultiplier" min="1" max="5" step="0.5" value="1"
+              oninput="document.getElementById('magMultVal').textContent=this.value+'x';updateWeaponsXml()">
+          </div>
+          <div class="range-labels"><span>1x</span><span>2x</span><span>3x</span><span>4x</span><span>5x</span></div>
+        </div>
+      </div>
+    </div>
+    <div id="ammoList" class="ammo-grid"></div>
+    <div class="divider"></div>
+    <h3>📦 Magazines</h3>
+    <div id="magList" class="ammo-grid"></div>
+    <div class="xml-panel">
+      <div class="xml-panel-header">
+        <span class="xml-panel-title">📄 Generated XML — types.xml</span>
+        <div class="xml-panel-actions">
+          <span class="file-target">📁 /mpmissions/…/db/types.xml</span>
+          <span class="badge">✅ Console Compatible</span>
+          <button class="btn" onclick="copyXml('xml-tab1')">📋 Copy XML</button>
+          <button class="btn btn-primary" onclick="downloadXml('xml-tab1','types.xml')">💾 Download types.xml</button>
+        </div>
+      </div>
+      <pre id="xml-tab1"><!-- Configure weapons and ammo above --></pre>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     TAB 3 — HUNTING & SURVIVAL
+════════════════════════════════════════════════════════════════ -->
+<div class="tab-pane" id="tab-2">
+  <div class="tab-content">
+    <div class="section-header">
+      <span class="section-title">🏕️ Hunting &amp; Survival Items</span>
+      <span class="badge">✅ Console Compatible</span>
+    </div>
+    <!-- Hunting Gear -->
+    <div class="subsection">
+      <div class="subsection-header">
+        <span class="subsection-title">🎯 Hunting Gear</span>
+        <div style="display:flex;align-items:center;gap:10px;">
+          <label style="font-size:.78rem;color:var(--text-secondary);">Multiplier:
+            <span id="huntMultVal" style="color:var(--accent);font-weight:600;">1x</span>
+          </label>
+          <input type="range" id="huntMultiplier" min="1" max="4" step="0.5" value="1" style="width:110px;"
+            oninput="document.getElementById('huntMultVal').textContent=this.value+'x';updateHuntingXml()">
+        </div>
+      </div>
+      <div class="items-grid" id="huntingItems"></div>
+    </div>
+    <!-- Survival / Trapping -->
+    <div class="subsection">
+      <div class="subsection-header">
+        <span class="subsection-title">🪤 Survival &amp; Trapping</span>
+        <div style="display:flex;align-items:center;gap:10px;">
+          <label style="font-size:.78rem;color:var(--text-secondary);">Multiplier:
+            <span id="trapMultVal" style="color:var(--accent);font-weight:600;">1x</span>
+          </label>
+          <input type="range" id="trapMultiplier" min="1" max="4" step="0.5" value="1" style="width:110px;"
+            oninput="document.getElementById('trapMultVal').textContent=this.value+'x';updateHuntingXml()">
+        </div>
+      </div>
+      <div class="items-grid" id="trappingItems"></div>
+    </div>
+    <!-- Medical -->
+    <div class="subsection">
+      <div class="subsection-header">
+        <span class="subsection-title">💊 Medical Supplies</span>
+        <div style="display:flex;align-items:center;gap:10px;">
+          <label style="font-size:.78rem;color:var(--text-secondary);">Multiplier:
+            <span id="medMultVal" style="color:var(--accent);font-weight:600;">1x</span>
+          </label>
+          <input type="range" id="medMultiplier" min="1" max="4" step="0.5" value="1" style="width:110px;"
+            oninput="document.getElementById('medMultVal').textContent=this.value+'x';updateHuntingXml()">
+        </div>
+      </div>
+      <div class="items-grid" id="medicalItems"></div>
+    </div>
+    <div class="xml-panel">
+      <div class="xml-panel-header">
+        <span class="xml-panel-title">📄 Generated XML — types.xml</span>
+        <div class="xml-panel-actions">
+          <span class="file-target">📁 /mpmissions/…/db/types.xml</span>
+          <span class="badge">✅ Console Compatible</span>
+          <button class="btn" onclick="copyXml('xml-tab2')">📋 Copy XML</button>
+          <button class="btn btn-primary" onclick="downloadXml('xml-tab2','types.xml')">💾 Download types.xml</button>
+        </div>
+      </div>
+      <pre id="xml-tab2"><!-- Configure items above --></pre>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     TAB 4 — EVENTS BUILDER
+════════════════════════════════════════════════════════════════ -->
+<div class="tab-pane" id="tab-3">
+  <div class="tab-content">
+    <div class="section-header">
+      <span class="section-title">🚁 Events Configuration Builder</span>
+      <span class="badge badge-warn">⚠️ PC Only</span>
+    </div>
+
+    <!-- Heli Crash -->
+    <div class="event-section">
+      <div class="card-title">🚁 Helicopter Crash Sites</div>
+      <div class="controls-row">
+        <div class="control-group">
+          <label>Number of Sites (1–20)</label>
+          <input type="number" id="heliCount" min="1" max="20" value="5" oninput="updateEventsXml()">
+        </div>
+        <div class="control-group">
+          <label>Frequency</label>
+          <select id="heliFreq" onchange="updateEventsXml()">
+            <option value="2">Rare (nominal: 2)</option>
+            <option value="4" selected>Normal (nominal: 4)</option>
+            <option value="8">Frequent (nominal: 8)</option>
+          </select>
+        </div>
+        <div class="control-group">
+          <label>Loot Tier</label>
+          <select id="heliLoot" onchange="updateEventsXml()">
+            <option value="Military">Military</option>
+            <option value="Mixed" selected>Mixed</option>
+            <option value="Civilian">Civilian</option>
+          </select>
+        </div>
+        <div class="control-group">
+          <label>Map</label>
+          <!-- Values are the map sub-folder names used inside the DayZ mission folder (e.g. dayzOffline.chernarusplus) -->
+          <select id="heliMap" onchange="updateEventsXml()">
+            <option value="chernarusplus">Chernarus</option>
+            <option value="enoch">Livonia</option>
+            <option value="sakhal">Sakhal</option>
+          </select>
+        </div>
+      </div>
+      <div style="margin-top:10px;">
+        <div style="font-size:.8rem;color:var(--text-secondary);margin-bottom:6px;">📍 Spawn Coordinates — Label, X, Z (leave blank to skip):</div>
+        <div class="coords-list" id="heliCoords"></div>
+        <div id="heliNoCoords" class="warn-box" style="display:none;margin-top:8px;">
+          ⚠️ No coordinates entered — add at least one X/Z pair to enable download.
+        </div>
+      </div>
+    </div>
+
+    <!-- Plane Crash -->
+    <div class="event-section">
+      <div class="card-title">✈️ Plane Crash Sites</div>
+      <div class="controls-row">
+        <div class="control-group">
+          <label>Number of Sites (1–20)</label>
+          <input type="number" id="planeCount" min="1" max="20" value="3" oninput="updateEventsXml()">
+        </div>
+        <div class="control-group">
+          <label>Frequency</label>
+          <select id="planeFreq" onchange="updateEventsXml()">
+            <option value="2">Rare (nominal: 2)</option>
+            <option value="4" selected>Normal (nominal: 4)</option>
+            <option value="8">Frequent (nominal: 8)</option>
+          </select>
+        </div>
+        <div class="control-group">
+          <label>Loot Tier</label>
+          <select id="planeLoot" onchange="updateEventsXml()">
+            <option value="Military" selected>Military</option>
+            <option value="Mixed">Mixed</option>
+            <option value="Civilian">Civilian</option>
+          </select>
+        </div>
+      </div>
+      <div style="margin-top:10px;">
+        <div style="font-size:.8rem;color:var(--text-secondary);margin-bottom:6px;">📍 Spawn Coordinates:</div>
+        <div class="coords-list" id="planeCoords"></div>
+      </div>
+    </div>
+
+    <!-- Police Cars -->
+    <div class="event-section">
+      <div class="card-title">🚓 Police Car Events</div>
+      <div class="controls-row">
+        <div class="control-group" style="max-width:380px;">
+          <label>Number of Police Cars: <span id="policeCountVal" style="color:var(--accent);font-weight:600;">5</span></label>
+          <input type="range" id="policeCount" min="1" max="15" value="5"
+            oninput="document.getElementById('policeCountVal').textContent=this.value;updateEventsXml()">
+          <div class="range-labels"><span>1</span><span>4</span><span>8</span><span>12</span><span>15</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contaminated Zone -->
+    <div class="event-section">
+      <div class="card-title">☢️ Contaminated Zone</div>
+      <div class="inline-row">
+        <label>Enable:</label>
+        <input type="checkbox" id="contaminatedEnable" onchange="toggleContaminated();updateEventsXml()">
+      </div>
+      <div id="contaminatedConfig" style="display:none;">
+        <div class="controls-row" style="margin-top:10px;">
+          <div class="control-group">
+            <label>Intensity</label>
+            <select id="contaminatedIntensity" onchange="updateEventsXml()">
+              <option value="light">Light</option>
+              <option value="medium" selected>Medium</option>
+              <option value="heavy">Heavy</option>
+            </select>
+          </div>
+          <div class="control-group">
+            <label>Position X</label>
+            <input type="number" id="contX" value="7830" step="0.01" oninput="updateEventsXml()">
+          </div>
+          <div class="control-group">
+            <label>Position Z</label>
+            <input type="number" id="contZ" value="8450" step="0.01" oninput="updateEventsXml()">
+          </div>
+          <div class="control-group">
+            <label>Radius (m)</label>
+            <input type="number" id="contRadius" value="300" oninput="updateEventsXml()">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- XML outputs -->
+    <div class="xml-panel">
+      <div class="xml-panel-header">
+        <span class="xml-panel-title">📄 events.xml</span>
+        <div class="xml-panel-actions">
+          <span class="file-target">📁 /mpmissions/…/db/events.xml</span>
+          <span class="badge badge-warn">⚠️ PC Only</span>
+          <button class="btn" onclick="copyXml('xml-tab3-events')">📋 Copy</button>
+          <button class="btn btn-primary" id="dlEventsBtn" onclick="downloadXml('xml-tab3-events','events.xml')">💾 Download events.xml</button>
+        </div>
+      </div>
+      <pre id="xml-tab3-events"><!-- Configure events above --></pre>
+    </div>
+    <div class="xml-panel" style="margin-top:12px;">
+      <div class="xml-panel-header">
+        <span class="xml-panel-title">📄 cfgeventspawns.xml</span>
+        <div class="xml-panel-actions">
+          <span class="file-target">📁 /mpmissions/…/cfgeventspawns.xml</span>
+          <button class="btn" onclick="copyXml('xml-tab3-spawns')">📋 Copy</button>
+          <button class="btn btn-primary" id="dlSpawnsBtn" onclick="downloadXml('xml-tab3-spawns','cfgeventspawns.xml')">💾 Download cfgeventspawns.xml</button>
+        </div>
+      </div>
+      <pre id="xml-tab3-spawns"><!-- Configure events above --></pre>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     TAB 5 — ZOMBIE DENSITY
+════════════════════════════════════════════════════════════════ -->
+<div class="tab-pane" id="tab-4">
+  <div class="tab-content">
+    <div class="section-header">
+      <span class="section-title">🧟 Zombie Density Configuration</span>
+      <span class="badge">✅ Console Compatible</span>
+    </div>
+    <div class="global-controls">
+      <div class="controls-row">
+        <div class="control-group" style="max-width:300px;">
+          <label>Global Zombie Multiplier</label>
+          <select id="globalZombieMult" onchange="updateZombieXml()">
+            <option value="0.5">0.5x — Half vanilla</option>
+            <option value="1" selected>1x — Vanilla</option>
+            <option value="1.5">1.5x</option>
+            <option value="2">2x — Double</option>
+            <option value="3">3x — Triple</option>
+            <option value="4">4x — Quadruple</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="zone-grid" id="zombieZones"></div>
+    <div class="xml-panel">
+      <div class="xml-panel-header">
+        <span class="xml-panel-title">📄 cfgeconomycore.xml</span>
+        <div class="xml-panel-actions">
+          <span class="file-target">📁 /mpmissions/…/cfgeconomycore.xml</span>
+          <span class="badge">✅ Console Compatible</span>
+          <button class="btn" onclick="copyXml('xml-tab4')">📋 Copy XML</button>
+          <button class="btn btn-primary" onclick="downloadXml('xml-tab4','cfgeconomycore.xml')">💾 Download cfgeconomycore.xml</button>
+        </div>
+      </div>
+      <pre id="xml-tab4"><!-- Configure zones above --></pre>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     TAB 6 — SPAWN HUB BUILDER
+════════════════════════════════════════════════════════════════ -->
+<div class="tab-pane" id="tab-5">
+  <div class="tab-content">
+    <div class="section-header">
+      <span class="section-title">🏠 Spawn Hub Builder</span>
+      <span class="badge badge-warn">⚠️ PC Only</span>
+    </div>
+
+    <!-- Hub config -->
+    <div class="hub-config">
+      <div class="card-title">Hub Configuration</div>
+      <div class="controls-row">
+        <div class="control-group">
+          <label>Map</label>
+          <select id="hubMap" onchange="updateSpawnHubXml()">
+            <option value="chernarusplus">Chernarus</option>
+            <option value="enoch">Livonia</option>
+            <option value="sakhal">Sakhal</option>
+          </select>
+        </div>
+        <div class="control-group">
+          <label>Hub Label</label>
+          <input type="text" id="hubLabel" value="Spawn Hub" oninput="updateSpawnHubXml()">
+        </div>
+        <div class="control-group">
+          <label>Hub Position X</label>
+          <input type="number" id="hubX" value="13490" step="0.1" oninput="updateSpawnHubXml()">
+        </div>
+        <div class="control-group">
+          <label>Hub Position Z</label>
+          <input type="number" id="hubZ" value="3095" step="0.1" oninput="updateSpawnHubXml()">
+        </div>
+      </div>
+      <div style="margin-top:12px;display:flex;gap:18px;flex-wrap:wrap;">
+        <div class="checkbox-group">
+          <input type="checkbox" id="presetSkalisty" onchange="applyHubPreset('skalisty')">
+          <label for="presetSkalisty">🏝️ Skalisty Island Preset (x=13490, z=3095, Chernarus)</label>
+        </div>
+        <div class="checkbox-group">
+          <input type="checkbox" id="presetPrison" onchange="applyHubPreset('prison')">
+          <label for="presetPrison">🏛️ Prison Island Preset (x=7030, z=3750, Livonia)</label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Destination zones -->
+    <div class="hub-config">
+      <div class="card-title">📍 Destination Zones (up to 10)</div>
+      <div style="font-size:.78rem;color:var(--text-secondary);margin-bottom:6px;"># — Name — X — Z — Description</div>
+      <div class="dest-rows" id="destZones"></div>
+    </div>
+
+    <!-- Starter kit -->
+    <div class="hub-config">
+      <div class="card-title">🎒 Starter Kit</div>
+      <div class="inline-row">
+        <label>Enable Starter Kit:</label>
+        <input type="checkbox" id="starterKitEnable" onchange="toggleStarterKit();updateSpawnHubXml()">
+      </div>
+      <div id="starterKitConfig" style="display:none;margin-top:10px;">
+        <div class="control-group" style="max-width:340px;">
+          <label>Gear Tier</label>
+          <select id="starterKitTier" onchange="updateSpawnHubXml()">
+            <option value="bare">Bare Minimum — bandage, rag, flare</option>
+            <option value="survivor" selected>Survivor — food, water, bandage, map</option>
+            <option value="comfortable">Comfortable — full kit, flashlight, compass</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <!-- XML outputs -->
+    <div class="xml-panel">
+      <div class="xml-panel-header">
+        <span class="xml-panel-title">📄 cfgplayerspawnpoints.xml</span>
+        <div class="xml-panel-actions">
+          <span class="file-target">📁 /mpmissions/…/cfgplayerspawnpoints.xml</span>
+          <span class="badge badge-warn">⚠️ PC Only</span>
+          <button class="btn" onclick="copyXml('xml-tab5-spawns')">📋 Copy</button>
+          <button class="btn btn-primary" onclick="downloadXml('xml-tab5-spawns','cfgplayerspawnpoints.xml')">💾 Download</button>
+        </div>
+      </div>
+      <pre id="xml-tab5-spawns"><!-- Configure hub above --></pre>
+    </div>
+    <div class="xml-panel" style="margin-top:12px;">
+      <div class="xml-panel-header">
+        <span class="xml-panel-title">📣 Discord Announcement Card</span>
+        <div class="xml-panel-actions">
+          <button class="btn" onclick="copyXml('xml-tab5-discord')">📋 Copy</button>
+        </div>
+      </div>
+      <pre id="xml-tab5-discord" style="color:#c586c0;white-space:pre-wrap;"><!-- Configure hub to generate Discord card --></pre>
+    </div>
+    <div class="xml-panel" id="starterKitXmlPanel" style="margin-top:12px;display:none;">
+      <div class="xml-panel-header">
+        <span class="xml-panel-title">📦 Starter Kit — types.xml snippet</span>
+        <div class="xml-panel-actions">
+          <span class="file-target">📁 /mpmissions/…/db/types.xml</span>
+          <button class="btn" onclick="copyXml('xml-tab5-kit')">📋 Copy</button>
+          <button class="btn btn-primary" onclick="downloadXml('xml-tab5-kit','types_starterkit.xml')">💾 Download</button>
+        </div>
+      </div>
+      <pre id="xml-tab5-kit"><!-- Enable starter kit above --></pre>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     SUMMARY PANEL
+════════════════════════════════════════════════════════════════ -->
+<div class="summary-panel">
+  <div class="summary-header" onclick="toggleSummary()">
+    <span>📊 Change Summary — <strong id="summaryCount" style="color:var(--accent);">0</strong> active changes</span>
+    <span id="summaryArrow" style="color:var(--accent);">▼</span>
+  </div>
+  <div class="summary-content" id="summaryContent">
+    <div class="summary-grid" id="summaryGrid">
+      <div style="color:var(--text-secondary);font-size:.82rem;">Configure items above to see changes here.</div>
+    </div>
+  </div>
+</div>
+
+<!-- Toast -->
+<div class="toast" id="toast">✅ Done!</div>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     JAVASCRIPT
+════════════════════════════════════════════════════════════════ -->
+<script>
+'use strict';
+
+/* ─────────────────────────────────────────────────────────────
+   DATA
+───────────────────────────────────────────────────────────── */
+const ANIMALS = [
+  { name:'🐺 Wolf',  eventName:'AnimalWolf',  vanillaNominal:35 },
+  { name:'🐻 Bear',  eventName:'AnimalBear',  vanillaNominal:15 },
+  { name:'🦌 Deer',  eventName:'AnimalDeer',  vanillaNominal:50 },
+  { name:'🐗 Boar',  eventName:'AnimalBoar',  vanillaNominal:35 },
+  { name:'🐇 Hare',  eventName:'AnimalHare',  vanillaNominal:20 },
+  { name:'🦊 Fox',   eventName:'AnimalFox',   vanillaNominal:20 },
+  { name:'🐄 Cow',   eventName:'AnimalCow',   vanillaNominal:10 },
+  { name:'🐑 Goat',  eventName:'AnimalGoat',  vanillaNominal:10 },
+  { name:'🐔 Hen',   eventName:'AnimalHen',   vanillaNominal:20 },
+];
+
+const WEAPONS = {
+  assault:{ label:'Assault Rifles', items:{
+    AKM:    {nominal:5,  min:2, usage:'Military',     value:'Tier3'},
+    AK101:  {nominal:5,  min:2, usage:'Military',     value:'Tier3'},
+    M4A1:   {nominal:5,  min:2, usage:'Military',     value:'Tier3'},
+    FAL:    {nominal:3,  min:1, usage:'Military',     value:'Tier4'},
+    AK74:   {nominal:5,  min:2, usage:'Military',     value:'Tier2'},
+    AKS74U: {nominal:4,  min:1, usage:'Military',     value:'Tier3'},
+  }},
+  sniper:{ label:'Sniper Rifles', items:{
+    Mosin9130:    {nominal:8,  min:3, usage:'Hunting',  value:'Tier2'},
+    SVD:          {nominal:3,  min:1, usage:'Military', value:'Tier4'},
+    Blaze95:      {nominal:5,  min:2, usage:'Hunting',  value:'Tier2'},
+    CZ527:        {nominal:8,  min:3, usage:'Hunting',  value:'Tier1'},
+    BK18:         {nominal:10, min:4, usage:'Hunting',  value:'Tier1'},
+    Winchester70: {nominal:5,  min:2, usage:'Hunting',  value:'Tier2'},
+  }},
+  shotgun:{ label:'Shotguns', items:{
+    Izh43: {nominal:10, min:4, usage:'Hunting', value:'Tier1'},
+    Saiga: {nominal:5,  min:2, usage:'Military',value:'Tier3'},
+    M870:  {nominal:8,  min:3, usage:'Hunting', value:'Tier2'},
+    MP133: {nominal:5,  min:2, usage:'Hunting', value:'Tier2'},
+  }},
+  pistol:{ label:'Pistols', items:{
+    MakarovIJ70: {nominal:10, min:4, usage:'Residential', value:'Tier1'},
+    Glock19:     {nominal:8,  min:3, usage:'Police',      value:'Tier2'},
+    M1911:       {nominal:5,  min:2, usage:'Military',    value:'Tier3'},
+    FNX45:       {nominal:3,  min:1, usage:'Military',    value:'Tier4'},
+    Deagle:      {nominal:3,  min:1, usage:'Military',    value:'Tier4'},
+    P1:          {nominal:8,  min:3, usage:'Police',      value:'Tier1'},
+  }},
+  smg:{ label:'SMGs', items:{
+    MP5K:  {nominal:5, min:2, usage:'Military', value:'Tier3'},
+    UMP45: {nominal:4, min:1, usage:'Military', value:'Tier3'},
+    Bizon: {nominal:3, min:1, usage:'Military', value:'Tier4'},
+    CZ75:  {nominal:5, min:2, usage:'Military', value:'Tier3'},
+  }},
+};
+
+const AMMO = [
+  {classname:'Ammo_762x39',     label:'7.62x39',      nominal:20, min:8},
+  {classname:'Ammo_556x45',     label:'5.56x45',      nominal:20, min:8},
+  {classname:'Ammo_545x39',     label:'5.45x39',      nominal:20, min:8},
+  {classname:'Ammo_762x54',     label:'7.62x54',      nominal:15, min:5},
+  {classname:'Ammo_9x19',       label:'9x19',         nominal:20, min:8},
+  {classname:'Ammo_45ACP',      label:'.45 ACP',      nominal:15, min:5},
+  {classname:'Ammo_357',        label:'.357',         nominal:10, min:4},
+  {classname:'Ammo_12gaPellets',label:'12ga Pellets', nominal:20, min:8},
+  {classname:'Ammo_12gaSlug',   label:'12ga Slug',    nominal:15, min:5},
+  {classname:'Ammo_22',         label:'.22LR',        nominal:15, min:5},
+  {classname:'Ammo_308Win',     label:'.308',         nominal:15, min:5},
+];
+
+const MAGAZINES = [
+  {classname:'Mag_AK101_30Rnd', label:'AK101 30rnd', nominal:10, min:4},
+  {classname:'Mag_AKM_30Rnd',   label:'AKM 30rnd',   nominal:10, min:4},
+  {classname:'Mag_M4A1_30Rnd',  label:'M4A1 30rnd',  nominal:10, min:4},
+  {classname:'Mag_MP5_30Rnd',   label:'MP5 30rnd',   nominal:8,  min:3},
+  {classname:'Mag_Saiga_5Rnd',  label:'Saiga 5rnd',  nominal:8,  min:3},
+  {classname:'Mag_Bizon_64Rnd', label:'Bizon 64rnd', nominal:5,  min:2},
+  {classname:'Mag_Glock_15Rnd', label:'Glock 15rnd', nominal:10, min:4},
+  {classname:'Mag_FNX45_15Rnd', label:'FNX45 15rnd', nominal:8,  min:3},
+  {classname:'Mag_UMP_25Rnd',   label:'UMP 25rnd',   nominal:8,  min:3},
+];
+
+const HUNTING_GEAR = [
+  {classname:'HuntingBag',        nominal:5,  min:2, category:'containers', usage:'Hunting'},
+  {classname:'HuntingJacket',     nominal:5,  min:2, category:'clothes',    usage:'Hunting'},
+  {classname:'HuntingPants',      nominal:5,  min:2, category:'clothes',    usage:'Hunting'},
+  {classname:'HuntingBoot_Brown', nominal:5,  min:2, category:'clothes',    usage:'Hunting'},
+  {classname:'HuntingKnife',      nominal:8,  min:3, category:'tools',      usage:'Hunting'},
+  {classname:'HuntersVest',       nominal:5,  min:2, category:'clothes',    usage:'Hunting'},
+  {classname:'HuntingScope',      nominal:3,  min:1, category:'tools',      usage:'Hunting'},
+  {classname:'Rangefinder',       nominal:3,  min:1, category:'tools',      usage:'Hunting'},
+  {classname:'Binoculars',        nominal:5,  min:2, category:'tools',      usage:'Hunting'},
+];
+
+const SURVIVAL_ITEMS = [
+  {classname:'BearTrap',             nominal:10, min:4, category:'tools', usage:'Hunting'},
+  {classname:'SnareTrap',            nominal:10, min:4, category:'tools', usage:'Hunting'},
+  {classname:'FishingRod',           nominal:8,  min:3, category:'tools', usage:'Hunting'},
+  {classname:'ImprovisedFishingRod', nominal:5,  min:2, category:'tools', usage:'Hunting'},
+  {classname:'FishingHook',          nominal:15, min:6, category:'tools', usage:'Hunting'},
+  {classname:'FishingBait',          nominal:15, min:6, category:'tools', usage:'Hunting'},
+  {classname:'Compass',              nominal:10, min:4, category:'tools', usage:null},
+  {classname:'Map',                  nominal:8,  min:3, category:'tools', usage:null},
+  {classname:'FieldShovel',          nominal:5,  min:2, category:'tools', usage:null},
+  {classname:'Shovel',               nominal:5,  min:2, category:'tools', usage:null},
+];
+
+const MEDICAL_ITEMS = [
+  {classname:'Bandage',               nominal:20, min:8,  category:'tools', usage:'Medical'},
+  {classname:'Rag',                   nominal:30, min:12, category:'tools', usage:null},
+  {classname:'BloodBag',              nominal:5,  min:2,  category:'tools', usage:'Medical'},
+  {classname:'Morphine',              nominal:5,  min:2,  category:'tools', usage:'Medical'},
+  {classname:'Epinephrine',           nominal:5,  min:2,  category:'tools', usage:'Medical'},
+  {classname:'Saline',                nominal:3,  min:1,  category:'tools', usage:'Medical'},
+  {classname:'TetracyclineAntibiotic',nominal:10, min:4,  category:'tools', usage:'Medical'},
+  {classname:'Disinfectant',          nominal:8,  min:3,  category:'tools', usage:'Medical'},
+  {classname:'Splint',                nominal:8,  min:3,  category:'tools', usage:'Medical'},
+  {classname:'PainKillers',           nominal:10, min:4,  category:'tools', usage:'Medical'},
+  {classname:'CharcoalTablets',       nominal:8,  min:3,  category:'tools', usage:'Medical'},
+];
+
+const ZOMBIE_ZONES = [
+  {zone:'Residential', vanillaMin:1, vanillaMax:3},
+  {zone:'Military',    vanillaMin:3, vanillaMax:8},
+  {zone:'Police',      vanillaMin:2, vanillaMax:5},
+  {zone:'Medical',     vanillaMin:2, vanillaMax:4},
+  {zone:'Industrial',  vanillaMin:1, vanillaMax:3},
+  {zone:'Prison',      vanillaMin:4, vanillaMax:10},
+  {zone:'Firefighter', vanillaMin:1, vanillaMax:3},
+];
+
+const STARTER_KITS = {
+  bare:        ['Bandage','Rag','RoadFlare'],
+  survivor:    ['Bandage','Rag','FoodCan','PlasticBottle_Water','Map','PainKillers'],
+  comfortable: ['Bandage','Rag','FoodCan','PlasticBottle_Water','Map','PainKillers','Flashlight','Compass','Disinfectant','Morphine','Splint'],
+};
+
+const PRESETS = {
+  vanilla:  {desc:'All multipliers at 1x (vanilla)',          animalMult:1,   weaponMult:1,   ammoMult:1,   magMult:1,   huntMult:1,   trapMult:1,   medMult:1,   zombieMult:1},
+  casual:   {desc:'2x hunting, 1.5x medical, 2x animals, 0.5x military', animalMult:2, weaponMult:0.5, ammoMult:1.5, magMult:1.5, huntMult:2, trapMult:2, medMult:1.5, zombieMult:1},
+  hardcore: {desc:'0.5x loot, 3x predators, 1.5x zombies',   animalMult:1,   weaponMult:0.5, ammoMult:0.5, magMult:0.5, huntMult:0.5, trapMult:1,  medMult:1,   zombieMult:1.5, wolfMult:3, bearMult:3},
+  pvp:      {desc:'3x weapons, 3x ammo, 2x military',        animalMult:1,   weaponMult:3,   ammoMult:3,   magMult:3,   huntMult:1,   trapMult:1,   medMult:1,   zombieMult:1},
+  hunter:   {desc:"4x hunting gear, 4x animals, 3x ammo",    animalMult:4,   weaponMult:1,   ammoMult:3,   magMult:2,   huntMult:4,   trapMult:3,   medMult:2,   zombieMult:1},
+};
+
+const PRESET_DESCS = {
+  custom:   '',
+  vanilla:  '🟢 All multipliers at 1x — pure vanilla',
+  casual:   '🔵 2x hunting & animals, 1.5x medical, 0.5x military weapons',
+  hardcore: '🟡 0.5x all loot, 3x wolves & bears, 1.5x zombies',
+  pvp:      '🔴 3x weapons, 3x ammo, 3x magazines',
+  hunter:   "🟣 4x hunting gear, 4x animals, 3x ammo",
+};
+
+/* ─────────────────────────────────────────────────────────────
+   STATE
+───────────────────────────────────────────────────────────── */
+const activeCats = new Set(['assault','sniper','shotgun','pistol','smg']);
+
+/* ─────────────────────────────────────────────────────────────
+   INIT
+───────────────────────────────────────────────────────────── */
+function init() {
+  buildAnimalCards();
+  buildWeaponsList();
+  buildAmmoList();
+  buildItemsGrid('huntingItems',  HUNTING_GEAR);
+  buildItemsGrid('trappingItems', SURVIVAL_ITEMS);
+  buildItemsGrid('medicalItems',  MEDICAL_ITEMS);
+  buildCoordsList('heliCoords',  20, 'heli');
+  buildCoordsList('planeCoords', 20, 'plane');
+  buildZombieZones();
+  buildDestZones();
+  // Initial XML generation
+  updateAnimalXml();
+  updateWeaponsXml();
+  updateHuntingXml();
+  updateEventsXml();
+  updateZombieXml();
+  updateSpawnHubXml();
+}
+
+/* ─────────────────────────────────────────────────────────────
+   TAB SWITCHING
+───────────────────────────────────────────────────────────── */
+function switchTab(idx, btn) {
+  document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-' + idx).classList.add('active');
+  btn.classList.add('active');
+}
+
+/* ─────────────────────────────────────────────────────────────
+   TAB 1 — ANIMAL SPAWNS
+───────────────────────────────────────────────────────────── */
+function buildAnimalCards() {
+  const c = document.getElementById('animalCards');
+  c.innerHTML = '';
+  ANIMALS.forEach((a, i) => {
+    const d = document.createElement('div');
+    d.className = 'animal-card';
+    d.innerHTML = `
+      <div class="animal-header">
+        <span class="animal-name">${a.name}</span>
+        <span class="vanilla-ref">Vanilla: ${a.vanillaNominal}</span>
+      </div>
+      <div style="margin-bottom:6px;">
+        <div style="font-size:.75rem;color:var(--text-secondary);margin-bottom:4px;">Spawn Multiplier</div>
+        <select id="aMult${i}" onchange="refreshAnimalCard(${i})">
+          <option value="0.5">0.5x — Half</option>
+          <option value="1" selected>1x — Vanilla</option>
+          <option value="2">2x — Double</option>
+          <option value="3">3x — Triple</option>
+          <option value="4">4x — Quadruple</option>
+          <option value="5">5x — Maximum</option>
+        </select>
+      </div>
+      <div class="checkbox-group">
+        <input type="checkbox" id="aCoastal${i}" onchange="updateAnimalXml()">
+        <label for="aCoastal${i}">Coastal only (Tier1)</label>
+      </div>
+      <div class="checkbox-group">
+        <input type="checkbox" id="aEnabled${i}" checked onchange="updateAnimalXml()">
+        <label for="aEnabled${i}">Include in output</label>
+      </div>
+      <div class="nominal-display" id="aNom${i}">
+        <span>nominal: <span class="nv">${a.vanillaNominal}</span></span>
+        <span>min:${Math.floor(a.vanillaNominal*.5)} / max:${Math.floor(a.vanillaNominal*1.5)}</span>
+      </div>
+      <div id="aWarn${i}" class="warn-box" style="display:none;">⚠️ Multiplier &gt;4x may cause server/client performance issues and rubber-banding</div>`;
+    c.appendChild(d);
+  });
+}
+
+function refreshAnimalCard(i) {
+  const m  = parseFloat(document.getElementById('aMult' + i).value);
+  const a  = ANIMALS[i];
+  const nom = Math.max(1, Math.round(a.vanillaNominal * m));
+  const mn  = Math.floor(nom * .5);
+  const mx  = Math.floor(nom * 1.5);
+  document.getElementById('aNom' + i).innerHTML =
+    `<span>nominal: <span class="nv">${nom}</span></span><span>min:${mn} / max:${mx}</span>`;
+  document.getElementById('aWarn' + i).style.display = m > 4 ? 'block' : 'none';
+  updateAnimalXml();
+}
+
+function updateAnimalXml() {
+  const lines = ['<!-- Generated by DayZ Mod Builder — EVOLFATE/Dayz-Library -->'];
+  ANIMALS.forEach((a, i) => {
+    if (!document.getElementById('aEnabled' + i)?.checked) return;
+    const m      = parseFloat(document.getElementById('aMult' + i)?.value || '1');
+    const coastal = document.getElementById('aCoastal' + i)?.checked;
+    const nom    = Math.max(1, Math.round(a.vanillaNominal * m));
+    const mn     = Math.floor(nom * .5);
+    const mx     = Math.floor(nom * 1.5);
+    const lbl    = m === 1 ? 'Vanilla' : m + 'x';
+    lines.push('');
+    if (coastal)
+      lines.push(`<!-- NOTE: Set spawn coordinates to Tier1/coastal areas in cfgeventspawns.xml -->`);
+    // Strip leading emoji from display name for use inside XML comments.
+    // Unicode property escapes (\p{Emoji}) are supported in Chrome 64+, Firefox 78+, Safari 11.1+.
+    // If both passes fail to produce a non-empty result, fall back to the eventName which is always ASCII.
+    const strippedName = a.name.replace(/\p{Emoji}/gu, '').trim()
+      || a.name.replace(/[\uD800-\uDFFF\u2600-\u27BF\u{1F000}-\u{1FFFF}]/gu, '').trim()
+      || a.eventName;
+    lines.push(`<!-- ${strippedName} ${lbl} -->`);
+    lines.push(`<event name="${a.eventName}">`);
+    lines.push(`    <nominal>${nom}</nominal>`);
+    lines.push(`    <min>${mn}</min>`);
+    lines.push(`    <max>${mx}</max>`);
+    lines.push(`    <lifetime>3600</lifetime>`);
+    lines.push(`    <restock>900</restock>`);
+    lines.push(`    <saferadius>20</saferadius>`);
+    lines.push(`    <distanceradius>500</distanceradius>`);
+    lines.push(`    <cleanupradius>200</cleanupradius>`);
+    lines.push(`    <flags deletable="0" init_random="1" remove_damaged="1"/>`);
+    lines.push(`    <position>fixed</position>`);
+    lines.push(`    <limit>mixed</limit>`);
+    lines.push(`    <active>1</active>`);
+    lines.push(`    <children/>`);
+    lines.push(`</event>`);
+  });
+  document.getElementById('xml-tab0').textContent = lines.join('\n');
+  updateSummary();
+}
+
+/* ─────────────────────────────────────────────────────────────
+   TAB 2 — WEAPONS & AMMO
+───────────────────────────────────────────────────────────── */
+function buildWeaponsList() {
+  const c = document.getElementById('weaponsList');
+  c.innerHTML = '';
+  Object.entries(WEAPONS).forEach(([cat, catData]) => {
+    Object.entries(catData.items).forEach(([cls, d]) => {
+      const el = document.createElement('div');
+      el.className = 'weapon-item';
+      el.dataset.category = cat;
+      el.id = 'wi_' + cls;
+      el.innerHTML = `
+        <div style="flex:1;min-width:0;">
+          <div class="weapon-name">${cls}</div>
+          <div class="weapon-meta">${d.usage} · ${d.value} · ${catData.label}</div>
+        </div>
+        <div style="text-align:right;">
+          <div class="weapon-nominal" id="wnom_${cls}">${d.nominal}</div>
+          <div style="font-size:.66rem;color:var(--text-secondary);">vanilla:${d.nominal}</div>
+        </div>
+        <input type="checkbox" checked id="wchk_${cls}" onchange="updateWeaponsXml()" title="Include">`;
+      c.appendChild(el);
+    });
+  });
+}
+
+function buildAmmoList() {
+  const ac = document.getElementById('ammoList');
+  ac.innerHTML = '';
+  AMMO.forEach(a => {
+    const el = document.createElement('div');
+    el.className = 'ammo-item';
+    el.innerHTML = `
+      <input type="checkbox" checked id="achk_${a.classname}" onchange="updateWeaponsXml()">
+      <div class="ammo-info">
+        <div class="ammo-name">${a.label}</div>
+        <div class="ammo-nominal" id="anom_${a.classname}">${a.nominal} nominal</div>
+      </div>`;
+    ac.appendChild(el);
+  });
+  const mc = document.getElementById('magList');
+  mc.innerHTML = '';
+  MAGAZINES.forEach(m => {
+    const el = document.createElement('div');
+    el.className = 'ammo-item';
+    el.innerHTML = `
+      <input type="checkbox" checked id="mchk_${m.classname}" onchange="updateWeaponsXml()">
+      <div class="ammo-info">
+        <div class="ammo-name">${m.label}</div>
+        <div class="ammo-nominal" id="mnom_${m.classname}">${m.nominal} nominal</div>
+      </div>`;
+    mc.appendChild(el);
+  });
+}
+
+function toggleCat(cat, btn) {
+  btn.classList.toggle('active');
+  if (activeCats.has(cat)) activeCats.delete(cat); else activeCats.add(cat);
+  document.querySelectorAll('.weapon-item').forEach(el => {
+    el.classList.toggle('hidden', !activeCats.has(el.dataset.category));
+  });
+  updateWeaponsXml();
+}
+
+function updateWeaponsXml() {
+  const wM = parseFloat(document.getElementById('weaponMultiplier').value);
+  const aM = parseFloat(document.getElementById('ammoMultiplier').value);
+  const mM = parseFloat(document.getElementById('magMultiplier').value);
+  const lines = [
+    '<!-- Generated by DayZ Mod Builder — EVOLFATE/Dayz-Library -->',
+    `<!-- Weapons ${wM}x · Ammo ${aM}x · Magazines ${mM}x -->`,
+    '',
+    '<!-- ═══ WEAPONS ═══ -->',
+  ];
+
+  Object.entries(WEAPONS).forEach(([cat, catData]) => {
+    if (!activeCats.has(cat)) return;
+    Object.entries(catData.items).forEach(([cls, d]) => {
+      if (!document.getElementById('wchk_' + cls)?.checked) return;
+      const nom = Math.max(1, Math.round(d.nominal * wM));
+      const mn  = Math.max(1, Math.round(d.min     * wM));
+      document.getElementById('wnom_' + cls).textContent = nom;
+      if (nom > 50) lines.push(`<!-- ⚠️ ${cls} nominal=${nom} exceeds 50 — may impact server performance -->`);
+      lines.push(`<type name="${cls}">`);
+      lines.push(`    <nominal>${nom}</nominal>`);
+      lines.push(`    <lifetime>14400</lifetime>`);
+      lines.push(`    <restock>1800</restock>`);
+      lines.push(`    <min>${mn}</min>`);
+      lines.push(`    <quantmin>-1</quantmin>`);
+      lines.push(`    <quantmax>-1</quantmax>`);
+      lines.push(`    <cost>100</cost>`);
+      lines.push(`    <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>`);
+      lines.push(`    <category name="weapons"/>`);
+      lines.push(`    <usage name="${d.usage}"/>`);
+      lines.push(`    <value name="${d.value}"/>`);
+      lines.push(`</type>`);
+      lines.push('');
+    });
+  });
+
+  lines.push('<!-- ═══ AMMUNITION ═══ -->');
+  AMMO.forEach(a => {
+    if (!document.getElementById('achk_' + a.classname)?.checked) return;
+    const nom = Math.max(1, Math.round(a.nominal * aM));
+    const mn  = Math.max(1, Math.round(a.min     * aM));
+    document.getElementById('anom_' + a.classname).textContent = nom + ' nominal';
+    lines.push(`<type name="${a.classname}">`);
+    lines.push(`    <nominal>${nom}</nominal>`);
+    lines.push(`    <lifetime>14400</lifetime>`);
+    lines.push(`    <restock>1800</restock>`);
+    lines.push(`    <min>${mn}</min>`);
+    lines.push(`    <quantmin>-1</quantmin>`);
+    lines.push(`    <quantmax>-1</quantmax>`);
+    lines.push(`    <cost>100</cost>`);
+    lines.push(`    <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>`);
+    lines.push(`    <category name="ammunition"/>`);
+    lines.push(`</type>`);
+    lines.push('');
+  });
+
+  lines.push('<!-- ═══ MAGAZINES ═══ -->');
+  MAGAZINES.forEach(m => {
+    if (!document.getElementById('mchk_' + m.classname)?.checked) return;
+    const nom = Math.max(1, Math.round(m.nominal * mM));
+    const mn  = Math.max(1, Math.round(m.min     * mM));
+    document.getElementById('mnom_' + m.classname).textContent = nom + ' nominal';
+    lines.push(`<type name="${m.classname}">`);
+    lines.push(`    <nominal>${nom}</nominal>`);
+    lines.push(`    <lifetime>14400</lifetime>`);
+    lines.push(`    <restock>1800</restock>`);
+    lines.push(`    <min>${mn}</min>`);
+    lines.push(`    <quantmin>-1</quantmin>`);
+    lines.push(`    <quantmax>-1</quantmax>`);
+    lines.push(`    <cost>100</cost>`);
+    lines.push(`    <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>`);
+    lines.push(`    <category name="magazines"/>`);
+    lines.push(`</type>`);
+    lines.push('');
+  });
+
+  document.getElementById('xml-tab1').textContent = lines.join('\n');
+  updateSummary();
+}
+
+/* ─────────────────────────────────────────────────────────────
+   TAB 3 — HUNTING & SURVIVAL
+───────────────────────────────────────────────────────────── */
+function buildItemsGrid(containerId, items) {
+  const c = document.getElementById(containerId);
+  c.innerHTML = '';
+  items.forEach((item, i) => {
+    const d = document.createElement('div');
+    d.className = 'item-card';
+    d.innerHTML = `
+      <div style="flex:1;min-width:0;">
+        <div class="item-name">${item.classname}</div>
+        <div class="item-meta">nom:${item.nominal} · min:${item.min} · ${item.category}</div>
+      </div>
+      <input type="checkbox" checked id="${containerId}_${i}" onchange="updateHuntingXml()">`;
+    c.appendChild(d);
+  });
+}
+
+function buildHuntingSection(containerId, items, mult, label) {
+  const lines = [`<!-- ${label} — Multiplier: ${mult}x -->`];
+  items.forEach((item, i) => {
+    if (!document.getElementById(containerId + '_' + i)?.checked) return;
+    const nom = Math.max(1, Math.round(item.nominal * mult));
+    const mn  = Math.max(1, Math.round(item.min     * mult));
+    lines.push(`<type name="${item.classname}">`);
+    lines.push(`    <nominal>${nom}</nominal>`);
+    lines.push(`    <lifetime>14400</lifetime>`);
+    lines.push(`    <restock>1800</restock>`);
+    lines.push(`    <min>${mn}</min>`);
+    lines.push(`    <quantmin>-1</quantmin>`);
+    lines.push(`    <quantmax>-1</quantmax>`);
+    lines.push(`    <cost>100</cost>`);
+    lines.push(`    <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>`);
+    lines.push(`    <category name="${item.category}"/>`);
+    if (item.usage) lines.push(`    <usage name="${item.usage}"/>`);
+    lines.push(`</type>`);
+    lines.push('');
+  });
+  return lines;
+}
+
+function updateHuntingXml() {
+  const hM = parseFloat(document.getElementById('huntMultiplier').value);
+  const tM = parseFloat(document.getElementById('trapMultiplier').value);
+  const mM = parseFloat(document.getElementById('medMultiplier').value);
+  const all = [
+    '<!-- Generated by DayZ Mod Builder — EVOLFATE/Dayz-Library -->',
+    '',
+    ...buildHuntingSection('huntingItems',  HUNTING_GEAR,   hM, 'Hunting Gear'),
+    '',
+    ...buildHuntingSection('trappingItems', SURVIVAL_ITEMS, tM, 'Survival & Trapping'),
+    '',
+    ...buildHuntingSection('medicalItems',  MEDICAL_ITEMS,  mM, 'Medical Supplies'),
+  ];
+  document.getElementById('xml-tab2').textContent = all.join('\n');
+  updateSummary();
+}
+
+/* ─────────────────────────────────────────────────────────────
+   TAB 4 — EVENTS BUILDER
+───────────────────────────────────────────────────────────── */
+function buildCoordsList(containerId, count, prefix) {
+  const c = document.getElementById(containerId);
+  if (!c) return;
+  c.innerHTML = '';
+  for (let i = 0; i < count; i++) {
+    const d = document.createElement('div');
+    d.className = 'coord-row';
+    d.innerHTML = `
+      <span class="coord-num">${i+1}</span>
+      <input type="text"   id="${prefix}Lbl${i}" placeholder="Label" oninput="updateEventsXml()">
+      <input type="number" id="${prefix}X${i}"   placeholder="X"     step="0.01" oninput="updateEventsXml()">
+      <input type="number" id="${prefix}Z${i}"   placeholder="Z"     step="0.01" oninput="updateEventsXml()">`;
+    c.appendChild(d);
+  }
+}
+
+function toggleContaminated() {
+  const on = document.getElementById('contaminatedEnable').checked;
+  document.getElementById('contaminatedConfig').style.display = on ? 'block' : 'none';
+}
+
+function getCoords(prefix, count) {
+  const out = [];
+  for (let i = 0; i < count; i++) {
+    const x = document.getElementById(prefix + 'X' + i)?.value;
+    const z = document.getElementById(prefix + 'Z' + i)?.value;
+    if (x && z) out.push({
+      x: parseFloat(x), z: parseFloat(z),
+      label: document.getElementById(prefix + 'Lbl' + i)?.value || `Site ${i+1}`,
+    });
+  }
+  return out;
+}
+
+function updateEventsXml() {
+  const heliNom   = parseInt(document.getElementById('heliFreq').value);
+  const planeNom  = parseInt(document.getElementById('planeFreq').value);
+  const police    = parseInt(document.getElementById('policeCount').value);
+  const contOn    = document.getElementById('contaminatedEnable').checked;
+  const heliCoords  = getCoords('heli',  20);
+  const planeCoords = getCoords('plane', 20);
+
+  // Validation
+  const noCoords = document.getElementById('heliNoCoords');
+  noCoords.style.display = heliCoords.length === 0 ? 'block' : 'none';
+  const hasAnyCoords = heliCoords.length > 0 || planeCoords.length > 0;
+  document.getElementById('dlEventsBtn').disabled = !hasAnyCoords;
+  document.getElementById('dlSpawnsBtn').disabled = !hasAnyCoords;
+
+  /* ── events.xml ── */
+  const ev = ['<!-- Generated by DayZ Mod Builder — EVOLFATE/Dayz-Library -->', ''];
+
+  ev.push('<!-- ─── Helicopter Crash Sites ─── -->');
+  ev.push(`<event name="StaticHeliCrash">`);
+  ev.push(`    <nominal>${heliNom}</nominal>`);
+  ev.push(`    <min>${Math.max(1,Math.floor(heliNom/2))}</min>`);
+  ev.push(`    <max>${heliNom + Math.floor(heliNom/2)}</max>`);
+  ev.push(`    <lifetime>3600</lifetime>`);
+  ev.push(`    <restock>1800</restock>`);
+  ev.push(`    <saferadius>200</saferadius>`);
+  ev.push(`    <distanceradius>1000</distanceradius>`);
+  ev.push(`    <cleanupradius>400</cleanupradius>`);
+  ev.push(`    <flags deletable="0" init_random="0" remove_damaged="1"/>`);
+  ev.push(`    <position>fixed</position>`);
+  ev.push(`    <limit>mixed</limit>`);
+  ev.push(`    <active>1</active>`);
+  ev.push(`    <children/>`);
+  ev.push(`</event>`);
+  ev.push('');
+
+  ev.push('<!-- ─── Plane Crash Sites ─── -->');
+  ev.push(`<event name="StaticPlaneCrash">`);
+  ev.push(`    <nominal>${planeNom}</nominal>`);
+  ev.push(`    <min>${Math.max(1,Math.floor(planeNom/2))}</min>`);
+  ev.push(`    <max>${planeNom + Math.floor(planeNom/2)}</max>`);
+  ev.push(`    <lifetime>3600</lifetime>`);
+  ev.push(`    <restock>1800</restock>`);
+  ev.push(`    <saferadius>200</saferadius>`);
+  ev.push(`    <distanceradius>1000</distanceradius>`);
+  ev.push(`    <cleanupradius>400</cleanupradius>`);
+  ev.push(`    <flags deletable="0" init_random="0" remove_damaged="1"/>`);
+  ev.push(`    <position>fixed</position>`);
+  ev.push(`    <limit>mixed</limit>`);
+  ev.push(`    <active>1</active>`);
+  ev.push(`    <children/>`);
+  ev.push(`</event>`);
+  ev.push('');
+
+  const policeMn = Math.max(1, Math.floor(police * .7));
+  const policeMx = Math.ceil(police * 1.3);
+  ev.push('<!-- ─── Police Cars ─── -->');
+  ev.push(`<event name="VehiclePolice">`);
+  ev.push(`    <nominal>${police}</nominal>`);
+  ev.push(`    <min>${policeMn}</min>`);
+  ev.push(`    <max>${policeMx}</max>`);
+  ev.push(`    <lifetime>1800</lifetime>`);
+  ev.push(`    <restock>600</restock>`);
+  ev.push(`    <saferadius>20</saferadius>`);
+  ev.push(`    <distanceradius>500</distanceradius>`);
+  ev.push(`    <cleanupradius>200</cleanupradius>`);
+  ev.push(`    <flags deletable="0" init_random="1" remove_damaged="1"/>`);
+  ev.push(`    <position>fixed</position>`);
+  ev.push(`    <limit>mixed</limit>`);
+  ev.push(`    <active>1</active>`);
+  ev.push(`    <children/>`);
+  ev.push(`</event>`);
+
+  if (contOn) {
+    const intensity = document.getElementById('contaminatedIntensity').value;
+    const cx = document.getElementById('contX').value;
+    const cz = document.getElementById('contZ').value;
+    const cr = document.getElementById('contRadius').value;
+    const iMap = {light:1, medium:2, heavy:3};
+    const iVal = iMap[intensity];
+    ev.push('');
+    ev.push(`<!-- ─── Contaminated Zone (${intensity}) ─── -->`);
+    ev.push(`<event name="ContaminatedArea_Dynamic">`);
+    ev.push(`    <nominal>${iVal}</nominal>`);
+    ev.push(`    <min>1</min>`);
+    ev.push(`    <max>${iVal+1}</max>`);
+    ev.push(`    <lifetime>7200</lifetime>`);
+    ev.push(`    <restock>3600</restock>`);
+    ev.push(`    <saferadius>${cr}</saferadius>`);
+    ev.push(`    <distanceradius>2000</distanceradius>`);
+    ev.push(`    <cleanupradius>${cr}</cleanupradius>`);
+    ev.push(`    <flags deletable="0" init_random="0" remove_damaged="0"/>`);
+    ev.push(`    <position>fixed</position>`);
+    ev.push(`    <limit>mixed</limit>`);
+    ev.push(`    <active>1</active>`);
+    ev.push(`    <children/>`);
+    ev.push(`</event>`);
+  }
+  document.getElementById('xml-tab3-events').textContent = ev.join('\n');
+
+  /* ── cfgeventspawns.xml ── */
+  const sp = ['<!-- Generated by DayZ Mod Builder — EVOLFATE/Dayz-Library -->', ''];
+
+  if (heliCoords.length > 0) {
+    sp.push('<!-- Helicopter Crash Spawn Points -->');
+    sp.push('<event name="StaticHeliCrash">');
+    heliCoords.forEach(c => {
+      sp.push(`    <!-- ${c.label} -->`);
+      sp.push(`    <pos x="${c.x.toFixed(2)}" z="${c.z.toFixed(2)}" a="0"/>`);
+    });
+    sp.push('</event>');
+    sp.push('');
+  }
+
+  if (planeCoords.length > 0) {
+    sp.push('<!-- Plane Crash Spawn Points -->');
+    sp.push('<event name="StaticPlaneCrash">');
+    planeCoords.forEach(c => {
+      sp.push(`    <!-- ${c.label} -->`);
+      sp.push(`    <pos x="${c.x.toFixed(2)}" z="${c.z.toFixed(2)}" a="0"/>`);
+    });
+    sp.push('</event>');
+    sp.push('');
+  }
+
+  if (contOn) {
+    const cx = parseFloat(document.getElementById('contX').value || '0');
+    const cz = parseFloat(document.getElementById('contZ').value || '0');
+    sp.push('<!-- Contaminated Zone -->');
+    sp.push('<event name="ContaminatedArea_Dynamic">');
+    sp.push(`    <pos x="${cx.toFixed(2)}" z="${cz.toFixed(2)}" a="0"/>`);
+    sp.push('</event>');
+  }
+
+  if (sp.length <= 2) sp.push('<!-- No coordinates entered yet -->');
+  document.getElementById('xml-tab3-spawns').textContent = sp.join('\n');
+  updateSummary();
+}
+
+/* ─────────────────────────────────────────────────────────────
+   TAB 5 — ZOMBIE DENSITY
+───────────────────────────────────────────────────────────── */
+function buildZombieZones() {
+  const c = document.getElementById('zombieZones');
+  c.innerHTML = '';
+  ZOMBIE_ZONES.forEach((z, i) => {
+    const d = document.createElement('div');
+    d.className = 'zone-card';
+    d.innerHTML = `
+      <div class="zone-header">
+        <span class="zone-name">${z.zone}</span>
+        <span class="zone-vals" id="zv${i}">min:${z.vanillaMin} / max:${z.vanillaMax}</span>
+      </div>
+      <div style="font-size:.72rem;color:var(--text-secondary);margin-bottom:8px;">
+        Vanilla: min ${z.vanillaMin} / max ${z.vanillaMax}
+      </div>
+      <div style="font-size:.76rem;color:var(--text-secondary);margin-bottom:4px;">
+        Zone Multiplier: <span id="zm${i}v" style="color:var(--accent);font-weight:600;">1x</span>
+      </div>
+      <input type="range" id="zm${i}" min="0.5" max="4" step="0.5" value="1"
+        oninput="document.getElementById('zm${i}v').textContent=this.value+'x';updateZombieXml()">
+      <div class="range-labels"><span>0.5x</span><span>1x</span><span>2x</span><span>3x</span><span>4x</span></div>`;
+    c.appendChild(d);
+  });
+}
+
+function updateZombieXml() {
+  const gM = parseFloat(document.getElementById('globalZombieMult').value);
+  const lines = [
+    '<!-- Generated by DayZ Mod Builder — EVOLFATE/Dayz-Library -->',
+    `<!-- Global multiplier: ${gM}x -->`,
+    '<economy>',
+  ];
+  ZOMBIE_ZONES.forEach((z, i) => {
+    const zM   = parseFloat(document.getElementById('zm' + i)?.value || '1');
+    const tot  = gM * zM;
+    const mn   = Math.max(1, Math.round(z.vanillaMin * tot));
+    const mx   = Math.max(2, Math.round(z.vanillaMax * tot));
+    const vEl  = document.getElementById('zv' + i);
+    if (vEl) vEl.textContent = `min:${mn} / max:${mx}`;
+    lines.push(`    <zone type="${z.zone}" min="${mn}" max="${mx}" />`);
+  });
+  lines.push('</economy>');
+  document.getElementById('xml-tab4').textContent = lines.join('\n');
+  updateSummary();
+}
+
+/* ─────────────────────────────────────────────────────────────
+   TAB 6 — SPAWN HUB BUILDER
+───────────────────────────────────────────────────────────── */
+function buildDestZones() {
+  const c = document.getElementById('destZones');
+  c.innerHTML = '';
+  for (let i = 0; i < 10; i++) {
+    const d = document.createElement('div');
+    d.className = 'dest-row';
+    d.innerHTML = `
+      <span class="coord-num">${i+1}</span>
+      <input type="text"   id="dn${i}"  placeholder="Zone name"   oninput="updateSpawnHubXml()">
+      <input type="number" id="dx${i}"  placeholder="X" step="0.1" oninput="updateSpawnHubXml()">
+      <input type="number" id="dz${i}"  placeholder="Z" step="0.1" oninput="updateSpawnHubXml()">
+      <input type="text"   id="dd${i}"  placeholder="Description" oninput="updateSpawnHubXml()">
+      <button class="btn btn-sm" onclick="clearDest(${i})" title="Clear row">✕</button>`;
+    c.appendChild(d);
+  }
+}
+
+function clearDest(i) {
+  ['dn','dx','dz','dd'].forEach(p => { const el = document.getElementById(p+i); if(el) el.value=''; });
+  updateSpawnHubXml();
+}
+
+function applyHubPreset(preset) {
+  if (preset === 'skalisty' && document.getElementById('presetSkalisty').checked) {
+    document.getElementById('presetPrison').checked = false;
+    document.getElementById('hubX').value  = '13490';
+    document.getElementById('hubZ').value  = '3095';
+    document.getElementById('hubLabel').value = 'Skalisty Island';
+    document.getElementById('hubMap').value   = 'chernarusplus';
+  } else if (preset === 'prison' && document.getElementById('presetPrison').checked) {
+    document.getElementById('presetSkalisty').checked = false;
+    document.getElementById('hubX').value  = '7030';
+    document.getElementById('hubZ').value  = '3750';
+    document.getElementById('hubLabel').value = 'Prison Island';
+    document.getElementById('hubMap').value   = 'enoch';
+  }
+  updateSpawnHubXml();
+}
+
+function toggleStarterKit() {
+  const on = document.getElementById('starterKitEnable').checked;
+  document.getElementById('starterKitConfig').style.display    = on ? 'block' : 'none';
+  document.getElementById('starterKitXmlPanel').style.display  = on ? 'block' : 'none';
+}
+
+function updateSpawnHubXml() {
+  const hx  = parseFloat(document.getElementById('hubX').value || '0');
+  const hz  = parseFloat(document.getElementById('hubZ').value || '0');
+  const lbl = document.getElementById('hubLabel').value  || 'Spawn Hub';
+  const map = document.getElementById('hubMap').value;
+  const mapNames = {chernarusplus:'Chernarus', enoch:'Livonia', sakhal:'Sakhal'};
+
+  const sp = [
+    `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>`,
+    `<!-- Generated by DayZ Mod Builder — EVOLFATE/Dayz-Library -->`,
+    `<!-- Hub Location: ${lbl} (${mapNames[map]}) -->`,
+    `<spawn_points>`,
+    `    <!-- SPAWN HUB: ${lbl} -->`,
+    `    <pos x="${hx.toFixed(1)}" z="${hz.toFixed(1)}"/>`,
+    `    <pos x="${(hx+12).toFixed(1)}" z="${(hz+13).toFixed(1)}"/>`,
+    `    <pos x="${(hx-8).toFixed(1)}" z="${(hz+5).toFixed(1)}"/>`,
+    '',
+  ];
+
+  const dests = [];
+  for (let i = 0; i < 10; i++) {
+    const n = document.getElementById('dn' + i)?.value;
+    const x = document.getElementById('dx' + i)?.value;
+    const z = document.getElementById('dz' + i)?.value;
+    const d = document.getElementById('dd' + i)?.value;
+    if (n && x && z) dests.push({n, x: parseFloat(x), z: parseFloat(z), d});
+  }
+  dests.forEach(dest => {
+    sp.push(`    <!-- DESTINATION: ${dest.n}${dest.d ? ' — '+dest.d : ''} -->`);
+    sp.push(`    <pos x="${dest.x.toFixed(1)}" z="${dest.z.toFixed(1)}"/>`);
+  });
+  sp.push(`</spawn_points>`);
+  document.getElementById('xml-tab5-spawns').textContent = sp.join('\n');
+
+  /* Discord card */
+  let disc = `📍 **Server Spawn Guide — ${mapNames[map]}**\n\n`;
+  disc += `🏠 **Spawn Hub:** ${lbl}\n`;
+  disc += `   Coordinates: X=${hx.toFixed(0)}, Z=${hz.toFixed(0)}\n`;
+  if (dests.length > 0) {
+    disc += `\n🗺️ **Available Destinations:**\n`;
+    dests.forEach((dest, i) => {
+      disc += `\n${i+1}. **${dest.n}**`;
+      if (dest.d) disc += ` — ${dest.d}`;
+      disc += `\n   📌 X=${dest.x.toFixed(0)}, Z=${dest.z.toFixed(0)}`;
+    });
+  }
+  disc += `\n\n💡 *Use the in-game map to navigate to your chosen destination.*`;
+  disc += `\n📖 *Generated by DayZ Mod Builder — EVOLFATE/Dayz-Library*`;
+  document.getElementById('xml-tab5-discord').textContent = disc;
+
+  /* Starter kit */
+  if (document.getElementById('starterKitEnable').checked) {
+    const tier  = document.getElementById('starterKitTier').value;
+    const items = STARTER_KITS[tier];
+    const kl    = [
+      '<!-- Generated by DayZ Mod Builder — EVOLFATE/Dayz-Library -->',
+      `<!-- Starter Kit Tier: ${tier} -->`,
+      '',
+    ];
+    items.forEach(cls => {
+      kl.push(`<type name="${cls}">`);
+      kl.push(`    <nominal>5</nominal>`);
+      kl.push(`    <lifetime>14400</lifetime>`);
+      kl.push(`    <restock>1800</restock>`);
+      kl.push(`    <min>2</min>`);
+      kl.push(`    <quantmin>-1</quantmin>`);
+      kl.push(`    <quantmax>-1</quantmax>`);
+      kl.push(`    <cost>100</cost>`);
+      kl.push(`    <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>`);
+      kl.push(`</type>`);
+      kl.push('');
+    });
+    document.getElementById('xml-tab5-kit').textContent = kl.join('\n');
+  }
+  updateSummary();
+}
+
+/* ─────────────────────────────────────────────────────────────
+   PRESETS
+───────────────────────────────────────────────────────────── */
+function applyPreset(preset) {
+  document.getElementById('presetDesc').textContent = PRESET_DESCS[preset] || '';
+  if (preset === 'custom') return;
+  const p = PRESETS[preset];
+  if (!p) return;
+
+  /* Animals */
+  ANIMALS.forEach((animal, i) => {
+    let m = p.animalMult;
+    if (preset === 'hardcore') {
+      if (animal.eventName === 'AnimalWolf') m = p.wolfMult || 3;
+      if (animal.eventName === 'AnimalBear') m = p.bearMult || 3;
+    }
+    const sel = document.getElementById('aMult' + i);
+    if (sel) { sel.value = nearestOption(sel, m); refreshAnimalCard(i); }
+  });
+
+  /* Weapon multiplier */
+  const wSel = document.getElementById('weaponMultiplier');
+  if (wSel) wSel.value = nearestOption(wSel, p.weaponMult);
+
+  /* Ammo multiplier */
+  const aEl = document.getElementById('ammoMultiplier');
+  if (aEl) { aEl.value = clamp(p.ammoMult, 1, 5); document.getElementById('ammoMultVal').textContent = aEl.value + 'x'; }
+
+  const mEl = document.getElementById('magMultiplier');
+  if (mEl) { mEl.value = clamp(p.magMult, 1, 5); document.getElementById('magMultVal').textContent = mEl.value + 'x'; }
+
+  /* Hunting */
+  const hEl = document.getElementById('huntMultiplier');
+  if (hEl) { hEl.value = clamp(p.huntMult, 1, 4); document.getElementById('huntMultVal').textContent = hEl.value + 'x'; }
+
+  const tEl = document.getElementById('trapMultiplier');
+  if (tEl) { tEl.value = clamp(p.trapMult, 1, 4); document.getElementById('trapMultVal').textContent = tEl.value + 'x'; }
+
+  const mMed = document.getElementById('medMultiplier');
+  if (mMed) { mMed.value = clamp(p.medMult, 1, 4); document.getElementById('medMultVal').textContent = mMed.value + 'x'; }
+
+  /* Zombie */
+  const zSel = document.getElementById('globalZombieMult');
+  if (zSel) zSel.value = nearestOption(zSel, p.zombieMult);
+
+  /* Regenerate everything */
+  updateAnimalXml();
+  updateWeaponsXml();
+  updateHuntingXml();
+  updateZombieXml();
+}
+
+function nearestOption(sel, target) {
+  let best = null, bestDiff = Infinity;
+  Array.from(sel.options).forEach(o => {
+    const v = parseFloat(o.value);
+    const diff = Math.abs(v - target);
+    if (diff < bestDiff) { bestDiff = diff; best = o.value; }
+  });
+  return best;
+}
+
+function clamp(v, lo, hi) { return Math.min(hi, Math.max(lo, v)); }
+
+/* ─────────────────────────────────────────────────────────────
+   COPY & DOWNLOAD
+───────────────────────────────────────────────────────────── */
+function copyXml(id) {
+  const txt = document.getElementById(id)?.textContent || '';
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(txt).then(() => toast('📋 Copied to clipboard!')).catch(() => fallbackCopy(txt));
+  } else { fallbackCopy(txt); }
+}
+
+function fallbackCopy(txt) {
+  // TODO: Remove once navigator.clipboard has universal support for file:// origins.
+  // execCommand('copy') is deprecated (WHATWG) but intentionally kept here as a
+  // last-resort fallback for non-HTTPS / file:// contexts where the Clipboard API
+  // is unavailable. Do NOT remove this without providing an equivalent fallback.
+  const ta = document.createElement('textarea');
+  ta.value = txt;
+  ta.style.cssText = 'position:fixed;opacity:0;top:0;left:0;';
+  document.body.appendChild(ta);
+  ta.focus(); ta.select();
+  document.execCommand('copy');
+  document.body.removeChild(ta);
+  toast('📋 Copied to clipboard!');
+}
+
+function downloadXml(id, filename) {
+  const txt = document.getElementById(id)?.textContent || '';
+  const blob = new Blob([txt], {type:'text/xml;charset=utf-8;'});
+  const url  = URL.createObjectURL(blob);
+  const a    = document.createElement('a');
+  a.href = url; a.download = filename;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+  toast('💾 Downloaded ' + filename);
+}
+
+/* ─────────────────────────────────────────────────────────────
+   TOAST
+───────────────────────────────────────────────────────────── */
+function toast(msg) {
+  const el = document.getElementById('toast');
+  el.textContent = msg;
+  el.classList.add('show');
+  setTimeout(() => el.classList.remove('show'), 2800);
+}
+
+/* ─────────────────────────────────────────────────────────────
+   SUMMARY PANEL
+───────────────────────────────────────────────────────────── */
+function toggleSummary() {
+  const c = document.getElementById('summaryContent');
+  const a = document.getElementById('summaryArrow');
+  c.classList.toggle('open');
+  a.textContent = c.classList.contains('open') ? '▲' : '▼';
+}
+
+function updateSummary() {
+  const changes = [];
+  const files   = new Set();
+
+  /* Animals */
+  let animalChanged = false;
+  ANIMALS.forEach((a, i) => {
+    const en = document.getElementById('aEnabled' + i)?.checked;
+    if (!en) return;
+    const m = parseFloat(document.getElementById('aMult' + i)?.value || '1');
+    if (m !== 1) {
+      const newN = Math.max(1, Math.round(a.vanillaNominal * m));
+      changes.push(`• ${a.name}: ${a.vanillaNominal} → ${newN} (${m}x)`);
+      animalChanged = true;
+    }
+  });
+  if (animalChanged) files.add('/db/events.xml');
+
+  /* Weapons */
+  const wM = parseFloat(document.getElementById('weaponMultiplier')?.value || '1');
+  const aM = parseFloat(document.getElementById('ammoMultiplier')?.value   || '1');
+  const mM = parseFloat(document.getElementById('magMultiplier')?.value    || '1');
+  if (wM !== 1) { changes.push(`• Weapons: ${wM}x global`); files.add('/db/types.xml'); }
+  if (aM !== 1) { changes.push(`• Ammo: ${aM}x`);           files.add('/db/types.xml'); }
+  if (mM !== 1) { changes.push(`• Magazines: ${mM}x`);      files.add('/db/types.xml'); }
+
+  /* Hunting */
+  const hM   = parseFloat(document.getElementById('huntMultiplier')?.value || '1');
+  const tM   = parseFloat(document.getElementById('trapMultiplier')?.value  || '1');
+  const medM = parseFloat(document.getElementById('medMultiplier')?.value   || '1');
+  if (hM   !== 1) { changes.push(`• Hunting Gear: ${hM}x`);   files.add('/db/types.xml'); }
+  if (tM   !== 1) { changes.push(`• Survival/Traps: ${tM}x`); files.add('/db/types.xml'); }
+  if (medM !== 1) { changes.push(`• Medical: ${medM}x`);      files.add('/db/types.xml'); }
+
+  /* Zombies */
+  const gZ = parseFloat(document.getElementById('globalZombieMult')?.value || '1');
+  if (gZ !== 1) { changes.push(`• Zombie density: ${gZ}x global`); files.add('/cfgeconomycore.xml'); }
+  ZOMBIE_ZONES.forEach((z, i) => {
+    const zm = parseFloat(document.getElementById('zm' + i)?.value || '1');
+    if (zm !== 1) { changes.push(`• ${z.zone} zombies: ${zm}x zone`); files.add('/cfgeconomycore.xml'); }
+  });
+
+  /* Events */
+  const heliC = getCoords('heli', 20);
+  if (heliC.length > 0) files.add('/cfgeventspawns.xml');
+
+  document.getElementById('summaryCount').textContent = changes.length;
+
+  const grid = document.getElementById('summaryGrid');
+  if (changes.length === 0) {
+    grid.innerHTML = '<div style="color:var(--text-secondary);font-size:.82rem;">No changes from vanilla — all multipliers at 1x.</div>';
+    return;
+  }
+
+  /* Compat badge */
+  const eventsOn = document.getElementById('contaminatedEnable')?.checked || heliC.length > 0;
+  const compat   = eventsOn
+    ? '<span class="badge badge-warn" style="font-size:.72rem;">⚠️ PC Only (Events tab active)</span>'
+    : '<span class="badge" style="font-size:.72rem;">✅ Console Compatible</span>';
+
+  const half = Math.ceil(changes.length / 2);
+  grid.innerHTML = `
+    <div class="summary-section">
+      <h4>📁 Files to Modify</h4>
+      <ul>${[...files].map(f=>`<li>• ${f}</li>`).join('')}</ul>
+    </div>
+    <div class="summary-section">
+      <h4>📝 Active Changes (${changes.length})</h4>
+      <ul>${changes.slice(0, half).map(c=>`<li>${c}</li>`).join('')}</ul>
+    </div>
+    <div class="summary-section">
+      <h4>&nbsp;</h4>
+      <ul>${changes.slice(half).map(c=>`<li>${c}</li>`).join('')}</ul>
+    </div>
+    <div class="summary-section">
+      <h4>🖥️ Compatibility</h4>
+      ${compat}
+    </div>`;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   BOOT
+───────────────────────────────────────────────────────────── */
+document.addEventListener('DOMContentLoaded', init);
+</script>
+</body>
+</html>
