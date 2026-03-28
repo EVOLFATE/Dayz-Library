@@ -5,6 +5,10 @@ Working code examples and implementations for DayZ modding.
 
 ## Available Examples
 
+### Animals
+Animal territory configurations (wolf spawns, pack sizes, coastal and wilderness zones).
+- See: [animals/](animals/)
+
 ### Items
 Custom item implementations.
 - See: [items/](items/)

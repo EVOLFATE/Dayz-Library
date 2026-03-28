@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Wolf Territories - Chernarus
+    ==============================
+    PURPOSE : Adds wolf spawn zones across the entire Chernarus map.
+              Wolves patrol the coastline, lurk near towns, and form
+              large dangerous packs in remote wilderness areas.
+
+    USAGE   : Drop this file into your mpmissions/dayzOffline.chernarusplus/env/
+              folder. DayZ loads all zombie_territories*.xml files automatically,
+              but this file uses territory-type directly and must be placed where
+              your server loads animal territory files.
+              Rename to match your server's animal territory filename convention
+              (e.g., animal_territories.xml or wolf_territories.xml).
+
+    ZONE NAME : "Wolf" — the official DayZ animal class name for wolves.
+
+    DESIGN GOALS:
+      - Coastal wolves  : Small roaming packs (1–3), radius 150–250 m
+                          Spawn along southern and eastern shorelines
+      - Near-town wolves: Lurking packs (2–4), radius 150–200 m
+                          Forest edges and outskirts, never inside towns
+      - Wilderness packs: Large dangerous packs (6–15+), radius 300–500 m
+                          Remote forests, hills, and wilderness across the map
+                          Some zones use smin/smax for conditional activation
+
+    TERRITORY COLORS:
+      1090519039  — Coastal wolves  (blue-toned)
+      4278255615  — Near-town wolves (yellow/amber)
+      4278190335  — Wilderness packs (red/orange)
+
+    COORDINATE SYSTEM:
+      x = east–west  (0 = far west, ~15360 = far east)
+      z = north–south (0 = far south coast, ~15360 = far north)
+
+    ATTRIBUTE REFERENCE:
+      smin/smax = min/max survivors (players) needed to activate zone
+                  0/0 = always active regardless of player count
+      dmin/dmax = min/max wolves that can spawn in the zone per cycle
+      r         = radius in metres
+-->
+<territory-type>
+
+    <!-- ============================================================ -->
+    <!-- COASTAL WOLVES                                                -->
+    <!-- Small roaming packs stalking beaches, cliffs, and docks      -->
+    <!-- along the southern and eastern coastline of Chernarus.       -->
+    <!-- color=1090519039 (blue-toned)                                -->
+    <!-- dmin="1" dmax="3"  |  r=150–250                              -->
+    <!-- ============================================================ -->
+    <territory color="1090519039">
+
+        <!-- Kamenka coast -->
+        <zone name="Wolf" smin="0" smax="0" dmin="1" dmax="3" x="421" z="2345" r="200"/>
+        <zone name="Wolf" smin="0" smax="0" dmin="1" dmax="2" x="680" z="2180" r="150"/>
+
+        <!-- Komarovo coast -->
+        <zone name="Wolf" smin="0" smax="0" dmin="1" dmax="3" x="1380" z="2160" r="200"/>
+        <zone name="Wolf" smin="0" smax="0" dmin="1" dmax="2" x="1820" z="2090" r="150"/>
+
+        <!-- Chernogorsk waterfront -->
+        <zone name="Wolf" smin="0" smax="0" dmin="1" dmax="3" x="2640" z="2380" r="200"/>
+        <zone name="Wolf" smin="0" smax="0" dmin="1" dmax="2" x="3060" z="2200" r="150"/>
+        <zone name="Wolf" smin="0" smax="0" dmin="1" dmax="3" x="3420" z="2080" r="180"/>
+
+        <!-- Coast between Chernogorsk and Elektrozavodsk -->
+        <zone name="Wolf" smin="0" smax="0" dmin="1" dmax="2" x="3900" z="2020" r="200"/>
+        <zone name="Wolf" smin="0" smax="0" dmin="1" dmax="3" x="4200" z="2000" r="150"/>
+
+        <!-- Elektrozavodsk coast -->
+        <zone name="Wolf" smin="0" smax="0" dmin="1" dmax="3" x="4500" z="1980" r="200"/>
+        <zone name="Wolf" smin="0" smax="0" dmin="1" dmax="2" x="4840" z="2050" r="150"/>
+
+        <!-- Coast east of Elektrozavodsk -->
+        <zone name="Wolf" smin="0" smax="0" dmin="1" dmax="3" x="5600" z="2100" r="200"/>
+        <zone name="Wolf" smin="0" smax="0" dmin="1" dmax="2" x="6300" z="2080" r="180"/>
+
+        <!-- Nizhnoye / Dolina coastal approach -->
+        <zone name="Wolf" smin="0" smax="0" dmin="1" dmax="3" x="7200" z="2100" r="200"/>
+        <zone name="Wolf" smin="0" smax="0" dmin="1" dmax="2" x="8000" z="2060" r="150"/>
+
+        <!-- Solnechiy coast (east) -->
+        <zone name="Wolf" smin="0" smax="0" dmin="1" dmax="3" x="9200" z="1980" r="200"/>
+        <zone name="Wolf" smin="0" smax="0" dmin="1" dmax="3" x="10000" z="1860" r="200"/>
+        <zone name="Wolf" smin="0" smax="0" dmin="1" dmax="2" x="10700" z="1900" r="180"/>
+        <zone name="Wolf" smin="0" smax="0" dmin="1" dmax="3" x="11200" z="1940" r="200"/>
+
+        <!-- Berezino coast -->
+        <zone name="Wolf" smin="0" smax="0" dmin="1" dmax="3" x="10180" z="2450" r="200"/>
+        <zone name="Wolf" smin="0" smax="0" dmin="1" dmax="2" x="10600" z="2700" r="150"/>
+
+        <!-- Kamyshovo and northeast coast approach -->
+        <zone name="Wolf" smin="0" smax="0" dmin="1" dmax="3" x="11600" z="2800" r="200"/>
+        <zone name="Wolf" smin="0" smax="0" dmin="1" dmax="2" x="11900" z="3200" r="180"/>
+
+        <!-- Svetloyarsk coast (northeast) -->
+        <zone name="Wolf" smin="0" smax="0" dmin="1" dmax="3" x="12200" z="2400" r="200"/>
+        <zone name="Wolf" smin="0" smax="0" dmin="1" dmax="3" x="12600" z="2900" r="200"/>
+        <zone name="Wolf" smin="0" smax="0" dmin="1" dmax="2" x="12900" z="3400" r="150"/>
+
+        <!-- Coastal cliffs and docks northeast -->
+        <zone name="Wolf" smin="0" smax="0" dmin="1" dmax="3" x="13400" z="4200" r="200"/>
+        <zone name="Wolf" smin="0" smax="0" dmin="1" dmax="2" x="13800" z="5000" r="180"/>
+        <zone name="Wolf" smin="0" smax="0" dmin="1" dmax="3" x="14100" z="6000" r="200"/>
+        <zone name="Wolf" smin="0" smax="0" dmin="1" dmax="2" x="14400" z="7000" r="200"/>
+
+        <!-- Coastal villages west (Kamenka–Komarovo chain) -->
+        <zone name="Wolf" smin="0" smax="0" dmin="1" dmax="2" x="900" z="2280" r="150"/>
+        <zone name="Wolf" smin="0" smax="0" dmin="1" dmax="3" x="1120" z="2320" r="180"/>
+
+    </territory>
+
+
+    <!-- ============================================================ -->
+    <!-- NEAR-TOWN WOLVES                                              -->
+    <!-- Packs lurking on forest edges and outskirts near major towns. -->
+    <!-- Wolves are outside towns, not inside.                         -->
+    <!-- color=4278255615 (yellow/amber)                               -->
+    <!-- dmin="2" dmax="4"  |  r=150–200                              -->
+    <!-- ============================================================ -->
+    <territory color="4278255615">
+
+        <!-- Chernogorsk outskirts — forest north -->
+        <zone name="Wolf" smin="0" smax="0" dmin="2" dmax="4" x="2850" z="3400" r="200"/>
+        <zone name="Wolf" smin="0" smax="0" dmin="2" dmax="3" x="3200" z="3600" r="180"/>
+
+        <!-- Zelenogorsk forest edge -->
+        <zone name="Wolf" smin="0" smax="0" dmin="2" dmax="4" x="2400" z="5100" r="200"/>
+        <zone name="Wolf" smin="0" smax="0" dmin="2" dmax="3" x="2200" z="5500" r="180"/>
+
+        <!-- Elektrozavodsk hills north -->
+        <zone name="Wolf" smin="0" smax="0" dmin="2" dmax="4" x="4600" z="2800" r="200"/>
+        <zone name="Wolf" smin="0" smax="0" dmin="2" dmax="3" x="4900" z="3200" r="180"/>
+
+        <!-- Berezino forest — northwest outskirts -->
+        <zone name="Wolf" smin="0" smax="0" dmin="2" dmax="4" x="9800" z="3400" r="200"/>
+        <zone name="Wolf" smin="0" smax="0" dmin="2" dmax="3" x="9500" z="3900" r="180"/>
+
+        <!-- Krasnostav area -->
+        <zone name="Wolf" smin="0" smax="0" dmin="2" dmax="4" x="9000" z="5000" r="200"/>
+        <zone name="Wolf" smin="0" smax="0" dmin="2" dmax="3" x="9600" z="4800" r="180"/>
+
+        <!-- Severograd woods -->
+        <zone name="Wolf" smin="0" smax="0" dmin="2" dmax="4" x="3700" z="11500" r="200"/>
+        <zone name="Wolf" smin="0" smax="0" dmin="2" dmax="3" x="4200" z="11300" r="180"/>
+
+        <!-- Novodmitrovsk forest — east tree line -->
+        <zone name="Wolf" smin="0" smax="0" dmin="2" dmax="4" x="11600" z="12000" r="200"/>
+        <zone name="Wolf" smin="0" smax="0" dmin="2" dmax="3" x="11300" z="12500" r="180"/>
+
+        <!-- Novaya Petrovka tree line -->
+        <zone name="Wolf" smin="0" smax="0" dmin="2" dmax="4" x="9200" z="13200" r="200"/>
+        <zone name="Wolf" smin="0" smax="0" dmin="2" dmax="3" x="9800" z="13500" r="180"/>
+
+        <!-- Novy Sobor area forests -->
+        <zone name="Wolf" smin="0" smax="0" dmin="2" dmax="4" x="7100" z="7900" r="200"/>
+        <zone name="Wolf" smin="0" smax="0" dmin="2" dmax="3" x="7600" z="7600" r="180"/>
+
+        <!-- Stary Sobor area forests -->
+        <zone name="Wolf" smin="0" smax="0" dmin="2" dmax="4" x="6500" z="7300" r="200"/>
+        <zone name="Wolf" smin="0" smax="0" dmin="2" dmax="3" x="6900" z="7100" r="180"/>
+
+        <!-- Vybor forest edge -->
+        <zone name="Wolf" smin="0" smax="0" dmin="2" dmax="4" x="5200" z="9000" r="200"/>
+        <zone name="Wolf" smin="0" smax="0" dmin="2" dmax="3" x="4900" z="9400" r="180"/>
+
+        <!-- Lopatino area — forest north -->
+        <zone name="Wolf" smin="0" smax="0" dmin="2" dmax="4" x="4700" z="8700" r="200"/>
+        <zone name="Wolf" smin="0" smax="0" dmin="2" dmax="3" x="5000" z="8400" r="180"/>
+
+        <!-- Gorka forest approach -->
+        <zone name="Wolf" smin="0" smax="0" dmin="2" dmax="4" x="8400" z="5900" r="200"/>
+        <zone name="Wolf" smin="0" smax="0" dmin="2" dmax="3" x="8700" z="5500" r="180"/>
+
+        <!-- Polana / Shakhovka tree line -->
+        <zone name="Wolf" smin="0" smax="0" dmin="2" dmax="4" x="9100" z="6200" r="200"/>
+        <zone name="Wolf" smin="0" smax="0" dmin="2" dmax="3" x="9500" z="6600" r="180"/>
+
+        <!-- Svetloyarsk forest outskirts -->
+        <zone name="Wolf" smin="0" smax="0" dmin="2" dmax="4" x="12400" z="2800" r="200"/>
+
+        <!-- Kabanino / Pushtoshka edge -->
+        <zone name="Wolf" smin="0" smax="0" dmin="2" dmax="3" x="6000" z="8200" r="180"/>
+        <zone name="Wolf" smin="0" smax="0" dmin="2" dmax="4" x="3100" z="7800" r="200"/>
+
+    </territory>
+
+
+    <!-- ============================================================ -->
+    <!-- WILDERNESS LARGE PACKS                                        -->
+    <!-- Dangerous packs roaming remote forests, hills, mountains,    -->
+    <!-- and wilderness far from towns. Random and deadly encounters.  -->
+    <!-- color=4278190335 (red/orange)                                 -->
+    <!-- dmin="6" dmax="12" or dmin="8" dmax="15"  |  r=300–500       -->
+    <!-- Some zones use smin/smax for conditional activation.         -->
+    <!-- ============================================================ -->
+    <territory color="4278190335">
+
+        <!-- Deep northwest forest west of NWAF -->
+        <zone name="Wolf" smin="0" smax="0" dmin="8" dmax="15" x="2800" z="10800" r="400"/>
+        <zone name="Wolf" smin="0" smax="0" dmin="6" dmax="12" x="3200" z="10200" r="350"/>
+
+        <!-- Tisy forest — deep wilderness -->
+        <zone name="Wolf" smin="0" smax="0" dmin="8" dmax="14" x="900" z="12900" r="450"/>
+        <zone name="Wolf" smin="4" smax="8" dmin="10" dmax="15" x="1400" z="13400" r="400"/>
+        <zone name="Wolf" smin="0" smax="0" dmin="6" dmax="12" x="600" z="13800" r="400"/>
+
+        <!-- Forest north of NWAF — remote patrol zone -->
+        <zone name="Wolf" smin="0" smax="0" dmin="8" dmax="15" x="5000" z="11800" r="400"/>
+        <zone name="Wolf" smin="0" smax="0" dmin="6" dmax="12" x="5600" z="11200" r="350"/>
+
+        <!-- Black Forest / Myshkino wilderness -->
+        <zone name="Wolf" smin="0" smax="0" dmin="8" dmax="15" x="1600" z="7500" r="450"/>
+        <zone name="Wolf" smin="4" smax="8" dmin="10" dmax="15" x="1200" z="6800" r="400"/>
+
+        <!-- Green Mountain hillsides — remote -->
+        <zone name="Wolf" smin="0" smax="0" dmin="8" dmax="14" x="3800" z="5600" r="400"/>
+        <zone name="Wolf" smin="0" smax="0" dmin="6" dmax="12" x="4300" z="5100" r="350"/>
+
+        <!-- Central wilderness between Vybor and Stary Sobor -->
+        <zone name="Wolf" smin="0" smax="0" dmin="8" dmax="15" x="5800" z="8700" r="400"/>
+        <zone name="Wolf" smin="0" smax="0" dmin="6" dmax="12" x="6400" z="8200" r="350"/>
+
+        <!-- Pulkovo forest plateau -->
+        <zone name="Wolf" smin="0" smax="0" dmin="8" dmax="14" x="5500" z="6000" r="400"/>
+        <zone name="Wolf" smin="4" smax="8" dmin="10" dmax="15" x="6000" z="6400" r="350"/>
+
+        <!-- Forest east of Stary Sobor — remote hill -->
+        <zone name="Wolf" smin="0" smax="0" dmin="8" dmax="15" x="7400" z="8600" r="450"/>
+        <zone name="Wolf" smin="0" smax="0" dmin="6" dmax="12" x="8000" z="8200" r="350"/>
+
+        <!-- Gorka north — dense forest ridge -->
+        <zone name="Wolf" smin="0" smax="0" dmin="8" dmax="15" x="9600" z="8400" r="400"/>
+        <zone name="Wolf" smin="0" smax="0" dmin="6" dmax="12" x="10400" z="8000" r="350"/>
+
+        <!-- Berezino north forests — deep interior -->
+        <zone name="Wolf" smin="0" smax="0" dmin="8" dmax="14" x="12200" z="8800" r="450"/>
+        <zone name="Wolf" smin="4" smax="8" dmin="10" dmax="15" x="12800" z="8400" r="400"/>
+
+        <!-- Northeast wilderness — forest between Krasnostav and Svetloyarsk -->
+        <zone name="Wolf" smin="0" smax="0" dmin="8" dmax="15" x="11800" z="3800" r="400"/>
+        <zone name="Wolf" smin="0" smax="0" dmin="6" dmax="12" x="12400" z="4600" r="350"/>
+
+        <!-- Northeast edge forest — remote hills -->
+        <zone name="Wolf" smin="0" smax="0" dmin="8" dmax="14" x="13600" z="9800" r="400"/>
+        <zone name="Wolf" smin="0" smax="0" dmin="6" dmax="12" x="14000" z="10600" r="350"/>
+
+        <!-- Grozovoy Pass ridge — north -->
+        <zone name="Wolf" smin="0" smax="0" dmin="8" dmax="15" x="2600" z="15200" r="450"/>
+        <zone name="Wolf" smin="4" smax="8" dmin="10" dmax="15" x="3400" z="15000" r="400"/>
+
+        <!-- North map ridge — remote high ground -->
+        <zone name="Wolf" smin="0" smax="0" dmin="8" dmax="14" x="5800" z="15400" r="400"/>
+        <zone name="Wolf" smin="0" smax="0" dmin="6" dmax="12" x="7400" z="15200" r="350"/>
+        <zone name="Wolf" smin="0" smax="0" dmin="8" dmax="15" x="9200" z="15000" r="400"/>
+
+        <!-- Forest corridor Sinistok to Novaya Petrovka -->
+        <zone name="Wolf" smin="0" smax="0" dmin="8" dmax="15" x="2200" z="11900" r="450"/>
+        <zone name="Wolf" smin="0" smax="0" dmin="6" dmax="12" x="3000" z="12600" r="400"/>
+
+        <!-- Novodmitrovsk — deep east forest -->
+        <zone name="Wolf" smin="4" smax="8" dmin="10" dmax="15" x="11400" z="13200" r="450"/>
+        <zone name="Wolf" smin="0" smax="0" dmin="8" dmax="14" x="10800" z="13800" r="400"/>
+
+        <!-- Central map wilderness — Altar area -->
+        <zone name="Wolf" smin="0" smax="0" dmin="8" dmax="15" x="8400" z="9400" r="500"/>
+        <zone name="Wolf" smin="0" smax="0" dmin="6" dmax="12" x="9000" z="9800" r="400"/>
+
+        <!-- South coast hills — remote cliff tops -->
+        <zone name="Wolf" smin="0" smax="0" dmin="8" dmax="14" x="6800" z="1900" r="350"/>
+        <zone name="Wolf" smin="0" smax="0" dmin="6" dmax="12" x="8200" z="1800" r="350"/>
+
+        <!-- East coast remote wilderness -->
+        <zone name="Wolf" smin="0" smax="0" dmin="8" dmax="15" x="14600" z="7800" r="400"/>
+        <zone name="Wolf" smin="4" smax="8" dmin="10" dmax="15" x="15000" z="9200" r="350"/>
+        <zone name="Wolf" smin="0" smax="0" dmin="8" dmax="14" x="14800" z="11000" r="400"/>
+
+        <!-- Central north — vast empty forest -->
+        <zone name="Wolf" smin="0" smax="0" dmin="8" dmax="15" x="7000" z="12000" r="500"/>
+        <zone name="Wolf" smin="0" smax="0" dmin="6" dmax="12" x="6200" z="12800" r="450"/>
+        <zone name="Wolf" smin="4" smax="8" dmin="10" dmax="15" x="5000" z="13400" r="450"/>
+
+        <!-- Remote western edge — isolated wilderness -->
+        <zone name="Wolf" smin="0" smax="0" dmin="8" dmax="14" x="400" z="9800" r="450"/>
+        <zone name="Wolf" smin="0" smax="0" dmin="6" dmax="12" x="700" z="7200" r="400"/>
+
+        <!-- Lopatino north — rolling wilderness hills -->
+        <zone name="Wolf" smin="0" smax="0" dmin="8" dmax="15" x="3600" z="9200" r="400"/>
+
+        <!-- Forest between Petrovka and Gvozdno — remote patrol -->
+        <zone name="Wolf" smin="0" smax="0" dmin="6" dmax="12" x="7800" z="9600" r="400"/>
+
+        <!-- Isolated wilderness patch central east -->
+        <zone name="Wolf" smin="0" smax="0" dmin="8" dmax="15" x="10600" z="6800" r="400"/>
+        <zone name="Wolf" smin="4" smax="8" dmin="10" dmax="15" x="11200" z="7400" r="350"/>
+
+    </territory>
+
+</territory-type>
