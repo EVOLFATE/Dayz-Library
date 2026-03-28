@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    events.xml — Realistic Vehicle Overhaul
+    ==========================================
+    Defines named spawn events for fixed-location vehicle spawns across
+    the Chernarus+ map. Coordinates are provided in cfgeventspawns.xml.
+
+    INSTALL PATH: mpmissions/dayzOffline.chernarusplus/db/events.xml
+
+    DESIGN PHILOSOPHY:
+    - Vehicles are a constant, expected feature of the landscape. Players
+      should see them frequently but find working ones rarely.
+    - Fixed spawn events anchor vehicles to believable locations: parking
+      lots, roadsides, gas stations, industrial yards, police checkpoints,
+      farm lanes, and highway verges.
+    - Lifetime is long (28800 s = 8 hours) — a vehicle that has just
+      spawned should persist through multiple player visits.
+    - saferadius prevents vehicles from spawning on top of each other or
+      inside buildings.
+
+    EVENT TYPES:
+      VehicleCivilianParking    — cars in town/city parking areas
+      VehicleRoadsideBreakdown  — abandoned vehicles along roads
+      VehicleGasStation         — vehicles at gas station forecourts
+      VehicleIndustrial         — trucks and work vehicles at industrial sites
+      VehiclePoliceCheckpoint   — police vehicles at stations/checkpoints
+      VehicleRuralFarm          — offroad vehicles at farms and villages
+      VehicleHighway            — vehicles along major highways
+
+    NOMINAL COUNTS (active on map at any time per event type):
+      VehicleCivilianParking    20
+      VehicleRoadsideBreakdown  18
+      VehicleGasStation         12
+      VehicleIndustrial         10
+      VehiclePoliceCheckpoint    8
+      VehicleRuralFarm          14
+      VehicleHighway            16
+-->
+<events>
+
+    <!-- ============================================================ -->
+    <!-- CIVILIAN PARKING                                             -->
+    <!-- Town and city parking lots, residential streets              -->
+    <!-- Most common vehicle event — sedans and hatchbacks            -->
+    <!-- ============================================================ -->
+    <event name="VehicleCivilianParking">
+        <nominal>20</nominal>
+        <min>12</min>
+        <max>28</max>
+        <lifetime>28800</lifetime>
+        <restock>3600</restock>
+        <saferadius>8</saferadius>
+        <distanceradius>30</distanceradius>
+        <cleanupradius>200</cleanupradius>
+        <flags deletable="0" init_random="0" remove_damaged="1"/>
+        <position>fixed</position>
+        <limit>mixed</limit>
+        <active>1</active>
+        <children>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="CivilianSedan"/>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="HatchbackSedan"/>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="Sedan_02"/>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="OffroadHatchback"/>
+        </children>
+    </event>
+
+    <!-- ============================================================ -->
+    <!-- ROADSIDE BREAKDOWN                                           -->
+    <!-- Abandoned vehicles along roads — pulled over, broken down    -->
+    <!-- Mixed types — could be anything that was driving before      -->
+    <!-- ============================================================ -->
+    <event name="VehicleRoadsideBreakdown">
+        <nominal>18</nominal>
+        <min>10</min>
+        <max>26</max>
+        <lifetime>28800</lifetime>
+        <restock>3600</restock>
+        <saferadius>5</saferadius>
+        <distanceradius>20</distanceradius>
+        <cleanupradius>200</cleanupradius>
+        <flags deletable="0" init_random="0" remove_damaged="1"/>
+        <position>fixed</position>
+        <limit>mixed</limit>
+        <active>1</active>
+        <children>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="CivilianSedan"/>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="OffroadHatchback"/>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="Sedan_02"/>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="HatchbackSedan"/>
+        </children>
+    </event>
+
+    <!-- ============================================================ -->
+    <!-- GAS STATION                                                  -->
+    <!-- Vehicles at gas station forecourts — people never left       -->
+    <!-- Often missing fuel; sometimes has a canister nearby          -->
+    <!-- ============================================================ -->
+    <event name="VehicleGasStation">
+        <nominal>12</nominal>
+        <min>6</min>
+        <max>18</max>
+        <lifetime>28800</lifetime>
+        <restock>3600</restock>
+        <saferadius>8</saferadius>
+        <distanceradius>25</distanceradius>
+        <cleanupradius>200</cleanupradius>
+        <flags deletable="0" init_random="0" remove_damaged="1"/>
+        <position>fixed</position>
+        <limit>mixed</limit>
+        <active>1</active>
+        <children>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="CivilianSedan"/>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="Sedan_02"/>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="OffroadHatchback"/>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="HatchbackSedan"/>
+        </children>
+    </event>
+
+    <!-- ============================================================ -->
+    <!-- INDUSTRIAL                                                   -->
+    <!-- Trucks and work vehicles at factories, sawmills, quarries    -->
+    <!-- Trucks are the dominant type here                            -->
+    <!-- ============================================================ -->
+    <event name="VehicleIndustrial">
+        <nominal>10</nominal>
+        <min>5</min>
+        <max>15</max>
+        <lifetime>28800</lifetime>
+        <restock>3600</restock>
+        <saferadius>10</saferadius>
+        <distanceradius>40</distanceradius>
+        <cleanupradius>200</cleanupradius>
+        <flags deletable="0" init_random="0" remove_damaged="1"/>
+        <position>fixed</position>
+        <limit>mixed</limit>
+        <active>1</active>
+        <children>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="Truck_01_02"/>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="OffroadHatchback"/>
+        </children>
+    </event>
+
+    <!-- ============================================================ -->
+    <!-- POLICE CHECKPOINT                                            -->
+    <!-- Police vehicles at stations and roadside checkpoints         -->
+    <!-- Police variants always paired with civilian for context      -->
+    <!-- ============================================================ -->
+    <event name="VehiclePoliceCheckpoint">
+        <nominal>8</nominal>
+        <min>4</min>
+        <max>12</max>
+        <lifetime>28800</lifetime>
+        <restock>3600</restock>
+        <saferadius>8</saferadius>
+        <distanceradius>30</distanceradius>
+        <cleanupradius>200</cleanupradius>
+        <flags deletable="0" init_random="0" remove_damaged="1"/>
+        <position>fixed</position>
+        <limit>mixed</limit>
+        <active>1</active>
+        <children>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="CivilianSedan_Police"/>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="OffroadHatchback_Police"/>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="Sedan_02_Police"/>
+        </children>
+    </event>
+
+    <!-- ============================================================ -->
+    <!-- RURAL FARM                                                   -->
+    <!-- Offroad and utility vehicles at farms and rural villages      -->
+    <!-- Working vehicles used by farmers — broken down after outbreak -->
+    <!-- ============================================================ -->
+    <event name="VehicleRuralFarm">
+        <nominal>14</nominal>
+        <min>8</min>
+        <max>20</max>
+        <lifetime>28800</lifetime>
+        <restock>3600</restock>
+        <saferadius>8</saferadius>
+        <distanceradius>30</distanceradius>
+        <cleanupradius>200</cleanupradius>
+        <flags deletable="0" init_random="0" remove_damaged="1"/>
+        <position>fixed</position>
+        <limit>mixed</limit>
+        <active>1</active>
+        <children>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="OffroadHatchback"/>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="Truck_01_02"/>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="CivilianSedan"/>
+        </children>
+    </event>
+
+    <!-- ============================================================ -->
+    <!-- HIGHWAY                                                      -->
+    <!-- Vehicles abandoned along major roads and highway stretches   -->
+    <!-- Mix of vehicles that were in transit when the outbreak hit   -->
+    <!-- ============================================================ -->
+    <event name="VehicleHighway">
+        <nominal>16</nominal>
+        <min>10</min>
+        <max>24</max>
+        <lifetime>28800</lifetime>
+        <restock>3600</restock>
+        <saferadius>5</saferadius>
+        <distanceradius>20</distanceradius>
+        <cleanupradius>200</cleanupradius>
+        <flags deletable="0" init_random="0" remove_damaged="1"/>
+        <position>fixed</position>
+        <limit>mixed</limit>
+        <active>1</active>
+        <children>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="CivilianSedan"/>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="Sedan_02"/>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="OffroadHatchback"/>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="HatchbackSedan"/>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="Truck_01_02"/>
+        </children>
+    </event>
+
+</events>

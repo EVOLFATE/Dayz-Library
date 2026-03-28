@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+    types.xml — Realistic Vehicle Overhaul
+    ========================================
+    Defines spawn counts, lifetimes, restock timers, and spawn zone usage
+    for all vanilla DayZ vehicle types.
+
+    INSTALL PATH: mpmissions/dayzOffline.chernarusplus/db/types.xml
+
+    DESIGN GOALS:
+    - High nominal counts so vehicles are a constant presence on the map
+    - Spread across all tiers and usage zones (Town, Village, Coast, Farm,
+      Industrial, Forest) so every region of the map has vehicles
+    - Trucks use lower nominal counts (they are rarer but impactful)
+    - Police variants are intentionally rarer than civilian equivalents
+
+    NOMINAL / MAX COUNTS (active on map at any time / ceiling):
+      CivilianSedan           30 / 45  — most common vehicle
+      OffroadHatchback        25 / 38  — offroad, all colours share this pool
+      HatchbackSedan          20 / 30  — compact civilian car
+      Sedan_02                20 / 30  — mid-size sedan
+      Truck_01_02             12 / 18  — V3S utility truck
+      CivilianSedan_Police     8 / 12  — police patrol sedan
+      OffroadHatchback_Police  6 / 10  — police offroad
+      Sedan_02_Police          6 / 10  — police mid-size sedan
+
+    LIFETIME: 28800 seconds (8 hours) — vehicles persist a long time
+    RESTOCK:  3600 seconds (1 hour)   — restocks gradually
+
+    NOTE: count_in_cargo="0" and count_in_player="0" are standard for
+    vehicles — they do not spawn inside containers or on players.
+-->
+<types>
+
+    <!-- ============================================================ -->
+    <!-- CIVILIAN SEDAN                                               -->
+    <!-- Most common car on the map — towns, roadsides, parking lots  -->
+    <!-- ============================================================ -->
+    <type name="CivilianSedan">
+        <nominal>30</nominal>
+        <lifetime>28800</lifetime>
+        <restock>3600</restock>
+        <min>20</min>
+        <max>45</max>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="vehicles"/>
+        <usage name="Town"/>
+        <usage name="Village"/>
+        <usage name="Coast"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+        <value name="Tier3"/>
+        <value name="Tier4"/>
+    </type>
+
+    <!-- ============================================================ -->
+    <!-- CIVILIAN SEDAN — POLICE VARIANT                              -->
+    <!-- At police stations, checkpoints, towns — rarer than civilian -->
+    <!-- ============================================================ -->
+    <type name="CivilianSedan_Police">
+        <nominal>8</nominal>
+        <lifetime>28800</lifetime>
+        <restock>3600</restock>
+        <min>4</min>
+        <max>12</max>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="vehicles"/>
+        <usage name="Town"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+        <value name="Tier3"/>
+        <value name="Tier4"/>
+    </type>
+
+    <!-- ============================================================ -->
+    <!-- OFFROAD HATCHBACK                                            -->
+    <!-- Rugged hatchback — towns, villages, farms, forest tracks     -->
+    <!-- Multiple colour variants share this entry                    -->
+    <!-- ============================================================ -->
+    <type name="OffroadHatchback">
+        <nominal>25</nominal>
+        <lifetime>28800</lifetime>
+        <restock>3600</restock>
+        <min>15</min>
+        <max>38</max>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="vehicles"/>
+        <usage name="Town"/>
+        <usage name="Village"/>
+        <usage name="Farm"/>
+        <usage name="Forest"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+        <value name="Tier3"/>
+        <value name="Tier4"/>
+    </type>
+
+    <!-- ============================================================ -->
+    <!-- OFFROAD HATCHBACK — POLICE VARIANT                           -->
+    <!-- Police offroad — checkpoints, rural patrols                  -->
+    <!-- ============================================================ -->
+    <type name="OffroadHatchback_Police">
+        <nominal>6</nominal>
+        <lifetime>28800</lifetime>
+        <restock>3600</restock>
+        <min>3</min>
+        <max>10</max>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="vehicles"/>
+        <usage name="Town"/>
+        <usage name="Village"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+        <value name="Tier3"/>
+        <value name="Tier4"/>
+    </type>
+
+    <!-- ============================================================ -->
+    <!-- HATCHBACK SEDAN                                              -->
+    <!-- Compact hatchback — towns, villages, coast, parking lots     -->
+    <!-- ============================================================ -->
+    <type name="HatchbackSedan">
+        <nominal>20</nominal>
+        <lifetime>28800</lifetime>
+        <restock>3600</restock>
+        <min>12</min>
+        <max>30</max>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="vehicles"/>
+        <usage name="Town"/>
+        <usage name="Village"/>
+        <usage name="Coast"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+        <value name="Tier3"/>
+        <value name="Tier4"/>
+    </type>
+
+    <!-- ============================================================ -->
+    <!-- SEDAN 02                                                     -->
+    <!-- Mid-size sedan — towns, villages, coast                      -->
+    <!-- ============================================================ -->
+    <type name="Sedan_02">
+        <nominal>20</nominal>
+        <lifetime>28800</lifetime>
+        <restock>3600</restock>
+        <min>12</min>
+        <max>30</max>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="vehicles"/>
+        <usage name="Town"/>
+        <usage name="Village"/>
+        <usage name="Coast"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+        <value name="Tier3"/>
+        <value name="Tier4"/>
+    </type>
+
+    <!-- ============================================================ -->
+    <!-- SEDAN 02 — POLICE VARIANT                                    -->
+    <!-- Police mid-size sedan — towns, checkpoints                   -->
+    <!-- ============================================================ -->
+    <type name="Sedan_02_Police">
+        <nominal>6</nominal>
+        <lifetime>28800</lifetime>
+        <restock>3600</restock>
+        <min>3</min>
+        <max>10</max>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="vehicles"/>
+        <usage name="Town"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+        <value name="Tier3"/>
+        <value name="Tier4"/>
+    </type>
+
+    <!-- ============================================================ -->
+    <!-- V3S TRUCK (Truck_01_02)                                      -->
+    <!-- Military/utility truck — industrial, farm, military sites    -->
+    <!-- Lower nominal — these are rarer and more impactful finds     -->
+    <!-- ============================================================ -->
+    <type name="Truck_01_02">
+        <nominal>12</nominal>
+        <lifetime>28800</lifetime>
+        <restock>3600</restock>
+        <min>6</min>
+        <max>18</max>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="vehicles"/>
+        <usage name="Town"/>
+        <usage name="Farm"/>
+        <usage name="Industrial"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+        <value name="Tier3"/>
+        <value name="Tier4"/>
+    </type>
+
+</types>
