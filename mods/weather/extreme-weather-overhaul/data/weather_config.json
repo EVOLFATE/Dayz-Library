@@ -1,0 +1,27 @@
+{
+    "enabled": true,
+    "minEventDurationMinutes": 10,
+    "maxEventDurationMinutes": 45,
+    "transitionTimeSeconds": 180,
+    "stormEscalationChance": 0.15,
+    "superCellEscalationChance": 0.10,
+    "lightningStrikeChance": 0.005,
+    "lightningDamage": 50,
+    "supercellDamagePerTick": 1.0,
+    "blizzardDamagePerTick": 2.0,
+    "heatWaveDehydrationMultiplier": 3.0,
+    "blizzardHypothermiaMultiplier": 4.0,
+    "perfectDayAnnouncement": true,
+    "debugLogging": true,
+    "weights": {
+        "CALM": 20,
+        "OVERCAST": 20,
+        "RAIN_STORM": 18,
+        "THUNDERSTORM": 12,
+        "SUPERCELL": 5,
+        "BLIZZARD": 5,
+        "FOG_WALL": 8,
+        "PERFECT_DAY": 5,
+        "HEAT_WAVE": 7
+    }
+}
