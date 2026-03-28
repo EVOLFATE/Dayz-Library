@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    events.xml — SERVER SETUP MERGED
+    ==================================
+    Full merged events.xml combining ALL animal spawn events and ALL vehicle
+    spawn events for DayZ Chernarus+ (dayzOffline.chernarusplus).
+
+    Sources merged:
+      1. animals/realistic-wildlife-overhaul/events.xml
+         - 13 animal events (AnimalHare through AnimalBear)
+      2. vehicles/realistic-vehicle-overhaul/events.xml
+         - 7 vehicle events (VehicleCivilianParking through VehicleHighway)
+
+    INSTALL PATH: mpmissions/dayzOffline.chernarusplus/db/events.xml
+    This is a FULL REPLACEMENT file — replace the original entirely.
+
+    ANIMAL NOMINAL COUNTS (active on map at any time):
+      Hare         80  — most common, everywhere
+      Roe Deer     50  — very common, rural/forest
+      Red Deer     35  — common, inland/meadows
+      Wild Boar    30  — moderately common, woodlands
+      Hen          60  — common, settlements/farms
+      Cattle       25  — farms and open fields
+      Sheep/Goat   20  — farms and hillsides
+      Pig          20  — mostly farms
+      DomAnimals   25  — mixed, near villages
+      Fox          30  — forest edges and farms
+      Wolf         20  — predator, spread entire map
+      Bear         15  — predator, rivers/forests/food sources
+
+    VEHICLE NOMINAL COUNTS (active on map at any time per event type):
+      VehicleCivilianParking    20
+      VehicleRoadsideBreakdown  18
+      VehicleGasStation         12
+      VehicleIndustrial         10
+      VehiclePoliceCheckpoint    8
+      VehicleRuralFarm          14
+      VehicleHighway            16
+-->
+<events>
+    <!-- ============================================================ -->
+    <!-- SECTION 1: ANIMAL EVENTS                                     -->
+    <!-- Source: animals/realistic-wildlife-overhaul/events.xml       -->
+    <!-- ============================================================ -->
+
+
+    <!-- ============================================================ -->
+    <!-- HARES — Most widespread prey animal                          -->
+    <!-- Everywhere: fields, forest edges, coast, villages            -->
+    <!-- ============================================================ -->
+    <event name="AnimalHare">
+        <nominal>80</nominal>
+        <min>50</min>
+        <max>120</max>
+        <lifetime>3600</lifetime>
+        <restock>0</restock>
+        <saferadius>200</saferadius>
+        <distanceradius>0</distanceradius>
+        <cleanupradius>200</cleanupradius>
+        <flags deletable="0" init_random="0" remove_damaged="1"/>
+        <position>fixed</position>
+        <limit>mixed</limit>
+        <active>1</active>
+        <children>
+            <!-- Small groups of 1-3 hares, occasionally up to 5 -->
+            <child lootmax="0" lootmin="0" max="3" min="1" type="Animal_Hare"/>
+        </children>
+    </event>
+
+    <!-- ============================================================ -->
+    <!-- ROE DEER — Very common prey, rural/forest                    -->
+    <!-- Fields, forest clearings, meadows, village outskirts         -->
+    <!-- ============================================================ -->
+    <event name="AnimalRoeDeer">
+        <nominal>50</nominal>
+        <min>30</min>
+        <max>70</max>
+        <lifetime>3600</lifetime>
+        <restock>0</restock>
+        <saferadius>300</saferadius>
+        <distanceradius>0</distanceradius>
+        <cleanupradius>200</cleanupradius>
+        <flags deletable="0" init_random="0" remove_damaged="1"/>
+        <position>fixed</position>
+        <limit>mixed</limit>
+        <active>1</active>
+        <children>
+            <!-- Small groups 2-5, occasionally up to 6 in clearings -->
+            <child lootmax="0" lootmin="0" max="5" min="2" type="Animal_RoeDeer"/>
+        </children>
+    </event>
+
+    <!-- ============================================================ -->
+    <!-- RED DEER — Common reward prey, inland meadows                -->
+    <!-- Bigger animal, more meat — slightly harder to find           -->
+    <!-- ============================================================ -->
+    <event name="AnimalRedDeer">
+        <nominal>35</nominal>
+        <min>20</min>
+        <max>50</max>
+        <lifetime>3600</lifetime>
+        <restock>0</restock>
+        <saferadius>400</saferadius>
+        <distanceradius>0</distanceradius>
+        <cleanupradius>200</cleanupradius>
+        <flags deletable="0" init_random="0" remove_damaged="1"/>
+        <position>fixed</position>
+        <limit>mixed</limit>
+        <active>1</active>
+        <children>
+            <!-- Small herds 3-8, occasional large herd up to 10 -->
+            <child lootmax="0" lootmin="0" max="8" min="3" type="Animal_RedDeer_Male"/>
+            <child lootmax="0" lootmin="0" max="4" min="1" type="Animal_RedDeer_Female"/>
+        </children>
+    </event>
+
+    <!-- ============================================================ -->
+    <!-- WILD BOAR — Moderately common, woodland/forest               -->
+    <!-- Forest floors, oak groves, farmland edges — they fight back  -->
+    <!-- ============================================================ -->
+    <event name="AnimalWildBoar">
+        <nominal>30</nominal>
+        <min>18</min>
+        <max>45</max>
+        <lifetime>3600</lifetime>
+        <restock>0</restock>
+        <saferadius>300</saferadius>
+        <distanceradius>0</distanceradius>
+        <cleanupradius>200</cleanupradius>
+        <flags deletable="0" init_random="0" remove_damaged="1"/>
+        <position>fixed</position>
+        <limit>mixed</limit>
+        <active>1</active>
+        <children>
+            <!-- Sounders of 3-8, large sounder up to 10 post-apocalypse -->
+            <child lootmax="0" lootmin="0" max="8" min="3" type="Animal_WildBoar"/>
+        </children>
+    </event>
+
+    <!-- ============================================================ -->
+    <!-- HENS / CHICKENS — Common at settlements                      -->
+    <!-- Every farm and village — easy early-game food                -->
+    <!-- ============================================================ -->
+    <event name="AnimalHen">
+        <nominal>60</nominal>
+        <min>35</min>
+        <max>90</max>
+        <lifetime>3600</lifetime>
+        <restock>0</restock>
+        <saferadius>150</saferadius>
+        <distanceradius>0</distanceradius>
+        <cleanupradius>150</cleanupradius>
+        <flags deletable="0" init_random="0" remove_damaged="1"/>
+        <position>fixed</position>
+        <limit>mixed</limit>
+        <active>1</active>
+        <children>
+            <!-- Small flocks 3-6, sometimes up to 8 at large farms -->
+            <child lootmax="0" lootmin="0" max="6" min="3" type="Animal_Hen"/>
+        </children>
+    </event>
+
+    <!-- ============================================================ -->
+    <!-- CATTLE — Farms and open fields (some feral)                  -->
+    <!-- Large meat reward — worth fighting over at farm locations     -->
+    <!-- ============================================================ -->
+    <event name="AnimalCow">
+        <nominal>25</nominal>
+        <min>12</min>
+        <max>38</max>
+        <lifetime>7200</lifetime>
+        <restock>0</restock>
+        <saferadius>400</saferadius>
+        <distanceradius>0</distanceradius>
+        <cleanupradius>200</cleanupradius>
+        <flags deletable="0" init_random="0" remove_damaged="1"/>
+        <position>fixed</position>
+        <limit>mixed</limit>
+        <active>1</active>
+        <children>
+            <!-- Small herds 2-5 per spawn point -->
+            <child lootmax="0" lootmin="0" max="5" min="2" type="Animal_Cow"/>
+        </children>
+    </event>
+
+    <!-- ============================================================ -->
+    <!-- SHEEP & GOATS — Farms and hillsides                          -->
+    <!-- Mixed flocks — some feral on hillsides post-apocalypse       -->
+    <!-- ============================================================ -->
+    <event name="AnimalSheepGoat">
+        <nominal>20</nominal>
+        <min>10</min>
+        <max>32</max>
+        <lifetime>7200</lifetime>
+        <restock>0</restock>
+        <saferadius>350</saferadius>
+        <distanceradius>0</distanceradius>
+        <cleanupradius>200</cleanupradius>
+        <flags deletable="0" init_random="0" remove_damaged="1"/>
+        <position>fixed</position>
+        <limit>mixed</limit>
+        <active>1</active>
+        <children>
+            <!-- Small flocks 3-6 -->
+            <child lootmax="0" lootmin="0" max="6" min="3" type="Animal_Goat"/>
+        </children>
+    </event>
+
+    <!-- ============================================================ -->
+    <!-- PIGS — Mostly farms, some feral near forests                 -->
+    <!-- Post-apocalypse some have escaped farms and gone wild        -->
+    <!-- ============================================================ -->
+    <event name="AnimalPig">
+        <nominal>20</nominal>
+        <min>10</min>
+        <max>30</max>
+        <lifetime>7200</lifetime>
+        <restock>0</restock>
+        <saferadius>300</saferadius>
+        <distanceradius>0</distanceradius>
+        <cleanupradius>200</cleanupradius>
+        <flags deletable="0" init_random="0" remove_damaged="1"/>
+        <position>fixed</position>
+        <limit>mixed</limit>
+        <active>1</active>
+        <children>
+            <!-- Groups 2-5 -->
+            <child lootmax="0" lootmin="0" max="5" min="2" type="Animal_Pig"/>
+        </children>
+    </event>
+
+    <!-- ============================================================ -->
+    <!-- DOMESTIC ANIMALS — Mixed, near villages                      -->
+    <!-- General domestic animal spawning for settlement atmosphere    -->
+    <!-- ============================================================ -->
+    <event name="AnimalDomestic">
+        <nominal>25</nominal>
+        <min>12</min>
+        <max>38</max>
+        <lifetime>7200</lifetime>
+        <restock>0</restock>
+        <saferadius>300</saferadius>
+        <distanceradius>0</distanceradius>
+        <cleanupradius>200</cleanupradius>
+        <flags deletable="0" init_random="0" remove_damaged="1"/>
+        <position>fixed</position>
+        <limit>mixed</limit>
+        <active>1</active>
+        <children>
+            <!-- Small mixed groups 2-4 -->
+            <child lootmax="0" lootmin="0" max="4" min="2" type="Animal_Goat"/>
+        </children>
+    </event>
+
+    <!-- ============================================================ -->
+    <!-- FOXES — Forest edges and farms (hunt hares and hens)         -->
+    <!-- Overlap deliberately with hen/hare territories               -->
+    <!-- ============================================================ -->
+    <event name="AnimalFox">
+        <nominal>30</nominal>
+        <min>18</min>
+        <max>45</max>
+        <lifetime>3600</lifetime>
+        <restock>0</restock>
+        <saferadius>250</saferadius>
+        <distanceradius>0</distanceradius>
+        <cleanupradius>200</cleanupradius>
+        <flags deletable="0" init_random="0" remove_damaged="1"/>
+        <position>fixed</position>
+        <limit>mixed</limit>
+        <active>1</active>
+        <children>
+            <!-- Solitary or pairs — foxes are mostly solo hunters -->
+            <child lootmax="0" lootmin="0" max="3" min="1" type="Animal_Fox"/>
+        </children>
+    </event>
+
+    <!-- ============================================================ -->
+    <!-- WOLVES — PREDATOR: Entire map, mixed pack sizes              -->
+    <!-- EXPANDED from vanilla (vanilla: nominal=8, far north only)   -->
+    <!-- Mixed packs: small 2-3 scouts to large 8-12 mega-packs       -->
+    <!-- Coastal wolves, forest packs, mountain packs — everywhere    -->
+    <!-- ============================================================ -->
+    <event name="AnimalWolf">
+        <nominal>20</nominal>
+        <min>12</min>
+        <max>30</max>
+        <lifetime>3600</lifetime>
+        <restock>0</restock>
+        <saferadius>500</saferadius>
+        <distanceradius>0</distanceradius>
+        <cleanupradius>300</cleanupradius>
+        <flags deletable="0" init_random="0" remove_damaged="1"/>
+        <position>fixed</position>
+        <limit>mixed</limit>
+        <active>1</active>
+        <children>
+            <!-- Mixed pack sizes: small scout packs (2-3) to large packs (8-12) -->
+            <!-- Small scout packs — frequent, dangerous alone -->
+            <child lootmax="0" lootmin="0" max="3" min="2" type="Animal_Wolf"/>
+            <!-- Standard forest pack -->
+            <child lootmax="0" lootmin="0" max="7" min="4" type="Animal_Wolf"/>
+            <!-- Large pack — apex predator encounter -->
+            <child lootmax="0" lootmin="0" max="12" min="8" type="Animal_Wolf"/>
+        </children>
+    </event>
+
+    <!-- White wolves — northern forests and mountain ridges -->
+    <event name="AnimalWolf_White">
+        <nominal>8</nominal>
+        <min>4</min>
+        <max>12</max>
+        <lifetime>3600</lifetime>
+        <restock>0</restock>
+        <saferadius>600</saferadius>
+        <distanceradius>0</distanceradius>
+        <cleanupradius>300</cleanupradius>
+        <flags deletable="0" init_random="0" remove_damaged="1"/>
+        <position>fixed</position>
+        <limit>mixed</limit>
+        <active>1</active>
+        <children>
+            <!-- Northern ghost packs — smaller but deadly -->
+            <child lootmax="0" lootmin="0" max="5" min="2" type="Animal_Wolf_White"/>
+        </children>
+    </event>
+
+    <!-- ============================================================ -->
+    <!-- BEARS — PREDATOR: Map-wide, rivers/forests/food sources      -->
+    <!-- EXPANDED from vanilla (vanilla: ~5-6 territories, far north) -->
+    <!-- Bears near rivers, orchards, farms — they follow food        -->
+    <!-- Post-apocalypse: bolder, ranging further south               -->
+    <!-- ============================================================ -->
+    <event name="AnimalBear">
+        <nominal>15</nominal>
+        <min>8</min>
+        <max>22</max>
+        <lifetime>7200</lifetime>
+        <restock>0</restock>
+        <saferadius>700</saferadius>
+        <distanceradius>0</distanceradius>
+        <cleanupradius>400</cleanupradius>
+        <flags deletable="0" init_random="0" remove_damaged="1"/>
+        <position>fixed</position>
+        <limit>mixed</limit>
+        <active>1</active>
+        <children>
+            <!-- Mostly solitary, occasionally a mother with 1-2 cubs -->
+            <child lootmax="0" lootmin="0" max="2" min="1" type="Animal_Bear"/>
+        </children>
+    </event>
+
+
+    <!-- ============================================================ -->
+    <!-- SECTION 2: VEHICLE EVENTS                                    -->
+    <!-- Source: vehicles/realistic-vehicle-overhaul/events.xml       -->
+    <!-- ============================================================ -->
+
+
+    <!-- ============================================================ -->
+    <!-- CIVILIAN PARKING                                             -->
+    <!-- Town and city parking lots, residential streets              -->
+    <!-- Most common vehicle event — sedans and hatchbacks            -->
+    <!-- ============================================================ -->
+    <event name="VehicleCivilianParking">
+        <nominal>20</nominal>
+        <min>12</min>
+        <max>28</max>
+        <lifetime>28800</lifetime>
+        <restock>3600</restock>
+        <saferadius>8</saferadius>
+        <distanceradius>30</distanceradius>
+        <cleanupradius>200</cleanupradius>
+        <flags deletable="0" init_random="0" remove_damaged="1"/>
+        <position>fixed</position>
+        <limit>mixed</limit>
+        <active>1</active>
+        <children>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="CivilianSedan"/>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="HatchbackSedan"/>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="Sedan_02"/>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="OffroadHatchback"/>
+        </children>
+    </event>
+
+    <!-- ============================================================ -->
+    <!-- ROADSIDE BREAKDOWN                                           -->
+    <!-- Abandoned vehicles along roads — pulled over, broken down    -->
+    <!-- Mixed types — could be anything that was driving before      -->
+    <!-- ============================================================ -->
+    <event name="VehicleRoadsideBreakdown">
+        <nominal>18</nominal>
+        <min>10</min>
+        <max>26</max>
+        <lifetime>28800</lifetime>
+        <restock>3600</restock>
+        <saferadius>5</saferadius>
+        <distanceradius>20</distanceradius>
+        <cleanupradius>200</cleanupradius>
+        <flags deletable="0" init_random="0" remove_damaged="1"/>
+        <position>fixed</position>
+        <limit>mixed</limit>
+        <active>1</active>
+        <children>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="CivilianSedan"/>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="OffroadHatchback"/>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="Sedan_02"/>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="HatchbackSedan"/>
+        </children>
+    </event>
+
+    <!-- ============================================================ -->
+    <!-- GAS STATION                                                  -->
+    <!-- Vehicles at gas station forecourts — people never left       -->
+    <!-- Often missing fuel; sometimes has a canister nearby          -->
+    <!-- ============================================================ -->
+    <event name="VehicleGasStation">
+        <nominal>12</nominal>
+        <min>6</min>
+        <max>18</max>
+        <lifetime>28800</lifetime>
+        <restock>3600</restock>
+        <saferadius>8</saferadius>
+        <distanceradius>25</distanceradius>
+        <cleanupradius>200</cleanupradius>
+        <flags deletable="0" init_random="0" remove_damaged="1"/>
+        <position>fixed</position>
+        <limit>mixed</limit>
+        <active>1</active>
+        <children>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="CivilianSedan"/>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="Sedan_02"/>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="OffroadHatchback"/>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="HatchbackSedan"/>
+        </children>
+    </event>
+
+    <!-- ============================================================ -->
+    <!-- INDUSTRIAL                                                   -->
+    <!-- Trucks and work vehicles at factories, sawmills, quarries    -->
+    <!-- Trucks are the dominant type here                            -->
+    <!-- ============================================================ -->
+    <event name="VehicleIndustrial">
+        <nominal>10</nominal>
+        <min>5</min>
+        <max>15</max>
+        <lifetime>28800</lifetime>
+        <restock>3600</restock>
+        <saferadius>10</saferadius>
+        <distanceradius>40</distanceradius>
+        <cleanupradius>200</cleanupradius>
+        <flags deletable="0" init_random="0" remove_damaged="1"/>
+        <position>fixed</position>
+        <limit>mixed</limit>
+        <active>1</active>
+        <children>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="Truck_01_02"/>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="OffroadHatchback"/>
+        </children>
+    </event>
+
+    <!-- ============================================================ -->
+    <!-- POLICE CHECKPOINT                                            -->
+    <!-- Police vehicles at stations and roadside checkpoints         -->
+    <!-- Police variants always paired with civilian for context      -->
+    <!-- ============================================================ -->
+    <event name="VehiclePoliceCheckpoint">
+        <nominal>8</nominal>
+        <min>4</min>
+        <max>12</max>
+        <lifetime>28800</lifetime>
+        <restock>3600</restock>
+        <saferadius>8</saferadius>
+        <distanceradius>30</distanceradius>
+        <cleanupradius>200</cleanupradius>
+        <flags deletable="0" init_random="0" remove_damaged="1"/>
+        <position>fixed</position>
+        <limit>mixed</limit>
+        <active>1</active>
+        <children>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="CivilianSedan_Police"/>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="OffroadHatchback_Police"/>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="Sedan_02_Police"/>
+        </children>
+    </event>
+
+    <!-- ============================================================ -->
+    <!-- RURAL FARM                                                   -->
+    <!-- Offroad and utility vehicles at farms and rural villages      -->
+    <!-- Working vehicles used by farmers — broken down after outbreak -->
+    <!-- ============================================================ -->
+    <event name="VehicleRuralFarm">
+        <nominal>14</nominal>
+        <min>8</min>
+        <max>20</max>
+        <lifetime>28800</lifetime>
+        <restock>3600</restock>
+        <saferadius>8</saferadius>
+        <distanceradius>30</distanceradius>
+        <cleanupradius>200</cleanupradius>
+        <flags deletable="0" init_random="0" remove_damaged="1"/>
+        <position>fixed</position>
+        <limit>mixed</limit>
+        <active>1</active>
+        <children>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="OffroadHatchback"/>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="Truck_01_02"/>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="CivilianSedan"/>
+        </children>
+    </event>
+
+    <!-- ============================================================ -->
+    <!-- HIGHWAY                                                      -->
+    <!-- Vehicles abandoned along major roads and highway stretches   -->
+    <!-- Mix of vehicles that were in transit when the outbreak hit   -->
+    <!-- ============================================================ -->
+    <event name="VehicleHighway">
+        <nominal>16</nominal>
+        <min>10</min>
+        <max>24</max>
+        <lifetime>28800</lifetime>
+        <restock>3600</restock>
+        <saferadius>5</saferadius>
+        <distanceradius>20</distanceradius>
+        <cleanupradius>200</cleanupradius>
+        <flags deletable="0" init_random="0" remove_damaged="1"/>
+        <position>fixed</position>
+        <limit>mixed</limit>
+        <active>1</active>
+        <children>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="CivilianSedan"/>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="Sedan_02"/>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="OffroadHatchback"/>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="HatchbackSedan"/>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="Truck_01_02"/>
+        </children>
+    </event>
+
+
+</events>
