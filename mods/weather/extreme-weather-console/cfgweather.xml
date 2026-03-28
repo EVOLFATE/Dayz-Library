@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+  ============================================================
+  EXTREME WEATHER — CONSOLE EDITION
+  cfgweather.xml  |  DayZ Console / Nitrado / PC compatible
+  ============================================================
+
+  Drop this file into your mission folder alongside types.xml.
+  No scripts, no mods, no .bikey files required.
+  Works on Xbox, PlayStation, Nitrado, and PC servers.
+
+  Mission folder location (default maps):
+    mpmissions/dayzOffline.chernarusplus/cfgweather.xml
+    mpmissions/dayzOffline.enoch/cfgweather.xml
+
+  DESIGN PHILOSOPHY
+  ~5-10 %   rare crystal-clear PERFECT days (min overcast, min fog, min rain)
+  ~25-30 %  heavy fog walls, near-whiteout, visibility-killing conditions
+  ~30-35 %  harsh rain storms, downpours, miserable heavy overcast
+  ~20-25 %  mixed/transitional weather (overcast building or clearing)
+  ~5-10 %   calm-but-gloomy, no precipitation but oppressive cloud
+
+  Weather cycles fast (5-30 min average) so players experience multiple
+  dramatic shifts within a single play session.
+
+  SCHEMA REFERENCE
+  overcast  = cloud cover 0.0 (clear) to 1.0 (fully overcast)
+  fog       = fog density 0.0 (clear) to 1.0 (near-zero visibility)
+  rain      = precipitation 0.0 (dry) to 1.0 (maximum downpour)
+  wind      = base wind settings and gust variability
+
+  Each weather block supports:
+    min / max                  - absolute clamps on the value
+    changeMin / changeMax      - per-step rate-of-change limits
+    forecastChangeMin/Max      - swing size when the forecast updates
+    forecastTimeMin/Max        - seconds between forecast ticks
+    forecastChangeLimitCoef    - multiplier on how far a single forecast
+                                 update can move the value (0.0 to 1.0)
+  ============================================================
+-->
+<weather>
+
+    <!--
+      ══════════════════════════════════════════════
+      OVERCAST — cloud cover
+      ══════════════════════════════════════════════
+      min 0.0  → allows rare crystal-clear perfect days
+      max 1.0  → allows full pitch-black overcast
+      Wide forecast swing (0.0–1.0) lets the engine jump between
+      glorious sunshine and oppressive total cloud cover in a single
+      cycle.  Short forecast times keep the drama frequent.
+    -->
+    <overcast>
+        <!-- Absolute range — allow everything from clear to max cloud -->
+        <min>0.0</min>
+        <max>1.0</max>
+
+        <!-- How fast overcast can change each server tick -->
+        <changeMin>0.002</changeMin>
+        <changeMax>0.012</changeMax>
+
+        <!-- How big each forecast update swing can be -->
+        <forecastChangeMin>0.0</forecastChangeMin>
+        <forecastChangeMax>1.0</forecastChangeMax>
+
+        <!-- How often the forecast updates (seconds) — short = frequent drama -->
+        <forecastTimeMin>300</forecastTimeMin>
+        <forecastTimeMax>1800</forecastTimeMax>
+
+        <!-- Allow massive overcast swings in a single forecast tick -->
+        <forecastChangeLimitCoef>0.9</forecastChangeLimitCoef>
+    </overcast>
+
+    <!--
+      ══════════════════════════════════════════════
+      FOG — visibility impairment  ★ KEY SYSTEM ★
+      ══════════════════════════════════════════════
+      This is the primary hazard driver.  Fog walls rolling in
+      from nowhere are the most disorienting and dangerous
+      condition a player can face — navigation collapses,
+      PvP ranges shrink to knife-fight distances, getting lost
+      in the wilderness becomes genuinely lethal.
+
+      min 0.0  → zero fog during those rare perfect days
+      max 1.0  → absolute near-zero visibility whiteout
+      Very short forecast times make fog unpredictable and
+      sudden.  High forecastChangeLimitCoef (1.0) allows
+      instant fog walls — clear to whiteout in one tick.
+    -->
+    <fog>
+        <!-- Full range — zero fog to absolute whiteout -->
+        <min>0.0</min>
+        <max>1.0</max>
+
+        <!-- Fast fog movement per tick — walls roll in quickly -->
+        <changeMin>0.003</changeMin>
+        <changeMax>0.018</changeMax>
+
+        <!-- Allow enormous forecast swings — clear to whiteout in one step -->
+        <forecastChangeMin>0.0</forecastChangeMin>
+        <forecastChangeMax>1.0</forecastChangeMax>
+
+        <!-- Very short forecast intervals — fog is unpredictable and sudden -->
+        <forecastTimeMin>240</forecastTimeMin>
+        <forecastTimeMax>1200</forecastTimeMax>
+
+        <!-- Max coefficient — single forecast update can flip full fog range -->
+        <forecastChangeLimitCoef>1.0</forecastChangeLimitCoef>
+    </fog>
+
+    <!--
+      ══════════════════════════════════════════════
+      RAIN — precipitation intensity
+      ══════════════════════════════════════════════
+      min 0.0  → dry periods and perfect days
+      max 1.0  → maximum downpour / torrential rain
+      Short forecast times allow sudden storm onset — players
+      caught in the open have little warning before a full
+      downpour hits.  Wet gear accelerates cold stat loss.
+    -->
+    <rain>
+        <!-- Full range — dry to maximum downpour -->
+        <min>0.0</min>
+        <max>1.0</max>
+
+        <!-- Moderate-to-fast onset -->
+        <changeMin>0.002</changeMin>
+        <changeMax>0.015</changeMax>
+
+        <!-- Storms can swing from dry to torrential in one forecast step -->
+        <forecastChangeMin>0.0</forecastChangeMin>
+        <forecastChangeMax>1.0</forecastChangeMax>
+
+        <!-- Storms arrive and leave quickly -->
+        <forecastTimeMin>300</forecastTimeMin>
+        <forecastTimeMax>1500</forecastTimeMax>
+
+        <!-- Allow full storm onset in a single forecast tick -->
+        <forecastChangeLimitCoef>0.95</forecastChangeLimitCoef>
+    </rain>
+
+    <!--
+      ══════════════════════════════════════════════
+      WIND — wind speed and gustiness
+      ══════════════════════════════════════════════
+      min 0.0     → dead calm during perfect days
+      max 1.0     → maximum base wind
+      maxSpeed 30 → hurricane-force gusts
+      The functionParams control the gust variability curve.
+      High amplitude (param index 1) + high frequency (param
+      index 2) creates chaotic, unpredictable gusts.
+    -->
+    <wind>
+        <!-- Base wind range — dead calm to maximum -->
+        <min>0.0</min>
+        <max>1.0</max>
+
+        <!-- Hurricane-force maximum gust speed (m/s) -->
+        <maxSpeed>30</maxSpeed>
+
+        <!--
+          Gust variability function parameters.
+          param[0] — base wind multiplier offset
+          param[1] — gust amplitude (higher = wilder gusts)
+          param[2] — gust frequency / turbulence
+          param[3] — directional drift rate
+        -->
+        <functionParams>
+            <param>0.15</param>
+            <param>0.85</param>
+            <param>0.75</param>
+            <param>0.4</param>
+        </functionParams>
+    </wind>
+
+</weather>
