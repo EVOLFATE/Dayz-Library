@@ -13,7 +13,7 @@ Every file is a **complete replacement** — no partial merges or additional edi
 | Mod | Folder | What It Adds |
 |-----|--------|--------------|
 | **Realistic Wildlife Overhaul** | `animals/realistic-wildlife-overhaul` | 13 animal spawn events + 12 territory files |
-| **Post-Apocalyptic Loot Economy** | `survival/post-apocalyptic-loot-economy` | Full 1,282-item loot overhaul |
+| **Post-Apocalyptic Loot Economy** | `survival/post-apocalyptic-loot-economy` | Loot economy tuning (values applied via `vanilla-types-full.xml` base) |
 | **Realistic Vehicle Overhaul** | `vehicles/realistic-vehicle-overhaul` | 7 vehicle events + 8 vehicle types + spawn coordinates |
 | **Extreme Weather Console** | `weather/extreme-weather-console` | Aggressive fog/rain/wind weather cycles |
 | **Realistic Everywhere Zeds** | `zombies/realistic-everywhere-zeds` | 15 zombie types + territory coverage across the whole map |
@@ -27,7 +27,7 @@ Every file is a **complete replacement** — no partial merges or additional edi
 | `events.xml` | Animals + Vehicles | 13 animal events + 7 vehicle events |
 | `cfgeventspawns.xml` | Animals + Vehicles | Animal territory mappings + ~105 vehicle spawn coordinates |
 | `cfgspawnabletypes.xml` | Vehicles + Zombies | 8 vehicle part/cargo configs + 15 zombie loot configs |
-| `types.xml` | Loot Economy + Vehicles | Full 1,282-item loot economy + 8 vehicle type definitions |
+| `types.xml` | Full vanilla (1,382 items) + Vehicles | ALL 1,382 vanilla DayZ items + 8 vehicle type definitions = **1,390 total** |
 | `cfgweather.xml` | Weather (standalone) | Extreme weather config, copied as-is |
 | `env/` | Animals + Zombies | 12 animal territory files + 1 zombie territory file |
 
