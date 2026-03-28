@@ -58,6 +58,21 @@
 
     NOTE: This is a STANDALONE file. It does NOT reference or
     depend on the vehicle overhaul types.xml or any other mod.
+
+    EXPANDED CONTENT (v2)
+    ================================================================
+    Additional items researched and added to complete the vision:
+    * Missing firearms: CR527, BK18, Izh18, CR75, AKM, AK74, AK101,
+      Glock19, FX45, Deagle, Pioneer, Sporter22, BK133, Izh43
+    * Missing ammunition for all new firearms
+    * Portable Generator (extremely rare)
+    * Crafted/Improvised items: StoneKnife, BoneKnife, ImprovisedBag,
+      ImprovisedFishingRod, ImprovisedSuppressor, arrows, spears
+    * Farming: All seed packs, GardenLime, FarmingHoe, FieldShovel
+    * Containers: BurlapSack, DryBags, SmallProtectorCase, WoodenCrate
+    * Base building: WatchtowerKit, CombinationLock, Tents
+    * Additional removed-but-functional items (CigarettePack variants)
+    * Quality of life: CanOpener, FryingPan, traps, locks, MetalWire
     ================================================================
 -->
 <types>
@@ -5280,6 +5295,1003 @@
         <usage name="Town"/>
         <usage name="Village"/>
         <value name="Tier1"/>
+    </type>
+
+    <!-- ================================================================
+         EXPANDED CONTENT v2 - MISSING FIREARMS
+         Civilian and military weapons that were in the original spec
+         but not yet included. Worn condition reflects years of neglect.
+         ================================================================ -->
+
+    <!-- Farmer/hunter rifles - the backbone of rural survival -->
+    <type name="CR527">
+        <nominal>3</nominal>
+        <lifetime>43200</lifetime>
+        <restock>14400</restock>
+        <min>1</min>
+        <quantmin>20</quantmin>
+        <quantmax>80</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="weapons"/>
+        <usage name="Hunting"/>
+        <usage name="Farm"/>
+        <value name="Tier2"/>
+        <value name="Tier3"/>
+    </type>
+    <type name="BK18">
+        <nominal>3</nominal>
+        <lifetime>43200</lifetime>
+        <restock>14400</restock>
+        <min>1</min>
+        <quantmin>20</quantmin>
+        <quantmax>80</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="weapons"/>
+        <usage name="Hunting"/>
+        <usage name="Farm"/>
+        <usage name="Village"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+    </type>
+    <type name="Izh18">
+        <nominal>3</nominal>
+        <lifetime>43200</lifetime>
+        <restock>14400</restock>
+        <min>1</min>
+        <quantmin>20</quantmin>
+        <quantmax>80</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="weapons"/>
+        <usage name="Hunting"/>
+        <usage name="Farm"/>
+        <usage name="Village"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+    </type>
+    <type name="Sporter22">
+        <nominal>3</nominal>
+        <lifetime>43200</lifetime>
+        <restock>14400</restock>
+        <min>1</min>
+        <quantmin>20</quantmin>
+        <quantmax>80</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="weapons"/>
+        <usage name="Town"/>
+        <usage name="Village"/>
+        <usage name="Hunting"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+    </type>
+    <type name="BK133">
+        <nominal>3</nominal>
+        <lifetime>43200</lifetime>
+        <restock>14400</restock>
+        <min>1</min>
+        <quantmin>20</quantmin>
+        <quantmax>80</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="weapons"/>
+        <usage name="Farm"/>
+        <usage name="Village"/>
+        <usage name="Hunting"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+    </type>
+    <type name="Izh43">
+        <nominal>3</nominal>
+        <lifetime>43200</lifetime>
+        <restock>14400</restock>
+        <min>1</min>
+        <quantmin>20</quantmin>
+        <quantmax>80</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="weapons"/>
+        <usage name="Farm"/>
+        <usage name="Village"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+    </type>
+    <type name="Pioneer">
+        <nominal>2</nominal>
+        <lifetime>43200</lifetime>
+        <restock>14400</restock>
+        <min>1</min>
+        <quantmin>20</quantmin>
+        <quantmax>80</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="weapons"/>
+        <usage name="Hunting"/>
+        <value name="Tier2"/>
+        <value name="Tier3"/>
+    </type>
+
+    <!-- Civilian and police sidearms -->
+    <type name="CR75">
+        <nominal>2</nominal>
+        <lifetime>43200</lifetime>
+        <restock>14400</restock>
+        <min>1</min>
+        <quantmin>20</quantmin>
+        <quantmax>80</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="weapons"/>
+        <usage name="Town"/>
+        <usage name="Police"/>
+        <value name="Tier2"/>
+        <value name="Tier3"/>
+    </type>
+    <type name="Glock19">
+        <nominal>2</nominal>
+        <lifetime>43200</lifetime>
+        <restock>14400</restock>
+        <min>1</min>
+        <quantmin>20</quantmin>
+        <quantmax>80</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="weapons"/>
+        <usage name="Police"/>
+        <usage name="Town"/>
+        <value name="Tier2"/>
+        <value name="Tier3"/>
+    </type>
+
+    <!-- Military-grade sidearms - extremely rare -->
+    <type name="FX45">
+        <nominal>2</nominal>
+        <lifetime>43200</lifetime>
+        <restock>14400</restock>
+        <min>1</min>
+        <quantmin>20</quantmin>
+        <quantmax>70</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="weapons"/>
+        <usage name="Military"/>
+        <value name="Tier3"/>
+        <value name="Tier4"/>
+    </type>
+    <type name="Deagle">
+        <nominal>1</nominal>
+        <lifetime>43200</lifetime>
+        <restock>14400</restock>
+        <min>0</min>
+        <quantmin>10</quantmin>
+        <quantmax>50</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="weapons"/>
+        <usage name="Military"/>
+        <value name="Tier4"/>
+    </type>
+
+    <!-- Assault rifles - near-broken relics of a war long lost -->
+    <type name="AKM">
+        <nominal>1</nominal>
+        <lifetime>43200</lifetime>
+        <restock>14400</restock>
+        <min>0</min>
+        <quantmin>10</quantmin>
+        <quantmax>40</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="weapons"/>
+        <usage name="Military"/>
+        <value name="Tier4"/>
+    </type>
+    <type name="AK74">
+        <nominal>1</nominal>
+        <lifetime>43200</lifetime>
+        <restock>14400</restock>
+        <min>0</min>
+        <quantmin>10</quantmin>
+        <quantmax>40</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="weapons"/>
+        <usage name="Military"/>
+        <value name="Tier4"/>
+    </type>
+    <type name="AK101">
+        <nominal>1</nominal>
+        <lifetime>43200</lifetime>
+        <restock>14400</restock>
+        <min>0</min>
+        <quantmin>10</quantmin>
+        <quantmax>40</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="weapons"/>
+        <usage name="Military"/>
+        <value name="Tier4"/>
+    </type>
+
+    <!-- ================================================================
+         EXPANDED CONTENT v2 - MISSING AMMUNITION
+         Every round is precious. Small stacks only.
+         ================================================================ -->
+
+    <!-- AK-74 rounds - military compound leftovers -->
+    <type name="Ammo_545x39">
+        <nominal>2</nominal>
+        <lifetime>43200</lifetime>
+        <restock>14400</restock>
+        <min>0</min>
+        <quantmin>3</quantmin>
+        <quantmax>15</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="weapons"/>
+        <usage name="Military"/>
+        <value name="Tier3"/>
+        <value name="Tier4"/>
+    </type>
+    <!-- 9x19 Parabellum - police/civilian pistol ammo -->
+    <type name="Ammo_9x19">
+        <nominal>3</nominal>
+        <lifetime>43200</lifetime>
+        <restock>14400</restock>
+        <min>1</min>
+        <quantmin>3</quantmin>
+        <quantmax>15</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="weapons"/>
+        <usage name="Police"/>
+        <usage name="Town"/>
+        <value name="Tier2"/>
+        <value name="Tier3"/>
+    </type>
+    <!-- .45 ACP - military sidearm ammo -->
+    <type name="Ammo_45ACP">
+        <nominal>2</nominal>
+        <lifetime>43200</lifetime>
+        <restock>14400</restock>
+        <min>0</min>
+        <quantmin>3</quantmin>
+        <quantmax>12</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="weapons"/>
+        <usage name="Military"/>
+        <usage name="Police"/>
+        <value name="Tier3"/>
+        <value name="Tier4"/>
+    </type>
+    <!-- 7.62x51 NATO - rare sniper and battle rifle calibre -->
+    <type name="Ammo_762x51">
+        <nominal>1</nominal>
+        <lifetime>43200</lifetime>
+        <restock>14400</restock>
+        <min>0</min>
+        <quantmin>3</quantmin>
+        <quantmax>10</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="weapons"/>
+        <usage name="Military"/>
+        <value name="Tier4"/>
+    </type>
+    <!-- .380 ACP - common civilian pistol calibre -->
+    <type name="Ammo_380">
+        <nominal>3</nominal>
+        <lifetime>43200</lifetime>
+        <restock>14400</restock>
+        <min>1</min>
+        <quantmin>3</quantmin>
+        <quantmax>15</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="weapons"/>
+        <usage name="Town"/>
+        <usage name="Village"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+    </type>
+
+    <!-- ================================================================
+         EXPANDED CONTENT v2 - PORTABLE GENERATOR
+         The holy grail. Only one exists on the entire map.
+         ================================================================ -->
+
+    <type name="PowerGenerator">
+        <nominal>1</nominal>
+        <lifetime>43200</lifetime>
+        <restock>14400</restock>
+        <min>0</min>
+        <quantmin>10</quantmin>
+        <quantmax>40</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="tools"/>
+        <usage name="Industrial"/>
+        <value name="Tier4"/>
+    </type>
+
+    <!-- ================================================================
+         EXPANDED CONTENT v2 - CRAFTED AND IMPROVISED ITEMS
+         Survivors MAKE what they cannot find. Primitive but effective.
+         ================================================================ -->
+
+    <!-- Stone and bone tools - when metal runs out -->
+    <type name="StoneKnife">
+        <nominal>6</nominal>
+        <lifetime>14400</lifetime>
+        <restock>3600</restock>
+        <min>2</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="1" deloot="0"/>
+        <category name="weapons"/>
+        <usage name="Village"/>
+        <usage name="Farm"/>
+        <usage name="Hunting"/>
+        <value name="Tier1"/>
+    </type>
+    <type name="BoneKnife">
+        <nominal>4</nominal>
+        <lifetime>14400</lifetime>
+        <restock>3600</restock>
+        <min>1</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="1" deloot="0"/>
+        <category name="weapons"/>
+        <usage name="Hunting"/>
+        <usage name="Farm"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+    </type>
+
+    <!-- Improvised survival gear -->
+    <type name="ImprovisedBag">
+        <nominal>5</nominal>
+        <lifetime>14400</lifetime>
+        <restock>3600</restock>
+        <min>1</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="1" deloot="0"/>
+        <category name="tools"/>
+        <usage name="Town"/>
+        <usage name="Village"/>
+        <usage name="Coast"/>
+        <value name="Tier1"/>
+    </type>
+    <type name="ImprovisedFishingRod">
+        <nominal>4</nominal>
+        <lifetime>14400</lifetime>
+        <restock>3600</restock>
+        <min>1</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="1" deloot="0"/>
+        <category name="tools"/>
+        <usage name="Coast"/>
+        <usage name="Hunting"/>
+        <usage name="Village"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+    </type>
+    <type name="ImprovisedSuppressor">
+        <nominal>2</nominal>
+        <lifetime>14400</lifetime>
+        <restock>3600</restock>
+        <min>1</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="1" deloot="0"/>
+        <category name="weapons"/>
+        <usage name="Industrial"/>
+        <usage name="Town"/>
+        <value name="Tier2"/>
+        <value name="Tier3"/>
+    </type>
+
+    <!-- Wood components - ubiquitous crafting resources -->
+    <type name="WoodenStick">
+        <nominal>15</nominal>
+        <lifetime>14400</lifetime>
+        <restock>1800</restock>
+        <min>5</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="1" deloot="0"/>
+        <category name="tools"/>
+        <usage name="Farm"/>
+        <usage name="Village"/>
+        <usage name="Hunting"/>
+        <value name="Tier1"/>
+    </type>
+    <type name="LongWoodenStick">
+        <nominal>10</nominal>
+        <lifetime>14400</lifetime>
+        <restock>1800</restock>
+        <min>3</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="1" deloot="0"/>
+        <category name="tools"/>
+        <usage name="Farm"/>
+        <usage name="Village"/>
+        <usage name="Hunting"/>
+        <value name="Tier1"/>
+    </type>
+    <type name="SharpWoodenStick">
+        <nominal>5</nominal>
+        <lifetime>14400</lifetime>
+        <restock>3600</restock>
+        <min>1</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="1" deloot="0"/>
+        <category name="weapons"/>
+        <usage name="Farm"/>
+        <usage name="Village"/>
+        <usage name="Hunting"/>
+        <value name="Tier1"/>
+    </type>
+
+    <!-- Primitive projectiles - bone arrows and standard crossbow bolts -->
+    <type name="Arrow_Bone">
+        <nominal>6</nominal>
+        <lifetime>14400</lifetime>
+        <restock>1800</restock>
+        <min>2</min>
+        <quantmin>3</quantmin>
+        <quantmax>10</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="1" deloot="0"/>
+        <category name="weapons"/>
+        <usage name="Hunting"/>
+        <usage name="Farm"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+    </type>
+    <type name="CrossbowBolt">
+        <nominal>5</nominal>
+        <lifetime>14400</lifetime>
+        <restock>1800</restock>
+        <min>2</min>
+        <quantmin>3</quantmin>
+        <quantmax>10</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="1" deloot="0"/>
+        <category name="weapons"/>
+        <usage name="Hunting"/>
+        <value name="Tier2"/>
+        <value name="Tier3"/>
+    </type>
+
+    <!-- ================================================================
+         EXPANDED CONTENT v2 - CONTAINERS AND STORAGE
+         Survivors hoard everything. Finding good storage is luck.
+         ================================================================ -->
+
+    <!-- Basic storage - whatever survived the years -->
+    <type name="BurlapSack">
+        <nominal>6</nominal>
+        <lifetime>14400</lifetime>
+        <restock>3600</restock>
+        <min>2</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="tools"/>
+        <usage name="Farm"/>
+        <usage name="Village"/>
+        <usage name="Industrial"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+    </type>
+    <type name="WoodenCrate">
+        <nominal>3</nominal>
+        <lifetime>3888000</lifetime>
+        <restock>43200</restock>
+        <min>1</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="1" crafted="0" deloot="0"/>
+        <category name="tools"/>
+        <usage name="Industrial"/>
+        <usage name="Farm"/>
+        <value name="Tier2"/>
+    </type>
+
+    <!-- Waterproof storage - rare and highly valued -->
+    <type name="DryBag_Black">
+        <nominal>2</nominal>
+        <lifetime>43200</lifetime>
+        <restock>14400</restock>
+        <min>1</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="tools"/>
+        <usage name="Coast"/>
+        <usage name="Hunting"/>
+        <usage name="Military"/>
+        <value name="Tier2"/>
+        <value name="Tier3"/>
+    </type>
+    <type name="DryBag_Green">
+        <nominal>2</nominal>
+        <lifetime>43200</lifetime>
+        <restock>14400</restock>
+        <min>1</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="tools"/>
+        <usage name="Coast"/>
+        <usage name="Hunting"/>
+        <value name="Tier2"/>
+        <value name="Tier3"/>
+    </type>
+
+    <!-- Hard cases - protect precious finds -->
+    <type name="SmallProtectorCase">
+        <nominal>2</nominal>
+        <lifetime>43200</lifetime>
+        <restock>14400</restock>
+        <min>1</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="tools"/>
+        <usage name="Town"/>
+        <usage name="Military"/>
+        <value name="Tier3"/>
+        <value name="Tier4"/>
+    </type>
+
+    <!-- ================================================================
+         EXPANDED CONTENT v2 - FARMING AND GARDENING
+         Civilization fell. Survivors MUST grow their own food now.
+         ================================================================ -->
+
+    <!-- Seed packs - farming is survival -->
+    <type name="TomatoSeedsPack">
+        <nominal>4</nominal>
+        <lifetime>14400</lifetime>
+        <restock>3600</restock>
+        <min>1</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="food"/>
+        <usage name="Farm"/>
+        <usage name="Village"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+    </type>
+    <type name="PepperSeedsPack">
+        <nominal>4</nominal>
+        <lifetime>14400</lifetime>
+        <restock>3600</restock>
+        <min>1</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="food"/>
+        <usage name="Farm"/>
+        <usage name="Village"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+    </type>
+    <type name="ZucchiniSeedsPack">
+        <nominal>3</nominal>
+        <lifetime>14400</lifetime>
+        <restock>3600</restock>
+        <min>1</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="food"/>
+        <usage name="Farm"/>
+        <usage name="Village"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+    </type>
+    <type name="PumpkinSeedsPack">
+        <nominal>3</nominal>
+        <lifetime>14400</lifetime>
+        <restock>3600</restock>
+        <min>1</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="food"/>
+        <usage name="Farm"/>
+        <usage name="Village"/>
+        <value name="Tier2"/>
+    </type>
+
+    <!-- Farming tools and supplies -->
+    <type name="GardenLime">
+        <nominal>5</nominal>
+        <lifetime>14400</lifetime>
+        <restock>3600</restock>
+        <min>1</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="tools"/>
+        <usage name="Farm"/>
+        <usage name="Industrial"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+    </type>
+    <type name="FarmingHoe">
+        <nominal>4</nominal>
+        <lifetime>14400</lifetime>
+        <restock>3600</restock>
+        <min>1</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="tools"/>
+        <usage name="Farm"/>
+        <usage name="Village"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+    </type>
+    <type name="FieldShovel">
+        <nominal>3</nominal>
+        <lifetime>14400</lifetime>
+        <restock>3600</restock>
+        <min>1</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="tools"/>
+        <usage name="Military"/>
+        <usage name="Farm"/>
+        <value name="Tier2"/>
+        <value name="Tier3"/>
+    </type>
+
+    <!-- ================================================================
+         EXPANDED CONTENT v2 - ADDITIONAL REMOVED-BUT-FUNCTIONAL ITEMS
+         More cigarette brands that exist in the binary but not in CE.
+         ================================================================ -->
+
+    <type name="CigarettePack_Kosmos">
+        <nominal>3</nominal>
+        <lifetime>14400</lifetime>
+        <restock>3600</restock>
+        <min>1</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="tools"/>
+        <tag name="shelves"/>
+        <usage name="Town"/>
+        <usage name="Village"/>
+        <value name="Tier1"/>
+    </type>
+    <type name="CigarettePack_Luckis">
+        <nominal>3</nominal>
+        <lifetime>14400</lifetime>
+        <restock>3600</restock>
+        <min>1</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="tools"/>
+        <tag name="shelves"/>
+        <usage name="Town"/>
+        <usage name="Village"/>
+        <value name="Tier1"/>
+    </type>
+
+    <!-- ================================================================
+         EXPANDED CONTENT v2 - EXPERIENCE-ENHANCING ITEMS
+         Weapons, cooking, base building, and quality-of-life items
+         that make surviving feel real.
+         ================================================================ -->
+
+    <!-- Primitive weapons - when scrap becomes a weapon -->
+    <type name="Spear">
+        <nominal>4</nominal>
+        <lifetime>14400</lifetime>
+        <restock>3600</restock>
+        <min>1</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="1" deloot="0"/>
+        <category name="weapons"/>
+        <usage name="Hunting"/>
+        <usage name="Farm"/>
+        <usage name="Village"/>
+        <value name="Tier1"/>
+    </type>
+    <type name="NailBaseballBat">
+        <nominal>2</nominal>
+        <lifetime>14400</lifetime>
+        <restock>3600</restock>
+        <min>1</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="1" deloot="0"/>
+        <category name="weapons"/>
+        <usage name="Town"/>
+        <usage name="Village"/>
+        <usage name="Industrial"/>
+        <value name="Tier2"/>
+    </type>
+
+    <!-- Cooking gear - essential for processing hunted meat -->
+    <type name="FryingPan">
+        <nominal>3</nominal>
+        <lifetime>14400</lifetime>
+        <restock>3600</restock>
+        <min>1</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="tools"/>
+        <usage name="Town"/>
+        <usage name="Village"/>
+        <usage name="Farm"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+    </type>
+    <type name="Pot">
+        <nominal>3</nominal>
+        <lifetime>14400</lifetime>
+        <restock>3600</restock>
+        <min>1</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="tools"/>
+        <usage name="Town"/>
+        <usage name="Village"/>
+        <usage name="Farm"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+    </type>
+
+    <!-- Essential utility - you need this to eat canned food -->
+    <type name="CanOpener">
+        <nominal>5</nominal>
+        <lifetime>14400</lifetime>
+        <restock>3600</restock>
+        <min>2</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="tools"/>
+        <usage name="Town"/>
+        <usage name="Village"/>
+        <usage name="Farm"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+    </type>
+
+    <!-- Garden plot kit - set up survival gardens -->
+    <type name="GardenPlotKit">
+        <nominal>3</nominal>
+        <lifetime>14400</lifetime>
+        <restock>3600</restock>
+        <min>1</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="tools"/>
+        <usage name="Farm"/>
+        <usage name="Village"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+    </type>
+
+    <!-- Traps and base defense - protect what you have -->
+    <type name="TripwireTrap">
+        <nominal>2</nominal>
+        <lifetime>43200</lifetime>
+        <restock>14400</restock>
+        <min>1</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="tools"/>
+        <usage name="Military"/>
+        <usage name="Hunting"/>
+        <value name="Tier3"/>
+        <value name="Tier4"/>
+    </type>
+    <type name="LandMineTrap">
+        <nominal>1</nominal>
+        <lifetime>43200</lifetime>
+        <restock>14400</restock>
+        <min>0</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="tools"/>
+        <usage name="Military"/>
+        <value name="Tier4"/>
+    </type>
+
+    <!-- Locks and security -->
+    <type name="CombinationLock">
+        <nominal>2</nominal>
+        <lifetime>43200</lifetime>
+        <restock>14400</restock>
+        <min>1</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="tools"/>
+        <usage name="Industrial"/>
+        <usage name="Town"/>
+        <value name="Tier2"/>
+        <value name="Tier3"/>
+    </type>
+    <type name="CodeLock">
+        <nominal>1</nominal>
+        <lifetime>43200</lifetime>
+        <restock>14400</restock>
+        <min>0</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="tools"/>
+        <usage name="Military"/>
+        <usage name="Industrial"/>
+        <value name="Tier3"/>
+        <value name="Tier4"/>
+    </type>
+
+    <!-- Base building components -->
+    <type name="MetalWire">
+        <nominal>5</nominal>
+        <lifetime>14400</lifetime>
+        <restock>3600</restock>
+        <min>2</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="tools"/>
+        <usage name="Industrial"/>
+        <usage name="Farm"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+    </type>
+    <type name="WatchtowerKit">
+        <nominal>1</nominal>
+        <lifetime>3888000</lifetime>
+        <restock>43200</restock>
+        <min>0</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="1" crafted="0" deloot="0"/>
+        <category name="tools"/>
+        <usage name="Military"/>
+        <usage name="Industrial"/>
+        <value name="Tier3"/>
+        <value name="Tier4"/>
+    </type>
+    <type name="SledgehammerHandle">
+        <nominal>3</nominal>
+        <lifetime>14400</lifetime>
+        <restock>3600</restock>
+        <min>1</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="tools"/>
+        <usage name="Industrial"/>
+        <usage name="Farm"/>
+        <value name="Tier1"/>
+        <value name="Tier2"/>
+    </type>
+
+    <!-- Lighting and infrastructure -->
+    <type name="Spotlight">
+        <nominal>1</nominal>
+        <lifetime>43200</lifetime>
+        <restock>14400</restock>
+        <min>0</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="tools"/>
+        <usage name="Military"/>
+        <usage name="Industrial"/>
+        <value name="Tier3"/>
+        <value name="Tier4"/>
+    </type>
+
+    <!-- Tents and shelters - rare, long-lifetime permanent spawns -->
+    <type name="TentMedium">
+        <nominal>1</nominal>
+        <lifetime>3888000</lifetime>
+        <restock>43200</restock>
+        <min>0</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="1" crafted="0" deloot="0"/>
+        <category name="tools"/>
+        <usage name="Military"/>
+        <usage name="Hunting"/>
+        <value name="Tier3"/>
+        <value name="Tier4"/>
+    </type>
+    <type name="TentLarge">
+        <nominal>1</nominal>
+        <lifetime>3888000</lifetime>
+        <restock>43200</restock>
+        <min>0</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="1" crafted="0" deloot="0"/>
+        <category name="tools"/>
+        <usage name="Military"/>
+        <value name="Tier4"/>
+    </type>
+
+    <!-- Territory markers -->
+    <type name="Flag_Chernarussian">
+        <nominal>1</nominal>
+        <lifetime>43200</lifetime>
+        <restock>14400</restock>
+        <min>0</min>
+        <quantmin>-1</quantmin>
+        <quantmax>-1</quantmax>
+        <cost>100</cost>
+        <flags count_in_cargo="0" count_in_hoarder="0" count_in_map="1" count_in_player="0" crafted="0" deloot="0"/>
+        <category name="tools"/>
+        <usage name="Military"/>
+        <value name="Tier3"/>
     </type>
 
 </types>
