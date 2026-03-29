@@ -1742,4 +1742,113 @@
         <pos x="6550.0" z="6700.0" a="180"/>
     </event>
 
+
+    <!-- ================================================================
+         ACCIDENT SITE POSITIONS
+         Placed on road shoulders across all major Chernarus corridors.
+         Offsets keep at least one lane clear for drivable vehicles.
+         ================================================================ -->
+
+    <!-- PRIMARY accident site — 25 positions, 15 active at any time -->
+    <event name="AccidentSite">
+        <!-- South coastal road (east-west, z~2400-2600) -->
+        <pos x="1650.0"  z="2495.0"  a="90"/>   <!-- Elektro west outskirts -->
+        <pos x="2850.0"  z="2510.0"  a="270"/>  <!-- Elektro to Cherno, westbound -->
+        <pos x="3650.0"  z="2495.0"  a="90"/>   <!-- Cherno east approach -->
+        <pos x="4550.0"  z="2480.0"  a="90"/>   <!-- Cherno junction area -->
+        <pos x="5650.0"  z="2470.0"  a="270"/>  <!-- Mid coastal westbound -->
+        <pos x="7450.0"  z="2545.0"  a="90"/>   <!-- Polana-Solnichniy area -->
+        <pos x="8750.0"  z="2625.0"  a="90"/>   <!-- East of centre coastal -->
+        <pos x="11450.0" z="2520.0"  a="270"/>  <!-- Berezino west approach -->
+        <!-- North highway (east-west, z~8700-9300) -->
+        <pos x="2350.0"  z="9255.0"  a="90"/>   <!-- West Pustoshka -->
+        <pos x="4650.0"  z="9080.0"  a="270"/>  <!-- Kabanino approach -->
+        <pos x="6250.0"  z="8870.0"  a="90"/>   <!-- Mid north highway -->
+        <pos x="7950.0"  z="8685.0"  a="270"/>  <!-- East north highway -->
+        <!-- Central road (north-south, x~6400-6700) -->
+        <pos x="6640.0"  z="4100.0"  a="180"/>  <!-- Central south -->
+        <pos x="6585.0"  z="5295.0"  a="0"/>    <!-- Central mid -->
+        <pos x="6510.0"  z="7005.0"  a="180"/>  <!-- Central north -->
+        <!-- NW forest road (x~800-2000) -->
+        <pos x="1295.0"  z="3595.0"  a="0"/>    <!-- NW road entering forest -->
+        <pos x="1105.0"  z="5395.0"  a="180"/>  <!-- Deep NW forest road -->
+        <!-- Town approach roads -->
+        <pos x="4195.0"  z="3205.0"  a="0"/>    <!-- North of Cherno -->
+        <pos x="9695.0"  z="3105.0"  a="90"/>   <!-- Gorka area east -->
+        <pos x="5495.0"  z="6495.0"  a="45"/>   <!-- Mid-map intersection -->
+        <pos x="4595.0"  z="7705.0"  a="90"/>   <!-- North approach roads -->
+        <pos x="3095.0"  z="9105.0"  a="90"/>   <!-- Near Pustoshka east -->
+        <!-- East roads -->
+        <pos x="9395.0"  z="2870.0"  a="90"/>   <!-- East coastal approach -->
+        <pos x="12250.0" z="2385.0"  a="270"/>  <!-- Far east coastal -->
+        <!-- Remote / memorable -->
+        <pos x="7750.0"  z="6295.0"  a="135"/>  <!-- Novy Sobor area -->
+    </event>
+
+    <!-- COLLISION SECONDARY — 15 paired positions (offset 15-20m from AccidentSite),
+         opposite heading = head-on collision scene. 8 of 15 filled at any time. -->
+    <event name="AccidentSiteCollision">
+        <!-- South coastal road pairs -->
+        <pos x="1665.0"  z="2508.0"  a="270"/>  <!-- paired with Elektro west -->
+        <pos x="2865.0"  z="2496.0"  a="90"/>   <!-- paired with Elektro-Cherno -->
+        <pos x="3665.0"  z="2510.0"  a="270"/>  <!-- paired with Cherno east -->
+        <pos x="5665.0"  z="2458.0"  a="90"/>   <!-- paired with mid coastal -->
+        <pos x="7465.0"  z="2562.0"  a="270"/>  <!-- paired with Polana area -->
+        <pos x="8765.0"  z="2640.0"  a="270"/>  <!-- paired with east centre -->
+        <!-- North highway pairs -->
+        <pos x="2365.0"  z="9242.0"  a="270"/>  <!-- paired with west Pustoshka -->
+        <pos x="4665.0"  z="9095.0"  a="90"/>   <!-- paired with Kabanino -->
+        <pos x="6265.0"  z="8887.0"  a="270"/>  <!-- paired with mid north -->
+        <!-- Central road pairs -->
+        <pos x="6655.0"  z="4118.0"  a="0"/>    <!-- paired with central south -->
+        <pos x="6600.0"  z="5310.0"  a="180"/>  <!-- paired with central mid -->
+        <pos x="6495.0"  z="7020.0"  a="0"/>    <!-- paired with central north -->
+        <!-- Town approach pairs -->
+        <pos x="4210.0"  z="3220.0"  a="180"/>  <!-- paired with north Cherno -->
+        <pos x="9410.0"  z="2885.0"  a="270"/>  <!-- paired with east coastal -->
+        <pos x="3110.0"  z="9120.0"  a="270"/>  <!-- paired with Pustoshka east -->
+    </event>
+
+    <!-- LARGE VEHICLE WRECKS — 10 positions on major roads, 4 active at any time -->
+    <event name="AccidentSiteLarge">
+        <!-- South coastal road -->
+        <pos x="3150.0"  z="2520.0"  a="90"/>   <!-- Between Elektro and Cherno -->
+        <pos x="6750.0"  z="2580.0"  a="270"/>  <!-- Mid coastal westbound -->
+        <pos x="10450.0" z="2575.0"  a="90"/>   <!-- East coastal -->
+        <!-- North highway -->
+        <pos x="3450.0"  z="9185.0"  a="90"/>   <!-- West-central north highway -->
+        <pos x="6850.0"  z="8765.0"  a="270"/>  <!-- East-central north highway -->
+        <!-- Central road -->
+        <pos x="6655.0"  z="4600.0"  a="180"/>  <!-- Central road south section -->
+        <!-- NW road -->
+        <pos x="1495.0"  z="4005.0"  a="0"/>    <!-- NW forest road -->
+        <!-- NE road -->
+        <pos x="8650.0"  z="3205.0"  a="90"/>   <!-- Northeast road -->
+        <!-- Mid-map -->
+        <pos x="7150.0"  z="6105.0"  a="45"/>   <!-- Mid-map road intersection -->
+        <pos x="4895.0"  z="8095.0"  a="90"/>   <!-- Northern approach road -->
+    </event>
+
+    <!-- MILITARY CONVOY WRECKS — 12 positions near military zones, 4 active at any time -->
+    <event name="AccidentSiteMilitary">
+        <!-- Balota airfield approach (south coast military) -->
+        <pos x="2395.0"  z="1705.0"  a="90"/>
+        <pos x="2810.0"  z="1795.0"  a="270"/>
+        <!-- NWAF (northwest airfield) approach roads -->
+        <pos x="4305.0"  z="10805.0" a="0"/>
+        <pos x="4695.0"  z="11205.0" a="180"/>
+        <!-- Pavlovo military base roads -->
+        <pos x="3195.0"  z="8705.0"  a="90"/>
+        <pos x="3595.0"  z="8805.0"  a="270"/>
+        <!-- NE military zone (Kamensk area) -->
+        <pos x="13205.0" z="10505.0" a="0"/>
+        <pos x="13495.0" z="11005.0" a="180"/>
+        <!-- Tisy military base approach -->
+        <pos x="1405.0"  z="12305.0" a="0"/>
+        <pos x="1805.0"  z="12805.0" a="180"/>
+        <!-- Central military corridor -->
+        <pos x="7005.0"  z="11105.0" a="90"/>
+        <pos x="5495.0"  z="10905.0" a="45"/>
+    </event>
+
 </eventposdef>
