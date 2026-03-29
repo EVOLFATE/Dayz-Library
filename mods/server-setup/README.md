@@ -48,11 +48,11 @@ Copy the contents of `server-setup/` directly into your mission folder.
 
 > ⚠️ **Required globals.xml changes — do these first (both caps must be raised):**
 >
-> **1. ZombieMaxCount** — The total zombie nominal is ~7,345. The vanilla cap is 800, which
+> **1. ZombieMaxCount** — The total zombie nominal is ~5,050. The vanilla cap is 800, which
 > silently starves most zones.
 > ```xml
 > <!-- mpmissions/dayzOffline.chernarusplus/db/globals.xml -->
-> <var name="ZombieMaxCount" type="0" value="8000"/>
+> <var name="ZombieMaxCount" type="0" value="6000"/>
 > ```
 >
 > **2. VehicleMaxCount** — The total vehicle nominal across all events is **196**. The vanilla
@@ -75,7 +75,7 @@ mpmissions/dayzOffline.chernarusplus/
 │
 ├── db/
 │   ├── events.xml                ← server-setup/db/events.xml       ← UPDATED
-│   ├── globals.xml               ← edit manually (raise ZombieMaxCount to 8000, VehicleMaxCount to 250)
+│   ├── globals.xml               ← edit manually (raise ZombieMaxCount to 6000, VehicleMaxCount to 250)
 │   └── types.xml                 ← server-setup/db/types.xml
 │
 └── env/
@@ -108,28 +108,50 @@ urban-rural density gradient). Cities are *sources* — zombies originated there
 Wilderness is a *sink* — sparse wanderers diffused outward over years since outbreak.
 Hordes form at geographic chokepoints (bridges, dead-ends, fenced compounds).
 
+**Design philosophy (post-rebalance):** Reduced ambient density + concentrated horde encounters
+= stealthable populated areas with dramatic roaming-horde surprises. Players can find gaps
+and plan routes through cities; the danger is still there but achievable to navigate.
+
 | Event | Zones | Nominal | Min | Max | Notes |
 |-------|-------|---------|-----|-----|-------|
-| `InfectedVillage` | 112 | **2240** | 1120 | 3360 | Villages: 100-500 residents × 85% conversion — the most common source |
-| `InfectedVillageTier1` | 55 | **825** | 412 | 1240 | Village outskirts — high diffusion from nearby settlements |
-| `InfectedArmy` | 28 | **560** | 280 | 840 | Military zones: contained environment → near-total conversion |
-| `InfectedSolitude` | 708 | **1400** | 700 | 2100 | Wilderness wanderers: 1-3% density, diffused over years |
-| `InfectedCity` | 40 | **1200** | 600 | 1800 | Cities: 5,000+ residents × 95% conversion — densest hordes |
-| `InfectedIndustrial` | 19 | **380** | 190 | 570 | Factories and ports |
-| `InfectedCityTier1` | 6 | **240** | 120 | 360 | Urban fringe — heavy drift from city centre |
-| `InfectedArmyHard` | 5 | **100** | 50 | 150 | Elite military zones |
-| `InfectedMedic` | 8 | **50** | 25 | 100 | Hospitals: ~50-100 original staff + patients before outbreak |
-| `InfectedPolice` | 10 | **50** | 10 | 100 | Police stations |
-| `InfectedNBC` | 5 | **50** | 10 | 100 | NBC/hazmat sites: contained → high conversion |
-| `InfectedFirefighter` | 4 | **50** | 25 | 100 | Fire stations (20-30 staff) |
-| `InfectedPrisoner` | 3 | **100** | 50 | 150 | Prison island: trapped → persistent |
-| `InfectedReligious` | 9 | **50** | 25 | 100 | Churches: remote, low original population |
-| `InfectedMummy` | 25 | **50** | 25 | 100 | Rare ancient encounters (1 per zone) |
+| `InfectedVillage` | 112 | **1450** | 725 | 2175 | Villages: reduced ~35% — stealth routes now possible |
+| `InfectedVillageTier1` | 55 | **530** | 265 | 800 | Village outskirts |
+| `InfectedArmy` | 28 | **390** | 195 | 585 | Military zones: contained environment |
+| `InfectedSolitude` | 708 | **980** | 490 | 1470 | Wilderness wanderers: quieter, punctuated by horde pockets |
+| `InfectedCity` | 40 | **780** | 390 | 1170 | Cities: reduced ~35% — gaps exist between clusters |
+| `InfectedIndustrial` | 19 | **250** | 125 | 375 | Factories and ports |
+| `InfectedCityTier1` | 6 | **155** | 78 | 235 | Urban fringe |
+| `InfectedArmyHard` | 5 | **70** | 35 | 105 | Elite military zones |
+| `InfectedMedic` | 8 | **35** | 18 | 70 | Hospitals |
+| `InfectedPolice` | 10 | **35** | 7 | 70 | Police stations |
+| `InfectedNBC` | 5 | **35** | 7 | 70 | NBC/hazmat sites |
+| `InfectedFirefighter` | 4 | **35** | 18 | 70 | Fire stations |
+| `InfectedPrisoner` | 3 | **70** | 35 | 105 | Prison island: trapped → persistent |
+| `InfectedReligious` | 9 | **35** | 18 | 70 | Churches: remote, low original population |
+| `InfectedMummy` | 25 | **35** | 18 | 70 | Rare ancient encounters |
 | `InfectedPoliceHard` | (static events) | **15** | 3 | 40 | Triggered by StaticPoliceSituation |
 
-> **Note:** Total nominal across all infected types ≈ 7,345. Raise `ZombieMaxCount`
-> in `globals.xml` to at least **8,000** (ideally 10,000) to let the full budget be active simultaneously.
+> **Note:** Total nominal across all infected types ≈ 5,050 (down from ~7,345). Raise `ZombieMaxCount`
+> in `globals.xml` to at least **6,000** (ideally 7,000) to let the full budget be active simultaneously.
 > Vanilla default is 800 — that cap will silently starve the higher-tier zones first.
+
+**Spawn distance tuning (all infected events):**
+
+| Field | Value | What It Does |
+|-------|-------|-------------|
+| `saferadius` | **150m** | Zombies cannot spawn within 150m of you — your clear planning bubble |
+| `distanceradius` | **80m** | Zombies spawn in the **150m–230m ring** around you — visible at distance before they're close |
+| `cleanupradius` | **300m** | Zombies persist until you're 300m away — well beyond the 230m spawn edge, so newly spawned zombies don't instantly despawn |
+
+> **Zombie AI aggro range** (how far they *see you*) is hardcoded in the DayZ engine — not
+> configurable from mission files. Vanilla sight range is ~50–80m; crouching reduces your
+> detectable footprint significantly. Route-planning benefit: with the 150m spawn bubble,
+> you can observe the 150–230m ring before committing to a path.
+
+**Horde zone system (`zombie_territories.xml`):** 118 zones in the horde territory
+(color=666013337), up from 80 — covering road chokepoints, bridge approaches, gas stations,
+between-town corridors, and forest clearings across the full map. Horde density raised to
+`smin="12" smax="30" dmin="30" dmax="65"` for intense, memorable encounters.
 
 Each infected event contains the **complete vanilla skin variant list** (all `ZmbM_*`/`ZmbF_*` children),
 so every zone type spawns the correct mix of zombie models.

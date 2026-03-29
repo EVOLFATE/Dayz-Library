@@ -370,14 +370,14 @@
     <!-- Each event lists EVERY Zmb* skin model variant to randomize  -->
     <!-- ============================================================ -->
     <event name="InfectedArmy">
-            <nominal>560</nominal>
-            <min>280</min>
-            <max>840</max>
+            <nominal>390</nominal>
+            <min>195</min>
+            <max>585</max>
             <lifetime>3</lifetime>
             <restock>0</restock>
-            <saferadius>100</saferadius>
-            <distanceradius>50</distanceradius>
-            <cleanupradius>100</cleanupradius>
+            <saferadius>150</saferadius>
+            <distanceradius>80</distanceradius>
+            <cleanupradius>300</cleanupradius>
             <flags deletable="0" init_random="0" remove_damaged="1" />
             <position>player</position>
             <limit>custom</limit>
@@ -394,14 +394,14 @@
         </event>
     
     <event name="InfectedArmyHard">
-            <nominal>100</nominal>
-            <min>50</min>
-            <max>150</max>
+            <nominal>70</nominal>
+            <min>35</min>
+            <max>105</max>
             <lifetime>3</lifetime>
             <restock>0</restock>
-            <saferadius>100</saferadius>
-            <distanceradius>50</distanceradius>
-            <cleanupradius>100</cleanupradius>
+            <saferadius>150</saferadius>
+            <distanceradius>80</distanceradius>
+            <cleanupradius>300</cleanupradius>
             <flags deletable="0" init_random="0" remove_damaged="1" />
             <position>player</position>
             <limit>custom</limit>
@@ -420,14 +420,14 @@
         </event>
     
     <event name="InfectedCity">
-            <nominal>1200</nominal>
-            <min>600</min>
-            <max>1800</max>
+            <nominal>780</nominal>
+            <min>390</min>
+            <max>1170</max>
             <lifetime>3</lifetime>
             <restock>0</restock>
-            <saferadius>100</saferadius>
-            <distanceradius>50</distanceradius>
-            <cleanupradius>100</cleanupradius>
+            <saferadius>150</saferadius>
+            <distanceradius>80</distanceradius>
+            <cleanupradius>300</cleanupradius>
             <flags deletable="0" init_random="0" remove_damaged="1" />
             <position>player</position>
             <limit>custom</limit>
@@ -480,14 +480,14 @@
         </event>
     
     <event name="InfectedCityTier1">
-            <nominal>240</nominal>
-            <min>120</min>
-            <max>360</max>
+            <nominal>155</nominal>
+            <min>78</min>
+            <max>235</max>
             <lifetime>3</lifetime>
             <restock>0</restock>
-            <saferadius>100</saferadius>
-            <distanceradius>50</distanceradius>
-            <cleanupradius>100</cleanupradius>
+            <saferadius>150</saferadius>
+            <distanceradius>80</distanceradius>
+            <cleanupradius>300</cleanupradius>
             <flags deletable="0" init_random="0" remove_damaged="1" />
             <position>player</position>
             <limit>custom</limit>
@@ -509,14 +509,14 @@
         </event>
     
     <event name="InfectedFirefighter">
-            <nominal>50</nominal>
-            <min>25</min>
-            <max>100</max>
+            <nominal>35</nominal>
+            <min>18</min>
+            <max>70</max>
             <lifetime>3</lifetime>
             <restock>0</restock>
-            <saferadius>100</saferadius>
-            <distanceradius>50</distanceradius>
-            <cleanupradius>100</cleanupradius>
+            <saferadius>150</saferadius>
+            <distanceradius>80</distanceradius>
+            <cleanupradius>300</cleanupradius>
             <flags deletable="0" init_random="0" remove_damaged="1" />
             <position>player</position>
             <limit>custom</limit>
@@ -528,14 +528,14 @@
         </event>
     
     <event name="InfectedIndustrial">
-            <nominal>380</nominal>
-            <min>190</min>
-            <max>570</max>
+            <nominal>250</nominal>
+            <min>125</min>
+            <max>375</max>
             <lifetime>3</lifetime>
             <restock>0</restock>
-            <saferadius>100</saferadius>
-            <distanceradius>50</distanceradius>
-            <cleanupradius>100</cleanupradius>
+            <saferadius>150</saferadius>
+            <distanceradius>80</distanceradius>
+            <cleanupradius>300</cleanupradius>
             <flags deletable="0" init_random="0" remove_damaged="1" />
             <position>player</position>
             <limit>custom</limit>
@@ -571,14 +571,14 @@
         </event>
     
     <event name="InfectedMedic">
-            <nominal>50</nominal>
-            <min>25</min>
-            <max>100</max>
+            <nominal>35</nominal>
+            <min>18</min>
+            <max>70</max>
             <lifetime>3</lifetime>
             <restock>0</restock>
-            <saferadius>100</saferadius>
-            <distanceradius>50</distanceradius>
-            <cleanupradius>100</cleanupradius>
+            <saferadius>150</saferadius>
+            <distanceradius>80</distanceradius>
+            <cleanupradius>300</cleanupradius>
             <flags deletable="0" init_random="0" remove_damaged="1" />
             <position>player</position>
             <limit>custom</limit>
@@ -601,14 +601,14 @@
         </event>
     
     <event name="InfectedNBC">
-            <nominal>50</nominal>
-            <min>10</min>
-            <max>100</max>
+            <nominal>35</nominal>
+            <min>7</min>
+            <max>70</max>
             <lifetime>3</lifetime>
             <restock>0</restock>
-            <saferadius>100</saferadius>
-            <distanceradius>50</distanceradius>
-            <cleanupradius>100</cleanupradius>
+            <saferadius>150</saferadius>
+            <distanceradius>80</distanceradius>
+            <cleanupradius>300</cleanupradius>
             <flags deletable="0" init_random="0" remove_damaged="1" />
             <position>player</position>
             <limit>custom</limit>
@@ -637,14 +637,14 @@
         </event>
     
     <event name="InfectedPolice">
-            <nominal>50</nominal>
-            <min>10</min>
-            <max>100</max>
+            <nominal>35</nominal>
+            <min>7</min>
+            <max>70</max>
             <lifetime>3</lifetime>
             <restock>0</restock>
-            <saferadius>100</saferadius>
-            <distanceradius>50</distanceradius>
-            <cleanupradius>100</cleanupradius>
+            <saferadius>150</saferadius>
+            <distanceradius>80</distanceradius>
+            <cleanupradius>300</cleanupradius>
             <flags deletable="0" init_random="0" remove_damaged="1" />
             <position>player</position>
             <limit>custom</limit>
@@ -677,14 +677,14 @@
         </event>
     
     <event name="InfectedPrisoner">
-            <nominal>100</nominal>
-            <min>50</min>
-            <max>150</max>
+            <nominal>70</nominal>
+            <min>35</min>
+            <max>105</max>
             <lifetime>3</lifetime>
             <restock>0</restock>
-            <saferadius>100</saferadius>
-            <distanceradius>50</distanceradius>
-            <cleanupradius>100</cleanupradius>
+            <saferadius>150</saferadius>
+            <distanceradius>80</distanceradius>
+            <cleanupradius>300</cleanupradius>
             <flags deletable="0" init_random="0" remove_damaged="1" />
             <position>player</position>
             <limit>custom</limit>
@@ -695,14 +695,14 @@
         </event>
     
     <event name="InfectedReligious">
-            <nominal>50</nominal>
-            <min>25</min>
-            <max>100</max>
+            <nominal>35</nominal>
+            <min>18</min>
+            <max>70</max>
             <lifetime>3</lifetime>
             <restock>0</restock>
-            <saferadius>100</saferadius>
-            <distanceradius>50</distanceradius>
-            <cleanupradius>100</cleanupradius>
+            <saferadius>150</saferadius>
+            <distanceradius>80</distanceradius>
+            <cleanupradius>300</cleanupradius>
             <flags deletable="0" init_random="0" remove_damaged="1" />
             <position>player</position>
             <limit>custom</limit>
@@ -731,14 +731,14 @@
         </event>
     
     <event name="InfectedSolitude">
-            <nominal>1400</nominal>
-            <min>700</min>
-            <max>2100</max>
+            <nominal>980</nominal>
+            <min>490</min>
+            <max>1470</max>
             <lifetime>3</lifetime>
             <restock>0</restock>
-            <saferadius>100</saferadius>
-            <distanceradius>50</distanceradius>
-            <cleanupradius>100</cleanupradius>
+            <saferadius>150</saferadius>
+            <distanceradius>80</distanceradius>
+            <cleanupradius>300</cleanupradius>
             <flags deletable="0" init_random="0" remove_damaged="1" />
             <position>player</position>
             <limit>custom</limit>
@@ -767,14 +767,14 @@
         </event>
     
     <event name="InfectedVillage">
-            <nominal>2240</nominal>
-            <min>1120</min>
-            <max>3360</max>
+            <nominal>1450</nominal>
+            <min>725</min>
+            <max>2175</max>
             <lifetime>3</lifetime>
             <restock>0</restock>
-            <saferadius>100</saferadius>
-            <distanceradius>50</distanceradius>
-            <cleanupradius>100</cleanupradius>
+            <saferadius>150</saferadius>
+            <distanceradius>80</distanceradius>
+            <cleanupradius>300</cleanupradius>
             <flags deletable="0" init_random="0" remove_damaged="1" />
             <position>player</position>
             <limit>custom</limit>
@@ -808,14 +808,14 @@
         </event>
     
     <event name="InfectedVillageTier1">
-            <nominal>825</nominal>
-            <min>412</min>
-            <max>1240</max>
+            <nominal>530</nominal>
+            <min>265</min>
+            <max>800</max>
             <lifetime>3</lifetime>
             <restock>0</restock>
-            <saferadius>100</saferadius>
-            <distanceradius>50</distanceradius>
-            <cleanupradius>100</cleanupradius>
+            <saferadius>150</saferadius>
+            <distanceradius>80</distanceradius>
+            <cleanupradius>300</cleanupradius>
             <flags deletable="0" init_random="0" remove_damaged="1" />
             <position>player</position>
             <limit>custom</limit>
@@ -834,14 +834,14 @@
     
 
     <event name="InfectedMummy">
-        <nominal>50</nominal>
-        <min>25</min>
-        <max>100</max>
+        <nominal>35</nominal>
+        <min>18</min>
+        <max>70</max>
         <lifetime>3</lifetime>
         <restock>0</restock>
-        <saferadius>100</saferadius>
-        <distanceradius>50</distanceradius>
-        <cleanupradius>100</cleanupradius>
+        <saferadius>150</saferadius>
+        <distanceradius>80</distanceradius>
+        <cleanupradius>300</cleanupradius>
         <flags deletable="0" init_random="0" remove_damaged="1"/>
         <position>player</position>
         <limit>custom</limit>
