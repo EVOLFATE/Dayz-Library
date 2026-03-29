@@ -7,184 +7,184 @@
 
         <!-- === SOUTH COAST EDGE === -->
         <!-- South coast west forest edge - hunting hens and hares near Kamenka -->
-        <zone name="Water" smin="0" smax="0" dmin="0" dmax="0" x="600.00" z="2700.00" r="60"/>
-        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="660.00" z="2760.00" r="180"/>
-        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="500.00" z="2700.00" r="180"/>
-        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="600.00" z="2950.00" r="240"/>
-        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="850.00" z="2580.00" r="240"/>
-        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="400.00" z="3000.00" r="240"/>
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="3" x="600.00" z="2700.00" r="200"/>
+        <zone name="Rest" smin="0" smax="1" dmin="1" dmax="4" x="660.00" z="2760.00" r="400"/>
+        <zone name="Rest" smin="0" smax="1" dmin="1" dmax="4" x="500.00" z="2700.00" r="400"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="2" dmax="6" x="600.00" z="2950.00" r="800"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="2" dmax="6" x="850.00" z="2580.00" r="800"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="2" dmax="6" x="400.00" z="3000.00" r="800"/>
 
         <!-- South coast - Elektrozavodsk forest edge -->
-        <zone name="Water" smin="0" smax="0" dmin="0" dmax="0" x="2200.00" z="3200.00" r="60"/>
-        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="2260.00" z="3260.00" r="180"/>
-        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="2100.00" z="3200.00" r="180"/>
-        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="2200.00" z="3450.00" r="240"/>
-        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="2450.00" z="3080.00" r="240"/>
-        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="2000.00" z="3500.00" r="240"/>
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="3" x="2200.00" z="3200.00" r="200"/>
+        <zone name="Rest" smin="0" smax="1" dmin="1" dmax="4" x="2260.00" z="3260.00" r="400"/>
+        <zone name="Rest" smin="0" smax="1" dmin="1" dmax="4" x="2100.00" z="3200.00" r="400"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="2" dmax="6" x="2200.00" z="3450.00" r="800"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="2" dmax="6" x="2450.00" z="3080.00" r="800"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="2" dmax="6" x="2000.00" z="3500.00" r="800"/>
 
         <!-- South coast - Pusta farm-forest boundary -->
-        <zone name="Water" smin="0" smax="0" dmin="0" dmax="0" x="4000.00" z="3000.00" r="60"/>
-        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="4060.00" z="3060.00" r="180"/>
-        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="3900.00" z="3000.00" r="180"/>
-        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="4000.00" z="3250.00" r="240"/>
-        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="4250.00" z="2880.00" r="240"/>
-        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="3800.00" z="3300.00" r="240"/>
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="3" x="4000.00" z="3000.00" r="200"/>
+        <zone name="Rest" smin="0" smax="1" dmin="1" dmax="4" x="4060.00" z="3060.00" r="400"/>
+        <zone name="Rest" smin="0" smax="1" dmin="1" dmax="4" x="3900.00" z="3000.00" r="400"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="2" dmax="6" x="4000.00" z="3250.00" r="800"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="2" dmax="6" x="4250.00" z="2880.00" r="800"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="2" dmax="6" x="3800.00" z="3300.00" r="800"/>
 
         <!-- South coast central - farm-forest boundary -->
-        <zone name="Water" smin="0" smax="0" dmin="0" dmax="0" x="7200.00" z="3200.00" r="60"/>
-        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="7260.00" z="3260.00" r="180"/>
-        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="7100.00" z="3200.00" r="180"/>
-        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="7200.00" z="3450.00" r="240"/>
-        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="7450.00" z="3080.00" r="240"/>
-        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="7000.00" z="3500.00" r="240"/>
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="3" x="7200.00" z="3200.00" r="200"/>
+        <zone name="Rest" smin="0" smax="1" dmin="1" dmax="4" x="7260.00" z="3260.00" r="400"/>
+        <zone name="Rest" smin="0" smax="1" dmin="1" dmax="4" x="7100.00" z="3200.00" r="400"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="2" dmax="6" x="7200.00" z="3450.00" r="800"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="2" dmax="6" x="7450.00" z="3080.00" r="800"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="2" dmax="6" x="7000.00" z="3500.00" r="800"/>
 
         <!-- South coast east - near Berezino -->
-        <zone name="Water" smin="0" smax="0" dmin="0" dmax="0" x="9500.00" z="3600.00" r="60"/>
-        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="9560.00" z="3660.00" r="180"/>
-        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="9400.00" z="3600.00" r="180"/>
-        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="9500.00" z="3850.00" r="240"/>
-        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="9750.00" z="3480.00" r="240"/>
-        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="9300.00" z="3900.00" r="240"/>
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="3" x="9500.00" z="3600.00" r="200"/>
+        <zone name="Rest" smin="0" smax="1" dmin="1" dmax="4" x="9560.00" z="3660.00" r="400"/>
+        <zone name="Rest" smin="0" smax="1" dmin="1" dmax="4" x="9400.00" z="3600.00" r="400"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="2" dmax="6" x="9500.00" z="3850.00" r="800"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="2" dmax="6" x="9750.00" z="3480.00" r="800"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="2" dmax="6" x="9300.00" z="3900.00" r="800"/>
 
         <!-- South coast far east - forest boundary -->
-        <zone name="Water" smin="0" smax="0" dmin="0" dmax="0" x="12500.00" z="3200.00" r="60"/>
-        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="12560.00" z="3260.00" r="180"/>
-        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="12400.00" z="3200.00" r="180"/>
-        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="12500.00" z="3450.00" r="240"/>
-        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="12750.00" z="3080.00" r="240"/>
-        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="12300.00" z="3500.00" r="240"/>
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="3" x="12500.00" z="3200.00" r="200"/>
+        <zone name="Rest" smin="0" smax="1" dmin="1" dmax="4" x="12560.00" z="3260.00" r="400"/>
+        <zone name="Rest" smin="0" smax="1" dmin="1" dmax="4" x="12400.00" z="3200.00" r="400"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="2" dmax="6" x="12500.00" z="3450.00" r="800"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="2" dmax="6" x="12750.00" z="3080.00" r="800"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="2" dmax="6" x="12300.00" z="3500.00" r="800"/>
 
         <!-- === SOUTH FORESTS === -->
         <!-- South forest west - hunting near Zelenogorsk farms -->
-        <zone name="Water" smin="0" smax="0" dmin="0" dmax="0" x="1500.00" z="4800.00" r="60"/>
-        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="1560.00" z="4860.00" r="180"/>
-        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="1400.00" z="4800.00" r="180"/>
-        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="1500.00" z="5050.00" r="240"/>
-        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="1750.00" z="4680.00" r="240"/>
-        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="1300.00" z="5100.00" r="240"/>
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="3" x="1500.00" z="4800.00" r="200"/>
+        <zone name="Rest" smin="0" smax="1" dmin="1" dmax="4" x="1560.00" z="4860.00" r="400"/>
+        <zone name="Rest" smin="0" smax="1" dmin="1" dmax="4" x="1400.00" z="4800.00" r="400"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="2" dmax="6" x="1500.00" z="5050.00" r="800"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="2" dmax="6" x="1750.00" z="4680.00" r="800"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="2" dmax="6" x="1300.00" z="5100.00" r="800"/>
 
         <!-- South forest - Pavlovo woods fox territory -->
-        <zone name="Water" smin="0" smax="0" dmin="0" dmax="0" x="3800.00" z="5200.00" r="60"/>
-        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="3860.00" z="5260.00" r="180"/>
-        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="3700.00" z="5200.00" r="180"/>
-        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="3800.00" z="5450.00" r="240"/>
-        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="4050.00" z="5080.00" r="240"/>
-        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="3600.00" z="5500.00" r="240"/>
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="3" x="3800.00" z="5200.00" r="200"/>
+        <zone name="Rest" smin="0" smax="1" dmin="1" dmax="4" x="3860.00" z="5260.00" r="400"/>
+        <zone name="Rest" smin="0" smax="1" dmin="1" dmax="4" x="3700.00" z="5200.00" r="400"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="2" dmax="6" x="3800.00" z="5450.00" r="800"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="2" dmax="6" x="4050.00" z="5080.00" r="800"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="2" dmax="6" x="3600.00" z="5500.00" r="800"/>
 
         <!-- South forest central - Gorka forest fox -->
-        <zone name="Water" smin="0" smax="0" dmin="0" dmax="0" x="6200.00" z="5500.00" r="60"/>
-        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="6260.00" z="5560.00" r="180"/>
-        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="6100.00" z="5500.00" r="180"/>
-        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="6200.00" z="5750.00" r="240"/>
-        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="6450.00" z="5380.00" r="240"/>
-        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="6000.00" z="5800.00" r="240"/>
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="3" x="6200.00" z="5500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="1" dmin="1" dmax="4" x="6260.00" z="5560.00" r="400"/>
+        <zone name="Rest" smin="0" smax="1" dmin="1" dmax="4" x="6100.00" z="5500.00" r="400"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="2" dmax="6" x="6200.00" z="5750.00" r="800"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="2" dmax="6" x="6450.00" z="5380.00" r="800"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="2" dmax="6" x="6000.00" z="5800.00" r="800"/>
 
         <!-- South forest east - Berezino woods -->
-        <zone name="Water" smin="0" smax="0" dmin="0" dmax="0" x="9800.00" z="5500.00" r="60"/>
-        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="9860.00" z="5560.00" r="180"/>
-        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="9700.00" z="5500.00" r="180"/>
-        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="9800.00" z="5750.00" r="240"/>
-        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="10050.00" z="5380.00" r="240"/>
-        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="9600.00" z="5800.00" r="240"/>
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="3" x="9800.00" z="5500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="1" dmin="1" dmax="4" x="9860.00" z="5560.00" r="400"/>
+        <zone name="Rest" smin="0" smax="1" dmin="1" dmax="4" x="9700.00" z="5500.00" r="400"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="2" dmax="6" x="9800.00" z="5750.00" r="800"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="2" dmax="6" x="10050.00" z="5380.00" r="800"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="2" dmax="6" x="9600.00" z="5800.00" r="800"/>
 
         <!-- === CENTRAL FORESTS === -->
         <!-- Central west - Zelenogorsk forest fox -->
-        <zone name="Water" smin="0" smax="0" dmin="0" dmax="0" x="2000.00" z="7200.00" r="60"/>
-        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="2060.00" z="7260.00" r="180"/>
-        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="1900.00" z="7200.00" r="180"/>
-        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="2000.00" z="7450.00" r="240"/>
-        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="2250.00" z="7080.00" r="240"/>
-        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="1800.00" z="7500.00" r="240"/>
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="3" x="2000.00" z="7200.00" r="200"/>
+        <zone name="Rest" smin="0" smax="1" dmin="1" dmax="4" x="2060.00" z="7260.00" r="400"/>
+        <zone name="Rest" smin="0" smax="1" dmin="1" dmax="4" x="1900.00" z="7200.00" r="400"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="2" dmax="6" x="2000.00" z="7450.00" r="800"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="2" dmax="6" x="2250.00" z="7080.00" r="800"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="2" dmax="6" x="1800.00" z="7500.00" r="800"/>
 
         <!-- Central - Novy Sobor forest edge -->
-        <zone name="Water" smin="0" smax="0" dmin="0" dmax="0" x="4500.00" z="8200.00" r="60"/>
-        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="4560.00" z="8260.00" r="180"/>
-        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="4400.00" z="8200.00" r="180"/>
-        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="4500.00" z="8450.00" r="240"/>
-        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="4750.00" z="8080.00" r="240"/>
-        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="4300.00" z="8500.00" r="240"/>
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="3" x="4500.00" z="8200.00" r="200"/>
+        <zone name="Rest" smin="0" smax="1" dmin="1" dmax="4" x="4560.00" z="8260.00" r="400"/>
+        <zone name="Rest" smin="0" smax="1" dmin="1" dmax="4" x="4400.00" z="8200.00" r="400"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="2" dmax="6" x="4500.00" z="8450.00" r="800"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="2" dmax="6" x="4750.00" z="8080.00" r="800"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="2" dmax="6" x="4300.00" z="8500.00" r="800"/>
 
         <!-- Central - Kabanino forest fox territory -->
-        <zone name="Water" smin="0" smax="0" dmin="0" dmax="0" x="7200.00" z="8500.00" r="60"/>
-        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="7260.00" z="8560.00" r="180"/>
-        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="7100.00" z="8500.00" r="180"/>
-        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="7200.00" z="8750.00" r="240"/>
-        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="7450.00" z="8380.00" r="240"/>
-        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="7000.00" z="8800.00" r="240"/>
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="3" x="7200.00" z="8500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="1" dmin="1" dmax="4" x="7260.00" z="8560.00" r="400"/>
+        <zone name="Rest" smin="0" smax="1" dmin="1" dmax="4" x="7100.00" z="8500.00" r="400"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="2" dmax="6" x="7200.00" z="8750.00" r="800"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="2" dmax="6" x="7450.00" z="8380.00" r="800"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="2" dmax="6" x="7000.00" z="8800.00" r="800"/>
 
         <!-- Central east - forest fox near Mogilevka -->
-        <zone name="Water" smin="0" smax="0" dmin="0" dmax="0" x="10500.00" z="8200.00" r="60"/>
-        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="10560.00" z="8260.00" r="180"/>
-        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="10400.00" z="8200.00" r="180"/>
-        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="10500.00" z="8450.00" r="240"/>
-        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="10750.00" z="8080.00" r="240"/>
-        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="10300.00" z="8500.00" r="240"/>
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="3" x="10500.00" z="8200.00" r="200"/>
+        <zone name="Rest" smin="0" smax="1" dmin="1" dmax="4" x="10560.00" z="8260.00" r="400"/>
+        <zone name="Rest" smin="0" smax="1" dmin="1" dmax="4" x="10400.00" z="8200.00" r="400"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="2" dmax="6" x="10500.00" z="8450.00" r="800"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="2" dmax="6" x="10750.00" z="8080.00" r="800"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="2" dmax="6" x="10300.00" z="8500.00" r="800"/>
 
         <!-- Central far east - eastern forest fox -->
-        <zone name="Water" smin="0" smax="0" dmin="0" dmax="0" x="13500.00" z="8000.00" r="60"/>
-        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="13560.00" z="8060.00" r="180"/>
-        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="13400.00" z="8000.00" r="180"/>
-        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="13500.00" z="8250.00" r="240"/>
-        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="13750.00" z="7880.00" r="240"/>
-        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="13300.00" z="8300.00" r="240"/>
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="3" x="13500.00" z="8000.00" r="200"/>
+        <zone name="Rest" smin="0" smax="1" dmin="1" dmax="4" x="13560.00" z="8060.00" r="400"/>
+        <zone name="Rest" smin="0" smax="1" dmin="1" dmax="4" x="13400.00" z="8000.00" r="400"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="2" dmax="6" x="13500.00" z="8250.00" r="800"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="2" dmax="6" x="13750.00" z="7880.00" r="800"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="2" dmax="6" x="13300.00" z="8300.00" r="800"/>
 
         <!-- === NORTH CENTRAL === -->
         <!-- North central west - Vybor forest fox -->
-        <zone name="Water" smin="0" smax="0" dmin="0" dmax="0" x="3000.00" z="10200.00" r="60"/>
-        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="3060.00" z="10260.00" r="180"/>
-        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="2900.00" z="10200.00" r="180"/>
-        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="3000.00" z="10450.00" r="240"/>
-        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="3250.00" z="10080.00" r="240"/>
-        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="2800.00" z="10500.00" r="240"/>
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="3" x="3000.00" z="10200.00" r="200"/>
+        <zone name="Rest" smin="0" smax="1" dmin="1" dmax="4" x="3060.00" z="10260.00" r="400"/>
+        <zone name="Rest" smin="0" smax="1" dmin="1" dmax="4" x="2900.00" z="10200.00" r="400"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="2" dmax="6" x="3000.00" z="10450.00" r="800"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="2" dmax="6" x="3250.00" z="10080.00" r="800"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="2" dmax="6" x="2800.00" z="10500.00" r="800"/>
 
         <!-- North central - Lopatino forest edge -->
-        <zone name="Water" smin="0" smax="0" dmin="0" dmax="0" x="5800.00" z="10800.00" r="60"/>
-        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="5860.00" z="10860.00" r="180"/>
-        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="5700.00" z="10800.00" r="180"/>
-        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="5800.00" z="11050.00" r="240"/>
-        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="6050.00" z="10680.00" r="240"/>
-        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="5600.00" z="11100.00" r="240"/>
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="3" x="5800.00" z="10800.00" r="200"/>
+        <zone name="Rest" smin="0" smax="1" dmin="1" dmax="4" x="5860.00" z="10860.00" r="400"/>
+        <zone name="Rest" smin="0" smax="1" dmin="1" dmax="4" x="5700.00" z="10800.00" r="400"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="2" dmax="6" x="5800.00" z="11050.00" r="800"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="2" dmax="6" x="6050.00" z="10680.00" r="800"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="2" dmax="6" x="5600.00" z="11100.00" r="800"/>
 
         <!-- North central east - fox territory -->
-        <zone name="Water" smin="0" smax="0" dmin="0" dmax="0" x="8800.00" z="10500.00" r="60"/>
-        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="8860.00" z="10560.00" r="180"/>
-        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="8700.00" z="10500.00" r="180"/>
-        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="8800.00" z="10750.00" r="240"/>
-        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="9050.00" z="10380.00" r="240"/>
-        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="8600.00" z="10800.00" r="240"/>
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="3" x="8800.00" z="10500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="1" dmin="1" dmax="4" x="8860.00" z="10560.00" r="400"/>
+        <zone name="Rest" smin="0" smax="1" dmin="1" dmax="4" x="8700.00" z="10500.00" r="400"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="2" dmax="6" x="8800.00" z="10750.00" r="800"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="2" dmax="6" x="9050.00" z="10380.00" r="800"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="2" dmax="6" x="8600.00" z="10800.00" r="800"/>
 
         <!-- North east - fox near Tisy area -->
-        <zone name="Water" smin="0" smax="0" dmin="0" dmax="0" x="11800.00" z="10200.00" r="60"/>
-        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="11860.00" z="10260.00" r="180"/>
-        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="11700.00" z="10200.00" r="180"/>
-        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="11800.00" z="10450.00" r="240"/>
-        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="12050.00" z="10080.00" r="240"/>
-        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="11600.00" z="10500.00" r="240"/>
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="3" x="11800.00" z="10200.00" r="200"/>
+        <zone name="Rest" smin="0" smax="1" dmin="1" dmax="4" x="11860.00" z="10260.00" r="400"/>
+        <zone name="Rest" smin="0" smax="1" dmin="1" dmax="4" x="11700.00" z="10200.00" r="400"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="2" dmax="6" x="11800.00" z="10450.00" r="800"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="2" dmax="6" x="12050.00" z="10080.00" r="800"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="2" dmax="6" x="11600.00" z="10500.00" r="800"/>
 
         <!-- === FAR NORTH === -->
         <!-- Far north west - Severograd forest fox -->
-        <zone name="Water" smin="0" smax="0" dmin="0" dmax="0" x="2200.00" z="12800.00" r="60"/>
-        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="2260.00" z="12860.00" r="180"/>
-        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="2100.00" z="12800.00" r="180"/>
-        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="2200.00" z="13050.00" r="240"/>
-        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="2450.00" z="12680.00" r="240"/>
-        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="2000.00" z="13100.00" r="240"/>
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="3" x="2200.00" z="12800.00" r="200"/>
+        <zone name="Rest" smin="0" smax="1" dmin="1" dmax="4" x="2260.00" z="12860.00" r="400"/>
+        <zone name="Rest" smin="0" smax="1" dmin="1" dmax="4" x="2100.00" z="12800.00" r="400"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="2" dmax="6" x="2200.00" z="13050.00" r="800"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="2" dmax="6" x="2450.00" z="12680.00" r="800"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="2" dmax="6" x="2000.00" z="13100.00" r="800"/>
 
         <!-- Far north central - forest edge fox -->
-        <zone name="Water" smin="0" smax="0" dmin="0" dmax="0" x="6000.00" z="13200.00" r="60"/>
-        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="6060.00" z="13260.00" r="180"/>
-        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="5900.00" z="13200.00" r="180"/>
-        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="6000.00" z="13450.00" r="240"/>
-        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="6250.00" z="13080.00" r="240"/>
-        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="5800.00" z="13500.00" r="240"/>
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="3" x="6000.00" z="13200.00" r="200"/>
+        <zone name="Rest" smin="0" smax="1" dmin="1" dmax="4" x="6060.00" z="13260.00" r="400"/>
+        <zone name="Rest" smin="0" smax="1" dmin="1" dmax="4" x="5900.00" z="13200.00" r="400"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="2" dmax="6" x="6000.00" z="13450.00" r="800"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="2" dmax="6" x="6250.00" z="13080.00" r="800"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="2" dmax="6" x="5800.00" z="13500.00" r="800"/>
 
         <!-- Far north east - fox near Kamensk -->
-        <zone name="Water" smin="0" smax="0" dmin="0" dmax="0" x="10500.00" z="13000.00" r="60"/>
-        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="10560.00" z="13060.00" r="180"/>
-        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="10400.00" z="13000.00" r="180"/>
-        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="10500.00" z="13250.00" r="240"/>
-        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="10750.00" z="12880.00" r="240"/>
-        <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="10300.00" z="13300.00" r="240"/>
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="3" x="10500.00" z="13000.00" r="200"/>
+        <zone name="Rest" smin="0" smax="1" dmin="1" dmax="4" x="10560.00" z="13060.00" r="400"/>
+        <zone name="Rest" smin="0" smax="1" dmin="1" dmax="4" x="10400.00" z="13000.00" r="400"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="2" dmax="6" x="10500.00" z="13250.00" r="800"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="2" dmax="6" x="10750.00" z="12880.00" r="800"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="2" dmax="6" x="10300.00" z="13300.00" r="800"/>
 
     </territory>
 </territory-type>
