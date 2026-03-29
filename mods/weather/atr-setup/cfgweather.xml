@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- ATR Setup: Gloomy & Very Foggy Weather Preset -->
+<!-- Verified against: Bohemia Interactive Wiki & scalespeeder reference configs -->
+<weather reset="1" enable="1">
+    <overcast>
+        <current actual="0.95" time="0" duration="3600" />
+        <limits min="0.85" max="1.0" />
+        <timelimits min="1800" max="3600" />
+        <changelimits min="0.0" max="0.05" />
+    </overcast>
+    <fog>
+        <current actual="0.75" time="0" duration="3600" />
+        <limits min="0.5" max="0.9" />
+        <timelimits min="1800" max="3600" />
+        <changelimits min="0.0" max="0.05" />
+    </fog>
+    <rain>
+        <current actual="0.05" time="120" duration="600" />
+        <limits min="0.0" max="0.15" />
+        <timelimits min="600" max="1800" />
+        <changelimits min="0.0" max="0.05" />
+        <thresholds min="0.6" max="1.0" end="120" />
+    </rain>
+    <windMagnitude>
+        <current actual="3.0" time="60" duration="300" />
+        <limits min="1.0" max="8.0" />
+        <timelimits min="300" max="600" />
+        <changelimits min="0.0" max="3.0" />
+    </windMagnitude>
+    <windDirection>
+        <current actual="0.0" time="60" duration="300" />
+        <limits min="-3.14" max="3.14" />
+        <timelimits min="300" max="600" />
+        <changelimits min="-1.57" max="1.57" />
+    </windDirection>
+    <storm density="0.8" threshold="0.9" timeout="45"/>
+</weather>
