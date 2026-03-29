@@ -17,6 +17,12 @@
         <default name="Missions" folder="." file="cfgmissions.xml" />
         <default name="CfgEventSpawns" folder="." file="cfgeventspawns.xml" />
         <default name="CfgSpawnableTypes" folder="." file="cfgspawnabletypes.xml" />
+        <!-- Note: "cfgrandompresnce.xml" is the actual vanilla DayZ filename — the unusual spelling is intentional -->
         <default name="CfgRandomPresence" folder="." file="cfgrandompresnce.xml" />
+        <default name="CfgWeather" folder="." file="cfgweather.xml" />
+        <default name="CfgPlayerSpawnPoints" folder="." file="cfgplayerspawnpoints.xml" />
+        <default name="CfgIgnoreList" folder="." file="cfgIgnoreList.xml" />
+        <default name="CfgLimitsDefinition" folder="." file="cfglimitsdefinition.xml" />
+        <default name="CfgLimitsDefinitionUser" folder="." file="cfglimitsdefinitionuser.xml" />
     </defaults>
 </economycore>
