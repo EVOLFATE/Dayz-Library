@@ -46,25 +46,13 @@ This package is tuned to deliver that experience consistently across every file.
 
 Copy the contents of `server-setup/` directly into your mission folder.
 
-> ⚠️ **Required globals.xml changes — do these first (both caps must be raised):**
+> ✅ **globals.xml is now included** — `server-setup/db/globals.xml` ships with all required
+> values pre-configured (`ZombieMaxCount=5000`, `VehicleMaxCount=250`, `AnimalMaxCount=200`).
+> Simply copy it along with the other files — no manual editing required.
 >
-> **1. ZombieMaxCount** — The total zombie nominal across all infected territory types is ~4,060,
-> plus active horde events. The vanilla cap is 800, which silently starves most zones.
-> ```xml
-> <!-- mpmissions/dayzOffline.chernarusplus/db/globals.xml -->
-> <var name="ZombieMaxCount" type="0" value="5000"/>
-> ```
->
-> **2. VehicleMaxCount** — The total vehicle nominal across all events is **196**. The vanilla
-> default `VehicleMaxCount` is **2–10** on most hosts (Nitrado default is 10). At that cap
-> you will see only 2–10 cars total across the entire map regardless of what is in `events.xml`.
-> Raise it to at least **250** to let all 196 nominal vehicles be active simultaneously:
-> ```xml
-> <!-- mpmissions/dayzOffline.chernarusplus/db/globals.xml -->
-> <var name="VehicleMaxCount" type="0" value="250"/>
-> ```
->
-> On Nitrado console: File Manager → `dayzps/missions/<your-mission>/db/globals.xml`
+> If you already have a customised `globals.xml` on your server, merge in these key values:
+> - `ZombieMaxCount` → **5000** (vanilla 800 silently starves all zombie zones)
+> - `VehicleMaxCount` → **250** (vanilla 2–10 caps total cars across the entire map)
 
 ```
 mpmissions/dayzOffline.chernarusplus/
@@ -75,7 +63,7 @@ mpmissions/dayzOffline.chernarusplus/
 │
 ├── db/
 │   ├── events.xml                ← server-setup/db/events.xml       ← UPDATED
-│   ├── globals.xml               ← edit manually (raise ZombieMaxCount to 5000, VehicleMaxCount to 250)
+│   ├── globals.xml               ← server-setup/db/globals.xml      ← INCLUDED (pre-configured)
 │   └── types.xml                 ← server-setup/db/types.xml
 │
 └── env/
@@ -130,9 +118,8 @@ EVENT encounters, not permanent territory blobs.
 
 > **Note:** Total nominal across all infected territory types ≈ 4,060. The 8 active horde events
 > each pull additional InfectedCity zombies via `secondary=` (controlled by the `<zone>` density
-> in `cfgeventspawns.xml`). Raise `ZombieMaxCount` in `globals.xml` to at least **5,000** to
-> let the full budget be active simultaneously. Vanilla default is 800 — that cap will silently
-> starve the higher-tier zones first.
+> in `cfgeventspawns.xml`). `globals.xml` ships with `ZombieMaxCount=5000` to let the full
+> budget be active simultaneously. The vanilla default of 800 silently starves higher-tier zones.
 
 ### Zombie Horde Events (`StaticZombieHorde`)
 
@@ -287,9 +274,8 @@ type definitions replacing the vanilla vehicle entries.
 High nominal counts mean you see cars everywhere. Low part attachment chances mean almost none
 of them run. The ecosystem rewards scavenging multiple wrecks to build one working vehicle.
 
-> ⚠️ **VehicleMaxCount must be raised** — with the vanilla default of 2–10, only 2–10 vehicles
-> will ever be active on the map at once, regardless of what the nominals say. Set
-> `VehicleMaxCount` to **250** in `globals.xml` (see install instructions above).
+> ✅ **VehicleMaxCount is pre-configured** — `globals.xml` ships with `VehicleMaxCount=250`,
+> allowing all 196 vehicle nominals to be active simultaneously. No manual editing required.
 
 ---
 
