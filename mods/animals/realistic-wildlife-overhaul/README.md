@@ -68,6 +68,7 @@ areas as the predators do, and you'll encounter them.
 | `env/fox_territories.xml` | Fox zones — forest edges/farms | `env/fox_territories.xml` |
 | `env/wolf_territories.xml` | Wolf zones — entire map | `env/wolf_territories.xml` |
 | `env/bear_territories.xml` | Bear zones — rivers/forests/farms | `env/bear_territories.xml` |
+| `env/reindeer_territories.xml` | Reindeer zones — far north wilderness | `env/reindeer_territories.xml` |
 
 ---
 

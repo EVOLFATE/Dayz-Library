@@ -38,7 +38,7 @@ This package is tuned to deliver that experience consistently across every file.
 | `db/cfgspawnabletypes.xml` | **24 types** — 8 vehicle loot configs + 16 zombie loot types (post-apoc tuned) |
 | `db/events.xml` | **63 events** — animals, ALL infected (with tuned nominals), static world events, foraging |
 | `db/types.xml` | **1,390 items** — complete DayZ loot economy with vehicle overhaul values |
-| `env/` | **13 territory files** — 12 animal + zombie_territories.xml (1,037 zones) |
+| `env/` | **14 territory files** — 13 animal + zombie_territories.xml (5,448 animal zones + 1,037 zombie zones) |
 
 ---
 
@@ -133,21 +133,22 @@ something worth dying for:
 
 ## Wildlife Spawn Counts
 
-| Animal | Nominal | Territory File |
-|--------|---------|----------------|
-| Hare | 80 | `env/hare_territories.xml` |
-| Hen | 60 | `env/hen_territories.xml` |
-| Roe Deer | 50 | `env/roe_deer_territories.xml` |
-| Red Deer | 35 | `env/red_deer_territories.xml` |
-| Fox | 30 | `env/fox_territories.xml` |
-| Wild Boar | 30 | `env/wild_boar_territories.xml` |
-| Cattle | 25 | `env/cattle_territories.xml` |
-| Domestic Animals | 25 | `env/domestic_animals_territories.xml` |
-| Wolf | 20 | `env/wolf_territories.xml` |
-| Sheep/Goat | 20 | `env/sheep_goat_territories.xml` |
-| Pig | 20 | `env/pig_territories.xml` |
-| Bear | 15 | `env/bear_territories.xml` |
-| White Wolf | 8 | (part of wolf territories) |
+| Animal | Nominal | Territory File | Zones |
+|--------|---------|----------------|-------|
+| Hare | 80 | `env/hare_territories.xml` | 1,896 |
+| Hen | 60 | `env/hen_territories.xml` | 762 |
+| Roe Deer | 50 | `env/roe_deer_territories.xml` | 312 |
+| Red Deer | 35 | `env/red_deer_territories.xml` | 294 |
+| Fox | 30 | `env/fox_territories.xml` | 360 |
+| Wild Boar | 30 | `env/wild_boar_territories.xml` | 228 |
+| Cattle | 25 | `env/cattle_territories.xml` | 252 |
+| Domestic Animals | 25 | `env/domestic_animals_territories.xml` | 264 |
+| Wolf | 20 | `env/wolf_territories.xml` | 324 |
+| Sheep/Goat | 20 | `env/sheep_goat_territories.xml` | 204 |
+| Pig | 20 | `env/pig_territories.xml` | 228 |
+| Bear | 15 | `env/bear_territories.xml` | 192 |
+| Reindeer | 15 | `env/reindeer_territories.xml` | 132 |
+| White Wolf | 8 | (part of wolf territories) | — |
 
 Wolf and bear territories overlap with prey zones by design — hunting in deer meadows means
 wolves hunted there first.
