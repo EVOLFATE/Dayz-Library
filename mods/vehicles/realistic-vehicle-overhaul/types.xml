@@ -17,7 +17,7 @@
     NOMINAL / MAX COUNTS (active on map at any time / ceiling):
       CivilianSedan           30 / 45  — most common vehicle
       OffroadHatchback        25 / 38  — offroad, all colours share this pool
-      HatchbackSedan          20 / 30  — compact civilian car
+      Hatchback_02            20 / 30  — compact civilian car
       Sedan_02                20 / 30  — mid-size sedan
       Truck_01_02             12 / 18  — V3S utility truck
       CivilianSedan_Police     8 / 12  — police patrol sedan
@@ -128,10 +128,10 @@
     </type>
 
     <!-- ============================================================ -->
-    <!-- HATCHBACK SEDAN                                              -->
+    <!-- HATCHBACK 02                                                 -->
     <!-- Compact hatchback — towns, villages, coast, parking lots     -->
     <!-- ============================================================ -->
-    <type name="HatchbackSedan">
+    <type name="Hatchback_02">
         <nominal>20</nominal>
         <lifetime>28800</lifetime>
         <restock>3600</restock>

@@ -362,10 +362,10 @@
     </type>
 
     <!-- ============================================================ -->
-    <!-- HATCHBACK SEDAN                                              -->
+    <!-- HATCHBACK 02                                                 -->
     <!-- Profile: compact civilian — food, clothing, small items      -->
     <!-- ============================================================ -->
-    <type name="HatchbackSedan">
+    <type name="Hatchback_02">
 
         <attachments chance="0.25">
             <item name="CarWheel" chance="1.00"/>
