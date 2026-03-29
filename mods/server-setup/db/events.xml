@@ -370,9 +370,9 @@
     <!-- Each event lists EVERY Zmb* skin model variant to randomize  -->
     <!-- ============================================================ -->
     <event name="InfectedArmy">
-            <nominal>75</nominal>
-            <min>20</min>
-            <max>200</max>
+            <nominal>275</nominal>
+            <min>70</min>
+            <max>550</max>
             <lifetime>3</lifetime>
             <restock>0</restock>
             <saferadius>100</saferadius>
@@ -394,9 +394,9 @@
         </event>
     
     <event name="InfectedArmyHard">
-            <nominal>20</nominal>
-            <min>5</min>
-            <max>50</max>
+            <nominal>50</nominal>
+            <min>10</min>
+            <max>100</max>
             <lifetime>3</lifetime>
             <restock>0</restock>
             <saferadius>100</saferadius>
@@ -420,9 +420,9 @@
         </event>
     
     <event name="InfectedCity">
-            <nominal>150</nominal>
-            <min>30</min>
-            <max>300</max>
+            <nominal>400</nominal>
+            <min>100</min>
+            <max>800</max>
             <lifetime>3</lifetime>
             <restock>0</restock>
             <saferadius>100</saferadius>
@@ -480,9 +480,9 @@
         </event>
     
     <event name="InfectedCityTier1">
-            <nominal>75</nominal>
-            <min>15</min>
-            <max>150</max>
+            <nominal>125</nominal>
+            <min>30</min>
+            <max>250</max>
             <lifetime>3</lifetime>
             <restock>0</restock>
             <saferadius>100</saferadius>
@@ -509,9 +509,9 @@
         </event>
     
     <event name="InfectedFirefighter">
-            <nominal>10</nominal>
-            <min>3</min>
-            <max>25</max>
+            <nominal>25</nominal>
+            <min>5</min>
+            <max>75</max>
             <lifetime>3</lifetime>
             <restock>0</restock>
             <saferadius>100</saferadius>
@@ -528,9 +528,9 @@
         </event>
     
     <event name="InfectedIndustrial">
-            <nominal>50</nominal>
-            <min>15</min>
-            <max>120</max>
+            <nominal>150</nominal>
+            <min>40</min>
+            <max>300</max>
             <lifetime>3</lifetime>
             <restock>0</restock>
             <saferadius>100</saferadius>
@@ -571,9 +571,9 @@
         </event>
     
     <event name="InfectedMedic">
-            <nominal>20</nominal>
-            <min>5</min>
-            <max>50</max>
+            <nominal>50</nominal>
+            <min>10</min>
+            <max>100</max>
             <lifetime>3</lifetime>
             <restock>0</restock>
             <saferadius>100</saferadius>
@@ -601,9 +601,9 @@
         </event>
     
     <event name="InfectedNBC">
-            <nominal>10</nominal>
-            <min>3</min>
-            <max>25</max>
+            <nominal>50</nominal>
+            <min>10</min>
+            <max>100</max>
             <lifetime>3</lifetime>
             <restock>0</restock>
             <saferadius>100</saferadius>
@@ -637,9 +637,9 @@
         </event>
     
     <event name="InfectedPolice">
-            <nominal>25</nominal>
-            <min>8</min>
-            <max>60</max>
+            <nominal>50</nominal>
+            <min>10</min>
+            <max>100</max>
             <lifetime>3</lifetime>
             <restock>0</restock>
             <saferadius>100</saferadius>
@@ -677,9 +677,9 @@
         </event>
     
     <event name="InfectedPrisoner">
-            <nominal>10</nominal>
-            <min>3</min>
-            <max>25</max>
+            <nominal>25</nominal>
+            <min>5</min>
+            <max>75</max>
             <lifetime>3</lifetime>
             <restock>0</restock>
             <saferadius>100</saferadius>
@@ -695,9 +695,9 @@
         </event>
     
     <event name="InfectedReligious">
-            <nominal>15</nominal>
-            <min>3</min>
-            <max>40</max>
+            <nominal>25</nominal>
+            <min>5</min>
+            <max>75</max>
             <lifetime>3</lifetime>
             <restock>0</restock>
             <saferadius>100</saferadius>
@@ -731,9 +731,9 @@
         </event>
     
     <event name="InfectedSolitude">
-            <nominal>250</nominal>
-            <min>50</min>
-            <max>500</max>
+            <nominal>425</nominal>
+            <min>100</min>
+            <max>1050</max>
             <lifetime>3</lifetime>
             <restock>0</restock>
             <saferadius>100</saferadius>
@@ -767,9 +767,9 @@
         </event>
     
     <event name="InfectedVillage">
-            <nominal>150</nominal>
-            <min>40</min>
-            <max>300</max>
+            <nominal>700</nominal>
+            <min>175</min>
+            <max>1400</max>
             <lifetime>3</lifetime>
             <restock>0</restock>
             <saferadius>100</saferadius>
@@ -808,9 +808,9 @@
         </event>
     
     <event name="InfectedVillageTier1">
-            <nominal>75</nominal>
-            <min>20</min>
-            <max>150</max>
+            <nominal>275</nominal>
+            <min>70</min>
+            <max>550</max>
             <lifetime>3</lifetime>
             <restock>0</restock>
             <saferadius>100</saferadius>
@@ -834,9 +834,9 @@
     
 
     <event name="InfectedMummy">
-        <nominal>15</nominal>
-        <min>3</min>
-        <max>30</max>
+        <nominal>25</nominal>
+        <min>5</min>
+        <max>75</max>
         <lifetime>3</lifetime>
         <restock>0</restock>
         <saferadius>100</saferadius>
@@ -1552,4 +1552,133 @@
         </children>
     </event>
 
+
+    <!-- ================================================================
+         ACCIDENT SITES — static decorative wrecks at pre-defined road
+         positions. Completely independent from drivable vehicle events.
+         Each event draws from its own children list (wreck types only).
+         Use events.xml + cfgeventspawns.xml positions to control placement.
+         ================================================================ -->
+
+    <!-- PRIMARY accident vehicle: 1 wreck at each active site (15 of 25 positions) -->
+    <event name="AccidentSite">
+        <nominal>15</nominal>
+        <min>8</min>
+        <max>25</max>
+        <lifetime>43200</lifetime>
+        <restock>3600</restock>
+        <saferadius>5</saferadius>
+        <distanceradius>20</distanceradius>
+        <cleanupradius>200</cleanupradius>
+        <flags deletable="0" init_random="0" remove_damaged="0"/>
+        <position>fixed</position>
+        <limit>child</limit>
+        <active>1</active>
+        <children>
+            <!-- Sedan variants: crashed and abandoned -->
+            <child lootmax="0" lootmin="0" max="1" min="1" type="Land_Wreck_sed01_aban1_black_DE"/>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="Land_Wreck_sed01_aban1_white_DE"/>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="Land_Wreck_sed01_aban1_wine_DE"/>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="Land_Wreck_sed01_aban2_black_DE"/>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="Land_Wreck_sed02_aban1_grey_DE"/>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="Land_Wreck_sed02_aban1_red_DE"/>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="Land_Wreck_sed02_aban1_yellow_DE"/>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="Land_Wreck_sed02_aban2_grey_DE"/>
+            <!-- Hatchback variants -->
+            <child lootmax="0" lootmin="0" max="1" min="1" type="Land_Wreck_hb01_aban1_blue_DE"/>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="Land_Wreck_hb01_aban1_white_DE"/>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="Land_Wreck_hb01_aban2_blue_DE"/>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="Land_Wreck_hb01_aban2_green_DE"/>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="Land_Wreck_hb02_aban1_blue_DE"/>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="Land_Wreck_hb02_aban1_red_DE"/>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="Land_Wreck_hb02_aban2_black_DE"/>
+            <!-- Offroad variant -->
+            <child lootmax="0" lootmin="0" max="1" min="1" type="Land_Wreck_offroad02_aban1_DE"/>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="Land_Wreck_offroad02_aban2_DE"/>
+        </children>
+    </event>
+
+    <!-- SECONDARY (second vehicle): 8 of 15 paired collision positions filled
+         giving a mix of solo crashes and two-car collisions -->
+    <event name="AccidentSiteCollision">
+        <nominal>8</nominal>
+        <min>4</min>
+        <max>15</max>
+        <lifetime>43200</lifetime>
+        <restock>3600</restock>
+        <saferadius>5</saferadius>
+        <distanceradius>20</distanceradius>
+        <cleanupradius>200</cleanupradius>
+        <flags deletable="0" init_random="0" remove_damaged="0"/>
+        <position>fixed</position>
+        <limit>child</limit>
+        <active>1</active>
+        <children>
+            <!-- Heavier weight on aban2 (crashed-looking) for the second vehicle -->
+            <child lootmax="0" lootmin="0" max="1" min="1" type="Land_Wreck_sed01_aban2_black_DE"/>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="Land_Wreck_sed02_aban2_grey_DE"/>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="Land_Wreck_sed02_aban2_red_DE"/>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="Land_Wreck_sed02_aban2_yellow_DE"/>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="Land_Wreck_hb01_aban2_blue_DE"/>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="Land_Wreck_hb01_aban2_green_DE"/>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="Land_Wreck_hb02_aban2_black_DE"/>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="Land_Wreck_hb02_aban2_blue_DE"/>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="Land_Wreck_hb02_aban2_red_DE"/>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="Land_Wreck_offroad02_aban2_DE"/>
+        </children>
+    </event>
+
+    <!-- LARGE VEHICLES: buses, trucks, firetruck, ambulance — dramatic roadside wrecks
+         4 of 10 positions active at any time -->
+    <event name="AccidentSiteLarge">
+        <nominal>4</nominal>
+        <min>2</min>
+        <max>10</max>
+        <lifetime>43200</lifetime>
+        <restock>3600</restock>
+        <saferadius>5</saferadius>
+        <distanceradius>20</distanceradius>
+        <cleanupradius>200</cleanupradius>
+        <flags deletable="0" init_random="0" remove_damaged="0"/>
+        <position>fixed</position>
+        <limit>child</limit>
+        <active>1</active>
+        <children>
+            <!-- Ikarus bus — iconic Eastern European post-apocalyptic scene -->
+            <child lootmax="0" lootmin="0" max="1" min="1" type="Land_Wreck_Ikarus_DE"/>
+            <!-- Truck variants — cargo/utility trucks -->
+            <child lootmax="0" lootmin="0" max="1" min="1" type="Land_wreck_truck01_aban1_blue_DE"/>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="Land_wreck_truck01_aban1_green_DE"/>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="Land_wreck_truck01_aban1_orange_DE"/>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="Land_wreck_truck01_aban2_green_DE"/>
+            <!-- Rare emergency service wrecks -->
+            <child lootmax="0" lootmin="0" max="1" min="1" type="Land_wreck_truck01_aban1_firetruck_DE"/>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="Land_Wreck_S1023_Medic_Beige_DE"/>
+        </children>
+    </event>
+
+    <!-- MILITARY CONVOY WRECKS: near military zones and approach roads
+         4 of 12 positions active — rare, atmospheric, tells the story
+         of the last days of organised resistance -->
+    <event name="AccidentSiteMilitary">
+        <nominal>4</nominal>
+        <min>2</min>
+        <max>8</max>
+        <lifetime>43200</lifetime>
+        <restock>3600</restock>
+        <saferadius>5</saferadius>
+        <distanceradius>20</distanceradius>
+        <cleanupradius>200</cleanupradius>
+        <flags deletable="0" init_random="0" remove_damaged="0"/>
+        <position>fixed</position>
+        <limit>child</limit>
+        <active>1</active>
+        <children>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="Land_Wreck_V3S_DE"/>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="StaticObj_Wreck_Uaz_DE"/>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="StaticObj_Wreck_Ural_DE"/>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="StaticObj_Wreck_BMP1_DE"/>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="StaticObj_Wreck_BRDM_DE"/>
+        </children>
+    </event>
 </events>

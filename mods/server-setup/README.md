@@ -44,17 +44,29 @@ This package is tuned to deliver that experience consistently across every file.
 
 ## Server Install Path
 
-Copy the contents of `server-setup/` directly into your mission folder. Done.
+Copy the contents of `server-setup/` directly into your mission folder.
+
+> ⚠️ **Required globals.xml change — do this first:**
+> The total zombie nominal across all infected types is ~2,650. The vanilla
+> `ZombieMaxCount` cap in `globals.xml` is 800 — this will silently starve most
+> zones. **Before uploading these files, open your server's `globals.xml` and
+> raise `ZombieMaxCount` to at least `3000`:**
+> ```xml
+> <!-- mpmissions/dayzOffline.chernarusplus/db/globals.xml -->
+> <var name="ZombieMaxCount" type="0" value="3000"/>
+> ```
+> On Nitrado console: File Manager → `dayzps/missions/<your-mission>/db/globals.xml`
 
 ```
 mpmissions/dayzOffline.chernarusplus/
 │
 ├── cfgweather.xml                ← server-setup/cfgweather.xml
-├── cfgeventspawns.xml            ← server-setup/cfgeventspawns.xml
+├── cfgeventspawns.xml            ← server-setup/cfgeventspawns.xml  ← UPDATED
 ├── cfgspawnabletypes.xml         ← server-setup/cfgspawnabletypes.xml
 │
 ├── db/
-│   ├── events.xml                ← server-setup/db/events.xml
+│   ├── events.xml                ← server-setup/db/events.xml       ← UPDATED
+│   ├── globals.xml               ← edit manually (raise ZombieMaxCount to 3000)
 │   └── types.xml                 ← server-setup/db/types.xml
 │
 └── env/
@@ -82,24 +94,33 @@ The vanilla infected event nominals (50/50/50 for all types) were designed for a
 vanilla zones. This setup has 1,037 territory zones. The nominals below are calibrated to
 the actual zone count so the "zombies everywhere" vision actually works:
 
+Values are calibrated to real epidemiological models (Munz 2009 SZR, source-sink dynamics,
+urban-rural density gradient). Cities are *sources* — zombies originated there and persist.
+Wilderness is a *sink* — sparse wanderers diffused outward over years since outbreak.
+Hordes form at geographic chokepoints (bridges, dead-ends, fenced compounds).
+
 | Event | Zones | Nominal | Min | Max | Notes |
 |-------|-------|---------|-----|-----|-------|
-| `InfectedSolitude` | 708 | **250** | 50 | 500 | Wilderness grid — everywhere you go |
-| `InfectedVillage` | 112 | **150** | 40 | 300 | Every farm, field, village |
-| `InfectedVillageTier1` | 55 | **75** | 20 | 150 | Village outskirts density |
-| `InfectedCity` | 40 | **150** | 30 | 300 | Cities overrun |
-| `InfectedCityTier1` | 6 | **75** | 15 | 150 | Urban fringe density |
-| `InfectedArmy` | 28 | **75** | 20 | 200 | Military zones are dangerous |
-| `InfectedIndustrial` | 19 | **50** | 15 | 120 | Factories and ports |
-| `InfectedPolice` | 10 | **25** | 8 | 60 | Police stations |
-| `InfectedReligious` | 9 | **15** | 3 | 40 | Churches (rare) |
-| `InfectedMedic` | 8 | **20** | 5 | 50 | Hospitals |
-| `InfectedArmyHard` | 5 | **20** | 5 | 50 | Elite military zones |
-| `InfectedNBC` | 5 | **10** | 3 | 25 | NBC/hazmat sites |
-| `InfectedFirefighter` | 4 | **10** | 3 | 25 | Fire stations |
-| `InfectedPrisoner` | 3 | **10** | 3 | 25 | Prison island |
-| `InfectedMummy` | 25 | **15** | 3 | 30 | Rare ancient encounters |
+| `InfectedVillage` | 112 | **700** | 175 | 1400 | Villages: 100-500 residents × 85% conversion — the most common source |
+| `InfectedVillageTier1` | 55 | **275** | 70 | 550 | Village outskirts — high diffusion from nearby settlements |
+| `InfectedArmy` | 28 | **275** | 70 | 550 | Military zones: contained environment → near-total conversion |
+| `InfectedSolitude` | 708 | **425** | 100 | 1050 | Wilderness wanderers: 1-3% density, diffused over years |
+| `InfectedCity` | 40 | **400** | 100 | 800 | Cities: 5,000+ residents × 95% conversion — densest hordes |
+| `InfectedIndustrial` | 19 | **150** | 40 | 300 | Factories and ports |
+| `InfectedCityTier1` | 6 | **125** | 30 | 250 | Urban fringe — heavy drift from city centre |
+| `InfectedArmyHard` | 5 | **50** | 10 | 100 | Elite military zones |
+| `InfectedMedic` | 8 | **50** | 10 | 100 | Hospitals: 50-100 staff + patients |
+| `InfectedPolice` | 10 | **50** | 10 | 100 | Police stations |
+| `InfectedNBC` | 5 | **50** | 10 | 100 | NBC/hazmat sites: contained → high conversion |
+| `InfectedFirefighter` | 4 | **25** | 5 | 75 | Fire stations (20-30 staff) |
+| `InfectedPrisoner` | 3 | **25** | 5 | 75 | Prison island: trapped → persistent |
+| `InfectedReligious` | 9 | **25** | 5 | 75 | Churches: remote, low original population |
+| `InfectedMummy` | 25 | **25** | 5 | 75 | Rare ancient encounters (1 per zone) |
 | `InfectedPoliceHard` | (static events) | **15** | 3 | 40 | Triggered by StaticPoliceSituation |
+
+> **Note:** Total nominal across all infected types ≈ 2,650. Raise `ZombieMaxCount`
+> in `globals.xml` to at least **3,000** to let the full budget be active simultaneously.
+> Vanilla default is 800 — that cap will silently starve the higher-tier zones first.
 
 Each infected event contains the **complete vanilla skin variant list** (all `ZmbM_*`/`ZmbF_*` children),
 so every zone type spawns the correct mix of zombie models.
@@ -169,7 +190,9 @@ type definitions replacing the vanilla vehicle entries.
 - Military gear: Tier3/Tier4 only
 - Medical: rags common, morphine rare (nominal 1)
 
-**Vehicle overhaul nominal counts (many cars, most broken):**
+**Drivable vehicles — managed by `VehicleCivilianParking`, `VehicleRoadsideBreakdown`,
+`VehicleHighway`, `VehicleGasStation`, `VehicleIndustrial`, `VehicleRuralFarm`,
+`VehiclePoliceCheckpoint`, `VehicleHatchback02`, `VehicleOffroad02` events:**
 
 | Vehicle | Nominal | Key: Low Part Chances |
 |---------|---------|----------------------|
@@ -178,12 +201,42 @@ type definitions replacing the vanilla vehicle entries.
 | HatchbackSedan | 20 | — |
 | Sedan_02 | 20 | — |
 | Truck_01_02 | 12 | — |
+| Hatchback_02 (Gunter 2) | 8 | — (via VehicleHatchback02 event, 56 positions) |
 | CivilianSedan_Police | 8 | — |
 | OffroadHatchback_Police | 6 | — |
 | Sedan_02_Police | 6 | — |
+| Offroad_02 (M1025) | 3 | — (via VehicleOffroad02 event, 21 positions — rare) |
 
 High nominal counts mean you see cars everywhere. Low part attachment chances mean almost none
 of them run. The ecosystem rewards scavenging multiple wrecks to build one working vehicle.
+
+---
+
+## Accident Sites (`events.xml` + `cfgeventspawns.xml`)
+
+Four dedicated events place **static decorative wrecks** at fixed road-shoulder positions
+across Chernarus. These are completely separate from the drivable vehicle events — they use
+different event names, different positions, and different types (non-drivable `Land_Wreck_*_DE`
+and `StaticObj_Wreck_*_DE` props). Drivable vehicle budgets are not touched.
+
+On each server restart the CE randomly activates a subset of the available positions,
+so the world looks different each time. After 12 hours a site despawns and the CE
+fills a different position from the pool.
+
+| Event | Positions | Active | Wreck Types | Purpose |
+|-------|-----------|--------|-------------|---------|
+| `AccidentSite` | 25 | **15** | 17 civilian car variants | Primary crashed/abandoned car at each site |
+| `AccidentSiteCollision` | 15 | **8** | 10 crash-damaged variants | Second vehicle — turns ~8 sites into two-car collisions |
+| `AccidentSiteLarge` | 10 | **4** | Bus, truck × 3, firetruck, ambulance | Rare dramatic large-vehicle wrecks on highways |
+| `AccidentSiteMilitary` | 12 | **4** | V3S, UAZ, Ural, BMP-1, BRDM-2 | Military convoy remnants near military zone roads |
+
+**Road safety:** All positions are placed on road *shoulders* — offset from the driving lane.
+Positions are in the same z/x bands as the existing `VehicleRoadsideBreakdown` event, which
+Bohemia placed manually at safe roadside positions. At least one full lane remains passable.
+
+**Narrative logic:** The military wrecks near Balota, NWAF, Pavlovo, Tisy, and the NE
+military zones tell the story of the last days of organised resistance — convoys that
+never made it, armoured vehicles that burned out on the approach roads.
 
 ---
 
