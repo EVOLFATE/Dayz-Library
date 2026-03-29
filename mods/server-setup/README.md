@@ -46,15 +46,24 @@ This package is tuned to deliver that experience consistently across every file.
 
 Copy the contents of `server-setup/` directly into your mission folder.
 
-> ⚠️ **Required globals.xml change — do this first:**
-> The total zombie nominal across all infected types is ~7,345. The vanilla
-> `ZombieMaxCount` cap in `globals.xml` is 800 — this will silently starve most
-> zones. **Before uploading these files, open your server's `globals.xml` and
-> raise `ZombieMaxCount` to at least `8000` (ideally 10000):**
+> ⚠️ **Required globals.xml changes — do these first (both caps must be raised):**
+>
+> **1. ZombieMaxCount** — The total zombie nominal is ~7,345. The vanilla cap is 800, which
+> silently starves most zones.
 > ```xml
 > <!-- mpmissions/dayzOffline.chernarusplus/db/globals.xml -->
 > <var name="ZombieMaxCount" type="0" value="8000"/>
 > ```
+>
+> **2. VehicleMaxCount** — The total vehicle nominal across all events is **196**. The vanilla
+> default `VehicleMaxCount` is **2–10** on most hosts (Nitrado default is 10). At that cap
+> you will see only 2–10 cars total across the entire map regardless of what is in `events.xml`.
+> Raise it to at least **250** to let all 196 nominal vehicles be active simultaneously:
+> ```xml
+> <!-- mpmissions/dayzOffline.chernarusplus/db/globals.xml -->
+> <var name="VehicleMaxCount" type="0" value="250"/>
+> ```
+>
 > On Nitrado console: File Manager → `dayzps/missions/<your-mission>/db/globals.xml`
 
 ```
@@ -66,7 +75,7 @@ mpmissions/dayzOffline.chernarusplus/
 │
 ├── db/
 │   ├── events.xml                ← server-setup/db/events.xml       ← UPDATED
-│   ├── globals.xml               ← edit manually (raise ZombieMaxCount to 8000)
+│   ├── globals.xml               ← edit manually (raise ZombieMaxCount to 8000, VehicleMaxCount to 250)
 │   └── types.xml                 ← server-setup/db/types.xml
 │
 └── env/
@@ -226,20 +235,24 @@ type definitions replacing the vanilla vehicle entries.
 | Sedan_02_Police | 6 | — |
 | Offroad_02 (M1025) | 3 | — (via VehicleOffroad02 event, 21 positions — rare) |
 
-**Vehicle Overhaul scenario event nominals (after fix — ~372 total spawn positions):**
+**Vehicle Overhaul scenario event nominals (~486 total spawn positions):**
 
 | Event | Nominal | Min | Max | Positions |
 |-------|---------|-----|-----|-----------|
-| `VehicleCivilianParking` | **40** | 24 | 56 | 80 |
-| `VehicleRoadsideBreakdown` | **35** | 20 | 50 | 70 |
-| `VehicleHighway` | **30** | 18 | 45 | 61 |
+| `VehicleCivilianParking` | **40** | 24 | 56 | 102 |
+| `VehicleRoadsideBreakdown` | **35** | 20 | 50 | 90 |
+| `VehicleHighway` | **30** | 18 | 45 | 99 |
 | `VehicleGasStation` | **20** | 12 | 30 | 40 |
-| `VehicleIndustrial` | **20** | 12 | 30 | 40 |
-| `VehicleRuralFarm` | **25** | 15 | 38 | 51 |
+| `VehicleIndustrial` | **20** | 12 | 30 | 42 |
+| `VehicleRuralFarm` | **25** | 15 | 38 | 83 |
 | `VehiclePoliceCheckpoint` | **15** | 8 | 22 | 30 |
 
 High nominal counts mean you see cars everywhere. Low part attachment chances mean almost none
 of them run. The ecosystem rewards scavenging multiple wrecks to build one working vehicle.
+
+> ⚠️ **VehicleMaxCount must be raised** — with the vanilla default of 2–10, only 2–10 vehicles
+> will ever be active on the map at once, regardless of what the nominals say. Set
+> `VehicleMaxCount` to **250** in `globals.xml` (see install instructions above).
 
 ---
 
