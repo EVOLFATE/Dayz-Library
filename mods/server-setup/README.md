@@ -190,9 +190,9 @@ wolves hunted there first.
 | Pig | **100** | **800** | Farm and feral groups |
 | Domestic | **100** | **800** | Mixed village animals |
 | Reindeer | **150** | **800** | Northern wilderness herds |
-| Wolf | **200** | **1000** | Visible predator packs |
-| White Wolf | **250** | **1000** | Northern ghost packs |
-| Bear | **300** | **1000** | Visible apex predator |
+| Wolf | **500** | **1000** | Vanilla saferadius — fair warning distance for packs |
+| White Wolf | **600** | **1000** | Northern ghost packs |
+| Bear | **700** | **1000** | Visible apex predator |
 
 ---
 

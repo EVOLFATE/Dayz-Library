@@ -299,7 +299,7 @@
         <max>30</max>
         <lifetime>3600</lifetime>
         <restock>0</restock>
-        <saferadius>200</saferadius>
+        <saferadius>500</saferadius>
         <distanceradius>0</distanceradius>
         <cleanupradius>1000</cleanupradius>
         <flags deletable="0" init_random="0" remove_damaged="1"/>
@@ -324,7 +324,7 @@
         <max>12</max>
         <lifetime>3600</lifetime>
         <restock>0</restock>
-        <saferadius>250</saferadius>
+        <saferadius>600</saferadius>
         <distanceradius>0</distanceradius>
         <cleanupradius>1000</cleanupradius>
         <flags deletable="0" init_random="0" remove_damaged="1"/>
@@ -349,7 +349,7 @@
         <max>22</max>
         <lifetime>7200</lifetime>
         <restock>0</restock>
-        <saferadius>300</saferadius>
+        <saferadius>700</saferadius>
         <distanceradius>0</distanceradius>
         <cleanupradius>1000</cleanupradius>
         <flags deletable="0" init_random="0" remove_damaged="1"/>
