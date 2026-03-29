@@ -66,6 +66,7 @@ mpmissions/dayzOffline.chernarusplus/
     ├── hen_territories.xml
     ├── pig_territories.xml
     ├── red_deer_territories.xml
+    ├── reindeer_territories.xml
     ├── roe_deer_territories.xml
     ├── sheep_goat_territories.xml
     ├── wild_boar_territories.xml
