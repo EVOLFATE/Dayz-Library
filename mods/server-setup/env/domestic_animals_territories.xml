@@ -145,5 +145,223 @@
         <zone name="Graze" smin="0" smax="0" dmin="2" dmax="7" x="10220.00" z="11880.00" r="700"/>
         <zone name="Graze" smin="0" smax="0" dmin="2" dmax="7" x="9800.00" z="12250.00" r="700"/>
 
+
+        <!-- === ADDITIONAL DOMESTIC ANIMAL COVERAGE === -->
+        <!-- South coast far west - abandoned village strays -->
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="3" x="800.00" z="2500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="860.00" z="2560.00" r="400"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="700.00" z="2500.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="2" dmax="7" x="800.00" z="2720.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="2" dmax="7" x="1020.00" z="2420.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="2" dmax="7" x="600.00" z="2750.00" r="700"/>
+
+        <!-- South coast west - Balota village strays -->
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="3" x="2000.00" z="2400.00" r="200"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="2060.00" z="2460.00" r="400"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="1900.00" z="2400.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="2" dmax="7" x="2000.00" z="2620.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="2" dmax="7" x="2220.00" z="2320.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="2" dmax="7" x="1800.00" z="2650.00" r="700"/>
+
+        <!-- South coast - Pusta village outskirts -->
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="3" x="4200.00" z="2500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="4260.00" z="2560.00" r="400"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="4100.00" z="2500.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="2" dmax="7" x="4200.00" z="2720.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="2" dmax="7" x="4420.00" z="2420.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="2" dmax="7" x="4000.00" z="2750.00" r="700"/>
+
+        <!-- South coast central - settlement strays -->
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="3" x="5500.00" z="2400.00" r="200"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="5560.00" z="2460.00" r="400"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="5400.00" z="2400.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="2" dmax="7" x="5500.00" z="2620.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="2" dmax="7" x="5720.00" z="2320.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="2" dmax="7" x="5300.00" z="2650.00" r="700"/>
+
+        <!-- South coast - village domestic strays -->
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="3" x="7500.00" z="2500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="7560.00" z="2560.00" r="400"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="7400.00" z="2500.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="2" dmax="7" x="7500.00" z="2720.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="2" dmax="7" x="7720.00" z="2420.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="2" dmax="7" x="7300.00" z="2750.00" r="700"/>
+
+        <!-- South coast east - settlement domestics -->
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="3" x="9200.00" z="2400.00" r="200"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="9260.00" z="2460.00" r="400"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="9100.00" z="2400.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="2" dmax="7" x="9200.00" z="2620.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="2" dmax="7" x="9420.00" z="2320.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="2" dmax="7" x="9000.00" z="2650.00" r="700"/>
+
+        <!-- South coast east - abandoned farm strays -->
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="3" x="10800.00" z="2500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="10860.00" z="2560.00" r="400"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="10700.00" z="2500.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="2" dmax="7" x="10800.00" z="2720.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="2" dmax="7" x="11020.00" z="2420.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="2" dmax="7" x="10600.00" z="2750.00" r="700"/>
+
+        <!-- South coast far east - village domestics -->
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="3" x="12500.00" z="2400.00" r="200"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="12560.00" z="2460.00" r="400"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="12400.00" z="2400.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="2" dmax="7" x="12500.00" z="2620.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="2" dmax="7" x="12720.00" z="2320.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="2" dmax="7" x="12300.00" z="2650.00" r="700"/>
+
+        <!-- South coast extreme east - strays -->
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="3" x="14200.00" z="2600.00" r="200"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="14260.00" z="2660.00" r="400"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="14100.00" z="2600.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="2" dmax="7" x="14200.00" z="2820.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="2" dmax="7" x="14420.00" z="2520.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="2" dmax="7" x="14000.00" z="2850.00" r="700"/>
+
+        <!-- South inland - village outskirts domestics -->
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="3" x="1500.00" z="4500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="1560.00" z="4560.00" r="400"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="1400.00" z="4500.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="2" dmax="7" x="1500.00" z="4720.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="2" dmax="7" x="1720.00" z="4420.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="2" dmax="7" x="1300.00" z="4750.00" r="700"/>
+
+        <!-- South inland central - abandoned farm animals -->
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="3" x="3800.00" z="4000.00" r="200"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="3860.00" z="4060.00" r="400"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="3700.00" z="4000.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="2" dmax="7" x="3800.00" z="4220.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="2" dmax="7" x="4020.00" z="3920.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="2" dmax="7" x="3600.00" z="4250.00" r="700"/>
+
+        <!-- South central - abandoned farm domestic animals -->
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="3" x="6000.00" z="4500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="6060.00" z="4560.00" r="400"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="5900.00" z="4500.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="2" dmax="7" x="6000.00" z="4720.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="2" dmax="7" x="6220.00" z="4420.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="2" dmax="7" x="5800.00" z="4750.00" r="700"/>
+
+        <!-- South central east - domestic strays -->
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="3" x="8500.00" z="4000.00" r="200"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="8560.00" z="4060.00" r="400"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="8400.00" z="4000.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="2" dmax="7" x="8500.00" z="4220.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="2" dmax="7" x="8720.00" z="3920.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="2" dmax="7" x="8300.00" z="4250.00" r="700"/>
+
+        <!-- South east - village domestic animal strays -->
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="3" x="11500.00" z="4500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="11560.00" z="4560.00" r="400"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="11400.00" z="4500.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="2" dmax="7" x="11500.00" z="4720.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="2" dmax="7" x="11720.00" z="4420.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="2" dmax="7" x="11300.00" z="4750.00" r="700"/>
+
+        <!-- South far east - farm strays -->
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="3" x="14000.00" z="4000.00" r="200"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="14060.00" z="4060.00" r="400"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="13900.00" z="4000.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="2" dmax="7" x="14000.00" z="4220.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="2" dmax="7" x="14220.00" z="3920.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="2" dmax="7" x="13800.00" z="4250.00" r="700"/>
+
+        <!-- Central west - village outskirts strays -->
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="3" x="1200.00" z="7200.00" r="200"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="1260.00" z="7260.00" r="400"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="1100.00" z="7200.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="2" dmax="7" x="1200.00" z="7420.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="2" dmax="7" x="1420.00" z="7120.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="2" dmax="7" x="1000.00" z="7450.00" r="700"/>
+
+        <!-- Central - abandoned farm domestics -->
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="3" x="4000.00" z="6800.00" r="200"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="4060.00" z="6860.00" r="400"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="3900.00" z="6800.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="2" dmax="7" x="4000.00" z="7020.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="2" dmax="7" x="4220.00" z="6720.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="2" dmax="7" x="3800.00" z="7050.00" r="700"/>
+
+        <!-- Central - settlement domestic strays -->
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="3" x="7000.00" z="7200.00" r="200"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="7060.00" z="7260.00" r="400"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="6900.00" z="7200.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="2" dmax="7" x="7000.00" z="7420.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="2" dmax="7" x="7220.00" z="7120.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="2" dmax="7" x="6800.00" z="7450.00" r="700"/>
+
+        <!-- Central east - village outskirts -->
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="3" x="10000.00" z="6800.00" r="200"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="10060.00" z="6860.00" r="400"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="9900.00" z="6800.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="2" dmax="7" x="10000.00" z="7020.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="2" dmax="7" x="10220.00" z="6720.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="2" dmax="7" x="9800.00" z="7050.00" r="700"/>
+
+        <!-- Central far east - farm strays -->
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="3" x="13000.00" z="7200.00" r="200"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="13060.00" z="7260.00" r="400"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="12900.00" z="7200.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="2" dmax="7" x="13000.00" z="7420.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="2" dmax="7" x="13220.00" z="7120.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="2" dmax="7" x="12800.00" z="7450.00" r="700"/>
+
+        <!-- North west - settlement domestic animals -->
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="3" x="2500.00" z="9500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="2560.00" z="9560.00" r="400"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="2400.00" z="9500.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="2" dmax="7" x="2500.00" z="9720.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="2" dmax="7" x="2720.00" z="9420.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="2" dmax="7" x="2300.00" z="9750.00" r="700"/>
+
+        <!-- North - abandoned farm animals -->
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="3" x="5800.00" z="10000.00" r="200"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="5860.00" z="10060.00" r="400"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="5700.00" z="10000.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="2" dmax="7" x="5800.00" z="10220.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="2" dmax="7" x="6020.00" z="9920.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="2" dmax="7" x="5600.00" z="10250.00" r="700"/>
+
+        <!-- North east - village domestic strays -->
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="3" x="9000.00" z="9500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="9060.00" z="9560.00" r="400"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="8900.00" z="9500.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="2" dmax="7" x="9000.00" z="9720.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="2" dmax="7" x="9220.00" z="9420.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="2" dmax="7" x="8800.00" z="9750.00" r="700"/>
+
+        <!-- North far east - domestic animal strays -->
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="3" x="12000.00" z="10000.00" r="200"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="12060.00" z="10060.00" r="400"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="11900.00" z="10000.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="2" dmax="7" x="12000.00" z="10220.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="2" dmax="7" x="12220.00" z="9920.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="2" dmax="7" x="11800.00" z="10250.00" r="700"/>
+
+        <!-- Far north west - remote farm strays -->
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="3" x="3000.00" z="12000.00" r="200"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="3060.00" z="12060.00" r="400"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="2900.00" z="12000.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="2" dmax="7" x="3000.00" z="12220.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="2" dmax="7" x="3220.00" z="11920.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="2" dmax="7" x="2800.00" z="12250.00" r="700"/>
+
+        <!-- Far north central - abandoned domestic animals -->
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="3" x="7500.00" z="12500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="7560.00" z="12560.00" r="400"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="7400.00" z="12500.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="2" dmax="7" x="7500.00" z="12720.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="2" dmax="7" x="7720.00" z="12420.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="2" dmax="7" x="7300.00" z="12750.00" r="700"/>
+
+        <!-- Far north east - remote farm animals -->
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="3" x="11000.00" z="12000.00" r="200"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="11060.00" z="12060.00" r="400"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="10900.00" z="12000.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="2" dmax="7" x="11000.00" z="12220.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="2" dmax="7" x="11220.00" z="11920.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="2" dmax="7" x="10800.00" z="12250.00" r="700"/>
+
     </territory>
 </territory-type>

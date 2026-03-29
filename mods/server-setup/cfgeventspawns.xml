@@ -1472,6 +1472,11 @@
         <file>env/bear_territories.xml</file>
     </event>
 
+    <!-- Reindeer — far north wilderness, Tisy and Kamensk area -->
+    <event name="AnimalReindeer">
+        <file>env/reindeer_territories.xml</file>
+    </event>
+
     <!-- ============================================================ -->
     <!-- SECTION 5: VEHICLE OVERHAUL SPAWN COORDINATES               -->
     <!-- Source: mods/vehicles/realistic-vehicle-overhaul/           -->

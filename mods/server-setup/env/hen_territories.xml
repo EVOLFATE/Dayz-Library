@@ -226,5 +226,807 @@
         <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="9100.00" z="11960.00" r="700"/>
         <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="8900.00" z="12100.00" r="700"/>
 
+
+        <!-- === ADDITIONAL HEN COVERAGE === -->
+        <!-- South coast farm - feral hens at 700 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="700.00" z="2180.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="730.00" z="2210.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="660.00" z="2180.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="700.00" z="2290.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="800.00" z="2140.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="600.00" z="2280.00" r="700"/>
+
+        <!-- South coast farm - feral hens at 2200 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="2200.00" z="2180.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="2230.00" z="2210.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="2160.00" z="2180.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="2200.00" z="2290.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="2300.00" z="2140.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="2100.00" z="2280.00" r="700"/>
+
+        <!-- South coast farm - feral hens at 3700 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="3700.00" z="2180.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="3730.00" z="2210.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="3660.00" z="2180.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="3700.00" z="2290.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="3800.00" z="2140.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="3600.00" z="2280.00" r="700"/>
+
+        <!-- South coast farm - feral hens at 5200 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="5200.00" z="2180.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="5230.00" z="2210.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="5160.00" z="2180.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="5200.00" z="2290.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="5300.00" z="2140.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="5100.00" z="2280.00" r="700"/>
+
+        <!-- South coast farm - feral hens at 6700 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="6700.00" z="2180.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="6730.00" z="2210.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="6660.00" z="2180.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="6700.00" z="2290.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="6800.00" z="2140.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="6600.00" z="2280.00" r="700"/>
+
+        <!-- South coast farm - feral hens at 8200 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="8200.00" z="2180.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="8230.00" z="2210.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="8160.00" z="2180.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="8200.00" z="2290.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="8300.00" z="2140.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="8100.00" z="2280.00" r="700"/>
+
+        <!-- South coast farm - feral hens at 9700 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="9700.00" z="2180.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="9730.00" z="2210.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="9660.00" z="2180.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="9700.00" z="2290.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="9800.00" z="2140.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="9600.00" z="2280.00" r="700"/>
+
+        <!-- South coast farm - feral hens at 11200 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="11200.00" z="2180.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="11230.00" z="2210.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="11160.00" z="2180.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="11200.00" z="2290.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="11300.00" z="2140.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="11100.00" z="2280.00" r="700"/>
+
+        <!-- South coast farm - feral hens at 12700 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="12700.00" z="2180.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="12730.00" z="2210.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="12660.00" z="2180.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="12700.00" z="2290.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="12800.00" z="2140.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="12600.00" z="2280.00" r="700"/>
+
+        <!-- South coast farm - feral hens at 14200 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="14200.00" z="2180.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="14230.00" z="2210.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="14160.00" z="2180.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="14200.00" z="2290.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="14300.00" z="2140.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="14100.00" z="2280.00" r="700"/>
+
+        <!-- South coast village - feral hens at 700 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="700.00" z="2350.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="730.00" z="2380.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="660.00" z="2350.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="700.00" z="2460.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="800.00" z="2310.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="600.00" z="2450.00" r="700"/>
+
+        <!-- South coast village - feral hens at 2200 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="2200.00" z="2350.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="2230.00" z="2380.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="2160.00" z="2350.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="2200.00" z="2460.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="2300.00" z="2310.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="2100.00" z="2450.00" r="700"/>
+
+        <!-- South coast village - feral hens at 3700 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="3700.00" z="2350.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="3730.00" z="2380.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="3660.00" z="2350.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="3700.00" z="2460.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="3800.00" z="2310.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="3600.00" z="2450.00" r="700"/>
+
+        <!-- South coast village - feral hens at 5200 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="5200.00" z="2350.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="5230.00" z="2380.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="5160.00" z="2350.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="5200.00" z="2460.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="5300.00" z="2310.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="5100.00" z="2450.00" r="700"/>
+
+        <!-- South coast village - feral hens at 6700 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="6700.00" z="2350.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="6730.00" z="2380.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="6660.00" z="2350.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="6700.00" z="2460.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="6800.00" z="2310.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="6600.00" z="2450.00" r="700"/>
+
+        <!-- South coast village - feral hens at 8200 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="8200.00" z="2350.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="8230.00" z="2380.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="8160.00" z="2350.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="8200.00" z="2460.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="8300.00" z="2310.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="8100.00" z="2450.00" r="700"/>
+
+        <!-- South coast village - feral hens at 9700 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="9700.00" z="2350.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="9730.00" z="2380.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="9660.00" z="2350.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="9700.00" z="2460.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="9800.00" z="2310.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="9600.00" z="2450.00" r="700"/>
+
+        <!-- South coast village - feral hens at 11200 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="11200.00" z="2350.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="11230.00" z="2380.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="11160.00" z="2350.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="11200.00" z="2460.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="11300.00" z="2310.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="11100.00" z="2450.00" r="700"/>
+
+        <!-- South coast village - feral hens at 12700 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="12700.00" z="2350.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="12730.00" z="2380.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="12660.00" z="2350.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="12700.00" z="2460.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="12800.00" z="2310.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="12600.00" z="2450.00" r="700"/>
+
+        <!-- South coast village - feral hens at 14200 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="14200.00" z="2350.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="14230.00" z="2380.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="14160.00" z="2350.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="14200.00" z="2460.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="14300.00" z="2310.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="14100.00" z="2450.00" r="700"/>
+
+        <!-- South inland farm - feral hens at 700 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="700.00" z="3200.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="730.00" z="3230.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="660.00" z="3200.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="700.00" z="3310.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="800.00" z="3160.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="600.00" z="3300.00" r="700"/>
+
+        <!-- South inland farm - feral hens at 2200 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="2200.00" z="3200.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="2230.00" z="3230.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="2160.00" z="3200.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="2200.00" z="3310.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="2300.00" z="3160.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="2100.00" z="3300.00" r="700"/>
+
+        <!-- South inland farm - feral hens at 3700 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="3700.00" z="3200.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="3730.00" z="3230.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="3660.00" z="3200.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="3700.00" z="3310.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="3800.00" z="3160.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="3600.00" z="3300.00" r="700"/>
+
+        <!-- South inland farm - feral hens at 5200 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="5200.00" z="3200.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="5230.00" z="3230.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="5160.00" z="3200.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="5200.00" z="3310.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="5300.00" z="3160.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="5100.00" z="3300.00" r="700"/>
+
+        <!-- South inland farm - feral hens at 6700 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="6700.00" z="3200.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="6730.00" z="3230.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="6660.00" z="3200.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="6700.00" z="3310.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="6800.00" z="3160.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="6600.00" z="3300.00" r="700"/>
+
+        <!-- South inland farm - feral hens at 8200 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="8200.00" z="3200.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="8230.00" z="3230.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="8160.00" z="3200.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="8200.00" z="3310.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="8300.00" z="3160.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="8100.00" z="3300.00" r="700"/>
+
+        <!-- South inland farm - feral hens at 9700 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="9700.00" z="3200.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="9730.00" z="3230.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="9660.00" z="3200.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="9700.00" z="3310.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="9800.00" z="3160.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="9600.00" z="3300.00" r="700"/>
+
+        <!-- South inland farm - feral hens at 11200 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="11200.00" z="3200.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="11230.00" z="3230.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="11160.00" z="3200.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="11200.00" z="3310.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="11300.00" z="3160.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="11100.00" z="3300.00" r="700"/>
+
+        <!-- South inland farm - feral hens at 12700 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="12700.00" z="3200.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="12730.00" z="3230.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="12660.00" z="3200.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="12700.00" z="3310.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="12800.00" z="3160.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="12600.00" z="3300.00" r="700"/>
+
+        <!-- South inland farm - feral hens at 14200 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="14200.00" z="3200.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="14230.00" z="3230.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="14160.00" z="3200.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="14200.00" z="3310.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="14300.00" z="3160.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="14100.00" z="3300.00" r="700"/>
+
+        <!-- South inland village - feral hens at 700 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="700.00" z="3500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="730.00" z="3530.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="660.00" z="3500.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="700.00" z="3610.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="800.00" z="3460.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="600.00" z="3600.00" r="700"/>
+
+        <!-- South inland village - feral hens at 2200 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="2200.00" z="3500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="2230.00" z="3530.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="2160.00" z="3500.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="2200.00" z="3610.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="2300.00" z="3460.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="2100.00" z="3600.00" r="700"/>
+
+        <!-- South inland village - feral hens at 3700 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="3700.00" z="3500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="3730.00" z="3530.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="3660.00" z="3500.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="3700.00" z="3610.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="3800.00" z="3460.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="3600.00" z="3600.00" r="700"/>
+
+        <!-- South inland village - feral hens at 5200 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="5200.00" z="3500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="5230.00" z="3530.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="5160.00" z="3500.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="5200.00" z="3610.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="5300.00" z="3460.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="5100.00" z="3600.00" r="700"/>
+
+        <!-- South inland village - feral hens at 6700 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="6700.00" z="3500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="6730.00" z="3530.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="6660.00" z="3500.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="6700.00" z="3610.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="6800.00" z="3460.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="6600.00" z="3600.00" r="700"/>
+
+        <!-- South inland village - feral hens at 8200 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="8200.00" z="3500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="8230.00" z="3530.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="8160.00" z="3500.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="8200.00" z="3610.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="8300.00" z="3460.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="8100.00" z="3600.00" r="700"/>
+
+        <!-- South inland village - feral hens at 9700 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="9700.00" z="3500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="9730.00" z="3530.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="9660.00" z="3500.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="9700.00" z="3610.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="9800.00" z="3460.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="9600.00" z="3600.00" r="700"/>
+
+        <!-- South inland village - feral hens at 11200 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="11200.00" z="3500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="11230.00" z="3530.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="11160.00" z="3500.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="11200.00" z="3610.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="11300.00" z="3460.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="11100.00" z="3600.00" r="700"/>
+
+        <!-- South inland village - feral hens at 12700 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="12700.00" z="3500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="12730.00" z="3530.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="12660.00" z="3500.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="12700.00" z="3610.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="12800.00" z="3460.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="12600.00" z="3600.00" r="700"/>
+
+        <!-- South inland village - feral hens at 14200 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="14200.00" z="3500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="14230.00" z="3530.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="14160.00" z="3500.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="14200.00" z="3610.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="14300.00" z="3460.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="14100.00" z="3600.00" r="700"/>
+
+        <!-- Central farm - feral hens at 700 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="700.00" z="6000.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="730.00" z="6030.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="660.00" z="6000.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="700.00" z="6110.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="800.00" z="5960.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="600.00" z="6100.00" r="700"/>
+
+        <!-- Central farm - feral hens at 2200 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="2200.00" z="6000.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="2230.00" z="6030.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="2160.00" z="6000.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="2200.00" z="6110.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="2300.00" z="5960.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="2100.00" z="6100.00" r="700"/>
+
+        <!-- Central farm - feral hens at 3700 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="3700.00" z="6000.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="3730.00" z="6030.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="3660.00" z="6000.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="3700.00" z="6110.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="3800.00" z="5960.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="3600.00" z="6100.00" r="700"/>
+
+        <!-- Central farm - feral hens at 5200 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="5200.00" z="6000.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="5230.00" z="6030.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="5160.00" z="6000.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="5200.00" z="6110.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="5300.00" z="5960.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="5100.00" z="6100.00" r="700"/>
+
+        <!-- Central farm - feral hens at 6700 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="6700.00" z="6000.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="6730.00" z="6030.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="6660.00" z="6000.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="6700.00" z="6110.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="6800.00" z="5960.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="6600.00" z="6100.00" r="700"/>
+
+        <!-- Central farm - feral hens at 8200 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="8200.00" z="6000.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="8230.00" z="6030.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="8160.00" z="6000.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="8200.00" z="6110.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="8300.00" z="5960.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="8100.00" z="6100.00" r="700"/>
+
+        <!-- Central farm - feral hens at 9700 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="9700.00" z="6000.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="9730.00" z="6030.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="9660.00" z="6000.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="9700.00" z="6110.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="9800.00" z="5960.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="9600.00" z="6100.00" r="700"/>
+
+        <!-- Central farm - feral hens at 11200 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="11200.00" z="6000.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="11230.00" z="6030.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="11160.00" z="6000.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="11200.00" z="6110.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="11300.00" z="5960.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="11100.00" z="6100.00" r="700"/>
+
+        <!-- Central farm - feral hens at 12700 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="12700.00" z="6000.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="12730.00" z="6030.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="12660.00" z="6000.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="12700.00" z="6110.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="12800.00" z="5960.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="12600.00" z="6100.00" r="700"/>
+
+        <!-- Central farm - feral hens at 14200 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="14200.00" z="6000.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="14230.00" z="6030.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="14160.00" z="6000.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="14200.00" z="6110.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="14300.00" z="5960.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="14100.00" z="6100.00" r="700"/>
+
+        <!-- Central village - feral hens at 700 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="700.00" z="6500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="730.00" z="6530.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="660.00" z="6500.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="700.00" z="6610.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="800.00" z="6460.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="600.00" z="6600.00" r="700"/>
+
+        <!-- Central village - feral hens at 2200 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="2200.00" z="6500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="2230.00" z="6530.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="2160.00" z="6500.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="2200.00" z="6610.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="2300.00" z="6460.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="2100.00" z="6600.00" r="700"/>
+
+        <!-- Central village - feral hens at 3700 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="3700.00" z="6500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="3730.00" z="6530.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="3660.00" z="6500.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="3700.00" z="6610.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="3800.00" z="6460.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="3600.00" z="6600.00" r="700"/>
+
+        <!-- Central village - feral hens at 5200 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="5200.00" z="6500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="5230.00" z="6530.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="5160.00" z="6500.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="5200.00" z="6610.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="5300.00" z="6460.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="5100.00" z="6600.00" r="700"/>
+
+        <!-- Central village - feral hens at 6700 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="6700.00" z="6500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="6730.00" z="6530.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="6660.00" z="6500.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="6700.00" z="6610.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="6800.00" z="6460.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="6600.00" z="6600.00" r="700"/>
+
+        <!-- Central village - feral hens at 8200 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="8200.00" z="6500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="8230.00" z="6530.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="8160.00" z="6500.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="8200.00" z="6610.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="8300.00" z="6460.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="8100.00" z="6600.00" r="700"/>
+
+        <!-- Central village - feral hens at 9700 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="9700.00" z="6500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="9730.00" z="6530.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="9660.00" z="6500.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="9700.00" z="6610.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="9800.00" z="6460.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="9600.00" z="6600.00" r="700"/>
+
+        <!-- Central village - feral hens at 11200 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="11200.00" z="6500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="11230.00" z="6530.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="11160.00" z="6500.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="11200.00" z="6610.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="11300.00" z="6460.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="11100.00" z="6600.00" r="700"/>
+
+        <!-- Central village - feral hens at 12700 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="12700.00" z="6500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="12730.00" z="6530.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="12660.00" z="6500.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="12700.00" z="6610.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="12800.00" z="6460.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="12600.00" z="6600.00" r="700"/>
+
+        <!-- Central village - feral hens at 14200 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="14200.00" z="6500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="14230.00" z="6530.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="14160.00" z="6500.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="14200.00" z="6610.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="14300.00" z="6460.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="14100.00" z="6600.00" r="700"/>
+
+        <!-- North farm - feral hens at 700 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="700.00" z="9000.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="730.00" z="9030.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="660.00" z="9000.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="700.00" z="9110.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="800.00" z="8960.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="600.00" z="9100.00" r="700"/>
+
+        <!-- North farm - feral hens at 2200 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="2200.00" z="9000.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="2230.00" z="9030.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="2160.00" z="9000.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="2200.00" z="9110.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="2300.00" z="8960.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="2100.00" z="9100.00" r="700"/>
+
+        <!-- North farm - feral hens at 3700 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="3700.00" z="9000.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="3730.00" z="9030.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="3660.00" z="9000.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="3700.00" z="9110.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="3800.00" z="8960.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="3600.00" z="9100.00" r="700"/>
+
+        <!-- North farm - feral hens at 5200 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="5200.00" z="9000.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="5230.00" z="9030.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="5160.00" z="9000.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="5200.00" z="9110.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="5300.00" z="8960.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="5100.00" z="9100.00" r="700"/>
+
+        <!-- North farm - feral hens at 6700 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="6700.00" z="9000.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="6730.00" z="9030.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="6660.00" z="9000.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="6700.00" z="9110.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="6800.00" z="8960.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="6600.00" z="9100.00" r="700"/>
+
+        <!-- North farm - feral hens at 8200 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="8200.00" z="9000.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="8230.00" z="9030.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="8160.00" z="9000.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="8200.00" z="9110.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="8300.00" z="8960.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="8100.00" z="9100.00" r="700"/>
+
+        <!-- North farm - feral hens at 9700 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="9700.00" z="9000.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="9730.00" z="9030.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="9660.00" z="9000.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="9700.00" z="9110.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="9800.00" z="8960.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="9600.00" z="9100.00" r="700"/>
+
+        <!-- North farm - feral hens at 11200 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="11200.00" z="9000.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="11230.00" z="9030.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="11160.00" z="9000.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="11200.00" z="9110.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="11300.00" z="8960.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="11100.00" z="9100.00" r="700"/>
+
+        <!-- North farm - feral hens at 12700 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="12700.00" z="9000.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="12730.00" z="9030.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="12660.00" z="9000.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="12700.00" z="9110.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="12800.00" z="8960.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="12600.00" z="9100.00" r="700"/>
+
+        <!-- North farm - feral hens at 14200 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="14200.00" z="9000.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="14230.00" z="9030.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="14160.00" z="9000.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="14200.00" z="9110.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="14300.00" z="8960.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="14100.00" z="9100.00" r="700"/>
+
+        <!-- North village - feral hens at 700 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="700.00" z="9500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="730.00" z="9530.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="660.00" z="9500.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="700.00" z="9610.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="800.00" z="9460.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="600.00" z="9600.00" r="700"/>
+
+        <!-- North village - feral hens at 2200 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="2200.00" z="9500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="2230.00" z="9530.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="2160.00" z="9500.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="2200.00" z="9610.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="2300.00" z="9460.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="2100.00" z="9600.00" r="700"/>
+
+        <!-- North village - feral hens at 3700 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="3700.00" z="9500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="3730.00" z="9530.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="3660.00" z="9500.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="3700.00" z="9610.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="3800.00" z="9460.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="3600.00" z="9600.00" r="700"/>
+
+        <!-- North village - feral hens at 5200 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="5200.00" z="9500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="5230.00" z="9530.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="5160.00" z="9500.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="5200.00" z="9610.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="5300.00" z="9460.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="5100.00" z="9600.00" r="700"/>
+
+        <!-- North village - feral hens at 6700 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="6700.00" z="9500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="6730.00" z="9530.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="6660.00" z="9500.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="6700.00" z="9610.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="6800.00" z="9460.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="6600.00" z="9600.00" r="700"/>
+
+        <!-- North village - feral hens at 8200 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="8200.00" z="9500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="8230.00" z="9530.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="8160.00" z="9500.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="8200.00" z="9610.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="8300.00" z="9460.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="8100.00" z="9600.00" r="700"/>
+
+        <!-- North village - feral hens at 9700 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="9700.00" z="9500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="9730.00" z="9530.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="9660.00" z="9500.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="9700.00" z="9610.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="9800.00" z="9460.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="9600.00" z="9600.00" r="700"/>
+
+        <!-- North village - feral hens at 11200 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="11200.00" z="9500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="11230.00" z="9530.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="11160.00" z="9500.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="11200.00" z="9610.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="11300.00" z="9460.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="11100.00" z="9600.00" r="700"/>
+
+        <!-- North village - feral hens at 12700 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="12700.00" z="9500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="12730.00" z="9530.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="12660.00" z="9500.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="12700.00" z="9610.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="12800.00" z="9460.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="12600.00" z="9600.00" r="700"/>
+
+        <!-- North village - feral hens at 14200 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="14200.00" z="9500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="14230.00" z="9530.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="14160.00" z="9500.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="14200.00" z="9610.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="14300.00" z="9460.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="14100.00" z="9600.00" r="700"/>
+
+        <!-- Far north farm - feral hens at 700 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="700.00" z="12000.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="730.00" z="12030.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="660.00" z="12000.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="700.00" z="12110.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="800.00" z="11960.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="600.00" z="12100.00" r="700"/>
+
+        <!-- Far north farm - feral hens at 2200 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="2200.00" z="12000.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="2230.00" z="12030.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="2160.00" z="12000.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="2200.00" z="12110.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="2300.00" z="11960.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="2100.00" z="12100.00" r="700"/>
+
+        <!-- Far north farm - feral hens at 3700 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="3700.00" z="12000.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="3730.00" z="12030.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="3660.00" z="12000.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="3700.00" z="12110.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="3800.00" z="11960.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="3600.00" z="12100.00" r="700"/>
+
+        <!-- Far north farm - feral hens at 5200 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="5200.00" z="12000.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="5230.00" z="12030.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="5160.00" z="12000.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="5200.00" z="12110.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="5300.00" z="11960.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="5100.00" z="12100.00" r="700"/>
+
+        <!-- Far north farm - feral hens at 6700 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="6700.00" z="12000.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="6730.00" z="12030.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="6660.00" z="12000.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="6700.00" z="12110.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="6800.00" z="11960.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="6600.00" z="12100.00" r="700"/>
+
+        <!-- Far north farm - feral hens at 8200 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="8200.00" z="12000.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="8230.00" z="12030.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="8160.00" z="12000.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="8200.00" z="12110.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="8300.00" z="11960.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="8100.00" z="12100.00" r="700"/>
+
+        <!-- Far north farm - feral hens at 9700 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="9700.00" z="12000.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="9730.00" z="12030.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="9660.00" z="12000.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="9700.00" z="12110.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="9800.00" z="11960.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="9600.00" z="12100.00" r="700"/>
+
+        <!-- Far north farm - feral hens at 11200 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="11200.00" z="12000.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="11230.00" z="12030.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="11160.00" z="12000.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="11200.00" z="12110.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="11300.00" z="11960.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="11100.00" z="12100.00" r="700"/>
+
+        <!-- Far north farm - feral hens at 12700 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="12700.00" z="12000.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="12730.00" z="12030.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="12660.00" z="12000.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="12700.00" z="12110.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="12800.00" z="11960.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="12600.00" z="12100.00" r="700"/>
+
+        <!-- Far north farm - feral hens at 14200 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="14200.00" z="12000.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="14230.00" z="12030.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="14160.00" z="12000.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="14200.00" z="12110.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="14300.00" z="11960.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="14100.00" z="12100.00" r="700"/>
+
+        <!-- Far north village - feral hens at 700 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="700.00" z="12500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="730.00" z="12530.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="660.00" z="12500.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="700.00" z="12610.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="800.00" z="12460.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="600.00" z="12600.00" r="700"/>
+
+        <!-- Far north village - feral hens at 2200 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="2200.00" z="12500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="2230.00" z="12530.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="2160.00" z="12500.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="2200.00" z="12610.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="2300.00" z="12460.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="2100.00" z="12600.00" r="700"/>
+
+        <!-- Far north village - feral hens at 3700 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="3700.00" z="12500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="3730.00" z="12530.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="3660.00" z="12500.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="3700.00" z="12610.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="3800.00" z="12460.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="3600.00" z="12600.00" r="700"/>
+
+        <!-- Far north village - feral hens at 5200 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="5200.00" z="12500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="5230.00" z="12530.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="5160.00" z="12500.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="5200.00" z="12610.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="5300.00" z="12460.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="5100.00" z="12600.00" r="700"/>
+
+        <!-- Far north village - feral hens at 6700 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="6700.00" z="12500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="6730.00" z="12530.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="6660.00" z="12500.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="6700.00" z="12610.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="6800.00" z="12460.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="6600.00" z="12600.00" r="700"/>
+
+        <!-- Far north village - feral hens at 8200 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="8200.00" z="12500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="8230.00" z="12530.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="8160.00" z="12500.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="8200.00" z="12610.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="8300.00" z="12460.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="8100.00" z="12600.00" r="700"/>
+
+        <!-- Far north village - feral hens at 9700 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="9700.00" z="12500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="9730.00" z="12530.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="9660.00" z="12500.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="9700.00" z="12610.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="9800.00" z="12460.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="9600.00" z="12600.00" r="700"/>
+
+        <!-- Far north village - feral hens at 11200 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="11200.00" z="12500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="11230.00" z="12530.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="11160.00" z="12500.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="11200.00" z="12610.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="11300.00" z="12460.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="11100.00" z="12600.00" r="700"/>
+
+        <!-- Far north village - feral hens at 12700 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="12700.00" z="12500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="12730.00" z="12530.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="12660.00" z="12500.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="12700.00" z="12610.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="12800.00" z="12460.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="12600.00" z="12600.00" r="700"/>
+
+        <!-- Far north village - feral hens at 14200 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="14200.00" z="12500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="14230.00" z="12530.00" r="400"/>
+        <zone name="Rest" smin="0" smax="3" dmin="3" dmax="7" x="14160.00" z="12500.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="14200.00" z="12610.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="14300.00" z="12460.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="10" x="14100.00" z="12600.00" r="700"/>
+
     </territory>
 </territory-type>
