@@ -39,7 +39,7 @@ This package is tuned to deliver that experience consistently across every file.
 | `cfgweather.xml` | Extreme weather — fog walls, storm cycles, rare clear days *(mission root)* |
 | `db/events.xml` | **69 events** — animals, ALL infected (with tuned nominals), static world events, foraging |
 | `db/types.xml` | **2,192 items** — complete DayZ loot economy with vehicle overhaul values |
-| `env/` | **14 territory files** — 13 animal + zombie_territories.xml (5,448 animal zones + 957 zombie zones) |
+| `env/` | **14 territory files** — 13 animal + zombie_territories.xml (5,448 animal zones + 1,037 zombie zones) |
 
 ---
 
@@ -92,10 +92,10 @@ mpmissions/dayzOffline.chernarusplus/
 
 ---
 
-## Zombie Spawn Coverage (`events.xml` — tuned for 957 territory zones + rolling horde events)
+## Zombie Spawn Coverage (`events.xml` — tuned for 1,037 territory zones + rolling horde events)
 
 The vanilla infected event nominals (50/50/50 for all types) were designed for a few dozen
-vanilla zones. This setup has 957 territory zones. The nominals below are calibrated to
+vanilla zones. This setup has 1,037 territory zones. The nominals below are calibrated to
 the actual zone count so the "zombies everywhere" vision actually works:
 
 **Realism gradient:** Cities → highest density, urban civilians. Villages → moderate density,
@@ -105,18 +105,18 @@ EVENT encounters, not permanent territory blobs.
 
 | Event | Zones | Nominal | Min | Max | Notes |
 |-------|-------|---------|-----|-----|-------|
-| `InfectedVillage` | 91 | **1450** | 725 | 2175 | Villages — rural civilians, noticeable but stealthable |
+| `InfectedVillage` | 112 | **1450** | 725 | 2175 | Villages — rural civilians, noticeable but stealthable |
 | `InfectedVillageTier1` | 55 | **530** | 265 | 800 | Village outskirts |
-| `InfectedArmy` | 25 | **390** | 195 | 585 | Military zones |
-| `InfectedCity` | 6 | **900** | 450 | 1350 | Cities — urban civilians, populated but gaps exist |
-| `InfectedSolitude` | 693 | **500** | 250 | 750 | Wilderness — sparse; hikers/hunters/hermits only |
-| `InfectedIndustrial` | 16 | **250** | 125 | 375 | Factories and ports |
+| `InfectedArmy` | 28 | **390** | 195 | 585 | Military zones |
+| `InfectedCity` | 40 | **900** | 450 | 1350 | Cities — urban civilians, populated but gaps exist |
+| `InfectedSolitude` | 708 | **500** | 250 | 750 | Wilderness — sparse; hikers/hunters/hermits only |
+| `InfectedIndustrial` | 19 | **250** | 125 | 375 | Factories and ports |
 | `InfectedCityTier1` | 6 | **155** | 78 | 235 | Urban fringe |
 | `InfectedArmyHard` | 5 | **70** | 35 | 105 | Elite military zones |
-| `InfectedPrisoner` | 2 | **70** | 35 | 105 | Prison island |
-| `InfectedMedic` | 7 | **35** | 18 | 70 | Hospitals |
-| `InfectedPolice` | 9 | **35** | 7 | 70 | Police stations |
-| `InfectedNBC` | 4 | **35** | 7 | 70 | NBC/hazmat sites |
+| `InfectedPrisoner` | 3 | **70** | 35 | 105 | Prison island |
+| `InfectedMedic` | 8 | **35** | 18 | 70 | Hospitals |
+| `InfectedPolice` | 10 | **35** | 7 | 70 | Police stations |
+| `InfectedNBC` | 5 | **35** | 7 | 70 | NBC/hazmat sites |
 | `InfectedFirefighter` | 4 | **35** | 18 | 70 | Fire stations |
 | `InfectedReligious` | 9 | **35** | 18 | 70 | Churches |
 | `InfectedMummy` | 25 | **35** | 18 | 70 | Rare ancient encounters |
