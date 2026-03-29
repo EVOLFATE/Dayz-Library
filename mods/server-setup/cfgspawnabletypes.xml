@@ -23,7 +23,8 @@
       InfectedMedic, InfectedPolice, InfectedFirefighter, InfectedNBC,
       InfectedReligious, InfectedPrisoner, InfectedMummy, InfectedPoliceHard
 
-    INSTALL PATH: mpmissions/dayzOffline.chernarusplus/db/cfgspawnabletypes.xml
+    INSTALL PATH: mpmissions/dayzOffline.chernarusplus/cfgspawnabletypes.xml
+    (place this in the MISSION ROOT — NOT in the db/ subfolder)
     Replace the original file entirely.
 -->
 <spawnabletypes>

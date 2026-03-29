@@ -34,8 +34,8 @@ This package is tuned to deliver that experience consistently across every file.
 | File | What It Is |
 |------|------------|
 | `cfgeventspawns.xml` | Fixed map coordinates + animal territory refs + vehicle overhaul coords — ALL event spawn positions *(mission root)* |
+| `cfgspawnabletypes.xml` | **24 types** — 8 vehicle loot configs + 16 zombie loot types (post-apoc tuned) *(mission root)* |
 | `cfgweather.xml` | Extreme weather — fog walls, storm cycles, rare clear days *(mission root)* |
-| `db/cfgspawnabletypes.xml` | **24 types** — 8 vehicle loot configs + 16 zombie loot types (post-apoc tuned) |
 | `db/events.xml` | **63 events** — animals, ALL infected (with tuned nominals), static world events, foraging |
 | `db/types.xml` | **1,390 items** — complete DayZ loot economy with vehicle overhaul values |
 | `env/` | **14 territory files** — 13 animal + zombie_territories.xml (5,448 animal zones + 1,037 zombie zones) |
@@ -51,10 +51,10 @@ mpmissions/dayzOffline.chernarusplus/
 │
 ├── cfgweather.xml                ← server-setup/cfgweather.xml
 ├── cfgeventspawns.xml            ← server-setup/cfgeventspawns.xml
+├── cfgspawnabletypes.xml         ← server-setup/cfgspawnabletypes.xml
 │
 ├── db/
 │   ├── events.xml                ← server-setup/db/events.xml
-│   ├── cfgspawnabletypes.xml     ← server-setup/db/cfgspawnabletypes.xml
 │   └── types.xml                 ← server-setup/db/types.xml
 │
 └── env/
@@ -224,6 +224,34 @@ matters. These vanilla trajectory events are included:
 `TrajectoryApple`, `TrajectoryPear`, `TrajectoryPlum` — fruit trees  
 `TrajectoryConiferous`, `TrajectoryDeciduous`, `TrajectoryHumus` — mushrooms  
 `TrajectoryStones` — stones for crafting
+
+---
+
+## QC / Testing Checklist
+
+Use this checklist before deploying to a live server. Run `validate.sh` first to catch XML
+errors automatically, then work through the manual checks below.
+
+### Automated (run `validate.sh`)
+
+- [ ] All XML files are well-formed (valid XML syntax — no parse errors reported)
+
+### Configuration cross-checks
+
+- [ ] `types.xml` — every item has required fields: `nominal`, `min`, `lifetime`, `restock`, `category`, `usage`
+- [ ] `events.xml` — every event `name` has a matching entry in `cfgeventspawns.xml`
+- [ ] `cfgspawnabletypes.xml` — every `<type name="…">` references a name that exists in `types.xml`
+- [ ] `cfgweather.xml` — all weather parameters are within valid DayZ ranges (`overcast`, `fog`, `rain` 0.0–1.0; `wind` ≥ 0)
+- [ ] Territory files (`env/`) — all zone coordinates are within Chernarus map bounds (x/z: 0–15360)
+- [ ] No duplicate `<type name="…">` entries across `types.xml` and `cfgspawnabletypes.xml`
+- [ ] No duplicate `<event name="…">` entries in `events.xml`
+
+### Live server validation
+
+- [ ] Server loads without errors with this configuration
+- [ ] Loot economy spawns as expected in-game (check a variety of building tiers)
+- [ ] Animal spawns are functioning in defined territories
+- [ ] Zombie spawns are active in all defined zones (city, village, solitude, army, etc.)
 
 ---
 
