@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- ================================================================ -->
+<!-- ATR Setup: Custom Infected Horde Events                          -->
+<!-- 3 Tiers: Small (Villages), Medium (Cities/Hospitals), Large (Military) -->
+<!-- These are STATIC events — fixed danger zones across Chernarus    -->
+<!-- 8 months post-outbreak: infected have gathered in packs at POIs  -->
+<!--                                                                  -->
+<!-- MERGE DESTINATION: mpmissions/dayzOffline.chernarusplus/db/events.xml -->
+<!-- Copy these three <event> blocks into your mission's events.xml   -->
+<!--                                                                  -->
+<!-- Pairs with: cfgeventspawns.xml for spawn coordinates             -->
+<!-- See also:   types.xml (loot scarcity) and cfgweather.xml (fog)   -->
+<!-- ================================================================ -->
+<events>
+
+    <!-- ============================================================ -->
+    <!-- TIER 1: InfectedHorde_Small — Stragglers / Roaming Pack      -->
+    <!-- Per-location spawn: ~7–16 infected (sum of children min/max) -->
+    <!-- Nominally 8 locations active; up to 15 positions available.  -->
+    <!-- Manageable solo with good gear.                               -->
+    <!-- Infected types: rural/village civilians                      -->
+    <!-- Locations: 15 village positions (see cfgeventspawns.xml)     -->
+    <!-- ============================================================ -->
+    <event name="InfectedHorde_Small">
+        <nominal>8</nominal>
+        <min>5</min>
+        <max>10</max>
+        <lifetime>1800</lifetime>
+        <restock>300</restock>
+        <saferadius>50</saferadius>
+        <distanceradius>80</distanceradius>
+        <cleanupradius>150</cleanupradius>
+        <flags deletable="0" init_random="0" remove_damaged="1"/>
+        <position>static</position>
+        <limit>15</limit>
+        <active>1</active>
+        <children>
+            <!-- Skinny male civilian — most common village straggler -->
+            <child lootmax="0" lootmin="0" max="4" min="2" type="ZmbM_CitizenASkinny"/>
+            <!-- Fat farmer — common in rural areas -->
+            <child lootmax="0" lootmin="0" max="3" min="1" type="ZmbM_FarmerFat"/>
+            <!-- Old village woman — slower but numerous -->
+            <child lootmax="0" lootmin="0" max="3" min="1" type="ZmbF_VillagerOld"/>
+            <!-- Old village man -->
+            <child lootmax="0" lootmin="0" max="2" min="1" type="ZmbM_VillagerOld"/>
+            <!-- Normal female civilian -->
+            <child lootmax="0" lootmin="0" max="2" min="1" type="ZmbF_CitizenANormal"/>
+            <!-- Hermit — loner type found on village outskirts -->
+            <child lootmax="0" lootmin="0" max="2" min="1" type="ZmbM_HermitSkinny"/>
+        </children>
+    </event>
+
+    <!-- ============================================================ -->
+    <!-- TIER 2: InfectedHorde_Medium — Overrun Zones                 -->
+    <!-- Per-location spawn: ~15–30 infected (sum of children min/max) -->
+    <!-- Nominally 6 locations active; up to 12 positions available.  -->
+    <!-- People fled here for help — the dead stayed.                 -->
+    <!-- Infected types: urban civilians, medical staff, police       -->
+    <!-- Locations: 12 city/hospital positions (see cfgeventspawns.xml) -->
+    <!-- ============================================================ -->
+    <event name="InfectedHorde_Medium">
+        <nominal>6</nominal>
+        <min>4</min>
+        <max>8</max>
+        <lifetime>2400</lifetime>
+        <restock>600</restock>
+        <saferadius>80</saferadius>
+        <distanceradius>120</distanceradius>
+        <cleanupradius>200</cleanupradius>
+        <flags deletable="0" init_random="0" remove_damaged="1"/>
+        <position>static</position>
+        <limit>12</limit>
+        <active>1</active>
+        <children>
+            <!-- Skinny male citizen A — most common urban infected -->
+            <child lootmax="0" lootmin="0" max="5" min="3" type="ZmbM_CitizenASkinny"/>
+            <!-- Skinny male citizen B — urban variant -->
+            <child lootmax="0" lootmin="0" max="4" min="2" type="ZmbM_CitizenBSkinny"/>
+            <!-- Normal female citizen A -->
+            <child lootmax="0" lootmin="0" max="4" min="2" type="ZmbF_CitizenANormal"/>
+            <!-- Skinny female citizen B -->
+            <child lootmax="0" lootmin="0" max="3" min="2" type="ZmbF_CitizenBSkinny"/>
+            <!-- Fat doctor — hospital staff who turned -->
+            <child lootmax="0" lootmin="0" max="3" min="1" type="ZmbM_DoctorFat"/>
+            <!-- Fat nurse — hospital staff who turned -->
+            <child lootmax="0" lootmin="0" max="2" min="1" type="ZmbF_NurseFat"/>
+            <!-- Skinny male patient — infected while seeking treatment -->
+            <child lootmax="0" lootmin="0" max="3" min="1" type="ZmbM_PatientSkinny"/>
+            <!-- Old female patient -->
+            <child lootmax="0" lootmin="0" max="2" min="1" type="ZmbF_PatientOld"/>
+            <!-- Fat policeman — law enforcement overwhelmed -->
+            <child lootmax="0" lootmin="0" max="2" min="1" type="ZmbM_PolicemanFat"/>
+            <!-- Normal policewoman -->
+            <child lootmax="0" lootmin="0" max="2" min="1" type="ZmbF_PoliceWomanNormal"/>
+        </children>
+    </event>
+
+    <!-- ============================================================ -->
+    <!-- TIER 3: InfectedHorde_Large — Fallen Strongholds             -->
+    <!-- Per-location spawn: ~28–57 infected (sum of children min/max) -->
+    <!-- Nominally 4 locations active; up to 12 positions available.  -->
+    <!-- The military made its stand here and failed. Solo = death.   -->
+    <!-- Infected types: soldiers, officers, spec-forces, civilians   -->
+    <!-- Locations: 12 military positions (see cfgeventspawns.xml)    -->
+    <!-- ============================================================ -->
+    <event name="InfectedHorde_Large">
+        <nominal>4</nominal>
+        <min>3</min>
+        <max>6</max>
+        <lifetime>3600</lifetime>
+        <restock>900</restock>
+        <saferadius>100</saferadius>
+        <distanceradius>200</distanceradius>
+        <cleanupradius>300</cleanupradius>
+        <flags deletable="0" init_random="0" remove_damaged="1"/>
+        <position>static</position>
+        <limit>12</limit>
+        <active>1</active>
+        <children>
+            <!-- Normal male soldier — the bulk of the military horde -->
+            <child lootmax="0" lootmin="0" max="10" min="6" type="ZmbM_SoldierNormal"/>
+            <!-- Soldier officer — command staff who turned -->
+            <child lootmax="0" lootmin="0" max="5" min="3" type="ZmbM_SoldierOfficer"/>
+            <!-- Normal female soldier -->
+            <child lootmax="0" lootmin="0" max="4" min="2" type="ZmbF_SoldierNormal"/>
+            <!-- Skinny male citizen A — civilians caught at the base -->
+            <child lootmax="0" lootmin="0" max="8" min="4" type="ZmbM_CitizenASkinny"/>
+            <!-- Skinny male citizen B -->
+            <child lootmax="0" lootmin="0" max="5" min="3" type="ZmbM_CitizenBSkinny"/>
+            <!-- Normal female citizen A -->
+            <child lootmax="0" lootmin="0" max="4" min="2" type="ZmbF_CitizenANormal"/>
+            <!-- Skinny male patient — wounded brought to the base -->
+            <child lootmax="0" lootmin="0" max="4" min="2" type="ZmbM_PatientSkinny"/>
+            <!-- Fat policeman — law enforcement that joined the defense -->
+            <child lootmax="0" lootmin="0" max="3" min="1" type="ZmbM_PolicemanFat"/>
+            <!-- Spec-force policeman — elite forces who fell -->
+            <child lootmax="0" lootmin="0" max="3" min="1" type="ZmbM_PolicemanSpecForce"/>
+            <!-- Normal male firefighter — emergency response who turned -->
+            <child lootmax="0" lootmin="0" max="3" min="1" type="ZmbM_FirefighterNormal"/>
+            <!-- Normal female firefighter -->
+            <child lootmax="0" lootmin="0" max="3" min="1" type="ZmbF_FirefighterNormal"/>
+            <!-- Normal male paramedic — medics attached to military -->
+            <child lootmax="0" lootmin="0" max="3" min="1" type="ZmbM_ParamedicNormal"/>
+            <!-- Normal female paramedic -->
+            <child lootmax="0" lootmin="0" max="2" min="1" type="ZmbF_ParamedicNormal"/>
+        </children>
+    </event>
+
+</events>
