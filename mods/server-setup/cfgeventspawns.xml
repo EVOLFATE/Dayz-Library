@@ -1367,32 +1367,68 @@
     <!-- ============================================================ -->
     <!-- SECTION 3: INFECTED TERRITORY REGISTRATIONS                  -->
     <!-- All infected event types must be registered here so the CE   -->
-    <!-- engine recognises them. zombie_territories.xml (env/) and    -->
-    <!-- static world events drive the actual spawning — these empty  -->
-    <!-- elements are the required registration entries.              -->
+    <!-- engine recognises them. Each event must reference            -->
+    <!-- env/zombie_territories.xml so the CE engine knows WHERE to   -->
+    <!-- spawn zombies (1,037 zones defined in that file).            -->
     <!-- ============================================================ -->
 
     <!-- Vanilla infected (from BohemiaInteractive/DayZ-Central-Economy) -->
-	<event name="InfectedVillage" />
-	<event name="InfectedSolitude" />
-	<event name="InfectedArmy" />
-	<event name="InfectedCity" />
-	<event name="InfectedMedic" />
-	<event name="InfectedPolice" />
-	<event name="InfectedFirefighter" />
-	<event name="InfectedPrisoner" />
+	<event name="InfectedVillage">
+		<file>env/zombie_territories.xml</file>
+	</event>
+	<event name="InfectedSolitude">
+		<file>env/zombie_territories.xml</file>
+	</event>
+	<event name="InfectedArmy">
+		<file>env/zombie_territories.xml</file>
+	</event>
+	<event name="InfectedCity">
+		<file>env/zombie_territories.xml</file>
+	</event>
+	<event name="InfectedMedic">
+		<file>env/zombie_territories.xml</file>
+	</event>
+	<event name="InfectedPolice">
+		<file>env/zombie_territories.xml</file>
+	</event>
+	<event name="InfectedFirefighter">
+		<file>env/zombie_territories.xml</file>
+	</event>
+	<event name="InfectedPrisoner">
+		<file>env/zombie_territories.xml</file>
+	</event>
 
     <!-- Extended infected (added by this setup — used in zombie_territories.xml) -->
-	<event name="InfectedVillageTier1" />
-	<event name="InfectedCityTier1" />
-	<event name="InfectedArmyHard" />
-	<event name="InfectedIndustrial" />
-	<event name="InfectedNBC" />
-	<event name="InfectedNBCYellow" />
-	<event name="InfectedPoliceHard" />
-	<event name="InfectedReligious" />
-	<event name="InfectedMummy" />
-	<event name="InfectedSanta" />
+	<event name="InfectedVillageTier1">
+		<file>env/zombie_territories.xml</file>
+	</event>
+	<event name="InfectedCityTier1">
+		<file>env/zombie_territories.xml</file>
+	</event>
+	<event name="InfectedArmyHard">
+		<file>env/zombie_territories.xml</file>
+	</event>
+	<event name="InfectedIndustrial">
+		<file>env/zombie_territories.xml</file>
+	</event>
+	<event name="InfectedNBC">
+		<file>env/zombie_territories.xml</file>
+	</event>
+	<event name="InfectedNBCYellow">
+		<file>env/zombie_territories.xml</file>
+	</event>
+	<event name="InfectedPoliceHard">
+		<file>env/zombie_territories.xml</file>
+	</event>
+	<event name="InfectedReligious">
+		<file>env/zombie_territories.xml</file>
+	</event>
+	<event name="InfectedMummy">
+		<file>env/zombie_territories.xml</file>
+	</event>
+	<event name="InfectedSanta">
+		<file>env/zombie_territories.xml</file>
+	</event>
 
     <!-- ============================================================ -->
     <!-- SECTION 4: ANIMAL TERRITORY MAPPINGS                         -->
