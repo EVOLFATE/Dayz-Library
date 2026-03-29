@@ -33,6 +33,7 @@ This package is tuned to deliver that experience consistently across every file.
 
 | File | What It Is |
 |------|------------|
+| `cfgeconomycore.xml` | CE engine configuration — registers `db/` folder so events, globals, and types are loaded *(mission root)* |
 | `cfgeventspawns.xml` | Fixed map coordinates + animal territory refs + vehicle overhaul coords — ALL event spawn positions *(mission root)* |
 | `cfgspawnabletypes.xml` | **24 types** — 8 vehicle loot configs + 16 zombie loot types (post-apoc tuned) *(mission root)* |
 | `cfgweather.xml` | Extreme weather — fog walls, storm cycles, rare clear days *(mission root)* |
@@ -46,8 +47,13 @@ This package is tuned to deliver that experience consistently across every file.
 
 Copy the contents of `server-setup/` directly into your mission folder.
 
+> ⚠️ **cfgeconomycore.xml is REQUIRED** — this file tells the DayZ Central Economy engine
+> where to find `events.xml`, `globals.xml`, and `types.xml`. Without it, the CE engine
+> won't load ANY of your custom files — resulting in no zombies, no animals, and no vehicles.
+> If you already have a `cfgeconomycore.xml`, ensure it contains the `<ce folder="db">` block.
+
 > ✅ **globals.xml is now included** — `server-setup/db/globals.xml` ships with all required
-> values pre-configured (`ZombieMaxCount=5000`, `VehicleMaxCount=250`, `AnimalMaxCount=200`).
+> values pre-configured (`ZombieMaxCount=5000`, `VehicleMaxCount=250`, `AnimalMaxCount=2000`).
 > Simply copy it along with the other files — no manual editing required.
 >
 > If you already have a customised `globals.xml` on your server, merge in these key values:
@@ -57,6 +63,7 @@ Copy the contents of `server-setup/` directly into your mission folder.
 ```
 mpmissions/dayzOffline.chernarusplus/
 │
+├── cfgeconomycore.xml            ← server-setup/cfgeconomycore.xml   ← NEW (REQUIRED)
 ├── cfgweather.xml                ← server-setup/cfgweather.xml
 ├── cfgeventspawns.xml            ← server-setup/cfgeventspawns.xml  ← UPDATED
 ├── cfgspawnabletypes.xml         ← server-setup/cfgspawnabletypes.xml
@@ -369,6 +376,7 @@ errors automatically, then work through the manual checks below.
 - [ ] `types.xml` — every item has required fields: `nominal`, `min`, `lifetime`, `restock`, `category`, `usage`
 - [ ] `events.xml` — every event `name` has a matching entry in `cfgeventspawns.xml`
 - [ ] `cfgspawnabletypes.xml` — every `<type name="…">` references a name that exists in `types.xml`
+- [ ] `cfgeconomycore.xml` — contains `<ce folder="db">` block that registers `events.xml`, `globals.xml`, and `types.xml`
 - [ ] `cfgweather.xml` — all weather parameters are within valid DayZ ranges (`overcast`, `fog`, `rain` 0.0–1.0; `wind` ≥ 0)
 - [ ] Territory files (`env/`) — all zone coordinates are within Chernarus map bounds (x/z: 0–15360)
 - [ ] No duplicate `<type name="…">` entries across `types.xml` and `cfgspawnabletypes.xml`
