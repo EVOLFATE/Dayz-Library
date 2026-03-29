@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<economycore>
+    <classes>
+        <rootclasses>
+            <rootclass name="Static" reportMemoryLeak="0"/>
+            <rootclass name="Vertical" reportMemoryLeak="0"/>
+        </rootclasses>
+    </classes>
+
+    <ce folder="db">
+        <file name="types.xml" type="types" />
+        <file name="events.xml" type="events" />
+        <file name="globals.xml" type="globals" />
+    </ce>
+
+    <defaults>
+        <default name="Missions" folder="." file="cfgmissions.xml" />
+        <default name="CfgEventSpawns" folder="." file="cfgeventspawns.xml" />
+        <default name="CfgSpawnableTypes" folder="." file="cfgspawnabletypes.xml" />
+        <default name="CfgRandomPresence" folder="." file="cfgrandompresnce.xml" />
+    </defaults>
+</economycore>
