@@ -420,9 +420,9 @@
         </event>
     
     <event name="InfectedCity">
-            <nominal>780</nominal>
-            <min>390</min>
-            <max>1170</max>
+            <nominal>900</nominal>
+            <min>450</min>
+            <max>1350</max>
             <lifetime>3</lifetime>
             <restock>0</restock>
             <saferadius>150</saferadius>
@@ -731,9 +731,9 @@
         </event>
     
     <event name="InfectedSolitude">
-            <nominal>980</nominal>
-            <min>490</min>
-            <max>1470</max>
+            <nominal>500</nominal>
+            <min>250</min>
+            <max>750</max>
             <lifetime>3</lifetime>
             <restock>0</restock>
             <saferadius>150</saferadius>
@@ -850,6 +850,37 @@
             <child lootmax="5" lootmin="0" max="0" min="100" type="ZmbM_Mummy"/>
         </children>
     </event>
+
+    <!-- ============================================================ -->
+    <!-- ZOMBIE HORDE EVENT                                           -->
+    <!-- Works exactly like StaticHeliCrash:                         -->
+    <!--   - nominal=8  → 8 hordes active at any given time          -->
+    <!--   - lifetime=1800 → each horde lives 30 min then despawns   -->
+    <!--   - engine immediately picks a NEW random position from the  -->
+    <!--     118-position pool in cfgeventspawns.xml and respawns     -->
+    <!--   - init_random=1 → positions randomised on server start     -->
+    <!--   - secondary=InfectedCity → zombie swarm spawns around the  -->
+    <!--     abandoned car; density controlled by <zone> in           -->
+    <!--     cfgeventspawns.xml (smin/smax/dmin/dmax/r)              -->
+    <!-- ============================================================ -->
+    <event name="StaticZombieHorde">
+            <nominal>8</nominal>
+            <min>4</min>
+            <max>12</max>
+            <lifetime>1800</lifetime>
+            <restock>0</restock>
+            <saferadius>300</saferadius>
+            <distanceradius>500</distanceradius>
+            <cleanupradius>800</cleanupradius>
+            <secondary>InfectedCity</secondary>
+            <flags deletable="1" init_random="1" remove_damaged="0" />
+            <position>fixed</position>
+            <limit>child</limit>
+            <active>1</active>
+            <children>
+                <child lootmax="3" lootmin="0" max="1" min="1" type="Land_Wreck_sed01_aban1" />
+            </children>
+        </event>
 
     <!-- ============================================================ -->
     <!-- SECTION 3: VANILLA STATIC WORLD EVENTS                       -->
@@ -1565,12 +1596,12 @@
         <nominal>15</nominal>
         <min>8</min>
         <max>25</max>
-        <lifetime>43200</lifetime>
-        <restock>3600</restock>
+        <lifetime>3600</lifetime>
+        <restock>0</restock>
         <saferadius>5</saferadius>
         <distanceradius>20</distanceradius>
         <cleanupradius>200</cleanupradius>
-        <flags deletable="0" init_random="0" remove_damaged="0"/>
+        <flags deletable="1" init_random="1" remove_damaged="0"/>
         <position>fixed</position>
         <limit>child</limit>
         <active>1</active>
@@ -1604,12 +1635,12 @@
         <nominal>8</nominal>
         <min>4</min>
         <max>15</max>
-        <lifetime>43200</lifetime>
-        <restock>3600</restock>
+        <lifetime>3600</lifetime>
+        <restock>0</restock>
         <saferadius>5</saferadius>
         <distanceradius>20</distanceradius>
         <cleanupradius>200</cleanupradius>
-        <flags deletable="0" init_random="0" remove_damaged="0"/>
+        <flags deletable="1" init_random="1" remove_damaged="0"/>
         <position>fixed</position>
         <limit>child</limit>
         <active>1</active>
@@ -1634,12 +1665,12 @@
         <nominal>4</nominal>
         <min>2</min>
         <max>10</max>
-        <lifetime>43200</lifetime>
-        <restock>3600</restock>
+        <lifetime>3600</lifetime>
+        <restock>0</restock>
         <saferadius>5</saferadius>
         <distanceradius>20</distanceradius>
         <cleanupradius>200</cleanupradius>
-        <flags deletable="0" init_random="0" remove_damaged="0"/>
+        <flags deletable="1" init_random="1" remove_damaged="0"/>
         <position>fixed</position>
         <limit>child</limit>
         <active>1</active>
@@ -1664,12 +1695,12 @@
         <nominal>4</nominal>
         <min>2</min>
         <max>8</max>
-        <lifetime>43200</lifetime>
-        <restock>3600</restock>
+        <lifetime>3600</lifetime>
+        <restock>0</restock>
         <saferadius>5</saferadius>
         <distanceradius>20</distanceradius>
         <cleanupradius>200</cleanupradius>
-        <flags deletable="0" init_random="0" remove_damaged="0"/>
+        <flags deletable="1" init_random="1" remove_damaged="0"/>
         <position>fixed</position>
         <limit>child</limit>
         <active>1</active>

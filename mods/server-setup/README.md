@@ -48,11 +48,11 @@ Copy the contents of `server-setup/` directly into your mission folder.
 
 > ⚠️ **Required globals.xml changes — do these first (both caps must be raised):**
 >
-> **1. ZombieMaxCount** — The total zombie nominal is ~5,050. The vanilla cap is 800, which
-> silently starves most zones.
+> **1. ZombieMaxCount** — The total zombie nominal across all infected territory types is ~4,060,
+> plus active horde events. The vanilla cap is 800, which silently starves most zones.
 > ```xml
 > <!-- mpmissions/dayzOffline.chernarusplus/db/globals.xml -->
-> <var name="ZombieMaxCount" type="0" value="6000"/>
+> <var name="ZombieMaxCount" type="0" value="5000"/>
 > ```
 >
 > **2. VehicleMaxCount** — The total vehicle nominal across all events is **196**. The vanilla
@@ -75,7 +75,7 @@ mpmissions/dayzOffline.chernarusplus/
 │
 ├── db/
 │   ├── events.xml                ← server-setup/db/events.xml       ← UPDATED
-│   ├── globals.xml               ← edit manually (raise ZombieMaxCount to 6000, VehicleMaxCount to 250)
+│   ├── globals.xml               ← edit manually (raise ZombieMaxCount to 5000, VehicleMaxCount to 250)
 │   └── types.xml                 ← server-setup/db/types.xml
 │
 └── env/
@@ -97,43 +97,58 @@ mpmissions/dayzOffline.chernarusplus/
 
 ---
 
-## Zombie Spawn Coverage (`events.xml` — tuned for 1,037 zones)
+## Zombie Spawn Coverage (`events.xml` — tuned for 919 territory zones + rolling horde events)
 
 The vanilla infected event nominals (50/50/50 for all types) were designed for a few dozen
-vanilla zones. This setup has 1,037 territory zones. The nominals below are calibrated to
+vanilla zones. This setup has 919 territory zones. The nominals below are calibrated to
 the actual zone count so the "zombies everywhere" vision actually works:
 
-Values are calibrated to real epidemiological models (Munz 2009 SZR, source-sink dynamics,
-urban-rural density gradient). Cities are *sources* — zombies originated there and persist.
-Wilderness is a *sink* — sparse wanderers diffused outward over years since outbreak.
-Hordes form at geographic chokepoints (bridges, dead-ends, fenced compounds).
-
-**Design philosophy (post-rebalance):** Reduced ambient density + concentrated horde encounters
-= stealthable populated areas with dramatic roaming-horde surprises. Players can find gaps
-and plan routes through cities; the danger is still there but achievable to navigate.
+**Realism gradient:** Cities → highest density, urban civilians. Villages → moderate density,
+rural civilians. Wilderness → sparse, hikers/hunters/hermits only. Specialty locations →
+matching types (soldiers at bases, doctors at hospitals). Hordes → dramatic timer-based
+EVENT encounters, not permanent territory blobs.
 
 | Event | Zones | Nominal | Min | Max | Notes |
 |-------|-------|---------|-----|-----|-------|
-| `InfectedVillage` | 112 | **1450** | 725 | 2175 | Villages: reduced ~35% — stealth routes now possible |
+| `InfectedVillage` | 112 | **1450** | 725 | 2175 | Villages — rural civilians, noticeable but stealthable |
 | `InfectedVillageTier1` | 55 | **530** | 265 | 800 | Village outskirts |
-| `InfectedArmy` | 28 | **390** | 195 | 585 | Military zones: contained environment |
-| `InfectedSolitude` | 708 | **980** | 490 | 1470 | Wilderness wanderers: quieter, punctuated by horde pockets |
-| `InfectedCity` | 40 | **780** | 390 | 1170 | Cities: reduced ~35% — gaps exist between clusters |
+| `InfectedArmy` | 28 | **390** | 195 | 585 | Military zones |
+| `InfectedCity` | 40 | **900** | 450 | 1350 | Cities — urban civilians, populated but gaps exist |
+| `InfectedSolitude` | 693 | **500** | 250 | 750 | Wilderness — sparse; hikers/hunters/hermits only |
 | `InfectedIndustrial` | 19 | **250** | 125 | 375 | Factories and ports |
 | `InfectedCityTier1` | 6 | **155** | 78 | 235 | Urban fringe |
 | `InfectedArmyHard` | 5 | **70** | 35 | 105 | Elite military zones |
+| `InfectedPrisoner` | 3 | **70** | 35 | 105 | Prison island |
 | `InfectedMedic` | 8 | **35** | 18 | 70 | Hospitals |
 | `InfectedPolice` | 10 | **35** | 7 | 70 | Police stations |
 | `InfectedNBC` | 5 | **35** | 7 | 70 | NBC/hazmat sites |
 | `InfectedFirefighter` | 4 | **35** | 18 | 70 | Fire stations |
-| `InfectedPrisoner` | 3 | **70** | 35 | 105 | Prison island: trapped → persistent |
-| `InfectedReligious` | 9 | **35** | 18 | 70 | Churches: remote, low original population |
+| `InfectedReligious` | 9 | **35** | 18 | 70 | Churches |
 | `InfectedMummy` | 25 | **35** | 18 | 70 | Rare ancient encounters |
 | `InfectedPoliceHard` | (static events) | **15** | 3 | 40 | Triggered by StaticPoliceSituation |
+| `StaticZombieHorde` | (fixed event) | **8** | 4 | 12 | 8 active hordes from 118-position pool — see below |
 
-> **Note:** Total nominal across all infected types ≈ 5,050 (down from ~7,345). Raise `ZombieMaxCount`
-> in `globals.xml` to at least **6,000** (ideally 7,000) to let the full budget be active simultaneously.
-> Vanilla default is 800 — that cap will silently starve the higher-tier zones first.
+> **Note:** Total nominal across all infected territory types ≈ 4,060. The 8 active horde events
+> each pull additional InfectedCity zombies via `secondary=` (controlled by the `<zone>` density
+> in `cfgeventspawns.xml`). Raise `ZombieMaxCount` in `globals.xml` to at least **5,000** to
+> let the full budget be active simultaneously. Vanilla default is 800 — that cap will silently
+> starve the higher-tier zones first.
+
+### Zombie Horde Events (`StaticZombieHorde`)
+
+Works **exactly like a helicrash** — a timer-based rolling event, not a permanent zone:
+
+- **8 hordes active** at any given moment across the entire map
+- Each horde **lives for 30 minutes** (`lifetime=1800`), then despawns and immediately
+  respawns at a **new random location** chosen from a pool of **118 possible positions**
+- `init_random=1` — positions are randomised on every server start; you never know where
+  they'll be
+- A wrecked abandoned car (`Land_Wreck_sed01_aban1`) marks the horde centre; `InfectedCity`
+  zombies swarm around it with `smin=5 smax=10 dmin=20 dmax=35` at `r=200m`
+- **No budget waste** — the 117 inactive positions cost nothing; only the 8 active sites
+  draw from `ZombieMaxCount`
+- The "oh no" factor: stumble into a horde site and you're surrounded; come back 30 minutes
+  later and it's gone, moved somewhere else on the map
 
 **Spawn distance tuning (all infected events):**
 
@@ -285,9 +300,10 @@ across Chernarus. These are completely separate from the drivable vehicle events
 different event names, different positions, and different types (non-drivable `Land_Wreck_*_DE`
 and `StaticObj_Wreck_*_DE` props). Drivable vehicle budgets are not touched.
 
-On each server restart the CE randomly activates a subset of the available positions,
-so the world looks different each time. After 12 hours a site despawns and the CE
-fills a different position from the pool.
+Works **exactly like a helicrash** — a true lifecycle event, not a permanent fixture:
+each wreck site spawns at a random position from the pool, lives for **1 hour** (`lifetime=3600`),
+then despawns (`deletable=1`) and immediately reappears at a **new random position**. The world's
+road debris is constantly shifting — the dangerous stretch of highway changes every hour.
 
 | Event | Positions | Active | Wreck Types | Purpose |
 |-------|-----------|--------|-------------|---------|
@@ -320,18 +336,25 @@ Console/Nitrado compatible — no scripts, no mods required.
 
 ## Static World Events (in `events.xml`)
 
-These vanilla DayZ world events are included and work alongside the mod content:
+These timer-based events spawn, live out their lifecycle, despawn, then reappear at a new
+random position — exactly like a helicrash. None are permanent:
 
-| Event | What Happens |
-|-------|-------------|
-| `StaticHeliCrash` | 3 crash sites across the map, guarded by `InfectedArmy` |
-| `StaticContaminatedArea` | 2–4 dynamic contaminated zones |
-| `StaticMilitaryConvoy` | 5 convoy wreck sites, guarded by `InfectedArmy` |
-| `StaticPoliceSituation` | 5 police incident sites, guarded by `InfectedPoliceHard` |
-| `StaticTrain` | 3 train wreck sites, guarded by `InfectedIndustrial` |
-| `StaticAirplaneCrate` | 9 airplane supply crates |
+| Event | Nominal | Lifetime | What Happens |
+|-------|---------|----------|-------------|
+| `StaticZombieHorde` | **8** | 30 min | Abandoned car wreck + `InfectedCity` swarm (25–45 zombies); cycles through 118 positions |
+| `StaticHeliCrash` | **3** | 35 min | Crash site, guarded by `InfectedArmy` |
+| `StaticMilitaryConvoy` | **5** | 30 min | Convoy wreck sites, guarded by `InfectedArmy` |
+| `StaticPoliceSituation` | **5** | 30 min | Police incident sites, guarded by `InfectedPoliceHard` |
+| `StaticTrain` | **3** | 90 min | Train wreck sites, guarded by `InfectedIndustrial` |
+| `StaticAirplaneCrate` | **9** | 30 min | Airplane supply crates |
+| `StaticContaminatedArea` | 0–4 | dynamic | Dynamic contaminated zones |
+| `AccidentSite` | **15** | 1 hr | Civilian car wreck; cycles through 25 road-shoulder positions |
+| `AccidentSiteCollision` | **8** | 1 hr | Second car at ~8 collision sites; cycles through 15 positions |
+| `AccidentSiteLarge` | **4** | 1 hr | Bus/truck/firetruck wreck; cycles through 10 positions |
+| `AccidentSiteMilitary` | **4** | 1 hr | Military convoy wreck; cycles through 12 positions |
 
-These reinforce the post-apocalyptic atmosphere — crash sites, abandoned convoys, contaminated ruins.
+Every event uses `deletable=1` + `init_random=1` — they genuinely come and go during a session,
+not just on restart. The map looks different every hour.
 
 ---
 
