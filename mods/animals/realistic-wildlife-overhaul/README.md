@@ -113,6 +113,7 @@ YourServerFolder/
             ├── pig_territories.xml                ← replace
             ├── domestic_animals_territories.xml   ← replace
             ├── fox_territories.xml                ← replace
+            ├── reindeer_territories.xml           ← replace
             ├── wolf_territories.xml               ← replace
             └── bear_territories.xml               ← replace
 ```
@@ -200,6 +201,7 @@ in unpopulated areas.
 | pig_territories.xml | 1 | 84 | Water, Rest, HuntingGround |
 | domestic_animals_territories.xml | 1 | 102 | Water, Rest, Graze |
 | fox_territories.xml | 1 | 132 | Water, Rest, HuntingGround |
+| reindeer_territories.xml | 1 | 132 | Water, Rest, Graze |
 | wolf_territories.xml | 1 | 174 | Water, Rest, HuntingGround |
 | bear_territories.xml | 1 | 102 | Water, Rest, HuntingGround |
 
