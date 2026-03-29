@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- ================================================================ -->
+<!-- ATR Setup: Horde Event Spawn Positions                           -->
+<!-- Static coordinates for all 3 horde tiers across Chernarus        -->
+<!-- Each position is a real POI that makes narrative sense for       -->
+<!-- an 8-months post-outbreak apocalypse setting.                    -->
+<!--                                                                  -->
+<!-- MERGE DESTINATION: mpmissions/dayzOffline.chernarusplus/cfgeventspawns.xml -->
+<!-- Copy these three <event> blocks into your mission's cfgeventspawns.xml  -->
+<!-- Root element must be <eventposdef>                               -->
+<!--                                                                  -->
+<!-- Pairs with: events.xml for horde definitions                     -->
+<!-- Tier overview:                                                   -->
+<!--   InfectedHorde_Small  — 15 village/minor POI positions          -->
+<!--   InfectedHorde_Medium — 12 city/hospital positions              -->
+<!--   InfectedHorde_Large  — 12 military/airfield positions          -->
+<!-- ================================================================ -->
+<eventposdef>
+
+    <!-- ============================================================ -->
+    <!-- TIER 1: InfectedHorde_Small — Village Stragglers             -->
+    <!-- Small clusters at minor POIs: villages, gas stations,        -->
+    <!-- police stations. Rural infected who gathered at familiar      -->
+    <!-- gathering points when the outbreak hit.                      -->
+    <!-- ============================================================ -->
+    <event name="InfectedHorde_Small">
+        <!-- Gorka village center -->
+        <pos x="9534" z="8870" a="0"/>
+        <!-- Polana village -->
+        <pos x="10618" z="8031" a="0"/>
+        <!-- Staroye village -->
+        <pos x="10116" z="5455" a="0"/>
+        <!-- Solnichniy factory district -->
+        <pos x="13312" z="6109" a="0"/>
+        <!-- Komarovo village -->
+        <pos x="3650" z="2457" a="0"/>
+        <!-- Pavlovo village -->
+        <pos x="1720" z="3765" a="0"/>
+        <!-- Guglovo village -->
+        <pos x="8426" z="6684" a="0"/>
+        <!-- Dolina village -->
+        <pos x="11260" z="6620" a="0"/>
+        <!-- Pusta village -->
+        <pos x="9398" z="4772" a="0"/>
+        <!-- Bor village -->
+        <pos x="3254" z="4072" a="0"/>
+        <!-- Pogorevka village -->
+        <pos x="4453" z="6395" a="0"/>
+        <!-- Rogovo village -->
+        <pos x="4721" z="6822" a="0"/>
+        <!-- Pulkovo village -->
+        <pos x="4925" z="5542" a="0"/>
+        <!-- Kozlovka village -->
+        <pos x="4441" z="4684" a="0"/>
+        <!-- Drozhino village -->
+        <pos x="3388" z="4997" a="0"/>
+    </event>
+
+    <!-- ============================================================ -->
+    <!-- TIER 2: InfectedHorde_Medium — Overrun City Zones            -->
+    <!-- Medium hordes at locations where people gathered during the  -->
+    <!-- outbreak: hospitals, city centers, supermarkets.             -->
+    <!-- Contested zones — valuable loot nearby but serious presence. -->
+    <!-- ============================================================ -->
+    <event name="InfectedHorde_Medium">
+        <!-- Chernogorsk hospital — where the sick came and never left -->
+        <pos x="6682" z="2451" a="0"/>
+        <!-- Elektrozavodsk hospital -->
+        <pos x="10457" z="2327" a="0"/>
+        <!-- Novodmitrovsk hospital -->
+        <pos x="11478" z="14346" a="0"/>
+        <!-- Severograd hospital -->
+        <pos x="8347" z="12776" a="0"/>
+        <!-- Berezino center — coastal town overrun early -->
+        <pos x="12386" z="9578" a="0"/>
+        <!-- Stary Sobor center — central crossroads, heavily contested -->
+        <pos x="6100" z="7803" a="0"/>
+        <!-- Novy Sobor — evacuation point that failed -->
+        <pos x="7055" z="7639" a="0"/>
+        <!-- Zelenogorsk center — western town evacuation zone -->
+        <pos x="2660" z="5207" a="0"/>
+        <!-- Svetlojarsk center — eastern coastal settlement -->
+        <pos x="14041" z="13294" a="0"/>
+        <!-- Kamyshovo — small coastal town overrun by sea refugees -->
+        <pos x="12200" z="3466" a="0"/>
+        <!-- Chernogorsk supermarket — looted then overrun -->
+        <pos x="6820" z="2566" a="0"/>
+        <!-- Elektrozavodsk factory — workers who turned on the job -->
+        <pos x="10800" z="2450" a="0"/>
+    </event>
+
+    <!-- ============================================================ -->
+    <!-- TIER 3: InfectedHorde_Large — Fallen Military Strongholds    -->
+    <!-- Massive hordes where the military made its last stand and     -->
+    <!-- failed. Endgame danger zones — solo entry is suicide.        -->
+    <!-- Bring a squad, lots of ammo, and a plan.                     -->
+    <!-- ============================================================ -->
+    <event name="InfectedHorde_Large">
+        <!-- NW Airfield (NWAF) center — the military's main staging ground -->
+        <pos x="4642" z="10247" a="0"/>
+        <!-- NW Airfield south barracks — soldiers who never evacuated -->
+        <pos x="4406" z="9820" a="0"/>
+        <!-- NW Airfield north tents — overflow camp that fell -->
+        <pos x="4846" z="10512" a="0"/>
+        <!-- Tisy Military Base — northern last stand compound -->
+        <pos x="1708" z="14672" a="0"/>
+        <!-- Tisy Military tents — forward operating base, overrun -->
+        <pos x="1530" z="14435" a="0"/>
+        <!-- Balota Airfield — southern military strip, fell early -->
+        <pos x="4784" z="2556" a="0"/>
+        <!-- Myshkino military tents — inland army encampment -->
+        <pos x="2545" z="8376" a="0"/>
+        <!-- Vybor military base — fortified position that failed -->
+        <pos x="3858" z="8876" a="0"/>
+        <!-- NE Airfield — northeastern military installation -->
+        <pos x="12227" z="12601" a="0"/>
+        <!-- Pavlovo military base — southern defensive perimeter -->
+        <pos x="2024" z="3648" a="0"/>
+        <!-- Kamensk military — far north abandoned outpost -->
+        <pos x="12242" z="14626" a="0"/>
+        <!-- Zeleno military — western garrison, communications hub -->
+        <pos x="2818" z="5302" a="0"/>
+    </event>
+
+</eventposdef>
