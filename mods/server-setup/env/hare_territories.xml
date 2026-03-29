@@ -299,5 +299,2251 @@
         <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="14200.00" z="7900.00" r="600"/>
         <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="13800.00" z="8300.00" r="600"/>
 
+
+        <!-- === SOUTH COAST HARE COVERAGE === -->
+        <!-- South coast west - hares at 500/2300 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="500.00" z="2300.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="550.00" z="2350.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="400.00" z="2300.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="500.00" z="2500.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="700.00" z="2200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="300.00" z="2600.00" r="600"/>
+
+        <!-- South coast west - hares at 1500/2300 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="1500.00" z="2300.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="1550.00" z="2350.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="1400.00" z="2300.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="1500.00" z="2500.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="1700.00" z="2200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="1300.00" z="2600.00" r="600"/>
+
+        <!-- South coast west - hares at 2500/2300 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="2500.00" z="2300.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="2550.00" z="2350.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="2400.00" z="2300.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="2500.00" z="2500.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="2700.00" z="2200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="2300.00" z="2600.00" r="600"/>
+
+        <!-- South coast west - hares at 3500/2300 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="3500.00" z="2300.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="3550.00" z="2350.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="3400.00" z="2300.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="3500.00" z="2500.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="3700.00" z="2200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="3300.00" z="2600.00" r="600"/>
+
+        <!-- South coast west - hares at 4500/2300 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="4500.00" z="2300.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="4550.00" z="2350.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="4400.00" z="2300.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="4500.00" z="2500.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="4700.00" z="2200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="4300.00" z="2600.00" r="600"/>
+
+        <!-- South coast west - hares at 5500/2300 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="5500.00" z="2300.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="5550.00" z="2350.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="5400.00" z="2300.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="5500.00" z="2500.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="5700.00" z="2200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="5300.00" z="2600.00" r="600"/>
+
+        <!-- South coast west - hares at 6500/2300 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="6500.00" z="2300.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="6550.00" z="2350.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="6400.00" z="2300.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="6500.00" z="2500.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="6700.00" z="2200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="6300.00" z="2600.00" r="600"/>
+
+        <!-- South coast west - hares at 7500/2300 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="7500.00" z="2300.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="7550.00" z="2350.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="7400.00" z="2300.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="7500.00" z="2500.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="7700.00" z="2200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="7300.00" z="2600.00" r="600"/>
+
+        <!-- South coast west - hares at 8500/2300 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="8500.00" z="2300.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="8550.00" z="2350.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="8400.00" z="2300.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="8500.00" z="2500.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="8700.00" z="2200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="8300.00" z="2600.00" r="600"/>
+
+        <!-- South coast west - hares at 9500/2300 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="9500.00" z="2300.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="9550.00" z="2350.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="9400.00" z="2300.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="9500.00" z="2500.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="9700.00" z="2200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="9300.00" z="2600.00" r="600"/>
+
+        <!-- South coast west - hares at 10500/2300 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="10500.00" z="2300.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="10550.00" z="2350.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="10400.00" z="2300.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="10500.00" z="2500.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="10700.00" z="2200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="10300.00" z="2600.00" r="600"/>
+
+        <!-- South coast west - hares at 11500/2300 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="11500.00" z="2300.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="11550.00" z="2350.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="11400.00" z="2300.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="11500.00" z="2500.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="11700.00" z="2200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="11300.00" z="2600.00" r="600"/>
+
+        <!-- South coast west - hares at 12500/2300 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="12500.00" z="2300.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="12550.00" z="2350.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="12400.00" z="2300.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="12500.00" z="2500.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="12700.00" z="2200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="12300.00" z="2600.00" r="600"/>
+
+        <!-- South coast west - hares at 13500/2300 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="13500.00" z="2300.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="13550.00" z="2350.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="13400.00" z="2300.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="13500.00" z="2500.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="13700.00" z="2200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="13300.00" z="2600.00" r="600"/>
+
+        <!-- South coast west - hares at 14500/2300 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="14500.00" z="2300.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="14550.00" z="2350.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="14400.00" z="2300.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="14500.00" z="2500.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="14700.00" z="2200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="14300.00" z="2600.00" r="600"/>
+
+        <!-- South coast central - hares at 500/2500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="500.00" z="2500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="550.00" z="2550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="400.00" z="2500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="500.00" z="2700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="700.00" z="2400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="300.00" z="2800.00" r="600"/>
+
+        <!-- South coast central - hares at 1500/2500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="1500.00" z="2500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="1550.00" z="2550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="1400.00" z="2500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="1500.00" z="2700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="1700.00" z="2400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="1300.00" z="2800.00" r="600"/>
+
+        <!-- South coast central - hares at 2500/2500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="2500.00" z="2500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="2550.00" z="2550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="2400.00" z="2500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="2500.00" z="2700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="2700.00" z="2400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="2300.00" z="2800.00" r="600"/>
+
+        <!-- South coast central - hares at 3500/2500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="3500.00" z="2500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="3550.00" z="2550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="3400.00" z="2500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="3500.00" z="2700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="3700.00" z="2400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="3300.00" z="2800.00" r="600"/>
+
+        <!-- South coast central - hares at 4500/2500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="4500.00" z="2500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="4550.00" z="2550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="4400.00" z="2500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="4500.00" z="2700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="4700.00" z="2400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="4300.00" z="2800.00" r="600"/>
+
+        <!-- South coast central - hares at 5500/2500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="5500.00" z="2500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="5550.00" z="2550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="5400.00" z="2500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="5500.00" z="2700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="5700.00" z="2400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="5300.00" z="2800.00" r="600"/>
+
+        <!-- South coast central - hares at 6500/2500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="6500.00" z="2500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="6550.00" z="2550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="6400.00" z="2500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="6500.00" z="2700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="6700.00" z="2400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="6300.00" z="2800.00" r="600"/>
+
+        <!-- South coast central - hares at 7500/2500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="7500.00" z="2500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="7550.00" z="2550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="7400.00" z="2500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="7500.00" z="2700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="7700.00" z="2400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="7300.00" z="2800.00" r="600"/>
+
+        <!-- South coast central - hares at 8500/2500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="8500.00" z="2500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="8550.00" z="2550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="8400.00" z="2500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="8500.00" z="2700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="8700.00" z="2400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="8300.00" z="2800.00" r="600"/>
+
+        <!-- South coast central - hares at 9500/2500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="9500.00" z="2500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="9550.00" z="2550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="9400.00" z="2500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="9500.00" z="2700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="9700.00" z="2400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="9300.00" z="2800.00" r="600"/>
+
+        <!-- South coast central - hares at 10500/2500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="10500.00" z="2500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="10550.00" z="2550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="10400.00" z="2500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="10500.00" z="2700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="10700.00" z="2400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="10300.00" z="2800.00" r="600"/>
+
+        <!-- South coast central - hares at 11500/2500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="11500.00" z="2500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="11550.00" z="2550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="11400.00" z="2500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="11500.00" z="2700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="11700.00" z="2400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="11300.00" z="2800.00" r="600"/>
+
+        <!-- South coast central - hares at 12500/2500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="12500.00" z="2500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="12550.00" z="2550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="12400.00" z="2500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="12500.00" z="2700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="12700.00" z="2400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="12300.00" z="2800.00" r="600"/>
+
+        <!-- South coast central - hares at 13500/2500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="13500.00" z="2500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="13550.00" z="2550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="13400.00" z="2500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="13500.00" z="2700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="13700.00" z="2400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="13300.00" z="2800.00" r="600"/>
+
+        <!-- South coast central - hares at 14500/2500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="14500.00" z="2500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="14550.00" z="2550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="14400.00" z="2500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="14500.00" z="2700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="14700.00" z="2400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="14300.00" z="2800.00" r="600"/>
+
+        <!-- South coast east - hares at 500/2700 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="500.00" z="2700.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="550.00" z="2750.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="400.00" z="2700.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="500.00" z="2900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="700.00" z="2600.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="300.00" z="3000.00" r="600"/>
+
+        <!-- South coast east - hares at 1500/2700 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="1500.00" z="2700.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="1550.00" z="2750.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="1400.00" z="2700.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="1500.00" z="2900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="1700.00" z="2600.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="1300.00" z="3000.00" r="600"/>
+
+        <!-- South coast east - hares at 2500/2700 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="2500.00" z="2700.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="2550.00" z="2750.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="2400.00" z="2700.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="2500.00" z="2900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="2700.00" z="2600.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="2300.00" z="3000.00" r="600"/>
+
+        <!-- South coast east - hares at 3500/2700 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="3500.00" z="2700.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="3550.00" z="2750.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="3400.00" z="2700.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="3500.00" z="2900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="3700.00" z="2600.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="3300.00" z="3000.00" r="600"/>
+
+        <!-- South coast east - hares at 4500/2700 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="4500.00" z="2700.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="4550.00" z="2750.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="4400.00" z="2700.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="4500.00" z="2900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="4700.00" z="2600.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="4300.00" z="3000.00" r="600"/>
+
+        <!-- South coast east - hares at 5500/2700 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="5500.00" z="2700.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="5550.00" z="2750.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="5400.00" z="2700.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="5500.00" z="2900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="5700.00" z="2600.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="5300.00" z="3000.00" r="600"/>
+
+        <!-- South coast east - hares at 6500/2700 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="6500.00" z="2700.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="6550.00" z="2750.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="6400.00" z="2700.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="6500.00" z="2900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="6700.00" z="2600.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="6300.00" z="3000.00" r="600"/>
+
+        <!-- South coast east - hares at 7500/2700 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="7500.00" z="2700.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="7550.00" z="2750.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="7400.00" z="2700.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="7500.00" z="2900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="7700.00" z="2600.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="7300.00" z="3000.00" r="600"/>
+
+        <!-- South coast east - hares at 8500/2700 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="8500.00" z="2700.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="8550.00" z="2750.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="8400.00" z="2700.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="8500.00" z="2900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="8700.00" z="2600.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="8300.00" z="3000.00" r="600"/>
+
+        <!-- South coast east - hares at 9500/2700 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="9500.00" z="2700.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="9550.00" z="2750.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="9400.00" z="2700.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="9500.00" z="2900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="9700.00" z="2600.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="9300.00" z="3000.00" r="600"/>
+
+        <!-- South coast east - hares at 10500/2700 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="10500.00" z="2700.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="10550.00" z="2750.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="10400.00" z="2700.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="10500.00" z="2900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="10700.00" z="2600.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="10300.00" z="3000.00" r="600"/>
+
+        <!-- South coast east - hares at 11500/2700 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="11500.00" z="2700.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="11550.00" z="2750.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="11400.00" z="2700.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="11500.00" z="2900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="11700.00" z="2600.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="11300.00" z="3000.00" r="600"/>
+
+        <!-- South coast east - hares at 12500/2700 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="12500.00" z="2700.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="12550.00" z="2750.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="12400.00" z="2700.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="12500.00" z="2900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="12700.00" z="2600.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="12300.00" z="3000.00" r="600"/>
+
+        <!-- South coast east - hares at 13500/2700 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="13500.00" z="2700.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="13550.00" z="2750.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="13400.00" z="2700.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="13500.00" z="2900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="13700.00" z="2600.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="13300.00" z="3000.00" r="600"/>
+
+        <!-- South coast east - hares at 14500/2700 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="14500.00" z="2700.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="14550.00" z="2750.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="14400.00" z="2700.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="14500.00" z="2900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="14700.00" z="2600.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="14300.00" z="3000.00" r="600"/>
+
+        <!-- South coastal edge - hares at 500/2900 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="500.00" z="2900.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="550.00" z="2950.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="400.00" z="2900.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="500.00" z="3100.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="700.00" z="2800.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="300.00" z="3200.00" r="600"/>
+
+        <!-- South coastal edge - hares at 1500/2900 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="1500.00" z="2900.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="1550.00" z="2950.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="1400.00" z="2900.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="1500.00" z="3100.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="1700.00" z="2800.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="1300.00" z="3200.00" r="600"/>
+
+        <!-- South coastal edge - hares at 2500/2900 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="2500.00" z="2900.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="2550.00" z="2950.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="2400.00" z="2900.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="2500.00" z="3100.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="2700.00" z="2800.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="2300.00" z="3200.00" r="600"/>
+
+        <!-- South coastal edge - hares at 3500/2900 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="3500.00" z="2900.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="3550.00" z="2950.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="3400.00" z="2900.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="3500.00" z="3100.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="3700.00" z="2800.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="3300.00" z="3200.00" r="600"/>
+
+        <!-- South coastal edge - hares at 4500/2900 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="4500.00" z="2900.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="4550.00" z="2950.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="4400.00" z="2900.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="4500.00" z="3100.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="4700.00" z="2800.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="4300.00" z="3200.00" r="600"/>
+
+        <!-- South coastal edge - hares at 5500/2900 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="5500.00" z="2900.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="5550.00" z="2950.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="5400.00" z="2900.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="5500.00" z="3100.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="5700.00" z="2800.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="5300.00" z="3200.00" r="600"/>
+
+        <!-- South coastal edge - hares at 6500/2900 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="6500.00" z="2900.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="6550.00" z="2950.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="6400.00" z="2900.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="6500.00" z="3100.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="6700.00" z="2800.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="6300.00" z="3200.00" r="600"/>
+
+        <!-- South coastal edge - hares at 7500/2900 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="7500.00" z="2900.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="7550.00" z="2950.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="7400.00" z="2900.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="7500.00" z="3100.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="7700.00" z="2800.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="7300.00" z="3200.00" r="600"/>
+
+        <!-- South coastal edge - hares at 8500/2900 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="8500.00" z="2900.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="8550.00" z="2950.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="8400.00" z="2900.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="8500.00" z="3100.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="8700.00" z="2800.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="8300.00" z="3200.00" r="600"/>
+
+        <!-- South coastal edge - hares at 9500/2900 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="9500.00" z="2900.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="9550.00" z="2950.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="9400.00" z="2900.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="9500.00" z="3100.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="9700.00" z="2800.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="9300.00" z="3200.00" r="600"/>
+
+        <!-- South coastal edge - hares at 10500/2900 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="10500.00" z="2900.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="10550.00" z="2950.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="10400.00" z="2900.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="10500.00" z="3100.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="10700.00" z="2800.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="10300.00" z="3200.00" r="600"/>
+
+        <!-- South coastal edge - hares at 11500/2900 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="11500.00" z="2900.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="11550.00" z="2950.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="11400.00" z="2900.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="11500.00" z="3100.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="11700.00" z="2800.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="11300.00" z="3200.00" r="600"/>
+
+        <!-- South coastal edge - hares at 12500/2900 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="12500.00" z="2900.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="12550.00" z="2950.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="12400.00" z="2900.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="12500.00" z="3100.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="12700.00" z="2800.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="12300.00" z="3200.00" r="600"/>
+
+        <!-- South coastal edge - hares at 13500/2900 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="13500.00" z="2900.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="13550.00" z="2950.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="13400.00" z="2900.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="13500.00" z="3100.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="13700.00" z="2800.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="13300.00" z="3200.00" r="600"/>
+
+        <!-- South coastal edge - hares at 14500/2900 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="14500.00" z="2900.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="14550.00" z="2950.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="14400.00" z="2900.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="14500.00" z="3100.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="14700.00" z="2800.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="14300.00" z="3200.00" r="600"/>
+
+        <!-- === SOUTH INTERIOR HARE COVERAGE === -->
+        <!-- South interior - hares at 750/3200 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="750.00" z="3200.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="800.00" z="3250.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="650.00" z="3200.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="750.00" z="3400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="950.00" z="3100.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="550.00" z="3500.00" r="600"/>
+
+        <!-- South interior - hares at 2250/3200 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="2250.00" z="3200.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="2300.00" z="3250.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="2150.00" z="3200.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="2250.00" z="3400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="2450.00" z="3100.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="2050.00" z="3500.00" r="600"/>
+
+        <!-- South interior - hares at 3750/3200 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="3750.00" z="3200.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="3800.00" z="3250.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="3650.00" z="3200.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="3750.00" z="3400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="3950.00" z="3100.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="3550.00" z="3500.00" r="600"/>
+
+        <!-- South interior - hares at 5250/3200 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="5250.00" z="3200.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="5300.00" z="3250.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="5150.00" z="3200.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="5250.00" z="3400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="5450.00" z="3100.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="5050.00" z="3500.00" r="600"/>
+
+        <!-- South interior - hares at 6750/3200 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="6750.00" z="3200.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="6800.00" z="3250.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="6650.00" z="3200.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="6750.00" z="3400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="6950.00" z="3100.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="6550.00" z="3500.00" r="600"/>
+
+        <!-- South interior - hares at 8250/3200 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="8250.00" z="3200.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="8300.00" z="3250.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="8150.00" z="3200.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="8250.00" z="3400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="8450.00" z="3100.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="8050.00" z="3500.00" r="600"/>
+
+        <!-- South interior - hares at 9750/3200 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="9750.00" z="3200.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="9800.00" z="3250.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="9650.00" z="3200.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="9750.00" z="3400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="9950.00" z="3100.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="9550.00" z="3500.00" r="600"/>
+
+        <!-- South interior - hares at 11250/3200 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="11250.00" z="3200.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="11300.00" z="3250.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="11150.00" z="3200.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="11250.00" z="3400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="11450.00" z="3100.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="11050.00" z="3500.00" r="600"/>
+
+        <!-- South interior - hares at 12750/3200 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="12750.00" z="3200.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="12800.00" z="3250.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="12650.00" z="3200.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="12750.00" z="3400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="12950.00" z="3100.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="12550.00" z="3500.00" r="600"/>
+
+        <!-- South interior - hares at 14250/3200 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="14250.00" z="3200.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="14300.00" z="3250.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="14150.00" z="3200.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="14250.00" z="3400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="14450.00" z="3100.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="14050.00" z="3500.00" r="600"/>
+
+        <!-- South interior mid - hares at 750/3800 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="750.00" z="3800.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="800.00" z="3850.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="650.00" z="3800.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="750.00" z="4000.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="950.00" z="3700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="550.00" z="4100.00" r="600"/>
+
+        <!-- South interior mid - hares at 2250/3800 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="2250.00" z="3800.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="2300.00" z="3850.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="2150.00" z="3800.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="2250.00" z="4000.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="2450.00" z="3700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="2050.00" z="4100.00" r="600"/>
+
+        <!-- South interior mid - hares at 3750/3800 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="3750.00" z="3800.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="3800.00" z="3850.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="3650.00" z="3800.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="3750.00" z="4000.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="3950.00" z="3700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="3550.00" z="4100.00" r="600"/>
+
+        <!-- South interior mid - hares at 5250/3800 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="5250.00" z="3800.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="5300.00" z="3850.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="5150.00" z="3800.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="5250.00" z="4000.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="5450.00" z="3700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="5050.00" z="4100.00" r="600"/>
+
+        <!-- South interior mid - hares at 6750/3800 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="6750.00" z="3800.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="6800.00" z="3850.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="6650.00" z="3800.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="6750.00" z="4000.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="6950.00" z="3700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="6550.00" z="4100.00" r="600"/>
+
+        <!-- South interior mid - hares at 8250/3800 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="8250.00" z="3800.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="8300.00" z="3850.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="8150.00" z="3800.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="8250.00" z="4000.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="8450.00" z="3700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="8050.00" z="4100.00" r="600"/>
+
+        <!-- South interior mid - hares at 9750/3800 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="9750.00" z="3800.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="9800.00" z="3850.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="9650.00" z="3800.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="9750.00" z="4000.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="9950.00" z="3700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="9550.00" z="4100.00" r="600"/>
+
+        <!-- South interior mid - hares at 11250/3800 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="11250.00" z="3800.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="11300.00" z="3850.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="11150.00" z="3800.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="11250.00" z="4000.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="11450.00" z="3700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="11050.00" z="4100.00" r="600"/>
+
+        <!-- South interior mid - hares at 12750/3800 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="12750.00" z="3800.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="12800.00" z="3850.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="12650.00" z="3800.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="12750.00" z="4000.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="12950.00" z="3700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="12550.00" z="4100.00" r="600"/>
+
+        <!-- South interior mid - hares at 14250/3800 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="14250.00" z="3800.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="14300.00" z="3850.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="14150.00" z="3800.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="14250.00" z="4000.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="14450.00" z="3700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="14050.00" z="4100.00" r="600"/>
+
+        <!-- South-central west - hares at 750/4200 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="750.00" z="4200.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="800.00" z="4250.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="650.00" z="4200.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="750.00" z="4400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="950.00" z="4100.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="550.00" z="4500.00" r="600"/>
+
+        <!-- South-central west - hares at 2250/4200 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="2250.00" z="4200.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="2300.00" z="4250.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="2150.00" z="4200.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="2250.00" z="4400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="2450.00" z="4100.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="2050.00" z="4500.00" r="600"/>
+
+        <!-- South-central west - hares at 3750/4200 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="3750.00" z="4200.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="3800.00" z="4250.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="3650.00" z="4200.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="3750.00" z="4400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="3950.00" z="4100.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="3550.00" z="4500.00" r="600"/>
+
+        <!-- South-central west - hares at 5250/4200 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="5250.00" z="4200.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="5300.00" z="4250.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="5150.00" z="4200.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="5250.00" z="4400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="5450.00" z="4100.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="5050.00" z="4500.00" r="600"/>
+
+        <!-- South-central west - hares at 6750/4200 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="6750.00" z="4200.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="6800.00" z="4250.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="6650.00" z="4200.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="6750.00" z="4400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="6950.00" z="4100.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="6550.00" z="4500.00" r="600"/>
+
+        <!-- South-central west - hares at 8250/4200 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="8250.00" z="4200.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="8300.00" z="4250.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="8150.00" z="4200.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="8250.00" z="4400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="8450.00" z="4100.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="8050.00" z="4500.00" r="600"/>
+
+        <!-- South-central west - hares at 9750/4200 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="9750.00" z="4200.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="9800.00" z="4250.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="9650.00" z="4200.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="9750.00" z="4400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="9950.00" z="4100.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="9550.00" z="4500.00" r="600"/>
+
+        <!-- South-central west - hares at 11250/4200 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="11250.00" z="4200.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="11300.00" z="4250.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="11150.00" z="4200.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="11250.00" z="4400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="11450.00" z="4100.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="11050.00" z="4500.00" r="600"/>
+
+        <!-- South-central west - hares at 12750/4200 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="12750.00" z="4200.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="12800.00" z="4250.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="12650.00" z="4200.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="12750.00" z="4400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="12950.00" z="4100.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="12550.00" z="4500.00" r="600"/>
+
+        <!-- South-central west - hares at 14250/4200 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="14250.00" z="4200.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="14300.00" z="4250.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="14150.00" z="4200.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="14250.00" z="4400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="14450.00" z="4100.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="14050.00" z="4500.00" r="600"/>
+
+        <!-- South-central - hares at 750/4600 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="750.00" z="4600.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="800.00" z="4650.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="650.00" z="4600.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="750.00" z="4800.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="950.00" z="4500.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="550.00" z="4900.00" r="600"/>
+
+        <!-- South-central - hares at 2250/4600 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="2250.00" z="4600.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="2300.00" z="4650.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="2150.00" z="4600.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="2250.00" z="4800.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="2450.00" z="4500.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="2050.00" z="4900.00" r="600"/>
+
+        <!-- South-central - hares at 3750/4600 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="3750.00" z="4600.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="3800.00" z="4650.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="3650.00" z="4600.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="3750.00" z="4800.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="3950.00" z="4500.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="3550.00" z="4900.00" r="600"/>
+
+        <!-- South-central - hares at 5250/4600 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="5250.00" z="4600.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="5300.00" z="4650.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="5150.00" z="4600.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="5250.00" z="4800.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="5450.00" z="4500.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="5050.00" z="4900.00" r="600"/>
+
+        <!-- South-central - hares at 6750/4600 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="6750.00" z="4600.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="6800.00" z="4650.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="6650.00" z="4600.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="6750.00" z="4800.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="6950.00" z="4500.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="6550.00" z="4900.00" r="600"/>
+
+        <!-- South-central - hares at 8250/4600 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="8250.00" z="4600.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="8300.00" z="4650.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="8150.00" z="4600.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="8250.00" z="4800.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="8450.00" z="4500.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="8050.00" z="4900.00" r="600"/>
+
+        <!-- South-central - hares at 9750/4600 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="9750.00" z="4600.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="9800.00" z="4650.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="9650.00" z="4600.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="9750.00" z="4800.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="9950.00" z="4500.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="9550.00" z="4900.00" r="600"/>
+
+        <!-- South-central - hares at 11250/4600 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="11250.00" z="4600.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="11300.00" z="4650.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="11150.00" z="4600.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="11250.00" z="4800.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="11450.00" z="4500.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="11050.00" z="4900.00" r="600"/>
+
+        <!-- South-central - hares at 12750/4600 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="12750.00" z="4600.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="12800.00" z="4650.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="12650.00" z="4600.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="12750.00" z="4800.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="12950.00" z="4500.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="12550.00" z="4900.00" r="600"/>
+
+        <!-- South-central - hares at 14250/4600 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="14250.00" z="4600.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="14300.00" z="4650.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="14150.00" z="4600.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="14250.00" z="4800.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="14450.00" z="4500.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="14050.00" z="4900.00" r="600"/>
+
+        <!-- South-central east - hares at 750/5000 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="750.00" z="5000.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="800.00" z="5050.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="650.00" z="5000.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="750.00" z="5200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="950.00" z="4900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="550.00" z="5300.00" r="600"/>
+
+        <!-- South-central east - hares at 2250/5000 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="2250.00" z="5000.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="2300.00" z="5050.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="2150.00" z="5000.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="2250.00" z="5200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="2450.00" z="4900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="2050.00" z="5300.00" r="600"/>
+
+        <!-- South-central east - hares at 3750/5000 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="3750.00" z="5000.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="3800.00" z="5050.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="3650.00" z="5000.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="3750.00" z="5200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="3950.00" z="4900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="3550.00" z="5300.00" r="600"/>
+
+        <!-- South-central east - hares at 5250/5000 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="5250.00" z="5000.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="5300.00" z="5050.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="5150.00" z="5000.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="5250.00" z="5200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="5450.00" z="4900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="5050.00" z="5300.00" r="600"/>
+
+        <!-- South-central east - hares at 6750/5000 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="6750.00" z="5000.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="6800.00" z="5050.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="6650.00" z="5000.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="6750.00" z="5200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="6950.00" z="4900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="6550.00" z="5300.00" r="600"/>
+
+        <!-- South-central east - hares at 8250/5000 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="8250.00" z="5000.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="8300.00" z="5050.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="8150.00" z="5000.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="8250.00" z="5200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="8450.00" z="4900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="8050.00" z="5300.00" r="600"/>
+
+        <!-- South-central east - hares at 9750/5000 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="9750.00" z="5000.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="9800.00" z="5050.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="9650.00" z="5000.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="9750.00" z="5200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="9950.00" z="4900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="9550.00" z="5300.00" r="600"/>
+
+        <!-- South-central east - hares at 11250/5000 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="11250.00" z="5000.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="11300.00" z="5050.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="11150.00" z="5000.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="11250.00" z="5200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="11450.00" z="4900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="11050.00" z="5300.00" r="600"/>
+
+        <!-- South-central east - hares at 12750/5000 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="12750.00" z="5000.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="12800.00" z="5050.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="12650.00" z="5000.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="12750.00" z="5200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="12950.00" z="4900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="12550.00" z="5300.00" r="600"/>
+
+        <!-- South-central east - hares at 14250/5000 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="14250.00" z="5000.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="14300.00" z="5050.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="14150.00" z="5000.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="14250.00" z="5200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="14450.00" z="4900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="14050.00" z="5300.00" r="600"/>
+
+        <!-- === CENTRAL HARE COVERAGE === -->
+        <!-- Central south - hares at 750/5500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="750.00" z="5500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="800.00" z="5550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="650.00" z="5500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="750.00" z="5700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="950.00" z="5400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="550.00" z="5800.00" r="600"/>
+
+        <!-- Central south - hares at 2250/5500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="2250.00" z="5500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="2300.00" z="5550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="2150.00" z="5500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="2250.00" z="5700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="2450.00" z="5400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="2050.00" z="5800.00" r="600"/>
+
+        <!-- Central south - hares at 3750/5500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="3750.00" z="5500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="3800.00" z="5550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="3650.00" z="5500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="3750.00" z="5700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="3950.00" z="5400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="3550.00" z="5800.00" r="600"/>
+
+        <!-- Central south - hares at 5250/5500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="5250.00" z="5500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="5300.00" z="5550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="5150.00" z="5500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="5250.00" z="5700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="5450.00" z="5400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="5050.00" z="5800.00" r="600"/>
+
+        <!-- Central south - hares at 6750/5500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="6750.00" z="5500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="6800.00" z="5550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="6650.00" z="5500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="6750.00" z="5700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="6950.00" z="5400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="6550.00" z="5800.00" r="600"/>
+
+        <!-- Central south - hares at 8250/5500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="8250.00" z="5500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="8300.00" z="5550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="8150.00" z="5500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="8250.00" z="5700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="8450.00" z="5400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="8050.00" z="5800.00" r="600"/>
+
+        <!-- Central south - hares at 9750/5500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="9750.00" z="5500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="9800.00" z="5550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="9650.00" z="5500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="9750.00" z="5700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="9950.00" z="5400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="9550.00" z="5800.00" r="600"/>
+
+        <!-- Central south - hares at 11250/5500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="11250.00" z="5500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="11300.00" z="5550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="11150.00" z="5500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="11250.00" z="5700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="11450.00" z="5400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="11050.00" z="5800.00" r="600"/>
+
+        <!-- Central south - hares at 12750/5500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="12750.00" z="5500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="12800.00" z="5550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="12650.00" z="5500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="12750.00" z="5700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="12950.00" z="5400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="12550.00" z="5800.00" r="600"/>
+
+        <!-- Central south - hares at 14250/5500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="14250.00" z="5500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="14300.00" z="5550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="14150.00" z="5500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="14250.00" z="5700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="14450.00" z="5400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="14050.00" z="5800.00" r="600"/>
+
+        <!-- Central - hares at 750/6000 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="750.00" z="6000.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="800.00" z="6050.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="650.00" z="6000.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="750.00" z="6200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="950.00" z="5900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="550.00" z="6300.00" r="600"/>
+
+        <!-- Central - hares at 2250/6000 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="2250.00" z="6000.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="2300.00" z="6050.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="2150.00" z="6000.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="2250.00" z="6200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="2450.00" z="5900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="2050.00" z="6300.00" r="600"/>
+
+        <!-- Central - hares at 3750/6000 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="3750.00" z="6000.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="3800.00" z="6050.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="3650.00" z="6000.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="3750.00" z="6200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="3950.00" z="5900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="3550.00" z="6300.00" r="600"/>
+
+        <!-- Central - hares at 5250/6000 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="5250.00" z="6000.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="5300.00" z="6050.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="5150.00" z="6000.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="5250.00" z="6200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="5450.00" z="5900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="5050.00" z="6300.00" r="600"/>
+
+        <!-- Central - hares at 6750/6000 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="6750.00" z="6000.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="6800.00" z="6050.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="6650.00" z="6000.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="6750.00" z="6200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="6950.00" z="5900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="6550.00" z="6300.00" r="600"/>
+
+        <!-- Central - hares at 8250/6000 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="8250.00" z="6000.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="8300.00" z="6050.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="8150.00" z="6000.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="8250.00" z="6200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="8450.00" z="5900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="8050.00" z="6300.00" r="600"/>
+
+        <!-- Central - hares at 9750/6000 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="9750.00" z="6000.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="9800.00" z="6050.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="9650.00" z="6000.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="9750.00" z="6200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="9950.00" z="5900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="9550.00" z="6300.00" r="600"/>
+
+        <!-- Central - hares at 11250/6000 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="11250.00" z="6000.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="11300.00" z="6050.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="11150.00" z="6000.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="11250.00" z="6200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="11450.00" z="5900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="11050.00" z="6300.00" r="600"/>
+
+        <!-- Central - hares at 12750/6000 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="12750.00" z="6000.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="12800.00" z="6050.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="12650.00" z="6000.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="12750.00" z="6200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="12950.00" z="5900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="12550.00" z="6300.00" r="600"/>
+
+        <!-- Central - hares at 14250/6000 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="14250.00" z="6000.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="14300.00" z="6050.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="14150.00" z="6000.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="14250.00" z="6200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="14450.00" z="5900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="14050.00" z="6300.00" r="600"/>
+
+        <!-- Central mid - hares at 750/6500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="750.00" z="6500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="800.00" z="6550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="650.00" z="6500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="750.00" z="6700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="950.00" z="6400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="550.00" z="6800.00" r="600"/>
+
+        <!-- Central mid - hares at 2250/6500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="2250.00" z="6500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="2300.00" z="6550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="2150.00" z="6500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="2250.00" z="6700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="2450.00" z="6400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="2050.00" z="6800.00" r="600"/>
+
+        <!-- Central mid - hares at 3750/6500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="3750.00" z="6500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="3800.00" z="6550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="3650.00" z="6500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="3750.00" z="6700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="3950.00" z="6400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="3550.00" z="6800.00" r="600"/>
+
+        <!-- Central mid - hares at 5250/6500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="5250.00" z="6500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="5300.00" z="6550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="5150.00" z="6500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="5250.00" z="6700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="5450.00" z="6400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="5050.00" z="6800.00" r="600"/>
+
+        <!-- Central mid - hares at 6750/6500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="6750.00" z="6500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="6800.00" z="6550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="6650.00" z="6500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="6750.00" z="6700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="6950.00" z="6400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="6550.00" z="6800.00" r="600"/>
+
+        <!-- Central mid - hares at 8250/6500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="8250.00" z="6500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="8300.00" z="6550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="8150.00" z="6500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="8250.00" z="6700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="8450.00" z="6400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="8050.00" z="6800.00" r="600"/>
+
+        <!-- Central mid - hares at 9750/6500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="9750.00" z="6500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="9800.00" z="6550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="9650.00" z="6500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="9750.00" z="6700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="9950.00" z="6400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="9550.00" z="6800.00" r="600"/>
+
+        <!-- Central mid - hares at 11250/6500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="11250.00" z="6500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="11300.00" z="6550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="11150.00" z="6500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="11250.00" z="6700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="11450.00" z="6400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="11050.00" z="6800.00" r="600"/>
+
+        <!-- Central mid - hares at 12750/6500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="12750.00" z="6500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="12800.00" z="6550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="12650.00" z="6500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="12750.00" z="6700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="12950.00" z="6400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="12550.00" z="6800.00" r="600"/>
+
+        <!-- Central mid - hares at 14250/6500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="14250.00" z="6500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="14300.00" z="6550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="14150.00" z="6500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="14250.00" z="6700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="14450.00" z="6400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="14050.00" z="6800.00" r="600"/>
+
+        <!-- Central north - hares at 750/7000 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="750.00" z="7000.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="800.00" z="7050.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="650.00" z="7000.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="750.00" z="7200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="950.00" z="6900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="550.00" z="7300.00" r="600"/>
+
+        <!-- Central north - hares at 2250/7000 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="2250.00" z="7000.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="2300.00" z="7050.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="2150.00" z="7000.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="2250.00" z="7200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="2450.00" z="6900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="2050.00" z="7300.00" r="600"/>
+
+        <!-- Central north - hares at 3750/7000 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="3750.00" z="7000.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="3800.00" z="7050.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="3650.00" z="7000.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="3750.00" z="7200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="3950.00" z="6900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="3550.00" z="7300.00" r="600"/>
+
+        <!-- Central north - hares at 5250/7000 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="5250.00" z="7000.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="5300.00" z="7050.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="5150.00" z="7000.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="5250.00" z="7200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="5450.00" z="6900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="5050.00" z="7300.00" r="600"/>
+
+        <!-- Central north - hares at 6750/7000 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="6750.00" z="7000.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="6800.00" z="7050.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="6650.00" z="7000.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="6750.00" z="7200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="6950.00" z="6900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="6550.00" z="7300.00" r="600"/>
+
+        <!-- Central north - hares at 8250/7000 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="8250.00" z="7000.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="8300.00" z="7050.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="8150.00" z="7000.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="8250.00" z="7200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="8450.00" z="6900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="8050.00" z="7300.00" r="600"/>
+
+        <!-- Central north - hares at 9750/7000 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="9750.00" z="7000.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="9800.00" z="7050.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="9650.00" z="7000.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="9750.00" z="7200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="9950.00" z="6900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="9550.00" z="7300.00" r="600"/>
+
+        <!-- Central north - hares at 11250/7000 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="11250.00" z="7000.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="11300.00" z="7050.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="11150.00" z="7000.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="11250.00" z="7200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="11450.00" z="6900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="11050.00" z="7300.00" r="600"/>
+
+        <!-- Central north - hares at 12750/7000 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="12750.00" z="7000.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="12800.00" z="7050.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="12650.00" z="7000.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="12750.00" z="7200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="12950.00" z="6900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="12550.00" z="7300.00" r="600"/>
+
+        <!-- Central north - hares at 14250/7000 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="14250.00" z="7000.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="14300.00" z="7050.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="14150.00" z="7000.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="14250.00" z="7200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="14450.00" z="6900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="14050.00" z="7300.00" r="600"/>
+
+        <!-- Central north mid - hares at 750/7500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="750.00" z="7500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="800.00" z="7550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="650.00" z="7500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="750.00" z="7700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="950.00" z="7400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="550.00" z="7800.00" r="600"/>
+
+        <!-- Central north mid - hares at 2250/7500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="2250.00" z="7500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="2300.00" z="7550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="2150.00" z="7500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="2250.00" z="7700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="2450.00" z="7400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="2050.00" z="7800.00" r="600"/>
+
+        <!-- Central north mid - hares at 3750/7500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="3750.00" z="7500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="3800.00" z="7550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="3650.00" z="7500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="3750.00" z="7700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="3950.00" z="7400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="3550.00" z="7800.00" r="600"/>
+
+        <!-- Central north mid - hares at 5250/7500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="5250.00" z="7500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="5300.00" z="7550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="5150.00" z="7500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="5250.00" z="7700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="5450.00" z="7400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="5050.00" z="7800.00" r="600"/>
+
+        <!-- Central north mid - hares at 6750/7500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="6750.00" z="7500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="6800.00" z="7550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="6650.00" z="7500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="6750.00" z="7700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="6950.00" z="7400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="6550.00" z="7800.00" r="600"/>
+
+        <!-- Central north mid - hares at 8250/7500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="8250.00" z="7500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="8300.00" z="7550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="8150.00" z="7500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="8250.00" z="7700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="8450.00" z="7400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="8050.00" z="7800.00" r="600"/>
+
+        <!-- Central north mid - hares at 9750/7500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="9750.00" z="7500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="9800.00" z="7550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="9650.00" z="7500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="9750.00" z="7700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="9950.00" z="7400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="9550.00" z="7800.00" r="600"/>
+
+        <!-- Central north mid - hares at 11250/7500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="11250.00" z="7500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="11300.00" z="7550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="11150.00" z="7500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="11250.00" z="7700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="11450.00" z="7400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="11050.00" z="7800.00" r="600"/>
+
+        <!-- Central north mid - hares at 12750/7500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="12750.00" z="7500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="12800.00" z="7550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="12650.00" z="7500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="12750.00" z="7700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="12950.00" z="7400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="12550.00" z="7800.00" r="600"/>
+
+        <!-- Central north mid - hares at 14250/7500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="14250.00" z="7500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="14300.00" z="7550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="14150.00" z="7500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="14250.00" z="7700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="14450.00" z="7400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="14050.00" z="7800.00" r="600"/>
+
+        <!-- Central north far - hares at 750/8000 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="750.00" z="8000.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="800.00" z="8050.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="650.00" z="8000.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="750.00" z="8200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="950.00" z="7900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="550.00" z="8300.00" r="600"/>
+
+        <!-- Central north far - hares at 2250/8000 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="2250.00" z="8000.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="2300.00" z="8050.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="2150.00" z="8000.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="2250.00" z="8200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="2450.00" z="7900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="2050.00" z="8300.00" r="600"/>
+
+        <!-- Central north far - hares at 3750/8000 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="3750.00" z="8000.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="3800.00" z="8050.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="3650.00" z="8000.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="3750.00" z="8200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="3950.00" z="7900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="3550.00" z="8300.00" r="600"/>
+
+        <!-- Central north far - hares at 5250/8000 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="5250.00" z="8000.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="5300.00" z="8050.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="5150.00" z="8000.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="5250.00" z="8200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="5450.00" z="7900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="5050.00" z="8300.00" r="600"/>
+
+        <!-- Central north far - hares at 6750/8000 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="6750.00" z="8000.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="6800.00" z="8050.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="6650.00" z="8000.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="6750.00" z="8200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="6950.00" z="7900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="6550.00" z="8300.00" r="600"/>
+
+        <!-- Central north far - hares at 8250/8000 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="8250.00" z="8000.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="8300.00" z="8050.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="8150.00" z="8000.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="8250.00" z="8200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="8450.00" z="7900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="8050.00" z="8300.00" r="600"/>
+
+        <!-- Central north far - hares at 9750/8000 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="9750.00" z="8000.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="9800.00" z="8050.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="9650.00" z="8000.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="9750.00" z="8200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="9950.00" z="7900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="9550.00" z="8300.00" r="600"/>
+
+        <!-- Central north far - hares at 11250/8000 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="11250.00" z="8000.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="11300.00" z="8050.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="11150.00" z="8000.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="11250.00" z="8200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="11450.00" z="7900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="11050.00" z="8300.00" r="600"/>
+
+        <!-- Central north far - hares at 12750/8000 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="12750.00" z="8000.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="12800.00" z="8050.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="12650.00" z="8000.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="12750.00" z="8200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="12950.00" z="7900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="12550.00" z="8300.00" r="600"/>
+
+        <!-- Central north far - hares at 14250/8000 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="14250.00" z="8000.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="14300.00" z="8050.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="14150.00" z="8000.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="14250.00" z="8200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="14450.00" z="7900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="14050.00" z="8300.00" r="600"/>
+
+        <!-- === NORTH HARE COVERAGE === -->
+        <!-- North south - hares at 750/8500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="750.00" z="8500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="800.00" z="8550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="650.00" z="8500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="750.00" z="8700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="950.00" z="8400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="550.00" z="8800.00" r="600"/>
+
+        <!-- North south - hares at 2250/8500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="2250.00" z="8500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="2300.00" z="8550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="2150.00" z="8500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="2250.00" z="8700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="2450.00" z="8400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="2050.00" z="8800.00" r="600"/>
+
+        <!-- North south - hares at 3750/8500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="3750.00" z="8500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="3800.00" z="8550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="3650.00" z="8500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="3750.00" z="8700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="3950.00" z="8400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="3550.00" z="8800.00" r="600"/>
+
+        <!-- North south - hares at 5250/8500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="5250.00" z="8500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="5300.00" z="8550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="5150.00" z="8500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="5250.00" z="8700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="5450.00" z="8400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="5050.00" z="8800.00" r="600"/>
+
+        <!-- North south - hares at 6750/8500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="6750.00" z="8500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="6800.00" z="8550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="6650.00" z="8500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="6750.00" z="8700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="6950.00" z="8400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="6550.00" z="8800.00" r="600"/>
+
+        <!-- North south - hares at 8250/8500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="8250.00" z="8500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="8300.00" z="8550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="8150.00" z="8500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="8250.00" z="8700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="8450.00" z="8400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="8050.00" z="8800.00" r="600"/>
+
+        <!-- North south - hares at 9750/8500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="9750.00" z="8500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="9800.00" z="8550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="9650.00" z="8500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="9750.00" z="8700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="9950.00" z="8400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="9550.00" z="8800.00" r="600"/>
+
+        <!-- North south - hares at 11250/8500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="11250.00" z="8500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="11300.00" z="8550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="11150.00" z="8500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="11250.00" z="8700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="11450.00" z="8400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="11050.00" z="8800.00" r="600"/>
+
+        <!-- North south - hares at 12750/8500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="12750.00" z="8500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="12800.00" z="8550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="12650.00" z="8500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="12750.00" z="8700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="12950.00" z="8400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="12550.00" z="8800.00" r="600"/>
+
+        <!-- North south - hares at 14250/8500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="14250.00" z="8500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="14300.00" z="8550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="14150.00" z="8500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="14250.00" z="8700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="14450.00" z="8400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="14050.00" z="8800.00" r="600"/>
+
+        <!-- North central - hares at 750/9000 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="750.00" z="9000.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="800.00" z="9050.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="650.00" z="9000.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="750.00" z="9200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="950.00" z="8900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="550.00" z="9300.00" r="600"/>
+
+        <!-- North central - hares at 2250/9000 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="2250.00" z="9000.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="2300.00" z="9050.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="2150.00" z="9000.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="2250.00" z="9200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="2450.00" z="8900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="2050.00" z="9300.00" r="600"/>
+
+        <!-- North central - hares at 3750/9000 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="3750.00" z="9000.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="3800.00" z="9050.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="3650.00" z="9000.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="3750.00" z="9200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="3950.00" z="8900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="3550.00" z="9300.00" r="600"/>
+
+        <!-- North central - hares at 5250/9000 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="5250.00" z="9000.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="5300.00" z="9050.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="5150.00" z="9000.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="5250.00" z="9200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="5450.00" z="8900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="5050.00" z="9300.00" r="600"/>
+
+        <!-- North central - hares at 6750/9000 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="6750.00" z="9000.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="6800.00" z="9050.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="6650.00" z="9000.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="6750.00" z="9200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="6950.00" z="8900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="6550.00" z="9300.00" r="600"/>
+
+        <!-- North central - hares at 8250/9000 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="8250.00" z="9000.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="8300.00" z="9050.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="8150.00" z="9000.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="8250.00" z="9200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="8450.00" z="8900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="8050.00" z="9300.00" r="600"/>
+
+        <!-- North central - hares at 9750/9000 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="9750.00" z="9000.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="9800.00" z="9050.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="9650.00" z="9000.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="9750.00" z="9200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="9950.00" z="8900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="9550.00" z="9300.00" r="600"/>
+
+        <!-- North central - hares at 11250/9000 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="11250.00" z="9000.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="11300.00" z="9050.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="11150.00" z="9000.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="11250.00" z="9200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="11450.00" z="8900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="11050.00" z="9300.00" r="600"/>
+
+        <!-- North central - hares at 12750/9000 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="12750.00" z="9000.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="12800.00" z="9050.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="12650.00" z="9000.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="12750.00" z="9200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="12950.00" z="8900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="12550.00" z="9300.00" r="600"/>
+
+        <!-- North central - hares at 14250/9000 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="14250.00" z="9000.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="14300.00" z="9050.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="14150.00" z="9000.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="14250.00" z="9200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="14450.00" z="8900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="14050.00" z="9300.00" r="600"/>
+
+        <!-- North mid - hares at 750/9500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="750.00" z="9500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="800.00" z="9550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="650.00" z="9500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="750.00" z="9700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="950.00" z="9400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="550.00" z="9800.00" r="600"/>
+
+        <!-- North mid - hares at 2250/9500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="2250.00" z="9500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="2300.00" z="9550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="2150.00" z="9500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="2250.00" z="9700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="2450.00" z="9400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="2050.00" z="9800.00" r="600"/>
+
+        <!-- North mid - hares at 3750/9500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="3750.00" z="9500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="3800.00" z="9550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="3650.00" z="9500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="3750.00" z="9700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="3950.00" z="9400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="3550.00" z="9800.00" r="600"/>
+
+        <!-- North mid - hares at 5250/9500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="5250.00" z="9500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="5300.00" z="9550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="5150.00" z="9500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="5250.00" z="9700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="5450.00" z="9400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="5050.00" z="9800.00" r="600"/>
+
+        <!-- North mid - hares at 6750/9500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="6750.00" z="9500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="6800.00" z="9550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="6650.00" z="9500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="6750.00" z="9700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="6950.00" z="9400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="6550.00" z="9800.00" r="600"/>
+
+        <!-- North mid - hares at 8250/9500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="8250.00" z="9500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="8300.00" z="9550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="8150.00" z="9500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="8250.00" z="9700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="8450.00" z="9400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="8050.00" z="9800.00" r="600"/>
+
+        <!-- North mid - hares at 9750/9500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="9750.00" z="9500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="9800.00" z="9550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="9650.00" z="9500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="9750.00" z="9700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="9950.00" z="9400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="9550.00" z="9800.00" r="600"/>
+
+        <!-- North mid - hares at 11250/9500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="11250.00" z="9500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="11300.00" z="9550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="11150.00" z="9500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="11250.00" z="9700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="11450.00" z="9400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="11050.00" z="9800.00" r="600"/>
+
+        <!-- North mid - hares at 12750/9500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="12750.00" z="9500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="12800.00" z="9550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="12650.00" z="9500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="12750.00" z="9700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="12950.00" z="9400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="12550.00" z="9800.00" r="600"/>
+
+        <!-- North mid - hares at 14250/9500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="14250.00" z="9500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="14300.00" z="9550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="14150.00" z="9500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="14250.00" z="9700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="14450.00" z="9400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="14050.00" z="9800.00" r="600"/>
+
+        <!-- North - hares at 750/10000 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="750.00" z="10000.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="800.00" z="10050.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="650.00" z="10000.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="750.00" z="10200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="950.00" z="9900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="550.00" z="10300.00" r="600"/>
+
+        <!-- North - hares at 2250/10000 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="2250.00" z="10000.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="2300.00" z="10050.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="2150.00" z="10000.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="2250.00" z="10200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="2450.00" z="9900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="2050.00" z="10300.00" r="600"/>
+
+        <!-- North - hares at 3750/10000 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="3750.00" z="10000.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="3800.00" z="10050.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="3650.00" z="10000.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="3750.00" z="10200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="3950.00" z="9900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="3550.00" z="10300.00" r="600"/>
+
+        <!-- North - hares at 5250/10000 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="5250.00" z="10000.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="5300.00" z="10050.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="5150.00" z="10000.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="5250.00" z="10200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="5450.00" z="9900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="5050.00" z="10300.00" r="600"/>
+
+        <!-- North - hares at 6750/10000 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="6750.00" z="10000.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="6800.00" z="10050.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="6650.00" z="10000.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="6750.00" z="10200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="6950.00" z="9900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="6550.00" z="10300.00" r="600"/>
+
+        <!-- North - hares at 8250/10000 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="8250.00" z="10000.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="8300.00" z="10050.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="8150.00" z="10000.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="8250.00" z="10200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="8450.00" z="9900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="8050.00" z="10300.00" r="600"/>
+
+        <!-- North - hares at 9750/10000 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="9750.00" z="10000.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="9800.00" z="10050.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="9650.00" z="10000.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="9750.00" z="10200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="9950.00" z="9900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="9550.00" z="10300.00" r="600"/>
+
+        <!-- North - hares at 11250/10000 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="11250.00" z="10000.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="11300.00" z="10050.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="11150.00" z="10000.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="11250.00" z="10200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="11450.00" z="9900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="11050.00" z="10300.00" r="600"/>
+
+        <!-- North - hares at 12750/10000 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="12750.00" z="10000.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="12800.00" z="10050.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="12650.00" z="10000.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="12750.00" z="10200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="12950.00" z="9900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="12550.00" z="10300.00" r="600"/>
+
+        <!-- North - hares at 14250/10000 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="14250.00" z="10000.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="14300.00" z="10050.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="14150.00" z="10000.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="14250.00" z="10200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="14450.00" z="9900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="14050.00" z="10300.00" r="600"/>
+
+        <!-- North far - hares at 750/10500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="750.00" z="10500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="800.00" z="10550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="650.00" z="10500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="750.00" z="10700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="950.00" z="10400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="550.00" z="10800.00" r="600"/>
+
+        <!-- North far - hares at 2250/10500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="2250.00" z="10500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="2300.00" z="10550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="2150.00" z="10500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="2250.00" z="10700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="2450.00" z="10400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="2050.00" z="10800.00" r="600"/>
+
+        <!-- North far - hares at 3750/10500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="3750.00" z="10500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="3800.00" z="10550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="3650.00" z="10500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="3750.00" z="10700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="3950.00" z="10400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="3550.00" z="10800.00" r="600"/>
+
+        <!-- North far - hares at 5250/10500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="5250.00" z="10500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="5300.00" z="10550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="5150.00" z="10500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="5250.00" z="10700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="5450.00" z="10400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="5050.00" z="10800.00" r="600"/>
+
+        <!-- North far - hares at 6750/10500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="6750.00" z="10500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="6800.00" z="10550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="6650.00" z="10500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="6750.00" z="10700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="6950.00" z="10400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="6550.00" z="10800.00" r="600"/>
+
+        <!-- North far - hares at 8250/10500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="8250.00" z="10500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="8300.00" z="10550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="8150.00" z="10500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="8250.00" z="10700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="8450.00" z="10400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="8050.00" z="10800.00" r="600"/>
+
+        <!-- North far - hares at 9750/10500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="9750.00" z="10500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="9800.00" z="10550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="9650.00" z="10500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="9750.00" z="10700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="9950.00" z="10400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="9550.00" z="10800.00" r="600"/>
+
+        <!-- North far - hares at 11250/10500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="11250.00" z="10500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="11300.00" z="10550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="11150.00" z="10500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="11250.00" z="10700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="11450.00" z="10400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="11050.00" z="10800.00" r="600"/>
+
+        <!-- North far - hares at 12750/10500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="12750.00" z="10500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="12800.00" z="10550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="12650.00" z="10500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="12750.00" z="10700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="12950.00" z="10400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="12550.00" z="10800.00" r="600"/>
+
+        <!-- North far - hares at 14250/10500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="14250.00" z="10500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="14300.00" z="10550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="14150.00" z="10500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="14250.00" z="10700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="14450.00" z="10400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="14050.00" z="10800.00" r="600"/>
+
+        <!-- === FAR NORTH HARE COVERAGE === -->
+        <!-- Far north south - hares at 750/11000 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="750.00" z="11000.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="800.00" z="11050.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="650.00" z="11000.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="750.00" z="11200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="950.00" z="10900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="550.00" z="11300.00" r="600"/>
+
+        <!-- Far north south - hares at 2250/11000 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="2250.00" z="11000.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="2300.00" z="11050.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="2150.00" z="11000.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="2250.00" z="11200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="2450.00" z="10900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="2050.00" z="11300.00" r="600"/>
+
+        <!-- Far north south - hares at 3750/11000 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="3750.00" z="11000.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="3800.00" z="11050.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="3650.00" z="11000.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="3750.00" z="11200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="3950.00" z="10900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="3550.00" z="11300.00" r="600"/>
+
+        <!-- Far north south - hares at 5250/11000 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="5250.00" z="11000.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="5300.00" z="11050.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="5150.00" z="11000.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="5250.00" z="11200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="5450.00" z="10900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="5050.00" z="11300.00" r="600"/>
+
+        <!-- Far north south - hares at 6750/11000 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="6750.00" z="11000.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="6800.00" z="11050.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="6650.00" z="11000.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="6750.00" z="11200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="6950.00" z="10900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="6550.00" z="11300.00" r="600"/>
+
+        <!-- Far north south - hares at 8250/11000 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="8250.00" z="11000.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="8300.00" z="11050.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="8150.00" z="11000.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="8250.00" z="11200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="8450.00" z="10900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="8050.00" z="11300.00" r="600"/>
+
+        <!-- Far north south - hares at 9750/11000 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="9750.00" z="11000.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="9800.00" z="11050.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="9650.00" z="11000.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="9750.00" z="11200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="9950.00" z="10900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="9550.00" z="11300.00" r="600"/>
+
+        <!-- Far north south - hares at 11250/11000 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="11250.00" z="11000.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="11300.00" z="11050.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="11150.00" z="11000.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="11250.00" z="11200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="11450.00" z="10900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="11050.00" z="11300.00" r="600"/>
+
+        <!-- Far north south - hares at 12750/11000 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="12750.00" z="11000.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="12800.00" z="11050.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="12650.00" z="11000.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="12750.00" z="11200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="12950.00" z="10900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="12550.00" z="11300.00" r="600"/>
+
+        <!-- Far north south - hares at 14250/11000 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="14250.00" z="11000.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="14300.00" z="11050.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="14150.00" z="11000.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="14250.00" z="11200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="14450.00" z="10900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="14050.00" z="11300.00" r="600"/>
+
+        <!-- Far north - hares at 750/11500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="750.00" z="11500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="800.00" z="11550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="650.00" z="11500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="750.00" z="11700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="950.00" z="11400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="550.00" z="11800.00" r="600"/>
+
+        <!-- Far north - hares at 2250/11500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="2250.00" z="11500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="2300.00" z="11550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="2150.00" z="11500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="2250.00" z="11700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="2450.00" z="11400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="2050.00" z="11800.00" r="600"/>
+
+        <!-- Far north - hares at 3750/11500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="3750.00" z="11500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="3800.00" z="11550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="3650.00" z="11500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="3750.00" z="11700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="3950.00" z="11400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="3550.00" z="11800.00" r="600"/>
+
+        <!-- Far north - hares at 5250/11500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="5250.00" z="11500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="5300.00" z="11550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="5150.00" z="11500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="5250.00" z="11700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="5450.00" z="11400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="5050.00" z="11800.00" r="600"/>
+
+        <!-- Far north - hares at 6750/11500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="6750.00" z="11500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="6800.00" z="11550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="6650.00" z="11500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="6750.00" z="11700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="6950.00" z="11400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="6550.00" z="11800.00" r="600"/>
+
+        <!-- Far north - hares at 8250/11500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="8250.00" z="11500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="8300.00" z="11550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="8150.00" z="11500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="8250.00" z="11700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="8450.00" z="11400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="8050.00" z="11800.00" r="600"/>
+
+        <!-- Far north - hares at 9750/11500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="9750.00" z="11500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="9800.00" z="11550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="9650.00" z="11500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="9750.00" z="11700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="9950.00" z="11400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="9550.00" z="11800.00" r="600"/>
+
+        <!-- Far north - hares at 11250/11500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="11250.00" z="11500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="11300.00" z="11550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="11150.00" z="11500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="11250.00" z="11700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="11450.00" z="11400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="11050.00" z="11800.00" r="600"/>
+
+        <!-- Far north - hares at 12750/11500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="12750.00" z="11500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="12800.00" z="11550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="12650.00" z="11500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="12750.00" z="11700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="12950.00" z="11400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="12550.00" z="11800.00" r="600"/>
+
+        <!-- Far north - hares at 14250/11500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="14250.00" z="11500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="14300.00" z="11550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="14150.00" z="11500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="14250.00" z="11700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="14450.00" z="11400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="14050.00" z="11800.00" r="600"/>
+
+        <!-- Far north mid - hares at 750/12000 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="750.00" z="12000.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="800.00" z="12050.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="650.00" z="12000.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="750.00" z="12200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="950.00" z="11900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="550.00" z="12300.00" r="600"/>
+
+        <!-- Far north mid - hares at 2250/12000 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="2250.00" z="12000.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="2300.00" z="12050.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="2150.00" z="12000.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="2250.00" z="12200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="2450.00" z="11900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="2050.00" z="12300.00" r="600"/>
+
+        <!-- Far north mid - hares at 3750/12000 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="3750.00" z="12000.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="3800.00" z="12050.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="3650.00" z="12000.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="3750.00" z="12200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="3950.00" z="11900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="3550.00" z="12300.00" r="600"/>
+
+        <!-- Far north mid - hares at 5250/12000 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="5250.00" z="12000.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="5300.00" z="12050.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="5150.00" z="12000.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="5250.00" z="12200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="5450.00" z="11900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="5050.00" z="12300.00" r="600"/>
+
+        <!-- Far north mid - hares at 6750/12000 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="6750.00" z="12000.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="6800.00" z="12050.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="6650.00" z="12000.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="6750.00" z="12200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="6950.00" z="11900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="6550.00" z="12300.00" r="600"/>
+
+        <!-- Far north mid - hares at 8250/12000 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="8250.00" z="12000.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="8300.00" z="12050.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="8150.00" z="12000.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="8250.00" z="12200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="8450.00" z="11900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="8050.00" z="12300.00" r="600"/>
+
+        <!-- Far north mid - hares at 9750/12000 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="9750.00" z="12000.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="9800.00" z="12050.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="9650.00" z="12000.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="9750.00" z="12200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="9950.00" z="11900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="9550.00" z="12300.00" r="600"/>
+
+        <!-- Far north mid - hares at 11250/12000 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="11250.00" z="12000.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="11300.00" z="12050.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="11150.00" z="12000.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="11250.00" z="12200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="11450.00" z="11900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="11050.00" z="12300.00" r="600"/>
+
+        <!-- Far north mid - hares at 12750/12000 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="12750.00" z="12000.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="12800.00" z="12050.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="12650.00" z="12000.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="12750.00" z="12200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="12950.00" z="11900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="12550.00" z="12300.00" r="600"/>
+
+        <!-- Far north mid - hares at 14250/12000 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="14250.00" z="12000.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="14300.00" z="12050.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="14150.00" z="12000.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="14250.00" z="12200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="14450.00" z="11900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="14050.00" z="12300.00" r="600"/>
+
+        <!-- Far north central - hares at 750/12500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="750.00" z="12500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="800.00" z="12550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="650.00" z="12500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="750.00" z="12700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="950.00" z="12400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="550.00" z="12800.00" r="600"/>
+
+        <!-- Far north central - hares at 2250/12500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="2250.00" z="12500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="2300.00" z="12550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="2150.00" z="12500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="2250.00" z="12700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="2450.00" z="12400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="2050.00" z="12800.00" r="600"/>
+
+        <!-- Far north central - hares at 3750/12500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="3750.00" z="12500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="3800.00" z="12550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="3650.00" z="12500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="3750.00" z="12700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="3950.00" z="12400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="3550.00" z="12800.00" r="600"/>
+
+        <!-- Far north central - hares at 5250/12500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="5250.00" z="12500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="5300.00" z="12550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="5150.00" z="12500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="5250.00" z="12700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="5450.00" z="12400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="5050.00" z="12800.00" r="600"/>
+
+        <!-- Far north central - hares at 6750/12500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="6750.00" z="12500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="6800.00" z="12550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="6650.00" z="12500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="6750.00" z="12700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="6950.00" z="12400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="6550.00" z="12800.00" r="600"/>
+
+        <!-- Far north central - hares at 8250/12500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="8250.00" z="12500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="8300.00" z="12550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="8150.00" z="12500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="8250.00" z="12700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="8450.00" z="12400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="8050.00" z="12800.00" r="600"/>
+
+        <!-- Far north central - hares at 9750/12500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="9750.00" z="12500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="9800.00" z="12550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="9650.00" z="12500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="9750.00" z="12700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="9950.00" z="12400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="9550.00" z="12800.00" r="600"/>
+
+        <!-- Far north central - hares at 11250/12500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="11250.00" z="12500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="11300.00" z="12550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="11150.00" z="12500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="11250.00" z="12700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="11450.00" z="12400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="11050.00" z="12800.00" r="600"/>
+
+        <!-- Far north central - hares at 12750/12500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="12750.00" z="12500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="12800.00" z="12550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="12650.00" z="12500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="12750.00" z="12700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="12950.00" z="12400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="12550.00" z="12800.00" r="600"/>
+
+        <!-- Far north central - hares at 14250/12500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="14250.00" z="12500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="14300.00" z="12550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="14150.00" z="12500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="14250.00" z="12700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="14450.00" z="12400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="14050.00" z="12800.00" r="600"/>
+
+        <!-- Deep north - hares at 750/13000 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="750.00" z="13000.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="800.00" z="13050.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="650.00" z="13000.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="750.00" z="13200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="950.00" z="12900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="550.00" z="13300.00" r="600"/>
+
+        <!-- Deep north - hares at 2250/13000 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="2250.00" z="13000.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="2300.00" z="13050.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="2150.00" z="13000.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="2250.00" z="13200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="2450.00" z="12900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="2050.00" z="13300.00" r="600"/>
+
+        <!-- Deep north - hares at 3750/13000 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="3750.00" z="13000.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="3800.00" z="13050.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="3650.00" z="13000.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="3750.00" z="13200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="3950.00" z="12900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="3550.00" z="13300.00" r="600"/>
+
+        <!-- Deep north - hares at 5250/13000 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="5250.00" z="13000.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="5300.00" z="13050.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="5150.00" z="13000.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="5250.00" z="13200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="5450.00" z="12900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="5050.00" z="13300.00" r="600"/>
+
+        <!-- Deep north - hares at 6750/13000 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="6750.00" z="13000.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="6800.00" z="13050.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="6650.00" z="13000.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="6750.00" z="13200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="6950.00" z="12900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="6550.00" z="13300.00" r="600"/>
+
+        <!-- Deep north - hares at 8250/13000 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="8250.00" z="13000.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="8300.00" z="13050.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="8150.00" z="13000.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="8250.00" z="13200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="8450.00" z="12900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="8050.00" z="13300.00" r="600"/>
+
+        <!-- Deep north - hares at 9750/13000 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="9750.00" z="13000.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="9800.00" z="13050.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="9650.00" z="13000.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="9750.00" z="13200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="9950.00" z="12900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="9550.00" z="13300.00" r="600"/>
+
+        <!-- Deep north - hares at 11250/13000 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="11250.00" z="13000.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="11300.00" z="13050.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="11150.00" z="13000.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="11250.00" z="13200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="11450.00" z="12900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="11050.00" z="13300.00" r="600"/>
+
+        <!-- Deep north - hares at 12750/13000 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="12750.00" z="13000.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="12800.00" z="13050.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="12650.00" z="13000.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="12750.00" z="13200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="12950.00" z="12900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="12550.00" z="13300.00" r="600"/>
+
+        <!-- Deep north - hares at 14250/13000 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="14250.00" z="13000.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="14300.00" z="13050.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="14150.00" z="13000.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="14250.00" z="13200.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="14450.00" z="12900.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="14050.00" z="13300.00" r="600"/>
+
+        <!-- Deep north far - hares at 750/13500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="750.00" z="13500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="800.00" z="13550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="650.00" z="13500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="750.00" z="13700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="950.00" z="13400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="550.00" z="13800.00" r="600"/>
+
+        <!-- Deep north far - hares at 2250/13500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="2250.00" z="13500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="2300.00" z="13550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="2150.00" z="13500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="2250.00" z="13700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="2450.00" z="13400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="2050.00" z="13800.00" r="600"/>
+
+        <!-- Deep north far - hares at 3750/13500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="3750.00" z="13500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="3800.00" z="13550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="3650.00" z="13500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="3750.00" z="13700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="3950.00" z="13400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="3550.00" z="13800.00" r="600"/>
+
+        <!-- Deep north far - hares at 5250/13500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="5250.00" z="13500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="5300.00" z="13550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="5150.00" z="13500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="5250.00" z="13700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="5450.00" z="13400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="5050.00" z="13800.00" r="600"/>
+
+        <!-- Deep north far - hares at 6750/13500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="6750.00" z="13500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="6800.00" z="13550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="6650.00" z="13500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="6750.00" z="13700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="6950.00" z="13400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="6550.00" z="13800.00" r="600"/>
+
+        <!-- Deep north far - hares at 8250/13500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="8250.00" z="13500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="8300.00" z="13550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="8150.00" z="13500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="8250.00" z="13700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="8450.00" z="13400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="8050.00" z="13800.00" r="600"/>
+
+        <!-- Deep north far - hares at 9750/13500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="9750.00" z="13500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="9800.00" z="13550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="9650.00" z="13500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="9750.00" z="13700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="9950.00" z="13400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="9550.00" z="13800.00" r="600"/>
+
+        <!-- Deep north far - hares at 11250/13500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="11250.00" z="13500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="11300.00" z="13550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="11150.00" z="13500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="11250.00" z="13700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="11450.00" z="13400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="11050.00" z="13800.00" r="600"/>
+
+        <!-- Deep north far - hares at 12750/13500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="12750.00" z="13500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="12800.00" z="13550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="12650.00" z="13500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="12750.00" z="13700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="12950.00" z="13400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="12550.00" z="13800.00" r="600"/>
+
+        <!-- Deep north far - hares at 14250/13500 -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="14250.00" z="13500.00" r="150"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="14300.00" z="13550.00" r="300"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="14150.00" z="13500.00" r="300"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="14250.00" z="13700.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="14450.00" z="13400.00" r="600"/>
+        <zone name="Graze" smin="0" smax="0" dmin="4" dmax="9" x="14050.00" z="13800.00" r="600"/>
+
     </territory>
 </territory-type>

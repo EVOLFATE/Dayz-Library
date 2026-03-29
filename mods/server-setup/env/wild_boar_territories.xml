@@ -145,5 +145,175 @@
         <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="7" x="8200.00" z="13380.00" r="800"/>
         <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="7" x="7800.00" z="13850.00" r="800"/>
 
+
+        <!-- === ADDITIONAL WILD BOAR COVERAGE === -->
+        <!-- South - wild boar near Pavlovo forest floor -->
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="4" x="2000.00" z="3800.00" r="200"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="2050.00" z="3860.00" r="400"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="1900.00" z="3800.00" r="400"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="7" x="2000.00" z="4050.00" r="800"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="7" x="2200.00" z="3680.00" r="800"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="7" x="1800.00" z="4150.00" r="800"/>
+
+        <!-- South central - boars in dense wood near Gorka -->
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="4" x="3800.00" z="4000.00" r="200"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="3850.00" z="4060.00" r="400"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="3700.00" z="4000.00" r="400"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="7" x="3800.00" z="4250.00" r="800"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="7" x="4000.00" z="3880.00" r="800"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="7" x="3600.00" z="4350.00" r="800"/>
+
+        <!-- South central - Kabanino south forest boars -->
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="4" x="6500.00" z="4500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="6550.00" z="4560.00" r="400"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="6400.00" z="4500.00" r="400"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="7" x="6500.00" z="4750.00" r="800"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="7" x="6700.00" z="4380.00" r="800"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="7" x="6300.00" z="4850.00" r="800"/>
+
+        <!-- South east - forest floor boars near Novy Sobor -->
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="4" x="8500.00" z="4800.00" r="200"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="8550.00" z="4860.00" r="400"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="8400.00" z="4800.00" r="400"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="7" x="8500.00" z="5050.00" r="800"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="7" x="8700.00" z="4680.00" r="800"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="7" x="8300.00" z="5150.00" r="800"/>
+
+        <!-- South east - boars in thick eastern forest -->
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="4" x="11000.00" z="4500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="11050.00" z="4560.00" r="400"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="10900.00" z="4500.00" r="400"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="7" x="11000.00" z="4750.00" r="800"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="7" x="11200.00" z="4380.00" r="800"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="7" x="10800.00" z="4850.00" r="800"/>
+
+        <!-- South far east - forest boar territory -->
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="4" x="13500.00" z="5000.00" r="200"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="13550.00" z="5060.00" r="400"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="13400.00" z="5000.00" r="400"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="7" x="13500.00" z="5250.00" r="800"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="7" x="13700.00" z="4880.00" r="800"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="7" x="13300.00" z="5350.00" r="800"/>
+
+        <!-- South extreme east - dense forest boars -->
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="4" x="14500.00" z="4500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="14550.00" z="4560.00" r="400"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="14400.00" z="4500.00" r="400"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="7" x="14500.00" z="4750.00" r="800"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="7" x="14700.00" z="4380.00" r="800"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="7" x="14300.00" z="4850.00" r="800"/>
+
+        <!-- Central west - river forest boars near water -->
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="4" x="1500.00" z="6800.00" r="200"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="1550.00" z="6860.00" r="400"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="1400.00" z="6800.00" r="400"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="7" x="1500.00" z="7050.00" r="800"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="7" x="1700.00" z="6680.00" r="800"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="7" x="1300.00" z="7150.00" r="800"/>
+
+        <!-- Central - Dolina forest floor boars -->
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="4" x="3500.00" z="7500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="3550.00" z="7560.00" r="400"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="3400.00" z="7500.00" r="400"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="7" x="3500.00" z="7750.00" r="800"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="7" x="3700.00" z="7380.00" r="800"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="7" x="3300.00" z="7850.00" r="800"/>
+
+        <!-- Central - boar territory near Kabanino -->
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="4" x="6500.00" z="6800.00" r="200"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="6550.00" z="6860.00" r="400"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="6400.00" z="6800.00" r="400"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="7" x="6500.00" z="7050.00" r="800"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="7" x="6700.00" z="6680.00" r="800"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="7" x="6300.00" z="7150.00" r="800"/>
+
+        <!-- Central east - forest floor boars -->
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="4" x="8500.00" z="7500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="8550.00" z="7560.00" r="400"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="8400.00" z="7500.00" r="400"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="7" x="8500.00" z="7750.00" r="800"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="7" x="8700.00" z="7380.00" r="800"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="7" x="8300.00" z="7850.00" r="800"/>
+
+        <!-- Central east - wild boar wallowing area -->
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="4" x="11500.00" z="7000.00" r="200"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="11550.00" z="7060.00" r="400"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="11400.00" z="7000.00" r="400"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="7" x="11500.00" z="7250.00" r="800"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="7" x="11700.00" z="6880.00" r="800"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="7" x="11300.00" z="7350.00" r="800"/>
+
+        <!-- Central far east - remote boar territory -->
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="4" x="13800.00" z="7800.00" r="200"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="13850.00" z="7860.00" r="400"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="13700.00" z="7800.00" r="400"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="7" x="13800.00" z="8050.00" r="800"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="7" x="14000.00" z="7680.00" r="800"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="7" x="13600.00" z="8150.00" r="800"/>
+
+        <!-- North west - Vybor area boars in forest -->
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="4" x="2000.00" z="9800.00" r="200"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="2050.00" z="9860.00" r="400"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="1900.00" z="9800.00" r="400"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="7" x="2000.00" z="10050.00" r="800"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="7" x="2200.00" z="9680.00" r="800"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="7" x="1800.00" z="10150.00" r="800"/>
+
+        <!-- North - deep forest wild boar sounder -->
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="4" x="5000.00" z="10500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="5050.00" z="10560.00" r="400"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="4900.00" z="10500.00" r="400"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="7" x="5000.00" z="10750.00" r="800"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="7" x="5200.00" z="10380.00" r="800"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="7" x="4800.00" z="10850.00" r="800"/>
+
+        <!-- North east - wild boar territory -->
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="4" x="8000.00" z="10000.00" r="200"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="8050.00" z="10060.00" r="400"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="7900.00" z="10000.00" r="400"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="7" x="8000.00" z="10250.00" r="800"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="7" x="8200.00" z="9880.00" r="800"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="7" x="7800.00" z="10350.00" r="800"/>
+
+        <!-- North far east - forest boars -->
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="4" x="11000.00" z="10500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="11050.00" z="10560.00" r="400"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="10900.00" z="10500.00" r="400"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="7" x="11000.00" z="10750.00" r="800"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="7" x="11200.00" z="10380.00" r="800"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="7" x="10800.00" z="10850.00" r="800"/>
+
+        <!-- North extreme east - wild boar rooting -->
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="4" x="13000.00" z="9800.00" r="200"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="13050.00" z="9860.00" r="400"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="12900.00" z="9800.00" r="400"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="7" x="13000.00" z="10050.00" r="800"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="7" x="13200.00" z="9680.00" r="800"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="7" x="12800.00" z="10150.00" r="800"/>
+
+        <!-- Far north - deep wilderness boar territory -->
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="4" x="3500.00" z="12500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="3550.00" z="12560.00" r="400"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="3400.00" z="12500.00" r="400"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="7" x="3500.00" z="12750.00" r="800"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="7" x="3700.00" z="12380.00" r="800"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="7" x="3300.00" z="12850.00" r="800"/>
+
+        <!-- Far north central - wild boar sounder -->
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="4" x="7500.00" z="12000.00" r="200"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="7550.00" z="12060.00" r="400"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="7400.00" z="12000.00" r="400"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="7" x="7500.00" z="12250.00" r="800"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="7" x="7700.00" z="11880.00" r="800"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="7" x="7300.00" z="12350.00" r="800"/>
+
+        <!-- Far north east - boar wallowing area -->
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="4" x="11000.00" z="13000.00" r="200"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="11050.00" z="13060.00" r="400"/>
+        <zone name="Rest" smin="0" smax="1" dmin="2" dmax="5" x="10900.00" z="13000.00" r="400"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="7" x="11000.00" z="13250.00" r="800"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="7" x="11200.00" z="12880.00" r="800"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="7" x="10800.00" z="13350.00" r="800"/>
+
     </territory>
 </territory-type>

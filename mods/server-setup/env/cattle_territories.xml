@@ -145,5 +145,207 @@
         <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="11300.00" z="12350.00" r="700"/>
         <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="10700.00" z="12900.00" r="700"/>
 
+
+        <!-- === ADDITIONAL CATTLE COVERAGE === -->
+        <!-- South coast far west - feral cattle near coast -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="4" x="700.00" z="3000.00" r="200"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="770.00" z="3070.00" r="400"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="580.00" z="3000.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="700.00" z="3300.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="1000.00" z="2850.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="400.00" z="3400.00" r="700"/>
+
+        <!-- South - feral cattle at Pavlovo abandoned farm -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="4" x="2700.00" z="3800.00" r="200"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="2770.00" z="3870.00" r="400"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="2580.00" z="3800.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="2700.00" z="4100.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="3000.00" z="3650.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="2400.00" z="4200.00" r="700"/>
+
+        <!-- South central - cattle wandering abandoned fields -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="4" x="4200.00" z="3200.00" r="200"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="4270.00" z="3270.00" r="400"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="4080.00" z="3200.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="4200.00" z="3500.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="4500.00" z="3050.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="3900.00" z="3600.00" r="700"/>
+
+        <!-- South central east - Novy Sobor area pasture -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="4" x="7200.00" z="3600.00" r="200"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="7270.00" z="3670.00" r="400"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="7080.00" z="3600.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="7200.00" z="3900.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="7500.00" z="3450.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="6900.00" z="4000.00" r="700"/>
+
+        <!-- South east - feral cattle meadow -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="4" x="10200.00" z="3200.00" r="200"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="10270.00" z="3270.00" r="400"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="10080.00" z="3200.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="10200.00" z="3500.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="10500.00" z="3050.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="9900.00" z="3600.00" r="700"/>
+
+        <!-- South far east - abandoned cattle pasture -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="4" x="12800.00" z="3600.00" r="200"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="12870.00" z="3670.00" r="400"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="12680.00" z="3600.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="12800.00" z="3900.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="13100.00" z="3450.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="12500.00" z="4000.00" r="700"/>
+
+        <!-- South extreme east - coastal pasture cattle -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="4" x="14500.00" z="3800.00" r="200"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="14570.00" z="3870.00" r="400"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="14380.00" z="3800.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="14500.00" z="4100.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="14800.00" z="3650.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="14200.00" z="4200.00" r="700"/>
+
+        <!-- South-central west - cattle at old farm ruins -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="4" x="1200.00" z="5200.00" r="200"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="1270.00" z="5270.00" r="400"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="1080.00" z="5200.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="1200.00" z="5500.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="1500.00" z="5050.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="900.00" z="5600.00" r="700"/>
+
+        <!-- South-central - feral cattle herd in fields -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="4" x="3500.00" z="4800.00" r="200"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="3570.00" z="4870.00" r="400"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="3380.00" z="4800.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="3500.00" z="5100.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="3800.00" z="4650.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="3200.00" z="5200.00" r="700"/>
+
+        <!-- South-central - abandoned pasture cattle -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="4" x="6500.00" z="5200.00" r="200"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="6570.00" z="5270.00" r="400"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="6380.00" z="5200.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="6500.00" z="5500.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="6800.00" z="5050.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="6200.00" z="5600.00" r="700"/>
+
+        <!-- South-central east - cattle grazing meadow -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="4" x="9000.00" z="4800.00" r="200"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="9070.00" z="4870.00" r="400"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="8880.00" z="4800.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="9000.00" z="5100.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="9300.00" z="4650.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="8700.00" z="5200.00" r="700"/>
+
+        <!-- South-central far east - feral cattle herd -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="4" x="12000.00" z="5200.00" r="200"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="12070.00" z="5270.00" r="400"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="11880.00" z="5200.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="12000.00" z="5500.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="12300.00" z="5050.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="11700.00" z="5600.00" r="700"/>
+
+        <!-- South-central extreme east - cattle -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="4" x="14200.00" z="4800.00" r="200"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="14270.00" z="4870.00" r="400"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="14080.00" z="4800.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="14200.00" z="5100.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="14500.00" z="4650.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="13900.00" z="5200.00" r="700"/>
+
+        <!-- Central west - abandoned farm cattle -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="4" x="1000.00" z="6800.00" r="200"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="1070.00" z="6870.00" r="400"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="880.00" z="6800.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="1000.00" z="7100.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="1300.00" z="6650.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="700.00" z="7200.00" r="700"/>
+
+        <!-- Central - feral cattle herd in open field -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="4" x="3500.00" z="7200.00" r="200"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="3570.00" z="7270.00" r="400"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="3380.00" z="7200.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="3500.00" z="7500.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="3800.00" z="7050.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="3200.00" z="7600.00" r="700"/>
+
+        <!-- Central - abandoned pasture cattle -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="4" x="6500.00" z="6800.00" r="200"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="6570.00" z="6870.00" r="400"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="6380.00" z="6800.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="6500.00" z="7100.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="6800.00" z="6650.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="6200.00" z="7200.00" r="700"/>
+
+        <!-- Central east - cattle meadow -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="4" x="9500.00" z="7200.00" r="200"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="9570.00" z="7270.00" r="400"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="9380.00" z="7200.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="9500.00" z="7500.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="9800.00" z="7050.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="9200.00" z="7600.00" r="700"/>
+
+        <!-- Central far east - feral herd -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="4" x="12500.00" z="6800.00" r="200"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="12570.00" z="6870.00" r="400"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="12380.00" z="6800.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="12500.00" z="7100.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="12800.00" z="6650.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="12200.00" z="7200.00" r="700"/>
+
+        <!-- North west - feral cattle grazing -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="4" x="2000.00" z="10500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="2070.00" z="10570.00" r="400"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="1880.00" z="10500.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="2000.00" z="10800.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="2300.00" z="10350.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="1700.00" z="10900.00" r="700"/>
+
+        <!-- North - large pasture cattle herd -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="4" x="5500.00" z="10500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="5570.00" z="10570.00" r="400"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="5380.00" z="10500.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="5500.00" z="10800.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="5800.00" z="10350.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="5200.00" z="10900.00" r="700"/>
+
+        <!-- North east - feral cattle grazing -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="4" x="8500.00" z="10500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="8570.00" z="10570.00" r="400"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="8380.00" z="10500.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="8500.00" z="10800.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="8800.00" z="10350.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="8200.00" z="10900.00" r="700"/>
+
+        <!-- North far east - cattle pasture -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="4" x="12000.00" z="10500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="12070.00" z="10570.00" r="400"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="11880.00" z="10500.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="12000.00" z="10800.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="12300.00" z="10350.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="11700.00" z="10900.00" r="700"/>
+
+        <!-- Far north west - feral cattle wilderness -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="4" x="3500.00" z="13500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="3570.00" z="13570.00" r="400"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="3380.00" z="13500.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="3500.00" z="13800.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="3800.00" z="13350.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="3200.00" z="13900.00" r="700"/>
+
+        <!-- Far north central - northern cattle herd -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="4" x="7500.00" z="13500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="7570.00" z="13570.00" r="400"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="7380.00" z="13500.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="7500.00" z="13800.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="7800.00" z="13350.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="7200.00" z="13900.00" r="700"/>
+
+        <!-- Far north east - remote feral cattle -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="4" x="11500.00" z="13500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="11570.00" z="13570.00" r="400"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="11380.00" z="13500.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="11500.00" z="13800.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="11800.00" z="13350.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="11200.00" z="13900.00" r="700"/>
+
     </territory>
 </territory-type>

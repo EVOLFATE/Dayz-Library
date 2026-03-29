@@ -243,5 +243,209 @@
         <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="7300.00" z="14380.00" r="280"/>
         <zone name="HuntingGround" smin="0" smax="0" dmin="0" dmax="0" x="6800.00" z="14800.00" r="280"/>
 
+
+        <!-- === ADDITIONAL SOUTH WOLF COVERAGE === -->
+        <!-- South coast - coastal forest boundary wolves -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="4" x="6000.00" z="2600.00" r="250"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="6080.00" z="2680.00" r="500"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="5880.00" z="2600.00" r="500"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="8" x="6000.00" z="2900.00" r="1000"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="8" x="6300.00" z="2450.00" r="1000"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="8" x="5800.00" z="3000.00" r="1000"/>
+
+        <!-- South coast far east - wolf pack near forest -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="4" x="11500.00" z="3000.00" r="250"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="11580.00" z="3080.00" r="500"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="11380.00" z="3000.00" r="500"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="8" x="11500.00" z="3300.00" r="1000"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="8" x="11800.00" z="2850.00" r="1000"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="8" x="11300.00" z="3400.00" r="1000"/>
+
+        <!-- South coast extreme east - coastal wolves -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="4" x="14000.00" z="3800.00" r="250"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="14080.00" z="3880.00" r="500"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="13880.00" z="3800.00" r="500"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="8" x="14000.00" z="4100.00" r="1000"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="8" x="14300.00" z="3650.00" r="1000"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="8" x="13800.00" z="4200.00" r="1000"/>
+
+        <!-- South forest - Gorka forest edge wolves -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="4" x="6800.00" z="4500.00" r="250"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="6880.00" z="4580.00" r="500"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="6680.00" z="4500.00" r="500"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="8" x="6800.00" z="4800.00" r="1000"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="8" x="7100.00" z="4350.00" r="1000"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="8" x="6600.00" z="4900.00" r="1000"/>
+
+        <!-- South-central east - deep forest wolves -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="4" x="10000.00" z="5200.00" r="250"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="10080.00" z="5280.00" r="500"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="9880.00" z="5200.00" r="500"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="8" x="10000.00" z="5500.00" r="1000"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="8" x="10300.00" z="5050.00" r="1000"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="8" x="9800.00" z="5600.00" r="1000"/>
+
+        <!-- South far east - forest wolf pack -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="4" x="14000.00" z="5500.00" r="250"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="14080.00" z="5580.00" r="500"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="13880.00" z="5500.00" r="500"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="8" x="14000.00" z="5800.00" r="1000"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="8" x="14300.00" z="5350.00" r="1000"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="8" x="13800.00" z="5900.00" r="1000"/>
+
+        <!-- === ADDITIONAL CENTRAL WOLF COVERAGE === -->
+        <!-- Central west - Zelenogorsk forest boundary wolves -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="4" x="500.00" z="6500.00" r="250"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="580.00" z="6580.00" r="500"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="380.00" z="6500.00" r="500"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="8" x="500.00" z="6800.00" r="1000"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="8" x="800.00" z="6350.00" r="1000"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="8" x="300.00" z="6900.00" r="1000"/>
+
+        <!-- South-central - river crossing wolf pack -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="4" x="3000.00" z="6200.00" r="250"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="3080.00" z="6280.00" r="500"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="2880.00" z="6200.00" r="500"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="8" x="3000.00" z="6500.00" r="1000"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="8" x="3300.00" z="6050.00" r="1000"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="8" x="2800.00" z="6600.00" r="1000"/>
+
+        <!-- South-central - forest wolf territory -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="4" x="7500.00" z="6800.00" r="250"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="7580.00" z="6880.00" r="500"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="7380.00" z="6800.00" r="500"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="8" x="7500.00" z="7100.00" r="1000"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="8" x="7800.00" z="6650.00" r="1000"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="8" x="7300.00" z="7200.00" r="1000"/>
+
+        <!-- South-central east - deep forest wolves -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="4" x="11000.00" z="6500.00" r="250"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="11080.00" z="6580.00" r="500"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="10880.00" z="6500.00" r="500"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="8" x="11000.00" z="6800.00" r="1000"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="8" x="11300.00" z="6350.00" r="1000"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="8" x="10800.00" z="6900.00" r="1000"/>
+
+        <!-- Central - river valley wolf pack -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="4" x="3000.00" z="8200.00" r="250"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="3080.00" z="8280.00" r="500"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="2880.00" z="8200.00" r="500"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="8" x="3000.00" z="8500.00" r="1000"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="8" x="3300.00" z="8050.00" r="1000"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="8" x="2800.00" z="8600.00" r="1000"/>
+
+        <!-- Central - Kabanino south wolves -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="4" x="6200.00" z="7200.00" r="250"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="6280.00" z="7280.00" r="500"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="6080.00" z="7200.00" r="500"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="8" x="6200.00" z="7500.00" r="1000"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="8" x="6500.00" z="7050.00" r="1000"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="8" x="6000.00" z="7600.00" r="1000"/>
+
+        <!-- Central - dense forest wolf mega-pack -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="4" x="7800.00" z="8200.00" r="250"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="7880.00" z="8280.00" r="500"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="7680.00" z="8200.00" r="500"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="8" x="7800.00" z="8500.00" r="1000"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="8" x="8100.00" z="8050.00" r="1000"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="8" x="7600.00" z="8600.00" r="1000"/>
+
+        <!-- Central east - deep wilderness wolves -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="4" x="11000.00" z="8500.00" r="250"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="11080.00" z="8580.00" r="500"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="10880.00" z="8500.00" r="500"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="8" x="11000.00" z="8800.00" r="1000"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="8" x="11300.00" z="8350.00" r="1000"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="8" x="10800.00" z="8900.00" r="1000"/>
+
+        <!-- Central far east - extreme east wolves -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="4" x="13800.00" z="7000.00" r="250"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="13880.00" z="7080.00" r="500"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="13680.00" z="7000.00" r="500"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="8" x="13800.00" z="7300.00" r="1000"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="8" x="14100.00" z="6850.00" r="1000"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="8" x="13600.00" z="7400.00" r="1000"/>
+
+        <!-- === ADDITIONAL NORTH WOLF COVERAGE === -->
+        <!-- North-central far west - Vybor border wolves -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="4" x="600.00" z="9200.00" r="250"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="680.00" z="9280.00" r="500"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="480.00" z="9200.00" r="500"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="8" x="600.00" z="9500.00" r="1000"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="8" x="900.00" z="9050.00" r="1000"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="8" x="400.00" z="9600.00" r="1000"/>
+
+        <!-- North-central - deep forest wolf pack -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="4" x="5500.00" z="9800.00" r="250"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="5580.00" z="9880.00" r="500"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="5380.00" z="9800.00" r="500"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="8" x="5500.00" z="10100.00" r="1000"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="8" x="5800.00" z="9650.00" r="1000"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="8" x="5300.00" z="10200.00" r="1000"/>
+
+        <!-- North-central - large pack territory -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="4" x="7500.00" z="10200.00" r="250"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="7580.00" z="10280.00" r="500"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="7380.00" z="10200.00" r="500"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="8" x="7500.00" z="10500.00" r="1000"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="8" x="7800.00" z="10050.00" r="1000"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="8" x="7300.00" z="10600.00" r="1000"/>
+
+        <!-- North-central east - large hunting pack -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="4" x="10500.00" z="9500.00" r="250"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="10580.00" z="9580.00" r="500"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="10380.00" z="9500.00" r="500"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="8" x="10500.00" z="9800.00" r="1000"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="8" x="10800.00" z="9350.00" r="1000"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="8" x="10300.00" z="9900.00" r="1000"/>
+
+        <!-- North-central far east - remote wolves -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="4" x="14000.00" z="10500.00" r="250"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="14080.00" z="10580.00" r="500"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="13880.00" z="10500.00" r="500"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="8" x="14000.00" z="10800.00" r="1000"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="8" x="14300.00" z="10350.00" r="1000"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="8" x="13800.00" z="10900.00" r="1000"/>
+
+        <!-- Far north - deep forest wolf pack -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="4" x="6000.00" z="11500.00" r="250"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="6080.00" z="11580.00" r="500"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="5880.00" z="11500.00" r="500"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="8" x="6000.00" z="11800.00" r="1000"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="8" x="6300.00" z="11350.00" r="1000"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="8" x="5800.00" z="11900.00" r="1000"/>
+
+        <!-- Far north central - wilderness apex pack -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="4" x="9000.00" z="11800.00" r="250"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="9080.00" z="11880.00" r="500"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="8880.00" z="11800.00" r="500"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="8" x="9000.00" z="12100.00" r="1000"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="8" x="9300.00" z="11650.00" r="1000"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="8" x="8800.00" z="12200.00" r="1000"/>
+
+        <!-- Far north east - wolf territory -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="4" x="12000.00" z="11500.00" r="250"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="12080.00" z="11580.00" r="500"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="11880.00" z="11500.00" r="500"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="8" x="12000.00" z="11800.00" r="1000"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="8" x="12300.00" z="11350.00" r="1000"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="8" x="11800.00" z="11900.00" r="1000"/>
+
+        <!-- Deep north - farthest north wolf pack -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="4" x="4500.00" z="13500.00" r="250"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="4580.00" z="13580.00" r="500"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="4380.00" z="13500.00" r="500"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="8" x="4500.00" z="13800.00" r="1000"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="8" x="4800.00" z="13350.00" r="1000"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="8" x="4300.00" z="13900.00" r="1000"/>
+
+        <!-- Deep north east - extreme wilderness wolves -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="4" x="11000.00" z="13800.00" r="250"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="11080.00" z="13880.00" r="500"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="5" x="10880.00" z="13800.00" r="500"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="8" x="11000.00" z="14100.00" r="1000"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="8" x="11300.00" z="13650.00" r="1000"/>
+        <zone name="HuntingGround" smin="0" smax="0" dmin="3" dmax="8" x="10800.00" z="14200.00" r="1000"/>
+
     </territory>
 </territory-type>

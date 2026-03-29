@@ -94,4 +94,9 @@
         <file>env/bear_territories.xml</file>
     </event>
 
+    <!-- Reindeer — far north wilderness, Tisy and Kamensk area -->
+    <event name="AnimalReindeer">
+        <file>env/reindeer_territories.xml</file>
+    </event>
+
 </cfgeventspawns>
