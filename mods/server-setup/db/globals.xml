@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <variables>
-    <!-- Raise from vanilla 800 to support ~4,060 zombie nominal + horde events -->
+    <!-- Raise from vanilla 1000 to support ~4,525 zombie nominal + horde events -->
     <var name="ZombieMaxCount" type="0" value="5000"/>
     <!-- Raise from vanilla 2-10 to support 196 vehicle nominal -->
     <var name="VehicleMaxCount" type="0" value="250"/>
