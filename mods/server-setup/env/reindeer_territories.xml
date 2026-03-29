@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Reindeer Territory Definitions - Realistic Wildlife Overhaul -->
+<territory-type>
+    <!-- TERRITORY: REINDEER TERRITORIES -->
+    <!-- color=4278255360 - Reindeer inhabit the far north wilderness of Chernarus, tundra and boreal forest above the northern towns -->
+    <territory color="4278255360">
+
+        <!-- === FAR NORTH WEST === -->
+        <!-- Northwest wilderness - remote tundra near map edge -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="800.00" z="10200.00" r="200"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="900.00" z="10300.00" r="400"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="650.00" z="10200.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="800.00" z="10500.00" r="800"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="1100.00" z="10050.00" r="800"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="500.00" z="10600.00" r="800"/>
+
+        <!-- Northwest - Kabanino north ridge boreal forest -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="1800.00" z="10800.00" r="200"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="1900.00" z="10900.00" r="400"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="1650.00" z="10800.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="1800.00" z="11100.00" r="800"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="2100.00" z="10650.00" r="800"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="1500.00" z="11200.00" r="800"/>
+
+        <!-- Far northwest - deep wilderness north of map -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="1200.00" z="13500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="1300.00" z="13600.00" r="400"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="1050.00" z="13500.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="1200.00" z="13800.00" r="800"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="1500.00" z="13350.00" r="800"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="900.00" z="13900.00" r="800"/>
+
+        <!-- Far north - tundra near northern map boundary -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="2500.00" z="14000.00" r="200"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="2600.00" z="14100.00" r="400"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="2350.00" z="14000.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="2500.00" z="14300.00" r="800"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="2800.00" z="13850.00" r="800"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="2200.00" z="14400.00" r="800"/>
+
+        <!-- === NWAF NORTHERN AREA === -->
+        <!-- NWAF western perimeter - sparse tundra treeline -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="2800.00" z="11500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="2900.00" z="11600.00" r="400"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="2650.00" z="11500.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="2800.00" z="11800.00" r="800"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="3100.00" z="11350.00" r="800"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="2500.00" z="11900.00" r="800"/>
+
+        <!-- NWAF northern tundra - open boreal ground -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="3800.00" z="12000.00" r="200"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="3900.00" z="12100.00" r="400"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="3650.00" z="12000.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="3800.00" z="12300.00" r="800"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="4100.00" z="11850.00" r="800"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="3500.00" z="12400.00" r="800"/>
+
+        <!-- North central west - tundra north of NWAF -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="4000.00" z="13500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="4100.00" z="13600.00" r="400"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="3850.00" z="13500.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="4000.00" z="13800.00" r="800"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="4300.00" z="13350.00" r="800"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="3700.00" z="13900.00" r="800"/>
+
+        <!-- === SEVEROGRAD REGION === -->
+        <!-- Severograd north - boreal forest clearing -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="4800.00" z="10500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="4900.00" z="10600.00" r="400"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="4650.00" z="10500.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="4800.00" z="10800.00" r="800"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="5100.00" z="10350.00" r="800"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="4500.00" z="10900.00" r="800"/>
+
+        <!-- Gvozdno wilderness - remote north central -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="5800.00" z="11800.00" r="200"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="5900.00" z="11900.00" r="400"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="5650.00" z="11800.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="5800.00" z="12100.00" r="800"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="6100.00" z="11650.00" r="800"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="5500.00" z="12200.00" r="800"/>
+
+        <!-- North central - tundra near northern edge -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="6000.00" z="14000.00" r="200"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="6100.00" z="14100.00" r="400"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="5850.00" z="14000.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="6000.00" z="14300.00" r="800"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="6300.00" z="13850.00" r="800"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="5700.00" z="14400.00" r="800"/>
+
+        <!-- === NOVAYA PETROVKA REGION === -->
+        <!-- North forest between Gvozdno and Novaya Petrovka -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="6800.00" z="12500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="6900.00" z="12600.00" r="400"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="6650.00" z="12500.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="6800.00" z="12800.00" r="800"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="7100.00" z="12350.00" r="800"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="6500.00" z="12900.00" r="800"/>
+
+        <!-- Novaya Petrovka north - boreal wilderness -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="7800.00" z="10800.00" r="200"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="7900.00" z="10900.00" r="400"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="7650.00" z="10800.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="7800.00" z="11100.00" r="800"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="8100.00" z="10650.00" r="800"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="7500.00" z="11200.00" r="800"/>
+
+        <!-- North central east - open tundra plateau -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="8000.00" z="13500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="8100.00" z="13600.00" r="400"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="7850.00" z="13500.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="8000.00" z="13800.00" r="800"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="8300.00" z="13350.00" r="800"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="7700.00" z="13900.00" r="800"/>
+
+        <!-- === KAMENSK REGION === -->
+        <!-- Kamensk approach - north forest -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="8800.00" z="11500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="8900.00" z="11600.00" r="400"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="8650.00" z="11500.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="8800.00" z="11800.00" r="800"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="9100.00" z="11350.00" r="800"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="8500.00" z="11900.00" r="800"/>
+
+        <!-- Kamensk forest - deep boreal north -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="9800.00" z="12200.00" r="200"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="9900.00" z="12300.00" r="400"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="9650.00" z="12200.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="9800.00" z="12500.00" r="800"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="10100.00" z="12050.00" r="800"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="9500.00" z="12600.00" r="800"/>
+
+        <!-- Kamensk north wilderness - frozen plateau -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="10800.00" z="13000.00" r="200"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="10900.00" z="13100.00" r="400"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="10650.00" z="13000.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="10800.00" z="13300.00" r="800"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="11100.00" z="12850.00" r="800"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="10500.00" z="13400.00" r="800"/>
+
+        <!-- Far north east - open tundra near northern boundary -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="10000.00" z="14500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="10100.00" z="14600.00" r="400"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="9850.00" z="14500.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="10000.00" z="14800.00" r="800"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="10300.00" z="14350.00" r="800"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="9700.00" z="14900.00" r="800"/>
+
+        <!-- === FAR NORTH EAST === -->
+        <!-- Northeast wilderness - Kamensk east boreal -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="11800.00" z="13800.00" r="200"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="11900.00" z="13900.00" r="400"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="11650.00" z="13800.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="11800.00" z="14100.00" r="800"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="12100.00" z="13650.00" r="800"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="11500.00" z="14200.00" r="800"/>
+
+        <!-- Northeast tundra - remote north Chernarus -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="12800.00" z="14200.00" r="200"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="12900.00" z="14300.00" r="400"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="12650.00" z="14200.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="12800.00" z="14500.00" r="800"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="13100.00" z="14050.00" r="800"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="12500.00" z="14600.00" r="800"/>
+
+        <!-- Northeast - north forest above Tisy east -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="12000.00" z="12000.00" r="200"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="12100.00" z="12100.00" r="400"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="11850.00" z="12000.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="12000.00" z="12300.00" r="800"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="12300.00" z="11850.00" r="800"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="11700.00" z="12400.00" r="800"/>
+
+        <!-- Eastern far north - treeline above coast -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="13800.00" z="13500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="13900.00" z="13600.00" r="400"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="13650.00" z="13500.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="13800.00" z="13800.00" r="800"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="14100.00" z="13350.00" r="800"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="13500.00" z="13900.00" r="800"/>
+
+        <!-- East north - boreal slope above Olsha -->
+        <zone name="Water" smin="0" smax="0" dmin="2" dmax="5" x="14200.00" z="12000.00" r="200"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="14300.00" z="12100.00" r="400"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="14050.00" z="12000.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="14200.00" z="12300.00" r="800"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="14500.00" z="11850.00" r="800"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="13900.00" z="12400.00" r="800"/>
+
+    </territory>
+</territory-type>
