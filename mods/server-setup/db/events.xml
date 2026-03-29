@@ -49,9 +49,9 @@
         <max>120</max>
         <lifetime>3600</lifetime>
         <restock>0</restock>
-        <saferadius>200</saferadius>
+        <saferadius>50</saferadius>
         <distanceradius>0</distanceradius>
-        <cleanupradius>200</cleanupradius>
+        <cleanupradius>800</cleanupradius>
         <flags deletable="0" init_random="0" remove_damaged="1"/>
         <position>fixed</position>
         <limit>mixed</limit>
@@ -72,9 +72,9 @@
         <max>70</max>
         <lifetime>3600</lifetime>
         <restock>0</restock>
-        <saferadius>300</saferadius>
+        <saferadius>100</saferadius>
         <distanceradius>0</distanceradius>
-        <cleanupradius>200</cleanupradius>
+        <cleanupradius>800</cleanupradius>
         <flags deletable="0" init_random="0" remove_damaged="1"/>
         <position>fixed</position>
         <limit>mixed</limit>
@@ -96,9 +96,9 @@
         <max>50</max>
         <lifetime>3600</lifetime>
         <restock>0</restock>
-        <saferadius>400</saferadius>
+        <saferadius>150</saferadius>
         <distanceradius>0</distanceradius>
-        <cleanupradius>200</cleanupradius>
+        <cleanupradius>800</cleanupradius>
         <flags deletable="0" init_random="0" remove_damaged="1"/>
         <position>fixed</position>
         <limit>mixed</limit>
@@ -120,9 +120,9 @@
         <max>45</max>
         <lifetime>3600</lifetime>
         <restock>0</restock>
-        <saferadius>300</saferadius>
+        <saferadius>100</saferadius>
         <distanceradius>0</distanceradius>
-        <cleanupradius>200</cleanupradius>
+        <cleanupradius>800</cleanupradius>
         <flags deletable="0" init_random="0" remove_damaged="1"/>
         <position>fixed</position>
         <limit>mixed</limit>
@@ -143,9 +143,9 @@
         <max>90</max>
         <lifetime>3600</lifetime>
         <restock>0</restock>
-        <saferadius>150</saferadius>
+        <saferadius>50</saferadius>
         <distanceradius>0</distanceradius>
-        <cleanupradius>150</cleanupradius>
+        <cleanupradius>600</cleanupradius>
         <flags deletable="0" init_random="0" remove_damaged="1"/>
         <position>fixed</position>
         <limit>mixed</limit>
@@ -169,9 +169,9 @@
         <max>38</max>
         <lifetime>7200</lifetime>
         <restock>0</restock>
-        <saferadius>400</saferadius>
+        <saferadius>150</saferadius>
         <distanceradius>0</distanceradius>
-        <cleanupradius>200</cleanupradius>
+        <cleanupradius>800</cleanupradius>
         <flags deletable="0" init_random="0" remove_damaged="1"/>
         <position>fixed</position>
         <limit>mixed</limit>
@@ -197,9 +197,9 @@
         <max>32</max>
         <lifetime>7200</lifetime>
         <restock>0</restock>
-        <saferadius>350</saferadius>
+        <saferadius>100</saferadius>
         <distanceradius>0</distanceradius>
-        <cleanupradius>200</cleanupradius>
+        <cleanupradius>800</cleanupradius>
         <flags deletable="0" init_random="0" remove_damaged="1"/>
         <position>fixed</position>
         <limit>mixed</limit>
@@ -225,9 +225,9 @@
         <max>30</max>
         <lifetime>7200</lifetime>
         <restock>0</restock>
-        <saferadius>300</saferadius>
+        <saferadius>100</saferadius>
         <distanceradius>0</distanceradius>
-        <cleanupradius>200</cleanupradius>
+        <cleanupradius>800</cleanupradius>
         <flags deletable="0" init_random="0" remove_damaged="1"/>
         <position>fixed</position>
         <limit>mixed</limit>
@@ -248,9 +248,9 @@
         <max>38</max>
         <lifetime>7200</lifetime>
         <restock>0</restock>
-        <saferadius>300</saferadius>
+        <saferadius>100</saferadius>
         <distanceradius>0</distanceradius>
-        <cleanupradius>200</cleanupradius>
+        <cleanupradius>800</cleanupradius>
         <flags deletable="0" init_random="0" remove_damaged="1"/>
         <position>fixed</position>
         <limit>mixed</limit>
@@ -274,9 +274,9 @@
         <max>45</max>
         <lifetime>3600</lifetime>
         <restock>0</restock>
-        <saferadius>250</saferadius>
+        <saferadius>80</saferadius>
         <distanceradius>0</distanceradius>
-        <cleanupradius>200</cleanupradius>
+        <cleanupradius>800</cleanupradius>
         <flags deletable="0" init_random="0" remove_damaged="1"/>
         <position>fixed</position>
         <limit>mixed</limit>
@@ -299,9 +299,9 @@
         <max>30</max>
         <lifetime>3600</lifetime>
         <restock>0</restock>
-        <saferadius>500</saferadius>
+        <saferadius>200</saferadius>
         <distanceradius>0</distanceradius>
-        <cleanupradius>300</cleanupradius>
+        <cleanupradius>1000</cleanupradius>
         <flags deletable="0" init_random="0" remove_damaged="1"/>
         <position>fixed</position>
         <limit>mixed</limit>
@@ -324,9 +324,9 @@
         <max>12</max>
         <lifetime>3600</lifetime>
         <restock>0</restock>
-        <saferadius>600</saferadius>
+        <saferadius>250</saferadius>
         <distanceradius>0</distanceradius>
-        <cleanupradius>300</cleanupradius>
+        <cleanupradius>1000</cleanupradius>
         <flags deletable="0" init_random="0" remove_damaged="1"/>
         <position>fixed</position>
         <limit>mixed</limit>
@@ -349,9 +349,9 @@
         <max>22</max>
         <lifetime>7200</lifetime>
         <restock>0</restock>
-        <saferadius>700</saferadius>
+        <saferadius>300</saferadius>
         <distanceradius>0</distanceradius>
-        <cleanupradius>400</cleanupradius>
+        <cleanupradius>1000</cleanupradius>
         <flags deletable="0" init_random="0" remove_damaged="1"/>
         <position>fixed</position>
         <limit>mixed</limit>
@@ -370,9 +370,9 @@
     <!-- Each event lists EVERY Zmb* skin model variant to randomize  -->
     <!-- ============================================================ -->
     <event name="InfectedArmy">
-            <nominal>275</nominal>
-            <min>70</min>
-            <max>550</max>
+            <nominal>560</nominal>
+            <min>280</min>
+            <max>840</max>
             <lifetime>3</lifetime>
             <restock>0</restock>
             <saferadius>100</saferadius>
@@ -394,9 +394,9 @@
         </event>
     
     <event name="InfectedArmyHard">
-            <nominal>50</nominal>
-            <min>10</min>
-            <max>100</max>
+            <nominal>100</nominal>
+            <min>50</min>
+            <max>150</max>
             <lifetime>3</lifetime>
             <restock>0</restock>
             <saferadius>100</saferadius>
@@ -420,9 +420,9 @@
         </event>
     
     <event name="InfectedCity">
-            <nominal>400</nominal>
-            <min>100</min>
-            <max>800</max>
+            <nominal>1200</nominal>
+            <min>600</min>
+            <max>1800</max>
             <lifetime>3</lifetime>
             <restock>0</restock>
             <saferadius>100</saferadius>
@@ -480,9 +480,9 @@
         </event>
     
     <event name="InfectedCityTier1">
-            <nominal>125</nominal>
-            <min>30</min>
-            <max>250</max>
+            <nominal>240</nominal>
+            <min>120</min>
+            <max>360</max>
             <lifetime>3</lifetime>
             <restock>0</restock>
             <saferadius>100</saferadius>
@@ -509,9 +509,9 @@
         </event>
     
     <event name="InfectedFirefighter">
-            <nominal>25</nominal>
-            <min>5</min>
-            <max>75</max>
+            <nominal>50</nominal>
+            <min>25</min>
+            <max>100</max>
             <lifetime>3</lifetime>
             <restock>0</restock>
             <saferadius>100</saferadius>
@@ -528,9 +528,9 @@
         </event>
     
     <event name="InfectedIndustrial">
-            <nominal>150</nominal>
-            <min>40</min>
-            <max>300</max>
+            <nominal>380</nominal>
+            <min>190</min>
+            <max>570</max>
             <lifetime>3</lifetime>
             <restock>0</restock>
             <saferadius>100</saferadius>
@@ -572,7 +572,7 @@
     
     <event name="InfectedMedic">
             <nominal>50</nominal>
-            <min>10</min>
+            <min>25</min>
             <max>100</max>
             <lifetime>3</lifetime>
             <restock>0</restock>
@@ -677,9 +677,9 @@
         </event>
     
     <event name="InfectedPrisoner">
-            <nominal>25</nominal>
-            <min>5</min>
-            <max>75</max>
+            <nominal>100</nominal>
+            <min>50</min>
+            <max>150</max>
             <lifetime>3</lifetime>
             <restock>0</restock>
             <saferadius>100</saferadius>
@@ -695,9 +695,9 @@
         </event>
     
     <event name="InfectedReligious">
-            <nominal>25</nominal>
-            <min>5</min>
-            <max>75</max>
+            <nominal>50</nominal>
+            <min>25</min>
+            <max>100</max>
             <lifetime>3</lifetime>
             <restock>0</restock>
             <saferadius>100</saferadius>
@@ -713,9 +713,9 @@
         </event>
     
     <event name="InfectedSanta">
-            <nominal>50</nominal>
-            <min>25</min>
-            <max>250</max>
+            <nominal>100</nominal>
+            <min>50</min>
+            <max>300</max>
             <lifetime>3</lifetime>
             <restock>0</restock>
             <saferadius>100</saferadius>
@@ -731,9 +731,9 @@
         </event>
     
     <event name="InfectedSolitude">
-            <nominal>425</nominal>
-            <min>100</min>
-            <max>1050</max>
+            <nominal>1400</nominal>
+            <min>700</min>
+            <max>2100</max>
             <lifetime>3</lifetime>
             <restock>0</restock>
             <saferadius>100</saferadius>
@@ -767,9 +767,9 @@
         </event>
     
     <event name="InfectedVillage">
-            <nominal>700</nominal>
-            <min>175</min>
-            <max>1400</max>
+            <nominal>2240</nominal>
+            <min>1120</min>
+            <max>3360</max>
             <lifetime>3</lifetime>
             <restock>0</restock>
             <saferadius>100</saferadius>
@@ -808,9 +808,9 @@
         </event>
     
     <event name="InfectedVillageTier1">
-            <nominal>275</nominal>
-            <min>70</min>
-            <max>550</max>
+            <nominal>825</nominal>
+            <min>412</min>
+            <max>1240</max>
             <lifetime>3</lifetime>
             <restock>0</restock>
             <saferadius>100</saferadius>
@@ -834,9 +834,9 @@
     
 
     <event name="InfectedMummy">
-        <nominal>25</nominal>
-        <min>5</min>
-        <max>75</max>
+        <nominal>50</nominal>
+        <min>25</min>
+        <max>100</max>
         <lifetime>3</lifetime>
         <restock>0</restock>
         <saferadius>100</saferadius>
@@ -1354,9 +1354,9 @@
     <!-- Most common vehicle event — sedans and hatchbacks            -->
     <!-- ============================================================ -->
     <event name="VehicleCivilianParking">
-        <nominal>20</nominal>
-        <min>12</min>
-        <max>28</max>
+        <nominal>40</nominal>
+        <min>24</min>
+        <max>56</max>
         <lifetime>28800</lifetime>
         <restock>3600</restock>
         <saferadius>8</saferadius>
@@ -1380,9 +1380,9 @@
     <!-- Mixed types — could be anything that was driving before      -->
     <!-- ============================================================ -->
     <event name="VehicleRoadsideBreakdown">
-        <nominal>18</nominal>
-        <min>10</min>
-        <max>26</max>
+        <nominal>35</nominal>
+        <min>20</min>
+        <max>50</max>
         <lifetime>28800</lifetime>
         <restock>3600</restock>
         <saferadius>5</saferadius>
@@ -1406,9 +1406,9 @@
     <!-- Often missing fuel; sometimes has a canister nearby          -->
     <!-- ============================================================ -->
     <event name="VehicleGasStation">
-        <nominal>12</nominal>
-        <min>6</min>
-        <max>18</max>
+        <nominal>20</nominal>
+        <min>12</min>
+        <max>30</max>
         <lifetime>28800</lifetime>
         <restock>3600</restock>
         <saferadius>8</saferadius>
@@ -1432,9 +1432,9 @@
     <!-- Trucks are the dominant type here                            -->
     <!-- ============================================================ -->
     <event name="VehicleIndustrial">
-        <nominal>10</nominal>
-        <min>5</min>
-        <max>15</max>
+        <nominal>20</nominal>
+        <min>12</min>
+        <max>30</max>
         <lifetime>28800</lifetime>
         <restock>3600</restock>
         <saferadius>10</saferadius>
@@ -1456,9 +1456,9 @@
     <!-- Police variants always paired with civilian for context      -->
     <!-- ============================================================ -->
     <event name="VehiclePoliceCheckpoint">
-        <nominal>8</nominal>
-        <min>4</min>
-        <max>12</max>
+        <nominal>15</nominal>
+        <min>8</min>
+        <max>22</max>
         <lifetime>28800</lifetime>
         <restock>3600</restock>
         <saferadius>8</saferadius>
@@ -1481,9 +1481,9 @@
     <!-- Working vehicles used by farmers — broken down after outbreak -->
     <!-- ============================================================ -->
     <event name="VehicleRuralFarm">
-        <nominal>14</nominal>
-        <min>8</min>
-        <max>20</max>
+        <nominal>25</nominal>
+        <min>15</min>
+        <max>38</max>
         <lifetime>28800</lifetime>
         <restock>3600</restock>
         <saferadius>8</saferadius>
@@ -1506,9 +1506,9 @@
     <!-- Mix of vehicles that were in transit when the outbreak hit   -->
     <!-- ============================================================ -->
     <event name="VehicleHighway">
-        <nominal>16</nominal>
-        <min>10</min>
-        <max>24</max>
+        <nominal>30</nominal>
+        <min>18</min>
+        <max>45</max>
         <lifetime>28800</lifetime>
         <restock>3600</restock>
         <saferadius>5</saferadius>
@@ -1538,9 +1538,9 @@
         <max>25</max>
         <lifetime>7200</lifetime>
         <restock>0</restock>
-        <saferadius>400</saferadius>
+        <saferadius>150</saferadius>
         <distanceradius>0</distanceradius>
-        <cleanupradius>200</cleanupradius>
+        <cleanupradius>800</cleanupradius>
         <flags deletable="0" init_random="0" remove_damaged="1"/>
         <position>fixed</position>
         <limit>mixed</limit>
