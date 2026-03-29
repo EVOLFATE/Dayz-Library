@@ -7,143 +7,143 @@
 
         <!-- === SOUTH COAST === -->
         <!-- South coast west - Kamenka village outskirts -->
-        <zone name="Water" smin="0" smax="0" dmin="0" dmax="0" x="1200.00" z="2800.00" r="55"/>
-        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="1260.00" z="2860.00" r="170"/>
-        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="1100.00" z="2800.00" r="170"/>
-        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="1200.00" z="3020.00" r="190"/>
-        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="1420.00" z="2680.00" r="190"/>
-        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="1000.00" z="3050.00" r="190"/>
+        <zone name="Water" smin="0" smax="0" dmin="0" dmax="0" x="1200.00" z="2800.00" r="200"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="1260.00" z="2860.00" r="400"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="1100.00" z="2800.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="1200.00" z="3020.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="1420.00" z="2680.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="1000.00" z="3050.00" r="700"/>
 
         <!-- South coast - Elektrozavodsk outskirts -->
-        <zone name="Water" smin="0" smax="0" dmin="0" dmax="0" x="3500.00" z="2600.00" r="55"/>
-        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="3560.00" z="2660.00" r="170"/>
-        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="3400.00" z="2600.00" r="170"/>
-        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="3500.00" z="2820.00" r="190"/>
-        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="3720.00" z="2480.00" r="190"/>
-        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="3300.00" z="2850.00" r="190"/>
+        <zone name="Water" smin="0" smax="0" dmin="0" dmax="0" x="3500.00" z="2600.00" r="200"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="3560.00" z="2660.00" r="400"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="3400.00" z="2600.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="3500.00" z="2820.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="3720.00" z="2480.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="3300.00" z="2850.00" r="700"/>
 
         <!-- South coast central - village -->
-        <zone name="Water" smin="0" smax="0" dmin="0" dmax="0" x="6000.00" z="2800.00" r="55"/>
-        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="6060.00" z="2860.00" r="170"/>
-        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="5900.00" z="2800.00" r="170"/>
-        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="6000.00" z="3020.00" r="190"/>
-        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="6220.00" z="2680.00" r="190"/>
-        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="5800.00" z="3050.00" r="190"/>
+        <zone name="Water" smin="0" smax="0" dmin="0" dmax="0" x="6000.00" z="2800.00" r="200"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="6060.00" z="2860.00" r="400"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="5900.00" z="2800.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="6000.00" z="3020.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="6220.00" z="2680.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="5800.00" z="3050.00" r="700"/>
 
         <!-- South coast east - settlement -->
-        <zone name="Water" smin="0" smax="0" dmin="0" dmax="0" x="9500.00" z="3000.00" r="55"/>
-        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="9560.00" z="3060.00" r="170"/>
-        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="9400.00" z="3000.00" r="170"/>
-        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="9500.00" z="3220.00" r="190"/>
-        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="9720.00" z="2880.00" r="190"/>
-        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="9300.00" z="3250.00" r="190"/>
+        <zone name="Water" smin="0" smax="0" dmin="0" dmax="0" x="9500.00" z="3000.00" r="200"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="9560.00" z="3060.00" r="400"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="9400.00" z="3000.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="9500.00" z="3220.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="9720.00" z="2880.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="9300.00" z="3250.00" r="700"/>
 
         <!-- South coast far east - village farm -->
-        <zone name="Water" smin="0" smax="0" dmin="0" dmax="0" x="12500.00" z="2800.00" r="55"/>
-        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="12560.00" z="2860.00" r="170"/>
-        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="12400.00" z="2800.00" r="170"/>
-        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="12500.00" z="3020.00" r="190"/>
-        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="12720.00" z="2680.00" r="190"/>
-        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="12300.00" z="3050.00" r="190"/>
+        <zone name="Water" smin="0" smax="0" dmin="0" dmax="0" x="12500.00" z="2800.00" r="200"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="12560.00" z="2860.00" r="400"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="12400.00" z="2800.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="12500.00" z="3020.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="12720.00" z="2680.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="12300.00" z="3050.00" r="700"/>
 
         <!-- === SOUTH INTERIOR === -->
         <!-- South interior west - Zelenogorsk village -->
-        <zone name="Water" smin="0" smax="0" dmin="0" dmax="0" x="2000.00" z="5000.00" r="55"/>
-        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="2060.00" z="5060.00" r="170"/>
-        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="1900.00" z="5000.00" r="170"/>
-        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="2000.00" z="5220.00" r="190"/>
-        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="2220.00" z="4880.00" r="190"/>
-        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="1800.00" z="5250.00" r="190"/>
+        <zone name="Water" smin="0" smax="0" dmin="0" dmax="0" x="2000.00" z="5000.00" r="200"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="2060.00" z="5060.00" r="400"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="1900.00" z="5000.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="2000.00" z="5220.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="2220.00" z="4880.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="1800.00" z="5250.00" r="700"/>
 
         <!-- South interior - Pavlovo village -->
-        <zone name="Water" smin="0" smax="0" dmin="0" dmax="0" x="4200.00" z="5500.00" r="55"/>
-        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="4260.00" z="5560.00" r="170"/>
-        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="4100.00" z="5500.00" r="170"/>
-        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="4200.00" z="5720.00" r="190"/>
-        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="4420.00" z="5380.00" r="190"/>
-        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="4000.00" z="5750.00" r="190"/>
+        <zone name="Water" smin="0" smax="0" dmin="0" dmax="0" x="4200.00" z="5500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="4260.00" z="5560.00" r="400"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="4100.00" z="5500.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="4200.00" z="5720.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="4420.00" z="5380.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="4000.00" z="5750.00" r="700"/>
 
         <!-- South interior - Gorka village -->
-        <zone name="Water" smin="0" smax="0" dmin="0" dmax="0" x="6500.00" z="6500.00" r="55"/>
-        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="6560.00" z="6560.00" r="170"/>
-        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="6400.00" z="6500.00" r="170"/>
-        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="6500.00" z="6720.00" r="190"/>
-        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="6720.00" z="6380.00" r="190"/>
-        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="6300.00" z="6750.00" r="190"/>
+        <zone name="Water" smin="0" smax="0" dmin="0" dmax="0" x="6500.00" z="6500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="6560.00" z="6560.00" r="400"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="6400.00" z="6500.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="6500.00" z="6720.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="6720.00" z="6380.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="6300.00" z="6750.00" r="700"/>
 
         <!-- South interior east - village settlement -->
-        <zone name="Water" smin="0" smax="0" dmin="0" dmax="0" x="9000.00" z="5500.00" r="55"/>
-        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="9060.00" z="5560.00" r="170"/>
-        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="8900.00" z="5500.00" r="170"/>
-        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="9000.00" z="5720.00" r="190"/>
-        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="9220.00" z="5380.00" r="190"/>
-        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="8800.00" z="5750.00" r="190"/>
+        <zone name="Water" smin="0" smax="0" dmin="0" dmax="0" x="9000.00" z="5500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="9060.00" z="5560.00" r="400"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="8900.00" z="5500.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="9000.00" z="5720.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="9220.00" z="5380.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="8800.00" z="5750.00" r="700"/>
 
         <!-- South interior far east - village -->
-        <zone name="Water" smin="0" smax="0" dmin="0" dmax="0" x="11800.00" z="5500.00" r="55"/>
-        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="11860.00" z="5560.00" r="170"/>
-        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="11700.00" z="5500.00" r="170"/>
-        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="11800.00" z="5720.00" r="190"/>
-        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="12020.00" z="5380.00" r="190"/>
-        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="11600.00" z="5750.00" r="190"/>
+        <zone name="Water" smin="0" smax="0" dmin="0" dmax="0" x="11800.00" z="5500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="11860.00" z="5560.00" r="400"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="11700.00" z="5500.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="11800.00" z="5720.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="12020.00" z="5380.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="11600.00" z="5750.00" r="700"/>
 
         <!-- === NORTH CENTRAL === -->
         <!-- North central west - Vybor village -->
-        <zone name="Water" smin="0" smax="0" dmin="0" dmax="0" x="3000.00" z="8500.00" r="55"/>
-        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="3060.00" z="8560.00" r="170"/>
-        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="2900.00" z="8500.00" r="170"/>
-        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="3000.00" z="8720.00" r="190"/>
-        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="3220.00" z="8380.00" r="190"/>
-        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="2800.00" z="8750.00" r="190"/>
+        <zone name="Water" smin="0" smax="0" dmin="0" dmax="0" x="3000.00" z="8500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="3060.00" z="8560.00" r="400"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="2900.00" z="8500.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="3000.00" z="8720.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="3220.00" z="8380.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="2800.00" z="8750.00" r="700"/>
 
         <!-- North central - Lopatino area village -->
-        <zone name="Water" smin="0" smax="0" dmin="0" dmax="0" x="5800.00" z="9000.00" r="55"/>
-        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="5860.00" z="9060.00" r="170"/>
-        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="5700.00" z="9000.00" r="170"/>
-        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="5800.00" z="9220.00" r="190"/>
-        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="6020.00" z="8880.00" r="190"/>
-        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="5600.00" z="9250.00" r="190"/>
+        <zone name="Water" smin="0" smax="0" dmin="0" dmax="0" x="5800.00" z="9000.00" r="200"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="5860.00" z="9060.00" r="400"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="5700.00" z="9000.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="5800.00" z="9220.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="6020.00" z="8880.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="5600.00" z="9250.00" r="700"/>
 
         <!-- North central east - village near Sinistok -->
-        <zone name="Water" smin="0" smax="0" dmin="0" dmax="0" x="8500.00" z="8800.00" r="55"/>
-        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="8560.00" z="8860.00" r="170"/>
-        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="8400.00" z="8800.00" r="170"/>
-        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="8500.00" z="9020.00" r="190"/>
-        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="8720.00" z="8680.00" r="190"/>
-        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="8300.00" z="9050.00" r="190"/>
+        <zone name="Water" smin="0" smax="0" dmin="0" dmax="0" x="8500.00" z="8800.00" r="200"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="8560.00" z="8860.00" r="400"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="8400.00" z="8800.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="8500.00" z="9020.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="8720.00" z="8680.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="8300.00" z="9050.00" r="700"/>
 
         <!-- North east - far east village -->
-        <zone name="Water" smin="0" smax="0" dmin="0" dmax="0" x="11500.00" z="8800.00" r="55"/>
-        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="11560.00" z="8860.00" r="170"/>
-        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="11400.00" z="8800.00" r="170"/>
-        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="11500.00" z="9020.00" r="190"/>
-        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="11720.00" z="8680.00" r="190"/>
-        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="11300.00" z="9050.00" r="190"/>
+        <zone name="Water" smin="0" smax="0" dmin="0" dmax="0" x="11500.00" z="8800.00" r="200"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="11560.00" z="8860.00" r="400"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="11400.00" z="8800.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="11500.00" z="9020.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="11720.00" z="8680.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="11300.00" z="9050.00" r="700"/>
 
         <!-- === FAR NORTH === -->
         <!-- Far north west - Severograd village -->
-        <zone name="Water" smin="0" smax="0" dmin="0" dmax="0" x="2500.00" z="11500.00" r="55"/>
-        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="2560.00" z="11560.00" r="170"/>
-        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="2400.00" z="11500.00" r="170"/>
-        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="2500.00" z="11720.00" r="190"/>
-        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="2720.00" z="11380.00" r="190"/>
-        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="2300.00" z="11750.00" r="190"/>
+        <zone name="Water" smin="0" smax="0" dmin="0" dmax="0" x="2500.00" z="11500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="2560.00" z="11560.00" r="400"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="2400.00" z="11500.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="2500.00" z="11720.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="2720.00" z="11380.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="2300.00" z="11750.00" r="700"/>
 
         <!-- Far north central - Novodmitrovka village -->
-        <zone name="Water" smin="0" smax="0" dmin="0" dmax="0" x="6000.00" z="12500.00" r="55"/>
-        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="6060.00" z="12560.00" r="170"/>
-        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="5900.00" z="12500.00" r="170"/>
-        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="6000.00" z="12720.00" r="190"/>
-        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="6220.00" z="12380.00" r="190"/>
-        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="5800.00" z="12750.00" r="190"/>
+        <zone name="Water" smin="0" smax="0" dmin="0" dmax="0" x="6000.00" z="12500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="6060.00" z="12560.00" r="400"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="5900.00" z="12500.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="6000.00" z="12720.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="6220.00" z="12380.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="5800.00" z="12750.00" r="700"/>
 
         <!-- Far north east - Kamensk area village -->
-        <zone name="Water" smin="0" smax="0" dmin="0" dmax="0" x="10000.00" z="12000.00" r="55"/>
-        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="10060.00" z="12060.00" r="170"/>
-        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="9900.00" z="12000.00" r="170"/>
-        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="10000.00" z="12220.00" r="190"/>
-        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="10220.00" z="11880.00" r="190"/>
-        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="9800.00" z="12250.00" r="190"/>
+        <zone name="Water" smin="0" smax="0" dmin="0" dmax="0" x="10000.00" z="12000.00" r="200"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="10060.00" z="12060.00" r="400"/>
+        <zone name="Rest" smin="0" smax="0" dmin="0" dmax="0" x="9900.00" z="12000.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="10000.00" z="12220.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="10220.00" z="11880.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="0" dmax="0" x="9800.00" z="12250.00" r="700"/>
 
     </territory>
 </territory-type>
