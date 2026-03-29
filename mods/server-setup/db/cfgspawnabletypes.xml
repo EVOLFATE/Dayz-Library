@@ -8,7 +8,7 @@
 
     Merge rules applied:
       1. Full vanilla content used as base (~560+ types)
-      2. Root element changed: <spawnabletypes> -> <cfgspawnabletypes>
+      2. Root element: <spawnabletypes> (required by DayZ CE engine)
       3. 24 custom entries appended at end in clearly labeled sections
       4. 3 vanilla entries replaced by custom versions:
          CivilianSedan, OffroadHatchback, Sedan_02
@@ -26,7 +26,7 @@
     INSTALL PATH: mpmissions/dayzOffline.chernarusplus/db/cfgspawnabletypes.xml
     Replace the original file entirely.
 -->
-<cfgspawnabletypes>
+<spawnabletypes>
 	<type name="Barrel_Blue">
 		<hoarder />
 	</type>
@@ -4773,4 +4773,4 @@
 			<item name="TacticalGloves_Black" chance="0.25" />
 		</attachments>
 	</type>
-</cfgspawnabletypes>
+</spawnabletypes>
