@@ -23,22 +23,27 @@
   Weather cycles fast (5-30 min average) so players experience multiple
   dramatic shifts within a single play session.
 
-  SCHEMA REFERENCE
+  SCHEMA REFERENCE (official DayZ schema — console and PC compatible)
   overcast  = cloud cover 0.0 (clear) to 1.0 (fully overcast)
   fog       = fog density 0.0 (clear) to 1.0 (near-zero visibility)
   rain      = precipitation 0.0 (dry) to 1.0 (maximum downpour)
-  wind      = base wind settings and gust variability
+  wind      = windMagnitude (m/s) + windDirection (radians)
 
-  Each weather block supports:
-    min / max                  - absolute clamps on the value
-    changeMin / changeMax      - per-step rate-of-change limits
-    forecastChangeMin/Max      - swing size when the forecast updates
-    forecastTimeMin/Max        - seconds between forecast ticks
-    forecastChangeLimitCoef    - multiplier on how far a single forecast
-                                 update can move the value (0.0 to 1.0)
+  Each weather block:
+    <current actual="..." time="..." duration="..." />
+      - actual:   starting value
+      - time:     seconds to reach that value
+      - duration: how long to hold before next transition
+    <limits min="..." max="..." />      - absolute clamps on the value
+    <timelimits min="..." max="..." />  - seconds between transitions
+    <changelimits min="..." max="..." /> - magnitude of each transition swing
+  rain also supports:
+    <thresholds min="..." max="..." end="..." />
+      - min/max: overcast level required for rain to occur
+      - end:     seconds for rain to stop when overcast drops out of range
   ============================================================
 -->
-<weather>
+<weather reset="0" enable="1">
 
     <!--
       ══════════════════════════════════════════════
@@ -46,66 +51,43 @@
       ══════════════════════════════════════════════
       min 0.0  → allows rare crystal-clear perfect days
       max 1.0  → allows full pitch-black overcast
-      Wide forecast swing (0.0–1.0) lets the engine jump between
-      glorious sunshine and oppressive total cloud cover in a single
-      cycle.  Short forecast times keep the drama frequent.
+      Wide changelimits (0.0–1.0) let the engine jump between
+      sunshine and total cloud cover in a single transition.
+      Short timelimits keep the drama frequent (5–30 min cycles).
     -->
     <overcast>
-        <!-- Absolute range — allow everything from clear to max cloud -->
-        <min>0.0</min>
-        <max>1.0</max>
-
-        <!-- How fast overcast can change each server tick -->
-        <changeMin>0.002</changeMin>
-        <changeMax>0.012</changeMax>
-
-        <!-- How big each forecast update swing can be -->
-        <forecastChangeMin>0.0</forecastChangeMin>
-        <forecastChangeMax>1.0</forecastChangeMax>
-
-        <!-- How often the forecast updates (seconds) — short = frequent drama -->
-        <forecastTimeMin>300</forecastTimeMin>
-        <forecastTimeMax>1800</forecastTimeMax>
-
-        <!-- Allow massive overcast swings in a single forecast tick -->
-        <forecastChangeLimitCoef>0.9</forecastChangeLimitCoef>
+        <current actual="0.75" time="120" duration="300" />
+        <!-- Full range — allow everything from clear to max cloud -->
+        <limits min="0.0" max="1.0" />
+        <!-- 5–30 min cycles for frequent dramatic shifts -->
+        <timelimits min="300" max="1800" />
+        <!-- Full swing per transition — sunshine to storm in one step -->
+        <changelimits min="0.0" max="1.0" />
     </overcast>
 
     <!--
       ══════════════════════════════════════════════
       FOG — visibility impairment  ★ KEY SYSTEM ★
       ══════════════════════════════════════════════
-      This is the primary hazard driver.  Fog walls rolling in
-      from nowhere are the most disorienting and dangerous
-      condition a player can face — navigation collapses,
-      PvP ranges shrink to knife-fight distances, getting lost
-      in the wilderness becomes genuinely lethal.
+      The primary hazard driver. Fog walls rolling in from
+      nowhere collapse navigation and shrink PvP ranges to
+      knife-fight distances. Getting lost in the wilderness
+      becomes genuinely lethal.
 
       min 0.0  → zero fog during those rare perfect days
       max 1.0  → absolute near-zero visibility whiteout
-      Very short forecast times make fog unpredictable and
-      sudden.  High forecastChangeLimitCoef (1.0) allows
-      instant fog walls — clear to whiteout in one tick.
+      Very short timelimits make fog unpredictable and sudden.
+      Full changelimits allow instant fog walls — clear to
+      whiteout in a single transition.
     -->
     <fog>
+        <current actual="0.05" time="120" duration="180" />
         <!-- Full range — zero fog to absolute whiteout -->
-        <min>0.0</min>
-        <max>1.0</max>
-
-        <!-- Fast fog movement per tick — walls roll in quickly -->
-        <changeMin>0.003</changeMin>
-        <changeMax>0.018</changeMax>
-
-        <!-- Allow enormous forecast swings — clear to whiteout in one step -->
-        <forecastChangeMin>0.0</forecastChangeMin>
-        <forecastChangeMax>1.0</forecastChangeMax>
-
-        <!-- Very short forecast intervals — fog is unpredictable and sudden -->
-        <forecastTimeMin>240</forecastTimeMin>
-        <forecastTimeMax>1200</forecastTimeMax>
-
-        <!-- Max coefficient — single forecast update can flip full fog range -->
-        <forecastChangeLimitCoef>1.0</forecastChangeLimitCoef>
+        <limits min="0.0" max="1.0" />
+        <!-- 4–20 min — fog is unpredictable and sudden -->
+        <timelimits min="240" max="1200" />
+        <!-- Full swing — clear to whiteout in one transition -->
+        <changelimits min="0.0" max="1.0" />
     </fog>
 
     <!--
@@ -114,63 +96,64 @@
       ══════════════════════════════════════════════
       min 0.0  → dry periods and perfect days
       max 1.0  → maximum downpour / torrential rain
-      Short forecast times allow sudden storm onset — players
-      caught in the open have little warning before a full
-      downpour hits.  Wet gear accelerates cold stat loss.
+      Short timelimits allow sudden storm onset. Wet gear
+      accelerates cold stat loss — caught in the open is
+      genuinely dangerous. Requires overcast ≥ 0.55 to rain.
     -->
     <rain>
+        <current actual="0.0" time="60" duration="120" />
         <!-- Full range — dry to maximum downpour -->
-        <min>0.0</min>
-        <max>1.0</max>
-
-        <!-- Moderate-to-fast onset -->
-        <changeMin>0.002</changeMin>
-        <changeMax>0.015</changeMax>
-
-        <!-- Storms can swing from dry to torrential in one forecast step -->
-        <forecastChangeMin>0.0</forecastChangeMin>
-        <forecastChangeMax>1.0</forecastChangeMax>
-
-        <!-- Storms arrive and leave quickly -->
-        <forecastTimeMin>300</forecastTimeMin>
-        <forecastTimeMax>1500</forecastTimeMax>
-
-        <!-- Allow full storm onset in a single forecast tick -->
-        <forecastChangeLimitCoef>0.95</forecastChangeLimitCoef>
+        <limits min="0.0" max="1.0" />
+        <!-- 5–25 min — storms arrive and leave quickly -->
+        <timelimits min="300" max="1500" />
+        <!-- Full swing — instant torrential onset possible -->
+        <changelimits min="0.0" max="1.0" />
+        <!-- Rain only when overcast ≥ 0.55; clears fast (60 s) when overcast drops -->
+        <thresholds min="0.55" max="1.0" end="60" />
     </rain>
 
     <!--
       ══════════════════════════════════════════════
-      WIND — wind speed and gustiness
+      WIND MAGNITUDE — wind speed in m/s
       ══════════════════════════════════════════════
-      min 0.0     → dead calm during perfect days
-      max 1.0     → maximum base wind
-      maxSpeed 30 → hurricane-force gusts
-      The functionParams control the gust variability curve.
-      High amplitude (param index 1) + high frequency (param
-      index 2) creates chaotic, unpredictable gusts.
+      min 0.0   → dead calm during perfect days
+      max 30.0  → hurricane-force gusts
+      Starts moderate (8 m/s) and swings wildly.
+      Combined with heavy rain = genuinely punishing storms.
     -->
-    <wind>
-        <!-- Base wind range — dead calm to maximum -->
-        <min>0.0</min>
-        <max>1.0</max>
+    <windMagnitude>
+        <current actual="8.0" time="120" duration="240" />
+        <!-- Dead calm to hurricane-force -->
+        <limits min="0.0" max="30.0" />
+        <!-- 3–15 min wind shifts -->
+        <timelimits min="180" max="900" />
+        <!-- Large swings for chaotic, unpredictable gusts -->
+        <changelimits min="0.0" max="20.0" />
+    </windMagnitude>
 
-        <!-- Hurricane-force maximum gust speed (m/s) -->
-        <maxSpeed>30</maxSpeed>
+    <!--
+      ══════════════════════════════════════════════
+      WIND DIRECTION — angle in radians
+      ══════════════════════════════════════════════
+      Full rotational range (−π to +π).
+      Direction shifts frequently to keep wind chaotic.
+    -->
+    <windDirection>
+        <current actual="0.0" time="120" duration="240" />
+        <limits min="-3.14" max="3.14" />
+        <!-- Frequent direction changes — 1–6 min -->
+        <timelimits min="60" max="360" />
+        <changelimits min="-1.0" max="1.0" />
+    </windDirection>
 
-        <!--
-          Gust variability function parameters.
-          param[0] — base wind multiplier offset
-          param[1] — gust amplitude (higher = wilder gusts)
-          param[2] — gust frequency / turbulence
-          param[3] — directional drift rate
-        -->
-        <functionParams>
-            <param>0.15</param>
-            <param>0.85</param>
-            <param>0.75</param>
-            <param>0.4</param>
-        </functionParams>
-    </wind>
+    <!--
+      ══════════════════════════════════════════════
+      STORM — lightning frequency
+      ══════════════════════════════════════════════
+      Activates when overcast ≥ 0.85 (deep storm conditions).
+      Dense lightning (1.0) with 30 s intervals for
+      dramatic storm atmosphere.
+    -->
+    <storm density="1.0" threshold="0.85" timeout="30" />
 
 </weather>

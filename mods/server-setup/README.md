@@ -35,10 +35,10 @@ This package is tuned to deliver that experience consistently across every file.
 |------|------------|
 | `cfgeconomycore.xml` | CE engine configuration — sets CE root classes and logging defaults, registers the `db/` folder (types, events, globals). Mission-root files (cfgweather.xml, cfgspawnabletypes.xml, etc.) are loaded automatically by the engine *(mission root)* |
 | `cfgeventspawns.xml` | Fixed map coordinates + animal territory refs + vehicle overhaul coords — ALL event spawn positions *(mission root)* |
-| `cfgspawnabletypes.xml` | **24 types** — 8 vehicle loot configs + 16 zombie loot types (post-apoc tuned) *(mission root)* |
+| `cfgspawnabletypes.xml` | **602 types** — full vanilla base + 24 custom (8 vehicle loot configs + 16 zombie loot types, post-apoc tuned) *(mission root)* |
 | `cfgweather.xml` | Extreme weather — fog walls, storm cycles, rare clear days *(mission root)* |
-| `db/events.xml` | **63 events** — animals, ALL infected (with tuned nominals), static world events, foraging |
-| `db/types.xml` | **1,390 items** — complete DayZ loot economy with vehicle overhaul values |
+| `db/events.xml` | **69 events** — animals, ALL infected (with tuned nominals), static world events, foraging |
+| `db/types.xml` | **2,192 items** — complete DayZ loot economy with vehicle overhaul values |
 | `env/` | **14 territory files** — 13 animal + zombie_territories.xml (5,448 animal zones + 1,037 zombie zones) |
 
 ---
@@ -57,8 +57,8 @@ Copy the contents of `server-setup/` directly into your mission folder.
 > Simply copy it along with the other files — no manual editing required.
 >
 > If you already have a customised `globals.xml` on your server, merge in these key values:
-> - `ZombieMaxCount` → **5000** (vanilla 800 silently starves all zombie zones)
-> - `VehicleMaxCount` → **250** (vanilla 2–10 caps total cars across the entire map)
+> - `ZombieMaxCount` → **5000** (vanilla 1000 silently starves all zombie zones)
+> - `VehicleMaxCount` → **250** (not present in vanilla — added here to cap total vehicles across the map)
 
 ```
 mpmissions/dayzOffline.chernarusplus/
@@ -92,10 +92,10 @@ mpmissions/dayzOffline.chernarusplus/
 
 ---
 
-## Zombie Spawn Coverage (`events.xml` — tuned for 919 territory zones + rolling horde events)
+## Zombie Spawn Coverage (`events.xml` — tuned for 1,037 territory zones + rolling horde events)
 
 The vanilla infected event nominals (50/50/50 for all types) were designed for a few dozen
-vanilla zones. This setup has 919 territory zones. The nominals below are calibrated to
+vanilla zones. This setup has 1,037 territory zones. The nominals below are calibrated to
 the actual zone count so the "zombies everywhere" vision actually works:
 
 **Realism gradient:** Cities → highest density, urban civilians. Villages → moderate density,
@@ -109,7 +109,7 @@ EVENT encounters, not permanent territory blobs.
 | `InfectedVillageTier1` | 55 | **530** | 265 | 800 | Village outskirts |
 | `InfectedArmy` | 28 | **390** | 195 | 585 | Military zones |
 | `InfectedCity` | 40 | **900** | 450 | 1350 | Cities — urban civilians, populated but gaps exist |
-| `InfectedSolitude` | 693 | **500** | 250 | 750 | Wilderness — sparse; hikers/hunters/hermits only |
+| `InfectedSolitude` | 708 | **500** | 250 | 750 | Wilderness — sparse; hikers/hunters/hermits only |
 | `InfectedIndustrial` | 19 | **250** | 125 | 375 | Factories and ports |
 | `InfectedCityTier1` | 6 | **155** | 78 | 235 | Urban fringe |
 | `InfectedArmyHard` | 5 | **70** | 35 | 105 | Elite military zones |
@@ -123,10 +123,10 @@ EVENT encounters, not permanent territory blobs.
 | `InfectedPoliceHard` | (static events) | **15** | 3 | 40 | Triggered by StaticPoliceSituation |
 | `StaticZombieHorde` | (fixed event) | **8** | 4 | 12 | 8 active hordes from 118-position pool — see below |
 
-> **Note:** Total nominal across all infected territory types ≈ 4,060. The 8 active horde events
+> **Note:** Total nominal across all infected territory types ≈ 4,525. The 8 active horde events
 > each pull additional InfectedCity zombies via `secondary=` (controlled by the `<zone>` density
 > in `cfgeventspawns.xml`). `globals.xml` ships with `ZombieMaxCount=5000` to let the full
-> budget be active simultaneously. The vanilla default of 800 silently starves higher-tier zones.
+> budget be active simultaneously. The vanilla default of 1000 silently starves higher-tier zones.
 
 ### Zombie Horde Events (`StaticZombieHorde`)
 
@@ -157,10 +157,10 @@ Works **exactly like a helicrash** — a timer-based rolling event, not a perman
 > detectable footprint significantly. Route-planning benefit: with the 150m spawn bubble,
 > you can observe the 150–230m ring before committing to a path.
 
-**Horde zone system (`zombie_territories.xml`):** 118 zones in the horde territory
-(color=666013337), up from 80 — covering road chokepoints, bridge approaches, gas stations,
-between-town corridors, and forest clearings across the full map. Horde density raised to
-`smin="12" smax="30" dmin="30" dmax="65"` for intense, memorable encounters.
+**Horde spawn pool (`cfgeventspawns.xml`):** 118 fixed positions covering road chokepoints,
+bridge approaches, gas stations, between-town corridors, and forest clearings across the full
+map. Horde zone density (`zombie_territories.xml` — `smin="12" smax="30" dmin="30" dmax="65"`)
+tuned for intense, memorable encounters.
 
 Each infected event contains the **complete vanilla skin variant list** (all `ZmbM_*`/`ZmbF_*` children),
 so every zone type spawns the correct mix of zombie models.
@@ -236,9 +236,9 @@ wolves hunted there first.
 
 ---
 
-## Loot Economy — 1,390 Items
+## Loot Economy — 2,192 Items
 
-Built from the full DayZ 1.28 vanilla item set (1,382 items) with 8 vehicle overhaul
+Built from the full DayZ vanilla item set with vehicle overhaul
 type definitions replacing the vanilla vehicle entries.
 
 **Post-apocalyptic tuning (all preserved from source mod):**
@@ -323,7 +323,7 @@ Extreme weather from `cfgweather.xml`:
 - ~30–35% of the time: Torrential rain and howling wind
 - The rest: Heavy overcast, drizzle, poor visibility
 
-Console/Nitrado compatible — no scripts, no mods required.
+Console/Nitrado compatible — no scripts, no mods required. Uses the official DayZ `limits`/`timelimits`/`changelimits` weather schema (valid on Xbox, PlayStation, and PC community servers).
 
 ---
 
