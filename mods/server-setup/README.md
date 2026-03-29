@@ -58,7 +58,7 @@ Copy the contents of `server-setup/` directly into your mission folder.
 >
 > If you already have a customised `globals.xml` on your server, merge in these key values:
 > - `ZombieMaxCount` → **5000** (vanilla 1000 silently starves all zombie zones)
-> - `VehicleMaxCount` → **250** (vanilla 2–10 caps total cars across the entire map)
+> - `VehicleMaxCount` → **250** (not present in vanilla — added here to cap total vehicles across the map)
 
 ```
 mpmissions/dayzOffline.chernarusplus/
@@ -323,7 +323,7 @@ Extreme weather from `cfgweather.xml`:
 - ~30–35% of the time: Torrential rain and howling wind
 - The rest: Heavy overcast, drizzle, poor visibility
 
-Console/Nitrado compatible — no scripts, no mods required.
+Console/Nitrado compatible — no scripts, no mods required. Uses the official DayZ `limits`/`timelimits`/`changelimits` weather schema (valid on Xbox, PlayStation, and PC community servers).
 
 ---
 
