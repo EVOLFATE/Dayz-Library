@@ -18,6 +18,10 @@ if you don't. The world is gloomy, fog-choked, and crawling with the infected.
 | File | Purpose |
 |------|---------|
 | `cfgweather.xml` | Persistent gloomy & foggy weather — verified against [Bohemia Interactive Wiki](https://community.bistudio.com/wiki/DayZ:Weather_Configuration) |
+| `events.xml` | Static infected horde events — 3 tiers (village stragglers → city overrun → military last-stand) |
+| `cfgeventspawns.xml` | 39 fixed spawn coordinates for the horde events above |
+| `types.xml` | Zombie skin entity declarations + scarce loot economy |
+| `env/zombie_territories.xml` | ATR-tuned zone territories — 1,037 zones covering every corner of Chernarus |
 | `README.md` | This file — philosophy, realism data, and configuration guide |
 
 ---
@@ -186,30 +190,93 @@ ATR is set approximately **8 months after initial outbreak**:
 
 ## 📦 Installation
 
+### Full Install Path
+
+```
+mpmissions/dayzOffline.chernarusplus/
+├── cfgweather.xml          ← from this folder (mission root)
+├── cfgeventspawns.xml      ← from this folder (mission root)
+├── db/
+│   ├── events.xml          ← merge from this folder's events.xml
+│   └── types.xml           ← merge from this folder's types.xml
+└── env/
+    └── zombie_territories.xml  ← from this folder's env/ (REPLACE, not merge)
+```
+
 ### Applying the Weather Config
 
-1. Copy `cfgweather.xml` from this folder to your server's mission directory:
+1. Copy `cfgweather.xml` to your server's mission root:
    ```
    mpmissions/dayzOffline.chernarusplus/cfgweather.xml
    ```
 2. Restart the server — the gloomy fog preset loads immediately.
 
-### Applying Infected Counts
+### Applying the Infected Territory Configuration
 
-1. Open your server's `events.xml`:
+1. Copy `env/zombie_territories.xml` to:
    ```
-   mpmissions/dayzOffline.chernarusplus/db/events.xml
+   mpmissions/dayzOffline.chernarusplus/env/zombie_territories.xml
    ```
-2. Find each `InfectedVillage`, `InfectedTown`, `InfectedCity` event block.
-3. Replace `nominal`, `min`, and `max` values with the ATR recommendations above.
-4. Save and restart.
+   > ⚠️ **This is a full replacement.** Do not merge — replace the vanilla file entirely.
+2. Restart the server.
+
+### Applying Horde Events
+
+1. Copy `cfgeventspawns.xml` to your mission root:
+   ```
+   mpmissions/dayzOffline.chernarusplus/cfgeventspawns.xml
+   ```
+2. Open your server's `db/events.xml` and merge the three event blocks from this folder's `events.xml` (InfectedHorde_Small, InfectedHorde_Medium, InfectedHorde_Large).
+3. Save and restart.
 
 ### Applying Loot Scarcity
 
-1. Open `types.xml` in your mission's `db/` folder.
-2. Reduce `nominal` and `min` values for food items to **30–50% of vanilla**.
-3. Keep tool and weapon spawns at **50–70% of vanilla** — they exist, but they're contested.
-4. Medical supplies at **20–40% of vanilla** — the rarest category.
+1. Merge `types.xml` into your mission's `db/types.xml`.
+2. The zombie skin entities (nominal=0) simply register skins — they do not affect spawn counts.
+3. Reduce food/medical item nominals to **30–50% of vanilla** if not already done.
+
+---
+
+## 🧟 Zombie Territory Design — The ATR Math
+
+The `env/zombie_territories.xml` uses **1,037 zones** across Chernarus tuned to three goals:
+
+### Goal 1: Route Planning ("See them before you commit")
+
+All zone activation radii (`r`) are scaled up versus the base mod so zombies are **spawned and wandering before a player fully enters an area**. This lets you observe from cover, count threats, and pick your path.
+
+| Territory | Base mod avg r | ATR avg r | Effect |
+|-----------|---------------|-----------|--------|
+| City/Village | 44 m | 60 m | Zombies visible from ~1 street block away |
+| Military | 123 m | 159 m | Visible from tree-line — no surprise attacks |
+| Wilderness | 314 m | 377 m | Lone wanderer spotted across an open field |
+| Horde Pockets | 211 m | 253 m | Horde sound/silhouette before you step in |
+
+### Goal 2: Cities Are Dangerous ("The dead never left")
+
+Permanent zombie presence (`smin`/`smax`) is raised in cities and military zones — even with no players nearby, infected remain. This means every approach to a city involves zombies, not just an empty street until you get close.
+
+| Territory | Base smax/zone | ATR smax/zone | Meaning |
+|-----------|---------------|---------------|---------|
+| City/Village | 4.3 avg | 6.9 avg | ~60% more permanent infected per zone |
+| Military | 7.7 avg | 10.8 avg | Military always a kill zone |
+| Horde Pockets | 20.0 avg | 25.0 avg | Hordes maintain their mass |
+| Wilderness | 0.0 | 0.0 | Wilderness stays dead quiet — solitude intact |
+
+### Goal 3: Wilderness Has Occasional Wanderers ("Nowhere is truly safe")
+
+Wilderness and road corridor zones (`InfectedSolitude`, 693 zones on a 600m grid) keep their low `dmin`/`dmax` values but with larger radii. You may find 2–6 infected wandering the tree-line at any time — enough to force caution on forest roads, not enough to stop you from crossing open ground.
+
+### How Horde Events Complement Territory Zones
+
+The `events.xml` horde events (InfectedHorde_Small/Medium/Large) add **on-top-of** the territory zones:
+- Territory zones provide the **ambient population** — the background noise of the apocalypse
+- Event hordes provide **concentrated danger points** — moments where you encounter a true pack
+- The two systems are additive: walk into a city territory zone during an active horde event and you face both
+
+### ZombieMaxCount Headroom
+
+`globals.xml` sets `ZombieMaxCount=5000`. DayZ only activates zones within player proximity, so the total active at any moment scales with player count, not total zone count. On a 30-player server, roughly 150–400 zones are active simultaneously — well within the 5000 cap.
 
 ---
 
@@ -218,9 +285,10 @@ ATR is set approximately **8 months after initial outbreak**:
 | If players say... | Adjust... |
 |-------------------|-----------|
 | "There's no food anywhere" | Increase animal spawns slightly; food nominal +10% |
-| "Zombies are impossible in cities" | Lower city `nominal` by 10–15; keep `max` high for surges |
+| "Zombies are impossible in cities" | In `env/zombie_territories.xml`: reduce `dmax` on `InfectedCity` zones by 5–8 |
+| "I can't find any zombies in forests" | In `env/zombie_territories.xml`: increase `dmin` on `InfectedSolitude` zones from 2 to 4 |
+| "Horde events are too easy" | In `events.xml`: increase `nominal` or the `max` values on child spawns |
 | "It's too dark / foggy all the time" | Raise fog `limits min` from 0.5 to 0.3 for occasional breaks |
-| "I never see other players" | Weather fog is working — this is intentional for tension |
 | "Wolves are killing everyone" | Reduce wolf `nominal` to 5–8; keep bear low |
 
 ---
@@ -233,6 +301,8 @@ All values in this configuration are cross-referenced against:
 |--------|----------|
 | [Bohemia Interactive Community Wiki — Weather Configuration](https://community.bistudio.com/wiki/DayZ:Weather_Configuration) | `cfgweather.xml` format and parameter validation |
 | [scalespeeder/DayZ-Weather-Config-Files](https://github.com/scalespeeder/DayZ-Weather-Config-Files-For-PC-and-Console-For-Community-Server) | Reference vanilla and custom weather XML configs |
+| [scalespeeder/DayZ-Zombie-Land](https://github.com/scalespeeder/DayZ-Zombie-Land) | Community zombie density reference — army horde dmin/dmax benchmarks |
+| [BohemiaInteractive/DayZ-Central-Economy](https://github.com/BohemiaInteractive/DayZ-Central-Economy) | Vanilla zombie territory baseline for comparison |
 | CDC Zombie Preparedness Campaign & Pandemic Flu Modeling | Infection rate and spread projections |
 | Max Brooks — *World War Z* | Post-outbreak population density estimates |
 | WHO / Red Cross Crisis Logistics Data | Food scarcity timelines and caloric shortfall data |
@@ -244,8 +314,9 @@ All values in this configuration are cross-referenced against:
 
 ## 🔮 Planned Additions
 
-- [ ] Custom `types.xml` with ATR loot scarcity values pre-configured
-- [ ] Custom `events.xml` with ATR infected counts ready to drop in
+- [x] ~~Custom `types.xml` with ATR loot scarcity values pre-configured~~ ✓
+- [x] ~~Custom `events.xml` with ATR infected horde events ready to drop in~~ ✓
+- [x] ~~ATR zombie territory configuration (`env/zombie_territories.xml`)~~ ✓
 - [ ] Nighttime darkness override — no gamma exploiting
 - [ ] Temperature extremes config — hypothermia is a killer
 - [ ] Companion guide: "Surviving ATR — A Player's Manual"
