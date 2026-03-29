@@ -33,7 +33,7 @@ This package is tuned to deliver that experience consistently across every file.
 
 | File | What It Is |
 |------|------------|
-| `cfgeconomycore.xml` | CE engine configuration — registers ALL economy data files (db/ folder, weather, spawn points, limits definitions) so the server actually loads them *(mission root)* |
+| `cfgeconomycore.xml` | CE engine configuration — sets CE root classes and logging defaults, registers the `db/` folder (types, events, globals). Mission-root files (cfgweather.xml, cfgspawnabletypes.xml, etc.) are loaded automatically by the engine *(mission root)* |
 | `cfgeventspawns.xml` | Fixed map coordinates + animal territory refs + vehicle overhaul coords — ALL event spawn positions *(mission root)* |
 | `cfgspawnabletypes.xml` | **24 types** — 8 vehicle loot configs + 16 zombie loot types (post-apoc tuned) *(mission root)* |
 | `cfgweather.xml` | Extreme weather — fog walls, storm cycles, rare clear days *(mission root)* |
