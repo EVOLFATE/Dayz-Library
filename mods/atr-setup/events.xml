@@ -33,7 +33,7 @@
         <restock>180</restock>
         <saferadius>100</saferadius>
         <distanceradius>200</distanceradius>
-        <cleanupradius>150</cleanupradius>
+        <cleanupradius>300</cleanupradius>
         <flags deletable="0" init_random="0" remove_damaged="1"/>
         <position>fixed</position>
         <limit>custom</limit>
@@ -72,7 +72,7 @@
         <restock>360</restock>
         <saferadius>150</saferadius>
         <distanceradius>300</distanceradius>
-        <cleanupradius>200</cleanupradius>
+        <cleanupradius>400</cleanupradius>
         <flags deletable="0" init_random="0" remove_damaged="1"/>
         <position>fixed</position>
         <limit>custom</limit>
@@ -118,7 +118,7 @@
         <restock>600</restock>
         <saferadius>200</saferadius>
         <distanceradius>500</distanceradius>
-        <cleanupradius>300</cleanupradius>
+        <cleanupradius>650</cleanupradius>
         <flags deletable="0" init_random="0" remove_damaged="1"/>
         <position>fixed</position>
         <limit>custom</limit>
@@ -377,6 +377,25 @@
         <max>33</max>
         <lifetime>3600</lifetime>
         <restock>240</restock>
+        <saferadius>100</saferadius>
+        <distanceradius>130</distanceradius>
+        <cleanupradius>200</cleanupradius>
+        <flags deletable="0" init_random="1" remove_damaged="1"/>
+        <position>fixed</position>
+        <active>1</active>
+    </event>
+
+    <!-- Ruins, castles, ancient cemeteries — 25 InfectedMummy zones                -->
+    <!-- Nominal intentionally below zone count: ~40% of zones are silent at any    -->
+    <!-- time — the unpredictability is the threat. Players never know which ruin   -->
+    <!-- hides one.                                                                 -->
+    <!-- restock=420s: mummies reform slowly; each visit is a different gamble      -->
+    <event name="InfectedMummy">
+        <nominal>15</nominal>
+        <min>8</min>
+        <max>25</max>
+        <lifetime>3600</lifetime>
+        <restock>420</restock>
         <saferadius>100</saferadius>
         <distanceradius>130</distanceradius>
         <cleanupradius>200</cleanupradius>

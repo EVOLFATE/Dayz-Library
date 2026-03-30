@@ -18,7 +18,7 @@ if you don't. The world is gloomy, fog-choked, and crawling with the infected.
 | File | Purpose |
 |------|---------|
 | `cfgweather.xml` | Persistent gloomy & foggy weather — verified against [Bohemia Interactive Wiki](https://community.bistudio.com/wiki/DayZ:Weather_Configuration) |
-| `events.xml` | Infected events — 3 custom horde tiers + 14 vanilla territory events (InfectedCity, InfectedVillage, InfectedArmy, etc.) |
+| `events.xml` | Infected events — 3 custom horde tiers + 15 territory events (InfectedCity, InfectedVillage, InfectedArmy, InfectedMummy, etc.) |
 | `cfgeventspawns.xml` | 39 fixed spawn coordinates for the horde events above |
 | `types.xml` | Zombie skin entity declarations + scarce loot economy |
 | `env/zombie_territories.xml` | ATR-tuned zone territories — 1,082 zones covering every corner of Chernarus |
@@ -232,6 +232,7 @@ mpmissions/dayzOffline.chernarusplus/
    - `InfectedArmy`, `InfectedArmyHard` (military zones)
    - `InfectedIndustrial`, `InfectedPolice`, `InfectedMedic`, `InfectedReligious` (specialty zones)
    - `InfectedNBC`, `InfectedPrisoner`, `InfectedFirefighter` (rare zones)
+   - `InfectedMummy` (ruin/castle zones — rare encounter)
    - `InfectedSolitude` (wilderness & road corridors)
 3. Save and restart.
 
@@ -301,7 +302,89 @@ The `events.xml` horde events (InfectedHorde_Small/Medium/Large) add **on-top-of
 
 ### ZombieMaxCount Headroom
 
-`globals.xml` sets `ZombieMaxCount=8000`. The 14 territory event nominals total ~1,763 combined — roughly 22% of the cap. DayZ only activates zones within player proximity, so the total active at any moment scales with player count, not total zone count. On a 30-player server, roughly 150–400 zones are active simultaneously — well within the 8000 cap, with plenty of headroom for the 3 horde events running on top.
+`globals.xml` sets `ZombieMaxCount=8000`. The 15 territory event nominals total ~1,778 combined — roughly 22% of the cap. DayZ only activates zones within player proximity, so the total active at any moment scales with player count, not total zone count. On a 30-player server, roughly 150–400 zones are active simultaneously — well within the 8000 cap, with plenty of headroom for the 3 horde events running on top.
+
+---
+
+## ⚙️ Configuration Rules — Do Not Break These
+
+These rules are verified against the vanilla Bohemia CE and must be respected when editing `events.xml` or related files.
+
+### Rule 1 — `cleanupradius` must always be greater than `distanceradius`
+
+```
+cleanupradius > distanceradius   (minimum gap: +100 for infected, +150 for large hordes)
+```
+
+The `distanceradius` is how far from the spawn-point the engine may place an entity.
+The `cleanupradius` is the boundary beyond which entities are despawned.
+
+If `cleanupradius ≤ distanceradius`, entities that spawn at the outer edge of `distanceradius`
+are already outside the `cleanupradius` and are silently despawned the moment they appear.
+This is a **silent zero-spawn bug** — no error is logged.
+
+| Event | `distanceradius` | `cleanupradius` | ✓/✗ |
+|---|---|---|---|
+| InfectedHorde_Small | 200 | 300 | ✓ |
+| InfectedHorde_Medium | 300 | 400 | ✓ |
+| InfectedHorde_Large | 500 | 650 | ✓ |
+| All territory events | 130–200 | 200–300 | ✓ |
+
+### Rule 2 — Territory event `nominal` is a budget, not a fill target
+
+`nominal` is the **server-wide dynamic-spawn budget** for that type, distributed across
+active zones (zones within ~500m of a player). It is not a guarantee that every zone will
+be populated.
+
+**Setting `nominal` below total zone count is intentional — it is what creates variance.**
+A player may enter six villages in a row and find four empty and two crawling with infected.
+That unpredictability is more threatening than guaranteed coverage: you never know which
+corner is occupied.
+
+| Event | Zones | `nominal` | Avg per active zone | Design intent |
+|---|---|---|---|---|
+| `InfectedCity` | 40 | 120 | ~6 (20 active) | Cities always feel dangerous |
+| `InfectedVillage` | 127 | 180 | ~6 (30 active) | Most villages quiet, some overrun |
+| `InfectedMummy` | 25 | 15 | ~3 (5 active) | Rare — the ruin may be empty, or it may not |
+| `InfectedSolitude` | 738 | 240 | ~3 (80 active) | Occasional wanderer, never a guarantee |
+
+Do **not** raise a `nominal` to equal the total zone count to "ensure every zone is filled".
+That removes variance and makes the map feel uniform and predictable.
+
+### Rule 3 — Territory event `name` in `zombie_territories.xml` must exactly match event `name` in `events.xml`
+
+The DayZ engine uses the `name` attribute of each `<zone>` to look up the matching event.
+A single typo (case included) silently drops all spawns for that type.
+
+Current zone types and their confirmed matching events:
+
+| Zone `name` | events.xml match | Zones |
+|---|---|---|
+| `InfectedCity` | ✓ | 40 |
+| `InfectedCityTier1` | ✓ | 6 |
+| `InfectedVillage` | ✓ | 127 |
+| `InfectedVillageTier1` | ✓ | 55 |
+| `InfectedIndustrial` | ✓ | 19 |
+| `InfectedArmy` | ✓ | 28 |
+| `InfectedArmyHard` | ✓ | 5 |
+| `InfectedPolice` | ✓ | 10 |
+| `InfectedMedic` | ✓ | 8 |
+| `InfectedReligious` | ✓ | 9 |
+| `InfectedNBC` | ✓ | 5 |
+| `InfectedPrisoner` | ✓ | 3 |
+| `InfectedFirefighter` | ✓ | 4 |
+| `InfectedMummy` | ✓ | 25 |
+| `InfectedSolitude` | ✓ | 738 |
+
+### Rule 4 — Territory events must NOT have entries in `cfgeventspawns.xml`
+
+Territory events work via `zombie_territories.xml`. They do not use `cfgeventspawns.xml`
+position pools. Empty `<event name="InfectedVillage"/>` stubs in `cfgeventspawns.xml` are
+invalid and can cause the CE to mishandle the event definition.
+
+Only the three custom horde events (`InfectedHorde_Small`, `InfectedHorde_Medium`,
+`InfectedHorde_Large`) should have entries in `cfgeventspawns.xml` — these are
+`position=fixed` + `limit=custom` events that explicitly draw from that position pool.
 
 ---
 

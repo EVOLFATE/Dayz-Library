@@ -2320,22 +2320,6 @@
 		<pos x="3518.464" z="9122.509" a="0" y="310.821" group="Traffic_Vybor"/>
 	</event>
 
-    <event name="VehicleTransitBus" />
-    <event name="InfectedVillage" />
-    <event name="InfectedSolitude" />
-    <event name="InfectedArmy" />
-    <event name="InfectedCity" />
-    <event name="InfectedMedic" />
-    <event name="InfectedPolice" />
-    <event name="InfectedFirefighter" />
-    <event name="InfectedPrisoner" />
-    <event name="AnimalDeer" />
-    <event name="AnimalCow" />
-    <event name="AnimalSheep" />
-    <event name="AnimalRoeDeer" />
-    <event name="AnimalWolf" />
-    <event name="AnimalWildBoar" />
-
     <!-- ============================================================ -->
     <!-- ATR CUSTOM EVENTS                                            -->
     <!-- ============================================================ -->
