@@ -239,13 +239,14 @@ mpmissions/dayzOffline.chernarusplus/
    > `<position>player</position>` and `<limit>custom</limit>` with a `<children>` spawn pool.
    > Using `<position>fixed</position>` on territory events causes an `ACCESS_VIOLATION` crash at
    > `init.c:6` (`ce.InitOffline()`) — the CE looks for fixed coordinates in `cfgeventspawns.xml`,
-   > finds none, and null-dereferences. This file ships with the correct values.
+   > finds none, and dereferences a null pointer. This file ships with the correct values.
 
 3. Save and restart.
 
 ### Validating Your XML Before Deploying
 
-Before restarting the server after any edit, validate every XML file you touched:
+Before restarting the server after any edit, validate every XML file you touched.
+**Run this from your mission root** (`mpmissions/dayzOffline.chernarusplus/`):
 
 ```bash
 # Using Python (available on all platforms):
@@ -257,7 +258,7 @@ for f in ['db/events.xml','cfgeventspawns.xml','env/zombie_territories.xml','db/
     except Exception as e:
         print(f + ': ERROR - ' + str(e)); sys.exit(1)
 "
-# Or using xmllint (Linux/macOS):
+# Or using xmllint (Linux/macOS), also from mission root:
 # xmllint --noout db/events.xml cfgeventspawns.xml env/zombie_territories.xml db/types.xml
 ```
 
