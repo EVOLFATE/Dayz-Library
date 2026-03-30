@@ -1244,11 +1244,12 @@
     <!-- has a cluster of these. The Elektro lot, the Cherno marina,  -->
     <!-- the Balota strip — stripped to bones. A car pulled into a    -->
     <!-- back-lane barn outside Guglovo? Might still have a sparkplug.-->
-    <!-- vanilla nominal=8 → ATR: 28                                  -->
+    <!-- vanilla nominal=8 → ATR: 45 (183-position pool: parking lots,-->
+    <!-- gas stations, town squares across the whole map)             -->
     <event name="VehicleCivilianSedan">
-        <nominal>28</nominal>
-        <min>20</min>
-        <max>38</max>
+        <nominal>45</nominal>
+        <min>32</min>
+        <max>60</max>
         <lifetime>300</lifetime>
         <restock>0</restock>
         <saferadius>500</saferadius>
@@ -1269,11 +1270,12 @@
     <!-- village has a dozen. Main-road examples are gutted. The one  -->
     <!-- tucked behind the treeline near Polesovo or in an overgrown  -->
     <!-- driveway north of Staroye? Could be sitting perfect.         -->
-    <!-- vanilla nominal=8 → ATR: 28                                  -->
+    <!-- vanilla nominal=8 → ATR: 45 (184-position pool: parking lots,-->
+    <!-- gas stations, across the full map)                           -->
     <event name="VehicleHatchback02">
-        <nominal>28</nominal>
-        <min>20</min>
-        <max>38</max>
+        <nominal>45</nominal>
+        <min>32</min>
+        <max>60</max>
         <lifetime>300</lifetime>
         <restock>0</restock>
         <saferadius>500</saferadius>
@@ -1293,11 +1295,13 @@
     <!-- Offroad 02 — rarer 4x4; some made it deep into the back     -->
     <!-- country before running dry. Remote forest tracks and the     -->
     <!-- northwest hill farms are the best bet for a good one.       -->
-    <!-- vanilla nominal=3 → ATR: 8                                   -->
+    <!-- vanilla nominal=3 → ATR: 18 (203-position pool: rural farms,-->
+    <!-- forest tracks, back-lanes, plus highways for variety;       -->
+    <!-- only 18 active worldwide so each find feels like luck)      -->
     <event name="VehicleOffroad02">
-        <nominal>8</nominal>
-        <min>5</min>
-        <max>12</max>
+        <nominal>18</nominal>
+        <min>12</min>
+        <max>25</max>
         <lifetime>300</lifetime>
         <restock>0</restock>
         <saferadius>500</saferadius>
@@ -1316,11 +1320,12 @@
     <!-- every farmyard. Those on the approach to Zelenogorsk or the  -->
     <!-- Stary Sobor crossroads are picked clean. The one rusting in  -->
     <!-- a field track east of Novaya Petrovka may be untouched.      -->
-    <!-- vanilla nominal=8 → ATR: 28                                  -->
+    <!-- vanilla nominal=8 → ATR: 40 (164-position pool: rural farms  -->
+    <!-- and hidden countryside across the map)                       -->
     <event name="VehicleOffroadHatchback">
-        <nominal>28</nominal>
-        <min>20</min>
-        <max>38</max>
+        <nominal>40</nominal>
+        <min>28</min>
+        <max>55</max>
         <lifetime>300</lifetime>
         <restock>0</restock>
         <saferadius>500</saferadius>
@@ -1341,11 +1346,12 @@
     <!-- them when the roads jammed. High-footfall town spawns are    -->
     <!-- gutted; a sedan on a quiet lane near Kamyshovo or tucked     -->
     <!-- behind a Sinistok barn might run with just fuel and a part.  -->
-    <!-- vanilla nominal=8 → ATR: 28                                  -->
+    <!-- vanilla nominal=8 → ATR: 45 (215-position pool: roadside    -->
+    <!-- breakdowns and highway abandonments across all major roads)  -->
     <event name="VehicleSedan02">
-        <nominal>28</nominal>
-        <min>20</min>
-        <max>38</max>
+        <nominal>45</nominal>
+        <min>32</min>
+        <max>60</max>
         <lifetime>300</lifetime>
         <restock>0</restock>
         <saferadius>500</saferadius>
@@ -1367,11 +1373,12 @@
     <!-- Elektro or the Cherno industrial strip are stripped. A truck -->
     <!-- parked behind the Tisy sawmill or at an NW hamlet depot      -->
     <!-- could be nearly complete — big reward for the trek.          -->
-    <!-- vanilla nominal=8 → ATR: 18                                  -->
+    <!-- vanilla nominal=8 → ATR: 28 (236-position pool: industrial  -->
+    <!-- yards, sawmills, rural farm depots across the map)           -->
     <event name="VehicleTruck01">
-        <nominal>18</nominal>
-        <min>12</min>
-        <max>25</max>
+        <nominal>28</nominal>
+        <min>20</min>
+        <max>38</max>
         <lifetime>300</lifetime>
         <restock>0</restock>
         <saferadius>500</saferadius>
