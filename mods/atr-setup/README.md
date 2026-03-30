@@ -232,9 +232,36 @@ mpmissions/dayzOffline.chernarusplus/
    - `InfectedArmy`, `InfectedArmyHard` (military zones)
    - `InfectedIndustrial`, `InfectedPolice`, `InfectedMedic`, `InfectedReligious` (specialty zones)
    - `InfectedNBC`, `InfectedPrisoner`, `InfectedFirefighter` (rare zones)
-   - `InfectedMummy` (ruin/castle zones — rare encounter)
+   - `InfectedMummy` (ruin/castle zones — spawns `ZmbM_Mummy`, the vanilla mummy infected)
    - `InfectedSolitude` (wilderness & road corridors)
+
+   > ⚠️ **All territory events** (`InfectedCity`, `InfectedVillage`, `InfectedMummy`, etc.) must use
+   > `<position>player</position>` and `<limit>custom</limit>` with a `<children>` spawn pool.
+   > Using `<position>fixed</position>` on territory events causes an `ACCESS_VIOLATION` crash at
+   > `init.c:6` (`ce.InitOffline()`) — the CE looks for fixed coordinates in `cfgeventspawns.xml`,
+   > finds none, and null-dereferences. This file ships with the correct values.
+
 3. Save and restart.
+
+### Validating Your XML Before Deploying
+
+Before restarting the server after any edit, validate every XML file you touched:
+
+```bash
+# Using Python (available on all platforms):
+python3 -c "
+import xml.etree.ElementTree as ET, sys
+for f in ['db/events.xml','cfgeventspawns.xml','env/zombie_territories.xml','db/types.xml']:
+    try:
+        ET.parse(f); print(f + ': OK')
+    except Exception as e:
+        print(f + ': ERROR - ' + str(e)); sys.exit(1)
+"
+# Or using xmllint (Linux/macOS):
+# xmllint --noout db/events.xml cfgeventspawns.xml env/zombie_territories.xml db/types.xml
+```
+
+A parse error will show you the exact file and line number — fix it before deploying.
 
 ### Applying Loot Scarcity
 
@@ -402,6 +429,11 @@ Only the three custom horde events (`InfectedHorde_Small`, `InfectedHorde_Medium
 ---
 
 ## 📚 Sources & Verification
+
+All classnames in this mod have been **cross-referenced against
+`BohemiaInteractive/DayZ-Central-Economy` master branch (DayZ 1.28)**. Every `type=` value
+in `<children>` blocks is confirmed present in the vanilla `db/types.xml`. See the PR that
+introduced this audit for a full change log.
 
 All values in this configuration are cross-referenced against:
 
