@@ -18,9 +18,10 @@ if you don't. The world is gloomy, fog-choked, and crawling with the infected.
 | File | Purpose |
 |------|---------|
 | `cfgweather.xml` | Persistent gloomy & foggy weather — verified against [Bohemia Interactive Wiki](https://community.bistudio.com/wiki/DayZ:Weather_Configuration) |
-| `events.xml` | Infected events — 3 custom horde tiers + 15 territory events (InfectedCity, InfectedVillage, InfectedArmy, InfectedMummy, etc.) |
+| `events.xml` | Infected events — 3 custom horde tiers + 18 territory events (InfectedCity, InfectedVillage, InfectedArmy, InfectedMummy, etc.) |
 | `cfgeventspawns.xml` | 39 fixed spawn coordinates for the horde events above |
 | `types.xml` | Zombie skin entity declarations + scarce loot economy |
+| `db/globals.xml` | Raises `ZombieMaxCount` from vanilla 1000 → 8000 to support 1,082 territory zones |
 | `env/zombie_territories.xml` | ATR-tuned zone territories — 1,082 zones covering every corner of Chernarus |
 | `README.md` | This file — philosophy, realism data, and configuration guide |
 
@@ -198,6 +199,7 @@ mpmissions/dayzOffline.chernarusplus/
 ├── cfgeventspawns.xml      ← from this folder (mission root)
 ├── db/
 │   ├── events.xml          ← merge from this folder's events.xml
+│   ├── globals.xml         ← merge from this folder's db/globals.xml
 │   └── types.xml           ← merge from this folder's types.xml
 └── env/
     └── zombie_territories.xml  ← from this folder's env/ (REPLACE, not merge)
@@ -232,15 +234,56 @@ mpmissions/dayzOffline.chernarusplus/
    - `InfectedArmy`, `InfectedArmyHard` (military zones)
    - `InfectedIndustrial`, `InfectedPolice`, `InfectedMedic`, `InfectedReligious` (specialty zones)
    - `InfectedNBC`, `InfectedPrisoner`, `InfectedFirefighter` (rare zones)
-   - `InfectedMummy` (ruin/castle zones — rare encounter)
+   - `InfectedMummy` (ruin/castle zones — spawns `ZmbM_Mummy`, the vanilla mummy infected)
    - `InfectedSolitude` (wilderness & road corridors)
+
+   > ⚠️ **All territory events** (`InfectedCity`, `InfectedVillage`, `InfectedMummy`, etc.) must use
+   > `<position>player</position>` and `<limit>custom</limit>` with a `<children>` spawn pool.
+   > Using `<position>fixed</position>` on territory events causes an `ACCESS_VIOLATION` crash at
+   > `init.c:6` (`ce.InitOffline()`) — the CE looks for fixed coordinates in `cfgeventspawns.xml`,
+   > finds none, and dereferences a null pointer. This file ships with the correct values.
+
 3. Save and restart.
+
+### Validating Your XML Before Deploying
+
+Before restarting the server after any edit, validate every XML file you touched.
+**Run this from your mission root** (`mpmissions/dayzOffline.chernarusplus/`):
+
+```bash
+# Using Python (available on all platforms):
+python3 -c "
+import xml.etree.ElementTree as ET, sys
+for f in ['db/events.xml','cfgeventspawns.xml','env/zombie_territories.xml','db/types.xml']:
+    try:
+        ET.parse(f); print(f + ': OK')
+    except Exception as e:
+        print(f + ': ERROR - ' + str(e)); sys.exit(1)
+"
+# Or using xmllint (Linux/macOS), also from mission root:
+# xmllint --noout db/events.xml cfgeventspawns.xml env/zombie_territories.xml db/types.xml
+```
+
+A parse error will show you the exact file and line number — fix it before deploying.
 
 ### Applying Loot Scarcity
 
 1. Merge `types.xml` into your mission's `db/types.xml`.
 2. The zombie skin entities (nominal=0) simply register skins — they do not affect spawn counts.
 3. Reduce food/medical item nominals to **30–50% of vanilla** if not already done.
+
+### Applying the ZombieMaxCount Override
+
+1. Merge `db/globals.xml` into your mission's `db/globals.xml`:
+   ```
+   mpmissions/dayzOffline.chernarusplus/db/globals.xml
+   ```
+   The key change is `ZombieMaxCount=8000` (vanilla default is 1000). Without this, the
+   CE's global budget caps out at 1000 infected and territory zones silently under-populate
+   on anything beyond a very low-pop server.
+
+   > ⚠️ **Merge, do not replace.** Update only the values listed in this file — your server
+   > may have other globals (vehicle counts, cleanup timers) that you need to keep.
 
 ---
 
@@ -402,6 +445,11 @@ Only the three custom horde events (`InfectedHorde_Small`, `InfectedHorde_Medium
 ---
 
 ## 📚 Sources & Verification
+
+All classnames in this mod have been **cross-referenced against
+`BohemiaInteractive/DayZ-Central-Economy` master branch (DayZ 1.28)**. Every `type=` value
+in `<children>` blocks is confirmed present in the vanilla `db/types.xml`. See the PR that
+introduced this audit for a full change log.
 
 All values in this configuration are cross-referenced against:
 

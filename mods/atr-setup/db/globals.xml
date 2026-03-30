@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!-- ================================================================ -->
+<!-- ATR Setup: globals.xml                                           -->
+<!-- Merge into: mpmissions/dayzOffline.chernarusplus/db/globals.xml  -->
+<!-- ================================================================ -->
+<!-- ZombieMaxCount raised from vanilla 1000 to 8000.                -->
+<!-- ATR territory event nominals total ~1,778 combined. DayZ only   -->
+<!-- activates zones within ~500m of a player, so on a 30-player     -->
+<!-- server roughly 150–400 zones are active at any time — well      -->
+<!-- within the 8000 cap, with headroom for the 3 horde events on    -->
+<!-- top. Do NOT lower this below 2000 or territory events will be   -->
+<!-- budget-starved and zones will silently under-populate.          -->
+<!-- ================================================================ -->
+<variables>
+    <!-- Vanilla: 1000. ATR: raised to 8000 for 1,082-zone territory setup. -->
+    <var name="ZombieMaxCount" type="0" value="8000"/>
+    <!-- Vanilla: 200. ATR keeps vanilla animal nominals; 500 gives headroom. -->
+    <var name="AnimalMaxCount" type="0" value="500"/>
+    <var name="CleanupAvoidance" type="0" value="100"/>
+    <var name="CleanupLifetimeDeadAnimal" type="0" value="1200"/>
+    <var name="CleanupLifetimeDeadInfected" type="0" value="330"/>
+    <var name="CleanupLifetimeDeadPlayer" type="0" value="3600"/>
+    <var name="CleanupLifetimeDefault" type="0" value="45"/>
+    <var name="CleanupLifetimeLimit" type="0" value="1200"/>
+    <var name="CleanupLifetimeRuined" type="0" value="330"/>
+    <var name="FlagRefreshFrequency" type="0" value="432000"/>
+    <var name="FlagRefreshMaxDuration" type="0" value="3456000"/>
+    <!-- 86400s idle countdown = server auto-idles after 24h with no players -->
+    <var name="IdleModeCountdown" type="0" value="86400"/>
+    <!-- 0 = server boots active, not in idle mode -->
+    <var name="IdleModeStartup" type="0" value="0"/>
+    <var name="InitialSpawn" type="0" value="1200"/>
+    <var name="LootProxySpawnBonus" type="0" value="1"/>
+    <var name="RespawnAttempt" type="0" value="2"/>
+    <var name="RespawnLimit" type="0" value="0"/>
+    <var name="RespawnTypes" type="0" value="12"/>
+    <var name="RestartSpawn" type="0" value="0"/>
+    <var name="SpawnInitial" type="0" value="1200"/>
+    <var name="TimeHopping" type="0" value="60"/>
+    <var name="TimeLogin" type="0" value="5"/>
+    <var name="TimeLogout" type="0" value="15"/>
+    <var name="TimePenalty" type="0" value="20"/>
+    <var name="WorldWetTempUpdate" type="0" value="1"/>
+</variables>
