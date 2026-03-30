@@ -1186,6 +1186,92 @@
         <zone name="InfectedSolitude" smin="0" smax="0" dmin="2" dmax="5" x="12900.00" z="3500.00" r="144"/>
         <zone name="InfectedSolitude" smin="0" smax="0" dmin="2" dmax="5" x="13500.00" z="3500.00" r="144"/>
 
+        <!-- ============================================================ -->
+        <!-- ROAD CORRIDOR ZONES (+30 zones)                             -->
+        <!-- InfectedSolitude: smin/smax=0 (dynamic only), dmin=3/dmax=8 -->
+        <!-- r=250 covers road width + shoulders so wanderers appear on  -->
+        <!-- and around the road as you travel                           -->
+        <!-- ============================================================ -->
+
+        <!-- === SOUTH COASTAL HIGHWAY (Kamenka → Cherno → Elektro → Solnichniy) === -->
+        <zone name="InfectedSolitude" smin="0" smax="0" dmin="3" dmax="8" x="1350.00" z="2150.00" r="250"/>
+        <zone name="InfectedSolitude" smin="0" smax="0" dmin="3" dmax="8" x="1800.00" z="2250.00" r="250"/>
+        <zone name="InfectedSolitude" smin="0" smax="0" dmin="3" dmax="8" x="2450.00" z="2200.00" r="250"/>
+        <zone name="InfectedSolitude" smin="0" smax="0" dmin="3" dmax="8" x="3680.00" z="2150.00" r="250"/>
+        <zone name="InfectedSolitude" smin="0" smax="0" dmin="3" dmax="8" x="5200.00" z="2150.00" r="250"/>
+        <zone name="InfectedSolitude" smin="0" smax="0" dmin="3" dmax="8" x="6300.00" z="2250.00" r="250"/>
+        <zone name="InfectedSolitude" smin="0" smax="0" dmin="3" dmax="8" x="8400.00" z="2200.00" r="250"/>
+        <zone name="InfectedSolitude" smin="0" smax="0" dmin="3" dmax="8" x="10100.00" z="2050.00" r="250"/>
+
+        <!-- === NORTHERN CENTRAL ROAD (Pustoshka → Lopatino → Kabanino → Stary → Gorka) === -->
+        <zone name="InfectedSolitude" smin="0" smax="0" dmin="3" dmax="8" x="3900.00" z="7850.00" r="250"/>
+        <zone name="InfectedSolitude" smin="0" smax="0" dmin="3" dmax="8" x="5100.00" z="8700.00" r="250"/>
+        <zone name="InfectedSolitude" smin="0" smax="0" dmin="3" dmax="8" x="5500.00" z="9100.00" r="250"/>
+        <zone name="InfectedSolitude" smin="0" smax="0" dmin="3" dmax="8" x="6400.00" z="7500.00" r="250"/>
+        <zone name="InfectedSolitude" smin="0" smax="0" dmin="3" dmax="8" x="7000.00" z="7250.00" r="250"/>
+        <zone name="InfectedSolitude" smin="0" smax="0" dmin="3" dmax="8" x="7750.00" z="6450.00" r="250"/>
+
+        <!-- === WESTERN ROUTE (Zelenogorsk → Pavlovo → Kozlovka → Pustoshka) === -->
+        <zone name="InfectedSolitude" smin="0" smax="0" dmin="3" dmax="8" x="2500.00" z="5250.00" r="250"/>
+        <zone name="InfectedSolitude" smin="0" smax="0" dmin="3" dmax="8" x="2400.00" z="6000.00" r="250"/>
+        <zone name="InfectedSolitude" smin="0" smax="0" dmin="3" dmax="8" x="2750.00" z="6800.00" r="250"/>
+        <zone name="InfectedSolitude" smin="0" smax="0" dmin="3" dmax="8" x="2900.00" z="7150.00" r="250"/>
+
+        <!-- === EASTERN CORRIDOR (Berezino → Krasnostav → Polana → Staroye) === -->
+        <zone name="InfectedSolitude" smin="0" smax="0" dmin="3" dmax="8" x="9900.00" z="3600.00" r="250"/>
+        <zone name="InfectedSolitude" smin="0" smax="0" dmin="3" dmax="8" x="9600.00" z="4300.00" r="250"/>
+        <zone name="InfectedSolitude" smin="0" smax="0" dmin="3" dmax="8" x="9150.00" z="4200.00" r="250"/>
+        <zone name="InfectedSolitude" smin="0" smax="0" dmin="3" dmax="8" x="9000.00" z="5300.00" r="250"/>
+        <zone name="InfectedSolitude" smin="0" smax="0" dmin="3" dmax="8" x="9800.00" z="6100.00" r="250"/>
+
+        <!-- === CENTRAL HIGHWAY (NWAF → Grishino → Novy Sobor) === -->
+        <zone name="InfectedSolitude" smin="0" smax="0" dmin="3" dmax="8" x="5000.00" z="9800.00" r="250"/>
+        <zone name="InfectedSolitude" smin="0" smax="0" dmin="3" dmax="8" x="5600.00" z="9100.00" r="250"/>
+        <zone name="InfectedSolitude" smin="0" smax="0" dmin="3" dmax="8" x="6100.00" z="8500.00" r="250"/>
+        <zone name="InfectedSolitude" smin="0" smax="0" dmin="3" dmax="8" x="6700.00" z="7800.00" r="250"/>
+
+        <!-- === NORTHERN HIGHWAY (Novodmitrovsk → Severograd) === -->
+        <zone name="InfectedSolitude" smin="0" smax="0" dmin="3" dmax="8" x="9200.00" z="11900.00" r="250"/>
+        <zone name="InfectedSolitude" smin="0" smax="0" dmin="3" dmax="8" x="6800.00" z="11600.00" r="250"/>
+        <zone name="InfectedSolitude" smin="0" smax="0" dmin="3" dmax="8" x="5300.00" z="11200.00" r="250"/>
+
+        <!-- ============================================================ -->
+        <!-- GAS STATIONS, CROSSROADS & LANDMARK POI ZONES (+15 zones)   -->
+        <!-- InfectedVillage: smin=1/smax=3 (a few always present),      -->
+        <!-- dmin=4/dmax=10, r=100 — tight radius, focused on the POI    -->
+        <!-- ============================================================ -->
+
+        <!-- Stary Yar crossroads (major inland junction) -->
+        <zone name="InfectedVillage" smin="1" smax="3" dmin="4" dmax="10" x="6900.00" z="6500.00" r="100"/>
+        <!-- Devil's Castle approach road -->
+        <zone name="InfectedVillage" smin="1" smax="3" dmin="4" dmax="10" x="3050.00" z="9250.00" r="100"/>
+        <!-- NWAF south hangars gate -->
+        <zone name="InfectedVillage" smin="1" smax="3" dmin="4" dmax="10" x="4650.00" z="10300.00" r="100"/>
+        <!-- Rog Castle area (south coast landmark) -->
+        <zone name="InfectedVillage" smin="1" smax="3" dmin="4" dmax="10" x="5900.00" z="2350.00" r="100"/>
+        <!-- Gas station east of Elektro -->
+        <zone name="InfectedVillage" smin="1" smax="3" dmin="4" dmax="10" x="4600.00" z="2300.00" r="100"/>
+        <!-- Gas station north of Berezino -->
+        <zone name="InfectedVillage" smin="1" smax="3" dmin="4" dmax="10" x="10050.00" z="3400.00" r="100"/>
+        <!-- Zelenogorsk gas station crossroads -->
+        <zone name="InfectedVillage" smin="1" smax="3" dmin="4" dmax="10" x="2550.00" z="4600.00" r="100"/>
+        <!-- NEAF approach road (south gate area) -->
+        <zone name="InfectedVillage" smin="1" smax="3" dmin="4" dmax="10" x="12050.00" z="3200.00" r="100"/>
+        <!-- Tisy military approach road -->
+        <zone name="InfectedVillage" smin="1" smax="3" dmin="4" dmax="10" x="1350.00" z="12450.00" r="100"/>
+        <!-- Orlovets crossroads -->
+        <zone name="InfectedVillage" smin="1" smax="3" dmin="4" dmax="10" x="10430.00" z="3700.00" r="100"/>
+        <!-- Mogilevka junction (central map crossroads) -->
+        <zone name="InfectedVillage" smin="1" smax="3" dmin="4" dmax="10" x="5750.00" z="5000.00" r="100"/>
+        <!-- Vybor crossroads (near NWAF south) -->
+        <zone name="InfectedVillage" smin="1" smax="3" dmin="4" dmax="10" x="5150.00" z="9300.00" r="100"/>
+        <!-- Dubrovka junction (east-central) -->
+        <zone name="InfectedVillage" smin="1" smax="3" dmin="4" dmax="10" x="8150.00" z="6500.00" r="100"/>
+        <!-- Guglovo outskirts road -->
+        <zone name="InfectedVillage" smin="1" smax="3" dmin="4" dmax="10" x="7700.00" z="4300.00" r="100"/>
+        <!-- Black Forest gas station (SW forest road) -->
+        <zone name="InfectedVillage" smin="1" smax="3" dmin="4" dmax="10" x="4000.00" z="5500.00" r="100"/>
+
     </territory>
 
     <!-- ============================================================ -->
