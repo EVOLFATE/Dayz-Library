@@ -162,8 +162,9 @@
     <!-- Territory zones define WHERE zombies spawn; these events      -->
     <!-- define HOW MANY the engine maintains server-wide per type.    -->
     <!--                                                               -->
-    <!-- position=fixed  — engine picks from territory zones, not a   -->
-    <!--                   static position pool.                       -->
+    <!-- position=player — territory zones in zombie_territories.xml   -->
+    <!--                   provide the spawn locations; this matches   -->
+    <!--                   the official Bohemia CE pattern exactly.    -->
     <!-- init_random=1   — zones start at randomised counts between   -->
     <!--                   min and nominal so no two server boots feel -->
     <!--                   the same.                                   -->
@@ -174,8 +175,10 @@
     <!--                   from somewhere new rather than rubber-      -->
     <!--                   banding at the same spot.                   -->
     <!--                                                               -->
-    <!-- No <children> or <limit> — territory events use the zone     -->
-    <!-- name attribute to select the infected class automatically.   -->
+    <!-- <children> define the infected type pool (one entry per      -->
+    <!-- classname); <limit>custom</limit> lets the event-level       -->
+    <!-- nominal/min/max govern the total server-wide budget while    -->
+    <!-- child min=1 guarantees type diversity across spawns.         -->
     <!--                                                               -->
     <!-- Nominals are ~4-5x vanilla to match ATR's zone count while   -->
     <!-- staying well under ZombieMaxCount=8000.                      -->
@@ -197,6 +200,7 @@
         <flags deletable="0" init_random="1" remove_damaged="1"/>
         <position>player</position>
         <limit>custom</limit>
+        <active>1</active>
         <children>
             <child lootmax="0" lootmin="0" max="0" min="1" type="ZmbF_BlueCollarFat_White"/>
             <child lootmax="0" lootmin="0" max="0" min="1" type="ZmbF_CitizenANormal_Beige"/>
@@ -242,7 +246,6 @@
             <child lootmax="0" lootmin="0" max="0" min="1" type="ZmbM_SkaterYoung_Green"/>
             <child lootmax="0" lootmin="0" max="0" min="1" type="ZmbM_SkaterYoung_Grey"/>
         </children>
-        <active>1</active>
     </event>
 
     <!-- City outskirts / tier1 rings — 6 InfectedCityTier1 zones   -->
@@ -259,6 +262,7 @@
         <flags deletable="0" init_random="1" remove_damaged="1"/>
         <position>player</position>
         <limit>custom</limit>
+        <active>1</active>
         <children>
             <child lootmax="0" lootmin="0" max="0" min="1" type="ZmbF_CitizenANormal_Brown"/>
             <child lootmax="0" lootmin="0" max="0" min="1" type="ZmbF_Clerk_Normal_Green"/>
@@ -273,7 +277,6 @@
             <child lootmax="0" lootmin="0" max="0" min="1" type="ZmbM_MotobikerFat_Black"/>
             <child lootmax="0" lootmin="0" max="0" min="1" type="ZmbM_SkaterYoung_Blue"/>
         </children>
-        <active>1</active>
     </event>
 
     <!-- Towns and villages (bread-and-butter) — 112 InfectedVillage zones -->
@@ -291,6 +294,7 @@
         <flags deletable="0" init_random="1" remove_damaged="1"/>
         <position>player</position>
         <limit>custom</limit>
+        <active>1</active>
         <children>
             <child lootmax="0" lootmin="0" max="0" min="1" type="ZmbF_JoggerSkinny_Blue"/>
             <child lootmax="0" lootmin="0" max="0" min="1" type="ZmbF_JoggerSkinny_Brown"/>
@@ -317,7 +321,6 @@
             <child lootmax="0" lootmin="0" max="0" min="1" type="ZmbM_VillagerOld_Blue"/>
             <child lootmax="0" lootmin="0" max="0" min="1" type="ZmbM_VillagerOld_White"/>
         </children>
-        <active>1</active>
     </event>
 
     <!-- Village outskirts — 55 InfectedVillageTier1 zones           -->
@@ -334,10 +337,10 @@
         <flags deletable="0" init_random="1" remove_damaged="1"/>
         <position>player</position>
         <limit>custom</limit>
+        <active>1</active>
         <children>
             <child lootmax="0" lootmin="0" max="0" min="1" type="ZmbF_JoggerSkinny_Red"/>
         </children>
-        <active>1</active>
     </event>
 
     <!-- Factories, ports, quarries — 19 InfectedIndustrial zones    -->
@@ -354,6 +357,7 @@
         <flags deletable="0" init_random="1" remove_damaged="1"/>
         <position>player</position>
         <limit>custom</limit>
+        <active>1</active>
         <children>
             <child lootmax="0" lootmin="0" max="0" min="1" type="ZmbF_BlueCollarFat_Blue"/>
             <child lootmax="0" lootmin="0" max="0" min="1" type="ZmbF_BlueCollarFat_Green"/>
@@ -382,7 +386,6 @@
             <child lootmax="0" lootmin="0" max="0" min="1" type="ZmbM_OffshoreWorker_Red"/>
             <child lootmax="0" lootmin="0" max="0" min="1" type="ZmbM_OffshoreWorker_Yellow"/>
         </children>
-        <active>1</active>
     </event>
 
     <!-- Military bases — 28 InfectedArmy zones                      -->
@@ -400,6 +403,7 @@
         <flags deletable="0" init_random="1" remove_damaged="1"/>
         <position>player</position>
         <limit>custom</limit>
+        <active>1</active>
         <children>
             <child lootmax="0" lootmin="0" max="0" min="1" type="ZmbM_PatrolNormal_Autumn"/>
             <child lootmax="0" lootmin="0" max="0" min="1" type="ZmbM_PatrolNormal_Flat"/>
@@ -409,7 +413,6 @@
             <child lootmax="0" lootmin="0" max="0" min="1" type="ZmbM_usSoldier_normal_Desert"/>
             <child lootmax="0" lootmin="0" max="0" min="1" type="ZmbM_usSoldier_normal_Woodland"/>
         </children>
-        <active>1</active>
     </event>
 
     <!-- Elite military (barracks hard zones) — 5 InfectedArmyHard zones -->
@@ -427,6 +430,7 @@
         <flags deletable="0" init_random="1" remove_damaged="1"/>
         <position>player</position>
         <limit>custom</limit>
+        <active>1</active>
         <children>
             <child lootmax="0" lootmin="0" max="0" min="1" type="ZmbM_PatrolNormal_Autumn"/>
             <child lootmax="0" lootmin="0" max="0" min="1" type="ZmbM_PatrolNormal_Flat"/>
@@ -438,7 +442,6 @@
             <child lootmax="0" lootmin="0" max="0" min="1" type="ZmbM_usSoldier_normal_Desert"/>
             <child lootmax="0" lootmin="0" max="0" min="1" type="ZmbM_usSoldier_normal_Woodland"/>
         </children>
-        <active>1</active>
     </event>
 
     <!-- Police stations — 10 InfectedPolice zones                   -->
@@ -454,13 +457,13 @@
         <flags deletable="0" init_random="1" remove_damaged="1"/>
         <position>player</position>
         <limit>custom</limit>
+        <active>1</active>
         <children>
             <child lootmax="0" lootmin="0" max="0" min="1" type="ZmbF_PoliceWomanNormal"/>
             <child lootmax="0" lootmin="0" max="0" min="1" type="ZmbM_PolicemanFat"/>
             <child lootmax="0" lootmin="0" max="0" min="1" type="ZmbM_PolicemanSpecForce"/>
             <child lootmax="0" lootmin="0" max="0" min="1" type="ZmbM_PolicemanSpecForce_Heavy"/>
         </children>
-        <active>1</active>
     </event>
 
     <!-- Hospitals and clinics — 8 InfectedMedic zones               -->
@@ -476,6 +479,7 @@
         <flags deletable="0" init_random="1" remove_damaged="1"/>
         <position>player</position>
         <limit>custom</limit>
+        <active>1</active>
         <children>
             <child lootmax="0" lootmin="0" max="0" min="1" type="ZmbF_DoctorSkinny"/>
             <child lootmax="0" lootmin="0" max="0" min="1" type="ZmbF_NurseFat"/>
@@ -491,7 +495,6 @@
             <child lootmax="0" lootmin="0" max="0" min="1" type="ZmbM_ParamedicNormal_Red"/>
             <child lootmax="0" lootmin="0" max="0" min="1" type="ZmbM_PatientSkinny"/>
         </children>
-        <active>1</active>
     </event>
 
     <!-- Churches and shrines — 9 InfectedReligious zones            -->
@@ -507,10 +510,10 @@
         <flags deletable="0" init_random="1" remove_damaged="1"/>
         <position>player</position>
         <limit>custom</limit>
+        <active>1</active>
         <children>
             <child lootmax="0" lootmin="0" max="0" min="1" type="ZmbM_priestPopSkinny"/>
         </children>
-        <active>1</active>
     </event>
 
     <!-- Contaminated / NBC zones — 5 InfectedNBC zones              -->
@@ -526,10 +529,10 @@
         <flags deletable="0" init_random="1" remove_damaged="1"/>
         <position>player</position>
         <limit>custom</limit>
+        <active>1</active>
         <children>
             <child lootmax="0" lootmin="0" max="0" min="1" type="ZmbM_NBC_Grey"/>
         </children>
-        <active>1</active>
     </event>
 
     <!-- Prisons — 3 InfectedPrisoner zones                          -->
@@ -545,10 +548,10 @@
         <flags deletable="0" init_random="1" remove_damaged="1"/>
         <position>player</position>
         <limit>custom</limit>
+        <active>1</active>
         <children>
             <child lootmax="0" lootmin="0" max="0" min="1" type="ZmbM_PrisonerSkinny"/>
         </children>
-        <active>1</active>
     </event>
 
     <!-- Fire stations — 4 InfectedFirefighter zones                 -->
@@ -564,11 +567,11 @@
         <flags deletable="0" init_random="1" remove_damaged="1"/>
         <position>player</position>
         <limit>custom</limit>
+        <active>1</active>
         <children>
             <child lootmax="0" lootmin="0" max="0" min="1" type="ZmbM_FirefighterNormal"/>
             <child lootmax="0" lootmin="0" max="0" min="1" type="ZmbM_NBC_Yellow"/>
         </children>
-        <active>1</active>
     </event>
 
     <!-- Ruins, castles, ancient cemeteries — 25 InfectedMummy zones                -->
@@ -588,11 +591,11 @@
         <flags deletable="0" init_random="1" remove_damaged="1"/>
         <position>player</position>
         <limit>custom</limit>
+        <active>1</active>
         <children>
             <!-- ZmbM_Mummy: vanilla Halloween/special infected — the actual mummy zombie -->
             <child lootmax="0" lootmin="0" max="0" min="1" type="ZmbM_Mummy"/>
         </children>
-        <active>1</active>
     </event>
 
     <!-- Wilderness, forests, and road corridors — 738 InfectedSolitude zones       -->
@@ -613,6 +616,7 @@
         <flags deletable="0" init_random="1" remove_damaged="1"/>
         <position>player</position>
         <limit>custom</limit>
+        <active>1</active>
         <children>
             <child lootmax="0" lootmin="0" max="0" min="1" type="ZmbF_HikerSkinny_Blue"/>
             <child lootmax="0" lootmin="0" max="0" min="1" type="ZmbF_HikerSkinny_Green"/>
@@ -634,7 +638,6 @@
             <child lootmax="0" lootmin="0" max="0" min="1" type="ZmbM_HunterOld_Summer"/>
             <child lootmax="0" lootmin="0" max="0" min="1" type="ZmbM_HunterOld_Winter"/>
         </children>
-        <active>1</active>
     </event>
 
     <!-- ============================================================ -->
@@ -926,10 +929,10 @@
         <flags deletable="0" init_random="1" remove_damaged="1"/>
         <position>player</position>
         <limit>custom</limit>
+        <active>0</active>
         <children>
             <child lootmax="0" lootmin="0" max="0" min="1" type="ZmbM_NBC_Yellow"/>
         </children>
-        <active>0</active>
     </event>
 
     <!-- Spec-force police — heavy tactical officers at hard zones    -->
@@ -946,11 +949,11 @@
         <flags deletable="0" init_random="1" remove_damaged="1"/>
         <position>player</position>
         <limit>custom</limit>
+        <active>1</active>
         <children>
             <child lootmax="0" lootmin="0" max="0" min="1" type="ZmbM_PolicemanSpecForce_Heavy"/>
             <child lootmax="0" lootmin="0" max="0" min="1" type="ZmbM_PrisonerSkinny"/>
         </children>
-        <active>1</active>
     </event>
 
     <!-- Santa zombies — seasonal; keep inactive until December       -->
@@ -967,10 +970,10 @@
         <flags deletable="0" init_random="1" remove_damaged="1"/>
         <position>player</position>
         <limit>custom</limit>
+        <active>0</active>
         <children>
             <child lootmax="0" lootmin="0" max="0" min="1" type="ZmbM_Santa"/>
         </children>
-        <active>0</active>
     </event>
 
     <!-- ============================================================ -->
