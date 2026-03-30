@@ -18,9 +18,10 @@ if you don't. The world is gloomy, fog-choked, and crawling with the infected.
 | File | Purpose |
 |------|---------|
 | `cfgweather.xml` | Persistent gloomy & foggy weather — verified against [Bohemia Interactive Wiki](https://community.bistudio.com/wiki/DayZ:Weather_Configuration) |
-| `events.xml` | Infected events — 3 custom horde tiers + 15 territory events (InfectedCity, InfectedVillage, InfectedArmy, InfectedMummy, etc.) |
+| `events.xml` | Infected events — 3 custom horde tiers + 18 territory events (InfectedCity, InfectedVillage, InfectedArmy, InfectedMummy, etc.) |
 | `cfgeventspawns.xml` | 39 fixed spawn coordinates for the horde events above |
 | `types.xml` | Zombie skin entity declarations + scarce loot economy |
+| `db/globals.xml` | Raises `ZombieMaxCount` from vanilla 1000 → 8000 to support 1,082 territory zones |
 | `env/zombie_territories.xml` | ATR-tuned zone territories — 1,082 zones covering every corner of Chernarus |
 | `README.md` | This file — philosophy, realism data, and configuration guide |
 
@@ -198,6 +199,7 @@ mpmissions/dayzOffline.chernarusplus/
 ├── cfgeventspawns.xml      ← from this folder (mission root)
 ├── db/
 │   ├── events.xml          ← merge from this folder's events.xml
+│   ├── globals.xml         ← merge from this folder's db/globals.xml
 │   └── types.xml           ← merge from this folder's types.xml
 └── env/
     └── zombie_territories.xml  ← from this folder's env/ (REPLACE, not merge)
@@ -269,6 +271,19 @@ A parse error will show you the exact file and line number — fix it before dep
 1. Merge `types.xml` into your mission's `db/types.xml`.
 2. The zombie skin entities (nominal=0) simply register skins — they do not affect spawn counts.
 3. Reduce food/medical item nominals to **30–50% of vanilla** if not already done.
+
+### Applying the ZombieMaxCount Override
+
+1. Merge `db/globals.xml` into your mission's `db/globals.xml`:
+   ```
+   mpmissions/dayzOffline.chernarusplus/db/globals.xml
+   ```
+   The key change is `ZombieMaxCount=8000` (vanilla default is 1000). Without this, the
+   CE's global budget caps out at 1000 infected and territory zones silently under-populate
+   on anything beyond a very low-pop server.
+
+   > ⚠️ **Merge, do not replace.** Update only the values listed in this file — your server
+   > may have other globals (vehicle counts, cleanup timers) that you need to keep.
 
 ---
 
