@@ -18,10 +18,10 @@ if you don't. The world is gloomy, fog-choked, and crawling with the infected.
 | File | Purpose |
 |------|---------|
 | `cfgweather.xml` | Persistent gloomy & foggy weather — verified against [Bohemia Interactive Wiki](https://community.bistudio.com/wiki/DayZ:Weather_Configuration) |
-| `events.xml` | Static infected horde events — 3 tiers (village stragglers → city overrun → military last-stand) |
+| `events.xml` | Infected events — 3 custom horde tiers + 14 vanilla territory events (InfectedCity, InfectedVillage, InfectedArmy, etc.) |
 | `cfgeventspawns.xml` | 39 fixed spawn coordinates for the horde events above |
 | `types.xml` | Zombie skin entity declarations + scarce loot economy |
-| `env/zombie_territories.xml` | ATR-tuned zone territories — 1,037 zones covering every corner of Chernarus |
+| `env/zombie_territories.xml` | ATR-tuned zone territories — 1,082 zones covering every corner of Chernarus |
 | `README.md` | This file — philosophy, realism data, and configuration guide |
 
 ---
@@ -220,13 +220,19 @@ mpmissions/dayzOffline.chernarusplus/
    > ⚠️ **This is a full replacement.** Do not merge — replace the vanilla file entirely.
 2. Restart the server.
 
-### Applying Horde Events
+### Applying Horde Events + Territory Events
 
 1. Copy `cfgeventspawns.xml` to your mission root:
    ```
    mpmissions/dayzOffline.chernarusplus/cfgeventspawns.xml
    ```
-2. Open your server's `db/events.xml` and merge the three event blocks from this folder's `events.xml` (InfectedHorde_Small, InfectedHorde_Medium, InfectedHorde_Large).
+2. Open your server's `db/events.xml` and merge **all** event blocks from this folder's `events.xml`:
+   - `InfectedHorde_Small`, `InfectedHorde_Medium`, `InfectedHorde_Large` (custom horde tiers)
+   - `InfectedCity`, `InfectedCityTier1`, `InfectedVillage`, `InfectedVillageTier1` (civilian zones)
+   - `InfectedArmy`, `InfectedArmyHard` (military zones)
+   - `InfectedIndustrial`, `InfectedPolice`, `InfectedMedic`, `InfectedReligious` (specialty zones)
+   - `InfectedNBC`, `InfectedPrisoner`, `InfectedFirefighter` (rare zones)
+   - `InfectedSolitude` (wilderness & road corridors)
 3. Save and restart.
 
 ### Applying Loot Scarcity
@@ -239,7 +245,7 @@ mpmissions/dayzOffline.chernarusplus/
 
 ## 🧟 Zombie Territory Design — The ATR Math
 
-The `env/zombie_territories.xml` uses **1,037 zones** across Chernarus tuned to three goals:
+The `env/zombie_territories.xml` uses **1,082 zones** across Chernarus tuned to three goals:
 
 ### Goal 1: Route Planning ("See them before you commit")
 
@@ -265,7 +271,26 @@ Permanent zombie presence (`smin`/`smax`) is raised in cities and military zones
 
 ### Goal 3: Wilderness Has Occasional Wanderers ("Nowhere is truly safe")
 
-Wilderness and road corridor zones (`InfectedSolitude`, 693 zones on a 600m grid) keep their low `dmin`/`dmax` values but with larger radii. You may find 2–6 infected wandering the tree-line at any time — enough to force caution on forest roads, not enough to stop you from crossing open ground.
+Wilderness and road corridor zones (`InfectedSolitude`, 738 zones) keep their low `dmin`/`dmax` values but with larger radii. You may find 2–8 infected wandering the tree-line or along a road at any time — enough to force caution, not enough to stop you from crossing open ground.
+
+**Road corridor zones (+30):** Eight zones follow the south coastal highway from Kamenka to Solnichniy; six trace the central northern road through Pustoshka, Lopatino, Kabanino, and Stary/Novy Sobor to Gorka; four cover the western route through Pavlovo and Kozlovka; five run the eastern corridor from Berezino through Krasnostav and Polana; four link the NWAF south to Grishino and Novy; three bridge Novodmitrovsk to Severograd. Every road feels used.
+
+**Gas station, crossroads & landmark POI zones (+15):** `InfectedVillage` zones (smin=1, smax=3 — a few always present) at every major gas station, key crossroads, and popular landmarks including Devil's Castle, Rog Castle, the NWAF south gate, and Tisy approach. Looting a gas station now always means dealing with someone who was there before you.
+
+### How Territory Events Create the "Always From Somewhere New" Feel
+
+The `events.xml` territory events are tuned so clearing a pack never feels like rubber-banding:
+
+- **`init_random="1"`** — every server restart boots zones at randomised counts (not all at minimum), so the map feels organically populated from the first minute, never the same twice.
+- **Non-zero `restock` delays** — after a pack is killed, the engine waits before refilling the budget. When it does refill, it activates a *different* nearby zone, so the next group always approaches from a new direction:
+
+| Event type | Restock delay | Feel |
+|---|---|---|
+| `InfectedCity` | 3 min | Cities are always swarming — new pack from a different block |
+| `InfectedVillage` | 4 min | Kill the square pack, 4 min later one drifts in from the side street |
+| `InfectedArmy` | 5 min | Military comes in waves — clear the yard, next patrol from the barracks |
+| `InfectedArmyHard` | 6 min | Hardened soldiers, slower reform |
+| `InfectedSolitude` | 6 min | Wanderers fade into the tree-line, re-emerge from a different direction |
 
 ### How Horde Events Complement Territory Zones
 
@@ -276,7 +301,7 @@ The `events.xml` horde events (InfectedHorde_Small/Medium/Large) add **on-top-of
 
 ### ZombieMaxCount Headroom
 
-`globals.xml` sets `ZombieMaxCount=5000`. DayZ only activates zones within player proximity, so the total active at any moment scales with player count, not total zone count. On a 30-player server, roughly 150–400 zones are active simultaneously — well within the 5000 cap.
+`globals.xml` sets `ZombieMaxCount=8000`. The 14 territory event nominals total ~1,763 combined — roughly 22% of the cap. DayZ only activates zones within player proximity, so the total active at any moment scales with player count, not total zone count. On a 30-player server, roughly 150–400 zones are active simultaneously — well within the 8000 cap, with plenty of headroom for the 3 horde events running on top.
 
 ---
 
@@ -317,6 +342,8 @@ All values in this configuration are cross-referenced against:
 - [x] ~~Custom `types.xml` with ATR loot scarcity values pre-configured~~ ✓
 - [x] ~~Custom `events.xml` with ATR infected horde events ready to drop in~~ ✓
 - [x] ~~ATR zombie territory configuration (`env/zombie_territories.xml`)~~ ✓
+- [x] ~~Vanilla territory events (`InfectedCity`, `InfectedVillage`, `InfectedArmy`, etc.) with roaming restock tuning~~ ✓
+- [x] ~~Road corridor + POI zones for gas stations, crossroads, and landmarks~~ ✓
 - [ ] Nighttime darkness override — no gamma exploiting
 - [ ] Temperature extremes config — hypothermia is a killer
 - [ ] Companion guide: "Surviving ATR — A Player's Manual"

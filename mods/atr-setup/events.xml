@@ -153,4 +153,256 @@
         </children>
     </event>
 
+    <!-- ============================================================ -->
+    <!-- VANILLA TERRITORY EVENTS                                      -->
+    <!-- These feed the territory zones in env/zombie_territories.xml  -->
+    <!-- Territory zones define WHERE zombies spawn; these events      -->
+    <!-- define HOW MANY the engine maintains server-wide per type.    -->
+    <!--                                                               -->
+    <!-- position=fixed  — engine picks from territory zones, not a   -->
+    <!--                   static position pool.                       -->
+    <!-- init_random=1   — zones start at randomised counts between   -->
+    <!--                   min and nominal so no two server boots feel -->
+    <!--                   the same.                                   -->
+    <!-- restock=Ns      — after a pack is cleared the engine waits N -->
+    <!--                   seconds before filling the budget again;    -->
+    <!--                   it then picks a DIFFERENT nearby zone, so  -->
+    <!--                   the next wave always feels like it came     -->
+    <!--                   from somewhere new rather than rubber-      -->
+    <!--                   banding at the same spot.                   -->
+    <!--                                                               -->
+    <!-- No <children> or <limit> — territory events use the zone     -->
+    <!-- name attribute to select the infected class automatically.   -->
+    <!--                                                               -->
+    <!-- Nominals are ~4-5x vanilla to match ATR's zone count while   -->
+    <!-- staying well under ZombieMaxCount=8000.                      -->
+    <!-- Total nominal across all 14 types ≈ 1,763 (22% of cap).     -->
+    <!-- ============================================================ -->
+
+    <!-- Cities (core dense zones) — 40 InfectedCity zones           -->
+    <!-- restock=180s: cities are always swarming; new pack arrives   -->
+    <!-- from a different block within 3 minutes of a clear          -->
+    <event name="InfectedCity">
+        <nominal>200</nominal>
+        <min>100</min>
+        <max>300</max>
+        <lifetime>3600</lifetime>
+        <restock>180</restock>
+        <saferadius>150</saferadius>
+        <distanceradius>200</distanceradius>
+        <cleanupradius>300</cleanupradius>
+        <flags deletable="0" init_random="1" remove_damaged="1"/>
+        <position>fixed</position>
+        <active>1</active>
+    </event>
+
+    <!-- City outskirts / tier1 rings — 6 InfectedCityTier1 zones   -->
+    <!-- restock=240s: outskirts are quieter; packs drift in slower  -->
+    <event name="InfectedCityTier1">
+        <nominal>75</nominal>
+        <min>40</min>
+        <max>110</max>
+        <lifetime>3600</lifetime>
+        <restock>240</restock>
+        <saferadius>100</saferadius>
+        <distanceradius>150</distanceradius>
+        <cleanupradius>250</cleanupradius>
+        <flags deletable="0" init_random="1" remove_damaged="1"/>
+        <position>fixed</position>
+        <active>1</active>
+    </event>
+
+    <!-- Towns and villages (bread-and-butter) — 112 InfectedVillage zones -->
+    <!-- restock=240s: kill one pack in the square, 4 min later a    -->
+    <!-- new group wanders in from a side street                     -->
+    <event name="InfectedVillage">
+        <nominal>300</nominal>
+        <min>150</min>
+        <max>450</max>
+        <lifetime>3600</lifetime>
+        <restock>240</restock>
+        <saferadius>100</saferadius>
+        <distanceradius>150</distanceradius>
+        <cleanupradius>250</cleanupradius>
+        <flags deletable="0" init_random="1" remove_damaged="1"/>
+        <position>fixed</position>
+        <active>1</active>
+    </event>
+
+    <!-- Village outskirts — 55 InfectedVillageTier1 zones           -->
+    <!-- restock=300s: edge-of-town stragglers reform slowly         -->
+    <event name="InfectedVillageTier1">
+        <nominal>150</nominal>
+        <min>75</min>
+        <max>225</max>
+        <lifetime>3600</lifetime>
+        <restock>300</restock>
+        <saferadius>100</saferadius>
+        <distanceradius>150</distanceradius>
+        <cleanupradius>200</cleanupradius>
+        <flags deletable="0" init_random="1" remove_damaged="1"/>
+        <position>fixed</position>
+        <active>1</active>
+    </event>
+
+    <!-- Factories, ports, quarries — 19 InfectedIndustrial zones    -->
+    <!-- restock=240s: workers-turned shuffle in from deeper inside  -->
+    <event name="InfectedIndustrial">
+        <nominal>100</nominal>
+        <min>50</min>
+        <max>150</max>
+        <lifetime>3600</lifetime>
+        <restock>240</restock>
+        <saferadius>100</saferadius>
+        <distanceradius>150</distanceradius>
+        <cleanupradius>250</cleanupradius>
+        <flags deletable="0" init_random="1" remove_damaged="1"/>
+        <position>fixed</position>
+        <active>1</active>
+    </event>
+
+    <!-- Military bases — 28 InfectedArmy zones                      -->
+    <!-- restock=300s: soldiers come in waves — clear the yard, the  -->
+    <!-- next patrol emerges from the barracks 5 min later           -->
+    <event name="InfectedArmy">
+        <nominal>200</nominal>
+        <min>100</min>
+        <max>300</max>
+        <lifetime>7200</lifetime>
+        <restock>300</restock>
+        <saferadius>150</saferadius>
+        <distanceradius>200</distanceradius>
+        <cleanupradius>300</cleanupradius>
+        <flags deletable="0" init_random="1" remove_damaged="1"/>
+        <position>fixed</position>
+        <active>1</active>
+    </event>
+
+    <!-- Elite military (barracks hard zones) — 5 InfectedArmyHard zones -->
+    <!-- restock=360s: hardened soldiers — longer reform gap, but    -->
+    <!-- they always come back                                       -->
+    <event name="InfectedArmyHard">
+        <nominal>60</nominal>
+        <min>30</min>
+        <max>90</max>
+        <lifetime>7200</lifetime>
+        <restock>360</restock>
+        <saferadius>150</saferadius>
+        <distanceradius>200</distanceradius>
+        <cleanupradius>300</cleanupradius>
+        <flags deletable="0" init_random="1" remove_damaged="1"/>
+        <position>fixed</position>
+        <active>1</active>
+    </event>
+
+    <!-- Police stations — 10 InfectedPolice zones                   -->
+    <event name="InfectedPolice">
+        <nominal>60</nominal>
+        <min>30</min>
+        <max>90</max>
+        <lifetime>3600</lifetime>
+        <restock>240</restock>
+        <saferadius>100</saferadius>
+        <distanceradius>150</distanceradius>
+        <cleanupradius>250</cleanupradius>
+        <flags deletable="0" init_random="1" remove_damaged="1"/>
+        <position>fixed</position>
+        <active>1</active>
+    </event>
+
+    <!-- Hospitals and clinics — 8 InfectedMedic zones               -->
+    <event name="InfectedMedic">
+        <nominal>60</nominal>
+        <min>30</min>
+        <max>90</max>
+        <lifetime>3600</lifetime>
+        <restock>240</restock>
+        <saferadius>100</saferadius>
+        <distanceradius>150</distanceradius>
+        <cleanupradius>250</cleanupradius>
+        <flags deletable="0" init_random="1" remove_damaged="1"/>
+        <position>fixed</position>
+        <active>1</active>
+    </event>
+
+    <!-- Churches and shrines — 9 InfectedReligious zones            -->
+    <event name="InfectedReligious">
+        <nominal>35</nominal>
+        <min>18</min>
+        <max>55</max>
+        <lifetime>3600</lifetime>
+        <restock>240</restock>
+        <saferadius>100</saferadius>
+        <distanceradius>130</distanceradius>
+        <cleanupradius>200</cleanupradius>
+        <flags deletable="0" init_random="1" remove_damaged="1"/>
+        <position>fixed</position>
+        <active>1</active>
+    </event>
+
+    <!-- Contaminated / NBC zones — 5 InfectedNBC zones              -->
+    <event name="InfectedNBC">
+        <nominal>30</nominal>
+        <min>15</min>
+        <max>45</max>
+        <lifetime>3600</lifetime>
+        <restock>300</restock>
+        <saferadius>100</saferadius>
+        <distanceradius>130</distanceradius>
+        <cleanupradius>200</cleanupradius>
+        <flags deletable="0" init_random="1" remove_damaged="1"/>
+        <position>fixed</position>
+        <active>1</active>
+    </event>
+
+    <!-- Prisons — 3 InfectedPrisoner zones                          -->
+    <event name="InfectedPrisoner">
+        <nominal>30</nominal>
+        <min>15</min>
+        <max>45</max>
+        <lifetime>3600</lifetime>
+        <restock>300</restock>
+        <saferadius>100</saferadius>
+        <distanceradius>130</distanceradius>
+        <cleanupradius>200</cleanupradius>
+        <flags deletable="0" init_random="1" remove_damaged="1"/>
+        <position>fixed</position>
+        <active>1</active>
+    </event>
+
+    <!-- Fire stations — 4 InfectedFirefighter zones                 -->
+    <event name="InfectedFirefighter">
+        <nominal>35</nominal>
+        <min>18</min>
+        <max>55</max>
+        <lifetime>3600</lifetime>
+        <restock>240</restock>
+        <saferadius>100</saferadius>
+        <distanceradius>130</distanceradius>
+        <cleanupradius>200</cleanupradius>
+        <flags deletable="0" init_random="1" remove_damaged="1"/>
+        <position>fixed</position>
+        <active>1</active>
+    </event>
+
+    <!-- Wilderness, forests, and road corridors — 738 InfectedSolitude zones       -->
+    <!-- DayZ only activates zones within ~500m of a player, so the vast majority   -->
+    <!-- of these 738 zones are dormant at any time. Nominal of 400 is sufficient   -->
+    <!-- to fill the ~50-80 zones that become active near players on a busy server. -->
+    <!-- restock=360s: wanderers fade away and re-emerge from a different tree-line -->
+    <!-- patch 6 minutes later — never the same direction twice                     -->
+    <event name="InfectedSolitude">
+        <nominal>400</nominal>
+        <min>200</min>
+        <max>600</max>
+        <lifetime>3600</lifetime>
+        <restock>360</restock>
+        <saferadius>100</saferadius>
+        <distanceradius>200</distanceradius>
+        <cleanupradius>300</cleanupradius>
+        <flags deletable="0" init_random="1" remove_damaged="1"/>
+        <position>fixed</position>
+        <active>1</active>
+    </event>
+
 </events>
