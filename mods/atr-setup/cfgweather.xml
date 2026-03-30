@@ -1,37 +1,43 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<!-- ATR Setup: Gloomy & Very Foggy Weather Preset -->
+<!-- ATR Setup: Gloomy & Very Foggy w/ Rare Clear Breaks + Brutal Storms -->
 <!-- Verified against: Bohemia Interactive Wiki & scalespeeder reference configs -->
 <weather reset="1" enable="1">
     <overcast>
-        <current actual="0.95" time="0" duration="3600" />
-        <limits min="0.85" max="1.0" />
-        <timelimits min="1800" max="3600" />
-        <changelimits min="0.0" max="0.05" />
+        <!-- Starts heavy overcast; can rarely dip to 0.3 for brief sunshine -->
+        <current actual="0.85" time="0" duration="3600" />
+        <limits min="0.3" max="1.0" />
+        <timelimits min="1800" max="5400" />
+        <changelimits min="0.0" max="0.08" />
     </overcast>
     <fog>
-        <current actual="0.75" time="0" duration="3600" />
-        <limits min="0.5" max="0.9" />
-        <timelimits min="1800" max="3600" />
-        <changelimits min="0.0" max="0.05" />
+        <!-- Normally thick fog; rare clear windows down to 0.1, extreme pea-soup at 0.95 -->
+        <current actual="0.7" time="0" duration="3600" />
+        <limits min="0.1" max="0.95" />
+        <timelimits min="1800" max="5400" />
+        <changelimits min="0.0" max="0.08" />
     </fog>
     <rain>
+        <!-- Light drizzle normally, but can ramp to 0.8 for brutal downpours -->
         <current actual="0.05" time="120" duration="600" />
-        <limits min="0.0" max="0.15" />
-        <timelimits min="600" max="1800" />
-        <changelimits min="0.0" max="0.05" />
-        <thresholds min="0.6" max="1.0" end="120" />
+        <limits min="0.0" max="0.8" />
+        <timelimits min="600" max="2400" />
+        <changelimits min="0.0" max="0.1" />
+        <thresholds min="0.5" max="1.0" end="180" />
     </rain>
     <windMagnitude>
-        <current actual="3.0" time="60" duration="300" />
-        <limits min="1.0" max="8.0" />
-        <timelimits min="300" max="600" />
-        <changelimits min="0.0" max="3.0" />
+        <!-- Calm baseline; storms can push gusts to 15 m/s -->
+        <current actual="2.0" time="60" duration="300" />
+        <limits min="0.5" max="15.0" />
+        <timelimits min="300" max="900" />
+        <changelimits min="0.0" max="5.0" />
     </windMagnitude>
     <windDirection>
+        <!-- Full 360° range; direction can shift quickly during storms -->
         <current actual="0.0" time="60" duration="300" />
         <limits min="-3.14" max="3.14" />
-        <timelimits min="300" max="600" />
-        <changelimits min="-1.57" max="1.57" />
+        <timelimits min="300" max="900" />
+        <changelimits min="-2.0" max="2.0" />
     </windDirection>
-    <storm density="0.8" threshold="0.9" timeout="45"/>
+    <!-- Storms: trigger a bit earlier (0.85), very dense lightning, last 60s -->
+    <storm density="0.9" threshold="0.85" timeout="60"/>
 </weather>
