@@ -405,4 +405,987 @@
         <active>1</active>
     </event>
 
+    <!-- ============================================================ -->
+    <!-- AMBIENT ANIMALS                                               -->
+    <!-- Foxes, hares, and chickens spawning near players.            -->
+    <!-- Vanilla values retained — ambient critters are cosmetic and  -->
+    <!-- don't need ATR tuning.                                        -->
+    <!-- ============================================================ -->
+
+    <!-- Foxes — solitary; appear at field and forest edges           -->
+    <event name="AmbientFox">
+        <nominal>0</nominal>
+        <min>0</min>
+        <max>25</max>
+        <lifetime>33</lifetime>
+        <restock>25</restock>
+        <saferadius>0</saferadius>
+        <distanceradius>80</distanceradius>
+        <cleanupradius>120</cleanupradius>
+        <flags deletable="0" init_random="0" remove_damaged="0"/>
+        <position>fixed</position>
+        <limit>mixed</limit>
+        <active>1</active>
+        <children>
+            <child lootmax="0" lootmin="0" max="0" min="100" type="Animal_VulpesVulpes"/>
+        </children>
+    </event>
+
+    <!-- Hares — skittish, common in open fields; vanilla values      -->
+    <event name="AmbientHare">
+        <nominal>0</nominal>
+        <min>0</min>
+        <max>40</max>
+        <lifetime>33</lifetime>
+        <restock>30</restock>
+        <saferadius>0</saferadius>
+        <distanceradius>20</distanceradius>
+        <cleanupradius>40</cleanupradius>
+        <flags deletable="0" init_random="0" remove_damaged="0"/>
+        <position>fixed</position>
+        <limit>mixed</limit>
+        <active>1</active>
+        <children>
+            <child lootmax="0" lootmin="0" max="0" min="100" type="Animal_LepusEuropaeus"/>
+        </children>
+    </event>
+
+    <!-- Hens — feral chickens roaming abandoned farmyards            -->
+    <event name="AmbientHen">
+        <nominal>3</nominal>
+        <min>0</min>
+        <max>50</max>
+        <lifetime>33</lifetime>
+        <restock>15</restock>
+        <saferadius>0</saferadius>
+        <distanceradius>60</distanceradius>
+        <cleanupradius>100</cleanupradius>
+        <flags deletable="0" init_random="0" remove_damaged="0"/>
+        <position>fixed</position>
+        <limit>mixed</limit>
+        <active>1</active>
+        <children>
+            <child lootmax="0" lootmin="0" max="2" min="1" type="Animal_GallusGallusDomesticus"/>
+            <child lootmax="0" lootmin="0" max="4" min="1" type="Animal_GallusGallusDomesticusF_Brown"/>
+            <child lootmax="0" lootmin="0" max="4" min="1" type="Animal_GallusGallusDomesticusF_Spotted"/>
+            <child lootmax="0" lootmin="0" max="4" min="1" type="Animal_GallusGallusDomesticusF_White"/>
+        </children>
+    </event>
+
+    <!-- ============================================================ -->
+    <!-- ANIMAL HERDS                                                  -->
+    <!-- Wildlife is THRIVING 8 months post-outbreak.                 -->
+    <!-- Nominals boosted ~2-3x vanilla — fewer humans hunting means  -->
+    <!-- herds have grown and apex predators have returned.           -->
+    <!-- Children/types kept exactly vanilla.                          -->
+    <!-- ============================================================ -->
+
+    <!-- Bears — reclaiming abandoned villages and forests            -->
+    <!-- Dangerous! vanilla nominal=0 → ATR: 13                        -->
+    <event name="AnimalBear">
+        <nominal>13</nominal>
+        <min>4</min>
+        <max>6</max>
+        <lifetime>180</lifetime>
+        <restock>0</restock>
+        <saferadius>200</saferadius>
+        <distanceradius>0</distanceradius>
+        <cleanupradius>0</cleanupradius>
+        <flags deletable="0" init_random="0" remove_damaged="1"/>
+        <position>fixed</position>
+        <limit>custom</limit>
+        <active>1</active>
+        <children>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="Animal_UrsusArctos"/>
+        </children>
+    </event>
+
+    <!-- Cows — feral herds roaming abandoned farmland                -->
+    <!-- vanilla nominal=7 → ATR: 15                                  -->
+    <event name="AnimalCow">
+        <nominal>15</nominal>
+        <min>4</min>
+        <max>7</max>
+        <lifetime>180</lifetime>
+        <restock>0</restock>
+        <saferadius>200</saferadius>
+        <distanceradius>0</distanceradius>
+        <cleanupradius>0</cleanupradius>
+        <flags deletable="0" init_random="0" remove_damaged="1"/>
+        <position>fixed</position>
+        <limit>child</limit>
+        <active>1</active>
+        <children>
+            <child lootmax="0" lootmin="0" max="1" min="0" type="Animal_BosTaurusF_Brown"/>
+            <child lootmax="0" lootmin="0" max="1" min="0" type="Animal_BosTaurusF_Spotted"/>
+            <child lootmax="0" lootmin="0" max="1" min="0" type="Animal_BosTaurusF_White"/>
+            <child lootmax="0" lootmin="0" max="1" min="0" type="Animal_BosTaurus_Brown"/>
+            <child lootmax="0" lootmin="0" max="1" min="0" type="Animal_BosTaurus_Spotted"/>
+            <child lootmax="0" lootmin="0" max="1" min="0" type="Animal_BosTaurus_White"/>
+        </children>
+    </event>
+
+    <!-- Deer — populations booming without human hunters             -->
+    <!-- vanilla nominal=9 → ATR: 20                                  -->
+    <event name="AnimalDeer">
+        <nominal>20</nominal>
+        <min>4</min>
+        <max>9</max>
+        <lifetime>180</lifetime>
+        <restock>0</restock>
+        <saferadius>200</saferadius>
+        <distanceradius>0</distanceradius>
+        <cleanupradius>0</cleanupradius>
+        <flags deletable="0" init_random="0" remove_damaged="1"/>
+        <position>fixed</position>
+        <limit>child</limit>
+        <active>1</active>
+        <children>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="Animal_CervusElaphus"/>
+            <child lootmax="0" lootmin="0" max="3" min="1" type="Animal_CervusElaphusF"/>
+        </children>
+    </event>
+
+    <!-- Goats — feral herds; escaped farms during the outbreak chaos -->
+    <!-- vanilla nominal=8 → ATR: 18                                  -->
+    <event name="AnimalGoat">
+        <nominal>18</nominal>
+        <min>3</min>
+        <max>7</max>
+        <lifetime>180</lifetime>
+        <restock>0</restock>
+        <saferadius>200</saferadius>
+        <distanceradius>0</distanceradius>
+        <cleanupradius>0</cleanupradius>
+        <flags deletable="0" init_random="0" remove_damaged="1"/>
+        <position>fixed</position>
+        <limit>child</limit>
+        <active>1</active>
+        <children>
+            <child lootmax="0" lootmin="0" max="3" min="1" type="Animal_CapraHircusF"/>
+            <child lootmax="0" lootmin="0" max="1" min="0" type="Animal_CapraHircus_Black"/>
+            <child lootmax="0" lootmin="0" max="1" min="0" type="Animal_CapraHircus_Brown"/>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="Animal_CapraHircus_White"/>
+        </children>
+    </event>
+
+    <!-- Pigs — feral, rooting through abandoned fields and gardens   -->
+    <!-- vanilla nominal=6 → ATR: 14                                  -->
+    <event name="AnimalPig">
+        <nominal>14</nominal>
+        <min>3</min>
+        <max>5</max>
+        <lifetime>180</lifetime>
+        <restock>0</restock>
+        <saferadius>200</saferadius>
+        <distanceradius>0</distanceradius>
+        <cleanupradius>0</cleanupradius>
+        <flags deletable="0" init_random="0" remove_damaged="1"/>
+        <position>fixed</position>
+        <limit>child</limit>
+        <active>1</active>
+        <children>
+            <child lootmax="0" lootmin="0" max="2" min="1" type="Animal_SusDomesticus"/>
+        </children>
+    </event>
+
+    <!-- Roe Deer — now the most common large animal in Chernarus     -->
+    <!-- vanilla nominal=10 → ATR: 22                                 -->
+    <event name="AnimalRoeDeer">
+        <nominal>22</nominal>
+        <min>5</min>
+        <max>7</max>
+        <lifetime>180</lifetime>
+        <restock>0</restock>
+        <saferadius>200</saferadius>
+        <distanceradius>0</distanceradius>
+        <cleanupradius>0</cleanupradius>
+        <flags deletable="0" init_random="0" remove_damaged="1"/>
+        <position>fixed</position>
+        <limit>child</limit>
+        <active>1</active>
+        <children>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="Animal_CapreolusCapreolus"/>
+            <child lootmax="0" lootmin="0" max="4" min="2" type="Animal_CapreolusCapreolusF"/>
+        </children>
+    </event>
+
+    <!-- Sheep — feral flocks grazing open hillsides                  -->
+    <!-- vanilla nominal=5 → ATR: 12                                  -->
+    <event name="AnimalSheep">
+        <nominal>12</nominal>
+        <min>8</min>
+        <max>12</max>
+        <lifetime>180</lifetime>
+        <restock>0</restock>
+        <saferadius>200</saferadius>
+        <distanceradius>0</distanceradius>
+        <cleanupradius>0</cleanupradius>
+        <flags deletable="0" init_random="0" remove_damaged="1"/>
+        <position>fixed</position>
+        <limit>child</limit>
+        <active>1</active>
+        <children>
+            <child lootmax="0" lootmin="0" max="2" min="1" type="Animal_OvisAries"/>
+            <child lootmax="0" lootmin="0" max="5" min="3" type="Animal_OvisAriesF"/>
+        </children>
+    </event>
+
+    <!-- Wild Boar — aggressive packs thriving in the undergrowth     -->
+    <!-- vanilla nominal=7 → ATR: 16                                  -->
+    <event name="AnimalWildBoar">
+        <nominal>16</nominal>
+        <min>3</min>
+        <max>7</max>
+        <lifetime>180</lifetime>
+        <restock>0</restock>
+        <saferadius>200</saferadius>
+        <distanceradius>0</distanceradius>
+        <cleanupradius>0</cleanupradius>
+        <flags deletable="0" init_random="0" remove_damaged="1"/>
+        <position>fixed</position>
+        <limit>child</limit>
+        <active>1</active>
+        <children>
+            <child lootmax="0" lootmin="0" max="6" min="3" type="Animal_SusScrofa"/>
+        </children>
+    </event>
+
+    <!-- Wolves — apex predators returning in strength. Pack size     -->
+    <!-- boosted; encounter one and you may not walk away intact.     -->
+    <!-- vanilla nominal=8 → ATR: 18                                  -->
+    <event name="AnimalWolf">
+        <nominal>18</nominal>
+        <min>8</min>
+        <max>12</max>
+        <lifetime>180</lifetime>
+        <restock>0</restock>
+        <saferadius>200</saferadius>
+        <distanceradius>0</distanceradius>
+        <cleanupradius>0</cleanupradius>
+        <flags deletable="0" init_random="0" remove_damaged="1"/>
+        <position>fixed</position>
+        <limit>child</limit>
+        <active>1</active>
+        <children>
+            <child lootmax="0" lootmin="0" max="6" min="2" type="Animal_CanisLupus_Grey"/>
+            <child lootmax="0" lootmin="0" max="4" min="0" type="Animal_CanisLupus_White"/>
+        </children>
+    </event>
+
+    <!-- ============================================================ -->
+    <!-- ADDITIONAL INFECTED TERRITORY TYPES                          -->
+    <!-- Same ATR territory pattern as the existing 14 infected       -->
+    <!-- events: position=fixed, init_random=1, no children, no limit.-->
+    <!-- ============================================================ -->
+
+    <!-- Yellow NBC infected — spawns at dynamic contamination zones  -->
+    <!-- active=0: toggled by admin or seasonal events only           -->
+    <!-- Nominal 30 mirrors InfectedNBC                               -->
+    <event name="InfectedNBCYellow">
+        <nominal>30</nominal>
+        <min>15</min>
+        <max>45</max>
+        <lifetime>3600</lifetime>
+        <restock>300</restock>
+        <saferadius>100</saferadius>
+        <distanceradius>130</distanceradius>
+        <cleanupradius>200</cleanupradius>
+        <flags deletable="0" init_random="1" remove_damaged="1"/>
+        <position>fixed</position>
+        <active>0</active>
+    </event>
+
+    <!-- Spec-force police — heavy tactical officers at hard zones    -->
+    <!-- Secondary for StaticPoliceCar and StaticPoliceSituation      -->
+    <event name="InfectedPoliceHard">
+        <nominal>40</nominal>
+        <min>20</min>
+        <max>60</max>
+        <lifetime>3600</lifetime>
+        <restock>300</restock>
+        <saferadius>150</saferadius>
+        <distanceradius>200</distanceradius>
+        <cleanupradius>250</cleanupradius>
+        <flags deletable="0" init_random="1" remove_damaged="1"/>
+        <position>fixed</position>
+        <active>1</active>
+    </event>
+
+    <!-- Santa zombies — seasonal; keep inactive until December       -->
+    <!-- Admins toggle active=1 during Christmas events               -->
+    <event name="InfectedSanta">
+        <nominal>30</nominal>
+        <min>15</min>
+        <max>45</max>
+        <lifetime>3600</lifetime>
+        <restock>240</restock>
+        <saferadius>100</saferadius>
+        <distanceradius>130</distanceradius>
+        <cleanupradius>200</cleanupradius>
+        <flags deletable="0" init_random="1" remove_damaged="1"/>
+        <position>fixed</position>
+        <active>0</active>
+    </event>
+
+    <!-- ============================================================ -->
+    <!-- ITEMS AND LOOT                                                -->
+    <!-- Core engine events — kept exactly at vanilla values.         -->
+    <!-- ============================================================ -->
+
+    <!-- Plank piles — scattered near abandoned construction sites    -->
+    <!-- Vanilla values retained (critical for base-building).        -->
+    <event name="ItemPlanks">
+        <nominal>50</nominal>
+        <min>40</min>
+        <max>50</max>
+        <lifetime>7200</lifetime>
+        <restock>0</restock>
+        <saferadius>250</saferadius>
+        <distanceradius>20</distanceradius>
+        <cleanupradius>100</cleanupradius>
+        <flags deletable="0" init_random="0" remove_damaged="0"/>
+        <position>fixed</position>
+        <limit>mixed</limit>
+        <active>1</active>
+        <children>
+            <child lootmax="0" lootmin="0" max="50" min="30" type="PileOfWoodenPlanks"/>
+        </children>
+    </event>
+
+    <!-- Master loot spawning event — engine-internal, never modify   -->
+    <!-- these values. Kept exactly vanilla (all zeros).              -->
+    <event name="Loot">
+        <nominal>0</nominal>
+        <min>0</min>
+        <max>0</max>
+        <lifetime>0</lifetime>
+        <restock>0</restock>
+        <saferadius>0</saferadius>
+        <distanceradius>0</distanceradius>
+        <cleanupradius>50</cleanupradius>
+        <flags deletable="0" init_random="0" remove_damaged="0"/>
+        <position>fixed</position>
+        <limit>custom</limit>
+        <active>1</active>
+        <children/>
+    </event>
+
+    <!-- ============================================================ -->
+    <!-- STATIC WORLD EVENTS                                          -->
+    <!-- Rotating POI events: crashes, convoys, contaminated zones.   -->
+    <!-- ATR boosts these — 8 months of chaos means more wreckage,    -->
+    <!-- more hot zones, and more reasons to explore off the beaten   -->
+    <!-- path. Children/types kept exactly vanilla.                   -->
+    <!-- ============================================================ -->
+
+    <!-- Supply crates from cargo drops                               -->
+    <!-- vanilla nominal=9 → ATR: 15 (more scattered supply drops)   -->
+    <event name="StaticAirplaneCrate">
+        <nominal>15</nominal>
+        <min>0</min>
+        <max>0</max>
+        <lifetime>1800</lifetime>
+        <restock>0</restock>
+        <saferadius>1000</saferadius>
+        <distanceradius>1</distanceradius>
+        <cleanupradius>1000</cleanupradius>
+        <flags deletable="1" init_random="0" remove_damaged="0"/>
+        <position>fixed</position>
+        <limit>child</limit>
+        <active>1</active>
+        <children>
+            <child lootmax="8" lootmin="4" max="4" min="2" type="StaticObj_Misc_SupplyBox1_DE"/>
+            <child lootmax="8" lootmin="4" max="4" min="2" type="StaticObj_Misc_SupplyBox2_DE"/>
+            <child lootmax="8" lootmin="4" max="4" min="2" type="StaticObj_Misc_SupplyBox3_DE"/>
+        </children>
+    </event>
+
+    <!-- Survivor bonfires — active=0 (admin/seasonal toggle)         -->
+    <!-- Nominal 20 matches vanilla; activate for night events        -->
+    <event name="StaticBonfire">
+        <nominal>20</nominal>
+        <min>0</min>
+        <max>0</max>
+        <lifetime>86400</lifetime>
+        <restock>0</restock>
+        <saferadius>100</saferadius>
+        <distanceradius>5</distanceradius>
+        <cleanupradius>2500</cleanupradius>
+        <secondary>InfectedFirefighter</secondary>
+        <flags deletable="0" init_random="0" remove_damaged="1"/>
+        <position>fixed</position>
+        <limit>child</limit>
+        <active>0</active>
+        <children>
+            <child lootmax="8" lootmin="4" max="20" min="20" type="Bonfire"/>
+        </children>
+    </event>
+
+    <!-- Christmas trees — active=0 (seasonal only)                   -->
+    <!-- Toggle active=1 during December holiday events               -->
+    <event name="StaticChristmasTree">
+        <nominal>13</nominal>
+        <min>0</min>
+        <max>0</max>
+        <lifetime>43200</lifetime>
+        <restock>0</restock>
+        <saferadius>1000</saferadius>
+        <distanceradius>1000</distanceradius>
+        <cleanupradius>1000</cleanupradius>
+        <flags deletable="0" init_random="0" remove_damaged="1"/>
+        <position>uniform</position>
+        <limit>child</limit>
+        <active>0</active>
+        <children>
+            <child lootmax="15" lootmin="10" max="13" min="13" type="ChristmasTree"/>
+        </children>
+    </event>
+
+    <!-- Dynamic contaminated zones — more active than vanilla        -->
+    <!-- Abandoned factories, storage depots, and chemical plants     -->
+    <!-- leaking 8 months in. vanilla min=2 max=4 → ATR: min=3 max=6 -->
+    <event name="StaticContaminatedArea">
+        <nominal>0</nominal>
+        <min>3</min>
+        <max>6</max>
+        <lifetime>2100</lifetime>
+        <restock>0</restock>
+        <saferadius>0</saferadius>
+        <distanceradius>120</distanceradius>
+        <cleanupradius>0</cleanupradius>
+        <flags deletable="1" init_random="1" remove_damaged="0"/>
+        <position>fixed</position>
+        <limit>parent</limit>
+        <active>1</active>
+        <children>
+            <child lootmax="0" lootmin="0" max="4" min="2" type="ContaminatedArea_Dynamic"/>
+        </children>
+    </event>
+
+    <!-- Dev/test fridge event — active=0; exact vanilla values kept  -->
+    <event name="StaticFridgeTest">
+        <nominal>0</nominal>
+        <min>0</min>
+        <max>0</max>
+        <lifetime>0</lifetime>
+        <restock>0</restock>
+        <saferadius>500</saferadius>
+        <distanceradius>500</distanceradius>
+        <cleanupradius>0</cleanupradius>
+        <flags deletable="1" init_random="0" remove_damaged="0"/>
+        <position>fixed</position>
+        <limit>mixed</limit>
+        <active>0</active>
+        <children/>
+    </event>
+
+    <!-- Helicopter crash sites — more wreckage, more high-tier loot  -->
+    <!-- vanilla nominal=3 → ATR: 6                                   -->
+    <event name="StaticHeliCrash">
+        <nominal>6</nominal>
+        <min>0</min>
+        <max>0</max>
+        <lifetime>2100</lifetime>
+        <restock>0</restock>
+        <saferadius>1000</saferadius>
+        <distanceradius>1000</distanceradius>
+        <cleanupradius>1000</cleanupradius>
+        <secondary>InfectedArmy</secondary>
+        <flags deletable="1" init_random="0" remove_damaged="0"/>
+        <position>fixed</position>
+        <limit>child</limit>
+        <active>1</active>
+        <children>
+            <child lootmax="15" lootmin="10" max="3" min="1" type="Wreck_UH1Y"/>
+        </children>
+    </event>
+
+    <!-- Military convoys — ambushed and abandoned across the map     -->
+    <!-- vanilla nominal=5 → ATR: 8                                   -->
+    <event name="StaticMilitaryConvoy">
+        <nominal>8</nominal>
+        <min>0</min>
+        <max>0</max>
+        <lifetime>1800</lifetime>
+        <restock>0</restock>
+        <saferadius>1000</saferadius>
+        <distanceradius>1000</distanceradius>
+        <cleanupradius>1000</cleanupradius>
+        <secondary>InfectedArmy</secondary>
+        <flags deletable="1" init_random="0" remove_damaged="0"/>
+        <position>fixed</position>
+        <limit>child</limit>
+        <active>1</active>
+        <children/>
+    </event>
+
+    <!-- Abandoned police cars — now active in ATR (vanilla active=0) -->
+    <!-- Law enforcement failed 8 months ago; cars sit everywhere     -->
+    <!-- vanilla nominal=10, active=0 → ATR: nominal=15, active=1    -->
+    <event name="StaticPoliceCar">
+        <nominal>15</nominal>
+        <min>0</min>
+        <max>0</max>
+        <lifetime>2500</lifetime>
+        <restock>0</restock>
+        <saferadius>500</saferadius>
+        <distanceradius>500</distanceradius>
+        <cleanupradius>200</cleanupradius>
+        <secondary>InfectedPoliceHard</secondary>
+        <flags deletable="1" init_random="0" remove_damaged="0"/>
+        <position>fixed</position>
+        <limit>child</limit>
+        <active>1</active>
+        <children>
+            <child lootmax="5" lootmin="3" max="5" min="5" type="Land_Wreck_sed01_aban1_police"/>
+            <child lootmax="5" lootmin="3" max="5" min="5" type="Land_Wreck_sed01_aban2_police"/>
+        </children>
+    </event>
+
+    <!-- Police incident scenes — frozen in time since day one        -->
+    <!-- vanilla nominal=5 → ATR: 8                                   -->
+    <event name="StaticPoliceSituation">
+        <nominal>8</nominal>
+        <min>0</min>
+        <max>0</max>
+        <lifetime>1800</lifetime>
+        <restock>0</restock>
+        <saferadius>500</saferadius>
+        <distanceradius>1000</distanceradius>
+        <cleanupradius>1000</cleanupradius>
+        <secondary>InfectedPoliceHard</secondary>
+        <flags deletable="1" init_random="0" remove_damaged="0"/>
+        <position>fixed</position>
+        <limit>child</limit>
+        <active>1</active>
+        <children/>
+    </event>
+
+    <!-- Santa's sleigh crash — active=0 (seasonal Christmas event)   -->
+    <!-- Toggle active=1 during December events                       -->
+    <event name="StaticSantaCrash">
+        <nominal>3</nominal>
+        <min>0</min>
+        <max>0</max>
+        <lifetime>2100</lifetime>
+        <restock>0</restock>
+        <saferadius>1000</saferadius>
+        <distanceradius>1000</distanceradius>
+        <cleanupradius>1000</cleanupradius>
+        <secondary>InfectedSanta</secondary>
+        <flags deletable="1" init_random="0" remove_damaged="0"/>
+        <position>fixed</position>
+        <limit>child</limit>
+        <active>0</active>
+        <children>
+            <child lootmax="15" lootmin="10" max="3" min="1" type="Wreck_SantasSleigh"/>
+        </children>
+    </event>
+
+    <!-- Abandoned trains; weathered and stripped after 8 months     -->
+    <!-- vanilla nominal=3 → ATR: 6; vanilla min=1 retained           -->
+    <event name="StaticTrain">
+        <nominal>6</nominal>
+        <min>1</min>
+        <max>0</max>
+        <lifetime>5400</lifetime>
+        <restock>0</restock>
+        <saferadius>500</saferadius>
+        <distanceradius>1000</distanceradius>
+        <cleanupradius>1000</cleanupradius>
+        <secondary>InfectedIndustrial</secondary>
+        <flags deletable="1" init_random="0" remove_damaged="0"/>
+        <position>fixed</position>
+        <limit>child</limit>
+        <active>1</active>
+        <children/>
+    </event>
+
+    <!-- ============================================================ -->
+    <!-- TRAJECTORY / FORAGING EVENTS                                  -->
+    <!-- Fruit, mushrooms, and stones near players. Slight boost over  -->
+    <!-- vanilla — overgrown vegetation 8 months post-outbreak means  -->
+    <!-- more foraging opportunities. Vanilla active/children kept.   -->
+    <!-- ============================================================ -->
+
+    <!-- Apple trees — untended orchards heavy with fallen fruit      -->
+    <!-- vanilla nominal=140 → ATR: 180                               -->
+    <event name="TrajectoryApple">
+        <nominal>180</nominal>
+        <min>2</min>
+        <max>4</max>
+        <lifetime>180</lifetime>
+        <restock>0</restock>
+        <saferadius>25</saferadius>
+        <distanceradius>100</distanceradius>
+        <cleanupradius>25</cleanupradius>
+        <flags deletable="0" init_random="0" remove_damaged="0"/>
+        <position>player</position>
+        <limit>mixed</limit>
+        <active>1</active>
+        <children>
+            <child lootmax="0" lootmin="0" max="0" min="0" type="Apple"/>
+        </children>
+    </event>
+
+    <!-- Canina berries — active=0 (seasonal); vanilla nominal=140    -->
+    <event name="TrajectoryCanina">
+        <nominal>140</nominal>
+        <min>2</min>
+        <max>4</max>
+        <lifetime>180</lifetime>
+        <restock>0</restock>
+        <saferadius>25</saferadius>
+        <distanceradius>100</distanceradius>
+        <cleanupradius>25</cleanupradius>
+        <flags deletable="0" init_random="0" remove_damaged="0"/>
+        <position>player</position>
+        <limit>mixed</limit>
+        <active>0</active>
+        <children>
+            <child lootmax="0" lootmin="0" max="0" min="0" type="CaninaBerry"/>
+        </children>
+    </event>
+
+    <!-- Coniferous mushrooms — pines thick with fungus after months  -->
+    <!-- of no foot traffic. vanilla nominal=140 → ATR: 180           -->
+    <event name="TrajectoryConiferous">
+        <nominal>180</nominal>
+        <min>2</min>
+        <max>4</max>
+        <lifetime>180</lifetime>
+        <restock>0</restock>
+        <saferadius>25</saferadius>
+        <distanceradius>100</distanceradius>
+        <cleanupradius>25</cleanupradius>
+        <flags deletable="0" init_random="0" remove_damaged="0"/>
+        <position>player</position>
+        <limit>mixed</limit>
+        <active>1</active>
+        <children>
+            <child lootmax="0" lootmin="0" max="0" min="0" type="BoletusMushroom"/>
+            <child lootmax="0" lootmin="0" max="0" min="0" type="MacrolepiotaMushroom"/>
+        </children>
+    </event>
+
+    <!-- Deciduous mushrooms — forest floor carpeted in fungus        -->
+    <!-- vanilla nominal=140 → ATR: 180                               -->
+    <event name="TrajectoryDeciduous">
+        <nominal>180</nominal>
+        <min>2</min>
+        <max>4</max>
+        <lifetime>180</lifetime>
+        <restock>0</restock>
+        <saferadius>25</saferadius>
+        <distanceradius>100</distanceradius>
+        <cleanupradius>25</cleanupradius>
+        <flags deletable="0" init_random="0" remove_damaged="0"/>
+        <position>player</position>
+        <limit>mixed</limit>
+        <active>1</active>
+        <children>
+            <child lootmax="0" lootmin="0" max="0" min="0" type="LactariusMushroom"/>
+        </children>
+    </event>
+
+    <!-- Humus mushrooms — rich undisturbed soil yields abundant fungi -->
+    <!-- vanilla nominal=140 → ATR: 180                               -->
+    <event name="TrajectoryHumus">
+        <nominal>180</nominal>
+        <min>2</min>
+        <max>4</max>
+        <lifetime>180</lifetime>
+        <restock>0</restock>
+        <saferadius>25</saferadius>
+        <distanceradius>100</distanceradius>
+        <cleanupradius>25</cleanupradius>
+        <flags deletable="0" init_random="0" remove_damaged="0"/>
+        <position>player</position>
+        <limit>mixed</limit>
+        <active>1</active>
+        <children>
+            <child lootmax="0" lootmin="0" max="0" min="0" type="AgaricusMushroom"/>
+            <child lootmax="0" lootmin="0" max="0" min="0" type="PleurotusMushroom"/>
+        </children>
+    </event>
+
+    <!-- Pear trees — unpicked for 8 months, fruit dropping freely   -->
+    <!-- vanilla nominal=140 → ATR: 180                               -->
+    <event name="TrajectoryPear">
+        <nominal>180</nominal>
+        <min>2</min>
+        <max>4</max>
+        <lifetime>180</lifetime>
+        <restock>0</restock>
+        <saferadius>25</saferadius>
+        <distanceradius>100</distanceradius>
+        <cleanupradius>25</cleanupradius>
+        <flags deletable="0" init_random="0" remove_damaged="0"/>
+        <position>player</position>
+        <limit>mixed</limit>
+        <active>1</active>
+        <children>
+            <child lootmax="0" lootmin="0" max="0" min="0" type="Pear"/>
+        </children>
+    </event>
+
+    <!-- Plum trees — laden with fruit, branches bowing low           -->
+    <!-- vanilla nominal=140 → ATR: 180                               -->
+    <event name="TrajectoryPlum">
+        <nominal>180</nominal>
+        <min>2</min>
+        <max>4</max>
+        <lifetime>180</lifetime>
+        <restock>0</restock>
+        <saferadius>25</saferadius>
+        <distanceradius>100</distanceradius>
+        <cleanupradius>25</cleanupradius>
+        <flags deletable="0" init_random="0" remove_damaged="0"/>
+        <position>player</position>
+        <limit>mixed</limit>
+        <active>1</active>
+        <children>
+            <child lootmax="0" lootmin="0" max="0" min="0" type="Plum"/>
+        </children>
+    </event>
+
+    <!-- Sambucus (elderberries) — active=0 (seasonal); vanilla=140   -->
+    <event name="TrajectorySambucus">
+        <nominal>140</nominal>
+        <min>2</min>
+        <max>4</max>
+        <lifetime>180</lifetime>
+        <restock>0</restock>
+        <saferadius>25</saferadius>
+        <distanceradius>100</distanceradius>
+        <cleanupradius>25</cleanupradius>
+        <flags deletable="0" init_random="0" remove_damaged="0"/>
+        <position>player</position>
+        <limit>mixed</limit>
+        <active>0</active>
+        <children>
+            <child lootmax="0" lootmin="0" max="0" min="0" type="SambucusBerry"/>
+        </children>
+    </event>
+
+    <!-- Stones — slightly more from eroded, untended ground          -->
+    <!-- vanilla nominal=100 → ATR: 130                               -->
+    <event name="TrajectoryStones">
+        <nominal>130</nominal>
+        <min>1</min>
+        <max>2</max>
+        <lifetime>180</lifetime>
+        <restock>0</restock>
+        <saferadius>25</saferadius>
+        <distanceradius>100</distanceradius>
+        <cleanupradius>25</cleanupradius>
+        <flags deletable="0" init_random="0" remove_damaged="0"/>
+        <position>player</position>
+        <limit>mixed</limit>
+        <active>1</active>
+        <children>
+            <child lootmax="0" lootmin="0" max="0" min="0" type="SmallStone"/>
+        </children>
+    </event>
+
+    <!-- ============================================================ -->
+    <!-- VEHICLE EVENTS                                                -->
+    <!-- Chernarus is FULL of abandoned vehicles — parking lots,      -->
+    <!-- roadsides, driveways, crash sites. People fled on foot       -->
+    <!-- when the fuel ran out or the spark plug blew. The cars are   -->
+    <!-- everywhere; making them driveable is the challenge.          -->
+    <!-- Nominals boosted well above vanilla to reflect this reality. -->
+    <!-- Children/types kept exactly vanilla.                          -->
+    <!--                                                               -->
+    <!-- CONDITION DESIGN (implement in cfgspawnabletypes.xml):        -->
+    <!--  HIGH-TRAFFIC SPAWN POINTS (town centres, main roads, known  -->
+    <!--  loot routes like Elektro/Cherno waterfront, NWAF approach   -->
+    <!--  roads, Berezino docks, Zelenogorsk market square):          -->
+    <!--    → Almost bare: ruined sparkplug, ruined radiator, 0 fuel, -->
+    <!--      battery dead — someone stripped it weeks ago.           -->
+    <!--  REMOTE/HIDDEN SPAWN POINTS (forest tracks, farm back-lanes, -->
+    <!--  dead-end roads near Myshkino, mountain hamlets, isolated    -->
+    <!--  barns, the far north coastline):                             -->
+    <!--    → Possible pristine find: all parts intact, battery good, -->
+    <!--      small amount of fuel still in tank — owner simply never -->
+    <!--      came back. Rare; reward for exploring off the path.     -->
+    <!--  This split is enforced through cfgeventspawns.xml (separate -->
+    <!--  named events per tier) and cfgspawnabletypes.xml condition  -->
+    <!--  probabilities — NOT in this file.                           -->
+    <!-- ============================================================ -->
+
+    <!-- Boats — docks, riverbanks, lakesides. Busy ports stripped     -->
+    <!-- bare; remote coves or the northern coastline may still hold  -->
+    <!-- a seaworthy vessel with fuel in the tank.                    -->
+    <!-- vanilla nominal=22 → ATR: 35                                 -->
+    <event name="VehicleBoat">
+        <nominal>35</nominal>
+        <min>25</min>
+        <max>45</max>
+        <lifetime>600</lifetime>
+        <restock>0</restock>
+        <saferadius>500</saferadius>
+        <distanceradius>500</distanceradius>
+        <cleanupradius>200</cleanupradius>
+        <flags deletable="0" init_random="0" remove_damaged="1"/>
+        <position>fixed</position>
+        <limit>mixed</limit>
+        <active>1</active>
+        <children>
+            <child lootmax="0" lootmin="0" max="10" min="6" type="Boat_01_Black"/>
+            <child lootmax="0" lootmin="0" max="10" min="6" type="Boat_01_Blue"/>
+            <child lootmax="0" lootmin="0" max="0" min="0" type="Boat_01_Camo"/>
+            <child lootmax="0" lootmin="0" max="10" min="6" type="Boat_01_Orange"/>
+        </children>
+    </event>
+
+    <!-- Civilian sedans — every town square, car park and main road  -->
+    <!-- has a cluster of these. The Elektro lot, the Cherno marina,  -->
+    <!-- the Balota strip — stripped to bones. A car pulled into a    -->
+    <!-- back-lane barn outside Guglovo? Might still have a sparkplug.-->
+    <!-- vanilla nominal=8 → ATR: 28                                  -->
+    <event name="VehicleCivilianSedan">
+        <nominal>28</nominal>
+        <min>20</min>
+        <max>38</max>
+        <lifetime>300</lifetime>
+        <restock>0</restock>
+        <saferadius>500</saferadius>
+        <distanceradius>500</distanceradius>
+        <cleanupradius>200</cleanupradius>
+        <flags deletable="0" init_random="0" remove_damaged="1"/>
+        <position>fixed</position>
+        <limit>mixed</limit>
+        <active>1</active>
+        <children>
+            <child lootmax="0" lootmin="0" max="5" min="3" type="CivilianSedan"/>
+            <child lootmax="0" lootmin="0" max="5" min="3" type="CivilianSedan_Black"/>
+            <child lootmax="0" lootmin="0" max="5" min="3" type="CivilianSedan_Wine"/>
+        </children>
+    </event>
+
+    <!-- Hatchback 02 — the most common car in Chernarus; every       -->
+    <!-- village has a dozen. Main-road examples are gutted. The one  -->
+    <!-- tucked behind the treeline near Polesovo or in an overgrown  -->
+    <!-- driveway north of Staroye? Could be sitting perfect.         -->
+    <!-- vanilla nominal=8 → ATR: 28                                  -->
+    <event name="VehicleHatchback02">
+        <nominal>28</nominal>
+        <min>20</min>
+        <max>38</max>
+        <lifetime>300</lifetime>
+        <restock>0</restock>
+        <saferadius>500</saferadius>
+        <distanceradius>500</distanceradius>
+        <cleanupradius>200</cleanupradius>
+        <flags deletable="0" init_random="0" remove_damaged="1"/>
+        <position>fixed</position>
+        <limit>mixed</limit>
+        <active>1</active>
+        <children>
+            <child lootmax="0" lootmin="0" max="5" min="3" type="Hatchback_02"/>
+            <child lootmax="0" lootmin="0" max="5" min="3" type="Hatchback_02_Black"/>
+            <child lootmax="0" lootmin="0" max="5" min="3" type="Hatchback_02_Blue"/>
+        </children>
+    </event>
+
+    <!-- Offroad 02 — rarer 4x4; some made it deep into the back     -->
+    <!-- country before running dry. Remote forest tracks and the     -->
+    <!-- northwest hill farms are the best bet for a good one.       -->
+    <!-- vanilla nominal=3 → ATR: 8                                   -->
+    <event name="VehicleOffroad02">
+        <nominal>8</nominal>
+        <min>5</min>
+        <max>12</max>
+        <lifetime>300</lifetime>
+        <restock>0</restock>
+        <saferadius>500</saferadius>
+        <distanceradius>500</distanceradius>
+        <cleanupradius>200</cleanupradius>
+        <flags deletable="0" init_random="0" remove_damaged="1"/>
+        <position>fixed</position>
+        <limit>mixed</limit>
+        <active>1</active>
+        <children>
+            <child lootmax="0" lootmin="0" max="3" min="2" type="Offroad_02"/>
+        </children>
+    </event>
+
+    <!-- Offroad hatchback — workhorse of rural Chernarus, one in     -->
+    <!-- every farmyard. Those on the approach to Zelenogorsk or the  -->
+    <!-- Stary Sobor crossroads are picked clean. The one rusting in  -->
+    <!-- a field track east of Novaya Petrovka may be untouched.      -->
+    <!-- vanilla nominal=8 → ATR: 28                                  -->
+    <event name="VehicleOffroadHatchback">
+        <nominal>28</nominal>
+        <min>20</min>
+        <max>38</max>
+        <lifetime>300</lifetime>
+        <restock>0</restock>
+        <saferadius>500</saferadius>
+        <distanceradius>500</distanceradius>
+        <cleanupradius>200</cleanupradius>
+        <flags deletable="0" init_random="0" remove_damaged="1"/>
+        <position>fixed</position>
+        <limit>mixed</limit>
+        <active>1</active>
+        <children>
+            <child lootmax="0" lootmin="0" max="5" min="3" type="OffroadHatchback"/>
+            <child lootmax="0" lootmin="0" max="5" min="3" type="OffroadHatchback_Blue"/>
+            <child lootmax="0" lootmin="0" max="5" min="3" type="OffroadHatchback_White"/>
+        </children>
+    </event>
+
+    <!-- Sedan 02 — family cars, many still sitting where people left  -->
+    <!-- them when the roads jammed. High-footfall town spawns are    -->
+    <!-- gutted; a sedan on a quiet lane near Kamyshovo or tucked     -->
+    <!-- behind a Sinistok barn might run with just fuel and a part.  -->
+    <!-- vanilla nominal=8 → ATR: 28                                  -->
+    <event name="VehicleSedan02">
+        <nominal>28</nominal>
+        <min>20</min>
+        <max>38</max>
+        <lifetime>300</lifetime>
+        <restock>0</restock>
+        <saferadius>500</saferadius>
+        <distanceradius>500</distanceradius>
+        <cleanupradius>200</cleanupradius>
+        <flags deletable="0" init_random="0" remove_damaged="1"/>
+        <position>fixed</position>
+        <limit>mixed</limit>
+        <active>1</active>
+        <children>
+            <child lootmax="0" lootmin="0" max="5" min="3" type="Sedan_02"/>
+            <child lootmax="0" lootmin="0" max="5" min="3" type="Sedan_02_Grey"/>
+            <child lootmax="0" lootmin="0" max="5" min="3" type="Sedan_02_Red"/>
+        </children>
+    </event>
+
+    <!-- Covered trucks — fewer than sedans but they're out there;   -->
+    <!-- industrial estates, sawmills, farm co-ops. The ones near     -->
+    <!-- Elektro or the Cherno industrial strip are stripped. A truck -->
+    <!-- parked behind the Tisy sawmill or at an NW hamlet depot      -->
+    <!-- could be nearly complete — big reward for the trek.          -->
+    <!-- vanilla nominal=8 → ATR: 18                                  -->
+    <event name="VehicleTruck01">
+        <nominal>18</nominal>
+        <min>12</min>
+        <max>25</max>
+        <lifetime>300</lifetime>
+        <restock>0</restock>
+        <saferadius>500</saferadius>
+        <distanceradius>500</distanceradius>
+        <cleanupradius>200</cleanupradius>
+        <flags deletable="0" init_random="0" remove_damaged="1"/>
+        <position>fixed</position>
+        <limit>mixed</limit>
+        <active>1</active>
+        <children>
+            <child lootmax="0" lootmin="0" max="5" min="3" type="Truck_01_Covered"/>
+            <child lootmax="0" lootmin="0" max="5" min="3" type="Truck_01_Covered_Blue"/>
+            <child lootmax="0" lootmin="0" max="5" min="3" type="Truck_01_Covered_Orange"/>
+        </children>
+    </event>
+
 </events>
