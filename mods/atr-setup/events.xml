@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!-- ================================================================ -->
 <!-- ATR Setup: Custom Infected Horde Events                          -->
-<!-- 3 Tiers: Small (Villages), Medium (Cities/Hospitals), Large (Military) -->
-<!-- These are STATIC events — fixed danger zones across Chernarus    -->
+<!-- 3 Tiers: Small (Villages/Roads), Medium (Cities/Industrial), Large (Military) -->
+<!-- These are STATIC events like HeliCrash — they rotate positions   -->
+<!-- several times per session via restock, picking new random spots  -->
+<!-- from a large pool each cycle.                                    -->
 <!-- 8 months post-outbreak: infected have gathered in packs at POIs  -->
 <!--                                                                  -->
 <!-- MERGE DESTINATION: mpmissions/dayzOffline.chernarusplus/db/events.xml -->
@@ -16,23 +18,25 @@
     <!-- ============================================================ -->
     <!-- TIER 1: InfectedHorde_Small — Stragglers / Roaming Pack      -->
     <!-- Per-location spawn: ~7–16 infected (sum of children min/max) -->
-    <!-- Nominally 8 locations active; up to 15 positions available.  -->
+    <!-- Nominally 12 locations active; up to 45 positions available. -->
+    <!-- Large pool = different spots each restock cycle (every 180s) -->
     <!-- Manageable solo with good gear.                               -->
     <!-- Infected types: rural/village civilians                      -->
-    <!-- Locations: 15 village positions (see cfgeventspawns.xml)     -->
+    <!-- Locations: 45 village/road/gas-station positions             -->
+    <!-- (see cfgeventspawns.xml)                                     -->
     <!-- ============================================================ -->
     <event name="InfectedHorde_Small">
-        <nominal>8</nominal>
-        <min>5</min>
-        <max>10</max>
+        <nominal>12</nominal>
+        <min>8</min>
+        <max>15</max>
         <lifetime>1800</lifetime>
-        <restock>300</restock>
-        <saferadius>50</saferadius>
-        <distanceradius>80</distanceradius>
+        <restock>180</restock>
+        <saferadius>100</saferadius>
+        <distanceradius>200</distanceradius>
         <cleanupradius>150</cleanupradius>
         <flags deletable="0" init_random="0" remove_damaged="1"/>
         <position>static</position>
-        <limit>15</limit>
+        <limit>45</limit>
         <active>1</active>
         <children>
             <!-- Skinny male civilian — most common village straggler -->
@@ -53,23 +57,25 @@
     <!-- ============================================================ -->
     <!-- TIER 2: InfectedHorde_Medium — Overrun Zones                 -->
     <!-- Per-location spawn: ~15–30 infected (sum of children min/max) -->
-    <!-- Nominally 6 locations active; up to 12 positions available.  -->
+    <!-- Nominally 10 locations active; up to 35 positions available. -->
+    <!-- Large pool = different city spots each restock cycle (360s)  -->
     <!-- People fled here for help — the dead stayed.                 -->
     <!-- Infected types: urban civilians, medical staff, police       -->
-    <!-- Locations: 12 city/hospital positions (see cfgeventspawns.xml) -->
+    <!-- Locations: 35 city/industrial positions                      -->
+    <!-- (see cfgeventspawns.xml)                                     -->
     <!-- ============================================================ -->
     <event name="InfectedHorde_Medium">
-        <nominal>6</nominal>
-        <min>4</min>
-        <max>8</max>
+        <nominal>10</nominal>
+        <min>7</min>
+        <max>12</max>
         <lifetime>2400</lifetime>
-        <restock>600</restock>
-        <saferadius>80</saferadius>
-        <distanceradius>120</distanceradius>
+        <restock>360</restock>
+        <saferadius>150</saferadius>
+        <distanceradius>300</distanceradius>
         <cleanupradius>200</cleanupradius>
         <flags deletable="0" init_random="0" remove_damaged="1"/>
         <position>static</position>
-        <limit>12</limit>
+        <limit>35</limit>
         <active>1</active>
         <children>
             <!-- Skinny male citizen A — most common urban infected -->
@@ -98,23 +104,24 @@
     <!-- ============================================================ -->
     <!-- TIER 3: InfectedHorde_Large — Fallen Strongholds             -->
     <!-- Per-location spawn: ~28–57 infected (sum of children min/max) -->
-    <!-- Nominally 4 locations active; up to 12 positions available.  -->
+    <!-- Nominally 6 locations active; up to 30 positions available.  -->
+    <!-- Large pool = different military sites each restock cycle (600s) -->
     <!-- The military made its stand here and failed. Solo = death.   -->
     <!-- Infected types: soldiers, officers, spec-forces, civilians   -->
-    <!-- Locations: 12 military positions (see cfgeventspawns.xml)    -->
+    <!-- Locations: 30 military positions (see cfgeventspawns.xml)    -->
     <!-- ============================================================ -->
     <event name="InfectedHorde_Large">
-        <nominal>4</nominal>
-        <min>3</min>
-        <max>6</max>
+        <nominal>6</nominal>
+        <min>5</min>
+        <max>9</max>
         <lifetime>3600</lifetime>
-        <restock>900</restock>
-        <saferadius>100</saferadius>
-        <distanceradius>200</distanceradius>
+        <restock>600</restock>
+        <saferadius>200</saferadius>
+        <distanceradius>500</distanceradius>
         <cleanupradius>300</cleanupradius>
         <flags deletable="0" init_random="0" remove_damaged="1"/>
         <position>static</position>
-        <limit>12</limit>
+        <limit>30</limit>
         <active>1</active>
         <children>
             <!-- Normal male soldier — the bulk of the military horde -->

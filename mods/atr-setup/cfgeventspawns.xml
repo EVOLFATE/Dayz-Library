@@ -11,9 +11,9 @@
 <!--      bonfires, trains, convoys, boats, planks, animals,          -->
 <!--      infected and all other vanilla events.                      -->
 <!--   2. 3 custom ATR horde events appended after vanilla content:   -->
-<!--        InfectedHorde_Small  — 15 village/minor POI positions     -->
-<!--        InfectedHorde_Medium — 12 city/hospital positions         -->
-<!--        InfectedHorde_Large  — 12 military/airfield positions     -->
+<!--        InfectedHorde_Small  — 45 village/road/gas-station spots  -->
+<!--        InfectedHorde_Medium — 35 city/industrial positions       -->
+<!--        InfectedHorde_Large  — 30 military/airfield positions     -->
 <!--                                                                  -->
 <!-- Pairs with: events.xml for horde definitions                     -->
 <!-- ================================================================ -->
@@ -1522,12 +1522,13 @@
     <!-- ============================================================ -->
 
     <!-- ============================================================ -->
-    <!-- TIER 1: InfectedHorde_Small — Village Stragglers             -->
-    <!-- Small clusters at minor POIs: villages, gas stations,        -->
-    <!-- police stations. Rural infected who gathered at familiar      -->
-    <!-- gathering points when the outbreak hit.                      -->
+    <!-- TIER 1: InfectedHorde_Small — Village Stragglers / Roads     -->
+    <!-- Small clusters at villages, road intersections, gas stations -->
+    <!-- and the Cherno industrial main road. 45-position pool means  -->
+    <!-- each restock cycle (every 180s) picks 12 new random spots.   -->
     <!-- ============================================================ -->
     <event name="InfectedHorde_Small">
+        <!-- === Original 15 village positions === -->
         <!-- Gorka village center -->
         <pos x="9534" z="8870" a="0"/>
         <!-- Polana village -->
@@ -1558,15 +1559,78 @@
         <pos x="4441" z="4684" a="0"/>
         <!-- Drozhino village -->
         <pos x="3388" z="4997" a="0"/>
+        <!-- === New 30 positions: roads, gas stations, village outskirts === -->
+        <!-- Cherno industrial main road — south end -->
+        <pos x="6480" z="2610" a="0"/>
+        <!-- Cherno industrial main road — mid south -->
+        <pos x="6620" z="2820" a="0"/>
+        <!-- Cherno industrial main road — mid north -->
+        <pos x="6760" z="3040" a="0"/>
+        <!-- Cherno industrial main road — north end -->
+        <pos x="6880" z="3180" a="0"/>
+        <!-- Gas station east of Elektro (road to Kamyshovo) -->
+        <pos x="10250" z="2280" a="0"/>
+        <!-- Gas station near Berezino (coastal road) -->
+        <pos x="12500" z="9110" a="0"/>
+        <!-- Gas station near Lopatino (western road) -->
+        <pos x="2980" z="9650" a="0"/>
+        <!-- Gas station near Zelenogorsk -->
+        <pos x="2400" z="5140" a="0"/>
+        <!-- Gas station Kamenka road -->
+        <pos x="1850" z="2300" a="0"/>
+        <!-- Novy Sobor crossroads -->
+        <pos x="7120" z="7800" a="0"/>
+        <!-- Road near VMC (Vybor Military Camp) -->
+        <pos x="3450" z="8820" a="0"/>
+        <!-- Road junction east of Stary Sobor -->
+        <pos x="6580" z="7920" a="0"/>
+        <!-- Road south of Kabanino village -->
+        <pos x="5700" z="8650" a="0"/>
+        <!-- Road between Cherno and Elektro (Dubky area) -->
+        <pos x="8780" z="2490" a="0"/>
+        <!-- Road through Mogilevka area -->
+        <pos x="7980" z="5010" a="0"/>
+        <!-- Prigorodki outskirts (road east of Cherno) -->
+        <pos x="7020" z="3350" a="0"/>
+        <!-- Komarovo outskirts — western coastal road -->
+        <pos x="3480" z="2200" a="0"/>
+        <!-- Kamyshovo village outskirts -->
+        <pos x="12480" z="3600" a="0"/>
+        <!-- Krasnostav village area -->
+        <pos x="11150" z="12220" a="0"/>
+        <!-- Gvozdno village -->
+        <pos x="8900" z="11750" a="0"/>
+        <!-- Dubrovka village -->
+        <pos x="9950" z="10830" a="0"/>
+        <!-- Pustoshka village -->
+        <pos x="4070" z="9110" a="0"/>
+        <!-- Kabanino village -->
+        <pos x="5600" z="8700" a="0"/>
+        <!-- Turovo village -->
+        <pos x="6150" z="6700" a="0"/>
+        <!-- Polesovo village -->
+        <pos x="8200" z="9310" a="0"/>
+        <!-- Mogilevka village -->
+        <pos x="7650" z="4760" a="0"/>
+        <!-- Bridge near Solnichniy (northern road) -->
+        <pos x="13150" z="5310" a="0"/>
+        <!-- Elektro road — eastern approach -->
+        <pos x="11200" z="2610" a="0"/>
+        <!-- Road junction near Balota crossroads -->
+        <pos x="4850" z="2900" a="0"/>
+        <!-- Road east of Chernogorsk -->
+        <pos x="7500" z="2700" a="0"/>
     </event>
 
     <!-- ============================================================ -->
     <!-- TIER 2: InfectedHorde_Medium — Overrun City Zones            -->
-    <!-- Medium hordes at locations where people gathered during the  -->
-    <!-- outbreak: hospitals, city centers, supermarkets.             -->
+    <!-- Medium hordes across city POIs: hospitals, city centers,     -->
+    <!-- fire stations, police stations, industrial zones.            -->
+    <!-- 35-position pool — 10 active at once, different every 360s. -->
     <!-- Contested zones — valuable loot nearby but serious presence. -->
     <!-- ============================================================ -->
     <event name="InfectedHorde_Medium">
+        <!-- === Original 12 city/hospital positions === -->
         <!-- Chernogorsk hospital — where the sick came and never left -->
         <pos x="6682" z="2451" a="0"/>
         <!-- Elektrozavodsk hospital -->
@@ -1591,15 +1655,65 @@
         <pos x="6820" z="2566" a="0"/>
         <!-- Elektrozavodsk factory — workers who turned on the job -->
         <pos x="10800" z="2450" a="0"/>
+        <!-- === New 23 city/industrial positions === -->
+        <!-- Cherno city center / town square -->
+        <pos x="6760" z="2720" a="0"/>
+        <!-- Cherno fire station -->
+        <pos x="6580" z="2650" a="0"/>
+        <!-- Cherno industrial — warehouse district -->
+        <pos x="6500" z="2870" a="0"/>
+        <!-- Cherno industrial — main factory block -->
+        <pos x="6680" z="3000" a="0"/>
+        <!-- Cherno port / harbor area -->
+        <pos x="6650" z="2380" a="0"/>
+        <!-- Elektro main street / town center -->
+        <pos x="10530" z="2360" a="0"/>
+        <!-- Elektro police station -->
+        <pos x="10650" z="2470" a="0"/>
+        <!-- Elektro school area -->
+        <pos x="10400" z="2460" a="0"/>
+        <!-- Berezino hospital -->
+        <pos x="12700" z="9460" a="0"/>
+        <!-- Berezino city center -->
+        <pos x="12500" z="9360" a="0"/>
+        <!-- Novodmitrovsk city center -->
+        <pos x="11300" z="14250" a="0"/>
+        <!-- Novodmitrovsk fire station -->
+        <pos x="11150" z="14150" a="0"/>
+        <!-- Severograd city center -->
+        <pos x="8050" z="12720" a="0"/>
+        <!-- Severograd police station -->
+        <pos x="8200" z="12860" a="0"/>
+        <!-- Svetlojarsk police station -->
+        <pos x="13980" z="13400" a="0"/>
+        <!-- Svetlojarsk harbor -->
+        <pos x="14200" z="13210" a="0"/>
+        <!-- Krasnostav city center -->
+        <pos x="11000" z="12310" a="0"/>
+        <!-- Krasnostav market area -->
+        <pos x="11100" z="12450" a="0"/>
+        <!-- Solnichniy city center -->
+        <pos x="13400" z="6200" a="0"/>
+        <!-- Solnichniy industrial area -->
+        <pos x="13250" z="6000" a="0"/>
+        <!-- Zelenogorsk supermarket -->
+        <pos x="2520" z="5100" a="0"/>
+        <!-- Zelenogorsk hospital -->
+        <pos x="2700" z="5260" a="0"/>
+        <!-- Berenzino south — factory/industrial outskirts -->
+        <pos x="12800" z="8900" a="0"/>
     </event>
 
     <!-- ============================================================ -->
     <!-- TIER 3: InfectedHorde_Large — Fallen Military Strongholds    -->
-    <!-- Massive hordes where the military made its last stand and     -->
-    <!-- failed. Endgame danger zones — solo entry is suicide.        -->
+    <!-- Massive hordes at military sites: airfields, barracks,       -->
+    <!-- tent camps, checkpoints. 30-position pool — 6 active at     -->
+    <!-- once, cycling every 600s across different military zones.    -->
+    <!-- Endgame danger zones — solo entry is suicide.                -->
     <!-- Bring a squad, lots of ammo, and a plan.                     -->
     <!-- ============================================================ -->
     <event name="InfectedHorde_Large">
+        <!-- === Original 12 military positions === -->
         <!-- NW Airfield (NWAF) center — the military's main staging ground -->
         <pos x="4642" z="10247" a="0"/>
         <!-- NW Airfield south barracks — soldiers who never evacuated -->
@@ -1624,6 +1738,43 @@
         <pos x="12242" z="14626" a="0"/>
         <!-- Zeleno military — western garrison, communications hub -->
         <pos x="2818" z="5302" a="0"/>
+        <!-- === New 18 military positions === -->
+        <!-- NWAF ATC tower area — air traffic control, last transmissions -->
+        <pos x="4700" z="10060" a="0"/>
+        <!-- NWAF hangar row east — armored vehicles, overrun crew -->
+        <pos x="5100" z="10150" a="0"/>
+        <!-- NWAF hangar row west — maintenance crews who turned -->
+        <pos x="4300" z="10300" a="0"/>
+        <!-- NWAF east barracks — last holdout before the perimeter fell -->
+        <pos x="4920" z="9700" a="0"/>
+        <!-- Tisy main barracks — disciplined last stand, failed -->
+        <pos x="1900" z="14850" a="0"/>
+        <!-- Tisy military checkpoint — gate guard who never left -->
+        <pos x="2050" z="14360" a="0"/>
+        <!-- NE Airfield hangar row -->
+        <pos x="12050" z="12760" a="0"/>
+        <!-- NE Airfield barracks / tents -->
+        <pos x="11900" z="12420" a="0"/>
+        <!-- Kamensk military south compound -->
+        <pos x="12100" z="14360" a="0"/>
+        <!-- Kamensk military north outpost -->
+        <pos x="12380" z="14820" a="0"/>
+        <!-- Balota hangar area -->
+        <pos x="4600" z="2390" a="0"/>
+        <!-- Balota ATC / control building -->
+        <pos x="4970" z="2660" a="0"/>
+        <!-- Myshkino camp south — satellite position -->
+        <pos x="2450" z="8110" a="0"/>
+        <!-- Myshkino camp north — command tent cluster -->
+        <pos x="2680" z="8620" a="0"/>
+        <!-- Vybor military east perimeter -->
+        <pos x="4050" z="8720" a="0"/>
+        <!-- Vybor military south gate -->
+        <pos x="3720" z="8610" a="0"/>
+        <!-- Military checkpoint south NWAF (road approach) -->
+        <pos x="4500" z="9410" a="0"/>
+        <!-- Military checkpoint near Lopatino -->
+        <pos x="2800" z="9960" a="0"/>
     </event>
 
 </eventposdef>
