@@ -17,8 +17,8 @@
 
     <!-- ============================================================ -->
     <!-- TIER 1: InfectedHorde_Small — Stragglers / Roaming Pack      -->
-    <!-- Per-location spawn: ~7–16 infected (sum of children min/max) -->
-    <!-- Nominally 12 locations active; up to 45 positions available. -->
+    <!-- Per-location spawn: ~6–9 infected (sum of children min/max)  -->
+    <!-- Nominally 7 locations active; up to 45 positions available.  -->
     <!-- Large pool = different spots each restock cycle (every 180s) -->
     <!-- Manageable solo with good gear.                               -->
     <!-- Infected types: rural/village civilians                      -->
@@ -26,9 +26,9 @@
     <!-- (see cfgeventspawns.xml)                                     -->
     <!-- ============================================================ -->
     <event name="InfectedHorde_Small">
-        <nominal>12</nominal>
-        <min>8</min>
-        <max>15</max>
+        <nominal>7</nominal>
+        <min>5</min>
+        <max>9</max>
         <lifetime>1800</lifetime>
         <restock>180</restock>
         <saferadius>100</saferadius>
@@ -40,24 +40,24 @@
         <active>1</active>
         <children>
             <!-- Skinny male civilian — most common village straggler -->
-            <child lootmax="0" lootmin="0" max="4" min="2" type="ZmbM_CitizenASkinny"/>
+            <child lootmax="0" lootmin="0" max="2" min="1" type="ZmbM_CitizenASkinny"/>
             <!-- Fat farmer — common in rural areas -->
-            <child lootmax="0" lootmin="0" max="3" min="1" type="ZmbM_FarmerFat"/>
+            <child lootmax="0" lootmin="0" max="2" min="1" type="ZmbM_FarmerFat"/>
             <!-- Old village woman — slower but numerous -->
-            <child lootmax="0" lootmin="0" max="3" min="1" type="ZmbF_VillagerOld"/>
+            <child lootmax="0" lootmin="0" max="2" min="1" type="ZmbF_VillagerOld"/>
             <!-- Old village man -->
-            <child lootmax="0" lootmin="0" max="2" min="1" type="ZmbM_VillagerOld"/>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="ZmbM_VillagerOld"/>
             <!-- Normal female civilian -->
-            <child lootmax="0" lootmin="0" max="2" min="1" type="ZmbF_CitizenANormal"/>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="ZmbF_CitizenANormal"/>
             <!-- Hermit — loner type found on village outskirts -->
-            <child lootmax="0" lootmin="0" max="2" min="1" type="ZmbM_HermitSkinny"/>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="ZmbM_HermitSkinny"/>
         </children>
     </event>
 
     <!-- ============================================================ -->
     <!-- TIER 2: InfectedHorde_Medium — Overrun Zones                 -->
-    <!-- Per-location spawn: ~15–30 infected (sum of children min/max) -->
-    <!-- Nominally 10 locations active; up to 35 positions available. -->
+    <!-- Per-location spawn: ~12–17 infected (sum of children min/max) -->
+    <!-- Nominally 6 locations active; up to 35 positions available.  -->
     <!-- Large pool = different city spots each restock cycle (360s)  -->
     <!-- People fled here for help — the dead stayed.                 -->
     <!-- Infected types: urban civilians, medical staff, police       -->
@@ -65,9 +65,9 @@
     <!-- (see cfgeventspawns.xml)                                     -->
     <!-- ============================================================ -->
     <event name="InfectedHorde_Medium">
-        <nominal>10</nominal>
-        <min>7</min>
-        <max>12</max>
+        <nominal>6</nominal>
+        <min>4</min>
+        <max>7</max>
         <lifetime>2400</lifetime>
         <restock>360</restock>
         <saferadius>150</saferadius>
@@ -79,41 +79,41 @@
         <active>1</active>
         <children>
             <!-- Skinny male citizen A — most common urban infected -->
-            <child lootmax="0" lootmin="0" max="5" min="3" type="ZmbM_CitizenASkinny"/>
+            <child lootmax="0" lootmin="0" max="3" min="2" type="ZmbM_CitizenASkinny"/>
             <!-- Skinny male citizen B — urban variant -->
-            <child lootmax="0" lootmin="0" max="4" min="2" type="ZmbM_CitizenBSkinny"/>
+            <child lootmax="0" lootmin="0" max="2" min="1" type="ZmbM_CitizenBSkinny"/>
             <!-- Normal female citizen A -->
-            <child lootmax="0" lootmin="0" max="4" min="2" type="ZmbF_CitizenANormal"/>
+            <child lootmax="0" lootmin="0" max="2" min="1" type="ZmbF_CitizenANormal"/>
             <!-- Skinny female citizen B -->
-            <child lootmax="0" lootmin="0" max="3" min="2" type="ZmbF_CitizenBSkinny"/>
+            <child lootmax="0" lootmin="0" max="2" min="2" type="ZmbF_CitizenBSkinny"/>
             <!-- Fat doctor — hospital staff who turned -->
-            <child lootmax="0" lootmin="0" max="3" min="1" type="ZmbM_DoctorFat"/>
+            <child lootmax="0" lootmin="0" max="2" min="1" type="ZmbM_DoctorFat"/>
             <!-- Fat nurse — hospital staff who turned -->
-            <child lootmax="0" lootmin="0" max="2" min="1" type="ZmbF_NurseFat"/>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="ZmbF_NurseFat"/>
             <!-- Skinny male patient — infected while seeking treatment -->
-            <child lootmax="0" lootmin="0" max="3" min="1" type="ZmbM_PatientSkinny"/>
+            <child lootmax="0" lootmin="0" max="2" min="1" type="ZmbM_PatientSkinny"/>
             <!-- Old female patient -->
-            <child lootmax="0" lootmin="0" max="2" min="1" type="ZmbF_PatientOld"/>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="ZmbF_PatientOld"/>
             <!-- Fat policeman — law enforcement overwhelmed -->
-            <child lootmax="0" lootmin="0" max="2" min="1" type="ZmbM_PolicemanFat"/>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="ZmbM_PolicemanFat"/>
             <!-- Normal policewoman -->
-            <child lootmax="0" lootmin="0" max="2" min="1" type="ZmbF_PoliceWomanNormal"/>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="ZmbF_PoliceWomanNormal"/>
         </children>
     </event>
 
     <!-- ============================================================ -->
     <!-- TIER 3: InfectedHorde_Large — Fallen Strongholds             -->
-    <!-- Per-location spawn: ~28–57 infected (sum of children min/max) -->
-    <!-- Nominally 6 locations active; up to 30 positions available.  -->
+    <!-- Per-location spawn: ~18–36 infected (sum of children min/max) -->
+    <!-- Nominally 3 locations active; up to 30 positions available.  -->
     <!-- Large pool = different military sites each restock cycle (600s) -->
     <!-- The military made its stand here and failed. Solo = death.   -->
     <!-- Infected types: soldiers, officers, spec-forces, civilians   -->
     <!-- Locations: 30 military positions (see cfgeventspawns.xml)    -->
     <!-- ============================================================ -->
     <event name="InfectedHorde_Large">
-        <nominal>6</nominal>
-        <min>5</min>
-        <max>9</max>
+        <nominal>3</nominal>
+        <min>2</min>
+        <max>5</max>
         <lifetime>3600</lifetime>
         <restock>600</restock>
         <saferadius>200</saferadius>
@@ -125,31 +125,31 @@
         <active>1</active>
         <children>
             <!-- Normal male soldier — the bulk of the military horde -->
-            <child lootmax="0" lootmin="0" max="10" min="6" type="ZmbM_SoldierNormal"/>
+            <child lootmax="0" lootmin="0" max="6" min="3" type="ZmbM_SoldierNormal"/>
             <!-- Soldier officer — command staff who turned -->
-            <child lootmax="0" lootmin="0" max="5" min="3" type="ZmbM_SoldierOfficer"/>
+            <child lootmax="0" lootmin="0" max="3" min="2" type="ZmbM_SoldierOfficer"/>
             <!-- Normal female soldier -->
-            <child lootmax="0" lootmin="0" max="4" min="2" type="ZmbF_SoldierNormal"/>
+            <child lootmax="0" lootmin="0" max="2" min="1" type="ZmbF_SoldierNormal"/>
             <!-- Skinny male citizen A — civilians caught at the base -->
-            <child lootmax="0" lootmin="0" max="8" min="4" type="ZmbM_CitizenASkinny"/>
+            <child lootmax="0" lootmin="0" max="5" min="2" type="ZmbM_CitizenASkinny"/>
             <!-- Skinny male citizen B -->
-            <child lootmax="0" lootmin="0" max="5" min="3" type="ZmbM_CitizenBSkinny"/>
+            <child lootmax="0" lootmin="0" max="3" min="2" type="ZmbM_CitizenBSkinny"/>
             <!-- Normal female citizen A -->
-            <child lootmax="0" lootmin="0" max="4" min="2" type="ZmbF_CitizenANormal"/>
+            <child lootmax="0" lootmin="0" max="2" min="1" type="ZmbF_CitizenANormal"/>
             <!-- Skinny male patient — wounded brought to the base -->
-            <child lootmax="0" lootmin="0" max="4" min="2" type="ZmbM_PatientSkinny"/>
+            <child lootmax="0" lootmin="0" max="2" min="1" type="ZmbM_PatientSkinny"/>
             <!-- Fat policeman — law enforcement that joined the defense -->
-            <child lootmax="0" lootmin="0" max="3" min="1" type="ZmbM_PolicemanFat"/>
+            <child lootmax="0" lootmin="0" max="2" min="1" type="ZmbM_PolicemanFat"/>
             <!-- Spec-force policeman — elite forces who fell -->
-            <child lootmax="0" lootmin="0" max="3" min="1" type="ZmbM_PolicemanSpecForce"/>
+            <child lootmax="0" lootmin="0" max="2" min="1" type="ZmbM_PolicemanSpecForce"/>
             <!-- Normal male firefighter — emergency response who turned -->
-            <child lootmax="0" lootmin="0" max="3" min="1" type="ZmbM_FirefighterNormal"/>
+            <child lootmax="0" lootmin="0" max="2" min="1" type="ZmbM_FirefighterNormal"/>
             <!-- Normal female firefighter -->
-            <child lootmax="0" lootmin="0" max="3" min="1" type="ZmbF_FirefighterNormal"/>
+            <child lootmax="0" lootmin="0" max="2" min="1" type="ZmbF_FirefighterNormal"/>
             <!-- Normal male paramedic — medics attached to military -->
-            <child lootmax="0" lootmin="0" max="3" min="1" type="ZmbM_ParamedicNormal"/>
+            <child lootmax="0" lootmin="0" max="2" min="1" type="ZmbM_ParamedicNormal"/>
             <!-- Normal female paramedic -->
-            <child lootmax="0" lootmin="0" max="2" min="1" type="ZmbF_ParamedicNormal"/>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="ZmbF_ParamedicNormal"/>
         </children>
     </event>
 
@@ -176,16 +176,16 @@
     <!--                                                               -->
     <!-- Nominals are ~4-5x vanilla to match ATR's zone count while   -->
     <!-- staying well under ZombieMaxCount=8000.                      -->
-    <!-- Total nominal across all 14 types ≈ 1,763 (22% of cap).     -->
+    <!-- Total nominal across all 14 types ≈ 1,058 (13% of cap).     -->
     <!-- ============================================================ -->
 
     <!-- Cities (core dense zones) — 40 InfectedCity zones           -->
     <!-- restock=180s: cities are always swarming; new pack arrives   -->
     <!-- from a different block within 3 minutes of a clear          -->
     <event name="InfectedCity">
-        <nominal>200</nominal>
-        <min>100</min>
-        <max>300</max>
+        <nominal>120</nominal>
+        <min>60</min>
+        <max>180</max>
         <lifetime>3600</lifetime>
         <restock>180</restock>
         <saferadius>150</saferadius>
@@ -199,9 +199,9 @@
     <!-- City outskirts / tier1 rings — 6 InfectedCityTier1 zones   -->
     <!-- restock=240s: outskirts are quieter; packs drift in slower  -->
     <event name="InfectedCityTier1">
-        <nominal>75</nominal>
-        <min>40</min>
-        <max>110</max>
+        <nominal>45</nominal>
+        <min>24</min>
+        <max>65</max>
         <lifetime>3600</lifetime>
         <restock>240</restock>
         <saferadius>100</saferadius>
@@ -216,9 +216,9 @@
     <!-- restock=240s: kill one pack in the square, 4 min later a    -->
     <!-- new group wanders in from a side street                     -->
     <event name="InfectedVillage">
-        <nominal>300</nominal>
-        <min>150</min>
-        <max>450</max>
+        <nominal>180</nominal>
+        <min>90</min>
+        <max>270</max>
         <lifetime>3600</lifetime>
         <restock>240</restock>
         <saferadius>100</saferadius>
@@ -232,9 +232,9 @@
     <!-- Village outskirts — 55 InfectedVillageTier1 zones           -->
     <!-- restock=300s: edge-of-town stragglers reform slowly         -->
     <event name="InfectedVillageTier1">
-        <nominal>150</nominal>
-        <min>75</min>
-        <max>225</max>
+        <nominal>90</nominal>
+        <min>45</min>
+        <max>135</max>
         <lifetime>3600</lifetime>
         <restock>300</restock>
         <saferadius>100</saferadius>
@@ -248,9 +248,9 @@
     <!-- Factories, ports, quarries — 19 InfectedIndustrial zones    -->
     <!-- restock=240s: workers-turned shuffle in from deeper inside  -->
     <event name="InfectedIndustrial">
-        <nominal>100</nominal>
-        <min>50</min>
-        <max>150</max>
+        <nominal>60</nominal>
+        <min>30</min>
+        <max>90</max>
         <lifetime>3600</lifetime>
         <restock>240</restock>
         <saferadius>100</saferadius>
@@ -265,9 +265,9 @@
     <!-- restock=300s: soldiers come in waves — clear the yard, the  -->
     <!-- next patrol emerges from the barracks 5 min later           -->
     <event name="InfectedArmy">
-        <nominal>200</nominal>
-        <min>100</min>
-        <max>300</max>
+        <nominal>120</nominal>
+        <min>60</min>
+        <max>180</max>
         <lifetime>7200</lifetime>
         <restock>300</restock>
         <saferadius>150</saferadius>
@@ -282,9 +282,9 @@
     <!-- restock=360s: hardened soldiers — longer reform gap, but    -->
     <!-- they always come back                                       -->
     <event name="InfectedArmyHard">
-        <nominal>60</nominal>
-        <min>30</min>
-        <max>90</max>
+        <nominal>35</nominal>
+        <min>18</min>
+        <max>55</max>
         <lifetime>7200</lifetime>
         <restock>360</restock>
         <saferadius>150</saferadius>
@@ -297,9 +297,9 @@
 
     <!-- Police stations — 10 InfectedPolice zones                   -->
     <event name="InfectedPolice">
-        <nominal>60</nominal>
-        <min>30</min>
-        <max>90</max>
+        <nominal>35</nominal>
+        <min>18</min>
+        <max>55</max>
         <lifetime>3600</lifetime>
         <restock>240</restock>
         <saferadius>100</saferadius>
@@ -312,9 +312,9 @@
 
     <!-- Hospitals and clinics — 8 InfectedMedic zones               -->
     <event name="InfectedMedic">
-        <nominal>60</nominal>
-        <min>30</min>
-        <max>90</max>
+        <nominal>35</nominal>
+        <min>18</min>
+        <max>55</max>
         <lifetime>3600</lifetime>
         <restock>240</restock>
         <saferadius>100</saferadius>
@@ -327,9 +327,9 @@
 
     <!-- Churches and shrines — 9 InfectedReligious zones            -->
     <event name="InfectedReligious">
-        <nominal>35</nominal>
-        <min>18</min>
-        <max>55</max>
+        <nominal>20</nominal>
+        <min>10</min>
+        <max>33</max>
         <lifetime>3600</lifetime>
         <restock>240</restock>
         <saferadius>100</saferadius>
@@ -342,9 +342,9 @@
 
     <!-- Contaminated / NBC zones — 5 InfectedNBC zones              -->
     <event name="InfectedNBC">
-        <nominal>30</nominal>
-        <min>15</min>
-        <max>45</max>
+        <nominal>18</nominal>
+        <min>9</min>
+        <max>27</max>
         <lifetime>3600</lifetime>
         <restock>300</restock>
         <saferadius>100</saferadius>
@@ -357,9 +357,9 @@
 
     <!-- Prisons — 3 InfectedPrisoner zones                          -->
     <event name="InfectedPrisoner">
-        <nominal>30</nominal>
-        <min>15</min>
-        <max>45</max>
+        <nominal>18</nominal>
+        <min>9</min>
+        <max>27</max>
         <lifetime>3600</lifetime>
         <restock>300</restock>
         <saferadius>100</saferadius>
@@ -372,9 +372,9 @@
 
     <!-- Fire stations — 4 InfectedFirefighter zones                 -->
     <event name="InfectedFirefighter">
-        <nominal>35</nominal>
-        <min>18</min>
-        <max>55</max>
+        <nominal>20</nominal>
+        <min>10</min>
+        <max>33</max>
         <lifetime>3600</lifetime>
         <restock>240</restock>
         <saferadius>100</saferadius>
@@ -387,14 +387,14 @@
 
     <!-- Wilderness, forests, and road corridors — 738 InfectedSolitude zones       -->
     <!-- DayZ only activates zones within ~500m of a player, so the vast majority   -->
-    <!-- of these 738 zones are dormant at any time. Nominal of 400 is sufficient   -->
+    <!-- of these 738 zones are dormant at any time. Nominal of 240 is sufficient   -->
     <!-- to fill the ~50-80 zones that become active near players on a busy server. -->
     <!-- restock=360s: wanderers fade away and re-emerge from a different tree-line -->
     <!-- patch 6 minutes later — never the same direction twice                     -->
     <event name="InfectedSolitude">
-        <nominal>400</nominal>
-        <min>200</min>
-        <max>600</max>
+        <nominal>240</nominal>
+        <min>120</min>
+        <max>360</max>
         <lifetime>3600</lifetime>
         <restock>360</restock>
         <saferadius>100</saferadius>
@@ -681,11 +681,11 @@
 
     <!-- Yellow NBC infected — spawns at dynamic contamination zones  -->
     <!-- active=0: toggled by admin or seasonal events only           -->
-    <!-- Nominal 30 mirrors InfectedNBC                               -->
+    <!-- Nominal 18 mirrors InfectedNBC                               -->
     <event name="InfectedNBCYellow">
-        <nominal>30</nominal>
-        <min>15</min>
-        <max>45</max>
+        <nominal>18</nominal>
+        <min>9</min>
+        <max>27</max>
         <lifetime>3600</lifetime>
         <restock>300</restock>
         <saferadius>100</saferadius>
@@ -699,9 +699,9 @@
     <!-- Spec-force police — heavy tactical officers at hard zones    -->
     <!-- Secondary for StaticPoliceCar and StaticPoliceSituation      -->
     <event name="InfectedPoliceHard">
-        <nominal>40</nominal>
-        <min>20</min>
-        <max>60</max>
+        <nominal>24</nominal>
+        <min>12</min>
+        <max>36</max>
         <lifetime>3600</lifetime>
         <restock>300</restock>
         <saferadius>150</saferadius>
@@ -715,9 +715,9 @@
     <!-- Santa zombies — seasonal; keep inactive until December       -->
     <!-- Admins toggle active=1 during Christmas events               -->
     <event name="InfectedSanta">
-        <nominal>30</nominal>
-        <min>15</min>
-        <max>45</max>
+        <nominal>18</nominal>
+        <min>9</min>
+        <max>27</max>
         <lifetime>3600</lifetime>
         <restock>240</restock>
         <saferadius>100</saferadius>
