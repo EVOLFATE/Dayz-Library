@@ -35,8 +35,8 @@
         <distanceradius>200</distanceradius>
         <cleanupradius>150</cleanupradius>
         <flags deletable="0" init_random="0" remove_damaged="1"/>
-        <position>static</position>
-        <limit>45</limit>
+        <position>fixed</position>
+        <limit>custom</limit>
         <active>1</active>
         <children>
             <!-- Skinny male civilian — most common village straggler -->
@@ -74,8 +74,8 @@
         <distanceradius>300</distanceradius>
         <cleanupradius>200</cleanupradius>
         <flags deletable="0" init_random="0" remove_damaged="1"/>
-        <position>static</position>
-        <limit>35</limit>
+        <position>fixed</position>
+        <limit>custom</limit>
         <active>1</active>
         <children>
             <!-- Skinny male citizen A — most common urban infected -->
@@ -120,8 +120,8 @@
         <distanceradius>500</distanceradius>
         <cleanupradius>300</cleanupradius>
         <flags deletable="0" init_random="0" remove_damaged="1"/>
-        <position>static</position>
-        <limit>30</limit>
+        <position>fixed</position>
+        <limit>custom</limit>
         <active>1</active>
         <children>
             <!-- Normal male soldier — the bulk of the military horde -->
@@ -427,7 +427,7 @@
         <limit>mixed</limit>
         <active>1</active>
         <children>
-            <child lootmax="0" lootmin="0" max="0" min="100" type="Animal_VulpesVulpes"/>
+            <child lootmax="0" lootmin="0" max="0" min="0" type="Animal_VulpesVulpes"/>
         </children>
     </event>
 
@@ -446,7 +446,7 @@
         <limit>mixed</limit>
         <active>1</active>
         <children>
-            <child lootmax="0" lootmin="0" max="0" min="100" type="Animal_LepusEuropaeus"/>
+            <child lootmax="0" lootmin="0" max="0" min="0" type="Animal_LepusEuropaeus"/>
         </children>
     </event>
 
@@ -481,10 +481,10 @@
     <!-- ============================================================ -->
 
     <!-- Bears — reclaiming abandoned villages and forests            -->
-    <!-- Dangerous! vanilla nominal=0 → ATR: 13                        -->
+    <!-- Dangerous! vanilla nominal=0 → ATR: 6 -->
     <event name="AnimalBear">
-        <nominal>13</nominal>
-        <min>4</min>
+        <nominal>6</nominal>
+        <min>2</min>
         <max>6</max>
         <lifetime>180</lifetime>
         <restock>0</restock>
@@ -915,7 +915,7 @@
         <secondary>InfectedArmy</secondary>
         <flags deletable="1" init_random="0" remove_damaged="0"/>
         <position>fixed</position>
-        <limit>child</limit>
+        <limit>mixed</limit>
         <active>1</active>
         <children/>
     </event>
@@ -957,7 +957,7 @@
         <secondary>InfectedPoliceHard</secondary>
         <flags deletable="1" init_random="0" remove_damaged="0"/>
         <position>fixed</position>
-        <limit>child</limit>
+        <limit>mixed</limit>
         <active>1</active>
         <children/>
     </event>
@@ -997,7 +997,7 @@
         <secondary>InfectedIndustrial</secondary>
         <flags deletable="1" init_random="0" remove_damaged="0"/>
         <position>fixed</position>
-        <limit>child</limit>
+        <limit>mixed</limit>
         <active>1</active>
         <children/>
     </event>

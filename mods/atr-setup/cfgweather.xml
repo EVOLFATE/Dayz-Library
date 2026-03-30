@@ -10,9 +10,9 @@
         <changelimits min="0.0" max="0.08" />
     </overcast>
     <fog>
-        <!-- Normally thick fog; rare clear windows down to 0.1, extreme pea-soup at 0.95 -->
+        <!-- Normally thick fog; rare thinning down to 0.5, extreme pea-soup at 0.95 — visibility stays under ~200m even at minimum -->
         <current actual="0.7" time="0" duration="3600" />
-        <limits min="0.1" max="0.95" />
+        <limits min="0.5" max="0.95" />
         <timelimits min="1800" max="5400" />
         <changelimits min="0.0" max="0.08" />
     </fog>
