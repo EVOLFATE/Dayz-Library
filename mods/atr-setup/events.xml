@@ -6,6 +6,9 @@
 <!-- several times per session via restock, picking new random spots  -->
 <!-- from a large pool each cycle.                                    -->
 <!-- 8 months post-outbreak: infected have gathered in packs at POIs  -->
+<!-- All child classnames use full variant names (with color/type     -->
+<!-- suffixes) verified against the official Bohemia DayZ Central     -->
+<!-- Economy repository — compatible with all DayZ dedicated servers. -->
 <!--                                                                  -->
 <!-- MERGE DESTINATION: mpmissions/dayzOffline.chernarusplus/db/events.xml -->
 <!-- Copy these three <event> blocks into your mission's events.xml   -->
@@ -40,17 +43,17 @@
         <active>1</active>
         <children>
             <!-- Skinny male civilian — most common village straggler -->
-            <child lootmax="0" lootmin="0" max="2" min="1" type="ZmbM_CitizenASkinny"/>
+            <child lootmax="0" lootmin="0" max="2" min="1" type="ZmbM_CitizenASkinny_Grey"/>
             <!-- Fat farmer — common in rural areas -->
-            <child lootmax="0" lootmin="0" max="2" min="1" type="ZmbM_FarmerFat"/>
+            <child lootmax="0" lootmin="0" max="2" min="1" type="ZmbM_FarmerFat_Green"/>
             <!-- Old village woman — slower but numerous -->
-            <child lootmax="0" lootmin="0" max="2" min="1" type="ZmbF_VillagerOld"/>
+            <child lootmax="0" lootmin="0" max="2" min="1" type="ZmbF_VillagerOld_Green"/>
             <!-- Old village man -->
-            <child lootmax="0" lootmin="0" max="1" min="1" type="ZmbM_VillagerOld"/>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="ZmbM_VillagerOld_Blue"/>
             <!-- Normal female civilian -->
-            <child lootmax="0" lootmin="0" max="1" min="1" type="ZmbF_CitizenANormal"/>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="ZmbF_CitizenANormal_Brown"/>
             <!-- Hermit — loner type found on village outskirts -->
-            <child lootmax="0" lootmin="0" max="1" min="1" type="ZmbM_HermitSkinny"/>
+            <child lootmax="0" lootmin="0" max="1" min="1" type="ZmbM_HermitSkinny_Green"/>
         </children>
     </event>
 
@@ -79,11 +82,11 @@
         <active>1</active>
         <children>
             <!-- Skinny male citizen A — most common urban infected -->
-            <child lootmax="0" lootmin="0" max="3" min="2" type="ZmbM_CitizenASkinny"/>
-            <!-- Skinny male citizen B — urban variant -->
-            <child lootmax="0" lootmin="0" max="2" min="1" type="ZmbM_CitizenBSkinny"/>
+            <child lootmax="0" lootmin="0" max="3" min="2" type="ZmbM_CitizenASkinny_Blue"/>
+            <!-- Fat male citizen B — urban variant -->
+            <child lootmax="0" lootmin="0" max="2" min="1" type="ZmbM_CitizenBFat_Blue"/>
             <!-- Normal female citizen A -->
-            <child lootmax="0" lootmin="0" max="2" min="1" type="ZmbF_CitizenANormal"/>
+            <child lootmax="0" lootmin="0" max="2" min="1" type="ZmbF_CitizenANormal_Beige"/>
             <!-- Skinny female citizen B -->
             <child lootmax="0" lootmin="0" max="2" min="2" type="ZmbF_CitizenBSkinny"/>
             <!-- Fat doctor — hospital staff who turned -->
@@ -107,7 +110,7 @@
     <!-- Nominally 3 locations active; up to 30 positions available.  -->
     <!-- Large pool = different military sites each restock cycle (600s) -->
     <!-- The military made its stand here and failed. Solo = death.   -->
-    <!-- Infected types: soldiers, officers, spec-forces, civilians   -->
+    <!-- Infected types: soldiers, patrol troops, civilians, police   -->
     <!-- Locations: 30 military positions (see cfgeventspawns.xml)    -->
     <!-- ============================================================ -->
     <event name="InfectedHorde_Large">
@@ -126,16 +129,16 @@
         <children>
             <!-- Normal male soldier — the bulk of the military horde -->
             <child lootmax="0" lootmin="0" max="6" min="3" type="ZmbM_SoldierNormal"/>
-            <!-- Soldier officer — command staff who turned -->
-            <child lootmax="0" lootmin="0" max="3" min="2" type="ZmbM_SoldierOfficer"/>
-            <!-- Normal female soldier -->
-            <child lootmax="0" lootmin="0" max="2" min="1" type="ZmbF_SoldierNormal"/>
-            <!-- Skinny male citizen A — civilians caught at the base -->
-            <child lootmax="0" lootmin="0" max="5" min="2" type="ZmbM_CitizenASkinny"/>
-            <!-- Skinny male citizen B -->
-            <child lootmax="0" lootmin="0" max="3" min="2" type="ZmbM_CitizenBSkinny"/>
-            <!-- Normal female citizen A -->
-            <child lootmax="0" lootmin="0" max="2" min="1" type="ZmbF_CitizenANormal"/>
+            <!-- Autumn patrol soldier — command/officer variant -->
+            <child lootmax="0" lootmin="0" max="3" min="2" type="ZmbM_PatrolNormal_Autumn"/>
+            <!-- Female paramedic — field medics attached to the unit -->
+            <child lootmax="0" lootmin="0" max="2" min="1" type="ZmbF_ParamedicNormal_Blue"/>
+            <!-- Skinny male civilian A — civilians caught at the base -->
+            <child lootmax="0" lootmin="0" max="5" min="2" type="ZmbM_CitizenASkinny_Red"/>
+            <!-- Fat male civilian B -->
+            <child lootmax="0" lootmin="0" max="3" min="2" type="ZmbM_CitizenBFat_Red"/>
+            <!-- Normal female civilian A -->
+            <child lootmax="0" lootmin="0" max="2" min="1" type="ZmbF_CitizenANormal_Blue"/>
             <!-- Skinny male patient — wounded brought to the base -->
             <child lootmax="0" lootmin="0" max="2" min="1" type="ZmbM_PatientSkinny"/>
             <!-- Fat policeman — law enforcement that joined the defense -->
@@ -144,12 +147,12 @@
             <child lootmax="0" lootmin="0" max="2" min="1" type="ZmbM_PolicemanSpecForce"/>
             <!-- Normal male firefighter — emergency response who turned -->
             <child lootmax="0" lootmin="0" max="2" min="1" type="ZmbM_FirefighterNormal"/>
-            <!-- Normal female firefighter -->
-            <child lootmax="0" lootmin="0" max="2" min="1" type="ZmbF_FirefighterNormal"/>
-            <!-- Normal male paramedic — medics attached to military -->
-            <child lootmax="0" lootmin="0" max="2" min="1" type="ZmbM_ParamedicNormal"/>
-            <!-- Normal female paramedic -->
-            <child lootmax="0" lootmin="0" max="1" min="1" type="ZmbF_ParamedicNormal"/>
+            <!-- Female paramedic — medics attached to military -->
+            <child lootmax="0" lootmin="0" max="2" min="1" type="ZmbF_ParamedicNormal_Green"/>
+            <!-- Male paramedic -->
+            <child lootmax="0" lootmin="0" max="2" min="1" type="ZmbM_ParamedicNormal_Blue"/>
+            <!-- Female paramedic -->
+            <child lootmax="0" lootmin="0" max="1" min="1" type="ZmbF_ParamedicNormal_Red"/>
         </children>
     </event>
 
