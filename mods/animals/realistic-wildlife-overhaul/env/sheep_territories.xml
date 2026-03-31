@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Sheep and Goat Territory Definitions - Realistic Wildlife Overhaul -->
+<territory-type>
+    <!-- TERRITORY: SHEEP AND GOAT TERRITORIES -->
+    <!-- color=4294899200 - Sheep and goats inhabit farms, hilly areas and have gone feral on hillsides across the map -->
+    <territory color="4294899200">
+
+        <!-- === SOUTH ZONE === -->
+        <!-- South west - hillside farm near Kamenka -->
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="4" x="1000.00" z="3800.00" r="200"/>
+        <zone name="Rest" smin="0" smax="0" dmin="2" dmax="6" x="1060.00" z="3860.00" r="400"/>
+        <zone name="Rest" smin="0" smax="0" dmin="2" dmax="6" x="900.00" z="3800.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="1000.00" z="4050.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="1250.00" z="3680.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="800.00" z="4100.00" r="700"/>
+
+        <!-- South - hillside near Pavlovo -->
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="4" x="3500.00" z="4500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="0" dmin="2" dmax="6" x="3560.00" z="4560.00" r="400"/>
+        <zone name="Rest" smin="0" smax="0" dmin="2" dmax="6" x="3400.00" z="4500.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="3500.00" z="4750.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="3750.00" z="4380.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="3300.00" z="4800.00" r="700"/>
+
+        <!-- South central - rocky hillside near Gorka -->
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="4" x="6000.00" z="4200.00" r="200"/>
+        <zone name="Rest" smin="0" smax="0" dmin="2" dmax="6" x="6060.00" z="4260.00" r="400"/>
+        <zone name="Rest" smin="0" smax="0" dmin="2" dmax="6" x="5900.00" z="4200.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="6000.00" z="4450.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="6250.00" z="4080.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="5800.00" z="4500.00" r="700"/>
+
+        <!-- South east - feral goats hillside near Berezino -->
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="4" x="9500.00" z="4800.00" r="200"/>
+        <zone name="Rest" smin="0" smax="0" dmin="2" dmax="6" x="9560.00" z="4860.00" r="400"/>
+        <zone name="Rest" smin="0" smax="0" dmin="2" dmax="6" x="9400.00" z="4800.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="9500.00" z="5050.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="9750.00" z="4680.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="9300.00" z="5100.00" r="700"/>
+
+        <!-- South far east - hillside farm -->
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="4" x="12000.00" z="4500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="0" dmin="2" dmax="6" x="12060.00" z="4560.00" r="400"/>
+        <zone name="Rest" smin="0" smax="0" dmin="2" dmax="6" x="11900.00" z="4500.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="12000.00" z="4750.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="12250.00" z="4380.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="11800.00" z="4800.00" r="700"/>
+
+        <!-- === CENTRAL ZONE === -->
+        <!-- Central west - hillside near Zelenogorsk -->
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="4" x="2500.00" z="7500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="0" dmin="2" dmax="6" x="2560.00" z="7560.00" r="400"/>
+        <zone name="Rest" smin="0" smax="0" dmin="2" dmax="6" x="2400.00" z="7500.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="2500.00" z="7750.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="2750.00" z="7380.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="2300.00" z="7800.00" r="700"/>
+
+        <!-- Central - rocky area near Novy Sobor -->
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="4" x="5500.00" z="7800.00" r="200"/>
+        <zone name="Rest" smin="0" smax="0" dmin="2" dmax="6" x="5560.00" z="7860.00" r="400"/>
+        <zone name="Rest" smin="0" smax="0" dmin="2" dmax="6" x="5400.00" z="7800.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="5500.00" z="8050.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="5750.00" z="7680.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="5300.00" z="8100.00" r="700"/>
+
+        <!-- Central east - feral goats on slopes -->
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="4" x="8500.00" z="8000.00" r="200"/>
+        <zone name="Rest" smin="0" smax="0" dmin="2" dmax="6" x="8560.00" z="8060.00" r="400"/>
+        <zone name="Rest" smin="0" smax="0" dmin="2" dmax="6" x="8400.00" z="8000.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="8500.00" z="8250.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="8750.00" z="7880.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="8300.00" z="8300.00" r="700"/>
+
+        <!-- Central far east - hillside farm -->
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="4" x="12500.00" z="7500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="0" dmin="2" dmax="6" x="12560.00" z="7560.00" r="400"/>
+        <zone name="Rest" smin="0" smax="0" dmin="2" dmax="6" x="12400.00" z="7500.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="12500.00" z="7750.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="12750.00" z="7380.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="12300.00" z="7800.00" r="700"/>
+
+        <!-- === NORTH ZONE === -->
+        <!-- North central west - rocky hillside Vybor -->
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="4" x="3000.00" z="11000.00" r="200"/>
+        <zone name="Rest" smin="0" smax="0" dmin="2" dmax="6" x="3060.00" z="11060.00" r="400"/>
+        <zone name="Rest" smin="0" smax="0" dmin="2" dmax="6" x="2900.00" z="11000.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="3000.00" z="11250.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="3250.00" z="10880.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="2800.00" z="11300.00" r="700"/>
+
+        <!-- North central - feral goats rocky terrain -->
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="4" x="6500.00" z="11500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="0" dmin="2" dmax="6" x="6560.00" z="11560.00" r="400"/>
+        <zone name="Rest" smin="0" smax="0" dmin="2" dmax="6" x="6400.00" z="11500.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="6500.00" z="11750.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="6750.00" z="11380.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="6300.00" z="11800.00" r="700"/>
+
+        <!-- North east - hillside near Kamensk -->
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="4" x="9000.00" z="11500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="0" dmin="2" dmax="6" x="9060.00" z="11560.00" r="400"/>
+        <zone name="Rest" smin="0" smax="0" dmin="2" dmax="6" x="8900.00" z="11500.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="9000.00" z="11750.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="9250.00" z="11380.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="8800.00" z="11800.00" r="700"/>
+
+        <!-- North far east - hillside farm -->
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="4" x="11500.00" z="11000.00" r="200"/>
+        <zone name="Rest" smin="0" smax="0" dmin="2" dmax="6" x="11560.00" z="11060.00" r="400"/>
+        <zone name="Rest" smin="0" smax="0" dmin="2" dmax="6" x="11400.00" z="11000.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="11500.00" z="11250.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="11750.00" z="10880.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="11300.00" z="11300.00" r="700"/>
+
+        <!-- === FAR NORTH === -->
+        <!-- Far north - Gvozdno rocky slopes -->
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="4" x="5000.00" z="13500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="0" dmin="2" dmax="6" x="5060.00" z="13560.00" r="400"/>
+        <zone name="Rest" smin="0" smax="0" dmin="2" dmax="6" x="4900.00" z="13500.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="5000.00" z="13750.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="5250.00" z="13380.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="4800.00" z="13800.00" r="700"/>
+
+
+        <!-- === ADDITIONAL SHEEP/GOAT COVERAGE === -->
+        <!-- South - feral sheep near Elektrozavodsk hillside -->
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="4" x="2000.00" z="3200.00" r="200"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="2060.00" z="3260.00" r="400"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="1900.00" z="3200.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="2000.00" z="3450.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="2250.00" z="3080.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="1800.00" z="3500.00" r="700"/>
+
+        <!-- South central - rocky hillside near Gorka -->
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="4" x="4500.00" z="3500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="4560.00" z="3560.00" r="400"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="4400.00" z="3500.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="4500.00" z="3750.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="4750.00" z="3380.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="4300.00" z="3800.00" r="700"/>
+
+        <!-- South central - hill flock near farms -->
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="4" x="7000.00" z="3800.00" r="200"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="7060.00" z="3860.00" r="400"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="6900.00" z="3800.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="7000.00" z="4050.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="7250.00" z="3680.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="6800.00" z="4100.00" r="700"/>
+
+        <!-- South east - feral goats on slopes -->
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="4" x="10500.00" z="3500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="10560.00" z="3560.00" r="400"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="10400.00" z="3500.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="10500.00" z="3750.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="10750.00" z="3380.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="10300.00" z="3800.00" r="700"/>
+
+        <!-- South far east - hillside sheep flock -->
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="4" x="13000.00" z="4000.00" r="200"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="13060.00" z="4060.00" r="400"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="12900.00" z="4000.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="13000.00" z="4250.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="13250.00" z="3880.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="12800.00" z="4300.00" r="700"/>
+
+        <!-- South extreme east - rocky slope flock -->
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="4" x="14500.00" z="3800.00" r="200"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="14560.00" z="3860.00" r="400"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="14400.00" z="3800.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="14500.00" z="4050.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="14750.00" z="3680.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="14300.00" z="4100.00" r="700"/>
+
+        <!-- Central west - feral sheep near ruins -->
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="4" x="1000.00" z="6000.00" r="200"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="1060.00" z="6060.00" r="400"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="900.00" z="6000.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="1000.00" z="6250.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="1250.00" z="5880.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="800.00" z="6300.00" r="700"/>
+
+        <!-- Central - hillside goats near abandoned farm -->
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="4" x="4000.00" z="6500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="4060.00" z="6560.00" r="400"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="3900.00" z="6500.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="4000.00" z="6750.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="4250.00" z="6380.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="3800.00" z="6800.00" r="700"/>
+
+        <!-- Central - feral sheep flock in fields -->
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="4" x="7000.00" z="6000.00" r="200"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="7060.00" z="6060.00" r="400"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="6900.00" z="6000.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="7000.00" z="6250.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="7250.00" z="5880.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="6800.00" z="6300.00" r="700"/>
+
+        <!-- Central east - goats on rocky slopes -->
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="4" x="10000.00" z="6500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="10060.00" z="6560.00" r="400"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="9900.00" z="6500.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="10000.00" z="6750.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="10250.00" z="6380.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="9800.00" z="6800.00" r="700"/>
+
+        <!-- Central far east - hillside flock -->
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="4" x="13500.00" z="6000.00" r="200"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="13560.00" z="6060.00" r="400"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="13400.00" z="6000.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="13500.00" z="6250.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="13750.00" z="5880.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="13300.00" z="6300.00" r="700"/>
+
+        <!-- North west - feral sheep hillside territory -->
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="4" x="1500.00" z="9500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="1560.00" z="9560.00" r="400"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="1400.00" z="9500.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="1500.00" z="9750.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="1750.00" z="9380.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="1300.00" z="9800.00" r="700"/>
+
+        <!-- North central - wild goats on rocky terrain -->
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="4" x="5000.00" z="10000.00" r="200"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="5060.00" z="10060.00" r="400"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="4900.00" z="10000.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="5000.00" z="10250.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="5250.00" z="9880.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="4800.00" z="10300.00" r="700"/>
+
+        <!-- North east - feral sheep colony -->
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="4" x="8000.00" z="10500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="8060.00" z="10560.00" r="400"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="7900.00" z="10500.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="8000.00" z="10750.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="8250.00" z="10380.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="7800.00" z="10800.00" r="700"/>
+
+        <!-- North far east - hill flock territory -->
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="4" x="11000.00" z="9500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="11060.00" z="9560.00" r="400"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="10900.00" z="9500.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="11000.00" z="9750.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="11250.00" z="9380.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="10800.00" z="9800.00" r="700"/>
+
+        <!-- North extreme east - goat territory -->
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="4" x="13500.00" z="10000.00" r="200"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="13560.00" z="10060.00" r="400"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="13400.00" z="10000.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="13500.00" z="10250.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="13750.00" z="9880.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="13300.00" z="10300.00" r="700"/>
+
+        <!-- Far north west - feral sheep wilderness -->
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="4" x="2500.00" z="12000.00" r="200"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="2560.00" z="12060.00" r="400"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="2400.00" z="12000.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="2500.00" z="12250.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="2750.00" z="11880.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="2300.00" z="12300.00" r="700"/>
+
+        <!-- Far north central - wild goats on slopes -->
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="4" x="6500.00" z="12500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="6560.00" z="12560.00" r="400"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="6400.00" z="12500.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="6500.00" z="12750.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="6750.00" z="12380.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="6300.00" z="12800.00" r="700"/>
+
+        <!-- Far north east - sheep and goats feral -->
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="4" x="9500.00" z="12000.00" r="200"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="9560.00" z="12060.00" r="400"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="9400.00" z="12000.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="9500.00" z="12250.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="9750.00" z="11880.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="9300.00" z="12300.00" r="700"/>
+
+        <!-- Far north - feral hillside flock -->
+        <zone name="Water" smin="0" smax="0" dmin="1" dmax="4" x="12500.00" z="12500.00" r="200"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="12560.00" z="12560.00" r="400"/>
+        <zone name="Rest" smin="0" smax="2" dmin="2" dmax="6" x="12400.00" z="12500.00" r="400"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="12500.00" z="12750.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="12750.00" z="12380.00" r="700"/>
+        <zone name="Graze" smin="0" smax="0" dmin="3" dmax="8" x="12300.00" z="12800.00" r="700"/>
+
+    </territory>
+</territory-type>

@@ -1452,86 +1452,27 @@
 	</event>
 
     <!-- ============================================================ -->
-    <!-- SECTION 4: ANIMAL TERRITORY MAPPINGS                         -->
+    <!-- SECTION 4: ANIMAL EVENTS                                     -->
     <!-- Source: mods/animals/realistic-wildlife-overhaul/            -->
-    <!-- Each <file> ref links an animal event to its territory XML.  -->
-    <!-- Territory files install to: env/<filename>                   -->
+    <!-- Vanilla format: empty self-closing tags for limit=child      -->
+    <!-- events. Engine distributes them across map terrain.          -->
+    <!-- AnimalBear uses limit=custom so needs explicit positions     -->
+    <!-- provided via bear_territories.xml.                           -->
+    <!-- AmbientFox/Hare/Hen are proximity-based — no entry needed.  -->
+    <!-- Verified: BohemiaInteractive/DayZ-Central-Economy           -->
+    <!--   dayzOffline.chernarusplus/cfgeventspawns.xml               -->
     <!-- ============================================================ -->
 
-    <!-- ===== PREY ANIMALS ===== -->
-
-    <!-- Hares — most widespread, entire map coverage -->
-    <event name="AnimalHare">
-        <file>env/hare_territories.xml</file>
-    </event>
-
-    <!-- Roe Deer — very common, rural/forest areas -->
-    <event name="AnimalRoeDeer">
-        <file>env/roe_deer_territories.xml</file>
-    </event>
-
-    <!-- Red Deer — common, inland meadows and river valleys -->
-    <event name="AnimalRedDeer">
-        <file>env/red_deer_territories.xml</file>
-    </event>
-
-    <!-- Wild Boar — woodland floors, farmland edges -->
-    <event name="AnimalWildBoar">
-        <file>env/wild_boar_territories.xml</file>
-    </event>
-
-    <!-- ===== FARM ANIMALS ===== -->
-
-    <!-- Hens/Chickens — every settlement and farm -->
-    <event name="AnimalHen">
-        <file>env/hen_territories.xml</file>
-    </event>
-
-    <!-- Cattle — farms and open pastures -->
-    <event name="AnimalCow">
-        <file>env/cattle_territories.xml</file>
-    </event>
-
-    <!-- Sheep and Goats — farms and hillsides -->
-    <event name="AnimalSheepGoat">
-        <file>env/sheep_goat_territories.xml</file>
-    </event>
-
-    <!-- Pigs — mostly farms, some feral -->
-    <event name="AnimalPig">
-        <file>env/pig_territories.xml</file>
-    </event>
-
-    <!-- Domestic Animals — mixed, near villages -->
-    <event name="AnimalDomestic">
-        <file>env/domestic_animals_territories.xml</file>
-    </event>
-
-    <!-- ===== PREDATORS ===== -->
-
-    <!-- Foxes — forest edges and farms (overlap with hen/hare zones) -->
-    <event name="AnimalFox">
-        <file>env/fox_territories.xml</file>
-    </event>
-
-    <!-- Wolves — entire map, from coast to far north -->
-    <event name="AnimalWolf">
-        <file>env/wolf_territories.xml</file>
-    </event>
-
-    <!-- White Wolves — northern forests and mountain ridges -->
-    <event name="AnimalWolf_White">
-        <file>env/wolf_territories.xml</file>
-    </event>
-
-    <!-- Bears — rivers, forests, food sources — map-wide -->
+    <event name="AnimalDeer" />
+    <event name="AnimalCow" />
+    <event name="AnimalSheep" />
+    <event name="AnimalRoeDeer" />
+    <event name="AnimalWolf" />
+    <event name="AnimalWildBoar" />
+    <event name="AnimalGoat" />
+    <event name="AnimalPig" />
     <event name="AnimalBear">
         <file>env/bear_territories.xml</file>
-    </event>
-
-    <!-- Reindeer — far north wilderness, Tisy and Kamensk area -->
-    <event name="AnimalReindeer">
-        <file>env/reindeer_territories.xml</file>
     </event>
 
     <!-- ============================================================ -->
