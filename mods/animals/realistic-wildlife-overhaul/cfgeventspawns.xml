@@ -4,30 +4,26 @@
     =============================================================
     INSTALL PATH: mpmissions/dayzOffline.chernarusplus/cfgeventspawns.xml
 
-    Vanilla Chernarus animal entries are empty self-closing tags — the engine
-    distributes limit=child events automatically across map terrain.
+    The engine links each event to its territory file by naming convention:
+      Strip "Animal" or "Ambient" prefix, lowercase, append "_territories.xml"
+      e.g. AnimalDeer -> deer_territories.xml
+           AmbientFox -> fox_territories.xml
 
-    AnimalBear is the only addition: vanilla has it disabled (nominal=0).
-    We enable it via bear_territories.xml which provides spawn positions
-    (required because AnimalBear uses limit=custom).
-
-    AmbientFox/Hare/Hen are proximity-based (distanceradius) — no entry needed.
-
-    Source: BohemiaInteractive/DayZ-Central-Economy
-      dayzOffline.chernarusplus/cfgeventspawns.xml
+    All entries are empty tags — territory files in env/ are loaded automatically.
 -->
 <eventposdef>
 
-    <event name="AnimalDeer" />
+    <event name="AmbientFox" />
+    <event name="AmbientHare" />
+    <event name="AmbientHen" />
+    <event name="AnimalBear" />
     <event name="AnimalCow" />
-    <event name="AnimalSheep" />
-    <event name="AnimalRoeDeer" />
-    <event name="AnimalWolf" />
-    <event name="AnimalWildBoar" />
+    <event name="AnimalDeer" />
     <event name="AnimalGoat" />
     <event name="AnimalPig" />
-    <event name="AnimalBear">
-        <file>env/bear_territories.xml</file>
-    </event>
+    <event name="AnimalRoeDeer" />
+    <event name="AnimalSheep" />
+    <event name="AnimalWildBoar" />
+    <event name="AnimalWolf" />
 
 </eventposdef>

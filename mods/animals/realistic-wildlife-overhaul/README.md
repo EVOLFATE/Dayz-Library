@@ -55,14 +55,15 @@ areas as the predators do, and you'll encounter them.
 | File | Purpose | Install Path |
 |------|---------|--------------|
 | `events.xml` | Animal spawn events (counts, pack sizes, lifetimes) | `db/events.xml` |
-| `cfgeventspawns.xml` | Links events to territory files | `db/cfgeventspawns.xml` |
+| `cfgeventspawns.xml` | Registers events for territory-based spawning | `cfgeventspawns.xml` |
 | `env/hare_territories.xml` | Hare behavior zones — entire map | `env/hare_territories.xml` |
 | `env/roe_deer_territories.xml` | Roe deer zones — rural/forest | `env/roe_deer_territories.xml` |
-| `env/red_deer_territories.xml` | Red deer zones — inland/meadows | `env/red_deer_territories.xml` |
+| `env/deer_territories.xml` | Red deer zones — inland/meadows | `env/deer_territories.xml` |
 | `env/wild_boar_territories.xml` | Wild boar zones — woodland | `env/wild_boar_territories.xml` |
 | `env/hen_territories.xml` | Hen zones — settlements/farms | `env/hen_territories.xml` |
-| `env/cattle_territories.xml` | Cattle zones — farms/fields | `env/cattle_territories.xml` |
-| `env/sheep_goat_territories.xml` | Sheep/goat zones — farms/hills | `env/sheep_goat_territories.xml` |
+| `env/cow_territories.xml` | Cattle zones — farms/fields | `env/cow_territories.xml` |
+| `env/sheep_territories.xml` | Sheep zones — farms/hills | `env/sheep_territories.xml` |
+| `env/goat_territories.xml` | Goat zones — farms/hills | `env/goat_territories.xml` |
 | `env/pig_territories.xml` | Pig zones — farms/forest edges | `env/pig_territories.xml` |
 | `env/domestic_animals_territories.xml` | Domestic animal zones — villages | `env/domestic_animals_territories.xml` |
 | `env/fox_territories.xml` | Fox zones — forest edges/farms | `env/fox_territories.xml` |
@@ -84,10 +85,11 @@ On console servers using the DayZ server management interface:
 1. Navigate to your mission file manager
 2. Open `mpmissions/dayzOffline.chernarusplus/db/`
 3. Upload `events.xml` from this mod — this replaces the vanilla file
-4. Upload `cfgeventspawns.xml` from this mod — this replaces the vanilla file
-5. Navigate to `mpmissions/dayzOffline.chernarusplus/env/`
-6. Upload ALL files from this mod's `env/` folder, replacing any existing files
-7. Restart your server — changes take effect on the next server start
+4. Navigate to `mpmissions/dayzOffline.chernarusplus/` (mission root)
+5. Upload `cfgeventspawns.xml` from this mod — this replaces the vanilla file
+6. Navigate to `mpmissions/dayzOffline.chernarusplus/env/`
+7. Upload ALL files from this mod's `env/` folder, replacing any existing files
+8. Restart your server — changes take effect on the next server start
 
 > **Note for console:** If your server manager requires you to edit files one at
 > a time, copy the XML content from each file and paste it into your server's
@@ -100,16 +102,17 @@ YourServerFolder/
 └── mpmissions/
     └── dayzOffline.chernarusplus/
         ├── db/
-        │   ├── events.xml              ← replace with mod's events.xml
-        │   └── cfgeventspawns.xml      ← replace with mod's cfgeventspawns.xml
+        │   └── events.xml              ← replace with mod's events.xml
+        ├── cfgeventspawns.xml          ← replace with mod's cfgeventspawns.xml
         └── env/
             ├── hare_territories.xml              ← replace
             ├── roe_deer_territories.xml           ← replace
-            ├── red_deer_territories.xml           ← replace
+            ├── deer_territories.xml               ← replace
             ├── wild_boar_territories.xml          ← replace
             ├── hen_territories.xml                ← replace
-            ├── cattle_territories.xml             ← replace
-            ├── sheep_goat_territories.xml         ← replace
+            ├── cow_territories.xml                ← replace
+            ├── sheep_territories.xml              ← replace
+            ├── goat_territories.xml               ← replace
             ├── pig_territories.xml                ← replace
             ├── domestic_animals_territories.xml   ← replace
             ├── fox_territories.xml                ← replace
@@ -232,11 +235,12 @@ react. This makes predators harder and more realistic, not invisible gotchas.
 | -------------- | ----------- | ----------- | ---------- |
 | hare_territories.xml | 1 | 1896 | Water, Rest, Graze |
 | roe_deer_territories.xml | 1 | 312 | Water, Rest, Graze |
-| red_deer_territories.xml | 1 | 294 | Water, Rest, Graze |
+| deer_territories.xml | 1 | 294 | Water, Rest, Graze |
 | wild_boar_territories.xml | 1 | 228 | Water, Rest, HuntingGround |
 | hen_territories.xml | 1 | 762 | Water, Rest, Graze |
-| cattle_territories.xml | 1 | 252 | Water, Rest, Graze |
-| sheep_goat_territories.xml | 1 | 204 | Water, Rest, Graze |
+| cow_territories.xml | 1 | 252 | Water, Rest, Graze |
+| sheep_territories.xml | 1 | 204 | Water, Rest, Graze |
+| goat_territories.xml | 1 | 204 | Water, Rest, Graze |
 | pig_territories.xml | 1 | 228 | Water, Rest, HuntingGround |
 | domestic_animals_territories.xml | 1 | 264 | Water, Rest, Graze |
 | fox_territories.xml | 1 | 360 | Water, Rest, HuntingGround |
