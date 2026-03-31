@@ -142,6 +142,7 @@ mission folder name (e.g., `mpmissions/MyCustomMission.chernarusplus/`).
 | Wolf | 20 | 12 | 30 | 2-12 (mixed) | Entire map |
 | Wolf (White) | 8 | 4 | 12 | 2-5 | North forests |
 | Bear | 15 | 8 | 22 | 1-2 | Rivers/forests |
+| Reindeer | 15 | 8 | 25 | 2-8 | Far north/wilderness |
 
 ---
 
@@ -164,46 +165,84 @@ zones within player range become active. The server will not be loaded by animal
 in unpopulated areas.
 
 **For lower-end servers (reduce spawn counts):**
+
 - In `events.xml`, lower `nominal` and `max` values by ~30%
 - Example: `AnimalHare` from nominal=80 to nominal=55
 
 **For higher-end servers (increase density):**
+
 - Increase `nominal` by up to 50%
 - Decrease `saferadius` values to allow more spawn points to be used
 
 ### Adjusting Predator Danger
 
 **Make wolves less threatening:**
+
 - In `events.xml`, remove the `max="12" min="8"` children entry from `AnimalWolf`
 - Lower nominal from 20 to 12-15
 
 **Make wolves more terrifying:**
+
 - Increase nominal to 25-30
 - Increase max pack size to 15
 
 **Adjust bear range:**
+
 - In `bear_territories.xml`, remove the southern territory groups
 - Or add more by duplicating existing blocks with new coordinates
+
+---
+
+## Spawn Radius Reference
+
+These values control when animals spawn relative to players and how far they
+must travel before they despawn. `saferadius` = minimum spawn distance from a
+player; `cleanupradius` = despawn distance (must always be larger).
+
+**Rule:** `cleanupradius` must always be greater than `saferadius`. If they are
+equal or reversed, animals are immediately despawned — a silent zero-spawn bug.
+
+**Predator design note:** Wolves and bears have a large `saferadius` on purpose.
+This ensures they always appear at a realistic detection distance — players will
+*hear* wolves howling or *spot* a bear before it closes in, giving time to
+react. This makes predators harder and more realistic, not invisible gotchas.
+
+| Animal | saferadius | cleanupradius | Notes |
+| ------ | ---------- | ------------- | ----- |
+| Hare | 50 | 800 | Spawns very close — everywhere |
+| Roe Deer | 100 | 800 | Spawns close, persists far |
+| Red Deer | 150 | 800 | |
+| Wild Boar | 100 | 800 | |
+| Hen | 50 | 600 | Settlement animal |
+| Cattle | 150 | 800 | |
+| Sheep/Goat | 100 | 800 | |
+| Pig | 100 | 800 | |
+| Domestic | 100 | 800 | |
+| Fox | 80 | 800 | |
+| **Wolf** | **500** | **1000** | Heard before seen — 500 m buffer |
+| **Wolf (White)** | **600** | **1000** | Extra distance — apex north predator |
+| **Bear** | **700** | **1000** | 700 m buffer — see/hear before charge |
+| Reindeer | 150 | 800 | |
 
 ---
 
 ## Zone Count Summary
 
 | Territory File | Territories | Total Zones | Zone Types |
-|----------------|-------------|-------------|------------|
-| hare_territories.xml | 1 | 216 | Water, Rest, Graze |
-| roe_deer_territories.xml | 1 | 162 | Water, Rest, Graze |
-| red_deer_territories.xml | 1 | 102 | Water, Rest, Graze |
-| wild_boar_territories.xml | 1 | 102 | Water, Rest, HuntingGround |
-| hen_territories.xml | 1 | 162 | Water, Rest, Graze |
-| cattle_territories.xml | 1 | 102 | Water, Rest, Graze |
-| sheep_goat_territories.xml | 1 | 84 | Water, Rest, Graze |
-| pig_territories.xml | 1 | 84 | Water, Rest, HuntingGround |
-| domestic_animals_territories.xml | 1 | 102 | Water, Rest, Graze |
-| fox_territories.xml | 1 | 132 | Water, Rest, HuntingGround |
+| -------------- | ----------- | ----------- | ---------- |
+| hare_territories.xml | 1 | 1896 | Water, Rest, Graze |
+| roe_deer_territories.xml | 1 | 312 | Water, Rest, Graze |
+| red_deer_territories.xml | 1 | 294 | Water, Rest, Graze |
+| wild_boar_territories.xml | 1 | 228 | Water, Rest, HuntingGround |
+| hen_territories.xml | 1 | 762 | Water, Rest, Graze |
+| cattle_territories.xml | 1 | 252 | Water, Rest, Graze |
+| sheep_goat_territories.xml | 1 | 204 | Water, Rest, Graze |
+| pig_territories.xml | 1 | 228 | Water, Rest, HuntingGround |
+| domestic_animals_territories.xml | 1 | 264 | Water, Rest, Graze |
+| fox_territories.xml | 1 | 360 | Water, Rest, HuntingGround |
 | reindeer_territories.xml | 1 | 132 | Water, Rest, Graze |
-| wolf_territories.xml | 1 | 174 | Water, Rest, HuntingGround |
-| bear_territories.xml | 1 | 102 | Water, Rest, HuntingGround |
+| wolf_territories.xml | 1 | 324 | Water, Rest, HuntingGround |
+| bear_territories.xml | 1 | 192 | Water, Rest, HuntingGround |
 
 ---
 
