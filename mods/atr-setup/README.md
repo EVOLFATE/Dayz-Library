@@ -18,7 +18,7 @@ if you don't. The world is gloomy, fog-choked, and crawling with the infected.
 | File | Purpose |
 |------|---------|
 | `cfgweather.xml` | Persistent gloomy & foggy weather — verified against [Bohemia Interactive Wiki](https://community.bistudio.com/wiki/DayZ:Weather_Configuration) |
-| `events.xml` | Infected events — 3 custom horde tiers + 18 territory events (InfectedCity, InfectedVillage, InfectedArmy, InfectedMummy, etc.) |
+| `events.xml` | Infected events — 3 custom horde tiers + 15 territory events (InfectedCity, InfectedVillage, InfectedArmy, InfectedMummy, etc.) — **partial merge file, infected blocks only** |
 | `cfgeventspawns.xml` | 39 fixed spawn coordinates for the horde events above |
 | `types.xml` | Zombie skin entity declarations + scarce loot economy |
 | `db/globals.xml` | Raises `ZombieMaxCount` from vanilla 1000 → 8000 to support 1,082 territory zones |
@@ -228,7 +228,7 @@ mpmissions/dayzOffline.chernarusplus/
    ```
    mpmissions/dayzOffline.chernarusplus/cfgeventspawns.xml
    ```
-2. Open your server's `db/events.xml` and merge **all** event blocks from this folder's `events.xml`:
+2. Open your server's `db/events.xml` and **add** (merge) only the infected `<event>` blocks listed below — do **not** copy the animal, vehicle, or static events from this file; those already exist in the vanilla `db/events.xml` and must be kept from there:
    - `InfectedHorde_Small`, `InfectedHorde_Medium`, `InfectedHorde_Large` (custom horde tiers)
    - `InfectedCity`, `InfectedCityTier1`, `InfectedVillage`, `InfectedVillageTier1` (civilian zones)
    - `InfectedArmy`, `InfectedArmyHard` (military zones)
@@ -236,6 +236,12 @@ mpmissions/dayzOffline.chernarusplus/
    - `InfectedNBC`, `InfectedPrisoner`, `InfectedFirefighter` (rare zones)
    - `InfectedMummy` (ruin/castle zones — spawns `ZmbM_Mummy`, the vanilla mummy infected)
    - `InfectedSolitude` (wilderness & road corridors)
+
+   > ⚠️ **Infected blocks only.** The `events.xml` in this folder also contains animal, vehicle,
+   > and static-loot events — these are **not new** and must NOT be copied into your server file.
+   > Your vanilla `db/events.xml` already contains `AnimalWolf`, `AnimalDeer`, `StaticHeliCrash`,
+   > `VehicleOffroadHatchback`, and all other non-infected events. Replacing them with this file's
+   > versions would overwrite any server customisations you have made to those entries.
 
    > ⚠️ **All territory events** (`InfectedCity`, `InfectedVillage`, `InfectedMummy`, etc.) must use
    > `<position>player</position>` and `<limit>custom</limit>` with a `<children>` spawn pool.
