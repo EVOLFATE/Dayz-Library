@@ -7,7 +7,12 @@
     HuntingGround, Graze) that the DayZ CE uses to determine
     WHERE within the territory each animal will spawn and roam.
 
-    INSTALL PATH: mpmissions/dayzOffline.chernarusplus/db/cfgeventspawns.xml
+    INSTALL PATH: mpmissions/dayzOffline.chernarusplus/cfgeventspawns.xml
+    (mission root — NOT under db/)
+
+    NOTE: This standalone mod file uses <cfgeventspawns> as the root element.
+    The server-setup merged version (mods/server-setup/cfgeventspawns.xml) uses
+    <eventposdef>, which is the correct DayZ format for the merged mission file.
 
     Each <event> entry names an event from events.xml and points to
     the territory file that provides its spawn zones.
