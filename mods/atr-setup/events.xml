@@ -1,19 +1,45 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <!-- ================================================================ -->
-<!-- ATR Setup: Custom Infected Horde Events                          -->
-<!-- 3 Tiers: Small (Villages/Roads), Medium (Cities/Industrial), Large (Military) -->
-<!-- These are STATIC events like HeliCrash — they rotate positions   -->
-<!-- several times per session via restock, picking new random spots  -->
-<!-- from a large pool each cycle.                                    -->
-<!-- 8 months post-outbreak: infected have gathered in packs at POIs  -->
-<!-- All child classnames use full variant names (with color/type     -->
-<!-- suffixes) verified against the official Bohemia DayZ Central     -->
-<!-- Economy repository — compatible with all DayZ dedicated servers. -->
+<!-- ATR Setup — Infected Events (Partial Merge File)                 -->
 <!--                                                                  -->
 <!-- MERGE DESTINATION: mpmissions/dayzOffline.chernarusplus/db/events.xml -->
-<!-- Copy these three <event> blocks into your mission's events.xml   -->
 <!--                                                                  -->
-<!-- Pairs with: cfgeventspawns.xml for spawn coordinates             -->
+<!-- ⚠  PARTIAL MERGE — do NOT use this file as a drop-in            -->
+<!--    replacement for your server's db/events.xml.  Only the        -->
+<!--    infected <event> blocks listed below are new additions.       -->
+<!--    All other vanilla events (animals, vehicles, static loot,     -->
+<!--    StaticHeliCrash, etc.) already exist in the vanilla file      -->
+<!--    and must be kept from there — do not copy them from here.     -->
+<!--                                                                  -->
+<!-- BLOCKS TO COPY into your db/events.xml:                          -->
+<!--                                                                  -->
+<!--   Horde events (position=fixed, draw from cfgeventspawns.xml):   -->
+<!--     InfectedHorde_Small   — village/road roaming packs           -->
+<!--     InfectedHorde_Medium  — city/industrial overrun zones        -->
+<!--     InfectedHorde_Large   — fallen military strongholds          -->
+<!--                                                                  -->
+<!--   Territory events (position=player, draw from                   -->
+<!--   env/zombie_territories.xml — MUST use position=player):        -->
+<!--     InfectedCity          — dense urban cores (40 zones)         -->
+<!--     InfectedCityTier1     — city periphery (6 zones)             -->
+<!--     InfectedVillage       — village centres (127 zones)          -->
+<!--     InfectedVillageTier1  — village outskirts (55 zones)         -->
+<!--     InfectedIndustrial    — factories/ports/quarries (19 zones)  -->
+<!--     InfectedArmy          — military bases (28 zones)            -->
+<!--     InfectedArmyHard      — hardened military (5 zones)          -->
+<!--     InfectedPolice        — police stations (10 zones)           -->
+<!--     InfectedMedic         — hospitals/clinics (8 zones)          -->
+<!--     InfectedReligious     — churches/monasteries (9 zones)       -->
+<!--     InfectedNBC           — contaminated zones (5 zones)         -->
+<!--     InfectedPrisoner      — prison/detention (3 zones)           -->
+<!--     InfectedFirefighter   — fire stations (4 zones)              -->
+<!--     InfectedMummy         — ruins/castles (25 zones)             -->
+<!--     InfectedSolitude      — wilderness/road corridors (738 zones) -->
+<!--                                                                  -->
+<!-- All child classnames verified against the official Bohemia DayZ  -->
+<!-- Central Economy repository (DayZ 1.28, dayzOffline.chernarusplus) -->
+<!--                                                                  -->
+<!-- Pairs with: cfgeventspawns.xml for horde spawn coordinates       -->
 <!-- See also:   types.xml (loot scarcity) and cfgweather.xml (fog)   -->
 <!-- ================================================================ -->
 <events>
@@ -339,7 +365,22 @@
         <limit>custom</limit>
         <active>1</active>
         <children>
+            <!-- Female jogger (red) — outskirt straggler, most common type -->
             <child lootmax="0" lootmin="0" max="0" min="1" type="ZmbF_JoggerSkinny_Red"/>
+            <!-- Old milkmaid (green) — farmstead survivor -->
+            <child lootmax="0" lootmin="0" max="0" min="1" type="ZmbF_MilkMaidOld_Green"/>
+            <!-- Old village woman (blue) — rarer colour variant -->
+            <child lootmax="0" lootmin="0" max="0" min="1" type="ZmbF_VillagerOld_Blue"/>
+            <!-- Fat farmer (beige) — outskirt field worker -->
+            <child lootmax="0" lootmin="0" max="0" min="1" type="ZmbM_FarmerFat_Beige"/>
+            <!-- Jacket civilian (blue checks) — casual outskirt wanderer -->
+            <child lootmax="0" lootmin="0" max="0" min="1" type="ZmbM_Jacket_bluechecks"/>
+            <!-- Jacket civilian (magenta) — casual outskirt wanderer -->
+            <child lootmax="0" lootmin="0" max="0" min="1" type="ZmbM_Jacket_magenta"/>
+            <!-- Male jogger (red) — outskirt straggler -->
+            <child lootmax="0" lootmin="0" max="0" min="1" type="ZmbM_JoggerSkinny_Red"/>
+            <!-- Old village man (green) — rarer colour variant -->
+            <child lootmax="0" lootmin="0" max="0" min="1" type="ZmbM_VillagerOld_Green"/>
         </children>
     </event>
 
