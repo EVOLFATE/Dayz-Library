@@ -31,10 +31,16 @@
       DomAnimals   25  — mixed, near villages
       Fox          30  — forest edges and farms
       Wolf         20  — predator, spread entire map (was 8 in vanilla)
+      Wolf (White)  8  — predator, northern forests and mountain ridges
       Bear         15  — predator, rivers/forests/food sources
+      Reindeer     15  — far north wilderness, Tisy and Kamensk area
 
     NOTE: Lifetime values are in seconds.
     NOTE: Children min/max control group sizes per spawn event.
+    NOTE: saferadius is the minimum spawn distance from a player (small = spawn
+          closer). cleanupradius is the despawn distance (must be > saferadius).
+          Original file had cleanupradius <= saferadius causing a silent zero-spawn
+          bug — animals spawning at the edge of the zone were immediately despawned.
 -->
 <events>
 
@@ -48,9 +54,9 @@
         <max>120</max>
         <lifetime>3600</lifetime>
         <restock>0</restock>
-        <saferadius>200</saferadius>
+        <saferadius>50</saferadius>
         <distanceradius>0</distanceradius>
-        <cleanupradius>200</cleanupradius>
+        <cleanupradius>800</cleanupradius>
         <flags deletable="0" init_random="0" remove_damaged="1"/>
         <position>fixed</position>
         <limit>mixed</limit>
@@ -71,9 +77,9 @@
         <max>70</max>
         <lifetime>3600</lifetime>
         <restock>0</restock>
-        <saferadius>300</saferadius>
+        <saferadius>100</saferadius>
         <distanceradius>0</distanceradius>
-        <cleanupradius>200</cleanupradius>
+        <cleanupradius>800</cleanupradius>
         <flags deletable="0" init_random="0" remove_damaged="1"/>
         <position>fixed</position>
         <limit>mixed</limit>
@@ -95,9 +101,9 @@
         <max>50</max>
         <lifetime>3600</lifetime>
         <restock>0</restock>
-        <saferadius>400</saferadius>
+        <saferadius>150</saferadius>
         <distanceradius>0</distanceradius>
-        <cleanupradius>200</cleanupradius>
+        <cleanupradius>800</cleanupradius>
         <flags deletable="0" init_random="0" remove_damaged="1"/>
         <position>fixed</position>
         <limit>mixed</limit>
@@ -119,9 +125,9 @@
         <max>45</max>
         <lifetime>3600</lifetime>
         <restock>0</restock>
-        <saferadius>300</saferadius>
+        <saferadius>100</saferadius>
         <distanceradius>0</distanceradius>
-        <cleanupradius>200</cleanupradius>
+        <cleanupradius>800</cleanupradius>
         <flags deletable="0" init_random="0" remove_damaged="1"/>
         <position>fixed</position>
         <limit>mixed</limit>
@@ -142,9 +148,9 @@
         <max>90</max>
         <lifetime>3600</lifetime>
         <restock>0</restock>
-        <saferadius>150</saferadius>
+        <saferadius>50</saferadius>
         <distanceradius>0</distanceradius>
-        <cleanupradius>150</cleanupradius>
+        <cleanupradius>600</cleanupradius>
         <flags deletable="0" init_random="0" remove_damaged="1"/>
         <position>fixed</position>
         <limit>mixed</limit>
@@ -168,9 +174,9 @@
         <max>38</max>
         <lifetime>7200</lifetime>
         <restock>0</restock>
-        <saferadius>400</saferadius>
+        <saferadius>150</saferadius>
         <distanceradius>0</distanceradius>
-        <cleanupradius>200</cleanupradius>
+        <cleanupradius>800</cleanupradius>
         <flags deletable="0" init_random="0" remove_damaged="1"/>
         <position>fixed</position>
         <limit>mixed</limit>
@@ -196,9 +202,9 @@
         <max>32</max>
         <lifetime>7200</lifetime>
         <restock>0</restock>
-        <saferadius>350</saferadius>
+        <saferadius>100</saferadius>
         <distanceradius>0</distanceradius>
-        <cleanupradius>200</cleanupradius>
+        <cleanupradius>800</cleanupradius>
         <flags deletable="0" init_random="0" remove_damaged="1"/>
         <position>fixed</position>
         <limit>mixed</limit>
@@ -224,9 +230,9 @@
         <max>30</max>
         <lifetime>7200</lifetime>
         <restock>0</restock>
-        <saferadius>300</saferadius>
+        <saferadius>100</saferadius>
         <distanceradius>0</distanceradius>
-        <cleanupradius>200</cleanupradius>
+        <cleanupradius>800</cleanupradius>
         <flags deletable="0" init_random="0" remove_damaged="1"/>
         <position>fixed</position>
         <limit>mixed</limit>
@@ -247,9 +253,9 @@
         <max>38</max>
         <lifetime>7200</lifetime>
         <restock>0</restock>
-        <saferadius>300</saferadius>
+        <saferadius>100</saferadius>
         <distanceradius>0</distanceradius>
-        <cleanupradius>200</cleanupradius>
+        <cleanupradius>800</cleanupradius>
         <flags deletable="0" init_random="0" remove_damaged="1"/>
         <position>fixed</position>
         <limit>mixed</limit>
@@ -273,9 +279,9 @@
         <max>45</max>
         <lifetime>3600</lifetime>
         <restock>0</restock>
-        <saferadius>250</saferadius>
+        <saferadius>80</saferadius>
         <distanceradius>0</distanceradius>
-        <cleanupradius>200</cleanupradius>
+        <cleanupradius>800</cleanupradius>
         <flags deletable="0" init_random="0" remove_damaged="1"/>
         <position>fixed</position>
         <limit>mixed</limit>
@@ -291,6 +297,9 @@
     <!-- EXPANDED from vanilla (vanilla: nominal=8, far north only)   -->
     <!-- Mixed packs: small 2-3 scouts to large 8-12 mega-packs       -->
     <!-- Coastal wolves, forest packs, mountain packs — everywhere    -->
+    <!-- saferadius=500: wolves always spawn 500 m+ from players so   -->
+    <!-- they can be HEARD howling before they close in — realistic   -->
+    <!-- and fair. cleanupradius=1000: packs persist once encountered -->
     <!-- ============================================================ -->
     <event name="AnimalWolf">
         <nominal>20</nominal>
@@ -300,7 +309,7 @@
         <restock>0</restock>
         <saferadius>500</saferadius>
         <distanceradius>0</distanceradius>
-        <cleanupradius>300</cleanupradius>
+        <cleanupradius>1000</cleanupradius>
         <flags deletable="0" init_random="0" remove_damaged="1"/>
         <position>fixed</position>
         <limit>mixed</limit>
@@ -316,7 +325,10 @@
         </children>
     </event>
 
-    <!-- White wolves — northern forests and mountain ridges -->
+    <!-- White wolves — northern forests and mountain ridges           -->
+    <!-- saferadius=600: even more distant spawn than grey wolves —   -->
+    <!-- these apex northern hunters should be SEEN silhouetted on a  -->
+    <!-- ridge or heard in the distance before they're a threat       -->
     <event name="AnimalWolf_White">
         <nominal>8</nominal>
         <min>4</min>
@@ -325,7 +337,7 @@
         <restock>0</restock>
         <saferadius>600</saferadius>
         <distanceradius>0</distanceradius>
-        <cleanupradius>300</cleanupradius>
+        <cleanupradius>1000</cleanupradius>
         <flags deletable="0" init_random="0" remove_damaged="1"/>
         <position>fixed</position>
         <limit>mixed</limit>
@@ -341,6 +353,10 @@
     <!-- EXPANDED from vanilla (vanilla: ~5-6 territories, far north) -->
     <!-- Bears near rivers, orchards, farms — they follow food        -->
     <!-- Post-apocalypse: bolder, ranging further south               -->
+    <!-- saferadius=700: bears spawn 700 m+ from players — you should -->
+    <!-- HEAR crashing brush and SPOT them before they charge. The    -->
+    <!-- large saferadius gives players time to decide fight or flee. -->
+    <!-- cleanupradius=1000: bear persists once in the area           -->
     <!-- ============================================================ -->
     <event name="AnimalBear">
         <nominal>15</nominal>
@@ -350,7 +366,7 @@
         <restock>0</restock>
         <saferadius>700</saferadius>
         <distanceradius>0</distanceradius>
-        <cleanupradius>400</cleanupradius>
+        <cleanupradius>1000</cleanupradius>
         <flags deletable="0" init_random="0" remove_damaged="1"/>
         <position>fixed</position>
         <limit>mixed</limit>
@@ -371,9 +387,9 @@
         <max>25</max>
         <lifetime>7200</lifetime>
         <restock>0</restock>
-        <saferadius>400</saferadius>
+        <saferadius>150</saferadius>
         <distanceradius>0</distanceradius>
-        <cleanupradius>200</cleanupradius>
+        <cleanupradius>800</cleanupradius>
         <flags deletable="0" init_random="0" remove_damaged="1"/>
         <position>fixed</position>
         <limit>mixed</limit>
