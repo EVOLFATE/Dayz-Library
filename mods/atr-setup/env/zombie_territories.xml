@@ -85,7 +85,7 @@
         <zone name="InfectedCityTier1" smin="3" smax="8" dmin="9" dmax="18" x="11102.00" z="12047.00" r="74"/>
         <!-- Novodmitrovsk — Layer 5: east outskirts -->
         <zone name="InfectedCityTier1" smin="2" smax="7" dmin="7" dmax="16" x="11218.00" z="12177.00" r="73"/>
-        <!-- Novodmitrovsk — Layer 6: port/waterfront -->
+        <!-- Novodmitrovsk — Layer 6: south industrial outskirts -->
         <zone name="InfectedCity" smin="3" smax="9" dmin="11" dmax="21" x="11102.00" z="12307.00" r="64"/>
         <!-- Novodmitrovsk — Layer 7: centre landmark hotspot -->
         <zone name="InfectedCity" smin="7" smax="14" dmin="18" dmax="35" x="11102.00" z="12177.00" r="47"/>
@@ -100,7 +100,7 @@
         <zone name="InfectedCityTier1" smin="3" smax="8" dmin="9" dmax="18" x="3987.00" z="10876.00" r="71"/>
         <!-- Severgrad — Layer 5: east outskirts -->
         <zone name="InfectedCityTier1" smin="2" smax="7" dmin="7" dmax="16" x="4099.00" z="11002.00" r="71"/>
-        <!-- Severgrad — Layer 6: port/waterfront -->
+        <!-- Severgrad — Layer 6: south residential outskirts -->
         <zone name="InfectedCity" smin="3" smax="9" dmin="11" dmax="21" x="3987.00" z="11128.00" r="62"/>
         <!-- Severgrad — Layer 7: centre landmark hotspot -->
         <zone name="InfectedCity" smin="7" smax="14" dmin="18" dmax="35" x="3987.00" z="11002.00" r="44"/>
