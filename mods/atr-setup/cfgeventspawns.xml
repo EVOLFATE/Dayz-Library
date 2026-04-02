@@ -2324,13 +2324,6 @@
     <!-- ATR CUSTOM EVENTS                                            -->
     <!-- ============================================================ -->
 
-    <!-- ============================================================ -->
-    <!-- TIER 1: InfectedHorde_Small — Village Stragglers / Roads     -->
-    <!-- Small clusters at villages, road intersections, gas stations,-->
-    <!-- farms, hamlets, dirt tracks, and coastal outskirts.          -->
-    <!-- ~150-position pool — 12 active at once, different every 180s.-->
-    <!-- Zombies can come from anywhere across the entire map.         -->
-
     <!-- ================================================================ -->
     <!-- ATR Horde Events: spawn pools derived 1-to-1 from               -->
     <!-- Bohemia Interactive mapgrouppos.xml (official CE repository).   -->
