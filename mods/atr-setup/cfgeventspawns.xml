@@ -11,9 +11,9 @@
 <!--      bonfires, trains, convoys, boats, planks, animals,          -->
 <!--      infected and all other vanilla events.                      -->
 <!--   2. 3 custom ATR horde events appended after vanilla content:   -->
-<!--        InfectedHorde_Small  — 45 village/road/gas-station spots  -->
-<!--        InfectedHorde_Medium — 35 city/industrial positions       -->
-<!--        InfectedHorde_Large  — 30 military/airfield positions     -->
+<!--        InfectedHorde_Small  — ~150 village/road/farm/hamlet/crossroads pos  -->
+<!--        InfectedHorde_Medium — ~100 city POI positions            -->
+<!--        InfectedHorde_Large  — ~80 military/airfield positions    -->
 <!--                                                                  -->
 <!-- Pairs with: events.xml for horde definitions                     -->
 <!-- ================================================================ -->
@@ -2326,9 +2326,10 @@
 
     <!-- ============================================================ -->
     <!-- TIER 1: InfectedHorde_Small — Village Stragglers / Roads     -->
-    <!-- Small clusters at villages, road intersections, gas stations -->
-    <!-- and the Cherno industrial main road. 45-position pool means  -->
-    <!-- each restock cycle (every 180s) picks 12 new random spots.   -->
+    <!-- Small clusters at villages, road intersections, gas stations,-->
+    <!-- farms, hamlets, dirt tracks, and coastal outskirts.          -->
+    <!-- ~150-position pool — 12 active at once, different every 180s.-->
+    <!-- Zombies can come from anywhere across the entire map.         -->
     <!-- ============================================================ -->
     <event name="InfectedHorde_Small">
         <!-- === Original 15 village positions === -->
@@ -2423,13 +2424,233 @@
         <pos x="4850" z="2900" a="0"/>
         <!-- Road east of Chernogorsk -->
         <pos x="7500" z="2700" a="0"/>
+        <!-- === New expansion: northwest villages and road junctions === -->
+        <!-- Lopatino village -->
+        <pos x="2850" z="9820" a="0"/>
+        <!-- Grishino village -->
+        <pos x="4230" z="8080" a="0"/>
+        <!-- Veresnik village -->
+        <pos x="3780" z="9350" a="0"/>
+        <!-- Myshkino village (civilian outskirts) -->
+        <pos x="3180" z="8130" a="0"/>
+        <!-- Road junction Lopatino–Vybor -->
+        <pos x="3200" z="9100" a="0"/>
+        <!-- Grishino farms east -->
+        <pos x="4550" z="7950" a="0"/>
+        <!-- Road near Tisy camp south approach -->
+        <pos x="2400" z="14100" a="0"/>
+        <!-- Novaya Petrovka north village -->
+        <pos x="9650" z="13350" a="0"/>
+        <!-- Petrovka hamlet -->
+        <pos x="8250" z="14000" a="0"/>
+        <!-- Nagornoe village -->
+        <pos x="6750" z="11350" a="0"/>
+        <!-- === New expansion: north-central villages === -->
+        <!-- Shakhovka village -->
+        <pos x="7750" z="8900" a="0"/>
+        <!-- Khelm area hamlet -->
+        <pos x="7800" z="9600" a="0"/>
+        <!-- Zub road area -->
+        <pos x="7500" z="9550" a="0"/>
+        <!-- Dichina area hamlet -->
+        <pos x="7300" z="9380" a="0"/>
+        <!-- Svergino village -->
+        <pos x="9000" z="10100" a="0"/>
+        <!-- Vavilovo hamlet -->
+        <pos x="9300" z="10450" a="0"/>
+        <!-- Msta hamlet -->
+        <pos x="8850" z="10350" a="0"/>
+        <!-- Orlovets village -->
+        <pos x="9700" z="8150" a="0"/>
+        <!-- Vyshnaya Dubrovka hamlet -->
+        <pos x="8900" z="10950" a="0"/>
+        <!-- Sinistok village -->
+        <pos x="5800" z="11500" a="0"/>
+        <!-- Selekhovo hamlet -->
+        <pos x="7200" z="11000" a="0"/>
+        <!-- Zaprudnoye village -->
+        <pos x="5350" z="11750" a="0"/>
+        <!-- Belozersk area village -->
+        <pos x="5550" z="12900" a="0"/>
+        <!-- Olsha village -->
+        <pos x="11450" z="12650" a="0"/>
+        <!-- Cernaya Polana hamlet -->
+        <pos x="11200" z="13600" a="0"/>
+        <!-- Polesovo north hamlet -->
+        <pos x="8400" z="9500" a="0"/>
+        <!-- === New expansion: central road junctions and farms === -->
+        <!-- Krasnaya Sloboda road area -->
+        <pos x="8100" z="7600" a="0"/>
+        <!-- Kalinovka village -->
+        <pos x="5250" z="7000" a="0"/>
+        <!-- Sosnovka hamlet -->
+        <pos x="4950" z="4500" a="0"/>
+        <!-- Kumyrna hamlet -->
+        <pos x="3550" z="6200" a="0"/>
+        <!-- Vyshnoye hamlet -->
+        <pos x="5500" z="5850" a="0"/>
+        <!-- Nizhneye Selo area -->
+        <pos x="5800" z="6350" a="0"/>
+        <!-- Novy Sobor east farm -->
+        <pos x="7400" z="7900" a="0"/>
+        <!-- Stary Sobor outskirts south -->
+        <pos x="6200" z="7600" a="0"/>
+        <!-- Road Stary–Novy mid stretch -->
+        <pos x="6800" z="7750" a="0"/>
+        <!-- Farm north of Kozlovka -->
+        <pos x="4650" z="4900" a="0"/>
+        <!-- Farm east of Pulkovo -->
+        <pos x="5200" z="5650" a="0"/>
+        <!-- Farm near Pogorevka -->
+        <pos x="4800" z="6550" a="0"/>
+        <!-- Farm north of Rogovo -->
+        <pos x="4900" z="7100" a="0"/>
+        <!-- Rogovo south road -->
+        <pos x="4600" z="6700" a="0"/>
+        <!-- Rog hamlet area -->
+        <pos x="3100" z="4200" a="0"/>
+        <!-- Dirt track east of Kozlovka -->
+        <pos x="4700" z="4600" a="0"/>
+        <!-- Dirt track near Bor east -->
+        <pos x="3500" z="3900" a="0"/>
+        <!-- Farm near Kamyshka area -->
+        <pos x="1500" z="4600" a="0"/>
+        <!-- Road junction east Kabanino -->
+        <pos x="5850" z="8800" a="0"/>
+        <!-- Road junction near Pustoshka south -->
+        <pos x="4100" z="8800" a="0"/>
+        <!-- Road east of Grishino towards Stary Sobor -->
+        <pos x="4750" z="7820" a="0"/>
+        <!-- === New expansion: northeast farms and coastal villages === -->
+        <!-- Farm near Dolina north -->
+        <pos x="11400" z="6700" a="0"/>
+        <!-- Farm near Staroye -->
+        <pos x="10400" z="5600" a="0"/>
+        <!-- Farm near Pusta north -->
+        <pos x="9600" z="5000" a="0"/>
+        <!-- Farm near Guglovo north -->
+        <pos x="8550" z="6900" a="0"/>
+        <!-- Farm east of Polana -->
+        <pos x="11000" z="8200" a="0"/>
+        <!-- Farm near Gorka east -->
+        <pos x="9650" z="9000" a="0"/>
+        <!-- Road junction Gorka–Polana -->
+        <pos x="9850" z="8300" a="0"/>
+        <!-- Road Berezino–Gorka mid -->
+        <pos x="10800" z="8500" a="0"/>
+        <!-- Lipotino village -->
+        <pos x="11800" z="10050" a="0"/>
+        <!-- Tulga village -->
+        <pos x="12000" z="7200" a="0"/>
+        <!-- Krutoy Cap hamlet -->
+        <pos x="13650" z="7300" a="0"/>
+        <!-- Road north of Solnichniy -->
+        <pos x="13300" z="5700" a="0"/>
+        <!-- Road Solnichniy–Krutoy mid -->
+        <pos x="13500" z="6600" a="0"/>
+        <!-- Road near Tugy area -->
+        <pos x="12100" z="7100" a="0"/>
+        <!-- === New expansion: coastal roads and outskirts === -->
+        <!-- Coastal road near Kamenka south -->
+        <pos x="1350" z="2800" a="0"/>
+        <!-- Road near Kamyshovo east -->
+        <pos x="12800" z="3800" a="0"/>
+        <!-- Road Kamyshovo north -->
+        <pos x="12600" z="4000" a="0"/>
+        <!-- Road Kamyshovo south -->
+        <pos x="12350" z="3200" a="0"/>
+        <!-- Road between Elektro and Berezino east -->
+        <pos x="11800" z="5200" a="0"/>
+        <!-- Coastal road near Berezino north -->
+        <pos x="12950" z="9850" a="0"/>
+        <!-- Road south of Berezino -->
+        <pos x="12700" z="8750" a="0"/>
+        <!-- Road Cherno–Elektro mid (Dubky beach area) -->
+        <pos x="9200" z="2400" a="0"/>
+        <!-- Dubky settlement area -->
+        <pos x="8600" z="2550" a="0"/>
+        <!-- Prigorodki west hamlet -->
+        <pos x="6800" z="3150" a="0"/>
+        <!-- Prigorodki dirt track -->
+        <pos x="6900" z="3400" a="0"/>
+        <!-- Komarovo coastal outskirts -->
+        <pos x="3700" z="2250" a="0"/>
+        <!-- Road near Kamenka military south -->
+        <pos x="1100" z="2400" a="0"/>
+        <!-- Road near Myshkino east -->
+        <pos x="3500" z="8250" a="0"/>
+        <!-- Road near Veresnik south -->
+        <pos x="3700" z="9150" a="0"/>
+        <!-- === New expansion: northern roads and road junctions === -->
+        <!-- Gas station near Severograd -->
+        <pos x="8100" z="12950" a="0"/>
+        <!-- Gas station near Krasnostav -->
+        <pos x="11200" z="12150" a="0"/>
+        <!-- Gas station near Novodmitrovsk -->
+        <pos x="11500" z="14500" a="0"/>
+        <!-- Gas station road north of Cherno -->
+        <pos x="7000" z="3550" a="0"/>
+        <!-- Gas station Vybor area road -->
+        <pos x="3600" z="8500" a="0"/>
+        <!-- Road junction Novaya Petrovka area -->
+        <pos x="10500" z="13800" a="0"/>
+        <!-- Road near Svergino east -->
+        <pos x="9300" z="10300" a="0"/>
+        <!-- Road near Khelm–Shakhovka stretch -->
+        <pos x="7600" z="9200" a="0"/>
+        <!-- Road north of Dichina -->
+        <pos x="7200" z="9650" a="0"/>
+        <!-- Crossroads south of Novy Sobor -->
+        <pos x="7100" z="7550" a="0"/>
+        <!-- Road junction NW near NWAF east -->
+        <pos x="4200" z="10800" a="0"/>
+        <!-- Road south of Tisy (civilian) -->
+        <pos x="1900" z="13500" a="0"/>
+        <!-- Road near Olsha to Novodmitrovsk -->
+        <pos x="11600" z="12800" a="0"/>
+        <!-- Road near Nagornoe south -->
+        <pos x="6900" z="11000" a="0"/>
+        <!-- Road between Zub–Polesovo -->
+        <pos x="7900" z="9400" a="0"/>
+        <!-- Dirt track near Guglovo east -->
+        <pos x="8750" z="6800" a="0"/>
+        <!-- Dirt track near Mogilevka north -->
+        <pos x="7800" z="5200" a="0"/>
+        <!-- Road near Belozersk NW -->
+        <pos x="5100" z="13200" a="0"/>
+        <!-- Road west of Sinistok -->
+        <pos x="5500" z="11300" a="0"/>
+        <!-- Crossroads near Novaya Petrovka road -->
+        <pos x="9950" z="13100" a="0"/>
+        <!-- Gvozdno north road -->
+        <pos x="9050" z="11900" a="0"/>
+        <!-- Dubrovka north hamlet -->
+        <pos x="10100" z="11100" a="0"/>
+        <!-- Road junction northeast of Krasnostav (toward Svetlojarsk) -->
+        <pos x="13800" z="12700" a="0"/>
+        <!-- Coastal road north of Svetlojarsk -->
+        <pos x="14100" z="13750" a="0"/>
+        <!-- === New expansion: additional rural coverage === -->
+        <!-- Zelenogorsk village outskirts east -->
+        <pos x="2900" z="5200" a="0"/>
+        <!-- Road south of Bor toward Komarovo -->
+        <pos x="3100" z="3800" a="0"/>
+        <!-- Chernogorsk east outskirts (road junction) -->
+        <pos x="7300" z="2600" a="0"/>
+        <!-- Road Elektro west approach -->
+        <pos x="10000" z="2350" a="0"/>
+        <!-- Berezino south farms -->
+        <pos x="12250" z="8800" a="0"/>
+        <!-- Severograd south approach road -->
+        <pos x="8000" z="12500" a="0"/>
     </event>
 
     <!-- ============================================================ -->
     <!-- TIER 2: InfectedHorde_Medium — Overrun City Zones            -->
     <!-- Medium hordes across city POIs: hospitals, city centers,     -->
-    <!-- fire stations, police stations, industrial zones.            -->
-    <!-- 35-position pool — 10 active at once, different every 360s. -->
+    <!-- fire stations, police stations, ports, schools, supermarkets,-->
+    <!-- and industrial zones across all named towns.                 -->
+    <!-- ~100-position pool — 10 active at once, different every 360s.-->
     <!-- Contested zones — valuable loot nearby but serious presence. -->
     <!-- ============================================================ -->
     <event name="InfectedHorde_Medium">
@@ -2505,15 +2726,160 @@
         <pos x="2700" z="5260" a="0"/>
         <!-- Berenzino south — factory/industrial outskirts -->
         <pos x="12800" z="8900" a="0"/>
+        <!-- === New expansion: Chernogorsk additional POIs === -->
+        <!-- Cherno police station -->
+        <pos x="6900" z="2800" a="0"/>
+        <!-- Cherno school -->
+        <pos x="6780" z="2950" a="0"/>
+        <!-- Cherno south harbor piers -->
+        <pos x="6580" z="2270" a="0"/>
+        <!-- Cherno north industrial ext -->
+        <pos x="6960" z="3200" a="0"/>
+        <!-- Cherno bus station area -->
+        <pos x="6720" z="2850" a="0"/>
+        <!-- Cherno power plant south -->
+        <pos x="6400" z="2500" a="0"/>
+        <!-- === New expansion: Elektrozavodsk additional POIs === -->
+        <!-- Elektro factory north block -->
+        <pos x="10700" z="2650" a="0"/>
+        <!-- Elektro fire station -->
+        <pos x="10580" z="2380" a="0"/>
+        <!-- Elektro fuel station east -->
+        <pos x="10460" z="2180" a="0"/>
+        <!-- Elektro shipyard / docks -->
+        <pos x="10300" z="2200" a="0"/>
+        <!-- Elektro city center south end -->
+        <pos x="10550" z="2280" a="0"/>
+        <!-- === New expansion: Berezino additional POIs === -->
+        <!-- Berezino north factory area -->
+        <pos x="12580" z="9750" a="0"/>
+        <!-- Berezino south end -->
+        <pos x="12350" z="8980" a="0"/>
+        <!-- Berezino harbor -->
+        <pos x="12650" z="9200" a="0"/>
+        <!-- Berezino police station -->
+        <pos x="12420" z="9480" a="0"/>
+        <!-- Berezino school -->
+        <pos x="12450" z="9650" a="0"/>
+        <!-- Berezino factory north ext -->
+        <pos x="12750" z="9900" a="0"/>
+        <!-- === New expansion: Novodmitrovsk additional POIs === -->
+        <!-- Novodmitrovsk police station -->
+        <pos x="11400" z="14200" a="0"/>
+        <!-- Novodmitrovsk industrial area -->
+        <pos x="11600" z="14400" a="0"/>
+        <!-- Novodmitrovsk west entrance -->
+        <pos x="10950" z="14100" a="0"/>
+        <!-- Novodmitrovsk harbor / dock -->
+        <pos x="11650" z="14500" a="0"/>
+        <!-- === New expansion: Severograd additional POIs === -->
+        <!-- Severograd fire station -->
+        <pos x="8150" z="12850" a="0"/>
+        <!-- Severograd school -->
+        <pos x="8300" z="12700" a="0"/>
+        <!-- Severograd supermarket -->
+        <pos x="8250" z="12600" a="0"/>
+        <!-- Severograd police station east -->
+        <pos x="8400" z="12900" a="0"/>
+        <!-- === New expansion: Svetlojarsk additional POIs === -->
+        <!-- Svetlojarsk north end -->
+        <pos x="13900" z="13600" a="0"/>
+        <!-- Svetlojarsk south end -->
+        <pos x="14000" z="13100" a="0"/>
+        <!-- Svetlojarsk school area -->
+        <pos x="14050" z="13450" a="0"/>
+        <!-- Svetlojarsk industrial / factory -->
+        <pos x="13750" z="13300" a="0"/>
+        <!-- === New expansion: Krasnostav additional POIs === -->
+        <!-- Krasnostav hospital -->
+        <pos x="11050" z="12350" a="0"/>
+        <!-- Krasnostav fire station -->
+        <pos x="10900" z="12250" a="0"/>
+        <!-- Krasnostav school -->
+        <pos x="11250" z="12550" a="0"/>
+        <!-- Krasnostav police station -->
+        <pos x="10950" z="12450" a="0"/>
+        <!-- Krasnostav bus terminal area -->
+        <pos x="11100" z="12150" a="0"/>
+        <!-- === New expansion: Zelenogorsk additional POIs === -->
+        <!-- Zelenogorsk police station -->
+        <pos x="2450" z="5200" a="0"/>
+        <!-- Zelenogorsk school -->
+        <pos x="2750" z="5350" a="0"/>
+        <!-- Zelenogorsk fire station -->
+        <pos x="2600" z="5050" a="0"/>
+        <!-- Zelenogorsk north factory -->
+        <pos x="2850" z="5500" a="0"/>
+        <!-- === New expansion: Kamyshovo additional POIs === -->
+        <!-- Kamyshovo harbor -->
+        <pos x="12300" z="3350" a="0"/>
+        <!-- Kamyshovo city area west -->
+        <pos x="12100" z="3500" a="0"/>
+        <!-- === New expansion: Solnichniy additional POIs === -->
+        <!-- Solnichniy harbor/east docks -->
+        <pos x="13500" z="5850" a="0"/>
+        <!-- Solnichniy north factory -->
+        <pos x="13100" z="6400" a="0"/>
+        <!-- Solnichniy south factory -->
+        <pos x="13350" z="5700" a="0"/>
+        <!-- === New expansion: Gorka, Polana, Dolina city POIs === -->
+        <!-- Gorka hospital area -->
+        <pos x="9650" z="8950" a="0"/>
+        <!-- Gorka town center -->
+        <pos x="9500" z="8750" a="0"/>
+        <!-- Gorka factory area -->
+        <pos x="9400" z="9100" a="0"/>
+        <!-- Polana sawmill area -->
+        <pos x="10750" z="8100" a="0"/>
+        <!-- Polana town center -->
+        <pos x="10700" z="7950" a="0"/>
+        <!-- Dolina factory / town -->
+        <pos x="11350" z="6550" a="0"/>
+        <!-- Dolina church area -->
+        <pos x="11200" z="6700" a="0"/>
+        <!-- === New expansion: Tulga and small coastal settlements === -->
+        <!-- Tulga harbor -->
+        <pos x="12200" z="6900" a="0"/>
+        <!-- Tulga factory area -->
+        <pos x="12100" z="6700" a="0"/>
+        <!-- Prigorodki settlement city area -->
+        <pos x="7050" z="3250" a="0"/>
+        <!-- Dubky coastal settlement -->
+        <pos x="8650" z="2600" a="0"/>
+        <!-- Komarovo coastal settlement east -->
+        <pos x="3700" z="2250" a="0"/>
+        <!-- Mogilevka town center -->
+        <pos x="7700" z="4900" a="0"/>
+        <!-- Staroye factory area -->
+        <pos x="10200" z="5500" a="0"/>
+        <!-- Staroye police area -->
+        <pos x="10050" z="5350" a="0"/>
+        <!-- === New expansion: additional city POIs === -->
+        <!-- Gorka police station -->
+        <pos x="9550" z="8800" a="0"/>
+        <!-- Berezino supermarket -->
+        <pos x="12480" z="9300" a="0"/>
+        <!-- Krasnostav south industrial -->
+        <pos x="11350" z="12400" a="0"/>
+        <!-- Zelenogorsk port / waterfront -->
+        <pos x="2350" z="4900" a="0"/>
+        <!-- Novodmitrovsk school area -->
+        <pos x="11350" z="14100" a="0"/>
+        <!-- Severograd north industrial -->
+        <pos x="8450" z="13000" a="0"/>
+        <!-- Cherno north warehouse district -->
+        <pos x="6850" z="3100" a="0"/>
     </event>
 
     <!-- ============================================================ -->
     <!-- TIER 3: InfectedHorde_Large — Fallen Military Strongholds    -->
     <!-- Massive hordes at military sites: airfields, barracks,       -->
-    <!-- tent camps, checkpoints. 30-position pool — 6 active at     -->
-    <!-- once, cycling every 600s across different military zones.    -->
+    <!-- tent camps, hangars, vehicle depots, checkpoints.            -->
+    <!-- ~80-position pool — 6 active at once, cycling every 600s    -->
+    <!-- across different military zones. Full NWAF coverage, Tisy,  -->
+    <!-- Balota, NE Airfield, Kamensk, Vybor, Pavlovo, Zeleno,        -->
+    <!-- Myshkino, and all checkpoint approach roads.                 -->
     <!-- Endgame danger zones — solo entry is suicide.                -->
-    <!-- Bring a squad, lots of ammo, and a plan.                     -->
     <!-- ============================================================ -->
     <event name="InfectedHorde_Large">
         <!-- === Original 12 military positions === -->
@@ -2578,6 +2944,118 @@
         <pos x="4500" z="9410" a="0"/>
         <!-- Military checkpoint near Lopatino -->
         <pos x="2800" z="9960" a="0"/>
+        <!-- === New expansion: NWAF comprehensive coverage === -->
+        <!-- NWAF runway north end -->
+        <pos x="4850" z="10800" a="0"/>
+        <!-- NWAF runway south end -->
+        <pos x="4380" z="9980" a="0"/>
+        <!-- NWAF runway central mid section -->
+        <pos x="4600" z="10420" a="0"/>
+        <!-- NWAF vehicle depot / SE corner -->
+        <pos x="5180" z="10050" a="0"/>
+        <!-- NWAF tent camp northeast -->
+        <pos x="5050" z="10700" a="0"/>
+        <!-- NWAF fuel area west side -->
+        <pos x="4200" z="10200" a="0"/>
+        <!-- NWAF south entrance road -->
+        <pos x="4480" z="9600" a="0"/>
+        <!-- NWAF east perimeter fence -->
+        <pos x="5350" z="10350" a="0"/>
+        <!-- NWAF northern barracks block -->
+        <pos x="4920" z="11000" a="0"/>
+        <!-- NWAF central parade ground -->
+        <pos x="4550" z="10650" a="0"/>
+        <!-- NWAF west road approach -->
+        <pos x="4000" z="10500" a="0"/>
+        <!-- NWAF south road approach -->
+        <pos x="4480" z="9250" a="0"/>
+        <!-- === New expansion: Tisy comprehensive coverage === -->
+        <!-- Tisy west perimeter -->
+        <pos x="1600" z="14820" a="0"/>
+        <!-- Tisy south checkpoint road -->
+        <pos x="2150" z="14500" a="0"/>
+        <!-- Tisy north facility block -->
+        <pos x="1780" z="15000" a="0"/>
+        <!-- Tisy vehicle park area -->
+        <pos x="1850" z="14550" a="0"/>
+        <!-- Tisy south approach road -->
+        <pos x="1350" z="14000" a="0"/>
+        <!-- Tisy east road checkpoint -->
+        <pos x="2500" z="14700" a="0"/>
+        <!-- === New expansion: NE Airfield comprehensive coverage === -->
+        <!-- NE Airfield runway east section -->
+        <pos x="12450" z="12800" a="0"/>
+        <!-- NE Airfield south tents -->
+        <pos x="12100" z="12200" a="0"/>
+        <!-- NE Airfield ATC building -->
+        <pos x="12320" z="12650" a="0"/>
+        <!-- NE Airfield fuel area south -->
+        <pos x="11800" z="12500" a="0"/>
+        <!-- NE Airfield south road approach -->
+        <pos x="12600" z="12200" a="0"/>
+        <!-- === New expansion: Balota Airfield comprehensive coverage === -->
+        <!-- Balota runway mid section -->
+        <pos x="4750" z="2200" a="0"/>
+        <!-- Balota barracks north block -->
+        <pos x="4650" z="2650" a="0"/>
+        <!-- Balota tents south end -->
+        <pos x="4900" z="2100" a="0"/>
+        <!-- Balota east gate area -->
+        <pos x="5100" z="2500" a="0"/>
+        <!-- === New expansion: Kamensk comprehensive coverage === -->
+        <!-- Kamensk east compound -->
+        <pos x="12500" z="14500" a="0"/>
+        <!-- Kamensk main barracks -->
+        <pos x="12300" z="14450" a="0"/>
+        <!-- Kamensk south perimeter -->
+        <pos x="12050" z="14200" a="0"/>
+        <!-- Kamensk road checkpoint -->
+        <pos x="12050" z="14800" a="0"/>
+        <!-- === New expansion: Myshkino camp additional coverage === -->
+        <!-- Myshkino camp east block -->
+        <pos x="2850" z="8300" a="0"/>
+        <!-- Myshkino camp northwest -->
+        <pos x="2300" z="8600" a="0"/>
+        <!-- === New expansion: Vybor military additional coverage === -->
+        <!-- Vybor military north compound -->
+        <pos x="3800" z="9100" a="0"/>
+        <!-- Vybor military center -->
+        <pos x="3900" z="8800" a="0"/>
+        <!-- Vybor military west side -->
+        <pos x="3650" z="8800" a="0"/>
+        <!-- === New expansion: Pavlovo military additional coverage === -->
+        <!-- Pavlovo barracks north block -->
+        <pos x="2100" z="3800" a="0"/>
+        <!-- Pavlovo east compound -->
+        <pos x="2300" z="3650" a="0"/>
+        <!-- Pavlovo south perimeter -->
+        <pos x="1900" z="3750" a="0"/>
+        <!-- === New expansion: Zeleno military additional coverage === -->
+        <!-- Zeleno barracks block -->
+        <pos x="2700" z="5450" a="0"/>
+        <!-- Zeleno perimeter east -->
+        <pos x="3000" z="5250" a="0"/>
+        <!-- Zeleno north checkpoint -->
+        <pos x="2650" z="5650" a="0"/>
+        <!-- === New expansion: military checkpoints and approach roads === -->
+        <!-- Military checkpoint north NWAF approach road -->
+        <pos x="4200" z="11400" a="0"/>
+        <!-- Military checkpoint Vybor south road -->
+        <pos x="3600" z="9700" a="0"/>
+        <!-- Military checkpoint east NWAF road -->
+        <pos x="5450" z="10400" a="0"/>
+        <!-- Military checkpoint south Balota road -->
+        <pos x="4700" z="2080" a="0"/>
+        <!-- Military checkpoint Zeleno road west -->
+        <pos x="2400" z="4900" a="0"/>
+        <!-- Guard tower south Vybor approach -->
+        <pos x="3700" z="8400" a="0"/>
+        <!-- Guard tower Lopatino military road -->
+        <pos x="3000" z="10050" a="0"/>
+        <!-- Military road Myshkino to NWAF mid -->
+        <pos x="3100" z="9000" a="0"/>
+        <!-- Military outpost Tisy south road -->
+        <pos x="1550" z="13700" a="0"/>
     </event>
 
 </eventposdef>
