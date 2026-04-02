@@ -11,9 +11,9 @@
 <!--      bonfires, trains, convoys, boats, planks, animals,          -->
 <!--      infected and all other vanilla events.                      -->
 <!--   2. 3 custom ATR horde events appended after vanilla content:   -->
-<!--        InfectedHorde_Small  — 45 village/road/gas-station spots  -->
-<!--        InfectedHorde_Medium — 35 city/industrial positions       -->
-<!--        InfectedHorde_Large  — 30 military/airfield positions     -->
+<!--        InfectedHorde_Small  — ~150 village/road/farm/hamlet/crossroads pos  -->
+<!--        InfectedHorde_Medium — ~100 city POI positions            -->
+<!--        InfectedHorde_Large  — ~80 military/airfield positions    -->
 <!--                                                                  -->
 <!-- Pairs with: events.xml for horde definitions                     -->
 <!-- ================================================================ -->
@@ -2324,260 +2324,2492 @@
     <!-- ATR CUSTOM EVENTS                                            -->
     <!-- ============================================================ -->
 
-    <!-- ============================================================ -->
-    <!-- TIER 1: InfectedHorde_Small — Village Stragglers / Roads     -->
-    <!-- Small clusters at villages, road intersections, gas stations -->
-    <!-- and the Cherno industrial main road. 45-position pool means  -->
-    <!-- each restock cycle (every 180s) picks 12 new random spots.   -->
-    <!-- ============================================================ -->
+    <!-- ================================================================ -->
+    <!-- ATR Horde Events: spawn pools derived 1-to-1 from               -->
+    <!-- Bohemia Interactive mapgrouppos.xml (official CE repository).   -->
+    <!-- Every <pos> is located AT an actual in-game building.           -->
+    <!--   InfectedHorde_Small  : 155 positions  village/farm/road POIs  -->
+    <!--   InfectedHorde_Medium : 105 positions  city hospitals/police   -->
+    <!--   InfectedHorde_Large  :  85 positions  military/industrial      -->
+    <!-- Positions weighted toward populated areas, rare in open terrain. -->
+    <!-- ================================================================ -->
+    <!-- ATR Horde Events: spawn pools derived 1-to-1 from               -->
+    <!-- Bohemia Interactive mapgrouppos.xml (official CE repository).   -->
+    <!-- Every <pos> is located AT an actual in-game building.           -->
+    <!--   InfectedHorde_Small  : 250 positions  village/farm/road      -->
+    <!--   InfectedHorde_Medium : 105 positions  city hospitals/police -->
+    <!--   InfectedHorde_Large  :  85 positions  military/industrial   -->
+    <!-- Weighted toward settlements; rare in open terrain / woodland.  -->
+    <!-- ================================================================ -->
+    <!-- ATR Horde Events: every <pos> derived from Bohemia              -->
+    <!-- mapgrouppos.xml — placed AT real in-game buildings.             -->
+    <!--   InfectedHorde_Small  : 943 positions                        -->
+    <!--     693 village/farm/road POIs (settlement-weighted)   -->
+    <!--     250 woods / dirt tracks / isolated rural          -->
+    <!--   InfectedHorde_Medium : 105 positions  city POIs              -->
+    <!--   InfectedHorde_Large  :  85 positions  military/industrial   -->
+    <!-- ================================================================ -->
+
     <event name="InfectedHorde_Small">
-        <!-- === Original 15 village positions === -->
-        <!-- Gorka village center -->
-        <pos x="9534" z="8870" a="0"/>
-        <!-- Polana village -->
-        <pos x="10618" z="8031" a="0"/>
-        <!-- Staroye village -->
-        <pos x="10116" z="5455" a="0"/>
-        <!-- Solnichniy factory district -->
-        <pos x="13312" z="6109" a="0"/>
-        <!-- Komarovo village -->
-        <pos x="3650" z="2457" a="0"/>
-        <!-- Pavlovo village -->
-        <pos x="1720" z="3765" a="0"/>
-        <!-- Guglovo village -->
-        <pos x="8426" z="6684" a="0"/>
-        <!-- Dolina village -->
-        <pos x="11260" z="6620" a="0"/>
-        <!-- Pusta village -->
-        <pos x="9398" z="4772" a="0"/>
-        <!-- Bor village -->
-        <pos x="3254" z="4072" a="0"/>
-        <!-- Pogorevka village -->
-        <pos x="4453" z="6395" a="0"/>
-        <!-- Rogovo village -->
-        <pos x="4721" z="6822" a="0"/>
-        <!-- Pulkovo village -->
-        <pos x="4925" z="5542" a="0"/>
-        <!-- Kozlovka village -->
-        <pos x="4441" z="4684" a="0"/>
-        <!-- Drozhino village -->
-        <pos x="3388" z="4997" a="0"/>
-        <!-- === New 30 positions: roads, gas stations, village outskirts === -->
-        <!-- Cherno industrial main road — south end -->
-        <pos x="6480" z="2610" a="0"/>
-        <!-- Cherno industrial main road — mid south -->
-        <pos x="6620" z="2820" a="0"/>
-        <!-- Cherno industrial main road — mid north -->
-        <pos x="6760" z="3040" a="0"/>
-        <!-- Cherno industrial main road — north end -->
-        <pos x="6880" z="3180" a="0"/>
-        <!-- Gas station east of Elektro (road to Kamyshovo) -->
-        <pos x="10250" z="2280" a="0"/>
-        <!-- Gas station near Berezino (coastal road) -->
-        <pos x="12500" z="9110" a="0"/>
-        <!-- Gas station near Lopatino (western road) -->
-        <pos x="2980" z="9650" a="0"/>
-        <!-- Gas station near Zelenogorsk -->
-        <pos x="2400" z="5140" a="0"/>
-        <!-- Gas station Kamenka road -->
-        <pos x="1850" z="2300" a="0"/>
-        <!-- Novy Sobor crossroads -->
-        <pos x="7120" z="7800" a="0"/>
-        <!-- Road near VMC (Vybor Military Camp) -->
-        <pos x="3450" z="8820" a="0"/>
-        <!-- Road junction east of Stary Sobor -->
-        <pos x="6580" z="7920" a="0"/>
-        <!-- Road south of Kabanino village -->
-        <pos x="5700" z="8650" a="0"/>
-        <!-- Road between Cherno and Elektro (Dubky area) -->
-        <pos x="8780" z="2490" a="0"/>
-        <!-- Road through Mogilevka area -->
-        <pos x="7980" z="5010" a="0"/>
-        <!-- Prigorodki outskirts (road east of Cherno) -->
-        <pos x="7020" z="3350" a="0"/>
-        <!-- Komarovo outskirts — western coastal road -->
-        <pos x="3480" z="2200" a="0"/>
-        <!-- Kamyshovo village outskirts -->
-        <pos x="12480" z="3600" a="0"/>
-        <!-- Krasnostav village area -->
-        <pos x="11150" z="12220" a="0"/>
-        <!-- Gvozdno village -->
-        <pos x="8900" z="11750" a="0"/>
-        <!-- Dubrovka village -->
-        <pos x="9950" z="10830" a="0"/>
-        <!-- Pustoshka village -->
-        <pos x="4070" z="9110" a="0"/>
-        <!-- Kabanino village -->
-        <pos x="5600" z="8700" a="0"/>
-        <!-- Turovo village -->
-        <pos x="6150" z="6700" a="0"/>
-        <!-- Polesovo village -->
-        <pos x="8200" z="9310" a="0"/>
-        <!-- Mogilevka village -->
-        <pos x="7650" z="4760" a="0"/>
-        <!-- Bridge near Solnichniy (northern road) -->
-        <pos x="13150" z="5310" a="0"/>
-        <!-- Elektro road — eastern approach -->
-        <pos x="11200" z="2610" a="0"/>
-        <!-- Road junction near Balota crossroads -->
-        <pos x="4850" z="2900" a="0"/>
-        <!-- Road east of Chernogorsk -->
-        <pos x="7500" z="2700" a="0"/>
+        <!-- ==================================================== -->
+        <!-- VILLAGES / TOWNS / FARMS  (693 positions)            -->
+        <!-- ==================================================== -->
+        <!-- BALOTA                                               -->
+        <!-- village house — near Balota -->
+        <pos x="4132" z="2225" a="0"/>
+        <!-- polytunnel — Balota -->
+        <pos x="4535" z="2414" a="0"/>
+        <!-- polytunnel — Balota -->
+        <pos x="4433" z="2521" a="0"/>
+        <!-- village house — Balota -->
+        <pos x="4530" z="2618" a="0"/>
+        <!-- brick barn — Balota -->
+        <pos x="4408" z="2694" a="0"/>
+        <!-- village house — near Balota -->
+        <pos x="4604" z="2734" a="0"/>
+        <!-- village house — near Balota -->
+        <pos x="4454" z="2918" a="0"/>
+        <!-- feed shack — near Balota -->
+        <pos x="4545" z="3131" a="0"/>
+        <!-- village house — near Balota -->
+        <pos x="4335" z="3271" a="0"/>
+        <!-- BALOTA AIRFIELD                                      -->
+        <!-- village house — near Balota Airfield -->
+        <pos x="5189" z="2087" a="0"/>
+        <!-- brick house — near Balota Airfield -->
+        <pos x="4902" z="2790" a="0"/>
+        <!-- BELOZERSK                                            -->
+        <!-- polytunnel — near Belozersk -->
+        <pos x="4897" z="11834" a="0"/>
+        <!-- brick barn — near Belozersk -->
+        <pos x="4907" z="12133" a="0"/>
+        <!-- village house — Belozersk -->
+        <pos x="5202" z="12354" a="0"/>
+        <!-- brick barn — near Belozersk -->
+        <pos x="4342" z="12551" a="0"/>
+        <!-- bus stop — near Belozersk -->
+        <pos x="5387" z="12627" a="0"/>
+        <!-- village house — Belozersk -->
+        <pos x="5228" z="12637" a="0"/>
+        <!-- village house — near Belozersk -->
+        <pos x="4973" z="12775" a="0"/>
+        <!-- brick barn — near Belozersk -->
+        <pos x="5414" z="12902" a="0"/>
+        <!-- brick barn — near Belozersk -->
+        <pos x="4534" z="12920" a="0"/>
+        <!-- cowshed — near Belozersk -->
+        <pos x="5068" z="12975" a="0"/>
+        <!-- brick house — near Belozersk -->
+        <pos x="4901" z="13034" a="0"/>
+        <!-- bus stop — rural outskirts near Belozersk -->
+        <pos x="4226" z="13042" a="0"/>
+        <!-- village house — near Belozersk -->
+        <pos x="4582" z="13141" a="0"/>
+        <!-- village house — rural outskirts near Belozersk -->
+        <pos x="4479" z="13331" a="0"/>
+        <!-- village house — rural outskirts near Belozersk -->
+        <pos x="4694" z="13470" a="0"/>
+        <!-- village house — rural outskirts near Belozersk -->
+        <pos x="5002" z="13489" a="0"/>
+        <!-- polytunnel — rural outskirts near Belozersk -->
+        <pos x="4336" z="13722" a="0"/>
+        <!-- village house — rural outskirts near Belozersk -->
+        <pos x="3982" z="13930" a="0"/>
+        <!-- brick barn — rural outskirts near Belozersk -->
+        <pos x="4299" z="14161" a="0"/>
+        <!-- feed shack — deep rural / woodland near Belozersk -->
+        <pos x="4364" z="14672" a="0"/>
+        <!-- BEREZINO                                             -->
+        <!-- feed shack — rural outskirts near Berezino -->
+        <pos x="12379" z="7741" a="0"/>
+        <!-- village store — rural outskirts near Berezino -->
+        <pos x="12933" z="8064" a="0"/>
+        <!-- village house — rural outskirts near Berezino -->
+        <pos x="12471" z="8251" a="0"/>
+        <!-- two-storey house — near Berezino -->
+        <pos x="12308" z="8344" a="0"/>
+        <!-- two-storey house — rural outskirts near Berezino -->
+        <pos x="12795" z="8413" a="0"/>
+        <!-- polytunnel — near Berezino -->
+        <pos x="12295" z="8486" a="0"/>
+        <!-- brick barn — near Berezino -->
+        <pos x="12581" z="8675" a="0"/>
+        <!-- two-storey house — Berezino -->
+        <pos x="11928" z="8948" a="0"/>
+        <!-- village house — Berezino -->
+        <pos x="11822" z="9051" a="0"/>
+        <!-- polytunnel — Berezino -->
+        <pos x="11984" z="9099" a="0"/>
+        <!-- polytunnel — Berezino -->
+        <pos x="12133" z="9121" a="0"/>
+        <!-- cowshed — Berezino -->
+        <pos x="12259" z="9132" a="0"/>
+        <!-- village house — Berezino -->
+        <pos x="11920" z="9215" a="0"/>
+        <!-- village house — Berezino -->
+        <pos x="12080" z="9356" a="0"/>
+        <!-- BOR                                                  -->
+        <!-- wooden barn — near Bor -->
+        <pos x="3792" z="3626" a="0"/>
+        <!-- two-storey house — Bor -->
+        <pos x="3473" z="3793" a="0"/>
+        <!-- polytunnel — Bor -->
+        <pos x="3370" z="3924" a="0"/>
+        <!-- polytunnel — Bor -->
+        <pos x="3126" z="3950" a="0"/>
+        <!-- village house — Bor -->
+        <pos x="3256" z="4013" a="0"/>
+        <!-- feed shack — near Bor -->
+        <pos x="2748" z="4226" a="0"/>
+        <!-- wooden barn — near Bor -->
+        <pos x="3101" z="4238" a="0"/>
+        <!-- CHERNOGORSK                                          -->
+        <!-- polytunnel — near Chernogorsk -->
+        <pos x="6279" z="2234" a="0"/>
+        <!-- polytunnel — Chernogorsk -->
+        <pos x="6474" z="2337" a="0"/>
+        <!-- polytunnel — Chernogorsk -->
+        <pos x="6664" z="2452" a="0"/>
+        <!-- bus stop — Chernogorsk -->
+        <pos x="6343" z="2503" a="0"/>
+        <!-- brick house — Chernogorsk -->
+        <pos x="6601" z="2606" a="0"/>
+        <!-- brick house — Chernogorsk -->
+        <pos x="6293" z="2638" a="0"/>
+        <!-- polytunnel — near Chernogorsk -->
+        <pos x="6725" z="2752" a="0"/>
+        <!-- bus stop — near Chernogorsk -->
+        <pos x="6213" z="2778" a="0"/>
+        <!-- brick house — Chernogorsk -->
+        <pos x="6533" z="2800" a="0"/>
+        <!-- brick house — near Chernogorsk -->
+        <pos x="6420" z="2902" a="0"/>
+        <!-- DOLINA                                               -->
+        <!-- village house — rural outskirts near Dolina -->
+        <pos x="12216" z="6273" a="0"/>
+        <!-- village house — near Dolina -->
+        <pos x="12076" z="6315" a="0"/>
+        <!-- wooden barn — near Dolina -->
+        <pos x="11766" z="6450" a="0"/>
+        <!-- village store — Dolina -->
+        <pos x="11249" z="6562" a="0"/>
+        <!-- village house — near Dolina -->
+        <pos x="11743" z="6600" a="0"/>
+        <!-- polytunnel — Dolina -->
+        <pos x="11403" z="6610" a="0"/>
+        <!-- village house — Dolina -->
+        <pos x="11114" z="6627" a="0"/>
+        <!-- brick barn — near Dolina -->
+        <pos x="11616" z="6682" a="0"/>
+        <!-- village house — near Dolina -->
+        <pos x="10888" z="6692" a="0"/>
+        <!-- village house — near Dolina -->
+        <pos x="10566" z="7021" a="0"/>
+        <!-- camp house — near Dolina -->
+        <pos x="11128" z="7050" a="0"/>
+        <!-- feed shack — near Dolina -->
+        <pos x="11734" z="7100" a="0"/>
+        <!-- chapel — rural outskirts near Dolina -->
+        <pos x="12087" z="7263" a="0"/>
+        <!-- village store — rural outskirts near Dolina -->
+        <pos x="12266" z="7330" a="0"/>
+        <!-- DUBOVO                                               -->
+        <!-- wooden barn — near Dubovo -->
+        <pos x="6833" z="3170" a="0"/>
+        <!-- bus stop — Dubovo -->
+        <pos x="6827" z="3549" a="0"/>
+        <!-- cowshed — near Dubovo -->
+        <pos x="6261" z="3775" a="0"/>
+        <!-- feed shack — near Dubovo -->
+        <pos x="6188" z="4091" a="0"/>
+        <!-- village health centre — near Dubovo -->
+        <pos x="7051" z="4306" a="0"/>
+        <!-- DUBROVKA                                             -->
+        <!-- village house — rural outskirts near Dubrovka -->
+        <pos x="5871" z="10150" a="0"/>
+        <!-- village store — rural outskirts near Dubrovka -->
+        <pos x="5942" z="10308" a="0"/>
+        <!-- village house — near Dubrovka -->
+        <pos x="6207" z="10376" a="0"/>
+        <!-- village house — near Dubrovka -->
+        <pos x="6096" z="10550" a="0"/>
+        <!-- brick house — near Dubrovka -->
+        <pos x="6144" z="10772" a="0"/>
+        <!-- village house — Dubrovka -->
+        <pos x="6110" z="10976" a="0"/>
+        <!-- village house — rural outskirts near Dubrovka -->
+        <pos x="5255" z="11102" a="0"/>
+        <!-- village house — Dubrovka -->
+        <pos x="5943" z="11206" a="0"/>
+        <!-- village pub — rural outskirts near Dubrovka -->
+        <pos x="7228" z="11313" a="0"/>
+        <!-- village house — near Dubrovka -->
+        <pos x="5903" z="11371" a="0"/>
+        <!-- feed shack — Dubrovka -->
+        <pos x="6205" z="11373" a="0"/>
+        <!-- village house — near Dubrovka -->
+        <pos x="5847" z="11510" a="0"/>
+        <!-- ELEKTROZAVODSK                                       -->
+        <!-- polytunnel — near Elektrozavodsk -->
+        <pos x="9760" z="1780" a="0"/>
+        <!-- brick house — near Elektrozavodsk -->
+        <pos x="9875" z="1851" a="0"/>
+        <!-- brick house — near Elektrozavodsk -->
+        <pos x="10356" z="1869" a="0"/>
+        <!-- brick barn — near Elektrozavodsk -->
+        <pos x="9490" z="1917" a="0"/>
+        <!-- village house — Elektrozavodsk -->
+        <pos x="9970" z="1989" a="0"/>
+        <!-- wooden barn — near Elektrozavodsk -->
+        <pos x="9724" z="1993" a="0"/>
+        <!-- village house — Elektrozavodsk -->
+        <pos x="10326" z="2017" a="0"/>
+        <!-- village house — Elektrozavodsk -->
+        <pos x="10451" z="2073" a="0"/>
+        <!-- bus stop — Elektrozavodsk -->
+        <pos x="10053" z="2090" a="0"/>
+        <!-- village house — Elektrozavodsk -->
+        <pos x="10174" z="2141" a="0"/>
+        <!-- brick house — near Elektrozavodsk -->
+        <pos x="10562" z="2143" a="0"/>
+        <!-- bus stop — Elektrozavodsk -->
+        <pos x="10313" z="2161" a="0"/>
+        <!-- brick barn — near Elektrozavodsk -->
+        <pos x="9721" z="2177" a="0"/>
+        <!-- brick barn — rural outskirts near Elektrozavodsk -->
+        <pos x="8882" z="2191" a="0"/>
+        <!-- village house — near Elektrozavodsk -->
+        <pos x="10779" z="2234" a="0"/>
+        <!-- bus stop — Elektrozavodsk -->
+        <pos x="10420" z="2248" a="0"/>
+        <!-- village house — near Elektrozavodsk -->
+        <pos x="10581" z="2314" a="0"/>
+        <!-- polytunnel — Elektrozavodsk -->
+        <pos x="10154" z="2325" a="0"/>
+        <!-- polytunnel — near Elektrozavodsk -->
+        <pos x="10287" z="2429" a="0"/>
+        <!-- village house — near Elektrozavodsk -->
+        <pos x="10633" z="2435" a="0"/>
+        <!-- village house — near Elektrozavodsk -->
+        <pos x="10825" z="2457" a="0"/>
+        <!-- polytunnel — near Elektrozavodsk -->
+        <pos x="10175" z="2499" a="0"/>
+        <!-- village house — near Elektrozavodsk -->
+        <pos x="10519" z="2530" a="0"/>
+        <!-- brick barn — near Elektrozavodsk -->
+        <pos x="9983" z="2620" a="0"/>
+        <!-- village house — near Elektrozavodsk -->
+        <pos x="10576" z="2713" a="0"/>
+        <!-- polytunnel — near Elektrozavodsk -->
+        <pos x="10373" z="2775" a="0"/>
+        <!-- GORKA                                                -->
+        <!-- two-storey house — rural outskirts near Gorka -->
+        <pos x="9075" z="8047" a="0"/>
+        <!-- village pub — near Gorka -->
+        <pos x="9794" z="8221" a="0"/>
+        <!-- village house — Gorka -->
+        <pos x="9459" z="8696" a="0"/>
+        <!-- wooden barn — Gorka -->
+        <pos x="9752" z="8727" a="0"/>
+        <!-- polytunnel — Gorka -->
+        <pos x="9620" z="8782" a="0"/>
+        <!-- village house — near Gorka -->
+        <pos x="9868" z="8815" a="0"/>
+        <!-- brick barn — Gorka -->
+        <pos x="9279" z="8820" a="0"/>
+        <!-- village health centre — Gorka -->
+        <pos x="9473" z="8839" a="0"/>
+        <!-- wooden barn — Gorka -->
+        <pos x="9681" z="8931" a="0"/>
+        <!-- feed shack — near Gorka -->
+        <pos x="9656" z="9188" a="0"/>
+        <!-- brick barn — near Gorka -->
+        <pos x="9663" z="9349" a="0"/>
+        <!-- GRISHINO                                             -->
+        <!-- wooden barn — near Grishino -->
+        <pos x="8149" z="12136" a="0"/>
+        <!-- wooden barn — near Grishino -->
+        <pos x="8402" z="12217" a="0"/>
+        <!-- polytunnel — near Grishino -->
+        <pos x="8266" z="12232" a="0"/>
+        <!-- chapel — Grishino -->
+        <pos x="8172" z="12362" a="0"/>
+        <!-- bus stop — Grishino -->
+        <pos x="7949" z="12542" a="0"/>
+        <!-- bus stop — Grishino -->
+        <pos x="8068" z="12586" a="0"/>
+        <!-- chapel — near Grishino -->
+        <pos x="8727" z="12614" a="0"/>
+        <!-- bus stop — Grishino -->
+        <pos x="7914" z="12664" a="0"/>
+        <!-- polytunnel — near Grishino -->
+        <pos x="8575" z="12687" a="0"/>
+        <!-- bus stop — Grishino -->
+        <pos x="8178" z="12724" a="0"/>
+        <!-- camp house — rural outskirts near Grishino -->
+        <pos x="9055" z="12727" a="0"/>
+        <!-- village pub — near Grishino -->
+        <pos x="8468" z="12757" a="0"/>
+        <!-- wooden barn — near Grishino -->
+        <pos x="8325" z="12831" a="0"/>
+        <!-- village house — near Grishino -->
+        <pos x="8817" z="12905" a="0"/>
+        <!-- village house — near Grishino -->
+        <pos x="8103" z="12932" a="0"/>
+        <!-- two-storey house — near Grishino -->
+        <pos x="8391" z="12983" a="0"/>
+        <!-- village house — near Grishino -->
+        <pos x="7994" z="13033" a="0"/>
+        <!-- polytunnel — near Grishino -->
+        <pos x="8292" z="13109" a="0"/>
+        <!-- brick barn — near Grishino -->
+        <pos x="8181" z="13243" a="0"/>
+        <!-- GUGLOVO                                              -->
+        <!-- polytunnel — Guglovo -->
+        <pos x="8473" z="6632" a="0"/>
+        <!-- brick barn — near Guglovo -->
+        <pos x="8250" z="6983" a="0"/>
+        <!-- feed shack — near Guglovo -->
+        <pos x="8855" z="6984" a="0"/>
+        <!-- village house — near Guglovo -->
+        <pos x="8041" z="7056" a="0"/>
+        <!-- GVOZDNO                                              -->
+        <!-- village house — rural outskirts near Gvozdno -->
+        <pos x="9617" z="10433" a="0"/>
+        <!-- village house — rural outskirts near Gvozdno -->
+        <pos x="10287" z="10999" a="0"/>
+        <!-- village pub — rural outskirts near Gvozdno -->
+        <pos x="8168" z="11007" a="0"/>
+        <!-- village house — near Gvozdno -->
+        <pos x="9158" z="11026" a="0"/>
+        <!-- feed shack — rural outskirts near Gvozdno -->
+        <pos x="7653" z="11186" a="0"/>
+        <!-- brick house — near Gvozdno -->
+        <pos x="8126" z="11489" a="0"/>
+        <!-- two-storey house — rural outskirts near Gvozdno -->
+        <pos x="7835" z="11564" a="0"/>
+        <!-- village house — near Gvozdno -->
+        <pos x="8225" z="11621" a="0"/>
+        <!-- village store — Gvozdno -->
+        <pos x="8709" z="11627" a="0"/>
+        <!-- village house — Gvozdno -->
+        <pos x="8572" z="11664" a="0"/>
+        <!-- cowshed — Gvozdno -->
+        <pos x="8828" z="11677" a="0"/>
+        <!-- feed shack — rural outskirts near Gvozdno -->
+        <pos x="10483" z="11750" a="0"/>
+        <!-- village store — Gvozdno -->
+        <pos x="8652" z="11855" a="0"/>
+        <!-- village house — near Gvozdno -->
+        <pos x="8516" z="11935" a="0"/>
+        <!-- two-storey house — near Gvozdno -->
+        <pos x="8837" z="12030" a="0"/>
+        <!-- feed shack — near Gvozdno -->
+        <pos x="9303" z="12044" a="0"/>
+        <!-- village house — near Gvozdno -->
+        <pos x="8486" z="12073" a="0"/>
+        <!-- feed shack — near Gvozdno -->
+        <pos x="8634" z="12096" a="0"/>
+        <!-- KABANINO                                             -->
+        <!-- feed shack — near Kabanino -->
+        <pos x="5346" z="7893" a="0"/>
+        <!-- village house — Kabanino -->
+        <pos x="5469" z="8392" a="0"/>
+        <!-- village store — Kabanino -->
+        <pos x="5387" z="8543" a="0"/>
+        <!-- wooden barn — Kabanino -->
+        <pos x="5315" z="8642" a="0"/>
+        <!-- wooden barn — near Kabanino -->
+        <pos x="5775" z="8694" a="0"/>
+        <!-- two-storey house — Kabanino -->
+        <pos x="5342" z="8773" a="0"/>
+        <!-- KAMENKA                                              -->
+        <!-- village house — Kamenka -->
+        <pos x="1720" z="2184" a="0"/>
+        <!-- village house — Kamenka -->
+        <pos x="1991" z="2237" a="0"/>
+        <!-- village store — Kamenka -->
+        <pos x="1843" z="2243" a="0"/>
+        <!-- feed shack — rural outskirts near Kamenka -->
+        <pos x="648" z="2313" a="0"/>
+        <!-- village house — rural outskirts near Kamenka -->
+        <pos x="197" z="2383" a="0"/>
+        <!-- feed shack — near Kamenka -->
+        <pos x="1355" z="2458" a="0"/>
+        <!-- KAMENKA MIL                                          -->
+        <!-- polytunnel — near Kamenka mil -->
+        <pos x="2737" z="3067" a="0"/>
+        <!-- two-storey house — near Kamenka mil -->
+        <pos x="2576" z="3452" a="0"/>
+        <!-- KAMENSK                                              -->
+        <!-- village house — near Kamensk -->
+        <pos x="12457" z="13762" a="0"/>
+        <!-- village pub — near Kamensk -->
+        <pos x="12137" z="13868" a="0"/>
+        <!-- village house — near Kamensk -->
+        <pos x="12311" z="13870" a="0"/>
+        <!-- brick barn — near Kamensk -->
+        <pos x="12510" z="13900" a="0"/>
+        <!-- bus stop — Kamensk -->
+        <pos x="12349" z="14386" a="0"/>
+        <!-- village house — near Kamensk -->
+        <pos x="13049" z="14406" a="0"/>
+        <!-- village house — rural outskirts near Kamensk -->
+        <pos x="13244" z="14502" a="0"/>
+        <!-- polytunnel — near Kamensk -->
+        <pos x="12920" z="14510" a="0"/>
+        <!-- feed shack — near Kamensk -->
+        <pos x="12625" z="14528" a="0"/>
+        <!-- village house — near Kamensk -->
+        <pos x="12762" z="14610" a="0"/>
+        <!-- village house — near Kamensk -->
+        <pos x="12849" z="14746" a="0"/>
+        <!-- village house — near Kamensk -->
+        <pos x="12520" z="14757" a="0"/>
+        <!-- feed shack — Kamensk -->
+        <pos x="12178" z="14802" a="0"/>
+        <!-- village pub — rural outskirts near Kamensk -->
+        <pos x="13269" z="14808" a="0"/>
+        <!-- polytunnel — Kamensk -->
+        <pos x="12372" z="14838" a="0"/>
+        <!-- village house — near Kamensk -->
+        <pos x="13020" z="14989" a="0"/>
+        <!-- village house — near Kamensk -->
+        <pos x="12844" z="15012" a="0"/>
+        <!-- two-storey house — rural outskirts near Kamensk -->
+        <pos x="13918" z="15038" a="0"/>
+        <!-- cowshed — near Kamensk -->
+        <pos x="12699" z="15103" a="0"/>
+        <!-- KAMYSHOVO                                            -->
+        <!-- village house — near Kamyshovo -->
+        <pos x="11647" z="3178" a="0"/>
+        <!-- village house — Kamyshovo -->
+        <pos x="11931" z="3486" a="0"/>
+        <!-- village house — Kamyshovo -->
+        <pos x="12068" z="3510" a="0"/>
+        <!-- village house — Kamyshovo -->
+        <pos x="12205" z="3520" a="0"/>
+        <!-- two-storey house — Kamyshovo -->
+        <pos x="12074" z="3646" a="0"/>
+        <!-- brick barn — near Kamyshovo -->
+        <pos x="11989" z="3829" a="0"/>
+        <!-- feed shack — near Kamyshovo -->
+        <pos x="11817" z="4013" a="0"/>
+        <!-- village house — rural outskirts near Kamyshovo -->
+        <pos x="12527" z="4324" a="0"/>
+        <!-- village house — rural outskirts near Kamyshovo -->
+        <pos x="12681" z="4377" a="0"/>
+        <!-- village house — rural outskirts near Kamyshovo -->
+        <pos x="12828" z="4440" a="0"/>
+        <!-- KOMAROVO                                             -->
+        <!-- brick cottage — Komarovo -->
+        <pos x="3663" z="2206" a="0"/>
+        <!-- brick house — Komarovo -->
+        <pos x="3509" z="2411" a="0"/>
+        <!-- polytunnel — Komarovo -->
+        <pos x="3606" z="2505" a="0"/>
+        <!-- village house — near Komarovo -->
+        <pos x="3020" z="2552" a="0"/>
+        <!-- village house — Komarovo -->
+        <pos x="3469" z="2557" a="0"/>
+        <!-- two-storey house — Komarovo -->
+        <pos x="3774" z="2575" a="0"/>
+        <!-- village pub — near Komarovo -->
+        <pos x="3201" z="2578" a="0"/>
+        <!-- village house — near Komarovo -->
+        <pos x="2816" z="2727" a="0"/>
+        <!-- brick barn — near Komarovo -->
+        <pos x="3343" z="2851" a="0"/>
+        <!-- village house — rural outskirts near Komarovo -->
+        <pos x="4052" z="3316" a="0"/>
+        <!-- KOMETA                                               -->
+        <!-- bus stop — rural outskirts near Kometa -->
+        <pos x="10898" z="2815" a="0"/>
+        <!-- village house — near Kometa -->
+        <pos x="10273" z="2947" a="0"/>
+        <!-- village pub — Kometa -->
+        <pos x="10275" z="3489" a="0"/>
+        <!-- feed shack — near Kometa -->
+        <pos x="10783" z="3645" a="0"/>
+        <!-- village house — Kometa -->
+        <pos x="10292" z="3821" a="0"/>
+        <!-- village house — near Kometa -->
+        <pos x="10005" z="4051" a="0"/>
+        <!-- feed shack — near Kometa -->
+        <pos x="10878" z="4134" a="0"/>
+        <!-- KOZLOVKA                                             -->
+        <!-- village house — near Kozlovka -->
+        <pos x="4456" z="3918" a="0"/>
+        <!-- two-storey house — near Kozlovka -->
+        <pos x="4346" z="4012" a="0"/>
+        <!-- brick house — near Kozlovka -->
+        <pos x="4394" z="4147" a="0"/>
+        <!-- metal barn — Kozlovka -->
+        <pos x="4566" z="4531" a="0"/>
+        <!-- village store — Kozlovka -->
+        <pos x="4432" z="4686" a="0"/>
+        <!-- village house — Kozlovka -->
+        <pos x="4669" z="4694" a="0"/>
+        <!-- brick barn — near Kozlovka -->
+        <pos x="3985" z="4713" a="0"/>
+        <!-- two-storey house — Kozlovka -->
+        <pos x="4274" z="4828" a="0"/>
+        <!-- feed shack — near Kozlovka -->
+        <pos x="4445" z="5074" a="0"/>
+        <!-- KRASNOSTAV                                           -->
+        <!-- two-storey house — Krasnostav -->
+        <pos x="12697" z="9456" a="0"/>
+        <!-- polytunnel — near Krasnostav -->
+        <pos x="12263" z="9536" a="0"/>
+        <!-- polytunnel — Krasnostav -->
+        <pos x="12515" z="9550" a="0"/>
+        <!-- two-storey house — Krasnostav -->
+        <pos x="12891" z="9582" a="0"/>
+        <!-- bus stop — near Krasnostav -->
+        <pos x="12360" z="9652" a="0"/>
+        <!-- wooden barn — Krasnostav -->
+        <pos x="12659" z="9662" a="0"/>
+        <!-- polytunnel — near Krasnostav -->
+        <pos x="12227" z="9672" a="0"/>
+        <!-- village house — Krasnostav -->
+        <pos x="12981" z="9688" a="0"/>
+        <!-- polytunnel — Krasnostav -->
+        <pos x="12835" z="9825" a="0"/>
+        <!-- wooden barn — Krasnostav -->
+        <pos x="12690" z="9894" a="0"/>
+        <!-- village health centre — near Krasnostav -->
+        <pos x="12777" z="10065" a="0"/>
+        <!-- polytunnel — near Krasnostav -->
+        <pos x="12881" z="10190" a="0"/>
+        <!-- bus stop — near Krasnostav -->
+        <pos x="13117" z="10362" a="0"/>
+        <!-- village house — near Krasnostav -->
+        <pos x="12680" z="10387" a="0"/>
+        <!-- village house — near Krasnostav -->
+        <pos x="12514" z="10436" a="0"/>
+        <!-- brick house — rural outskirts near Krasnostav -->
+        <pos x="12273" z="10619" a="0"/>
+        <!-- village pub — rural outskirts near Krasnostav -->
+        <pos x="11572" z="10653" a="0"/>
+        <!-- brick house — rural outskirts near Krasnostav -->
+        <pos x="12332" z="10918" a="0"/>
+        <!-- KRUTOY CAP                                           -->
+        <!-- bus stop — Krutoy Cap -->
+        <pos x="14119" z="13086" a="0"/>
+        <!-- village house — rural outskirts near Krutoy Cap -->
+        <pos x="15086" z="13820" a="0"/>
+        <!-- KUMYRNA                                              -->
+        <!-- feed shack — near Kumyrna -->
+        <pos x="8172" z="5447" a="0"/>
+        <!-- LOPATINO                                             -->
+        <!-- polytunnel — deep rural / woodland near Lopatino -->
+        <pos x="1324" z="10087" a="0"/>
+        <!-- feed shack — deep rural / woodland near Lopatino -->
+        <pos x="80" z="10449" a="0"/>
+        <!-- wooden barn — rural outskirts near Lopatino -->
+        <pos x="1496" z="10660" a="0"/>
+        <!-- camp house — rural outskirts near Lopatino -->
+        <pos x="607" z="11189" a="0"/>
+        <!-- village house — rural outskirts near Lopatino -->
+        <pos x="2092" z="11310" a="0"/>
+        <!-- village pub — rural outskirts near Lopatino -->
+        <pos x="1228" z="11471" a="0"/>
+        <!-- brick barn — near Lopatino -->
+        <pos x="2350" z="11794" a="0"/>
+        <!-- village pub — rural outskirts near Lopatino -->
+        <pos x="250" z="11909" a="0"/>
+        <!-- village store — near Lopatino -->
+        <pos x="1545" z="11995" a="0"/>
+        <!-- brick barn — near Lopatino -->
+        <pos x="1880" z="12007" a="0"/>
+        <!-- village house — rural outskirts near Lopatino -->
+        <pos x="1221" z="12052" a="0"/>
+        <!-- two-storey house — near Lopatino -->
+        <pos x="1373" z="12090" a="0"/>
+        <!-- brick barn — rural outskirts near Lopatino -->
+        <pos x="773" z="12226" a="0"/>
+        <!-- brick barn — Lopatino -->
+        <pos x="2176" z="12300" a="0"/>
+        <!-- village pub — near Lopatino -->
+        <pos x="2329" z="12326" a="0"/>
+        <!-- brick barn — near Lopatino -->
+        <pos x="2639" z="12471" a="0"/>
+        <!-- feed shack — rural outskirts near Lopatino -->
+        <pos x="320" z="12537" a="0"/>
+        <!-- brick barn — near Lopatino -->
+        <pos x="1275" z="12558" a="0"/>
+        <!-- brick barn — near Lopatino -->
+        <pos x="2365" z="12604" a="0"/>
+        <!-- brick barn — near Lopatino -->
+        <pos x="2537" z="12885" a="0"/>
+        <!-- feed shack — near Lopatino -->
+        <pos x="1987" z="12966" a="0"/>
+        <!-- brick barn — near Lopatino -->
+        <pos x="2257" z="12996" a="0"/>
+        <!-- MOGILEVKA                                            -->
+        <!-- village house — near Mogilevka -->
+        <pos x="7469" z="4857" a="0"/>
+        <!-- two-storey house — near Mogilevka -->
+        <pos x="8374" z="4950" a="0"/>
+        <!-- village house — Mogilevka -->
+        <pos x="7596" z="4971" a="0"/>
+        <!-- village house — Mogilevka -->
+        <pos x="7474" z="5021" a="0"/>
+        <!-- wooden barn — Mogilevka -->
+        <pos x="7793" z="5133" a="0"/>
+        <!-- village store — Mogilevka -->
+        <pos x="7525" z="5160" a="0"/>
+        <!-- cowshed — Mogilevka -->
+        <pos x="7658" z="5170" a="0"/>
+        <!-- village house — Mogilevka -->
+        <pos x="7787" z="5273" a="0"/>
+        <!-- MSTA                                                 -->
+        <!-- village house — near Msta -->
+        <pos x="11543" z="5023" a="0"/>
+        <!-- village house — rural outskirts near Msta -->
+        <pos x="12187" z="5046" a="0"/>
+        <!-- polytunnel — Msta -->
+        <pos x="11229" z="5426" a="0"/>
+        <!-- brick barn — Msta -->
+        <pos x="11512" z="5503" a="0"/>
+        <!-- village house — Msta -->
+        <pos x="11345" z="5511" a="0"/>
+        <!-- village pub — near Msta -->
+        <pos x="10962" z="5515" a="0"/>
+        <!-- village house — rural outskirts near Msta -->
+        <pos x="12295" z="5566" a="0"/>
+        <!-- feed shack — near Msta -->
+        <pos x="11757" z="5805" a="0"/>
+        <!-- NE AIRFIELD                                          -->
+        <!-- feed shack — rural outskirts near NE Airfield -->
+        <pos x="12129" z="11190" a="0"/>
+        <!-- village house — near NE Airfield -->
+        <pos x="12070" z="11993" a="0"/>
+        <!-- village house — near NE Airfield -->
+        <pos x="11924" z="12044" a="0"/>
+        <!-- village health centre — rural outskirts near NE Airfield -->
+        <pos x="11267" z="12144" a="0"/>
+        <!-- two-storey house — near NE Airfield -->
+        <pos x="11769" z="12192" a="0"/>
+        <!-- brick house — rural outskirts near NE Airfield -->
+        <pos x="11123" z="12249" a="0"/>
+        <!-- village house — rural outskirts near NE Airfield -->
+        <pos x="11302" z="12287" a="0"/>
+        <!-- village house — rural outskirts near NE Airfield -->
+        <pos x="11198" z="12390" a="0"/>
+        <!-- village pub — rural outskirts near NE Airfield -->
+        <pos x="10785" z="12416" a="0"/>
+        <!-- village house — near NE Airfield -->
+        <pos x="11601" z="12491" a="0"/>
+        <!-- village store — rural outskirts near NE Airfield -->
+        <pos x="11006" z="12511" a="0"/>
+        <!-- brick barn — near NE Airfield -->
+        <pos x="12598" z="12910" a="0"/>
+        <!-- village house — near NE Airfield -->
+        <pos x="11931" z="13172" a="0"/>
+        <!-- village house — near NE Airfield -->
+        <pos x="12172" z="13427" a="0"/>
+        <!-- village pub — rural outskirts near NE Airfield -->
+        <pos x="12459" z="13559" a="0"/>
+        <!-- brick cottage — rural outskirts near NE Airfield -->
+        <pos x="12104" z="13561" a="0"/>
+        <!-- NADEZHDA                                             -->
+        <!-- village house — near Nadezhda -->
+        <pos x="7330" z="6363" a="0"/>
+        <!-- feed shack — near Nadezhda -->
+        <pos x="7635" z="6637" a="0"/>
+        <!-- feed shack — near Nadezhda -->
+        <pos x="6682" z="6772" a="0"/>
+        <!-- brick barn — near Nadezhda -->
+        <pos x="7801" z="6899" a="0"/>
+        <!-- village pub — Nadezhda -->
+        <pos x="7207" z="6940" a="0"/>
+        <!-- village health centre — Nadezhda -->
+        <pos x="7279" z="7068" a="0"/>
+        <!-- NADEZHDINO                                           -->
+        <!-- village house — near Nadezhdino -->
+        <pos x="5753" z="4162" a="0"/>
+        <!-- brick barn — Nadezhdino -->
+        <pos x="5755" z="4601" a="0"/>
+        <!-- village house — Nadezhdino -->
+        <pos x="5873" z="4657" a="0"/>
+        <!-- village house — Nadezhdino -->
+        <pos x="5852" z="4789" a="0"/>
+        <!-- feed shack — near Nadezhdino -->
+        <pos x="5263" z="4858" a="0"/>
+        <!-- village house — Nadezhdino -->
+        <pos x="6062" z="4905" a="0"/>
+        <!-- village house — Nadezhdino -->
+        <pos x="5833" z="4972" a="0"/>
+        <!-- NOVAYA PETROVKA                                      -->
+        <!-- feed shack — rural outskirts near Novaya Petrovka -->
+        <pos x="10562" z="12798" a="0"/>
+        <!-- village house — near Novaya Petrovka -->
+        <pos x="9740" z="12965" a="0"/>
+        <!-- wooden barn — near Novaya Petrovka -->
+        <pos x="9343" z="13093" a="0"/>
+        <!-- wooden barn — near Novaya Petrovka -->
+        <pos x="9716" z="13151" a="0"/>
+        <!-- brick barn — near Novaya Petrovka -->
+        <pos x="9980" z="13162" a="0"/>
+        <!-- village house — near Novaya Petrovka -->
+        <pos x="10083" z="13287" a="0"/>
+        <!-- village house — near Novaya Petrovka -->
+        <pos x="9582" z="13375" a="0"/>
+        <!-- wooden barn — near Novaya Petrovka -->
+        <pos x="10129" z="13450" a="0"/>
+        <!-- brick house — near Novaya Petrovka -->
+        <pos x="9275" z="13457" a="0"/>
+        <!-- village house — near Novaya Petrovka -->
+        <pos x="9265" z="13592" a="0"/>
+        <!-- polytunnel — Novaya Petrovka -->
+        <pos x="9382" z="13669" a="0"/>
+        <!-- village house — Novaya Petrovka -->
+        <pos x="9496" z="13746" a="0"/>
+        <!-- bus stop — Novaya Petrovka -->
+        <pos x="9667" z="13779" a="0"/>
+        <!-- polytunnel — near Novaya Petrovka -->
+        <pos x="9304" z="13856" a="0"/>
+        <!-- camp house — rural outskirts near Novaya Petrovka -->
+        <pos x="8464" z="13869" a="0"/>
+        <!-- feed shack — near Novaya Petrovka -->
+        <pos x="8841" z="13878" a="0"/>
+        <!-- brick house — Novaya Petrovka -->
+        <pos x="9742" z="13889" a="0"/>
+        <!-- brick barn — near Novaya Petrovka -->
+        <pos x="9186" z="13919" a="0"/>
+        <!-- village health centre — rural outskirts near Novaya Petrovka -->
+        <pos x="8573" z="13969" a="0"/>
+        <!-- two-storey house — near Novaya Petrovka -->
+        <pos x="10037" z="13982" a="0"/>
+        <!-- cowshed — near Novaya Petrovka -->
+        <pos x="9781" z="14050" a="0"/>
+        <!-- feed shack — rural outskirts near Novaya Petrovka -->
+        <pos x="8210" z="14277" a="0"/>
+        <!-- wooden barn — near Novaya Petrovka -->
+        <pos x="9444" z="14405" a="0"/>
+        <!-- village house — near Novaya Petrovka -->
+        <pos x="9105" z="14433" a="0"/>
+        <!-- village store — near Novaya Petrovka -->
+        <pos x="9394" z="14543" a="0"/>
+        <!-- village house — rural outskirts near Novaya Petrovka -->
+        <pos x="9184" z="14576" a="0"/>
+        <!-- village house — rural outskirts near Novaya Petrovka -->
+        <pos x="9494" z="14651" a="0"/>
+        <!-- village house — rural outskirts near Novaya Petrovka -->
+        <pos x="9604" z="14761" a="0"/>
+        <!-- feed shack — rural outskirts near Novaya Petrovka -->
+        <pos x="9311" z="15032" a="0"/>
+        <!-- feed shack — rural outskirts near Novaya Petrovka -->
+        <pos x="9941" z="15282" a="0"/>
+        <!-- NOVODMITROVSK                                        -->
+        <!-- feed shack — near Novodmitrovsk -->
+        <pos x="11234" z="13647" a="0"/>
+        <!-- village store — near Novodmitrovsk -->
+        <pos x="12122" z="13720" a="0"/>
+        <!-- polytunnel — near Novodmitrovsk -->
+        <pos x="11906" z="13856" a="0"/>
+        <!-- brick barn — near Novodmitrovsk -->
+        <pos x="12004" z="14000" a="0"/>
+        <!-- bus stop — Novodmitrovsk -->
+        <pos x="11567" z="14090" a="0"/>
+        <!-- brick house — near Novodmitrovsk -->
+        <pos x="10673" z="14279" a="0"/>
+        <!-- bus stop — Novodmitrovsk -->
+        <pos x="11681" z="14307" a="0"/>
+        <!-- polytunnel — Novodmitrovsk -->
+        <pos x="11434" z="14310" a="0"/>
+        <!-- two-storey house — rural outskirts near Novodmitrovsk -->
+        <pos x="10561" z="14404" a="0"/>
+        <!-- polytunnel — near Novodmitrovsk -->
+        <pos x="10736" z="14414" a="0"/>
+        <!-- village house — near Novodmitrovsk -->
+        <pos x="10949" z="14435" a="0"/>
+        <!-- brick house — near Novodmitrovsk -->
+        <pos x="11838" z="14450" a="0"/>
+        <!-- brick house — Novodmitrovsk -->
+        <pos x="11224" z="14461" a="0"/>
+        <!-- two-storey house — Novodmitrovsk -->
+        <pos x="11412" z="14486" a="0"/>
+        <!-- bus stop — Novodmitrovsk -->
+        <pos x="11581" z="14606" a="0"/>
+        <!-- feed shack — near Novodmitrovsk -->
+        <pos x="10886" z="14710" a="0"/>
+        <!-- brick house — near Novodmitrovsk -->
+        <pos x="11397" z="14718" a="0"/>
+        <!-- brick house — near Novodmitrovsk -->
+        <pos x="11661" z="14807" a="0"/>
+        <!-- polytunnel — near Novodmitrovsk -->
+        <pos x="11504" z="14892" a="0"/>
+        <!-- polytunnel — near Novodmitrovsk -->
+        <pos x="11375" z="14929" a="0"/>
+        <!-- NOVOSELKI                                            -->
+        <!-- village house — near Novoselki -->
+        <pos x="6052" z="2930" a="0"/>
+        <!-- village house — near Novoselki -->
+        <pos x="6265" z="2944" a="0"/>
+        <!-- polytunnel — Novoselki -->
+        <pos x="6146" z="3024" a="0"/>
+        <!-- polytunnel — Novoselki -->
+        <pos x="6433" z="3093" a="0"/>
+        <!-- wooden barn — near Novoselki -->
+        <pos x="6654" z="3096" a="0"/>
+        <!-- brick cottage — Novoselki -->
+        <pos x="6273" z="3109" a="0"/>
+        <!-- village house — Novoselki -->
+        <pos x="5984" z="3219" a="0"/>
+        <!-- two-storey house — Novoselki -->
+        <pos x="6380" z="3226" a="0"/>
+        <!-- brick house — Novoselki -->
+        <pos x="6103" z="3275" a="0"/>
+        <!-- brick house — Novoselki -->
+        <pos x="6248" z="3289" a="0"/>
+        <!-- village pub — rural outskirts near Novoselki -->
+        <pos x="5245" z="3688" a="0"/>
+        <!-- village house — rural outskirts near Novoselki -->
+        <pos x="5435" z="3794" a="0"/>
+        <!-- village house — near Novoselki -->
+        <pos x="5845" z="3932" a="0"/>
+        <!-- NOVY SOBOR                                           -->
+        <!-- brick barn — Novy Sobor -->
+        <pos x="7088" z="7597" a="0"/>
+        <!-- cowshed — Novy Sobor -->
+        <pos x="6997" z="7683" a="0"/>
+        <!-- village store — Novy Sobor -->
+        <pos x="7120" z="7713" a="0"/>
+        <!-- polytunnel — Novy Sobor -->
+        <pos x="7263" z="7762" a="0"/>
+        <!-- brick house — Novy Sobor -->
+        <pos x="6920" z="7815" a="0"/>
+        <!-- feed shack — rural outskirts near Novy Sobor -->
+        <pos x="7088" z="9161" a="0"/>
+        <!-- OLSHA                                                -->
+        <!-- village health centre — Olsha -->
+        <pos x="13876" z="13118" a="0"/>
+        <!-- bus stop — Olsha -->
+        <pos x="13980" z="13251" a="0"/>
+        <!-- bus stop — Olsha -->
+        <pos x="13846" z="13261" a="0"/>
+        <!-- village house — Olsha -->
+        <pos x="13718" z="13320" a="0"/>
+        <!-- chapel — Olsha -->
+        <pos x="13858" z="13452" a="0"/>
+        <!-- brick barn — near Olsha -->
+        <pos x="13352" z="13514" a="0"/>
+        <!-- wooden barn — near Olsha -->
+        <pos x="13496" z="13904" a="0"/>
+        <!-- two-storey house — near Olsha -->
+        <pos x="13611" z="13988" a="0"/>
+        <!-- village house — rural outskirts near Olsha -->
+        <pos x="14554" z="13990" a="0"/>
+        <!-- chapel — rural outskirts near Olsha -->
+        <pos x="13484" z="14154" a="0"/>
+        <!-- feed shack — rural outskirts near Olsha -->
+        <pos x="14917" z="14258" a="0"/>
+        <!-- camp house — rural outskirts near Olsha -->
+        <pos x="14838" z="14555" a="0"/>
+        <!-- village house — rural outskirts near Olsha -->
+        <pos x="14517" z="14642" a="0"/>
+        <!-- wooden barn — rural outskirts near Olsha -->
+        <pos x="14188" z="14839" a="0"/>
+        <!-- ORLOVETS                                             -->
+        <!-- feed shack — near Orlovets -->
+        <pos x="10968" z="8592" a="0"/>
+        <!-- wooden barn — near Orlovets -->
+        <pos x="10253" z="8913" a="0"/>
+        <!-- village house — Orlovets -->
+        <pos x="10930" z="9106" a="0"/>
+        <!-- cowshed — near Orlovets -->
+        <pos x="10275" z="9473" a="0"/>
+        <!-- village house — near Orlovets -->
+        <pos x="10310" z="9621" a="0"/>
+        <!-- village house — near Orlovets -->
+        <pos x="10566" z="9638" a="0"/>
+        <!-- brick house — rural outskirts near Orlovets -->
+        <pos x="10305" z="9833" a="0"/>
+        <!-- village store — near Orlovets -->
+        <pos x="10473" z="9846" a="0"/>
+        <!-- feed shack — near Orlovets -->
+        <pos x="11168" z="9848" a="0"/>
+        <!-- village house — near Orlovets -->
+        <pos x="10608" z="9959" a="0"/>
+        <!-- two-storey house — near Orlovets -->
+        <pos x="10888" z="9996" a="0"/>
+        <!-- village house — rural outskirts near Orlovets -->
+        <pos x="10557" z="10204" a="0"/>
+        <!-- village house — rural outskirts near Orlovets -->
+        <pos x="10078" z="10366" a="0"/>
+        <!-- village house — rural outskirts near Orlovets -->
+        <pos x="10760" z="10850" a="0"/>
+        <!-- PAVLOVO                                              -->
+        <!-- village house — rural outskirts near Pavlovo -->
+        <pos x="255" z="3778" a="0"/>
+        <!-- village house — Pavlovo -->
+        <pos x="1648" z="3783" a="0"/>
+        <!-- village house — Pavlovo -->
+        <pos x="1859" z="3884" a="0"/>
+        <!-- village store — Pavlovo -->
+        <pos x="1684" z="3912" a="0"/>
+        <!-- wooden barn — near Pavlovo -->
+        <pos x="1409" z="4047" a="0"/>
+        <!-- feed shack — rural outskirts near Pavlovo -->
+        <pos x="399" z="4056" a="0"/>
+        <!-- two-storey house — near Pavlovo -->
+        <pos x="1890" z="4322" a="0"/>
+        <!-- feed shack — rural outskirts near Pavlovo -->
+        <pos x="80" z="4422" a="0"/>
+        <!-- two-storey house — rural outskirts near Pavlovo -->
+        <pos x="1133" z="4592" a="0"/>
+        <!-- village house — rural outskirts near Pavlovo -->
+        <pos x="742" z="4600" a="0"/>
+        <!-- village house — rural outskirts near Pavlovo -->
+        <pos x="395" z="4717" a="0"/>
+        <!-- polytunnel — rural outskirts near Pavlovo -->
+        <pos x="478" z="5150" a="0"/>
+        <!-- PETROVKA                                             -->
+        <!-- feed shack — near Petrovka -->
+        <pos x="7102" z="12360" a="0"/>
+        <!-- village house — near Petrovka -->
+        <pos x="6825" z="12599" a="0"/>
+        <!-- feed shack — Petrovka -->
+        <pos x="7428" z="12733" a="0"/>
+        <!-- village house — near Petrovka -->
+        <pos x="7223" z="13176" a="0"/>
+        <!-- brick barn — near Petrovka -->
+        <pos x="7383" z="13292" a="0"/>
+        <!-- village store — near Petrovka -->
+        <pos x="7604" z="13372" a="0"/>
+        <!-- village pub — near Petrovka -->
+        <pos x="7555" z="13555" a="0"/>
+        <!-- feed shack — near Petrovka -->
+        <pos x="7025" z="13569" a="0"/>
+        <!-- village house — rural outskirts near Petrovka -->
+        <pos x="7459" z="13745" a="0"/>
+        <!-- feed shack — deep rural / woodland near Petrovka -->
+        <pos x="6861" z="15052" a="0"/>
+        <!-- POGOREVKA                                            -->
+        <!-- village house — Pogorevka -->
+        <pos x="4377" z="6236" a="0"/>
+        <!-- village house — Pogorevka -->
+        <pos x="4668" z="6336" a="0"/>
+        <!-- village house — Pogorevka -->
+        <pos x="4529" z="6362" a="0"/>
+        <!-- village house — Pogorevka -->
+        <pos x="4425" z="6443" a="0"/>
+        <!-- POLANA                                               -->
+        <!-- feed shack — near Polana -->
+        <pos x="10297" z="7459" a="0"/>
+        <!-- village house — rural outskirts near Polana -->
+        <pos x="9793" z="7784" a="0"/>
+        <!-- wooden barn — Polana -->
+        <pos x="10678" z="7924" a="0"/>
+        <!-- two-storey house — Polana -->
+        <pos x="10624" z="8064" a="0"/>
+        <!-- polytunnel — Polana -->
+        <pos x="10771" z="8110" a="0"/>
+        <!-- PRIGORODKI                                           -->
+        <!-- village house — rural outskirts near Prigorodki -->
+        <pos x="8670" z="2451" a="0"/>
+        <!-- brick house — Prigorodki -->
+        <pos x="7845" z="3107" a="0"/>
+        <!-- brick house — Prigorodki -->
+        <pos x="7597" z="3134" a="0"/>
+        <!-- village house — near Prigorodki -->
+        <pos x="8133" z="3184" a="0"/>
+        <!-- village house — Prigorodki -->
+        <pos x="7957" z="3271" a="0"/>
+        <!-- village house — near Prigorodki -->
+        <pos x="8315" z="3353" a="0"/>
+        <!-- cowshed — near Prigorodki -->
+        <pos x="8051" z="3389" a="0"/>
+        <!-- brick house — Prigorodki -->
+        <pos x="7630" z="3511" a="0"/>
+        <!-- PULKOVO                                              -->
+        <!-- chapel — near Pulkovo -->
+        <pos x="5449" z="5472" a="0"/>
+        <!-- wooden barn — near Pulkovo -->
+        <pos x="5271" z="5516" a="0"/>
+        <!-- wooden barn — near Pulkovo -->
+        <pos x="4634" z="5553" a="0"/>
+        <!-- village store — Pulkovo -->
+        <pos x="4960" z="5638" a="0"/>
+        <!-- two-storey house — near Pulkovo -->
+        <pos x="4403" z="5665" a="0"/>
+        <!-- brick cottage — Pulkovo -->
+        <pos x="4833" z="5679" a="0"/>
+        <!-- brick barn — Pulkovo -->
+        <pos x="4894" z="5866" a="0"/>
+        <!-- PUSTA                                                -->
+        <!-- feed shack — near Pusta -->
+        <pos x="9128" z="3102" a="0"/>
+        <!-- brick barn — near Pusta -->
+        <pos x="9076" z="3432" a="0"/>
+        <!-- brick barn — Pusta -->
+        <pos x="9144" z="3807" a="0"/>
+        <!-- village store — Pusta -->
+        <pos x="9183" z="3928" a="0"/>
+        <!-- polytunnel — Pusta -->
+        <pos x="9071" z="4064" a="0"/>
+        <!-- brick barn — near Pusta -->
+        <pos x="8684" z="4173" a="0"/>
+        <!-- PUSTOSHKA                                            -->
+        <!-- feed shack — near Pustoshka -->
+        <pos x="2544" z="7593" a="0"/>
+        <!-- brick barn — rural outskirts near Pustoshka -->
+        <pos x="1877" z="7602" a="0"/>
+        <!-- brick barn — Pustoshka -->
+        <pos x="3043" z="7738" a="0"/>
+        <!-- wooden barn — Pustoshka -->
+        <pos x="3215" z="7776" a="0"/>
+        <!-- brick house — Pustoshka -->
+        <pos x="3070" z="7910" a="0"/>
+        <!-- village house — near Pustoshka -->
+        <pos x="2180" z="7928" a="0"/>
+        <!-- feed shack — rural outskirts near Pustoshka -->
+        <pos x="1292" z="7988" a="0"/>
+        <!-- chapel — Pustoshka -->
+        <pos x="2944" z="8038" a="0"/>
+        <!-- polytunnel — Pustoshka -->
+        <pos x="3207" z="8046" a="0"/>
+        <!-- feed shack — rural outskirts near Pustoshka -->
+        <pos x="1798" z="8055" a="0"/>
+        <!-- village house — near Pustoshka -->
+        <pos x="3635" z="8058" a="0"/>
+        <!-- brick house — Pustoshka -->
+        <pos x="3098" z="8118" a="0"/>
+        <!-- feed shack — rural outskirts near Pustoshka -->
+        <pos x="1771" z="8434" a="0"/>
+        <!-- village house — deep rural / woodland near Pustoshka -->
+        <pos x="1224" z="8716" a="0"/>
+        <!-- village house — deep rural / woodland near Pustoshka -->
+        <pos x="918" z="8940" a="0"/>
+        <!-- village pub — rural outskirts near Pustoshka -->
+        <pos x="1530" z="9121" a="0"/>
+        <!-- village house — rural outskirts near Pustoshka -->
+        <pos x="1972" z="9155" a="0"/>
+        <!-- chapel — rural outskirts near Pustoshka -->
+        <pos x="2247" z="9300" a="0"/>
+        <!-- bus stop — deep rural / woodland near Pustoshka -->
+        <pos x="338" z="9356" a="0"/>
+        <!-- ROGOVO                                               -->
+        <!-- feed shack — near Rogovo -->
+        <pos x="5098" z="6386" a="0"/>
+        <!-- two-storey house — Rogovo -->
+        <pos x="4800" z="6598" a="0"/>
+        <!-- village store — Rogovo -->
+        <pos x="4763" z="6784" a="0"/>
+        <!-- wooden barn — Rogovo -->
+        <pos x="4626" z="6793" a="0"/>
+        <!-- SEVEROGRAD                                           -->
+        <!-- polytunnel — Severograd -->
+        <pos x="7737" z="12463" a="0"/>
+        <!-- polytunnel — Severograd -->
+        <pos x="7586" z="12563" a="0"/>
+        <!-- brick house — Severograd -->
+        <pos x="7784" z="12629" a="0"/>
+        <!-- bus stop — Severograd -->
+        <pos x="7686" z="12715" a="0"/>
+        <!-- village house — Severograd -->
+        <pos x="7865" z="12785" a="0"/>
+        <!-- wooden barn — Severograd -->
+        <pos x="7637" z="12877" a="0"/>
+        <!-- village house — near Severograd -->
+        <pos x="7830" z="12981" a="0"/>
+        <!-- wooden barn — near Severograd -->
+        <pos x="7732" z="13149" a="0"/>
+        <!-- polytunnel — near Severograd -->
+        <pos x="7726" z="13323" a="0"/>
+        <!-- SHAKOVKA                                             -->
+        <!-- feed shack — near Shakovka -->
+        <pos x="9430" z="5824" a="0"/>
+        <!-- brick barn — near Shakovka -->
+        <pos x="9513" z="5982" a="0"/>
+        <!-- polytunnel — Shakovka -->
+        <pos x="9650" z="6589" a="0"/>
+        <!-- village house — Shakovka -->
+        <pos x="9859" z="6713" a="0"/>
+        <!-- feed shack — near Shakovka -->
+        <pos x="10143" z="6752" a="0"/>
+        <!-- chapel — Shakovka -->
+        <pos x="9584" z="6812" a="0"/>
+        <!-- polytunnel — near Shakovka -->
+        <pos x="9995" z="6854" a="0"/>
+        <!-- brick barn — near Shakovka -->
+        <pos x="9829" z="7047" a="0"/>
+        <!-- SKALISTY                                             -->
+        <!-- village house — near Skalisty -->
+        <pos x="13423" z="2808" a="0"/>
+        <!-- village house — Skalisty -->
+        <pos x="13857" z="2886" a="0"/>
+        <!-- village house — Skalisty -->
+        <pos x="13468" z="2948" a="0"/>
+        <!-- SOLNICHNIY                                           -->
+        <!-- village house — rural outskirts near Solnichniy -->
+        <pos x="12591" z="5409" a="0"/>
+        <!-- village house — rural outskirts near Solnichniy -->
+        <pos x="12856" z="5445" a="0"/>
+        <!-- village house — near Solnichniy -->
+        <pos x="13399" z="5458" a="0"/>
+        <!-- village house — near Solnichniy -->
+        <pos x="13019" z="5501" a="0"/>
+        <!-- brick barn — near Solnichniy -->
+        <pos x="12915" z="5619" a="0"/>
+        <!-- village house — rural outskirts near Solnichniy -->
+        <pos x="12452" z="5694" a="0"/>
+        <!-- village house — rural outskirts near Solnichniy -->
+        <pos x="12622" z="5738" a="0"/>
+        <!-- village house — Solnichniy -->
+        <pos x="13402" z="5984" a="0"/>
+        <!-- two-storey house — near Solnichniy -->
+        <pos x="12740" z="6161" a="0"/>
+        <!-- village house — rural outskirts near Solnichniy -->
+        <pos x="12373" z="6240" a="0"/>
+        <!-- village store — Solnichniy -->
+        <pos x="13417" z="6275" a="0"/>
+        <!-- village house — near Solnichniy -->
+        <pos x="12940" z="6727" a="0"/>
+        <!-- two-storey house — near Solnichniy -->
+        <pos x="13126" z="6816" a="0"/>
+        <!-- polytunnel — rural outskirts near Solnichniy -->
+        <pos x="12964" z="7746" a="0"/>
+        <!-- SOSNOVKA                                             -->
+        <!-- wooden barn — near Sosnovka -->
+        <pos x="2720" z="5986" a="0"/>
+        <!-- village pub — near Sosnovka -->
+        <pos x="3182" z="6127" a="0"/>
+        <!-- feed shack — rural outskirts near Sosnovka -->
+        <pos x="877" z="6184" a="0"/>
+        <!-- village house — near Sosnovka -->
+        <pos x="2240" z="6231" a="0"/>
+        <!-- feed shack — near Sosnovka -->
+        <pos x="2058" z="6278" a="0"/>
+        <!-- brick house — rural outskirts near Sosnovka -->
+        <pos x="1277" z="6292" a="0"/>
+        <!-- polytunnel — Sosnovka -->
+        <pos x="2370" z="6350" a="0"/>
+        <!-- village house — Sosnovka -->
+        <pos x="2555" z="6394" a="0"/>
+        <!-- feed shack — near Sosnovka -->
+        <pos x="3064" z="6582" a="0"/>
+        <!-- polytunnel — deep rural / woodland near Sosnovka -->
+        <pos x="293" z="6605" a="0"/>
+        <!-- village pub — rural outskirts near Sosnovka -->
+        <pos x="1101" z="6625" a="0"/>
+        <!-- feed shack — rural outskirts near Sosnovka -->
+        <pos x="598" z="6748" a="0"/>
+        <!-- wooden barn — near Sosnovka -->
+        <pos x="2977" z="6749" a="0"/>
+        <!-- feed shack — rural outskirts near Sosnovka -->
+        <pos x="1371" z="6787" a="0"/>
+        <!-- two-storey house — near Sosnovka -->
+        <pos x="2007" z="7033" a="0"/>
+        <!-- feed shack — rural outskirts near Sosnovka -->
+        <pos x="807" z="7156" a="0"/>
+        <!-- village house — rural outskirts near Sosnovka -->
+        <pos x="1972" z="7209" a="0"/>
+        <!-- village house — rural outskirts near Sosnovka -->
+        <pos x="2058" z="7337" a="0"/>
+        <!-- village pub — deep rural / woodland near Sosnovka -->
+        <pos x="239" z="7505" a="0"/>
+        <!-- brick house — rural outskirts near Sosnovka -->
+        <pos x="1034" z="7620" a="0"/>
+        <!-- STAROYE                                              -->
+        <!-- village house — rural outskirts near Staroye -->
+        <pos x="9300" z="5010" a="0"/>
+        <!-- brick barn — near Staroye -->
+        <pos x="10241" z="5053" a="0"/>
+        <!-- two-storey house — near Staroye -->
+        <pos x="10725" z="5326" a="0"/>
+        <!-- brick house — Staroye -->
+        <pos x="10158" z="5384" a="0"/>
+        <!-- cowshed — Staroye -->
+        <pos x="9906" z="5444" a="0"/>
+        <!-- village health centre — Staroye -->
+        <pos x="10116" z="5511" a="0"/>
+        <!-- polytunnel — Staroye -->
+        <pos x="10283" z="5554" a="0"/>
+        <!-- village house — Staroye -->
+        <pos x="10046" z="5625" a="0"/>
+        <!-- brick barn — near Staroye -->
+        <pos x="10271" z="5748" a="0"/>
+        <!-- brick barn — near Staroye -->
+        <pos x="10522" z="5920" a="0"/>
+        <!-- STARY SOBOR                                          -->
+        <!-- two-storey house — near Stary Sobor -->
+        <pos x="5536" z="7293" a="0"/>
+        <!-- village house — near Stary Sobor -->
+        <pos x="6343" z="7458" a="0"/>
+        <!-- metal barn — Stary Sobor -->
+        <pos x="6333" z="7677" a="0"/>
+        <!-- village health centre — Stary Sobor -->
+        <pos x="5991" z="7680" a="0"/>
+        <!-- wooden barn — Stary Sobor -->
+        <pos x="6207" z="7791" a="0"/>
+        <!-- village house — Stary Sobor -->
+        <pos x="6073" z="7821" a="0"/>
+        <!-- brick house — Stary Sobor -->
+        <pos x="5933" z="7871" a="0"/>
+        <!-- SVETLOJARSK                                          -->
+        <!-- village pub — near Svetlojarsk -->
+        <pos x="13441" z="12132" a="0"/>
+        <!-- feed shack — near Svetlojarsk -->
+        <pos x="13381" z="12246" a="0"/>
+        <!-- feed shack — Svetlojarsk -->
+        <pos x="13463" z="12456" a="0"/>
+        <!-- chapel — Svetlojarsk -->
+        <pos x="13382" z="12861" a="0"/>
+        <!-- wooden barn — near Svetlojarsk -->
+        <pos x="13792" z="12868" a="0"/>
+        <!-- polytunnel — Svetlojarsk -->
+        <pos x="13296" z="12972" a="0"/>
+        <!-- wooden barn — near Svetlojarsk -->
+        <pos x="13458" z="13058" a="0"/>
+        <!-- feed shack — near Svetlojarsk -->
+        <pos x="12819" z="13117" a="0"/>
+        <!-- village house — near Svetlojarsk -->
+        <pos x="13236" z="13121" a="0"/>
+        <!-- TISY                                                 -->
+        <!-- feed shack — rural outskirts near Tisy -->
+        <pos x="456" z="13249" a="0"/>
+        <!-- feed shack — rural outskirts near Tisy -->
+        <pos x="2974" z="13592" a="0"/>
+        <!-- feed shack — near Tisy -->
+        <pos x="2171" z="13767" a="0"/>
+        <!-- village house — rural outskirts near Tisy -->
+        <pos x="3436" z="13909" a="0"/>
+        <!-- brick barn — rural outskirts near Tisy -->
+        <pos x="3547" z="14275" a="0"/>
+        <!-- feed shack — rural outskirts near Tisy -->
+        <pos x="140" z="14357" a="0"/>
+        <!-- village pub — rural outskirts near Tisy -->
+        <pos x="2591" z="14816" a="0"/>
+        <!-- village health centre — deep rural / woodland near Tisy -->
+        <pos x="3647" z="14862" a="0"/>
+        <!-- village house — rural outskirts near Tisy -->
+        <pos x="1937" z="15054" a="0"/>
+        <!-- village house — rural outskirts near Tisy -->
+        <pos x="2955" z="15199" a="0"/>
+        <!-- two-storey house — rural outskirts near Tisy -->
+        <pos x="2259" z="15209" a="0"/>
+        <!-- chapel — rural outskirts near Tisy -->
+        <pos x="2616" z="15216" a="0"/>
+        <!-- wooden barn — deep rural / woodland near Tisy -->
+        <pos x="3906" z="15271" a="0"/>
+        <!-- TOPOLNIKI                                            -->
+        <!-- brick barn — near Topolniki -->
+        <pos x="6162" z="12584" a="0"/>
+        <!-- village pub — Topolniki -->
+        <pos x="5931" z="12656" a="0"/>
+        <!-- polytunnel — Topolniki -->
+        <pos x="6254" z="12718" a="0"/>
+        <!-- village house — near Topolniki -->
+        <pos x="6397" z="12727" a="0"/>
+        <!-- brick barn — near Topolniki -->
+        <pos x="5677" z="13122" a="0"/>
+        <!-- brick barn — near Topolniki -->
+        <pos x="5849" z="13472" a="0"/>
+        <!-- village house — near Topolniki -->
+        <pos x="5768" z="13588" a="0"/>
+        <!-- village house — near Topolniki -->
+        <pos x="5938" z="13602" a="0"/>
+        <!-- brick barn — rural outskirts near Topolniki -->
+        <pos x="5164" z="13842" a="0"/>
+        <!-- village pub — rural outskirts near Topolniki -->
+        <pos x="6557" z="14204" a="0"/>
+        <!-- feed shack — rural outskirts near Topolniki -->
+        <pos x="5683" z="14212" a="0"/>
+        <!-- village pub — rural outskirts near Topolniki -->
+        <pos x="6676" z="14454" a="0"/>
+        <!-- village pub — rural outskirts near Topolniki -->
+        <pos x="5649" z="14550" a="0"/>
+        <!-- village pub — deep rural / woodland near Topolniki -->
+        <pos x="4937" z="14843" a="0"/>
+        <!-- polytunnel — deep rural / woodland near Topolniki -->
+        <pos x="5695" z="14888" a="0"/>
+        <!-- chapel — deep rural / woodland near Topolniki -->
+        <pos x="6566" z="14988" a="0"/>
+        <!-- chapel — deep rural / woodland near Topolniki -->
+        <pos x="5038" z="15082" a="0"/>
+        <!-- feed shack — deep rural / woodland near Topolniki -->
+        <pos x="6220" z="15337" a="0"/>
+        <!-- VAVILOVO                                             -->
+        <!-- feed shack — rural outskirts near Vavilovo -->
+        <pos x="3615" z="10573" a="0"/>
+        <!-- wooden barn — rural outskirts near Vavilovo -->
+        <pos x="2257" z="10900" a="0"/>
+        <!-- village house — rural outskirts near Vavilovo -->
+        <pos x="2569" z="11025" a="0"/>
+        <!-- village house — rural outskirts near Vavilovo -->
+        <pos x="2231" z="11205" a="0"/>
+        <!-- village house — rural outskirts near Vavilovo -->
+        <pos x="2378" z="11232" a="0"/>
+        <!-- village house — near Vavilovo -->
+        <pos x="3263" z="11263" a="0"/>
+        <!-- feed shack — near Vavilovo -->
+        <pos x="3273" z="11624" a="0"/>
+        <!-- village house — Vavilovo -->
+        <pos x="3017" z="11830" a="0"/>
+        <!-- village house — near Vavilovo -->
+        <pos x="2513" z="11992" a="0"/>
+        <!-- wooden barn — near Vavilovo -->
+        <pos x="2806" z="12168" a="0"/>
+        <!-- cowshed — Vavilovo -->
+        <pos x="3001" z="12320" a="0"/>
+        <!-- polytunnel — near Vavilovo -->
+        <pos x="2739" z="12325" a="0"/>
+        <!-- two-storey house — near Vavilovo -->
+        <pos x="2878" z="12427" a="0"/>
+        <!-- brick barn — near Vavilovo -->
+        <pos x="3003" z="12464" a="0"/>
+        <!-- village house — rural outskirts near Vavilovo -->
+        <pos x="3976" z="12558" a="0"/>
+        <!-- village house — near Vavilovo -->
+        <pos x="3082" z="12571" a="0"/>
+        <!-- bus stop — near Vavilovo -->
+        <pos x="3590" z="12575" a="0"/>
+        <!-- metal barn — near Vavilovo -->
+        <pos x="2877" z="12603" a="0"/>
+        <!-- village house — near Vavilovo -->
+        <pos x="3415" z="12638" a="0"/>
+        <!-- brick house — near Vavilovo -->
+        <pos x="3462" z="12775" a="0"/>
+        <!-- brick cottage — near Vavilovo -->
+        <pos x="3322" z="12816" a="0"/>
+        <!-- village house — rural outskirts near Vavilovo -->
+        <pos x="3881" z="12831" a="0"/>
+        <!-- village house — rural outskirts near Vavilovo -->
+        <pos x="3270" z="12948" a="0"/>
+        <!-- bus stop — rural outskirts near Vavilovo -->
+        <pos x="3690" z="13081" a="0"/>
+        <!-- village house — rural outskirts near Vavilovo -->
+        <pos x="3272" z="13115" a="0"/>
+        <!-- village health centre — rural outskirts near Vavilovo -->
+        <pos x="3455" z="13163" a="0"/>
+        <!-- village house — rural outskirts near Vavilovo -->
+        <pos x="3090" z="13184" a="0"/>
+        <!-- village house — rural outskirts near Vavilovo -->
+        <pos x="3316" z="13499" a="0"/>
+        <!-- VORON                                                -->
+        <!-- village house — near Voron -->
+        <pos x="13052" z="3241" a="0"/>
+        <!-- village pub — Voron -->
+        <pos x="13477" z="3271" a="0"/>
+        <!-- two-storey house — near Voron -->
+        <pos x="13252" z="3960" a="0"/>
+        <!-- VYBOR                                                -->
+        <!-- wooden barn — near Vybor -->
+        <pos x="3704" z="8260" a="0"/>
+        <!-- two-storey house — near Vybor -->
+        <pos x="3502" z="8388" a="0"/>
+        <!-- brick house — near Vybor -->
+        <pos x="3672" z="8556" a="0"/>
+        <!-- village house — Vybor -->
+        <pos x="3785" z="8733" a="0"/>
+        <!-- village house — Vybor -->
+        <pos x="3981" z="8815" a="0"/>
+        <!-- bus stop — Vybor -->
+        <pos x="3850" z="8855" a="0"/>
+        <!-- brick house — Vybor -->
+        <pos x="4076" z="8978" a="0"/>
+        <!-- village health centre — Vybor -->
+        <pos x="3757" z="9011" a="0"/>
+        <!-- wooden barn — near Vybor -->
+        <pos x="4092" z="9137" a="0"/>
+        <!-- village house — Vybor -->
+        <pos x="3853" z="9149" a="0"/>
+        <!-- feed shack — rural outskirts near Vybor -->
+        <pos x="2564" z="9222" a="0"/>
+        <!-- cowshed — near Vybor -->
+        <pos x="3114" z="9230" a="0"/>
+        <!-- brick barn — near Vybor -->
+        <pos x="4378" z="9329" a="0"/>
+        <!-- village pub — rural outskirts near Vybor -->
+        <pos x="2934" z="9369" a="0"/>
+        <!-- village house — rural outskirts near Vybor -->
+        <pos x="2647" z="9580" a="0"/>
+        <!-- village house — rural outskirts near Vybor -->
+        <pos x="2181" z="9639" a="0"/>
+        <!-- village house — rural outskirts near Vybor -->
+        <pos x="2915" z="9742" a="0"/>
+        <!-- wooden barn — deep rural / woodland near Vybor -->
+        <pos x="1635" z="9857" a="0"/>
+        <!-- brick house — rural outskirts near Vybor -->
+        <pos x="2757" z="10008" a="0"/>
+        <!-- VYBOR MIL                                            -->
+        <!-- wooden barn — Vybor mil -->
+        <pos x="4431" z="8234" a="0"/>
+        <!-- VYSHNOYE                                             -->
+        <!-- village house — Vyshnoye -->
+        <pos x="6567" z="6067" a="0"/>
+        <!-- wooden barn — Vyshnoye -->
+        <pos x="6461" z="6189" a="0"/>
+        <!-- village house — Vyshnoye -->
+        <pos x="6577" z="6258" a="0"/>
+        <!-- VYSOTOVO                                             -->
+        <!-- polytunnel — near Vysotovo -->
+        <pos x="6109" z="1934" a="0"/>
+        <!-- bus stop — Vysotovo -->
+        <pos x="5716" z="2425" a="0"/>
+        <!-- bus stop — Vysotovo -->
+        <pos x="6001" z="2513" a="0"/>
+        <!-- bus stop — near Vysotovo -->
+        <pos x="5479" z="2613" a="0"/>
+        <!-- brick cottage — Vysotovo -->
+        <pos x="5784" z="2773" a="0"/>
+        <!-- bus stop — near Vysotovo -->
+        <pos x="6093" z="2775" a="0"/>
+        <!-- ZELENO MIL                                           -->
+        <!-- brick barn — near Zeleno mil -->
+        <pos x="2505" z="4684" a="0"/>
+        <!-- brick house — Zeleno mil -->
+        <pos x="2561" z="5049" a="0"/>
+        <!-- cowshed — near Zeleno mil -->
+        <pos x="1726" z="5101" a="0"/>
+        <!-- village house — rural outskirts near Zeleno mil -->
+        <pos x="773" z="5340" a="0"/>
+        <!-- feed shack — deep rural / woodland near Zeleno mil -->
+        <pos x="272" z="5607" a="0"/>
+        <!-- village house — rural outskirts near Zeleno mil -->
+        <pos x="702" z="5641" a="0"/>
+        <!-- ZELENOGORSK                                          -->
+        <!-- village house — near Zelenogorsk -->
+        <pos x="2863" z="4716" a="0"/>
+        <!-- village house — near Zelenogorsk -->
+        <pos x="3506" z="4967" a="0"/>
+        <!-- village store — near Zelenogorsk -->
+        <pos x="3319" z="4969" a="0"/>
+        <!-- two-storey house — Zelenogorsk -->
+        <pos x="2732" z="5051" a="0"/>
+        <!-- village health centre — Zelenogorsk -->
+        <pos x="2739" z="5181" a="0"/>
+        <!-- bus stop — Zelenogorsk -->
+        <pos x="2838" z="5262" a="0"/>
+        <!-- bus stop — Zelenogorsk -->
+        <pos x="2710" z="5300" a="0"/>
+        <!-- wooden barn — Zelenogorsk -->
+        <pos x="2585" z="5360" a="0"/>
+        <!-- polytunnel — Zelenogorsk -->
+        <pos x="2853" z="5408" a="0"/>
+        <!-- bus stop — Zelenogorsk -->
+        <pos x="2707" z="5435" a="0"/>
+        <!-- brick barn — near Zelenogorsk -->
+        <pos x="2503" z="5546" a="0"/>
+        <!-- village house — near Zelenogorsk -->
+        <pos x="2973" z="5562" a="0"/>
+        <!-- village house — near Zelenogorsk -->
+        <pos x="2608" z="5694" a="0"/>
+        <!-- ZUB                                                  -->
+        <!-- brick house — Zub -->
+        <pos x="6763" z="5577" a="0"/>
+        <!-- village house — near Zub -->
+        <pos x="6025" z="5600" a="0"/>
+        <!-- feed shack — near Zub -->
+        <pos x="6155" z="5688" a="0"/>
+        <!-- ==================================================== -->
+        <!-- WOODS / DIRT TRACKS / ISOLATED RURAL  (250 positions) -->
+        <!-- ==================================================== -->
+        <!-- BELOZERSK                                            -->
+        <!-- isolated workshop — rural outskirts near Belozersk -->
+        <pos x="4436" z="10947" a="0"/>
+        <!-- brick barn — rural outskirts near Belozersk -->
+        <pos x="3943" z="12995" a="0"/>
+        <!-- deer stand — deep rural / woodland near Belozersk -->
+        <pos x="3818" z="14120" a="0"/>
+        <!-- brick barn — deep rural / woodland near Belozersk -->
+        <pos x="3911" z="14166" a="0"/>
+        <!-- deer stand — rural outskirts near Belozersk -->
+        <pos x="4316" z="14287" a="0"/>
+        <!-- village house — deep rural / woodland near Belozersk -->
+        <pos x="4441" z="15203" a="0"/>
+        <!-- BEREZINO                                             -->
+        <!-- deer stand — rural outskirts near Berezino -->
+        <pos x="12762" z="7721" a="0"/>
+        <!-- wooden shed — rural outskirts near Berezino -->
+        <pos x="12942" z="7933" a="0"/>
+        <!-- metal shed — rural outskirts near Berezino -->
+        <pos x="12755" z="7996" a="0"/>
+        <!-- outhouse — rural outskirts near Berezino -->
+        <pos x="12871" z="8012" a="0"/>
+        <!-- two-storey house — rural outskirts near Berezino -->
+        <pos x="12940" z="8168" a="0"/>
+        <!-- wooden shed — rural outskirts near Berezino -->
+        <pos x="13053" z="8187" a="0"/>
+        <!-- village house — rural outskirts near Berezino -->
+        <pos x="12985" z="8271" a="0"/>
+        <!-- DUBROVKA                                             -->
+        <!-- wooden shed — rural outskirts near Dubrovka -->
+        <pos x="6889" z="9877" a="0"/>
+        <!-- deer stand — rural outskirts near Dubrovka -->
+        <pos x="7071" z="9944" a="0"/>
+        <!-- metal shed — rural outskirts near Dubrovka -->
+        <pos x="5902" z="9963" a="0"/>
+        <!-- metal shed — rural outskirts near Dubrovka -->
+        <pos x="6945" z="10071" a="0"/>
+        <!-- roadside garages — rural outskirts near Dubrovka -->
+        <pos x="4941" z="10467" a="0"/>
+        <!-- isolated workshop — rural outskirts near Dubrovka -->
+        <pos x="4620" z="10472" a="0"/>
+        <!-- roadside garages — rural outskirts near Dubrovka -->
+        <pos x="4557" z="10537" a="0"/>
+        <!-- isolated workshop — rural outskirts near Dubrovka -->
+        <pos x="4670" z="10545" a="0"/>
+        <!-- closed shed — rural outskirts near Dubrovka -->
+        <pos x="4768" z="10587" a="0"/>
+        <!-- metal shed — rural outskirts near Dubrovka -->
+        <pos x="7391" z="10587" a="0"/>
+        <!-- isolated workshop — rural outskirts near Dubrovka -->
+        <pos x="4717" z="10705" a="0"/>
+        <!-- roadside garages — rural outskirts near Dubrovka -->
+        <pos x="4460" z="10844" a="0"/>
+        <!-- isolated workshop — rural outskirts near Dubrovka -->
+        <pos x="4741" z="10868" a="0"/>
+        <!-- isolated workshop — rural outskirts near Dubrovka -->
+        <pos x="4690" z="11003" a="0"/>
+        <!-- GORKA                                                -->
+        <!-- deer stand — rural outskirts near Gorka -->
+        <pos x="8405" z="8160" a="0"/>
+        <!-- isolated workshop — rural outskirts near Gorka -->
+        <pos x="8129" z="9315" a="0"/>
+        <!-- deer stand — rural outskirts near Gorka -->
+        <pos x="8292" z="9722" a="0"/>
+        <!-- village house — rural outskirts near Gorka -->
+        <pos x="9897" z="10330" a="0"/>
+        <!-- GRISHINO                                             -->
+        <!-- deer stand — rural outskirts near Grishino -->
+        <pos x="8035" z="14132" a="0"/>
+        <!-- GVOZDNO                                              -->
+        <!-- metal shed — rural outskirts near Gvozdno -->
+        <pos x="8529" z="10213" a="0"/>
+        <!-- wooden shed — rural outskirts near Gvozdno -->
+        <pos x="9699" z="10385" a="0"/>
+        <!-- wooden shed — rural outskirts near Gvozdno -->
+        <pos x="8220" z="10430" a="0"/>
+        <!-- KABANINO                                             -->
+        <!-- deer stand — rural outskirts near Kabanino -->
+        <pos x="6228" z="9750" a="0"/>
+        <!-- isolated workshop — rural outskirts near Kabanino -->
+        <pos x="5035" z="9860" a="0"/>
+        <!-- metal shed — rural outskirts near Kabanino -->
+        <pos x="5379" z="9900" a="0"/>
+        <!-- isolated workshop — rural outskirts near Kabanino -->
+        <pos x="4968" z="10111" a="0"/>
+        <!-- KAMENKA                                              -->
+        <!-- deer stand — rural outskirts near Kamenka -->
+        <pos x="469" z="2043" a="0"/>
+        <!-- isolated workshop — rural outskirts near Kamenka -->
+        <pos x="295" z="2703" a="0"/>
+        <!-- deer stand — rural outskirts near Kamenka -->
+        <pos x="677" z="2779" a="0"/>
+        <!-- KRASNOSTAV                                           -->
+        <!-- camp house — rural outskirts near Krasnostav -->
+        <pos x="11497" z="10601" a="0"/>
+        <!-- deer stand — rural outskirts near Krasnostav -->
+        <pos x="11943" z="10836" a="0"/>
+        <!-- village house — rural outskirts near Krasnostav -->
+        <pos x="12318" z="10838" a="0"/>
+        <!-- outhouse — rural outskirts near Krasnostav -->
+        <pos x="12243" z="10887" a="0"/>
+        <!-- wooden shed — rural outskirts near Krasnostav -->
+        <pos x="12416" z="10888" a="0"/>
+        <!-- wooden shed — rural outskirts near Krasnostav -->
+        <pos x="12152" z="10898" a="0"/>
+        <!-- village house — rural outskirts near Krasnostav -->
+        <pos x="12211" z="10998" a="0"/>
+        <!-- wooden shed — rural outskirts near Krasnostav -->
+        <pos x="12370" z="11079" a="0"/>
+        <!-- KRUTOY CAP                                           -->
+        <!-- village house — rural outskirts near Krutoy Cap -->
+        <pos x="15201" z="13883" a="0"/>
+        <!-- LOPATINO                                             -->
+        <!-- deer stand — deep rural / woodland near Lopatino -->
+        <pos x="284" z="9767" a="0"/>
+        <!-- feed shack — deep rural / woodland near Lopatino -->
+        <pos x="423" z="9849" a="0"/>
+        <!-- wooden barn — deep rural / woodland near Lopatino -->
+        <pos x="1030" z="9966" a="0"/>
+        <!-- village house — deep rural / woodland near Lopatino -->
+        <pos x="1136" z="9967" a="0"/>
+        <!-- outhouse — deep rural / woodland near Lopatino -->
+        <pos x="1217" z="9975" a="0"/>
+        <!-- deer stand — deep rural / woodland near Lopatino -->
+        <pos x="1271" z="10176" a="0"/>
+        <!-- cowshed — deep rural / woodland near Lopatino -->
+        <pos x="1604" z="10389" a="0"/>
+        <!-- wooden shed — deep rural / woodland near Lopatino -->
+        <pos x="160" z="10411" a="0"/>
+        <!-- deer stand — rural outskirts near Lopatino -->
+        <pos x="1582" z="10647" a="0"/>
+        <!-- deer stand — deep rural / woodland near Lopatino -->
+        <pos x="532" z="10758" a="0"/>
+        <!-- deer stand — deep rural / woodland near Lopatino -->
+        <pos x="805" z="10798" a="0"/>
+        <!-- small garage — deep rural / woodland near Lopatino -->
+        <pos x="443" z="11020" a="0"/>
+        <!-- deer stand — rural outskirts near Lopatino -->
+        <pos x="1057" z="11242" a="0"/>
+        <!-- feed shack — rural outskirts near Lopatino -->
+        <pos x="196" z="11741" a="0"/>
+        <!-- small garage — rural outskirts near Lopatino -->
+        <pos x="605" z="12149" a="0"/>
+        <!-- village house — rural outskirts near Lopatino -->
+        <pos x="179" z="12520" a="0"/>
+        <!-- NE AIRFIELD                                          -->
+        <!-- village house — rural outskirts near NE Airfield -->
+        <pos x="12264" z="11161" a="0"/>
+        <!-- wooden barn — rural outskirts near NE Airfield -->
+        <pos x="11113" z="11966" a="0"/>
+        <!-- metal shed — rural outskirts near NE Airfield -->
+        <pos x="10716" z="12310" a="0"/>
+        <!-- brick barn — rural outskirts near NE Airfield -->
+        <pos x="10617" z="12321" a="0"/>
+        <!-- village house — rural outskirts near NE Airfield -->
+        <pos x="10867" z="12348" a="0"/>
+        <!-- village house — rural outskirts near NE Airfield -->
+        <pos x="10691" z="12408" a="0"/>
+        <!-- village house — rural outskirts near NE Airfield -->
+        <pos x="10946" z="12435" a="0"/>
+        <!-- wooden shed — rural outskirts near NE Airfield -->
+        <pos x="10779" z="12500" a="0"/>
+        <!-- wooden barn — rural outskirts near NE Airfield -->
+        <pos x="10903" z="12558" a="0"/>
+        <!-- isolated workshop — rural outskirts near NE Airfield -->
+        <pos x="10813" z="12842" a="0"/>
+        <!-- NOVAYA PETROVKA                                      -->
+        <!-- village house — rural outskirts near Novaya Petrovka -->
+        <pos x="10490" z="12512" a="0"/>
+        <!-- wooden barn — rural outskirts near Novaya Petrovka -->
+        <pos x="10570" z="12598" a="0"/>
+        <!-- wooden shed — rural outskirts near Novaya Petrovka -->
+        <pos x="10655" z="12681" a="0"/>
+        <!-- deer stand — rural outskirts near Novaya Petrovka -->
+        <pos x="9163" z="15017" a="0"/>
+        <!-- deer stand — rural outskirts near Novaya Petrovka -->
+        <pos x="8771" z="15022" a="0"/>
+        <!-- deer stand — deep rural / woodland near Novaya Petrovka -->
+        <pos x="8079" z="15145" a="0"/>
+        <!-- deer stand — rural outskirts near Novaya Petrovka -->
+        <pos x="9812" z="15234" a="0"/>
+        <!-- NOVY SOBOR                                           -->
+        <!-- outhouse — rural outskirts near Novy Sobor -->
+        <pos x="7440" z="9134" a="0"/>
+        <!-- OLSHA                                                -->
+        <!-- feed shack — rural outskirts near Olsha -->
+        <pos x="14646" z="14644" a="0"/>
+        <!-- wooden shed — rural outskirts near Olsha -->
+        <pos x="14060" z="14730" a="0"/>
+        <!-- deer stand — rural outskirts near Olsha -->
+        <pos x="15135" z="14789" a="0"/>
+        <!-- village house — rural outskirts near Olsha -->
+        <pos x="14352" z="14820" a="0"/>
+        <!-- metal shed — rural outskirts near Olsha -->
+        <pos x="13874" z="14839" a="0"/>
+        <!-- deer stand — rural outskirts near Olsha -->
+        <pos x="13954" z="14845" a="0"/>
+        <!-- wooden shed — rural outskirts near Olsha -->
+        <pos x="14122" z="14961" a="0"/>
+        <!-- brick barn — rural outskirts near Olsha -->
+        <pos x="14203" z="15013" a="0"/>
+        <!-- metal shed — rural outskirts near Olsha -->
+        <pos x="14112" z="15059" a="0"/>
+        <!-- deer stand — rural outskirts near Olsha -->
+        <pos x="14387" z="15064" a="0"/>
+        <!-- wooden shed — rural outskirts near Olsha -->
+        <pos x="14051" z="15112" a="0"/>
+        <!-- ORLOVETS                                             -->
+        <!-- village house — rural outskirts near Orlovets -->
+        <pos x="9925" z="10414" a="0"/>
+        <!-- camp house — rural outskirts near Orlovets -->
+        <pos x="11415" z="10654" a="0"/>
+        <!-- deer stand — rural outskirts near Orlovets -->
+        <pos x="10635" z="10921" a="0"/>
+        <!-- PAVLOVO                                              -->
+        <!-- metal shed — rural outskirts near Pavlovo -->
+        <pos x="310" z="3020" a="0"/>
+        <!-- feed shack — rural outskirts near Pavlovo -->
+        <pos x="151" z="3655" a="0"/>
+        <!-- deer stand — rural outskirts near Pavlovo -->
+        <pos x="386" z="3859" a="0"/>
+        <!-- wooden shed — rural outskirts near Pavlovo -->
+        <pos x="134" z="4205" a="0"/>
+        <!-- deer stand — rural outskirts near Pavlovo -->
+        <pos x="258" z="4341" a="0"/>
+        <!-- metal shed — rural outskirts near Pavlovo -->
+        <pos x="475" z="4531" a="0"/>
+        <!-- outhouse — rural outskirts near Pavlovo -->
+        <pos x="293" z="4635" a="0"/>
+        <!-- feed shack — rural outskirts near Pavlovo -->
+        <pos x="798" z="4781" a="0"/>
+        <!-- metal shed — rural outskirts near Pavlovo -->
+        <pos x="1178" z="4985" a="0"/>
+        <!-- deer stand — rural outskirts near Pavlovo -->
+        <pos x="276" z="5026" a="0"/>
+        <!-- metal shed — rural outskirts near Pavlovo -->
+        <pos x="338" z="5103" a="0"/>
+        <!-- metal shed — rural outskirts near Pavlovo -->
+        <pos x="352" z="5192" a="0"/>
+        <!-- polytunnel — rural outskirts near Pavlovo -->
+        <pos x="467" z="5261" a="0"/>
+        <!-- wooden shed — deep rural / woodland near Pavlovo -->
+        <pos x="269" z="5301" a="0"/>
+        <!-- outhouse — rural outskirts near Pavlovo -->
+        <pos x="597" z="5309" a="0"/>
+        <!-- PETROVKA                                             -->
+        <!-- outhouse — rural outskirts near Petrovka -->
+        <pos x="6829" z="14364" a="0"/>
+        <!-- two-storey house — rural outskirts near Petrovka -->
+        <pos x="6798" z="14481" a="0"/>
+        <!-- isolated workshop — rural outskirts near Petrovka -->
+        <pos x="7033" z="14539" a="0"/>
+        <!-- isolated workshop — deep rural / woodland near Petrovka -->
+        <pos x="7760" z="14849" a="0"/>
+        <!-- PUSTOSHKA                                            -->
+        <!-- deer stand — rural outskirts near Pustoshka -->
+        <pos x="1277" z="7724" a="0"/>
+        <!-- feed shack — deep rural / woodland near Pustoshka -->
+        <pos x="576" z="8142" a="0"/>
+        <!-- village house — deep rural / woodland near Pustoshka -->
+        <pos x="319" z="8564" a="0"/>
+        <!-- deer stand — rural outskirts near Pustoshka -->
+        <pos x="1487" z="8568" a="0"/>
+        <!-- deer stand — deep rural / woodland near Pustoshka -->
+        <pos x="787" z="8676" a="0"/>
+        <!-- outhouse — deep rural / woodland near Pustoshka -->
+        <pos x="1189" z="8794" a="0"/>
+        <!-- outhouse — deep rural / woodland near Pustoshka -->
+        <pos x="1250" z="8891" a="0"/>
+        <!-- metal shed — rural outskirts near Pustoshka -->
+        <pos x="1517" z="8927" a="0"/>
+        <!-- metal shed — rural outskirts near Pustoshka -->
+        <pos x="1634" z="8962" a="0"/>
+        <!-- village house — rural outskirts near Pustoshka -->
+        <pos x="1567" z="9006" a="0"/>
+        <!-- wooden barn — rural outskirts near Pustoshka -->
+        <pos x="1809" z="9146" a="0"/>
+        <!-- metal shed — deep rural / woodland near Pustoshka -->
+        <pos x="1427" z="9266" a="0"/>
+        <!-- deer stand — deep rural / woodland near Pustoshka -->
+        <pos x="537" z="9313" a="0"/>
+        <!-- metal shed — deep rural / woodland near Pustoshka -->
+        <pos x="1363" z="9318" a="0"/>
+        <!-- deer stand — rural outskirts near Pustoshka -->
+        <pos x="1918" z="9409" a="0"/>
+        <!-- metal shed — rural outskirts near Pustoshka -->
+        <pos x="1908" z="9489" a="0"/>
+        <!-- deer stand — deep rural / woodland near Pustoshka -->
+        <pos x="1351" z="9859" a="0"/>
+        <!-- SOLNICHNIY                                           -->
+        <!-- deer stand — rural outskirts near Solnichniy -->
+        <pos x="12728" z="5133" a="0"/>
+        <!-- deer stand — rural outskirts near Solnichniy -->
+        <pos x="12583" z="7388" a="0"/>
+        <!-- SOSNOVKA                                             -->
+        <!-- deer stand — rural outskirts near Sosnovka -->
+        <pos x="767" z="6010" a="0"/>
+        <!-- isolated workshop — rural outskirts near Sosnovka -->
+        <pos x="1167" z="6220" a="0"/>
+        <!-- isolated workshop — rural outskirts near Sosnovka -->
+        <pos x="1262" z="6374" a="0"/>
+        <!-- deer stand — deep rural / woodland near Sosnovka -->
+        <pos x="366" z="6428" a="0"/>
+        <!-- metal shed — rural outskirts near Sosnovka -->
+        <pos x="1252" z="6504" a="0"/>
+        <!-- feed shack — rural outskirts near Sosnovka -->
+        <pos x="963" z="6856" a="0"/>
+        <!-- deer stand — rural outskirts near Sosnovka -->
+        <pos x="830" z="6976" a="0"/>
+        <!-- deer stand — deep rural / woodland near Sosnovka -->
+        <pos x="628" z="7189" a="0"/>
+        <!-- deer stand — deep rural / woodland near Sosnovka -->
+        <pos x="556" z="7361" a="0"/>
+        <!-- closed shed — rural outskirts near Sosnovka -->
+        <pos x="938" z="7577" a="0"/>
+        <!-- isolated workshop — deep rural / woodland near Sosnovka -->
+        <pos x="916" z="7686" a="0"/>
+        <!-- feed shack — deep rural / woodland near Sosnovka -->
+        <pos x="178" z="7859" a="0"/>
+        <!-- SVETLOJARSK                                          -->
+        <!-- wooden shed — rural outskirts near Svetlojarsk -->
+        <pos x="13631" z="11170" a="0"/>
+        <!-- wooden shed — rural outskirts near Svetlojarsk -->
+        <pos x="13966" z="11266" a="0"/>
+        <!-- wooden shed — rural outskirts near Svetlojarsk -->
+        <pos x="13362" z="11266" a="0"/>
+        <!-- TISY                                                 -->
+        <!-- deer stand — rural outskirts near Tisy -->
+        <pos x="348" z="12972" a="0"/>
+        <!-- wooden shed — rural outskirts near Tisy -->
+        <pos x="3258" z="13743" a="0"/>
+        <!-- wooden shed — rural outskirts near Tisy -->
+        <pos x="3604" z="13974" a="0"/>
+        <!-- isolated workshop — rural outskirts near Tisy -->
+        <pos x="3546" z="14144" a="0"/>
+        <!-- deer stand — rural outskirts near Tisy -->
+        <pos x="2944" z="14412" a="0"/>
+        <!-- wooden shed — deep rural / woodland near Tisy -->
+        <pos x="3527" z="14567" a="0"/>
+        <!-- wooden shed — deep rural / woodland near Tisy -->
+        <pos x="3556" z="14684" a="0"/>
+        <!-- camp house — deep rural / woodland near Tisy -->
+        <pos x="3700" z="14776" a="0"/>
+        <!-- wooden shed — deep rural / woodland near Tisy -->
+        <pos x="3438" z="14841" a="0"/>
+        <!-- village house — deep rural / woodland near Tisy -->
+        <pos x="3968" z="14873" a="0"/>
+        <!-- wooden shed — rural outskirts near Tisy -->
+        <pos x="2515" z="15034" a="0"/>
+        <!-- brick barn — rural outskirts near Tisy -->
+        <pos x="2428" z="15044" a="0"/>
+        <!-- village house — rural outskirts near Tisy -->
+        <pos x="2103" z="15083" a="0"/>
+        <!-- brick barn — deep rural / woodland near Tisy -->
+        <pos x="3603" z="15130" a="0"/>
+        <!-- wooden shed — rural outskirts near Tisy -->
+        <pos x="2876" z="15134" a="0"/>
+        <!-- village house — deep rural / woodland near Tisy -->
+        <pos x="3858" z="15149" a="0"/>
+        <!-- wooden barn — rural outskirts near Tisy -->
+        <pos x="2014" z="15170" a="0"/>
+        <!-- deer stand — deep rural / woodland near Tisy -->
+        <pos x="4112" z="15171" a="0"/>
+        <!-- village house — rural outskirts near Tisy -->
+        <pos x="3050" z="15230" a="0"/>
+        <!-- wooden shed — rural outskirts near Tisy -->
+        <pos x="2195" z="15266" a="0"/>
+        <!-- small garage — deep rural / woodland near Tisy -->
+        <pos x="3221" z="15303" a="0"/>
+        <!-- TOPOLNIKI                                            -->
+        <!-- wooden shed — rural outskirts near Topolniki -->
+        <pos x="6731" z="14213" a="0"/>
+        <!-- deer stand — rural outskirts near Topolniki -->
+        <pos x="6290" z="14225" a="0"/>
+        <!-- wooden shed — rural outskirts near Topolniki -->
+        <pos x="6046" z="14279" a="0"/>
+        <!-- village house — rural outskirts near Topolniki -->
+        <pos x="6741" z="14308" a="0"/>
+        <!-- deer stand — rural outskirts near Topolniki -->
+        <pos x="5646" z="14310" a="0"/>
+        <!-- wooden shed — rural outskirts near Topolniki -->
+        <pos x="5760" z="14357" a="0"/>
+        <!-- outhouse — rural outskirts near Topolniki -->
+        <pos x="5977" z="14361" a="0"/>
+        <!-- two-storey house — rural outskirts near Topolniki -->
+        <pos x="6679" z="14367" a="0"/>
+        <!-- polytunnel — rural outskirts near Topolniki -->
+        <pos x="6749" z="14417" a="0"/>
+        <!-- metal shed — rural outskirts near Topolniki -->
+        <pos x="6545" z="14425" a="0"/>
+        <!-- village house — rural outskirts near Topolniki -->
+        <pos x="6465" z="14463" a="0"/>
+        <!-- wooden shed — rural outskirts near Topolniki -->
+        <pos x="5841" z="14480" a="0"/>
+        <!-- metal shed — rural outskirts near Topolniki -->
+        <pos x="6585" z="14526" a="0"/>
+        <!-- wooden shed — rural outskirts near Topolniki -->
+        <pos x="5872" z="14560" a="0"/>
+        <!-- polytunnel — rural outskirts near Topolniki -->
+        <pos x="5462" z="14562" a="0"/>
+        <!-- outhouse — rural outskirts near Topolniki -->
+        <pos x="6681" z="14568" a="0"/>
+        <!-- metal shed — rural outskirts near Topolniki -->
+        <pos x="6496" z="14789" a="0"/>
+        <!-- metal shed — deep rural / woodland near Topolniki -->
+        <pos x="6277" z="14901" a="0"/>
+        <!-- village house — deep rural / woodland near Topolniki -->
+        <pos x="6468" z="14908" a="0"/>
+        <!-- two-storey house — deep rural / woodland near Topolniki -->
+        <pos x="5167" z="14954" a="0"/>
+        <!-- deer stand — deep rural / woodland near Topolniki -->
+        <pos x="4719" z="14977" a="0"/>
+        <!-- wooden shed — deep rural / woodland near Topolniki -->
+        <pos x="6486" z="15000" a="0"/>
+        <!-- metal shed — deep rural / woodland near Topolniki -->
+        <pos x="5703" z="15021" a="0"/>
+        <!-- village house — deep rural / woodland near Topolniki -->
+        <pos x="6373" z="15028" a="0"/>
+        <!-- wooden shed — deep rural / woodland near Topolniki -->
+        <pos x="4860" z="15031" a="0"/>
+        <!-- wooden shed — deep rural / woodland near Topolniki -->
+        <pos x="5180" z="15076" a="0"/>
+        <!-- wooden shed — deep rural / woodland near Topolniki -->
+        <pos x="4767" z="15084" a="0"/>
+        <!-- deer stand — deep rural / woodland near Topolniki -->
+        <pos x="5565" z="15085" a="0"/>
+        <!-- wooden shed — deep rural / woodland near Topolniki -->
+        <pos x="4618" z="15099" a="0"/>
+        <!-- village house — deep rural / woodland near Topolniki -->
+        <pos x="4926" z="15126" a="0"/>
+        <!-- cowshed — deep rural / woodland near Topolniki -->
+        <pos x="6829" z="15132" a="0"/>
+        <!-- polytunnel — deep rural / woodland near Topolniki -->
+        <pos x="4979" z="15186" a="0"/>
+        <!-- deer stand — deep rural / woodland near Topolniki -->
+        <pos x="6601" z="15193" a="0"/>
+        <!-- isolated workshop — deep rural / woodland near Topolniki -->
+        <pos x="5671" z="15220" a="0"/>
+        <!-- wooden barn — deep rural / woodland near Topolniki -->
+        <pos x="4851" z="15221" a="0"/>
+        <!-- deer stand — deep rural / woodland near Topolniki -->
+        <pos x="4700" z="15235" a="0"/>
+        <!-- isolated workshop — deep rural / woodland near Topolniki -->
+        <pos x="5801" z="15245" a="0"/>
+        <!-- village house — deep rural / woodland near Topolniki -->
+        <pos x="4524" z="15285" a="0"/>
+        <!-- VAVILOVO                                             -->
+        <!-- metal shed — rural outskirts near Vavilovo -->
+        <pos x="3903" z="10749" a="0"/>
+        <!-- wooden shed — rural outskirts near Vavilovo -->
+        <pos x="3207" z="10761" a="0"/>
+        <!-- village house — rural outskirts near Vavilovo -->
+        <pos x="2171" z="10824" a="0"/>
+        <!-- metal shed — rural outskirts near Vavilovo -->
+        <pos x="3905" z="10875" a="0"/>
+        <!-- wooden shed — rural outskirts near Vavilovo -->
+        <pos x="2176" z="10913" a="0"/>
+        <!-- polytunnel — rural outskirts near Vavilovo -->
+        <pos x="2381" z="10941" a="0"/>
+        <!-- village house — rural outskirts near Vavilovo -->
+        <pos x="2184" z="10998" a="0"/>
+        <!-- village house — rural outskirts near Vavilovo -->
+        <pos x="2270" z="11006" a="0"/>
+        <!-- two-storey house — rural outskirts near Vavilovo -->
+        <pos x="2185" z="11092" a="0"/>
+        <!-- two-storey house — rural outskirts near Vavilovo -->
+        <pos x="3721" z="13190" a="0"/>
+        <!-- brick barn — rural outskirts near Vavilovo -->
+        <pos x="3789" z="13251" a="0"/>
+        <!-- wooden shed — rural outskirts near Vavilovo -->
+        <pos x="3412" z="13288" a="0"/>
+        <!-- brick barn — rural outskirts near Vavilovo -->
+        <pos x="3222" z="13402" a="0"/>
+        <!-- cowshed — rural outskirts near Vavilovo -->
+        <pos x="3189" z="13593" a="0"/>
+        <!-- VYBOR                                                -->
+        <!-- deer stand — rural outskirts near Vybor -->
+        <pos x="2538" z="9382" a="0"/>
+        <!-- village house — rural outskirts near Vybor -->
+        <pos x="2545" z="9616" a="0"/>
+        <!-- wooden shed — rural outskirts near Vybor -->
+        <pos x="2478" z="9669" a="0"/>
+        <!-- metal shed — rural outskirts near Vybor -->
+        <pos x="2348" z="9767" a="0"/>
+        <!-- metal shed — rural outskirts near Vybor -->
+        <pos x="2732" z="9780" a="0"/>
+        <!-- metal shed — rural outskirts near Vybor -->
+        <pos x="2524" z="9781" a="0"/>
+        <!-- closed shed — deep rural / woodland near Vybor -->
+        <pos x="2016" z="9792" a="0"/>
+        <!-- village house — rural outskirts near Vybor -->
+        <pos x="2603" z="9813" a="0"/>
+        <!-- wooden shed — rural outskirts near Vybor -->
+        <pos x="2833" z="9829" a="0"/>
+        <!-- wooden shed — rural outskirts near Vybor -->
+        <pos x="2194" z="9860" a="0"/>
+        <!-- wooden shed — rural outskirts near Vybor -->
+        <pos x="2758" z="9909" a="0"/>
+        <!-- village house — rural outskirts near Vybor -->
+        <pos x="2686" z="9962" a="0"/>
+        <!-- metal shed — rural outskirts near Vybor -->
+        <pos x="2908" z="9970" a="0"/>
+        <!-- wooden shed — rural outskirts near Vybor -->
+        <pos x="2608" z="9980" a="0"/>
+        <!-- isolated workshop — deep rural / woodland near Vybor -->
+        <pos x="1980" z="10004" a="0"/>
+        <!-- wooden shed — rural outskirts near Vybor -->
+        <pos x="2664" z="10077" a="0"/>
+        <!-- wooden shed — deep rural / woodland near Vybor -->
+        <pos x="2230" z="10118" a="0"/>
+        <!-- deer stand — rural outskirts near Vybor -->
+        <pos x="3418" z="10189" a="0"/>
+        <!-- metal shed — rural outskirts near Vybor -->
+        <pos x="3080" z="10317" a="0"/>
+        <!-- closed shed — rural outskirts near Vybor -->
+        <pos x="4134" z="10432" a="0"/>
+        <!-- ZELENO MIL                                           -->
+        <!-- deer stand — rural outskirts near Zeleno mil -->
+        <pos x="874" z="5302" a="0"/>
+        <!-- wooden barn — rural outskirts near Zeleno mil -->
+        <pos x="555" z="5393" a="0"/>
+        <!-- wooden shed — rural outskirts near Zeleno mil -->
+        <pos x="881" z="5402" a="0"/>
+        <!-- small garage — rural outskirts near Zeleno mil -->
+        <pos x="612" z="5481" a="0"/>
+        <!-- outhouse — rural outskirts near Zeleno mil -->
+        <pos x="632" z="5729" a="0"/>
     </event>
 
-    <!-- ============================================================ -->
-    <!-- TIER 2: InfectedHorde_Medium — Overrun City Zones            -->
-    <!-- Medium hordes across city POIs: hospitals, city centers,     -->
-    <!-- fire stations, police stations, industrial zones.            -->
-    <!-- 35-position pool — 10 active at once, different every 360s. -->
-    <!-- Contested zones — valuable loot nearby but serious presence. -->
-    <!-- ============================================================ -->
     <event name="InfectedHorde_Medium">
-        <!-- === Original 12 city/hospital positions === -->
-        <!-- Chernogorsk hospital — where the sick came and never left -->
-        <pos x="6682" z="2451" a="0"/>
-        <!-- Elektrozavodsk hospital -->
-        <pos x="10457" z="2327" a="0"/>
-        <!-- Novodmitrovsk hospital -->
-        <pos x="11478" z="14346" a="0"/>
-        <!-- Severograd hospital -->
-        <pos x="8347" z="12776" a="0"/>
-        <!-- Berezino center — coastal town overrun early -->
-        <pos x="12386" z="9578" a="0"/>
-        <!-- Stary Sobor center — central crossroads, heavily contested -->
-        <pos x="6100" z="7803" a="0"/>
-        <!-- Novy Sobor — evacuation point that failed -->
-        <pos x="7055" z="7639" a="0"/>
-        <!-- Zelenogorsk center — western town evacuation zone -->
-        <pos x="2660" z="5207" a="0"/>
-        <!-- Svetlojarsk center — eastern coastal settlement -->
-        <pos x="14041" z="13294" a="0"/>
-        <!-- Kamyshovo — small coastal town overrun by sea refugees -->
-        <pos x="12200" z="3466" a="0"/>
-        <!-- Chernogorsk supermarket — looted then overrun -->
-        <pos x="6820" z="2566" a="0"/>
-        <!-- Elektrozavodsk factory — workers who turned on the job -->
-        <pos x="10800" z="2450" a="0"/>
-        <!-- === New 23 city/industrial positions === -->
-        <!-- Cherno city center / town square -->
-        <pos x="6760" z="2720" a="0"/>
-        <!-- Cherno fire station -->
-        <pos x="6580" z="2650" a="0"/>
-        <!-- Cherno industrial — warehouse district -->
-        <pos x="6500" z="2870" a="0"/>
-        <!-- Cherno industrial — main factory block -->
-        <pos x="6680" z="3000" a="0"/>
-        <!-- Cherno port / harbor area -->
-        <pos x="6650" z="2380" a="0"/>
-        <!-- Elektro main street / town center -->
-        <pos x="10530" z="2360" a="0"/>
-        <!-- Elektro police station -->
-        <pos x="10650" z="2470" a="0"/>
-        <!-- Elektro school area -->
-        <pos x="10400" z="2460" a="0"/>
-        <!-- Berezino hospital -->
-        <pos x="12700" z="9460" a="0"/>
-        <!-- Berezino city center -->
-        <pos x="12500" z="9360" a="0"/>
-        <!-- Novodmitrovsk city center -->
-        <pos x="11300" z="14250" a="0"/>
-        <!-- Novodmitrovsk fire station -->
-        <pos x="11150" z="14150" a="0"/>
-        <!-- Severograd city center -->
-        <pos x="8050" z="12720" a="0"/>
-        <!-- Severograd police station -->
-        <pos x="8200" z="12860" a="0"/>
-        <!-- Svetlojarsk police station -->
-        <pos x="13980" z="13400" a="0"/>
-        <!-- Svetlojarsk harbor -->
-        <pos x="14200" z="13210" a="0"/>
-        <!-- Krasnostav city center -->
-        <pos x="11000" z="12310" a="0"/>
-        <!-- Krasnostav market area -->
-        <pos x="11100" z="12450" a="0"/>
-        <!-- Solnichniy city center -->
-        <pos x="13400" z="6200" a="0"/>
-        <!-- Solnichniy industrial area -->
-        <pos x="13250" z="6000" a="0"/>
-        <!-- Zelenogorsk supermarket -->
-        <pos x="2520" z="5100" a="0"/>
-        <!-- Zelenogorsk hospital -->
-        <pos x="2700" z="5260" a="0"/>
-        <!-- Berenzino south — factory/industrial outskirts -->
-        <pos x="12800" z="8900" a="0"/>
+        <!-- ==================================================== -->
+        <!-- VILLAGES / TOWNS / FARMS  (105 positions)            -->
+        <!-- ==================================================== -->
+        <!-- BALOTA                                               -->
+        <!-- train station — Balota -->
+        <pos x="4406" z="2313" a="0"/>
+        <!-- market stand — Balota -->
+        <pos x="4492" z="2471" a="0"/>
+        <!-- BELOZERSK                                            -->
+        <!-- fuel / gas station — rural outskirts near Belozersk -->
+        <pos x="4350" z="13085" a="0"/>
+        <!-- BEREZINO                                             -->
+        <!-- market stand — Berezino -->
+        <pos x="12030" z="9091" a="0"/>
+        <!-- CHERNOGORSK                                          -->
+        <!-- market stand — near Chernogorsk -->
+        <pos x="6420" z="2196" a="0"/>
+        <!-- market stand — Chernogorsk -->
+        <pos x="6553" z="2286" a="0"/>
+        <!-- market stand — Chernogorsk -->
+        <pos x="6717" z="2419" a="0"/>
+        <!-- market stand — Chernogorsk -->
+        <pos x="6427" z="2422" a="0"/>
+        <!-- market stand — Chernogorsk -->
+        <pos x="6711" z="2613" a="0"/>
+        <!-- train station — Chernogorsk -->
+        <pos x="6544" z="2614" a="0"/>
+        <!-- market stand — Chernogorsk -->
+        <pos x="6236" z="2669" a="0"/>
+        <!-- Land_Office2 — Chernogorsk -->
+        <pos x="6489" z="2767" a="0"/>
+        <!-- DOLINA                                               -->
+        <!-- police station — Dolina -->
+        <pos x="11186" z="6590" a="0"/>
+        <!-- DUBOVO                                               -->
+        <!-- fuel / gas station — near Dubovo -->
+        <pos x="6875" z="3095" a="0"/>
+        <!-- city store — Dubovo -->
+        <pos x="6536" z="3555" a="0"/>
+        <!-- Land_Office1 — Dubovo -->
+        <pos x="6801" z="3635" a="0"/>
+        <!-- DUBROVKA                                             -->
+        <!-- police station — near Dubrovka -->
+        <pos x="6004" z="10349" a="0"/>
+        <!-- ELEKTROZAVODSK                                       -->
+        <!-- market stand — near Elektrozavodsk -->
+        <pos x="10067" z="1855" a="0"/>
+        <!-- fuel / gas station — near Elektrozavodsk -->
+        <pos x="9519" z="2004" a="0"/>
+        <!-- repair centre — Elektrozavodsk -->
+        <pos x="10132" z="2007" a="0"/>
+        <!-- fire station — Elektrozavodsk -->
+        <pos x="10273" z="2174" a="0"/>
+        <!-- market stand — Elektrozavodsk -->
+        <pos x="10422" z="2196" a="0"/>
+        <!-- city store — near Elektrozavodsk -->
+        <pos x="10423" z="2365" a="0"/>
+        <!-- school — near Elektrozavodsk -->
+        <pos x="10223" z="2574" a="0"/>
+        <!-- GORKA                                                -->
+        <!-- police station — Gorka -->
+        <pos x="9530" z="8799" a="0"/>
+        <!-- repair centre — Gorka -->
+        <pos x="9750" z="8900" a="0"/>
+        <!-- GRISHINO                                             -->
+        <!-- Land_Office1 — Grishino -->
+        <pos x="7923" z="12559" a="0"/>
+        <!-- repair centre — Grishino -->
+        <pos x="8060" z="12695" a="0"/>
+        <!-- market stand — near Grishino -->
+        <pos x="8544" z="12784" a="0"/>
+        <!-- GVOZDNO                                              -->
+        <!-- market stand — near Gvozdno -->
+        <pos x="8558" z="11963" a="0"/>
+        <!-- KAMENKA                                              -->
+        <!-- train station — Kamenka -->
+        <pos x="1884" z="2174" a="0"/>
+        <!-- city store — near Kamenka -->
+        <pos x="1136" z="2430" a="0"/>
+        <!-- KAMENKA MIL                                          -->
+        <!-- hospital — Kamenka mil -->
+        <pos x="2164" z="3358" a="0"/>
+        <!-- KAMENSK                                              -->
+        <!-- repair centre — near Kamensk -->
+        <pos x="12213" z="13864" a="0"/>
+        <!-- repair centre — Kamensk -->
+        <pos x="12145" z="14406" a="0"/>
+        <!-- train station — near Kamensk -->
+        <pos x="12866" z="15055" a="0"/>
+        <!-- KAMYSHOVO                                            -->
+        <!-- market stand — Kamyshovo -->
+        <pos x="12081" z="3552" a="0"/>
+        <!-- KOMAROVO                                             -->
+        <!-- market stand — Komarovo -->
+        <pos x="3653" z="2530" a="0"/>
+        <!-- KOZLOVKA                                             -->
+        <!-- market stand — Kozlovka -->
+        <pos x="4362" z="4626" a="0"/>
+        <!-- KRASNOSTAV                                           -->
+        <!-- market stand — near Krasnostav -->
+        <pos x="12323" z="9717" a="0"/>
+        <!-- school — near Krasnostav -->
+        <pos x="12168" z="9757" a="0"/>
+        <!-- fire station — near Krasnostav -->
+        <pos x="12810" z="9980" a="0"/>
+        <!-- market stand — near Krasnostav -->
+        <pos x="12900" z="10101" a="0"/>
+        <!-- train station — near Krasnostav -->
+        <pos x="12989" z="10245" a="0"/>
+        <!-- KRUTOY CAP                                           -->
+        <!-- market stand — Krutoy Cap -->
+        <pos x="14132" z="13082" a="0"/>
+        <!-- MOGILEVKA                                            -->
+        <!-- market stand — Mogilevka -->
+        <pos x="7581" z="5166" a="0"/>
+        <!-- NE AIRFIELD                                          -->
+        <!-- market stand — rural outskirts near NE Airfield -->
+        <pos x="12109" z="13539" a="0"/>
+        <!-- NADEZHDINO                                           -->
+        <!-- market stand — Nadezhdino -->
+        <pos x="5852" z="4658" a="0"/>
+        <!-- market stand — Nadezhdino -->
+        <pos x="5839" z="4809" a="0"/>
+        <!-- NOVAYA PETROVKA                                      -->
+        <!-- city store — Novaya Petrovka -->
+        <pos x="9550" z="13668" a="0"/>
+        <!-- market stand — Novaya Petrovka -->
+        <pos x="9745" z="13843" a="0"/>
+        <!-- NOVODMITROVSK                                        -->
+        <!-- market stand — near Novodmitrovsk -->
+        <pos x="11948" z="13869" a="0"/>
+        <!-- market stand — Novodmitrovsk -->
+        <pos x="11596" z="14120" a="0"/>
+        <!-- bus station — Novodmitrovsk -->
+        <pos x="11396" z="14317" a="0"/>
+        <!-- market stand — Novodmitrovsk -->
+        <pos x="11663" z="14331" a="0"/>
+        <!-- repair centre — near Novodmitrovsk -->
+        <pos x="11814" z="14430" a="0"/>
+        <!-- market stand — near Novodmitrovsk -->
+        <pos x="11023" z="14445" a="0"/>
+        <!-- police station — Novodmitrovsk -->
+        <pos x="11490" z="14484" a="0"/>
+        <!-- market stand — Novodmitrovsk -->
+        <pos x="11655" z="14533" a="0"/>
+        <!-- market stand — near Novodmitrovsk -->
+        <pos x="11624" z="14681" a="0"/>
+        <!-- repair centre — near Novodmitrovsk -->
+        <pos x="11406" z="14882" a="0"/>
+        <!-- repair centre — near Novodmitrovsk -->
+        <pos x="11604" z="15072" a="0"/>
+        <!-- NOVOSELKI                                            -->
+        <!-- police station — near Novoselki -->
+        <pos x="6202" z="2921" a="0"/>
+        <!-- city store — Novoselki -->
+        <pos x="6078" z="3429" a="0"/>
+        <!-- NOVY SOBOR                                           -->
+        <!-- market stand — Novy Sobor -->
+        <pos x="7152" z="7679" a="0"/>
+        <!-- OLSHA                                                -->
+        <!-- police station — Olsha -->
+        <pos x="13847" z="13218" a="0"/>
+        <!-- fuel / gas station — Olsha -->
+        <pos x="13574" z="13305" a="0"/>
+        <!-- train station — Olsha -->
+        <pos x="13987" z="13480" a="0"/>
+        <!-- market stand — near Olsha -->
+        <pos x="13549" z="14131" a="0"/>
+        <!-- ORLOVETS                                             -->
+        <!-- fuel / gas station — near Orlovets -->
+        <pos x="10442" z="8884" a="0"/>
+        <!-- market stand — near Orlovets -->
+        <pos x="10534" z="9724" a="0"/>
+        <!-- PAVLOVO                                              -->
+        <!-- market stand — Pavlovo -->
+        <pos x="1685" z="3836" a="0"/>
+        <!-- POGOREVKA                                            -->
+        <!-- fuel / gas station — Pogorevka -->
+        <pos x="4727" z="6390" a="0"/>
+        <!-- market stand — Pogorevka -->
+        <pos x="4470" z="6426" a="0"/>
+        <!-- POLANA                                               -->
+        <!-- city store — Polana -->
+        <pos x="10684" z="8023" a="0"/>
+        <!-- PRIGORODKI                                           -->
+        <!-- train station — near Prigorodki -->
+        <pos x="8070" z="3268" a="0"/>
+        <!-- PUSTOSHKA                                            -->
+        <!-- fuel / gas station — near Pustoshka -->
+        <pos x="3000" z="7483" a="0"/>
+        <!-- market stand — Pustoshka -->
+        <pos x="3089" z="7947" a="0"/>
+        <!-- ROGOVO                                               -->
+        <!-- market stand — Rogovo -->
+        <pos x="4798" z="6812" a="0"/>
+        <!-- SEVEROGRAD                                           -->
+        <!-- train station — Severograd -->
+        <pos x="7855" z="12413" a="0"/>
+        <!-- market stand — Severograd -->
+        <pos x="7557" z="12627" a="0"/>
+        <!-- police station — Severograd -->
+        <pos x="7737" z="12637" a="0"/>
+        <!-- market stand — near Severograd -->
+        <pos x="7676" z="13279" a="0"/>
+        <!-- SOLNICHNIY                                           -->
+        <!-- market stand — Solnichniy -->
+        <pos x="13343" z="6266" a="0"/>
+        <!-- fuel / gas station — near Solnichniy -->
+        <pos x="13370" z="6612" a="0"/>
+        <!-- market stand — near Solnichniy -->
+        <pos x="13181" z="7066" a="0"/>
+        <!-- STAROYE                                              -->
+        <!-- fuel / gas station — Staroye -->
+        <pos x="10119" z="5200" a="0"/>
+        <!-- police station — Staroye -->
+        <pos x="10158" z="5530" a="0"/>
+        <!-- STARY SOBOR                                          -->
+        <!-- market stand — Stary Sobor -->
+        <pos x="6085" z="7743" a="0"/>
+        <!-- TISY                                                 -->
+        <!-- repair centre — Tisy -->
+        <pos x="1521" z="14061" a="0"/>
+        <!-- VAVILOVO                                             -->
+        <!-- market stand — near Vavilovo -->
+        <pos x="3527" z="12554" a="0"/>
+        <!-- repair centre — near Vavilovo -->
+        <pos x="3029" z="12617" a="0"/>
+        <!-- market stand — near Vavilovo -->
+        <pos x="3239" z="12783" a="0"/>
+        <!-- market stand — near Vavilovo -->
+        <pos x="3436" z="12804" a="0"/>
+        <!-- VORON                                                -->
+        <!-- market stand — Voron -->
+        <pos x="13429" z="3274" a="0"/>
+        <!-- VYBOR                                                -->
+        <!-- repair centre — Vybor -->
+        <pos x="3803" z="8917" a="0"/>
+        <!-- fuel / gas station — Vybor -->
+        <pos x="3668" z="9002" a="0"/>
+        <!-- VYSOTOVO                                             -->
+        <!-- fuel / gas station — near Vysotovo -->
+        <pos x="5863" z="2212" a="0"/>
+        <!-- school — Vysotovo -->
+        <pos x="5696" z="2563" a="0"/>
+        <!-- market stand — near Vysotovo -->
+        <pos x="6057" z="2837" a="0"/>
+        <!-- ZELENO MIL                                           -->
+        <!-- repair centre — Zeleno mil -->
+        <pos x="2482" z="5085" a="0"/>
+        <!-- train station — Zeleno mil -->
+        <pos x="2483" z="5236" a="0"/>
+        <!-- ZELENOGORSK                                          -->
+        <!-- market stand — Zelenogorsk -->
+        <pos x="2732" z="5296" a="0"/>
+        <!-- market stand — Zelenogorsk -->
+        <pos x="2908" z="5493" a="0"/>
+        <!-- fuel / gas station — near Zelenogorsk -->
+        <pos x="2702" z="5600" a="0"/>
     </event>
 
-    <!-- ============================================================ -->
-    <!-- TIER 3: InfectedHorde_Large — Fallen Military Strongholds    -->
-    <!-- Massive hordes at military sites: airfields, barracks,       -->
-    <!-- tent camps, checkpoints. 30-position pool — 6 active at     -->
-    <!-- once, cycling every 600s across different military zones.    -->
-    <!-- Endgame danger zones — solo entry is suicide.                -->
-    <!-- Bring a squad, lots of ammo, and a plan.                     -->
-    <!-- ============================================================ -->
     <event name="InfectedHorde_Large">
-        <!-- === Original 12 military positions === -->
-        <!-- NW Airfield (NWAF) center — the military's main staging ground -->
-        <pos x="4642" z="10247" a="0"/>
-        <!-- NW Airfield south barracks — soldiers who never evacuated -->
-        <pos x="4406" z="9820" a="0"/>
-        <!-- NW Airfield north tents — overflow camp that fell -->
-        <pos x="4846" z="10512" a="0"/>
-        <!-- Tisy Military Base — northern last stand compound -->
-        <pos x="1708" z="14672" a="0"/>
-        <!-- Tisy Military tents — forward operating base, overrun -->
-        <pos x="1530" z="14435" a="0"/>
-        <!-- Balota Airfield — southern military strip, fell early -->
-        <pos x="4784" z="2556" a="0"/>
-        <!-- Myshkino military tents — inland army encampment -->
-        <pos x="2545" z="8376" a="0"/>
-        <!-- Vybor military base — fortified position that failed -->
-        <pos x="3858" z="8876" a="0"/>
-        <!-- NE Airfield — northeastern military installation -->
-        <pos x="12227" z="12601" a="0"/>
-        <!-- Pavlovo military base — southern defensive perimeter -->
-        <pos x="2024" z="3648" a="0"/>
-        <!-- Kamensk military — far north abandoned outpost -->
-        <pos x="12242" z="14626" a="0"/>
-        <!-- Zeleno military — western garrison, communications hub -->
-        <pos x="2818" z="5302" a="0"/>
-        <!-- === New 18 military positions === -->
-        <!-- NWAF ATC tower area — air traffic control, last transmissions -->
-        <pos x="4700" z="10060" a="0"/>
-        <!-- NWAF hangar row east — armored vehicles, overrun crew -->
-        <pos x="5100" z="10150" a="0"/>
-        <!-- NWAF hangar row west — maintenance crews who turned -->
-        <pos x="4300" z="10300" a="0"/>
-        <!-- NWAF east barracks — last holdout before the perimeter fell -->
-        <pos x="4920" z="9700" a="0"/>
-        <!-- Tisy main barracks — disciplined last stand, failed -->
-        <pos x="1900" z="14850" a="0"/>
-        <!-- Tisy military checkpoint — gate guard who never left -->
-        <pos x="2050" z="14360" a="0"/>
-        <!-- NE Airfield hangar row -->
-        <pos x="12050" z="12760" a="0"/>
-        <!-- NE Airfield barracks / tents -->
-        <pos x="11900" z="12420" a="0"/>
-        <!-- Kamensk military south compound -->
-        <pos x="12100" z="14360" a="0"/>
-        <!-- Kamensk military north outpost -->
-        <pos x="12380" z="14820" a="0"/>
-        <!-- Balota hangar area -->
-        <pos x="4600" z="2390" a="0"/>
-        <!-- Balota ATC / control building -->
-        <pos x="4970" z="2660" a="0"/>
-        <!-- Myshkino camp south — satellite position -->
-        <pos x="2450" z="8110" a="0"/>
-        <!-- Myshkino camp north — command tent cluster -->
-        <pos x="2680" z="8620" a="0"/>
-        <!-- Vybor military east perimeter -->
-        <pos x="4050" z="8720" a="0"/>
-        <!-- Vybor military south gate -->
-        <pos x="3720" z="8610" a="0"/>
-        <!-- Military checkpoint south NWAF (road approach) -->
-        <pos x="4500" z="9410" a="0"/>
-        <!-- Military checkpoint near Lopatino -->
-        <pos x="2800" z="9960" a="0"/>
+        <!-- ==================================================== -->
+        <!-- VILLAGES / TOWNS / FARMS  (85 positions)             -->
+        <!-- ==================================================== -->
+        <!-- BALOTA AIRFIELD                                      -->
+        <!-- military tent — near Balota Airfield -->
+        <pos x="5269" z="2210" a="0"/>
+        <!-- military tent — Balota Airfield -->
+        <pos x="5076" z="2270" a="0"/>
+        <!-- Land_Airfield_Small_Hangar — Balota Airfield -->
+        <pos x="4945" z="2436" a="0"/>
+        <!-- BELOZERSK                                            -->
+        <!-- military barracks — near Belozersk -->
+        <pos x="4957" z="12966" a="0"/>
+        <!-- BEREZINO                                             -->
+        <!-- military tent — Berezino -->
+        <pos x="11966" z="9129" a="0"/>
+        <!-- CHERNOGORSK                                          -->
+        <!-- cement works — near Chernogorsk -->
+        <pos x="7007" z="2588" a="0"/>
+        <!-- guard house — Chernogorsk -->
+        <pos x="6549" z="2758" a="0"/>
+        <!-- guard house — near Chernogorsk -->
+        <pos x="6981" z="2787" a="0"/>
+        <!-- DUBROVKA                                             -->
+        <!-- military barracks — rural outskirts near Dubrovka -->
+        <pos x="4732" z="10539" a="0"/>
+        <!-- Tisy compound — rural outskirts near Dubrovka -->
+        <pos x="4571" z="10805" a="0"/>
+        <!-- ELEKTROZAVODSK                                       -->
+        <!-- guard house — Elektrozavodsk -->
+        <pos x="10053" z="1966" a="0"/>
+        <!-- guard house — near Elektrozavodsk -->
+        <pos x="9515" z="1977" a="0"/>
+        <!-- military tent — near Elektrozavodsk -->
+        <pos x="10476" z="2355" a="0"/>
+        <!-- guard house — rural outskirts near Elektrozavodsk -->
+        <pos x="10856" z="2771" a="0"/>
+        <!-- GORKA                                                -->
+        <!-- guard house — rural outskirts near Gorka -->
+        <pos x="8076" z="9370" a="0"/>
+        <!-- GRISHINO                                             -->
+        <!-- guard house — near Grishino -->
+        <pos x="8691" z="12851" a="0"/>
+        <!-- GVOZDNO                                              -->
+        <!-- military tent — near Gvozdno -->
+        <pos x="9568" z="11793" a="0"/>
+        <!-- KABANINO                                             -->
+        <!-- guard house — near Kabanino -->
+        <pos x="5294" z="9364" a="0"/>
+        <!-- military barracks — rural outskirts near Kabanino -->
+        <pos x="5301" z="9775" a="0"/>
+        <!-- military barracks — rural outskirts near Kabanino -->
+        <pos x="5039" z="9841" a="0"/>
+        <!-- military tent — rural outskirts near Kabanino -->
+        <pos x="5264" z="10011" a="0"/>
+        <!-- military barracks — rural outskirts near Kabanino -->
+        <pos x="4930" z="10060" a="0"/>
+        <!-- KAMENKA                                              -->
+        <!-- military barracks — rural outskirts near Kamenka -->
+        <pos x="2792" z="1236" a="0"/>
+        <!-- military barracks — rural outskirts near Kamenka -->
+        <pos x="2561" z="1294" a="0"/>
+        <!-- military tent — rural outskirts near Kamenka -->
+        <pos x="775" z="1886" a="0"/>
+        <!-- KAMENKA MIL                                          -->
+        <!-- military barracks — Kamenka mil -->
+        <pos x="2219" z="3356" a="0"/>
+        <!-- military barracks — Kamenka mil -->
+        <pos x="1954" z="3420" a="0"/>
+        <!-- guard house — near Kamenka mil -->
+        <pos x="2307" z="3687" a="0"/>
+        <!-- KAMENSK                                              -->
+        <!-- guard house — near Kamensk -->
+        <pos x="11980" z="14296" a="0"/>
+        <!-- guard house — Kamensk -->
+        <pos x="12362" z="14356" a="0"/>
+        <!-- KOMAROVO                                             -->
+        <!-- cement works — Komarovo -->
+        <pos x="3644" z="2205" a="0"/>
+        <!-- KOMETA                                               -->
+        <!-- military tent — near Kometa -->
+        <pos x="10221" z="4005" a="0"/>
+        <!-- KRASNOSTAV                                           -->
+        <!-- guard house — near Krasnostav -->
+        <pos x="12193" z="9725" a="0"/>
+        <!-- guard house — Krasnostav -->
+        <pos x="12850" z="9745" a="0"/>
+        <!-- guard house — near Krasnostav -->
+        <pos x="13014" z="10008" a="0"/>
+        <!-- guard house — near Krasnostav -->
+        <pos x="13131" z="10345" a="0"/>
+        <!-- NE AIRFIELD                                          -->
+        <!-- Land_Airfield_Small_Control — near NE Airfield -->
+        <pos x="11848" z="12464" a="0"/>
+        <!-- NOVAYA PETROVKA                                      -->
+        <!-- military barracks — rural outskirts near Novaya Petrovka -->
+        <pos x="8506" z="13976" a="0"/>
+        <!-- Tisy compound — rural outskirts near Novaya Petrovka -->
+        <pos x="8031" z="14633" a="0"/>
+        <!-- military barracks — deep rural / woodland near Novaya Petrovka -->
+        <pos x="7796" z="14763" a="0"/>
+        <!-- NOVODMITROVSK                                        -->
+        <!-- military barracks — rural outskirts near Novodmitrovsk -->
+        <pos x="10920" z="13382" a="0"/>
+        <!-- guard house — Novodmitrovsk -->
+        <pos x="11703" z="14282" a="0"/>
+        <!-- guard house — near Novodmitrovsk -->
+        <pos x="10665" z="14334" a="0"/>
+        <!-- guard house — Novodmitrovsk -->
+        <pos x="11196" z="14424" a="0"/>
+        <!-- NOVOSELKI                                            -->
+        <!-- military tent — near Novoselki -->
+        <pos x="5792" z="3081" a="0"/>
+        <!-- OLSHA                                                -->
+        <!-- guard house — Olsha -->
+        <pos x="14111" z="13278" a="0"/>
+        <!-- military tent — near Olsha -->
+        <pos x="13613" z="13749" a="0"/>
+        <!-- ORLOVETS                                             -->
+        <!-- military tent — near Orlovets -->
+        <pos x="10452" z="9144" a="0"/>
+        <!-- PETROVKA                                             -->
+        <!-- military tent — Petrovka -->
+        <pos x="7074" z="12720" a="0"/>
+        <!-- military barracks — rural outskirts near Petrovka -->
+        <pos x="7091" z="14532" a="0"/>
+        <!-- POGOREVKA                                            -->
+        <!-- military barracks — near Pogorevka -->
+        <pos x="3686" z="5982" a="0"/>
+        <!-- POLANA                                               -->
+        <!-- guard house — near Polana -->
+        <pos x="11479" z="7550" a="0"/>
+        <!-- PRIGORODKI                                           -->
+        <!-- military tent — near Prigorodki -->
+        <pos x="7256" z="3021" a="0"/>
+        <!-- guard house — Prigorodki -->
+        <pos x="7472" z="3181" a="0"/>
+        <!-- PUSTOSHKA                                            -->
+        <!-- military tent — deep rural / woodland near Pustoshka -->
+        <pos x="327" z="9324" a="0"/>
+        <!-- SEVEROGRAD                                           -->
+        <!-- guard house — Severograd -->
+        <pos x="7731" z="12678" a="0"/>
+        <!-- SOLNICHNIY                                           -->
+        <!-- military barracks — Solnichniy -->
+        <pos x="13317" z="6146" a="0"/>
+        <!-- SOSNOVKA                                             -->
+        <!-- military tent — near Sosnovka -->
+        <pos x="2698" z="6750" a="0"/>
+        <!-- military tent — rural outskirts near Sosnovka -->
+        <pos x="1144" z="7216" a="0"/>
+        <!-- STAROYE                                              -->
+        <!-- military tent — near Staroye -->
+        <pos x="10426" z="5952" a="0"/>
+        <!-- STARY SOBOR                                          -->
+        <!-- military tent — Stary Sobor -->
+        <pos x="6347" z="7784" a="0"/>
+        <!-- TISY                                                 -->
+        <!-- military tent — Tisy -->
+        <pos x="1499" z="13612" a="0"/>
+        <!-- Tisy compound — rural outskirts near Tisy -->
+        <pos x="599" z="13670" a="0"/>
+        <!-- Tisy compound — Tisy -->
+        <pos x="1882" z="13720" a="0"/>
+        <!-- military barracks — Tisy -->
+        <pos x="1378" z="13792" a="0"/>
+        <!-- Tisy compound — Tisy -->
+        <pos x="1679" z="13881" a="0"/>
+        <!-- guard tower — near Tisy -->
+        <pos x="1238" z="14006" a="0"/>
+        <!-- guard tower — Tisy -->
+        <pos x="1847" z="14027" a="0"/>
+        <!-- Tisy compound — near Tisy -->
+        <pos x="1540" z="14176" a="0"/>
+        <!-- military barracks — near Tisy -->
+        <pos x="1636" z="14354" a="0"/>
+        <!-- Tisy compound — near Tisy -->
+        <pos x="1390" z="14436" a="0"/>
+        <!-- guard tower — rural outskirts near Tisy -->
+        <pos x="704" z="14585" a="0"/>
+        <!-- military barracks — deep rural / woodland near Tisy -->
+        <pos x="3657" z="14938" a="0"/>
+        <!-- VAVILOVO                                             -->
+        <!-- military tent — rural outskirts near Vavilovo -->
+        <pos x="4157" z="11059" a="0"/>
+        <!-- guard house — rural outskirts near Vavilovo -->
+        <pos x="3613" z="11176" a="0"/>
+        <!-- guard house — rural outskirts near Vavilovo -->
+        <pos x="4160" z="11619" a="0"/>
+        <!-- military barracks — rural outskirts near Vavilovo -->
+        <pos x="4018" z="11806" a="0"/>
+        <!-- guard house — rural outskirts near Vavilovo -->
+        <pos x="3782" z="13089" a="0"/>
+        <!-- VYBOR                                                -->
+        <!-- guard house — Vybor -->
+        <pos x="4060" z="8956" a="0"/>
+        <!-- guard house — near Vybor -->
+        <pos x="4519" z="9389" a="0"/>
+        <!-- Tisy compound — rural outskirts near Vybor -->
+        <pos x="4456" z="9580" a="0"/>
+        <!-- Tisy compound — rural outskirts near Vybor -->
+        <pos x="4027" z="10357" a="0"/>
+        <!-- VYBOR MIL                                            -->
+        <!-- military barracks — Vybor mil -->
+        <pos x="4481" z="8294" a="0"/>
+        <!-- VYSOTOVO                                             -->
+        <!-- guard house — Vysotovo -->
+        <pos x="6006" z="2557" a="0"/>
+        <!-- ZELENO MIL                                           -->
+        <!-- military barracks — Zeleno mil -->
+        <pos x="2447" z="5174" a="0"/>
     </event>
 
 </eventposdef>
