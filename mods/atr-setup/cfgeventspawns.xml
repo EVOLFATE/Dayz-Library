@@ -2330,732 +2330,1128 @@
     <!-- farms, hamlets, dirt tracks, and coastal outskirts.          -->
     <!-- ~150-position pool — 12 active at once, different every 180s.-->
     <!-- Zombies can come from anywhere across the entire map.         -->
-    <!-- ============================================================ -->
+
+    <!-- ================================================================ -->
+    <!-- ATR Horde Events: spawn pools derived 1-to-1 from               -->
+    <!-- Bohemia Interactive mapgrouppos.xml (official CE repository).   -->
+    <!-- Every <pos> is located AT an actual in-game building.           -->
+    <!--   InfectedHorde_Small  : 155 positions  village/farm/road POIs  -->
+    <!--   InfectedHorde_Medium : 105 positions  city hospitals/police   -->
+    <!--   InfectedHorde_Large  :  85 positions  military/industrial      -->
+    <!-- Positions weighted toward populated areas, rare in open terrain. -->
+    <!-- ================================================================ -->
+
     <event name="InfectedHorde_Small">
-        <!-- === Original 15 village positions === -->
-        <!-- Gorka village center -->
-        <pos x="9534" z="8870" a="0"/>
-        <!-- Polana village -->
-        <pos x="10618" z="8031" a="0"/>
-        <!-- Staroye village -->
-        <pos x="10116" z="5455" a="0"/>
-        <!-- Solnichniy factory district -->
-        <pos x="13312" z="6109" a="0"/>
-        <!-- Komarovo village -->
-        <pos x="3650" z="2457" a="0"/>
-        <!-- Pavlovo village -->
-        <pos x="1720" z="3765" a="0"/>
-        <!-- Guglovo village -->
-        <pos x="8426" z="6684" a="0"/>
-        <!-- Dolina village -->
-        <pos x="11260" z="6620" a="0"/>
-        <!-- Pusta village -->
-        <pos x="9398" z="4772" a="0"/>
-        <!-- Bor village -->
-        <pos x="3254" z="4072" a="0"/>
-        <!-- Pogorevka village -->
-        <pos x="4453" z="6395" a="0"/>
-        <!-- Rogovo village -->
-        <pos x="4721" z="6822" a="0"/>
-        <!-- Pulkovo village -->
-        <pos x="4925" z="5542" a="0"/>
-        <!-- Kozlovka village -->
-        <pos x="4441" z="4684" a="0"/>
-        <!-- Drozhino village -->
-        <pos x="3388" z="4997" a="0"/>
-        <!-- === New 30 positions: roads, gas stations, village outskirts === -->
-        <!-- Cherno industrial main road — south end -->
-        <pos x="6480" z="2610" a="0"/>
-        <!-- Cherno industrial main road — mid south -->
-        <pos x="6620" z="2820" a="0"/>
-        <!-- Cherno industrial main road — mid north -->
-        <pos x="6760" z="3040" a="0"/>
-        <!-- Cherno industrial main road — north end -->
-        <pos x="6880" z="3180" a="0"/>
-        <!-- Gas station east of Elektro (road to Kamyshovo) -->
-        <pos x="10250" z="2280" a="0"/>
-        <!-- Gas station near Berezino (coastal road) -->
-        <pos x="12500" z="9110" a="0"/>
-        <!-- Gas station near Lopatino (western road) -->
-        <pos x="2980" z="9650" a="0"/>
-        <!-- Gas station near Zelenogorsk -->
-        <pos x="2400" z="5140" a="0"/>
-        <!-- Gas station Kamenka road -->
-        <pos x="1850" z="2300" a="0"/>
-        <!-- Novy Sobor crossroads -->
-        <pos x="7120" z="7800" a="0"/>
-        <!-- Road near VMC (Vybor Military Camp) -->
-        <pos x="3450" z="8820" a="0"/>
-        <!-- Road junction east of Stary Sobor -->
-        <pos x="6580" z="7920" a="0"/>
-        <!-- Road south of Kabanino village -->
-        <pos x="5700" z="8650" a="0"/>
-        <!-- Road between Cherno and Elektro (Dubky area) -->
-        <pos x="8780" z="2490" a="0"/>
-        <!-- Road through Mogilevka area -->
-        <pos x="7980" z="5010" a="0"/>
-        <!-- Prigorodki outskirts (road east of Cherno) -->
-        <pos x="7020" z="3350" a="0"/>
-        <!-- Komarovo outskirts — western coastal road -->
-        <pos x="3480" z="2200" a="0"/>
-        <!-- Kamyshovo village outskirts -->
-        <pos x="12480" z="3600" a="0"/>
-        <!-- Krasnostav village area -->
-        <pos x="11150" z="12220" a="0"/>
-        <!-- Gvozdno village -->
-        <pos x="8900" z="11750" a="0"/>
-        <!-- Dubrovka village -->
-        <pos x="9950" z="10830" a="0"/>
-        <!-- Pustoshka village -->
-        <pos x="4070" z="9110" a="0"/>
-        <!-- Kabanino village -->
-        <pos x="5600" z="8700" a="0"/>
-        <!-- Turovo village -->
-        <pos x="6150" z="6700" a="0"/>
-        <!-- Polesovo village -->
-        <pos x="8200" z="9310" a="0"/>
-        <!-- Mogilevka village -->
-        <pos x="7650" z="4760" a="0"/>
-        <!-- Bridge near Solnichniy (northern road) -->
-        <pos x="13150" z="5310" a="0"/>
-        <!-- Elektro road — eastern approach -->
-        <pos x="11200" z="2610" a="0"/>
-        <!-- Road junction near Balota crossroads -->
-        <pos x="4850" z="2900" a="0"/>
-        <!-- Road east of Chernogorsk -->
-        <pos x="7500" z="2700" a="0"/>
-        <!-- === New expansion: northwest villages and road junctions === -->
-        <!-- Lopatino village -->
-        <pos x="2850" z="9820" a="0"/>
-        <!-- Grishino village -->
-        <pos x="4230" z="8080" a="0"/>
-        <!-- Veresnik village -->
-        <pos x="3780" z="9350" a="0"/>
-        <!-- Myshkino village (civilian outskirts) -->
-        <pos x="3180" z="8130" a="0"/>
-        <!-- Road junction Lopatino–Vybor -->
-        <pos x="3200" z="9100" a="0"/>
-        <!-- Grishino farms east -->
-        <pos x="4550" z="7950" a="0"/>
-        <!-- Road near Tisy camp south approach -->
-        <pos x="2400" z="14100" a="0"/>
-        <!-- Novaya Petrovka north village -->
-        <pos x="9650" z="13350" a="0"/>
-        <!-- Petrovka hamlet -->
-        <pos x="8250" z="14000" a="0"/>
-        <!-- Nagornoe village -->
-        <pos x="6750" z="11350" a="0"/>
-        <!-- === New expansion: north-central villages === -->
-        <!-- Shakhovka village -->
-        <pos x="7750" z="8900" a="0"/>
-        <!-- Khelm area hamlet -->
-        <pos x="7800" z="9600" a="0"/>
-        <!-- Zub road area -->
-        <pos x="7500" z="9550" a="0"/>
-        <!-- Dichina area hamlet -->
-        <pos x="7300" z="9380" a="0"/>
-        <!-- Svergino village -->
-        <pos x="9000" z="10100" a="0"/>
-        <!-- Vavilovo hamlet -->
-        <pos x="9300" z="10450" a="0"/>
-        <!-- Msta hamlet -->
-        <pos x="8850" z="10350" a="0"/>
-        <!-- Orlovets village -->
-        <pos x="9700" z="8150" a="0"/>
-        <!-- Vyshnaya Dubrovka hamlet -->
-        <pos x="8900" z="10950" a="0"/>
-        <!-- Sinistok village -->
-        <pos x="5800" z="11500" a="0"/>
-        <!-- Selekhovo hamlet -->
-        <pos x="7200" z="11000" a="0"/>
-        <!-- Zaprudnoye village -->
-        <pos x="5350" z="11750" a="0"/>
-        <!-- Belozersk area village -->
-        <pos x="5550" z="12900" a="0"/>
-        <!-- Olsha village -->
-        <pos x="11450" z="12650" a="0"/>
-        <!-- Cernaya Polana hamlet -->
-        <pos x="11200" z="13600" a="0"/>
-        <!-- Polesovo north hamlet -->
-        <pos x="8400" z="9500" a="0"/>
-        <!-- === New expansion: central road junctions and farms === -->
-        <!-- Krasnaya Sloboda road area -->
-        <pos x="8100" z="7600" a="0"/>
-        <!-- Kalinovka village -->
-        <pos x="5250" z="7000" a="0"/>
-        <!-- Sosnovka hamlet -->
-        <pos x="4950" z="4500" a="0"/>
-        <!-- Kumyrna hamlet -->
-        <pos x="3550" z="6200" a="0"/>
-        <!-- Vyshnoye hamlet -->
-        <pos x="5500" z="5850" a="0"/>
-        <!-- Nizhneye Selo area -->
-        <pos x="5800" z="6350" a="0"/>
-        <!-- Novy Sobor east farm -->
-        <pos x="7400" z="7900" a="0"/>
-        <!-- Stary Sobor outskirts south -->
-        <pos x="6200" z="7600" a="0"/>
-        <!-- Road Stary–Novy mid stretch -->
-        <pos x="6800" z="7750" a="0"/>
-        <!-- Farm north of Kozlovka -->
-        <pos x="4650" z="4900" a="0"/>
-        <!-- Farm east of Pulkovo -->
-        <pos x="5200" z="5650" a="0"/>
-        <!-- Farm near Pogorevka -->
-        <pos x="4800" z="6550" a="0"/>
-        <!-- Farm north of Rogovo -->
-        <pos x="4900" z="7100" a="0"/>
-        <!-- Rogovo south road -->
-        <pos x="4600" z="6700" a="0"/>
-        <!-- Rog hamlet area -->
-        <pos x="3100" z="4200" a="0"/>
-        <!-- Dirt track east of Kozlovka -->
-        <pos x="4700" z="4600" a="0"/>
-        <!-- Dirt track near Bor east -->
-        <pos x="3500" z="3900" a="0"/>
-        <!-- Farm near Kamyshka area -->
-        <pos x="1500" z="4600" a="0"/>
-        <!-- Road junction east Kabanino -->
-        <pos x="5850" z="8800" a="0"/>
-        <!-- Road junction near Pustoshka south -->
-        <pos x="4100" z="8800" a="0"/>
-        <!-- Road east of Grishino towards Stary Sobor -->
-        <pos x="4750" z="7820" a="0"/>
-        <!-- === New expansion: northeast farms and coastal villages === -->
-        <!-- Farm near Dolina north -->
-        <pos x="11400" z="6700" a="0"/>
-        <!-- Farm near Staroye -->
-        <pos x="10400" z="5600" a="0"/>
-        <!-- Farm near Pusta north -->
-        <pos x="9600" z="5000" a="0"/>
-        <!-- Farm near Guglovo north -->
-        <pos x="8550" z="6900" a="0"/>
-        <!-- Farm east of Polana -->
-        <pos x="11000" z="8200" a="0"/>
-        <!-- Farm near Gorka east -->
-        <pos x="9650" z="9000" a="0"/>
-        <!-- Road junction Gorka–Polana -->
-        <pos x="9850" z="8300" a="0"/>
-        <!-- Road Berezino–Gorka mid -->
-        <pos x="10800" z="8500" a="0"/>
-        <!-- Lipotino village -->
-        <pos x="11800" z="10050" a="0"/>
-        <!-- Tulga village -->
-        <pos x="12000" z="7200" a="0"/>
-        <!-- Krutoy Cap hamlet -->
-        <pos x="13650" z="7300" a="0"/>
-        <!-- Road north of Solnichniy -->
-        <pos x="13300" z="5700" a="0"/>
-        <!-- Road Solnichniy–Krutoy mid -->
-        <pos x="13500" z="6600" a="0"/>
-        <!-- Road near Tugy area -->
-        <pos x="12100" z="7100" a="0"/>
-        <!-- === New expansion: coastal roads and outskirts === -->
-        <!-- Coastal road near Kamenka south -->
-        <pos x="1350" z="2800" a="0"/>
-        <!-- Road near Kamyshovo east -->
-        <pos x="12800" z="3800" a="0"/>
-        <!-- Road Kamyshovo north -->
-        <pos x="12600" z="4000" a="0"/>
-        <!-- Road Kamyshovo south -->
-        <pos x="12350" z="3200" a="0"/>
-        <!-- Road between Elektro and Berezino east -->
-        <pos x="11800" z="5200" a="0"/>
-        <!-- Coastal road near Berezino north -->
-        <pos x="12950" z="9850" a="0"/>
-        <!-- Road south of Berezino -->
-        <pos x="12700" z="8750" a="0"/>
-        <!-- Road Cherno–Elektro mid (Dubky beach area) -->
-        <pos x="9200" z="2400" a="0"/>
-        <!-- Dubky settlement area -->
-        <pos x="8600" z="2550" a="0"/>
-        <!-- Prigorodki west hamlet -->
-        <pos x="6800" z="3150" a="0"/>
-        <!-- Prigorodki dirt track -->
-        <pos x="6900" z="3400" a="0"/>
-        <!-- Komarovo coastal outskirts -->
-        <pos x="3700" z="2250" a="0"/>
-        <!-- Road near Kamenka military south -->
-        <pos x="1100" z="2400" a="0"/>
-        <!-- Road near Myshkino east -->
-        <pos x="3500" z="8250" a="0"/>
-        <!-- Road near Veresnik south -->
-        <pos x="3700" z="9150" a="0"/>
-        <!-- === New expansion: northern roads and road junctions === -->
-        <!-- Gas station near Severograd -->
-        <pos x="8100" z="12950" a="0"/>
-        <!-- Gas station near Krasnostav -->
-        <pos x="11200" z="12150" a="0"/>
-        <!-- Gas station near Novodmitrovsk -->
-        <pos x="11500" z="14500" a="0"/>
-        <!-- Gas station road north of Cherno -->
-        <pos x="7000" z="3550" a="0"/>
-        <!-- Gas station Vybor area road -->
-        <pos x="3600" z="8500" a="0"/>
-        <!-- Road junction Novaya Petrovka area -->
-        <pos x="10500" z="13800" a="0"/>
-        <!-- Road near Svergino east -->
-        <pos x="9300" z="10300" a="0"/>
-        <!-- Road near Khelm–Shakhovka stretch -->
-        <pos x="7600" z="9200" a="0"/>
-        <!-- Road north of Dichina -->
-        <pos x="7200" z="9650" a="0"/>
-        <!-- Crossroads south of Novy Sobor -->
-        <pos x="7100" z="7550" a="0"/>
-        <!-- Road junction NW near NWAF east -->
-        <pos x="4200" z="10800" a="0"/>
-        <!-- Road south of Tisy (civilian) -->
-        <pos x="1900" z="13500" a="0"/>
-        <!-- Road near Olsha to Novodmitrovsk -->
-        <pos x="11600" z="12800" a="0"/>
-        <!-- Road near Nagornoe south -->
-        <pos x="6900" z="11000" a="0"/>
-        <!-- Road between Zub–Polesovo -->
-        <pos x="7900" z="9400" a="0"/>
-        <!-- Dirt track near Guglovo east -->
-        <pos x="8750" z="6800" a="0"/>
-        <!-- Dirt track near Mogilevka north -->
-        <pos x="7800" z="5200" a="0"/>
-        <!-- Road near Belozersk NW -->
-        <pos x="5100" z="13200" a="0"/>
-        <!-- Road west of Sinistok -->
-        <pos x="5500" z="11300" a="0"/>
-        <!-- Crossroads near Novaya Petrovka road -->
-        <pos x="9950" z="13100" a="0"/>
-        <!-- Gvozdno north road -->
-        <pos x="9050" z="11900" a="0"/>
-        <!-- Dubrovka north hamlet -->
-        <pos x="10100" z="11100" a="0"/>
-        <!-- Road junction northeast of Krasnostav (toward Svetlojarsk) -->
-        <pos x="13800" z="12700" a="0"/>
-        <!-- Coastal road north of Svetlojarsk -->
-        <pos x="14100" z="13750" a="0"/>
-        <!-- === New expansion: additional rural coverage === -->
-        <!-- Zelenogorsk village outskirts east -->
-        <pos x="2900" z="5200" a="0"/>
-        <!-- Road south of Bor toward Komarovo -->
-        <pos x="3100" z="3800" a="0"/>
-        <!-- Chernogorsk east outskirts (road junction) -->
-        <pos x="7300" z="2600" a="0"/>
-        <!-- Road Elektro west approach -->
-        <pos x="10000" z="2350" a="0"/>
-        <!-- Berezino south farms -->
-        <pos x="12250" z="8800" a="0"/>
-        <!-- Severograd south approach road -->
-        <pos x="8000" z="12500" a="0"/>
+        <!-- ==================================================== -->
+        <!-- BALOTA                                               -->
+        <!-- ==================================================== -->
+        <!-- polytunnel farm — Balota -->
+        <pos x="4535" z="2414" a="0"/>
+        <!-- polytunnel farm — Balota -->
+        <pos x="4433" z="2521" a="0"/>
+        <!-- ==================================================== -->
+        <!-- BELOZERSK                                            -->
+        <!-- ==================================================== -->
+        <!-- bus stop — near Belozersk -->
+        <pos x="5387" z="12627" a="0"/>
+        <!-- bus stop — near Belozersk -->
+        <pos x="4226" z="13042" a="0"/>
+        <!-- ==================================================== -->
+        <!-- BEREZINO                                             -->
+        <!-- ==================================================== -->
+        <!-- village store — near Berezino -->
+        <pos x="12933" z="8064" a="0"/>
+        <!-- polytunnel farm — Berezino -->
+        <pos x="11984" z="9099" a="0"/>
+        <!-- polytunnel farm — Berezino -->
+        <pos x="12133" z="9121" a="0"/>
+        <!-- ==================================================== -->
+        <!-- BOR                                                  -->
+        <!-- ==================================================== -->
+        <!-- polytunnel farm — Bor -->
+        <pos x="3370" z="3924" a="0"/>
+        <!-- polytunnel farm — Bor -->
+        <pos x="3126" z="3950" a="0"/>
+        <!-- ==================================================== -->
+        <!-- CHERNOGORSK                                          -->
+        <!-- ==================================================== -->
+        <!-- bus stop — Chernogorsk -->
+        <pos x="6343" z="2503" a="0"/>
+        <!-- bus stop — near Chernogorsk -->
+        <pos x="6213" z="2778" a="0"/>
+        <!-- ==================================================== -->
+        <!-- DOLINA                                               -->
+        <!-- ==================================================== -->
+        <!-- village store — Dolina -->
+        <pos x="11249" z="6562" a="0"/>
+        <!-- polytunnel farm — Dolina -->
+        <pos x="11403" z="6610" a="0"/>
+        <!-- chapel — near Dolina -->
+        <pos x="12087" z="7263" a="0"/>
+        <!-- village store — near Dolina -->
+        <pos x="12266" z="7330" a="0"/>
+        <!-- ==================================================== -->
+        <!-- DUBOVO                                               -->
+        <!-- ==================================================== -->
+        <!-- bus stop — Dubovo -->
+        <pos x="6827" z="3549" a="0"/>
+        <!-- village health centre — near Dubovo -->
+        <pos x="7051" z="4306" a="0"/>
+        <!-- ==================================================== -->
+        <!-- DUBROVKA                                             -->
+        <!-- ==================================================== -->
+        <!-- village store — near Dubrovka -->
+        <pos x="5942" z="10308" a="0"/>
+        <!-- village pub — near Dubrovka -->
+        <pos x="7228" z="11313" a="0"/>
+        <!-- feed shack — Dubrovka -->
+        <pos x="6205" z="11373" a="0"/>
+        <!-- ==================================================== -->
+        <!-- ELEKTROZAVODSK                                       -->
+        <!-- ==================================================== -->
+        <!-- bus stop — Elektrozavodsk -->
+        <pos x="10053" z="2090" a="0"/>
+        <!-- bus stop — Elektrozavodsk -->
+        <pos x="10313" z="2161" a="0"/>
+        <!-- bus stop — Elektrozavodsk -->
+        <pos x="10420" z="2248" a="0"/>
+        <!-- ==================================================== -->
+        <!-- GORKA                                                -->
+        <!-- ==================================================== -->
+        <!-- village pub — near Gorka -->
+        <pos x="9794" z="8221" a="0"/>
+        <!-- polytunnel farm — Gorka -->
+        <pos x="9620" z="8782" a="0"/>
+        <!-- village health centre — Gorka -->
+        <pos x="9473" z="8839" a="0"/>
+        <!-- wooden barn — Gorka -->
+        <pos x="9681" z="8931" a="0"/>
+        <!-- ==================================================== -->
+        <!-- GRISHINO                                             -->
+        <!-- ==================================================== -->
+        <!-- chapel — Grishino -->
+        <pos x="8172" z="12362" a="0"/>
+        <!-- bus stop — Grishino -->
+        <pos x="7949" z="12542" a="0"/>
+        <!-- bus stop — Grishino -->
+        <pos x="8068" z="12586" a="0"/>
+        <!-- chapel — near Grishino -->
+        <pos x="8727" z="12614" a="0"/>
+        <!-- bus stop — Grishino -->
+        <pos x="7914" z="12664" a="0"/>
+        <!-- bus stop — Grishino -->
+        <pos x="8178" z="12724" a="0"/>
+        <!-- village pub — near Grishino -->
+        <pos x="8468" z="12757" a="0"/>
+        <!-- ==================================================== -->
+        <!-- GUGLOVO                                              -->
+        <!-- ==================================================== -->
+        <!-- polytunnel farm — Guglovo -->
+        <pos x="8473" z="6632" a="0"/>
+        <!-- ==================================================== -->
+        <!-- GVOZDNO                                              -->
+        <!-- ==================================================== -->
+        <!-- village pub — near Gvozdno -->
+        <pos x="8168" z="11007" a="0"/>
+        <!-- village store — Gvozdno -->
+        <pos x="8709" z="11627" a="0"/>
+        <!-- cowshed — Gvozdno -->
+        <pos x="8828" z="11677" a="0"/>
+        <!-- village store — Gvozdno -->
+        <pos x="8652" z="11855" a="0"/>
+        <!-- ==================================================== -->
+        <!-- KABANINO                                             -->
+        <!-- ==================================================== -->
+        <!-- village store — Kabanino -->
+        <pos x="5387" z="8543" a="0"/>
+        <!-- wooden barn — Kabanino -->
+        <pos x="5315" z="8642" a="0"/>
+        <!-- ==================================================== -->
+        <!-- KAMENKA                                              -->
+        <!-- ==================================================== -->
+        <!-- village store — Kamenka -->
+        <pos x="1843" z="2243" a="0"/>
+        <!-- ==================================================== -->
+        <!-- KAMENSK                                              -->
+        <!-- ==================================================== -->
+        <!-- village pub — near Kamensk -->
+        <pos x="12137" z="13868" a="0"/>
+        <!-- bus stop — Kamensk -->
+        <pos x="12349" z="14386" a="0"/>
+        <!-- feed shack — Kamensk -->
+        <pos x="12178" z="14802" a="0"/>
+        <!-- village pub — near Kamensk -->
+        <pos x="13269" z="14808" a="0"/>
+        <!-- ==================================================== -->
+        <!-- KOMAROVO                                             -->
+        <!-- ==================================================== -->
+        <!-- polytunnel farm — Komarovo -->
+        <pos x="3606" z="2505" a="0"/>
+        <!-- village pub — near Komarovo -->
+        <pos x="3201" z="2578" a="0"/>
+        <!-- ==================================================== -->
+        <!-- KOMETA                                               -->
+        <!-- ==================================================== -->
+        <!-- bus stop — near Kometa -->
+        <pos x="10898" z="2815" a="0"/>
+        <!-- village pub — Kometa -->
+        <pos x="10275" z="3489" a="0"/>
+        <!-- ==================================================== -->
+        <!-- KOZLOVKA                                             -->
+        <!-- ==================================================== -->
+        <!-- village store — Kozlovka -->
+        <pos x="4432" z="4686" a="0"/>
+        <!-- ==================================================== -->
+        <!-- KRASNOSTAV                                           -->
+        <!-- ==================================================== -->
+        <!-- bus stop — near Krasnostav -->
+        <pos x="12360" z="9652" a="0"/>
+        <!-- wooden barn — Krasnostav -->
+        <pos x="12659" z="9662" a="0"/>
+        <!-- village health centre — near Krasnostav -->
+        <pos x="12777" z="10065" a="0"/>
+        <!-- bus stop — near Krasnostav -->
+        <pos x="13117" z="10362" a="0"/>
+        <!-- village pub — near Krasnostav -->
+        <pos x="11572" z="10653" a="0"/>
+        <!-- ==================================================== -->
+        <!-- KRUTOY CAP                                           -->
+        <!-- ==================================================== -->
+        <!-- bus stop — Krutoy Cap -->
+        <pos x="14119" z="13086" a="0"/>
+        <!-- ==================================================== -->
+        <!-- LOPATINO                                             -->
+        <!-- ==================================================== -->
+        <!-- village pub — near Lopatino -->
+        <pos x="1228" z="11471" a="0"/>
+        <!-- village pub — near Lopatino -->
+        <pos x="250" z="11909" a="0"/>
+        <!-- village store — near Lopatino -->
+        <pos x="1545" z="11995" a="0"/>
+        <!-- village pub — near Lopatino -->
+        <pos x="2329" z="12326" a="0"/>
+        <!-- ==================================================== -->
+        <!-- MOGILEVKA                                            -->
+        <!-- ==================================================== -->
+        <!-- village store — Mogilevka -->
+        <pos x="7525" z="5160" a="0"/>
+        <!-- cowshed — Mogilevka -->
+        <pos x="7658" z="5170" a="0"/>
+        <!-- ==================================================== -->
+        <!-- MSTA                                                 -->
+        <!-- ==================================================== -->
+        <!-- polytunnel farm — Msta -->
+        <pos x="11229" z="5426" a="0"/>
+        <!-- brick barn — Msta -->
+        <pos x="11512" z="5503" a="0"/>
+        <!-- village pub — near Msta -->
+        <pos x="10962" z="5515" a="0"/>
+        <!-- ==================================================== -->
+        <!-- NE AIRFIELD                                          -->
+        <!-- ==================================================== -->
+        <!-- village health centre — near NE Airfield -->
+        <pos x="11267" z="12144" a="0"/>
+        <!-- village pub — near NE Airfield -->
+        <pos x="10785" z="12416" a="0"/>
+        <!-- village store — near NE Airfield -->
+        <pos x="11006" z="12511" a="0"/>
+        <!-- village pub — near NE Airfield -->
+        <pos x="12459" z="13559" a="0"/>
+        <!-- ==================================================== -->
+        <!-- NADEZHDA                                             -->
+        <!-- ==================================================== -->
+        <!-- village pub — Nadezhda -->
+        <pos x="7207" z="6940" a="0"/>
+        <!-- village health centre — Nadezhda -->
+        <pos x="7279" z="7068" a="0"/>
+        <!-- ==================================================== -->
+        <!-- NOVAYA PETROVKA                                      -->
+        <!-- ==================================================== -->
+        <!-- polytunnel farm — Novaya Petrovka -->
+        <pos x="9382" z="13669" a="0"/>
+        <!-- bus stop — Novaya Petrovka -->
+        <pos x="9667" z="13779" a="0"/>
+        <!-- village health centre — near Novaya Petrovka -->
+        <pos x="8573" z="13969" a="0"/>
+        <!-- village store — near Novaya Petrovka -->
+        <pos x="9394" z="14543" a="0"/>
+        <!-- ==================================================== -->
+        <!-- NOVODMITROVSK                                        -->
+        <!-- ==================================================== -->
+        <!-- village store — near Novodmitrovsk -->
+        <pos x="12122" z="13720" a="0"/>
+        <!-- bus stop — Novodmitrovsk -->
+        <pos x="11567" z="14090" a="0"/>
+        <!-- bus stop — Novodmitrovsk -->
+        <pos x="11681" z="14307" a="0"/>
+        <!-- polytunnel farm — Novodmitrovsk -->
+        <pos x="11434" z="14310" a="0"/>
+        <!-- bus stop — Novodmitrovsk -->
+        <pos x="11581" z="14606" a="0"/>
+        <!-- ==================================================== -->
+        <!-- NOVOSELKI                                            -->
+        <!-- ==================================================== -->
+        <!-- village pub — near Novoselki -->
+        <pos x="5245" z="3688" a="0"/>
+        <!-- ==================================================== -->
+        <!-- NOVY SOBOR                                           -->
+        <!-- ==================================================== -->
+        <!-- brick barn — Novy Sobor -->
+        <pos x="7088" z="7597" a="0"/>
+        <!-- cowshed — Novy Sobor -->
+        <pos x="6997" z="7683" a="0"/>
+        <!-- village store — Novy Sobor -->
+        <pos x="7120" z="7713" a="0"/>
+        <!-- polytunnel farm — Novy Sobor -->
+        <pos x="7263" z="7762" a="0"/>
+        <!-- ==================================================== -->
+        <!-- OLSHA                                                -->
+        <!-- ==================================================== -->
+        <!-- village health centre — Olsha -->
+        <pos x="13876" z="13118" a="0"/>
+        <!-- bus stop — Olsha -->
+        <pos x="13980" z="13251" a="0"/>
+        <!-- bus stop — Olsha -->
+        <pos x="13846" z="13261" a="0"/>
+        <!-- chapel — Olsha -->
+        <pos x="13858" z="13452" a="0"/>
+        <!-- chapel — near Olsha -->
+        <pos x="13484" z="14154" a="0"/>
+        <!-- ==================================================== -->
+        <!-- ORLOVETS                                             -->
+        <!-- ==================================================== -->
+        <!-- village store — near Orlovets -->
+        <pos x="10473" z="9846" a="0"/>
+        <!-- ==================================================== -->
+        <!-- PAVLOVO                                              -->
+        <!-- ==================================================== -->
+        <!-- village store — Pavlovo -->
+        <pos x="1684" z="3912" a="0"/>
+        <!-- ==================================================== -->
+        <!-- PETROVKA                                             -->
+        <!-- ==================================================== -->
+        <!-- village store — near Petrovka -->
+        <pos x="7604" z="13372" a="0"/>
+        <!-- village pub — near Petrovka -->
+        <pos x="7555" z="13555" a="0"/>
+        <!-- ==================================================== -->
+        <!-- POLANA                                               -->
+        <!-- ==================================================== -->
+        <!-- wooden barn — Polana -->
+        <pos x="10678" z="7924" a="0"/>
+        <!-- polytunnel farm — Polana -->
+        <pos x="10771" z="8110" a="0"/>
+        <!-- ==================================================== -->
+        <!-- PULKOVO                                              -->
+        <!-- ==================================================== -->
+        <!-- chapel — near Pulkovo -->
+        <pos x="5449" z="5472" a="0"/>
+        <!-- village store — Pulkovo -->
+        <pos x="4960" z="5638" a="0"/>
+        <!-- brick barn — Pulkovo -->
+        <pos x="4894" z="5866" a="0"/>
+        <!-- ==================================================== -->
+        <!-- PUSTA                                                -->
+        <!-- ==================================================== -->
+        <!-- brick barn — Pusta -->
+        <pos x="9144" z="3807" a="0"/>
+        <!-- village store — Pusta -->
+        <pos x="9183" z="3928" a="0"/>
+        <!-- ==================================================== -->
+        <!-- PUSTOSHKA                                            -->
+        <!-- ==================================================== -->
+        <!-- brick barn — Pustoshka -->
+        <pos x="3043" z="7738" a="0"/>
+        <!-- chapel — Pustoshka -->
+        <pos x="2944" z="8038" a="0"/>
+        <!-- polytunnel farm — Pustoshka -->
+        <pos x="3207" z="8046" a="0"/>
+        <!-- village pub — near Pustoshka -->
+        <pos x="1530" z="9121" a="0"/>
+        <!-- chapel — near Pustoshka -->
+        <pos x="2247" z="9300" a="0"/>
+        <!-- bus stop — near Pustoshka -->
+        <pos x="338" z="9356" a="0"/>
+        <!-- ==================================================== -->
+        <!-- ROGOVO                                               -->
+        <!-- ==================================================== -->
+        <!-- village store — Rogovo -->
+        <pos x="4763" z="6784" a="0"/>
+        <!-- wooden barn — Rogovo -->
+        <pos x="4626" z="6793" a="0"/>
+        <!-- ==================================================== -->
+        <!-- SEVEROGRAD                                           -->
+        <!-- ==================================================== -->
+        <!-- polytunnel farm — Severograd -->
+        <pos x="7737" z="12463" a="0"/>
+        <!-- polytunnel farm — Severograd -->
+        <pos x="7586" z="12563" a="0"/>
+        <!-- bus stop — Severograd -->
+        <pos x="7686" z="12715" a="0"/>
+        <!-- ==================================================== -->
+        <!-- SHAKOVKA                                             -->
+        <!-- ==================================================== -->
+        <!-- polytunnel farm — Shakovka -->
+        <pos x="9650" z="6589" a="0"/>
+        <!-- chapel — Shakovka -->
+        <pos x="9584" z="6812" a="0"/>
+        <!-- ==================================================== -->
+        <!-- SOLNICHNIY                                           -->
+        <!-- ==================================================== -->
+        <!-- village store — Solnichniy -->
+        <pos x="13417" z="6275" a="0"/>
+        <!-- ==================================================== -->
+        <!-- SOSNOVKA                                             -->
+        <!-- ==================================================== -->
+        <!-- village pub — near Sosnovka -->
+        <pos x="3182" z="6127" a="0"/>
+        <!-- polytunnel farm — Sosnovka -->
+        <pos x="2370" z="6350" a="0"/>
+        <!-- village pub — near Sosnovka -->
+        <pos x="1101" z="6625" a="0"/>
+        <!-- village pub — near Sosnovka -->
+        <pos x="239" z="7505" a="0"/>
+        <!-- ==================================================== -->
+        <!-- STAROYE                                              -->
+        <!-- ==================================================== -->
+        <!-- village health centre — Staroye -->
+        <pos x="10116" z="5511" a="0"/>
+        <!-- ==================================================== -->
+        <!-- STARY SOBOR                                          -->
+        <!-- ==================================================== -->
+        <!-- village health centre — Stary Sobor -->
+        <pos x="5991" z="7680" a="0"/>
+        <!-- wooden barn — Stary Sobor -->
+        <pos x="6207" z="7791" a="0"/>
+        <!-- ==================================================== -->
+        <!-- SVETLOJARSK                                          -->
+        <!-- ==================================================== -->
+        <!-- village pub — near Svetlojarsk -->
+        <pos x="13441" z="12132" a="0"/>
+        <!-- chapel — Svetlojarsk -->
+        <pos x="13382" z="12861" a="0"/>
+        <!-- ==================================================== -->
+        <!-- TISY                                                 -->
+        <!-- ==================================================== -->
+        <!-- village pub — near Tisy -->
+        <pos x="2591" z="14816" a="0"/>
+        <!-- village health centre — near Tisy -->
+        <pos x="3647" z="14862" a="0"/>
+        <!-- chapel — near Tisy -->
+        <pos x="2616" z="15216" a="0"/>
+        <!-- ==================================================== -->
+        <!-- TOPOLNIKI                                            -->
+        <!-- ==================================================== -->
+        <!-- village pub — Topolniki -->
+        <pos x="5931" z="12656" a="0"/>
+        <!-- village pub — near Topolniki -->
+        <pos x="6557" z="14204" a="0"/>
+        <!-- village pub — near Topolniki -->
+        <pos x="6676" z="14454" a="0"/>
+        <!-- village pub — near Topolniki -->
+        <pos x="5649" z="14550" a="0"/>
+        <!-- village pub — near Topolniki -->
+        <pos x="4937" z="14843" a="0"/>
+        <!-- chapel — near Topolniki -->
+        <pos x="6566" z="14988" a="0"/>
+        <!-- chapel — near Topolniki -->
+        <pos x="5038" z="15082" a="0"/>
+        <!-- ==================================================== -->
+        <!-- VAVILOVO                                             -->
+        <!-- ==================================================== -->
+        <!-- bus stop — near Vavilovo -->
+        <pos x="3590" z="12575" a="0"/>
+        <!-- bus stop — near Vavilovo -->
+        <pos x="3690" z="13081" a="0"/>
+        <!-- village health centre — near Vavilovo -->
+        <pos x="3455" z="13163" a="0"/>
+        <!-- ==================================================== -->
+        <!-- VORON                                                -->
+        <!-- ==================================================== -->
+        <!-- village pub — Voron -->
+        <pos x="13477" z="3271" a="0"/>
+        <!-- ==================================================== -->
+        <!-- VYBOR                                                -->
+        <!-- ==================================================== -->
+        <!-- bus stop — Vybor -->
+        <pos x="3850" z="8855" a="0"/>
+        <!-- village health centre — Vybor -->
+        <pos x="3757" z="9011" a="0"/>
+        <!-- village pub — near Vybor -->
+        <pos x="2934" z="9369" a="0"/>
+        <!-- ==================================================== -->
+        <!-- VYBOR MIL                                            -->
+        <!-- ==================================================== -->
+        <!-- wooden barn — Vybor mil -->
+        <pos x="4431" z="8234" a="0"/>
+        <!-- ==================================================== -->
+        <!-- VYSHNOYE                                             -->
+        <!-- ==================================================== -->
+        <!-- wooden barn — Vyshnoye -->
+        <pos x="6461" z="6189" a="0"/>
+        <!-- ==================================================== -->
+        <!-- VYSOTOVO                                             -->
+        <!-- ==================================================== -->
+        <!-- bus stop — Vysotovo -->
+        <pos x="5716" z="2425" a="0"/>
+        <!-- bus stop — Vysotovo -->
+        <pos x="6001" z="2513" a="0"/>
+        <!-- bus stop — near Vysotovo -->
+        <pos x="5479" z="2613" a="0"/>
+        <!-- bus stop — near Vysotovo -->
+        <pos x="6093" z="2775" a="0"/>
+        <!-- ==================================================== -->
+        <!-- ZELENOGORSK                                          -->
+        <!-- ==================================================== -->
+        <!-- village store — near Zelenogorsk -->
+        <pos x="3319" z="4969" a="0"/>
+        <!-- village health centre — Zelenogorsk -->
+        <pos x="2739" z="5181" a="0"/>
+        <!-- bus stop — Zelenogorsk -->
+        <pos x="2838" z="5262" a="0"/>
+        <!-- bus stop — Zelenogorsk -->
+        <pos x="2710" z="5300" a="0"/>
+        <!-- wooden barn — Zelenogorsk -->
+        <pos x="2585" z="5360" a="0"/>
+        <!-- polytunnel farm — Zelenogorsk -->
+        <pos x="2853" z="5408" a="0"/>
+        <!-- bus stop — Zelenogorsk -->
+        <pos x="2707" z="5435" a="0"/>
     </event>
 
-    <!-- ============================================================ -->
-    <!-- TIER 2: InfectedHorde_Medium — Overrun City Zones            -->
-    <!-- Medium hordes across city POIs: hospitals, city centers,     -->
-    <!-- fire stations, police stations, ports, schools, supermarkets,-->
-    <!-- and industrial zones across all named towns.                 -->
-    <!-- ~100-position pool — 10 active at once, different every 360s.-->
-    <!-- Contested zones — valuable loot nearby but serious presence. -->
-    <!-- ============================================================ -->
     <event name="InfectedHorde_Medium">
-        <!-- === Original 12 city/hospital positions === -->
-        <!-- Chernogorsk hospital — where the sick came and never left -->
-        <pos x="6682" z="2451" a="0"/>
-        <!-- Elektrozavodsk hospital -->
-        <pos x="10457" z="2327" a="0"/>
-        <!-- Novodmitrovsk hospital -->
-        <pos x="11478" z="14346" a="0"/>
-        <!-- Severograd hospital -->
-        <pos x="8347" z="12776" a="0"/>
-        <!-- Berezino center — coastal town overrun early -->
-        <pos x="12386" z="9578" a="0"/>
-        <!-- Stary Sobor center — central crossroads, heavily contested -->
-        <pos x="6100" z="7803" a="0"/>
-        <!-- Novy Sobor — evacuation point that failed -->
-        <pos x="7055" z="7639" a="0"/>
-        <!-- Zelenogorsk center — western town evacuation zone -->
-        <pos x="2660" z="5207" a="0"/>
-        <!-- Svetlojarsk center — eastern coastal settlement -->
-        <pos x="14041" z="13294" a="0"/>
-        <!-- Kamyshovo — small coastal town overrun by sea refugees -->
-        <pos x="12200" z="3466" a="0"/>
-        <!-- Chernogorsk supermarket — looted then overrun -->
-        <pos x="6820" z="2566" a="0"/>
-        <!-- Elektrozavodsk factory — workers who turned on the job -->
-        <pos x="10800" z="2450" a="0"/>
-        <!-- === New 23 city/industrial positions === -->
-        <!-- Cherno city center / town square -->
-        <pos x="6760" z="2720" a="0"/>
-        <!-- Cherno fire station -->
-        <pos x="6580" z="2650" a="0"/>
-        <!-- Cherno industrial — warehouse district -->
-        <pos x="6500" z="2870" a="0"/>
-        <!-- Cherno industrial — main factory block -->
-        <pos x="6680" z="3000" a="0"/>
-        <!-- Cherno port / harbor area -->
-        <pos x="6650" z="2380" a="0"/>
-        <!-- Elektro main street / town center -->
-        <pos x="10530" z="2360" a="0"/>
-        <!-- Elektro police station -->
-        <pos x="10650" z="2470" a="0"/>
-        <!-- Elektro school area -->
-        <pos x="10400" z="2460" a="0"/>
-        <!-- Berezino hospital -->
-        <pos x="12700" z="9460" a="0"/>
-        <!-- Berezino city center -->
-        <pos x="12500" z="9360" a="0"/>
-        <!-- Novodmitrovsk city center -->
-        <pos x="11300" z="14250" a="0"/>
-        <!-- Novodmitrovsk fire station -->
-        <pos x="11150" z="14150" a="0"/>
-        <!-- Severograd city center -->
-        <pos x="8050" z="12720" a="0"/>
-        <!-- Severograd police station -->
-        <pos x="8200" z="12860" a="0"/>
-        <!-- Svetlojarsk police station -->
-        <pos x="13980" z="13400" a="0"/>
-        <!-- Svetlojarsk harbor -->
-        <pos x="14200" z="13210" a="0"/>
-        <!-- Krasnostav city center -->
-        <pos x="11000" z="12310" a="0"/>
-        <!-- Krasnostav market area -->
-        <pos x="11100" z="12450" a="0"/>
-        <!-- Solnichniy city center -->
-        <pos x="13400" z="6200" a="0"/>
-        <!-- Solnichniy industrial area -->
-        <pos x="13250" z="6000" a="0"/>
-        <!-- Zelenogorsk supermarket -->
-        <pos x="2520" z="5100" a="0"/>
-        <!-- Zelenogorsk hospital -->
-        <pos x="2700" z="5260" a="0"/>
-        <!-- Berenzino south — factory/industrial outskirts -->
-        <pos x="12800" z="8900" a="0"/>
-        <!-- === New expansion: Chernogorsk additional POIs === -->
-        <!-- Cherno police station -->
-        <pos x="6900" z="2800" a="0"/>
-        <!-- Cherno school -->
-        <pos x="6780" z="2950" a="0"/>
-        <!-- Cherno south harbor piers -->
-        <pos x="6580" z="2270" a="0"/>
-        <!-- Cherno north industrial ext -->
-        <pos x="6960" z="3200" a="0"/>
-        <!-- Cherno bus station area -->
-        <pos x="6720" z="2850" a="0"/>
-        <!-- Cherno power plant south -->
-        <pos x="6400" z="2500" a="0"/>
-        <!-- === New expansion: Elektrozavodsk additional POIs === -->
-        <!-- Elektro factory north block -->
-        <pos x="10700" z="2650" a="0"/>
-        <!-- Elektro fire station -->
-        <pos x="10580" z="2380" a="0"/>
-        <!-- Elektro fuel station east -->
-        <pos x="10460" z="2180" a="0"/>
-        <!-- Elektro shipyard / docks -->
-        <pos x="10300" z="2200" a="0"/>
-        <!-- Elektro city center south end -->
-        <pos x="10550" z="2280" a="0"/>
-        <!-- === New expansion: Berezino additional POIs === -->
-        <!-- Berezino north factory area -->
-        <pos x="12580" z="9750" a="0"/>
-        <!-- Berezino south end -->
-        <pos x="12350" z="8980" a="0"/>
-        <!-- Berezino harbor -->
-        <pos x="12650" z="9200" a="0"/>
-        <!-- Berezino police station -->
-        <pos x="12420" z="9480" a="0"/>
-        <!-- Berezino school -->
-        <pos x="12450" z="9650" a="0"/>
-        <!-- Berezino factory north ext -->
-        <pos x="12750" z="9900" a="0"/>
-        <!-- === New expansion: Novodmitrovsk additional POIs === -->
-        <!-- Novodmitrovsk police station -->
-        <pos x="11400" z="14200" a="0"/>
-        <!-- Novodmitrovsk industrial area -->
-        <pos x="11600" z="14400" a="0"/>
-        <!-- Novodmitrovsk west entrance -->
-        <pos x="10950" z="14100" a="0"/>
-        <!-- Novodmitrovsk harbor / dock -->
-        <pos x="11650" z="14500" a="0"/>
-        <!-- === New expansion: Severograd additional POIs === -->
-        <!-- Severograd fire station -->
-        <pos x="8150" z="12850" a="0"/>
-        <!-- Severograd school -->
-        <pos x="8300" z="12700" a="0"/>
-        <!-- Severograd supermarket -->
-        <pos x="8250" z="12600" a="0"/>
-        <!-- Severograd police station east -->
-        <pos x="8400" z="12900" a="0"/>
-        <!-- === New expansion: Svetlojarsk additional POIs === -->
-        <!-- Svetlojarsk north end -->
-        <pos x="13900" z="13600" a="0"/>
-        <!-- Svetlojarsk south end -->
-        <pos x="14000" z="13100" a="0"/>
-        <!-- Svetlojarsk school area -->
-        <pos x="14050" z="13450" a="0"/>
-        <!-- Svetlojarsk industrial / factory -->
-        <pos x="13750" z="13300" a="0"/>
-        <!-- === New expansion: Krasnostav additional POIs === -->
-        <!-- Krasnostav hospital -->
-        <pos x="11050" z="12350" a="0"/>
-        <!-- Krasnostav fire station -->
-        <pos x="10900" z="12250" a="0"/>
-        <!-- Krasnostav school -->
-        <pos x="11250" z="12550" a="0"/>
-        <!-- Krasnostav police station -->
-        <pos x="10950" z="12450" a="0"/>
-        <!-- Krasnostav bus terminal area -->
-        <pos x="11100" z="12150" a="0"/>
-        <!-- === New expansion: Zelenogorsk additional POIs === -->
-        <!-- Zelenogorsk police station -->
-        <pos x="2450" z="5200" a="0"/>
-        <!-- Zelenogorsk school -->
-        <pos x="2750" z="5350" a="0"/>
-        <!-- Zelenogorsk fire station -->
-        <pos x="2600" z="5050" a="0"/>
-        <!-- Zelenogorsk north factory -->
-        <pos x="2850" z="5500" a="0"/>
-        <!-- === New expansion: Kamyshovo additional POIs === -->
-        <!-- Kamyshovo harbor -->
-        <pos x="12300" z="3350" a="0"/>
-        <!-- Kamyshovo city area west -->
-        <pos x="12100" z="3500" a="0"/>
-        <!-- === New expansion: Solnichniy additional POIs === -->
-        <!-- Solnichniy harbor/east docks -->
-        <pos x="13500" z="5850" a="0"/>
-        <!-- Solnichniy north factory -->
-        <pos x="13100" z="6400" a="0"/>
-        <!-- Solnichniy south factory -->
-        <pos x="13350" z="5700" a="0"/>
-        <!-- === New expansion: Gorka, Polana, Dolina city POIs === -->
-        <!-- Gorka hospital area -->
-        <pos x="9650" z="8950" a="0"/>
-        <!-- Gorka town center -->
-        <pos x="9500" z="8750" a="0"/>
-        <!-- Gorka factory area -->
-        <pos x="9400" z="9100" a="0"/>
-        <!-- Polana sawmill area -->
-        <pos x="10750" z="8100" a="0"/>
-        <!-- Polana town center -->
-        <pos x="10700" z="7950" a="0"/>
-        <!-- Dolina factory / town -->
-        <pos x="11350" z="6550" a="0"/>
-        <!-- Dolina church area -->
-        <pos x="11200" z="6700" a="0"/>
-        <!-- === New expansion: Tulga and small coastal settlements === -->
-        <!-- Tulga harbor -->
-        <pos x="12200" z="6900" a="0"/>
-        <!-- Tulga factory area -->
-        <pos x="12100" z="6700" a="0"/>
-        <!-- Prigorodki settlement city area -->
-        <pos x="7050" z="3250" a="0"/>
-        <!-- Dubky coastal settlement -->
-        <pos x="8650" z="2600" a="0"/>
-        <!-- Komarovo coastal settlement east -->
-        <pos x="3700" z="2250" a="0"/>
-        <!-- Mogilevka town center -->
-        <pos x="7700" z="4900" a="0"/>
-        <!-- Staroye factory area -->
-        <pos x="10200" z="5500" a="0"/>
-        <!-- Staroye police area -->
-        <pos x="10050" z="5350" a="0"/>
-        <!-- === New expansion: additional city POIs === -->
-        <!-- Gorka police station -->
-        <pos x="9550" z="8800" a="0"/>
-        <!-- Berezino supermarket -->
-        <pos x="12480" z="9300" a="0"/>
-        <!-- Krasnostav south industrial -->
-        <pos x="11350" z="12400" a="0"/>
-        <!-- Zelenogorsk port / waterfront -->
-        <pos x="2350" z="4900" a="0"/>
-        <!-- Novodmitrovsk school area -->
-        <pos x="11350" z="14100" a="0"/>
-        <!-- Severograd north industrial -->
-        <pos x="8450" z="13000" a="0"/>
-        <!-- Cherno north warehouse district -->
-        <pos x="6850" z="3100" a="0"/>
+        <!-- ==================================================== -->
+        <!-- BALOTA                                               -->
+        <!-- ==================================================== -->
+        <!-- train station — Balota -->
+        <pos x="4406" z="2313" a="0"/>
+        <!-- market / news stand — Balota -->
+        <pos x="4492" z="2471" a="0"/>
+        <!-- ==================================================== -->
+        <!-- BELOZERSK                                            -->
+        <!-- ==================================================== -->
+        <!-- fuel / gas station — near Belozersk -->
+        <pos x="4350" z="13085" a="0"/>
+        <!-- ==================================================== -->
+        <!-- BEREZINO                                             -->
+        <!-- ==================================================== -->
+        <!-- market / news stand — Berezino -->
+        <pos x="12030" z="9091" a="0"/>
+        <!-- ==================================================== -->
+        <!-- CHERNOGORSK                                          -->
+        <!-- ==================================================== -->
+        <!-- market / news stand — near Chernogorsk -->
+        <pos x="6420" z="2196" a="0"/>
+        <!-- market / news stand — Chernogorsk -->
+        <pos x="6553" z="2286" a="0"/>
+        <!-- market / news stand — Chernogorsk -->
+        <pos x="6717" z="2419" a="0"/>
+        <!-- market / news stand — Chernogorsk -->
+        <pos x="6427" z="2422" a="0"/>
+        <!-- market / news stand — Chernogorsk -->
+        <pos x="6711" z="2613" a="0"/>
+        <!-- train station — Chernogorsk -->
+        <pos x="6544" z="2614" a="0"/>
+        <!-- market / news stand — Chernogorsk -->
+        <pos x="6236" z="2669" a="0"/>
+        <!-- Land_Office2 — Chernogorsk -->
+        <pos x="6489" z="2767" a="0"/>
+        <!-- ==================================================== -->
+        <!-- DOLINA                                               -->
+        <!-- ==================================================== -->
+        <!-- police station — Dolina -->
+        <pos x="11186" z="6590" a="0"/>
+        <!-- ==================================================== -->
+        <!-- DUBOVO                                               -->
+        <!-- ==================================================== -->
+        <!-- fuel / gas station — near Dubovo -->
+        <pos x="6875" z="3095" a="0"/>
+        <!-- city store — Dubovo -->
+        <pos x="6536" z="3555" a="0"/>
+        <!-- Land_Office1 — Dubovo -->
+        <pos x="6801" z="3635" a="0"/>
+        <!-- ==================================================== -->
+        <!-- DUBROVKA                                             -->
+        <!-- ==================================================== -->
+        <!-- police station — near Dubrovka -->
+        <pos x="6004" z="10349" a="0"/>
+        <!-- ==================================================== -->
+        <!-- ELEKTROZAVODSK                                       -->
+        <!-- ==================================================== -->
+        <!-- market / news stand — near Elektrozavodsk -->
+        <pos x="10067" z="1855" a="0"/>
+        <!-- fuel / gas station — near Elektrozavodsk -->
+        <pos x="9519" z="2004" a="0"/>
+        <!-- repair centre / garage — Elektrozavodsk -->
+        <pos x="10132" z="2007" a="0"/>
+        <!-- fire station — Elektrozavodsk -->
+        <pos x="10273" z="2174" a="0"/>
+        <!-- market / news stand — Elektrozavodsk -->
+        <pos x="10422" z="2196" a="0"/>
+        <!-- city store — near Elektrozavodsk -->
+        <pos x="10423" z="2365" a="0"/>
+        <!-- school — near Elektrozavodsk -->
+        <pos x="10223" z="2574" a="0"/>
+        <!-- ==================================================== -->
+        <!-- GORKA                                                -->
+        <!-- ==================================================== -->
+        <!-- police station — Gorka -->
+        <pos x="9530" z="8799" a="0"/>
+        <!-- repair centre / garage — Gorka -->
+        <pos x="9750" z="8900" a="0"/>
+        <!-- ==================================================== -->
+        <!-- GRISHINO                                             -->
+        <!-- ==================================================== -->
+        <!-- Land_Office1 — Grishino -->
+        <pos x="7923" z="12559" a="0"/>
+        <!-- repair centre / garage — Grishino -->
+        <pos x="8060" z="12695" a="0"/>
+        <!-- market / news stand — near Grishino -->
+        <pos x="8544" z="12784" a="0"/>
+        <!-- ==================================================== -->
+        <!-- GVOZDNO                                              -->
+        <!-- ==================================================== -->
+        <!-- market / news stand — near Gvozdno -->
+        <pos x="8558" z="11963" a="0"/>
+        <!-- ==================================================== -->
+        <!-- KAMENKA                                              -->
+        <!-- ==================================================== -->
+        <!-- train station — Kamenka -->
+        <pos x="1884" z="2174" a="0"/>
+        <!-- city store — near Kamenka -->
+        <pos x="1136" z="2430" a="0"/>
+        <!-- ==================================================== -->
+        <!-- KAMENKA MIL                                          -->
+        <!-- ==================================================== -->
+        <!-- hospital — Kamenka mil -->
+        <pos x="2164" z="3358" a="0"/>
+        <!-- ==================================================== -->
+        <!-- KAMENSK                                              -->
+        <!-- ==================================================== -->
+        <!-- repair centre / garage — near Kamensk -->
+        <pos x="12213" z="13864" a="0"/>
+        <!-- repair centre / garage — Kamensk -->
+        <pos x="12145" z="14406" a="0"/>
+        <!-- train station — near Kamensk -->
+        <pos x="12866" z="15055" a="0"/>
+        <!-- ==================================================== -->
+        <!-- KAMYSHOVO                                            -->
+        <!-- ==================================================== -->
+        <!-- market / news stand — Kamyshovo -->
+        <pos x="12081" z="3552" a="0"/>
+        <!-- ==================================================== -->
+        <!-- KOMAROVO                                             -->
+        <!-- ==================================================== -->
+        <!-- market / news stand — Komarovo -->
+        <pos x="3653" z="2530" a="0"/>
+        <!-- ==================================================== -->
+        <!-- KOZLOVKA                                             -->
+        <!-- ==================================================== -->
+        <!-- market / news stand — Kozlovka -->
+        <pos x="4362" z="4626" a="0"/>
+        <!-- ==================================================== -->
+        <!-- KRASNOSTAV                                           -->
+        <!-- ==================================================== -->
+        <!-- market / news stand — near Krasnostav -->
+        <pos x="12323" z="9717" a="0"/>
+        <!-- school — near Krasnostav -->
+        <pos x="12168" z="9757" a="0"/>
+        <!-- fire station — near Krasnostav -->
+        <pos x="12810" z="9980" a="0"/>
+        <!-- market / news stand — near Krasnostav -->
+        <pos x="12900" z="10101" a="0"/>
+        <!-- train station — near Krasnostav -->
+        <pos x="12989" z="10245" a="0"/>
+        <!-- ==================================================== -->
+        <!-- KRUTOY CAP                                           -->
+        <!-- ==================================================== -->
+        <!-- market / news stand — Krutoy Cap -->
+        <pos x="14132" z="13082" a="0"/>
+        <!-- ==================================================== -->
+        <!-- MOGILEVKA                                            -->
+        <!-- ==================================================== -->
+        <!-- market / news stand — Mogilevka -->
+        <pos x="7581" z="5166" a="0"/>
+        <!-- ==================================================== -->
+        <!-- NE AIRFIELD                                          -->
+        <!-- ==================================================== -->
+        <!-- market / news stand — near NE Airfield -->
+        <pos x="12109" z="13539" a="0"/>
+        <!-- ==================================================== -->
+        <!-- NADEZHDINO                                           -->
+        <!-- ==================================================== -->
+        <!-- market / news stand — Nadezhdino -->
+        <pos x="5852" z="4658" a="0"/>
+        <!-- market / news stand — Nadezhdino -->
+        <pos x="5839" z="4809" a="0"/>
+        <!-- ==================================================== -->
+        <!-- NOVAYA PETROVKA                                      -->
+        <!-- ==================================================== -->
+        <!-- city store — Novaya Petrovka -->
+        <pos x="9550" z="13668" a="0"/>
+        <!-- market / news stand — Novaya Petrovka -->
+        <pos x="9745" z="13843" a="0"/>
+        <!-- ==================================================== -->
+        <!-- NOVODMITROVSK                                        -->
+        <!-- ==================================================== -->
+        <!-- market / news stand — near Novodmitrovsk -->
+        <pos x="11948" z="13869" a="0"/>
+        <!-- market / news stand — Novodmitrovsk -->
+        <pos x="11596" z="14120" a="0"/>
+        <!-- bus station — Novodmitrovsk -->
+        <pos x="11396" z="14317" a="0"/>
+        <!-- market / news stand — Novodmitrovsk -->
+        <pos x="11663" z="14331" a="0"/>
+        <!-- repair centre / garage — near Novodmitrovsk -->
+        <pos x="11814" z="14430" a="0"/>
+        <!-- market / news stand — near Novodmitrovsk -->
+        <pos x="11023" z="14445" a="0"/>
+        <!-- police station — Novodmitrovsk -->
+        <pos x="11490" z="14484" a="0"/>
+        <!-- market / news stand — Novodmitrovsk -->
+        <pos x="11655" z="14533" a="0"/>
+        <!-- market / news stand — near Novodmitrovsk -->
+        <pos x="11624" z="14681" a="0"/>
+        <!-- repair centre / garage — near Novodmitrovsk -->
+        <pos x="11406" z="14882" a="0"/>
+        <!-- repair centre / garage — near Novodmitrovsk -->
+        <pos x="11604" z="15072" a="0"/>
+        <!-- ==================================================== -->
+        <!-- NOVOSELKI                                            -->
+        <!-- ==================================================== -->
+        <!-- police station — near Novoselki -->
+        <pos x="6202" z="2921" a="0"/>
+        <!-- city store — Novoselki -->
+        <pos x="6078" z="3429" a="0"/>
+        <!-- ==================================================== -->
+        <!-- NOVY SOBOR                                           -->
+        <!-- ==================================================== -->
+        <!-- market / news stand — Novy Sobor -->
+        <pos x="7152" z="7679" a="0"/>
+        <!-- ==================================================== -->
+        <!-- OLSHA                                                -->
+        <!-- ==================================================== -->
+        <!-- police station — Olsha -->
+        <pos x="13847" z="13218" a="0"/>
+        <!-- fuel / gas station — Olsha -->
+        <pos x="13574" z="13305" a="0"/>
+        <!-- train station — Olsha -->
+        <pos x="13987" z="13480" a="0"/>
+        <!-- market / news stand — near Olsha -->
+        <pos x="13549" z="14131" a="0"/>
+        <!-- ==================================================== -->
+        <!-- ORLOVETS                                             -->
+        <!-- ==================================================== -->
+        <!-- fuel / gas station — near Orlovets -->
+        <pos x="10442" z="8884" a="0"/>
+        <!-- market / news stand — near Orlovets -->
+        <pos x="10534" z="9724" a="0"/>
+        <!-- ==================================================== -->
+        <!-- PAVLOVO                                              -->
+        <!-- ==================================================== -->
+        <!-- market / news stand — Pavlovo -->
+        <pos x="1685" z="3836" a="0"/>
+        <!-- ==================================================== -->
+        <!-- POGOREVKA                                            -->
+        <!-- ==================================================== -->
+        <!-- fuel / gas station — Pogorevka -->
+        <pos x="4727" z="6390" a="0"/>
+        <!-- market / news stand — Pogorevka -->
+        <pos x="4470" z="6426" a="0"/>
+        <!-- ==================================================== -->
+        <!-- POLANA                                               -->
+        <!-- ==================================================== -->
+        <!-- city store — Polana -->
+        <pos x="10684" z="8023" a="0"/>
+        <!-- ==================================================== -->
+        <!-- PRIGORODKI                                           -->
+        <!-- ==================================================== -->
+        <!-- train station — near Prigorodki -->
+        <pos x="8070" z="3268" a="0"/>
+        <!-- ==================================================== -->
+        <!-- PUSTOSHKA                                            -->
+        <!-- ==================================================== -->
+        <!-- fuel / gas station — near Pustoshka -->
+        <pos x="3000" z="7483" a="0"/>
+        <!-- market / news stand — Pustoshka -->
+        <pos x="3089" z="7947" a="0"/>
+        <!-- ==================================================== -->
+        <!-- ROGOVO                                               -->
+        <!-- ==================================================== -->
+        <!-- market / news stand — Rogovo -->
+        <pos x="4798" z="6812" a="0"/>
+        <!-- ==================================================== -->
+        <!-- SEVEROGRAD                                           -->
+        <!-- ==================================================== -->
+        <!-- train station — Severograd -->
+        <pos x="7855" z="12413" a="0"/>
+        <!-- market / news stand — Severograd -->
+        <pos x="7557" z="12627" a="0"/>
+        <!-- police station — Severograd -->
+        <pos x="7737" z="12637" a="0"/>
+        <!-- market / news stand — near Severograd -->
+        <pos x="7676" z="13279" a="0"/>
+        <!-- ==================================================== -->
+        <!-- SOLNICHNIY                                           -->
+        <!-- ==================================================== -->
+        <!-- market / news stand — Solnichniy -->
+        <pos x="13343" z="6266" a="0"/>
+        <!-- fuel / gas station — near Solnichniy -->
+        <pos x="13370" z="6612" a="0"/>
+        <!-- market / news stand — near Solnichniy -->
+        <pos x="13181" z="7066" a="0"/>
+        <!-- ==================================================== -->
+        <!-- STAROYE                                              -->
+        <!-- ==================================================== -->
+        <!-- fuel / gas station — Staroye -->
+        <pos x="10119" z="5200" a="0"/>
+        <!-- police station — Staroye -->
+        <pos x="10158" z="5530" a="0"/>
+        <!-- ==================================================== -->
+        <!-- STARY SOBOR                                          -->
+        <!-- ==================================================== -->
+        <!-- market / news stand — Stary Sobor -->
+        <pos x="6085" z="7743" a="0"/>
+        <!-- ==================================================== -->
+        <!-- TISY                                                 -->
+        <!-- ==================================================== -->
+        <!-- repair centre / garage — Tisy -->
+        <pos x="1521" z="14061" a="0"/>
+        <!-- ==================================================== -->
+        <!-- VAVILOVO                                             -->
+        <!-- ==================================================== -->
+        <!-- market / news stand — near Vavilovo -->
+        <pos x="3527" z="12554" a="0"/>
+        <!-- repair centre / garage — near Vavilovo -->
+        <pos x="3029" z="12617" a="0"/>
+        <!-- market / news stand — near Vavilovo -->
+        <pos x="3239" z="12783" a="0"/>
+        <!-- market / news stand — near Vavilovo -->
+        <pos x="3436" z="12804" a="0"/>
+        <!-- ==================================================== -->
+        <!-- VORON                                                -->
+        <!-- ==================================================== -->
+        <!-- market / news stand — Voron -->
+        <pos x="13429" z="3274" a="0"/>
+        <!-- ==================================================== -->
+        <!-- VYBOR                                                -->
+        <!-- ==================================================== -->
+        <!-- repair centre / garage — Vybor -->
+        <pos x="3803" z="8917" a="0"/>
+        <!-- fuel / gas station — Vybor -->
+        <pos x="3668" z="9002" a="0"/>
+        <!-- ==================================================== -->
+        <!-- VYSOTOVO                                             -->
+        <!-- ==================================================== -->
+        <!-- fuel / gas station — near Vysotovo -->
+        <pos x="5863" z="2212" a="0"/>
+        <!-- school — Vysotovo -->
+        <pos x="5696" z="2563" a="0"/>
+        <!-- market / news stand — near Vysotovo -->
+        <pos x="6057" z="2837" a="0"/>
+        <!-- ==================================================== -->
+        <!-- ZELENO MIL                                           -->
+        <!-- ==================================================== -->
+        <!-- repair centre / garage — Zeleno mil -->
+        <pos x="2482" z="5085" a="0"/>
+        <!-- train station — Zeleno mil -->
+        <pos x="2483" z="5236" a="0"/>
+        <!-- ==================================================== -->
+        <!-- ZELENOGORSK                                          -->
+        <!-- ==================================================== -->
+        <!-- market / news stand — Zelenogorsk -->
+        <pos x="2732" z="5296" a="0"/>
+        <!-- market / news stand — Zelenogorsk -->
+        <pos x="2908" z="5493" a="0"/>
+        <!-- fuel / gas station — near Zelenogorsk -->
+        <pos x="2702" z="5600" a="0"/>
     </event>
 
-    <!-- ============================================================ -->
-    <!-- TIER 3: InfectedHorde_Large — Fallen Military Strongholds    -->
-    <!-- Massive hordes at military sites: airfields, barracks,       -->
-    <!-- tent camps, hangars, vehicle depots, checkpoints.            -->
-    <!-- ~80-position pool — 6 active at once, cycling every 600s    -->
-    <!-- across different military zones. Full NWAF coverage, Tisy,  -->
-    <!-- Balota, NE Airfield, Kamensk, Vybor, Pavlovo, Zeleno,        -->
-    <!-- Myshkino, and all checkpoint approach roads.                 -->
-    <!-- Endgame danger zones — solo entry is suicide.                -->
-    <!-- ============================================================ -->
     <event name="InfectedHorde_Large">
-        <!-- === Original 12 military positions === -->
-        <!-- NW Airfield (NWAF) center — the military's main staging ground -->
-        <pos x="4642" z="10247" a="0"/>
-        <!-- NW Airfield south barracks — soldiers who never evacuated -->
-        <pos x="4406" z="9820" a="0"/>
-        <!-- NW Airfield north tents — overflow camp that fell -->
-        <pos x="4846" z="10512" a="0"/>
-        <!-- Tisy Military Base — northern last stand compound -->
-        <pos x="1708" z="14672" a="0"/>
-        <!-- Tisy Military tents — forward operating base, overrun -->
-        <pos x="1530" z="14435" a="0"/>
-        <!-- Balota Airfield — southern military strip, fell early -->
-        <pos x="4784" z="2556" a="0"/>
-        <!-- Myshkino military tents — inland army encampment -->
-        <pos x="2545" z="8376" a="0"/>
-        <!-- Vybor military base — fortified position that failed -->
-        <pos x="3858" z="8876" a="0"/>
-        <!-- NE Airfield — northeastern military installation -->
-        <pos x="12227" z="12601" a="0"/>
-        <!-- Pavlovo military base — southern defensive perimeter -->
-        <pos x="2024" z="3648" a="0"/>
-        <!-- Kamensk military — far north abandoned outpost -->
-        <pos x="12242" z="14626" a="0"/>
-        <!-- Zeleno military — western garrison, communications hub -->
-        <pos x="2818" z="5302" a="0"/>
-        <!-- === New 18 military positions === -->
-        <!-- NWAF ATC tower area — air traffic control, last transmissions -->
-        <pos x="4700" z="10060" a="0"/>
-        <!-- NWAF hangar row east — armored vehicles, overrun crew -->
-        <pos x="5100" z="10150" a="0"/>
-        <!-- NWAF hangar row west — maintenance crews who turned -->
-        <pos x="4300" z="10300" a="0"/>
-        <!-- NWAF east barracks — last holdout before the perimeter fell -->
-        <pos x="4920" z="9700" a="0"/>
-        <!-- Tisy main barracks — disciplined last stand, failed -->
-        <pos x="1900" z="14850" a="0"/>
-        <!-- Tisy military checkpoint — gate guard who never left -->
-        <pos x="2050" z="14360" a="0"/>
-        <!-- NE Airfield hangar row -->
-        <pos x="12050" z="12760" a="0"/>
-        <!-- NE Airfield barracks / tents -->
-        <pos x="11900" z="12420" a="0"/>
-        <!-- Kamensk military south compound -->
-        <pos x="12100" z="14360" a="0"/>
-        <!-- Kamensk military north outpost -->
-        <pos x="12380" z="14820" a="0"/>
-        <!-- Balota hangar area -->
-        <pos x="4600" z="2390" a="0"/>
-        <!-- Balota ATC / control building -->
-        <pos x="4970" z="2660" a="0"/>
-        <!-- Myshkino camp south — satellite position -->
-        <pos x="2450" z="8110" a="0"/>
-        <!-- Myshkino camp north — command tent cluster -->
-        <pos x="2680" z="8620" a="0"/>
-        <!-- Vybor military east perimeter -->
-        <pos x="4050" z="8720" a="0"/>
-        <!-- Vybor military south gate -->
-        <pos x="3720" z="8610" a="0"/>
-        <!-- Military checkpoint south NWAF (road approach) -->
-        <pos x="4500" z="9410" a="0"/>
-        <!-- Military checkpoint near Lopatino -->
-        <pos x="2800" z="9960" a="0"/>
-        <!-- === New expansion: NWAF comprehensive coverage === -->
-        <!-- NWAF runway north end -->
-        <pos x="4850" z="10800" a="0"/>
-        <!-- NWAF runway south end -->
-        <pos x="4380" z="9980" a="0"/>
-        <!-- NWAF runway central mid section -->
-        <pos x="4600" z="10420" a="0"/>
-        <!-- NWAF vehicle depot / SE corner -->
-        <pos x="5180" z="10050" a="0"/>
-        <!-- NWAF tent camp northeast -->
-        <pos x="5050" z="10700" a="0"/>
-        <!-- NWAF fuel area west side -->
-        <pos x="4200" z="10200" a="0"/>
-        <!-- NWAF south entrance road -->
-        <pos x="4480" z="9600" a="0"/>
-        <!-- NWAF east perimeter fence -->
-        <pos x="5350" z="10350" a="0"/>
-        <!-- NWAF northern barracks block -->
-        <pos x="4920" z="11000" a="0"/>
-        <!-- NWAF central parade ground -->
-        <pos x="4550" z="10650" a="0"/>
-        <!-- NWAF west road approach -->
-        <pos x="4000" z="10500" a="0"/>
-        <!-- NWAF south road approach -->
-        <pos x="4480" z="9250" a="0"/>
-        <!-- === New expansion: Tisy comprehensive coverage === -->
-        <!-- Tisy west perimeter -->
-        <pos x="1600" z="14820" a="0"/>
-        <!-- Tisy south checkpoint road -->
-        <pos x="2150" z="14500" a="0"/>
-        <!-- Tisy north facility block -->
-        <pos x="1780" z="15000" a="0"/>
-        <!-- Tisy vehicle park area -->
-        <pos x="1850" z="14550" a="0"/>
-        <!-- Tisy south approach road -->
-        <pos x="1350" z="14000" a="0"/>
-        <!-- Tisy east road checkpoint -->
-        <pos x="2500" z="14700" a="0"/>
-        <!-- === New expansion: NE Airfield comprehensive coverage === -->
-        <!-- NE Airfield runway east section -->
-        <pos x="12450" z="12800" a="0"/>
-        <!-- NE Airfield south tents -->
-        <pos x="12100" z="12200" a="0"/>
-        <!-- NE Airfield ATC building -->
-        <pos x="12320" z="12650" a="0"/>
-        <!-- NE Airfield fuel area south -->
-        <pos x="11800" z="12500" a="0"/>
-        <!-- NE Airfield south road approach -->
-        <pos x="12600" z="12200" a="0"/>
-        <!-- === New expansion: Balota Airfield comprehensive coverage === -->
-        <!-- Balota runway mid section -->
-        <pos x="4750" z="2200" a="0"/>
-        <!-- Balota barracks north block -->
-        <pos x="4650" z="2650" a="0"/>
-        <!-- Balota tents south end -->
-        <pos x="4900" z="2100" a="0"/>
-        <!-- Balota east gate area -->
-        <pos x="5100" z="2500" a="0"/>
-        <!-- === New expansion: Kamensk comprehensive coverage === -->
-        <!-- Kamensk east compound -->
-        <pos x="12500" z="14500" a="0"/>
-        <!-- Kamensk main barracks -->
-        <pos x="12300" z="14450" a="0"/>
-        <!-- Kamensk south perimeter -->
-        <pos x="12050" z="14200" a="0"/>
-        <!-- Kamensk road checkpoint -->
-        <pos x="12050" z="14800" a="0"/>
-        <!-- === New expansion: Myshkino camp additional coverage === -->
-        <!-- Myshkino camp east block -->
-        <pos x="2850" z="8300" a="0"/>
-        <!-- Myshkino camp northwest -->
-        <pos x="2300" z="8600" a="0"/>
-        <!-- === New expansion: Vybor military additional coverage === -->
-        <!-- Vybor military north compound -->
-        <pos x="3800" z="9100" a="0"/>
-        <!-- Vybor military center -->
-        <pos x="3900" z="8800" a="0"/>
-        <!-- Vybor military west side -->
-        <pos x="3650" z="8800" a="0"/>
-        <!-- === New expansion: Pavlovo military additional coverage === -->
-        <!-- Pavlovo barracks north block -->
-        <pos x="2100" z="3800" a="0"/>
-        <!-- Pavlovo east compound -->
-        <pos x="2300" z="3650" a="0"/>
-        <!-- Pavlovo south perimeter -->
-        <pos x="1900" z="3750" a="0"/>
-        <!-- === New expansion: Zeleno military additional coverage === -->
-        <!-- Zeleno barracks block -->
-        <pos x="2700" z="5450" a="0"/>
-        <!-- Zeleno perimeter east -->
-        <pos x="3000" z="5250" a="0"/>
-        <!-- Zeleno north checkpoint -->
-        <pos x="2650" z="5650" a="0"/>
-        <!-- === New expansion: military checkpoints and approach roads === -->
-        <!-- Military checkpoint north NWAF approach road -->
-        <pos x="4200" z="11400" a="0"/>
-        <!-- Military checkpoint Vybor south road -->
-        <pos x="3600" z="9700" a="0"/>
-        <!-- Military checkpoint east NWAF road -->
-        <pos x="5450" z="10400" a="0"/>
-        <!-- Military checkpoint south Balota road -->
-        <pos x="4700" z="2080" a="0"/>
-        <!-- Military checkpoint Zeleno road west -->
-        <pos x="2400" z="4900" a="0"/>
-        <!-- Guard tower south Vybor approach -->
-        <pos x="3700" z="8400" a="0"/>
-        <!-- Guard tower Lopatino military road -->
-        <pos x="3000" z="10050" a="0"/>
-        <!-- Military road Myshkino to NWAF mid -->
-        <pos x="3100" z="9000" a="0"/>
-        <!-- Military outpost Tisy south road -->
-        <pos x="1550" z="13700" a="0"/>
+        <!-- ==================================================== -->
+        <!-- BALOTA AIRFIELD                                      -->
+        <!-- ==================================================== -->
+        <!-- military tent area — near Balota Airfield -->
+        <pos x="5269" z="2210" a="0"/>
+        <!-- military tent area — Balota Airfield -->
+        <pos x="5076" z="2270" a="0"/>
+        <!-- airfield building — Balota Airfield -->
+        <pos x="4945" z="2436" a="0"/>
+        <!-- ==================================================== -->
+        <!-- BELOZERSK                                            -->
+        <!-- ==================================================== -->
+        <!-- military barracks — near Belozersk -->
+        <pos x="4957" z="12966" a="0"/>
+        <!-- ==================================================== -->
+        <!-- BEREZINO                                             -->
+        <!-- ==================================================== -->
+        <!-- military tent area — Berezino -->
+        <pos x="11966" z="9129" a="0"/>
+        <!-- ==================================================== -->
+        <!-- CHERNOGORSK                                          -->
+        <!-- ==================================================== -->
+        <!-- cement works — near Chernogorsk -->
+        <pos x="7007" z="2588" a="0"/>
+        <!-- guard house — Chernogorsk -->
+        <pos x="6549" z="2758" a="0"/>
+        <!-- guard house — near Chernogorsk -->
+        <pos x="6981" z="2787" a="0"/>
+        <!-- ==================================================== -->
+        <!-- DUBROVKA                                             -->
+        <!-- ==================================================== -->
+        <!-- military barracks — near Dubrovka -->
+        <pos x="4732" z="10539" a="0"/>
+        <!-- Tisy compound building — near Dubrovka -->
+        <pos x="4571" z="10805" a="0"/>
+        <!-- ==================================================== -->
+        <!-- ELEKTROZAVODSK                                       -->
+        <!-- ==================================================== -->
+        <!-- guard house — Elektrozavodsk -->
+        <pos x="10053" z="1966" a="0"/>
+        <!-- guard house — near Elektrozavodsk -->
+        <pos x="9515" z="1977" a="0"/>
+        <!-- military tent area — near Elektrozavodsk -->
+        <pos x="10476" z="2355" a="0"/>
+        <!-- guard house — near Elektrozavodsk -->
+        <pos x="10856" z="2771" a="0"/>
+        <!-- ==================================================== -->
+        <!-- GORKA                                                -->
+        <!-- ==================================================== -->
+        <!-- guard house — near Gorka -->
+        <pos x="8076" z="9370" a="0"/>
+        <!-- ==================================================== -->
+        <!-- GRISHINO                                             -->
+        <!-- ==================================================== -->
+        <!-- guard house — near Grishino -->
+        <pos x="8691" z="12851" a="0"/>
+        <!-- ==================================================== -->
+        <!-- GVOZDNO                                              -->
+        <!-- ==================================================== -->
+        <!-- military tent area — near Gvozdno -->
+        <pos x="9568" z="11793" a="0"/>
+        <!-- ==================================================== -->
+        <!-- KABANINO                                             -->
+        <!-- ==================================================== -->
+        <!-- guard house — near Kabanino -->
+        <pos x="5294" z="9364" a="0"/>
+        <!-- military barracks — near Kabanino -->
+        <pos x="5301" z="9775" a="0"/>
+        <!-- military barracks — near Kabanino -->
+        <pos x="5039" z="9841" a="0"/>
+        <!-- military tent area — near Kabanino -->
+        <pos x="5264" z="10011" a="0"/>
+        <!-- military barracks — near Kabanino -->
+        <pos x="4930" z="10060" a="0"/>
+        <!-- ==================================================== -->
+        <!-- KAMENKA                                              -->
+        <!-- ==================================================== -->
+        <!-- military barracks — near Kamenka -->
+        <pos x="2792" z="1236" a="0"/>
+        <!-- military barracks — near Kamenka -->
+        <pos x="2561" z="1294" a="0"/>
+        <!-- military tent area — near Kamenka -->
+        <pos x="775" z="1886" a="0"/>
+        <!-- ==================================================== -->
+        <!-- KAMENKA MIL                                          -->
+        <!-- ==================================================== -->
+        <!-- military barracks — Kamenka mil -->
+        <pos x="2219" z="3356" a="0"/>
+        <!-- military barracks — Kamenka mil -->
+        <pos x="1954" z="3420" a="0"/>
+        <!-- guard house — near Kamenka mil -->
+        <pos x="2307" z="3687" a="0"/>
+        <!-- ==================================================== -->
+        <!-- KAMENSK                                              -->
+        <!-- ==================================================== -->
+        <!-- guard house — near Kamensk -->
+        <pos x="11980" z="14296" a="0"/>
+        <!-- guard house — Kamensk -->
+        <pos x="12362" z="14356" a="0"/>
+        <!-- ==================================================== -->
+        <!-- KOMAROVO                                             -->
+        <!-- ==================================================== -->
+        <!-- cement works — Komarovo -->
+        <pos x="3644" z="2205" a="0"/>
+        <!-- ==================================================== -->
+        <!-- KOMETA                                               -->
+        <!-- ==================================================== -->
+        <!-- military tent area — near Kometa -->
+        <pos x="10221" z="4005" a="0"/>
+        <!-- ==================================================== -->
+        <!-- KRASNOSTAV                                           -->
+        <!-- ==================================================== -->
+        <!-- guard house — near Krasnostav -->
+        <pos x="12193" z="9725" a="0"/>
+        <!-- guard house — Krasnostav -->
+        <pos x="12850" z="9745" a="0"/>
+        <!-- guard house — near Krasnostav -->
+        <pos x="13014" z="10008" a="0"/>
+        <!-- guard house — near Krasnostav -->
+        <pos x="13131" z="10345" a="0"/>
+        <!-- ==================================================== -->
+        <!-- NE AIRFIELD                                          -->
+        <!-- ==================================================== -->
+        <!-- airfield building — near NE Airfield -->
+        <pos x="11848" z="12464" a="0"/>
+        <!-- ==================================================== -->
+        <!-- NOVAYA PETROVKA                                      -->
+        <!-- ==================================================== -->
+        <!-- military barracks — near Novaya Petrovka -->
+        <pos x="8506" z="13976" a="0"/>
+        <!-- Tisy-type barracks — near Novaya Petrovka -->
+        <pos x="8031" z="14633" a="0"/>
+        <!-- military barracks — near Novaya Petrovka -->
+        <pos x="7796" z="14763" a="0"/>
+        <!-- ==================================================== -->
+        <!-- NOVODMITROVSK                                        -->
+        <!-- ==================================================== -->
+        <!-- military barracks — near Novodmitrovsk -->
+        <pos x="10920" z="13382" a="0"/>
+        <!-- guard house — Novodmitrovsk -->
+        <pos x="11703" z="14282" a="0"/>
+        <!-- guard house — near Novodmitrovsk -->
+        <pos x="10665" z="14334" a="0"/>
+        <!-- guard house — Novodmitrovsk -->
+        <pos x="11196" z="14424" a="0"/>
+        <!-- ==================================================== -->
+        <!-- NOVOSELKI                                            -->
+        <!-- ==================================================== -->
+        <!-- military tent area — near Novoselki -->
+        <pos x="5792" z="3081" a="0"/>
+        <!-- ==================================================== -->
+        <!-- OLSHA                                                -->
+        <!-- ==================================================== -->
+        <!-- guard house — Olsha -->
+        <pos x="14111" z="13278" a="0"/>
+        <!-- military tent area — near Olsha -->
+        <pos x="13613" z="13749" a="0"/>
+        <!-- ==================================================== -->
+        <!-- ORLOVETS                                             -->
+        <!-- ==================================================== -->
+        <!-- military tent area — near Orlovets -->
+        <pos x="10452" z="9144" a="0"/>
+        <!-- ==================================================== -->
+        <!-- PETROVKA                                             -->
+        <!-- ==================================================== -->
+        <!-- military tent area — Petrovka -->
+        <pos x="7074" z="12720" a="0"/>
+        <!-- military barracks — near Petrovka -->
+        <pos x="7091" z="14532" a="0"/>
+        <!-- ==================================================== -->
+        <!-- POGOREVKA                                            -->
+        <!-- ==================================================== -->
+        <!-- military barracks — near Pogorevka -->
+        <pos x="3686" z="5982" a="0"/>
+        <!-- ==================================================== -->
+        <!-- POLANA                                               -->
+        <!-- ==================================================== -->
+        <!-- guard house — near Polana -->
+        <pos x="11479" z="7550" a="0"/>
+        <!-- ==================================================== -->
+        <!-- PRIGORODKI                                           -->
+        <!-- ==================================================== -->
+        <!-- military tent area — near Prigorodki -->
+        <pos x="7256" z="3021" a="0"/>
+        <!-- guard house — Prigorodki -->
+        <pos x="7472" z="3181" a="0"/>
+        <!-- ==================================================== -->
+        <!-- PUSTOSHKA                                            -->
+        <!-- ==================================================== -->
+        <!-- military tent area — near Pustoshka -->
+        <pos x="327" z="9324" a="0"/>
+        <!-- ==================================================== -->
+        <!-- SEVEROGRAD                                           -->
+        <!-- ==================================================== -->
+        <!-- guard house — Severograd -->
+        <pos x="7731" z="12678" a="0"/>
+        <!-- ==================================================== -->
+        <!-- SOLNICHNIY                                           -->
+        <!-- ==================================================== -->
+        <!-- military barracks — Solnichniy -->
+        <pos x="13317" z="6146" a="0"/>
+        <!-- ==================================================== -->
+        <!-- SOSNOVKA                                             -->
+        <!-- ==================================================== -->
+        <!-- military tent area — near Sosnovka -->
+        <pos x="2698" z="6750" a="0"/>
+        <!-- military tent area — near Sosnovka -->
+        <pos x="1144" z="7216" a="0"/>
+        <!-- ==================================================== -->
+        <!-- STAROYE                                              -->
+        <!-- ==================================================== -->
+        <!-- military tent area — near Staroye -->
+        <pos x="10426" z="5952" a="0"/>
+        <!-- ==================================================== -->
+        <!-- STARY SOBOR                                          -->
+        <!-- ==================================================== -->
+        <!-- military tent area — Stary Sobor -->
+        <pos x="6347" z="7784" a="0"/>
+        <!-- ==================================================== -->
+        <!-- TISY                                                 -->
+        <!-- ==================================================== -->
+        <!-- military tent area — Tisy -->
+        <pos x="1499" z="13612" a="0"/>
+        <!-- Tisy radar platform — near Tisy -->
+        <pos x="599" z="13670" a="0"/>
+        <!-- Tisy radar platform — Tisy -->
+        <pos x="1882" z="13720" a="0"/>
+        <!-- military barracks — Tisy -->
+        <pos x="1378" z="13792" a="0"/>
+        <!-- Tisy vehicle garages — Tisy -->
+        <pos x="1679" z="13881" a="0"/>
+        <!-- guard tower — near Tisy -->
+        <pos x="1238" z="14006" a="0"/>
+        <!-- guard tower — Tisy -->
+        <pos x="1847" z="14027" a="0"/>
+        <!-- Tisy vehicle garages — near Tisy -->
+        <pos x="1540" z="14176" a="0"/>
+        <!-- military barracks — near Tisy -->
+        <pos x="1636" z="14354" a="0"/>
+        <!-- Tisy-type barracks — near Tisy -->
+        <pos x="1390" z="14436" a="0"/>
+        <!-- guard tower — near Tisy -->
+        <pos x="704" z="14585" a="0"/>
+        <!-- military barracks — near Tisy -->
+        <pos x="3657" z="14938" a="0"/>
+        <!-- ==================================================== -->
+        <!-- VAVILOVO                                             -->
+        <!-- ==================================================== -->
+        <!-- military tent area — near Vavilovo -->
+        <pos x="4157" z="11059" a="0"/>
+        <!-- guard house — near Vavilovo -->
+        <pos x="3613" z="11176" a="0"/>
+        <!-- guard house — near Vavilovo -->
+        <pos x="4160" z="11619" a="0"/>
+        <!-- military barracks — near Vavilovo -->
+        <pos x="4018" z="11806" a="0"/>
+        <!-- guard house — near Vavilovo -->
+        <pos x="3782" z="13089" a="0"/>
+        <!-- ==================================================== -->
+        <!-- VYBOR                                                -->
+        <!-- ==================================================== -->
+        <!-- guard house — Vybor -->
+        <pos x="4060" z="8956" a="0"/>
+        <!-- guard house — near Vybor -->
+        <pos x="4519" z="9389" a="0"/>
+        <!-- Land_Tisy_KitchenRoom — near Vybor -->
+        <pos x="4456" z="9580" a="0"/>
+        <!-- Tisy vehicle garages — near Vybor -->
+        <pos x="4027" z="10357" a="0"/>
+        <!-- ==================================================== -->
+        <!-- VYBOR MIL                                            -->
+        <!-- ==================================================== -->
+        <!-- military barracks — Vybor mil -->
+        <pos x="4481" z="8294" a="0"/>
+        <!-- ==================================================== -->
+        <!-- VYSOTOVO                                             -->
+        <!-- ==================================================== -->
+        <!-- guard house — Vysotovo -->
+        <pos x="6006" z="2557" a="0"/>
+        <!-- ==================================================== -->
+        <!-- ZELENO MIL                                           -->
+        <!-- ==================================================== -->
+        <!-- military barracks — Zeleno mil -->
+        <pos x="2447" z="5174" a="0"/>
     </event>
 
 </eventposdef>
